@@ -61,7 +61,7 @@ function ParallaxHero() {
           transition={{ duration: 1, ease: "easeInOut" }}
           style={{
             fontFamily: "var(--font-fraunces)",
-            fontSize: "clamp(48px,8vw,80px)",
+            fontSize: "clamp(36px,6vw,72px)",
             color: "#F1F0E5",
             fontWeight: 700,
             letterSpacing: "0.01em",
@@ -79,8 +79,10 @@ function ParallaxHero() {
             fontFamily: "var(--font-dm-sans)",
             fontSize: "clamp(18px,2.5vw,26px)",
             color: "#C5AA9B",
-            maxWidth: 700,
-            whiteSpace: "nowrap",
+            width: "90%",
+            maxWidth: 480,
+            whiteSpace: "normal",
+            wordWrap: "break-word",
             margin: "0 auto 40px",
             lineHeight: 1.7,
           }}
