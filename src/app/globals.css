@@ -1,26 +1,95 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg-page:       #FFFCF5;
+  --color-bg-surface:    #F5F1E6;
+  --color-bg-card:       #DBD0BA;
+  --color-border:        #E2D8C3;
+  --color-text-headline: #4A3F35;
+  --color-text-body:     #5C4D3F;
+  --color-text-muted:    #D4C8AA;
+  --color-accent:        #A67C52;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+[data-theme="dark"] {
+  --color-bg-page:       #2D2521;
+  --color-bg-surface:    #3A2E28;
+  --color-bg-card:       #4A3B32;
+  --color-border:        #8A655A;
+  --color-text-headline: #F1F0E5;
+  --color-text-body:     #C5AA9B;
+  --color-text-muted:    #BAAB92;
+  --color-accent:        #C39E88;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg-page);
+  color: var(--color-text-body);
+  font-family: var(--font-dm-sans), sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cormorant), serif;
+  color: var(--color-text-headline);
+  line-height: 1.15;
+}
+
+.section-dark {
+  background-color: #2D2521;
+  --color-text-headline: #F1F0E5;
+  --color-text-body: #C5AA9B;
+  --color-text-muted: #BAAB92;
+  --color-accent: #C39E88;
+  --color-border: #8A655A;
+}
+
+.ghost-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 12px 28px;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  font-family: var(--font-dm-sans), sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.ghost-btn:hover {
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  transform: scale(1.02);
+}
+
+.eyebrow {
+  font-family: var(--font-dm-sans), sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.eyebrow-accent {
+  font-family: var(--font-dm-sans), sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
 }
