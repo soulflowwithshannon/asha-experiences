@@ -8,7 +8,7 @@ const wordVariants = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.7, delay: i * 0.07, ease: "easeInOut" as const },
   }),
 };
 
@@ -52,7 +52,7 @@ const blockVariants = {
 
 const childVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeInOut" as const } },
 };
 
 export function StaggerBlock({ children, className }: { children: ReactNode; className?: string }) {

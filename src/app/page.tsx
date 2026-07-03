@@ -58,7 +58,7 @@ function ParallaxHero() {
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1, ease: "easeInOut" }}
           style={{
             fontFamily: "var(--font-fraunces)",
             fontSize: "clamp(48px,8vw,80px)",
@@ -74,7 +74,7 @@ function ParallaxHero() {
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1, delay: 0.15, ease: "easeInOut" }}
           style={{
             fontFamily: "var(--font-dm-sans)",
             fontSize: "clamp(18px,2.5vw,26px)",
@@ -91,7 +91,7 @@ function ParallaxHero() {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
         >
           <Link
             href="/retreats/kenya"
@@ -177,7 +177,7 @@ export default function HomePage() {
               <FadeIn key={tag.label} delay={0.3 + i * 0.1}>
                 <motion.div
                   whileHover={{ y: -4, scale: 1.02 }}
-                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
                   style={{
                     background: "var(--color-bg-surface)",
                     border: "1px solid var(--color-accent)",

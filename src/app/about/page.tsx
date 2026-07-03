@@ -24,7 +24,7 @@ function StoryBlock({
       whileInView="visible"
       viewport={{ once: true, margin: "-80px" }}
       variants={fadeUpVariant}
-      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay }}
+      transition={{ duration: 0.8, ease: "easeInOut", delay }}
       style={{ maxWidth: 900, margin: "0 auto 80px" }}
     >
       {children}
@@ -145,7 +145,7 @@ function TimelineStop({ stop, index }: { stop: typeof timelineStops[0]; index: n
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.7, ease: "easeInOut" }}
       className="timeline-stop"
       style={{
         display: "flex",
@@ -202,7 +202,7 @@ export default function AboutPage() {
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1, ease: "easeInOut" }}
             style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(36px,6vw,56px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 16, lineHeight: 1.15 }}
           >
             we became the women<br />we once needed.
@@ -210,7 +210,7 @@ export default function AboutPage() {
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeInOut" }}
             style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "#BAAB92", marginTop: 16, lineHeight: 1.7 }}
           >
             and now we guide others home too.

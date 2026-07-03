@@ -111,7 +111,7 @@ export default function ContactPage() {
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
                 style={{ textAlign: "center", padding: "60px 32px" }}
               >
                 <h3 style={{ fontFamily: "var(--font-cormorant)", fontSize: 24, color: "var(--color-text-headline)", fontWeight: 400, marginBottom: 12 }}>
