@@ -50,7 +50,7 @@ function ParallaxHero() {
           playsInline
           style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block", position: "absolute", inset: 0 }}
         >
-          <source src="/videos/ASHA hero video.mp4" type="video/mp4" />
+          <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/ASHA%20hero%20video.mp4" type="video/mp4" />
         </video>
       </motion.div>
 
@@ -322,7 +322,7 @@ export default function HomePage() {
                 controls
                 style={{ width: "100%", display: "block", borderRadius: 8, filter: "sepia(15%) saturate(110%) brightness(100%) contrast(105%)" }}
               >
-                <source src="/videos/Testimonials.mp4" type="video/mp4" />
+                <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Testimonials.mp4" type="video/mp4" />
               </video>
             </div>
           </FadeIn>

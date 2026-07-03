@@ -573,7 +573,7 @@ export default function KenyaPage() {
               playsInline
               style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "60% center", display: "block", position: "absolute", inset: 0 }}
             >
-              <source src="/videos/Ol Pejeta Sizzle Reel.mp4" type="video/mp4" />
+              <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Ol%20Pejeta%20Sizzle%20Reel.mp4" type="video/mp4" />
             </video>
           </div>
           <div style={{ maxWidth: 512 }}>
@@ -743,7 +743,7 @@ export default function KenyaPage() {
                   filter: "sepia(18%) saturate(90%) brightness(97%) contrast(103%)",
                 }}
               >
-                <source src="/videos/Testimonials.mp4" type="video/mp4" />
+                <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Testimonials.mp4" type="video/mp4" />
               </video>
             </div>
           </FadeIn>

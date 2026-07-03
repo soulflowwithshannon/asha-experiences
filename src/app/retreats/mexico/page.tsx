@@ -480,7 +480,7 @@ export default function MexicoPage() {
                 controls
                 style={{ width: "100%", display: "block", borderRadius: 8, filter: "sepia(18%) saturate(90%) brightness(97%) contrast(103%)" }}
               >
-                <source src="/videos/Testimonials.mp4" type="video/mp4" />
+                <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Testimonials.mp4" type="video/mp4" />
               </video>
             </div>
           </FadeIn>
