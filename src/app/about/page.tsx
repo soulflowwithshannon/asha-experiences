@@ -54,8 +54,8 @@ function Squiggle({ fromLeft }: { fromLeft: boolean }) {
     ? "M 160 0 C 120 50, 360 50, 380 100 C 400 150, 620 150, 640 200"
     : "M 640 0 C 680 50, 440 50, 420 100 C 400 150, 180 150, 160 200";
   return (
-    <div ref={ref} style={{ maxWidth: 800, margin: "0 auto", padding: "0 32px" }}>
-      <svg width="100%" viewBox="0 0 800 200" fill="none" style={{ overflow: "visible", display: "block" }}>
+    <div ref={ref} style={{ position: "relative", width: "100%", maxWidth: 800, margin: "0 auto", padding: "0 16px", boxSizing: "border-box" }}>
+      <svg width="100%" height="auto" viewBox="0 0 800 200" fill="none" preserveAspectRatio="xMidYMid meet" style={{ display: "block", overflow: "hidden" }}>
         <motion.path
           d={path}
           stroke="#C9B89A"
