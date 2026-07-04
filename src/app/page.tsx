@@ -170,7 +170,7 @@ export default function HomePage() {
             </StaggerChild>
           </StaggerBlock>
 
-          <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "nowrap" }}>
             {[
               { label: "Intentional", caption: "every detail curated with purpose" },
               { label: "Intimate", caption: "small groups, deep connection" },
@@ -186,8 +186,8 @@ export default function HomePage() {
                     borderRadius: 8,
                     padding: "32px 44px",
                     textAlign: "center",
-                    minWidth: 280,
-                    minHeight: 120,
+                    width: 320,
+                    height: 140,
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
