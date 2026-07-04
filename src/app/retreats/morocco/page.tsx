@@ -159,7 +159,7 @@ function MoroccoHero() {
           transition={{ duration: 0.8, delay: 0.15, ease: "easeInOut" }}
           style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(22px,3vw,34px)", color: "#F1F0E5", fontWeight: 700, fontStyle: "italic", marginBottom: 28, marginTop: -6 }}
         >
-          Atlas Kasbah, Agadir, Morocco
+          Agadir, Morocco
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 24 }}
@@ -547,59 +547,49 @@ export default function MoroccoPage() {
       {/* SECTION 3 — THE LOCATION */}
       <section style={{ background: "var(--color-bg-surface)", padding: "80px 48px" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center", maxWidth: 1280, margin: "0 auto" }} className="stay-grid">
-          <div style={{ position: "relative", borderRadius: 8, overflow: "hidden", aspectRatio: "4/5", background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)", textAlign: "center", padding: 16 }}>[PLACEHOLDER: Atlas Kasbah video or photo]</span>
-          </div>
           <div style={{ maxWidth: 512 }}>
-            <FadeIn><p className="eyebrow-accent" style={{ marginBottom: 16, fontWeight: 700 }}>ATLAS KASBAH</p></FadeIn>
+            <FadeIn delay={0.05}>
+              <div style={{ borderRadius: 8, overflow: "hidden", marginBottom: 72, aspectRatio: "16/7", position: "relative" }}>
+                <Image src="/images/agadir-medina-888-2.jpg" alt="Agadir Medina" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="640px" />
+              </div>
+            </FadeIn>
             <FadeIn delay={0.1}>
               <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 24 }}>
-                ancient outside.<br />held inside.
+                about the location
               </h2>
             </FadeIn>
             <FadeIn delay={0.2}>
               <div style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.8, display: "flex", flexDirection: "column", gap: 20 }}>
                 <p>
-                  <strong>Agadir, Morocco</strong> — a relaxed coastal city nestled between the Atlantic Ocean and the foothills of the Anti-Atlas mountains. warm, safe, and deeply atmospheric.
+                  For centuries, Morocco has been a crossroads of devotion and culture — <strong>a place where the sacred is woven into everyday life.</strong> Resting between the vast Sahara and the Atlantic Ocean, this land has been shaped by prayer, ritual, wind, and time.
                 </p>
                 <p>
-                  <strong>Atlas Kasbah</strong> is a boutique eco-lodge with traditional Moroccan architecture, lush gardens, and the kind of stillness that starts working on you the moment you arrive.
+                  <strong>Agadir</strong> carries a grounded, ancient feminine energy — <em>steady, sovereign, and deep.</em>
                 </p>
                 <p>
-                  private chef-prepared meals. a pool surrounded by palms. intimate spaces designed for gathering, resting, and going deep.
-                </p>
-                <p>
-                  <em>a 3-hour drive from Marrakech airport, or a quick hop into Agadir directly — two easy ways in.</em>
+                  A place that strips away excess, mirrors truth, and gently invites you inward… back to your body, your worth, and your soul.
                 </p>
               </div>
             </FadeIn>
+          </div>
+          <div>
+            <FadeIn>
+              <p style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(18px,2vw,24px)", color: "var(--color-text-headline)", fontWeight: 700, textAlign: "center", marginBottom: 20 }}>our retreat center: Atlas Kasbah</p>
+            </FadeIn>
+            <div style={{ position: "relative", borderRadius: 8, overflow: "hidden", aspectRatio: "4/5" }}>
+              <Image src="/images/atlas kasbah.png" alt="Atlas Kasbah" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="640px" />
+            </div>
           </div>
         </div>
         <style>{`@media(max-width:768px){.stay-grid{grid-template-columns:1fr!important}}`}</style>
       </section>
 
-      {/* SECTION 4 — ARC OF THE WEEK */}
-      <section style={{ background: "var(--color-bg-page)", padding: "80px 32px 80px" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+      {/* SECTION 4 — A DAY ON SACRED SANDS */}
+      <section style={{ background: "var(--color-bg-page)", padding: "80px 32px" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 12 }}>
-              the arc of the week
-            </h2>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, fontStyle: "italic", color: "var(--color-text-muted)", textAlign: "center", marginBottom: 48 }}>
-              full itinerary shared once you&apos;re booked
-            </p>
-          </FadeIn>
-          <DaysGrid />
-          <FadeIn delay={0.15}>
-            <div style={{ maxWidth: 560, margin: "80px auto 0", textAlign: "center", fontFamily: "var(--font-dm-sans)", fontSize: 16, color: "var(--color-text-body)", lineHeight: 1.9, display: "flex", flexDirection: "column", gap: 20 }}>
-              <p>
-                <strong>the goal isn&apos;t to become someone new.</strong>
-              </p>
-              <p>
-                <em>it&apos;s to remember who you are.</em>
-              </p>
+            <div style={{ width: "100%", position: "relative", borderRadius: 10, overflow: "hidden" }}>
+              <Image src="/images/a day on sacred sands.png" alt="A day on Sacred Sands" width={900} height={0} style={{ width: "100%", height: "auto", display: "block" }} sizes="900px" />
             </div>
           </FadeIn>
         </div>

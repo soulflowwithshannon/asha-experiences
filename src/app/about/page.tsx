@@ -160,7 +160,7 @@ function TimelineStop({ stop, index }: { stop: typeof timelineStops[0]; index: n
       {/* Photo */}
       <div style={{ flexShrink: 0, width: 320, height: 380, borderRadius: 12, overflow: "hidden", background: "var(--color-bg-card)", position: "relative" }}>
         {stop.photo ? (
-          <img src={stop.photo} alt={stop.alt} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+          <img src={stop.photo} alt={stop.alt} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center", display: "block" }} />
         ) : (
           <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
             <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)", letterSpacing: "0.03em", textAlign: "center", padding: 16 }}>
@@ -241,8 +241,17 @@ export default function AboutPage() {
       {/* DARK BRIDGE BAR */}
       <div style={{ background: "#2D2521", height: 100, display: "flex", alignItems: "center", justifyContent: "center" }}>
         <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(18px,2.5vw,24px)", color: "#EFE6D3", textAlign: "center" }}>
-          if this story feels like yours — you&apos;re exactly where you&apos;re supposed to be.
+          <span className="about-bridge-line">if this story feels like yours —</span>
+          <span className="about-bridge-line"> you&apos;re exactly where you&apos;re supposed to be.</span>
         </p>
+        <style>{`
+          @media (max-width: 640px) {
+            .about-bridge-line { display: block; }
+          }
+          @media (min-width: 641px) {
+            .about-bridge-line { display: inline; }
+          }
+        `}</style>
       </div>
 
       {/* CLOSING PHOTO */}

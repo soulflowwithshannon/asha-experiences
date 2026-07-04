@@ -105,7 +105,7 @@ function MexicoHero() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
-    <section ref={ref} style={{ position: "relative", minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+    <section ref={ref} style={{ position: "relative", minHeight: "80vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", paddingBottom: 0 }}>
       <motion.div style={{ position: "absolute", inset: "-20%", y }}>
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(45,37,33,0.3), rgba(45,37,33,0.6))", zIndex: 1 }} />
         <Image
@@ -140,26 +140,16 @@ function MexicoHero() {
           transition={{ duration: 0.8, delay: 0.15, ease: "easeInOut" }}
           style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(22px,3vw,34px)", color: "#F1F0E5", fontWeight: 700, fontStyle: "italic", marginBottom: 28, marginTop: -6 }}
         >
-          Lunita Jungle Retreat, Mexico
+          Riviera Maya, Mexico
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
-          style={{ fontFamily: "var(--font-dm-sans)", fontSize: 17, color: "#E8D5BC", maxWidth: 520, margin: "80px auto 0", lineHeight: 1.7 }}
+          style={{ fontFamily: "var(--font-dm-sans)", fontSize: 21, fontWeight: 700, color: "#E8D5BC", maxWidth: 700, margin: "56px auto 0", lineHeight: 1.7, whiteSpace: "nowrap" }}
         >
-          five days in the jungle to bury who you were and become who you are.
+          for the woman who is ready to bury an old version of herself.
         </motion.p>
-        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }} style={{ marginTop: 60 }}>
-          <a
-            href="#invitation"
-            style={{ display: "inline-block", padding: "14px 36px", background: "rgba(195,158,136,0.85)", border: "1px solid #C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", fontWeight: 500, transition: "background 0.3s ease" }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = "#C39E88")}
-            onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(195,158,136,0.85)")}
-          >
-            journey with us ↓
-          </a>
-        </motion.div>
       </div>
     </section>
   );
@@ -370,6 +360,78 @@ export default function MexicoPage() {
         </div>
       </section>
 
+      {/* HOW WE SUPPORT SECTION */}
+      <section style={{ background: "#2D2521", padding: "100px 32px" }}>
+        <div style={{ maxWidth: 720, margin: "0 auto" }}>
+          <FadeIn>
+            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 16, textAlign: "center" }}>
+              How do we support that?
+            </h2>
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, color: "#BAAB92", textAlign: "center", marginBottom: 64, lineHeight: 1.7 }}>
+              Through embodied practices, rituals of release, honest reflection, and experiences that help you move what&apos;s been living under the surface.
+            </p>
+          </FadeIn>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: 48 }}>
+            {[
+              {
+                title: "Come back into your body",
+                body: "Through yoga, meditation, sound healing, and movement practices that help you soften self-protection, release stored tension, and reconnect with the part of you that knows how to feel, trust, and take up space.",
+              },
+              {
+                title: "Release what no longer fits",
+                body: "Through ritual, reflection, and ceremony, we create room to grieve the old roles, old identities, and old survival patterns that have shaped you, protected you, and quietly kept you from the life you actually want.",
+              },
+              {
+                title: "Let nature hold what you're shedding",
+                body: "With the jungle, the water, and the earth as part of the experience, you'll be supported by the natural world as you reconnect with your own rhythms. A cenote visit invites depth. A tree-planting ceremony honors what you are ready to root into. A reminder that real change cannot be rushed.",
+              },
+              {
+                title: "Be witnessed in your becoming",
+                body: "Through sisterhood, sharing, and a gentle photo experience that captures presence over performance, you'll have the chance to be seen in a new way. Not polished. Not proving. Just real.",
+              },
+              {
+                title: "Mark the shift",
+                body: "Through blessing rituals, body art, and ceremonial moments, we honor what is ending, what is opening, and the woman you are becoming.",
+              },
+            ].map((item, i) => (
+              <FadeIn key={i} delay={i * 0.08}>
+                <div style={{ borderTop: "1px solid rgba(255,255,255,0.15)", paddingTop: 32 }}>
+                  <p style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(18px,2.5vw,22px)", color: "#F1F0E5", fontWeight: 600, marginBottom: 12 }}>
+                    {item.title}
+                  </p>
+                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "#BAAB92", lineHeight: 1.8 }}>
+                    {item.body}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn delay={0.4}>
+            <div style={{ marginTop: 72, textAlign: "center" }}>
+              <p style={{ fontFamily: "var(--font-fraunces)", fontStyle: "italic", fontSize: "clamp(20px,3vw,28px)", color: "#F1F0E5", marginBottom: 32 }}>
+                And through it all, sisterhood.
+              </p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                {[
+                  "Women beside you.",
+                  "Truth in the room.",
+                  "Laughter that opens the body.",
+                  "Emotion that doesn't need to be dimmed.",
+                  "The relief of not having to explain yourself.",
+                  "The relief of being met.",
+                ].map((line, i) => (
+                  <p key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, color: "#BAAB92", lineHeight: 1.6 }}>
+                    {line}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* SECTION 3 — THE LOCATION */}
       <section style={{ background: "var(--color-bg-surface)", padding: "80px 48px" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center", maxWidth: 1280, margin: "0 auto" }} className="stay-grid">
@@ -410,17 +472,6 @@ export default function MexicoPage() {
           <FadeIn>
             <div style={{ width: "100%", position: "relative", borderRadius: 10, overflow: "hidden" }}>
               <Image src="/images/what to expect new.png" alt="what your soul can expect in a day" width={900} height={0} style={{ width: "100%", height: "auto", display: "block" }} sizes="900px" />
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* WHERE ENDINGS BECOME BEGINNINGS */}
-      <section style={{ background: "var(--color-bg-page)", padding: "0 32px 80px" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <FadeIn>
-            <div style={{ width: "100%", position: "relative", borderRadius: 10, overflow: "hidden" }}>
-              <Image src="/images/where endings become beginnings.png" alt="where endings become beginnings" width={900} height={0} style={{ width: "100%", height: "auto", display: "block" }} sizes="900px" />
             </div>
           </FadeIn>
         </div>
@@ -534,8 +585,8 @@ export default function MexicoPage() {
             {/* Casa Colectiva */}
             <FadeIn>
               <div style={{ background: "var(--color-bg-card)", border: "0.5px solid var(--color-border)", borderRadius: 8, padding: 40, display: "flex", flexDirection: "column", height: "100%" }}>
-                <div style={{ borderRadius: 6, overflow: "hidden", marginBottom: 24, aspectRatio: "4/3", position: "relative" }}>
-                  <Image src="/images/casa colectia.png" alt="Casa Colectiva" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="600px" />
+                <div style={{ borderRadius: 6, overflow: "hidden", marginBottom: 24 }}>
+                  <Image src="/images/casa colectia.png" alt="Casa Colectiva" width={900} height={0} style={{ width: "100%", height: "auto", display: "block" }} sizes="600px" />
                 </div>
                 <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 28, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 12 }}>Casa Colectiva</h3>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
@@ -561,8 +612,8 @@ export default function MexicoPage() {
             {/* Casa Lienzo — Sold Out */}
             <FadeIn delay={0.15}>
               <div style={{ background: "var(--color-bg-card)", border: "0.5px solid var(--color-border)", borderRadius: 8, padding: 40, display: "flex", flexDirection: "column", height: "100%", opacity: 0.6 }}>
-                <div style={{ borderRadius: 6, overflow: "hidden", marginBottom: 24, aspectRatio: "4/3", position: "relative" }}>
-                  <Image src="/images/casa lienzo.png" alt="Casa Lienzo" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="600px" />
+                <div style={{ borderRadius: 6, overflow: "hidden", marginBottom: 24 }}>
+                  <Image src="/images/casa lienzo.png" alt="Casa Lienzo" width={900} height={0} style={{ width: "100%", height: "auto", display: "block" }} sizes="600px" />
                 </div>
                 <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 28, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 12 }}>Casa Lienzo</h3>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
@@ -615,25 +666,12 @@ export default function MexicoPage() {
         </div>
       </section>
 
-      {/* SECTION 11 — CLOSING CTA */}
-      <section style={{ position: "relative", padding: "140px 32px", background: "#2D2521", textAlign: "center", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, background: "#2D2521" }} />
-        <div style={{ position: "relative", zIndex: 1 }}>
+      {/* WHERE ENDINGS BECOME BEGINNINGS */}
+      <section style={{ background: "var(--color-bg-page)", padding: "0 32px 80px" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,4vw,40px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 40 }}>
-              something is calling you <em>here</em>
-            </h2>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 17, color: "#BAAB92", maxWidth: 480, margin: "0 auto 40px" }}>
-              five women.<br />five days.<br />one jungle that holds it all.
-            </p>
-          </FadeIn>
-          <FadeIn delay={0.2}>
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
-              <a href="#rooms" style={{ display: "inline-block", padding: "12px 32px", background: "#C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 700, letterSpacing: "0.04em", textDecoration: "none", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "#b08d78")} onMouseLeave={(e) => (e.currentTarget.style.background = "#C39E88")}>
-                reserve my spot →
-              </a>
+            <div style={{ width: "100%", position: "relative", borderRadius: 10, overflow: "hidden" }}>
+              <Image src="/images/where endings become beginnings.png" alt="where endings become beginnings" width={900} height={0} style={{ width: "100%", height: "auto", display: "block" }} sizes="900px" />
             </div>
           </FadeIn>
         </div>

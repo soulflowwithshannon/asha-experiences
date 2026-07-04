@@ -163,9 +163,9 @@ export default function HomePage() {
 
             <StaggerChild>
               <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, color: "var(--color-text-body)", lineHeight: 1.8, maxWidth: 580, margin: "0 auto 48px" }}>
-                born from a deep belief that women hold the answers within themselves — ASHA creates the space for that wisdom to rise.
+                <em>born from a deep belief that women hold the answers within themselves</em> — <strong>ASHA creates the space for that wisdom to rise.</strong>
                 <br /><br />
-                from the spice markets of Morocco to the ancient cenotes of Mexico and the golden savannas of Kenya, every retreat is designed to spark something real inside you.
+                from the spice markets of <strong>Morocco</strong> to the ancient cenotes of <strong>Mexico</strong> and the golden savannas of <strong>Kenya</strong>, every retreat is designed to spark something real inside you.
               </p>
             </StaggerChild>
           </StaggerBlock>
@@ -323,6 +323,7 @@ export default function HomePage() {
               <div style={{ position: "absolute", inset: 0, background: "rgba(166, 124, 82, 0.12)", mixBlendMode: "multiply", zIndex: 1, pointerEvents: "none" }} />
               <video
                 controls
+                preload="metadata"
                 style={{ width: "100%", display: "block", borderRadius: 8, filter: "sepia(15%) saturate(110%) brightness(100%) contrast(105%)" }}
               >
                 <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Testimonials.mp4" type="video/mp4" />
