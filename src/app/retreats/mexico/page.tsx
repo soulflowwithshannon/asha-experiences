@@ -415,6 +415,17 @@ export default function MexicoPage() {
         </div>
       </section>
 
+      {/* WHERE ENDINGS BECOME BEGINNINGS */}
+      <section style={{ background: "var(--color-bg-page)", padding: "0 32px 80px" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <FadeIn>
+            <div style={{ width: "100%", position: "relative", borderRadius: 10, overflow: "hidden" }}>
+              <Image src="/images/where endings become beginnings.png" alt="where endings become beginnings" width={900} height={0} style={{ width: "100%", height: "auto", display: "block" }} sizes="900px" />
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* SECTION 5 — WHAT'S INCLUDED */}
       <section style={{ background: "var(--color-bg-surface)", padding: "80px 32px" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>

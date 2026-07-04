@@ -154,7 +154,7 @@ export default function Nav() {
                       padding: "12px 20px",
                       fontFamily: "var(--font-dm-sans)",
                       fontSize: 13,
-                      color: pathname === r.href ? "var(--color-accent)" : "var(--color-text-body)",
+                      color: pathname === r.href ? "var(--color-accent)" : "var(--color-text-headline)",
                       textDecoration: "none",
                       transition: "color 0.2s ease, background 0.2s ease",
                     }}

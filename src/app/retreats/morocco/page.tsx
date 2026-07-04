@@ -127,8 +127,13 @@ function MoroccoHero() {
     <section ref={ref} style={{ position: "relative", minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
       <motion.div style={{ position: "absolute", inset: "-20%", y }}>
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(45,37,33,0.3), rgba(45,37,33,0.6))", zIndex: 1 }} />
-        <div style={{ position: "absolute", inset: 0, background: "#2D2521" }} />
-        {/* PLACEHOLDER: hero image for Sacred Sands Morocco */}
+        <Image
+          src="/images/📍Morocco.jpeg"
+          alt="Sacred Sands — Atlas Kasbah, Morocco"
+          fill
+          style={{ objectFit: "cover", objectPosition: "center" }}
+          priority
+        />
       </motion.div>
 
       <div style={{ position: "relative", zIndex: 2, textAlign: "center", padding: "0 24px" }}>
