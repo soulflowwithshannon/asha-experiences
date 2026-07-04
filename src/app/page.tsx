@@ -170,7 +170,7 @@ export default function HomePage() {
             </StaggerChild>
           </StaggerBlock>
 
-          <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "nowrap" }}>
+          <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "nowrap" }} className="values-row">
             {[
               { label: "Intentional", caption: "every detail curated with purpose" },
               { label: "Intimate", caption: "small groups, deep connection" },
@@ -186,7 +186,7 @@ export default function HomePage() {
                     borderRadius: 8,
                     padding: "32px 44px",
                     textAlign: "center",
-                    width: 320,
+                    minWidth: 280,
                     height: 140,
                     display: "flex",
                     flexDirection: "column",
@@ -205,6 +205,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+        <style>{`@media(max-width:640px){.values-row{flex-direction:column!important;align-items:center!important}.values-row>*{width:100%!important;max-width:320px}}`}</style>
       </section>
 
       {/* SECTION 3 — PILLARS */}
