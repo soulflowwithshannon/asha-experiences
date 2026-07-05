@@ -444,12 +444,12 @@ export default function MoroccoPage() {
               {
                 ph: "yoga/movement Morocco",
                 title: "come back to your body",
-                body: <>Gentle movement, somatic practices, and sound healing to release tension, numbness, and that &ldquo;I&apos;m holding it all together&rdquo; tightness you&apos;ve been living in.</>,
+                body: <>gentle movement, somatic practices, and sound healing to release tension, numbness, and that <em>&ldquo;I&apos;m holding it all together&rdquo;</em> tightness you&apos;ve been living in.</>,
               },
               {
                 ph: "sound healing/reiki",
                 title: "rebuild self-worth from the inside out",
-                body: <>Not a pep talk. Real rewiring. The kind that shifts the old stories of &ldquo;I have to prove myself&rdquo; into something <em>steady, calm, and true.</em></>,
+                body: <>not a pep talk. real rewiring. the kind that shifts the old stories of <em>&ldquo;I have to prove myself&rdquo;</em> into something <em>steady, calm, and true.</em></>,
               },
             ].map((card, i) => (
               <FadeIn key={i} delay={i * 0.1} style={{ height: "100%" }}>
@@ -472,12 +472,12 @@ export default function MoroccoPage() {
               {
                 ph: "Morocco beauty/ritual",
                 title: "remember your beauty without performing",
-                body: <>Beauty as presence. Beauty as being at ease in your own skin. Beauty as <em>&ldquo;I don&apos;t need to be chosen — I choose myself.&rdquo;</em></>,
+                body: <>beauty as presence. beauty as being at ease in your own skin. beauty as <em>&ldquo;I don&apos;t need to be chosen — I choose myself.&rdquo;</em></>,
               },
               {
                 ph: "Morocco ceremony/circle",
                 title: "heal the patterns that keep you small",
-                body: <>The people-pleasing. The overthinking. The settling. The <em>&ldquo;maybe I&apos;m asking for too much.&rdquo;</em> We meet it with compassion… and we don&apos;t let it run the show anymore.</>,
+                body: <>the people-pleasing. the overthinking. the settling. the <em>&ldquo;maybe I&apos;m asking for too much.&rdquo;</em> we meet it with compassion… and we don&apos;t let it run the show anymore.</>,
               },
             ].map((card, i) => (
               <FadeIn key={i} delay={i * 0.1} style={{ height: "100%" }}>
@@ -500,12 +500,12 @@ export default function MoroccoPage() {
               {
                 ph: "women's circle Morocco",
                 title: "let yourself be held by sisterhood",
-                body: <>Honest circles. Deep laughter. Tears that don&apos;t need explaining. The kind of connection that makes you exhale because <strong>you&apos;re not doing life alone.</strong></>,
+                body: <>honest circles. deep laughter. tears that don&apos;t need explaining. the kind of connection that makes you exhale because <strong>you&apos;re not doing life alone.</strong></>,
               },
               {
                 ph: "Morocco landscape/nature",
                 title: "return to what's real",
-                body: <>Quiet. Sun on skin. Feet on sand. A slower rhythm that helps you hear your own inner voice again.</>,
+                body: <>quiet. sun on skin. feet on sand. a slower rhythm that helps you hear your own inner voice again.</>,
               },
             ].map((card, i) => (
               <FadeIn key={i} delay={i * 0.1} style={{ height: "100%" }}>
