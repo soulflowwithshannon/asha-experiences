@@ -314,8 +314,9 @@ export default function HomePage() {
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <FadeIn>
             <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 48 }}>
-              women who came back different
+              women who came<span className="testimonial-break"> </span>back different
             </h2>
+            <style>{`@media(max-width:640px){.testimonial-break{display:block}}`}</style>
           </FadeIn>
 
           <FadeIn delay={0.1}>

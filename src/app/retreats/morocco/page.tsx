@@ -644,11 +644,10 @@ export default function MoroccoPage() {
       {/* SECTION 6 — TESTIMONIALS */}
       <section style={{ background: "var(--color-bg-page)", padding: "80px 32px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <SplitHeadline
-            text="women who came back different"
-            as="h2"
-            style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 48 }}
-          />
+          <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 48 }}>
+            women who came<span className="testimonial-break"> </span>back different
+          </h2>
+          <style>{`@media(max-width:640px){.testimonial-break{display:block}}`}</style>
           <FadeIn delay={0.1}>
             <div style={{ maxWidth: 900, margin: "0 auto", position: "relative", borderRadius: 8, overflow: "hidden" }}>
               <div style={{ position: "absolute", inset: 0, background: "rgba(166, 124, 82, 0.08)", mixBlendMode: "multiply", zIndex: 1, pointerEvents: "none", borderRadius: 8 }} />
