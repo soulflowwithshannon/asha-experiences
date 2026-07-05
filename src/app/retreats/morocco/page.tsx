@@ -431,7 +431,7 @@ export default function MoroccoPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <FadeIn>
             <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", fontWeight: 700, color: "var(--color-text-headline)", textAlign: "center", marginBottom: 64 }}>
-              how do we call her home?
+              how do we<span className="morocco-home-break"> </span>call her home?
             </h2>
           </FadeIn>
 
@@ -533,7 +533,7 @@ export default function MoroccoPage() {
             </div>
           </FadeIn>
         </div>
-        <style>{`@media(max-width:768px){.cards-row{grid-template-columns:1fr!important}.solo-card{grid-template-columns:1fr!important}}`}</style>
+        <style>{`@media(max-width:640px){.morocco-home-break{display:block}}@media(max-width:768px){.cards-row{grid-template-columns:1fr!important}.solo-card{grid-template-columns:1fr!important}}`}</style>
       </section>
 
       {/* SECTION 3 — THE LOCATION */}
