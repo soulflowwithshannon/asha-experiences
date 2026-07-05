@@ -465,7 +465,7 @@ export default function MoroccoPage() {
 
           {/* Row 2 — dark center card */}
           <FadeIn delay={0.1}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", borderRadius: 10, overflow: "hidden", marginBottom: 12, background: "#2D2521" }} className="solo-card">
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", borderRadius: 10, overflow: "hidden", marginBottom: 12, background: "#2D2521" }} className="solo-card">
               <div style={{ background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center", minHeight: 340 }}>
                 <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)", textAlign: "center", padding: 16 }}>[PLACEHOLDER: Morocco cultural experience]</span>
               </div>
@@ -479,9 +479,6 @@ export default function MoroccoPage() {
                   <strong style={{ color: "#F1F0E5" }}>cultural immersion</strong> —<br />
                   <em>because beauty this old<br />does something to the soul.</em>
                 </p>
-              </div>
-              <div style={{ background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center", minHeight: 340 }}>
-                <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)", textAlign: "center", padding: 16 }}>[PLACEHOLDER: Atlas Kasbah]</span>
               </div>
             </div>
           </FadeIn>
