@@ -448,7 +448,7 @@ export default function MoroccoPage() {
               },
               {
                 img: "/images/Morocco candles.jpeg",
-                imgPosition: "center 70%",
+                imgPosition: "center 90%",
                 title: "rebuild self-worth from the inside out",
                 body: <>not a pep talk. real rewiring. the kind that shifts the old stories of <em>&ldquo;I have to prove myself&rdquo;</em> into something <em>steady, calm, and true.</em></>,
               },
