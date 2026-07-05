@@ -932,7 +932,7 @@ export default function KenyaPage() {
         </div>
         <div style={{ position: "relative", zIndex: 1 }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,4vw,40px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 40 }}>
+            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(20px,3vw,32px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 40, whiteSpace: "nowrap" }}>
               something is calling you <em>here</em>
             </h2>
           </FadeIn>
