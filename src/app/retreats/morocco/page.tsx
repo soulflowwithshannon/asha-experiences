@@ -124,18 +124,16 @@ function MoroccoHero() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
-    <section ref={ref} style={{ position: "relative" }}>
+    <section ref={ref} style={{ position: "relative", minHeight: "100svh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
       <Image
         src="/images/morocco-hero-v2.png"
         alt="Sacred Sands — Atlas Kasbah, Morocco"
-        width={1920}
-        height={1080}
-        style={{ width: "100%", height: "auto", display: "block" }}
+        fill
+        style={{ objectFit: "cover", objectPosition: "center" }}
         priority
       />
       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(45,37,33,0.3), rgba(45,37,33,0.65))", zIndex: 1 }} />
-      <div style={{ position: "absolute", inset: 0, zIndex: 2, display: "flex", alignItems: "center", justifyContent: "center" }}>
-      <div style={{ textAlign: "center", padding: "0 24px" }}>
+      <div style={{ position: "relative", zIndex: 2, textAlign: "center", padding: "80px 24px" }}>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -164,21 +162,20 @@ function MoroccoHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
-          style={{ fontFamily: "var(--font-dm-sans)", fontSize: "clamp(15px,2.2vw,22px)", color: "#E8D5BC", maxWidth: 900, margin: "clamp(24px,5vw,80px) auto 0", lineHeight: 1.7, fontWeight: 700, textShadow: "0 2px 12px rgba(0,0,0,0.5)", textAlign: "center" }}
+          style={{ fontFamily: "var(--font-dm-sans)", fontSize: "clamp(15px,2.2vw,22px)", color: "#E8D5BC", maxWidth: 700, margin: "clamp(24px,5vw,80px) auto 0", lineHeight: 1.7, fontWeight: 700, textShadow: "0 2px 12px rgba(0,0,0,0.5)", textAlign: "center" }}
         >
           for women to come home to the part of them that&apos;s always been whole.
         </motion.p>
-        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }} style={{ marginTop: 60 }}>
+        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }} style={{ marginTop: 40 }}>
           <a
             href="#invitation"
-            style={{ display: "inline-block", padding: "18px 48px", background: "rgba(195,158,136,0.85)", border: "1px solid #C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 16, letterSpacing: "0.04em", textDecoration: "none", fontWeight: 600, transition: "background 0.3s ease" }}
+            style={{ display: "inline-block", padding: "clamp(12px,2vw,18px) clamp(24px,4vw,48px)", background: "rgba(195,158,136,0.85)", border: "1px solid #C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: "clamp(13px,1.5vw,16px)", letterSpacing: "0.04em", textDecoration: "none", fontWeight: 600, transition: "background 0.3s ease" }}
             onMouseEnter={(e) => (e.currentTarget.style.background = "#C39E88")}
             onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(195,158,136,0.85)")}
           >
             journey with us ↓
           </a>
         </motion.div>
-      </div>
       </div>
     </section>
   );
