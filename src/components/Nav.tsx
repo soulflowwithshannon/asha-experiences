@@ -275,7 +275,7 @@ export default function Nav() {
                     style={{
                       fontFamily: "var(--font-dm-sans)",
                       fontSize: 14,
-                      color: pathname === r.href ? "var(--color-accent)" : "var(--color-text-muted)",
+                      color: pathname === r.href ? "var(--color-accent)" : "var(--color-text-headline)",
                       textDecoration: "none",
                     }}
                   >
