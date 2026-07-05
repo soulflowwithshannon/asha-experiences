@@ -705,7 +705,7 @@ export default function MoroccoPage() {
           <SplitHeadline
             text="your home in the desert"
             as="h2"
-            style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 8 }}
+            style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 8, whiteSpace: "nowrap" }}
           />
           <FadeIn delay={0.1}>
             <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", textAlign: "center", maxWidth: 520, margin: "0 auto 64px", lineHeight: 1.7 }}>
