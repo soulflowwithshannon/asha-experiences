@@ -130,7 +130,7 @@ function MexicoHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.1, ease: "easeInOut" }}
-          style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(52px,8vw,80px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 16 }}
+          style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(36px,8vw,80px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 16 }}
         >
           Becoming HER
         </motion.h1>
@@ -146,7 +146,7 @@ function MexicoHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
-          style={{ fontFamily: "var(--font-dm-sans)", fontSize: 21, fontWeight: 700, color: "#E8D5BC", maxWidth: 700, margin: "56px auto 0", lineHeight: 1.7, whiteSpace: "nowrap" }}
+          style={{ fontFamily: "var(--font-dm-sans)", fontSize: "clamp(15px,2vw,21px)", fontWeight: 700, color: "#E8D5BC", maxWidth: 700, margin: "56px auto 0", lineHeight: 1.7 }}
         >
           for the woman who is ready to bury an old version of herself.
         </motion.p>
@@ -345,7 +345,7 @@ export default function MexicoPage() {
       </section>
 
       {/* RETRO ARROW TRANSITION */}
-      <div style={{ background: "var(--color-bg-page)", display: "flex", justifyContent: "center", padding: "0 0 48px" }}>
+      <div style={{ background: "var(--color-bg-page)", display: "flex", justifyContent: "center", padding: "0 0 48px", marginTop: -24 }}>
         <Image src="/images/retro arrow.png" alt="" width={160} height={160} style={{ objectFit: "contain" }} />
       </div>
 
@@ -570,7 +570,7 @@ export default function MexicoPage() {
       <section id="rooms" style={{ background: "#F5F1E6", padding: "80px 32px" }}>
         <div style={{ maxWidth: 1000, margin: "0 auto" }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,48px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 8, paddingTop: 80 }}>
+            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,48px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 8 }}>
               your home in the jungle
             </h2>
           </FadeIn>
@@ -639,7 +639,7 @@ export default function MexicoPage() {
       <section style={{ background: "#FFFCF5", padding: "80px 32px" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,48px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 56, paddingTop: 80 }}>
+            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,48px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 56 }}>
               everything you need to know
             </h2>
           </FadeIn>

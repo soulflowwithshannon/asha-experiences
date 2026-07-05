@@ -123,7 +123,7 @@ function ExpandableCard({ img, title, body }: { img: string; title: string; body
   const [expanded, setExpanded] = useState(false);
   return (
     <div style={{ background: "var(--color-bg-page)", border: "0.5px solid var(--color-border)", borderRadius: 10, overflow: "hidden", display: "flex", flexDirection: "column", height: "100%" }}>
-      <div style={{ position: "relative", height: 180, flexShrink: 0, overflow: "hidden" }}>
+      <div style={{ position: "relative", aspectRatio: "4/3", flexShrink: 0, overflow: "hidden" }}>
         <Image src={img} alt={title} fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="(max-width: 768px) 100vw, 50vw" />
       </div>
       <div style={{ padding: "20px 24px 24px", textAlign: "center", display: "flex", flexDirection: "column", flex: 1 }}>
@@ -187,7 +187,7 @@ function KenyaHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
-          style={{ fontFamily: "var(--font-dm-sans)", fontSize: 22, color: "#E8D5BC", maxWidth: 900, margin: "80px auto 0", lineHeight: 1.7, whiteSpace: "nowrap", fontWeight: 700, textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}
+          style={{ fontFamily: "var(--font-dm-sans)", fontSize: "clamp(15px,2.2vw,22px)", color: "#E8D5BC", maxWidth: 900, margin: "80px auto 0", lineHeight: 1.7, fontWeight: 700, textShadow: "0 2px 12px rgba(0,0,0,0.5)", textAlign: "center" }}
         >
           seven days in one of the most extraordinary places on earth.
         </motion.p>
@@ -375,32 +375,27 @@ export default function KenyaPage() {
 
       {/* SECTION 2 — INVITATION */}
       <section id="invitation" style={{ background: "var(--color-bg-page)", padding: "80px 32px" }}>
-        <div style={{ maxWidth: 600, margin: "0 auto", textAlign: "center", fontFamily: "var(--font-dm-sans)", fontSize: 16, color: "var(--color-text-body)", lineHeight: 1.9 }}>
+        <div style={{ maxWidth: 520, margin: "0 auto", textAlign: "center", fontFamily: "var(--font-dm-sans)", fontSize: 16, color: "var(--color-text-body)", lineHeight: 1.9 }}>
           <StaggerBlock>
             <StaggerChild>
               <p style={{ marginBottom: 28 }}>
-                you&apos;ve been the one <strong>holding it together</strong> for so long<br />
-                you don&apos;t even remember what it feels like<br />
-                to put it down.<br />
+                you&apos;ve been the one <strong>holding it together</strong> for so long, you don&apos;t even remember what it feels like to put it down.<br />
                 <em>not because you have to.</em><br />
-                because somewhere along the way,<br />
-                letting go started to feel like losing.
+                because somewhere along the way, letting go started to feel like losing.
               </p>
             </StaggerChild>
             <StaggerChild>
               <p style={{ marginBottom: 28 }}>
-                so you plan. you prepare.<br />
-                you stay one step ahead of everything<br />
-                that might catch you off guard.<br />
+                so you plan.<br />
+                you prepare.<br />
+                you stay one step ahead of everything that might catch you off guard.<br /><br />
                 <em>and it works.</em><br />
                 <strong>until it doesn&apos;t.</strong>
               </p>
             </StaggerChild>
             <StaggerChild>
               <p style={{ marginBottom: 40 }}>
-                until you&apos;re <u>exhausted by your own competence</u><br />
-                and quietly starving for something<br />
-                you can&apos;t organize your way into.
+                until you&apos;re <u>exhausted by your own competence</u>{" "}and quietly starving for something you can&apos;t organize your way into.
               </p>
             </StaggerChild>
 
@@ -415,19 +410,20 @@ export default function KenyaPage() {
 
             <StaggerChild>
               <p style={{ marginBottom: 28 }}>
-                <strong>kenya doesn&apos;t care about your plans.</strong><br /><br />
-                <em>the lion moves when she wants to move.</em><br />
-                <em>the sun sets and still rises.</em><br />
-                the land is proof that <u>the most extraordinary<br />things on earth are not controlled by anyone.</u>
+                <strong>kenya doesn&apos;t care about your plans.</strong>
+                <br /><br />
+                the lion moves when she wants to move.<br />
+                the sun sets and still rises.<br />
+                the land is proof that <u>the most extraordinary things on earth are not controlled by anyone.</u>
               </p>
             </StaggerChild>
             <StaggerChild>
               <p style={{ marginBottom: 40 }}>
-                and something about being inside that —<br />
-                <em>really inside it, not watching it through a screen —</em><br />
-                <strong>cracks something open.</strong><br />
-                the need to manage. to anticipate. to stay ready.<br />
-                it just... loosens.<br />
+                and something about being inside that — <em>really inside it,</em><br />
+                <em>not watching it through a screen —</em> <strong>cracks something open.</strong><br />
+                the need to manage.<br />
+                to anticipate.<br />
+                to stay ready. it just... loosens.<br />
                 <em>maybe for the first time in years.</em>
               </p>
             </StaggerChild>
@@ -444,32 +440,26 @@ export default function KenyaPage() {
             <StaggerChild>
               <p style={{ marginBottom: 28 }}>
                 because this isn&apos;t the matrix.<br />
-                <em>there is no inbox. no algorithm.</em><br />
-                no performance of a life that looks good<br />
-                from the outside.
+                <em>there is no inbox.</em><br />
+                <em>no algorithm.</em><br />
+                no performance of a life that looks good from the outside.
               </p>
             </StaggerChild>
             <StaggerChild>
               <p style={{ marginBottom: 28 }}>
-                there is just <strong>90,000 acres of open savannah</strong><br />
-                and you, standing in the middle of it,<br />
-                realizing your nervous system<br />
-                has been waiting your whole life<br />
-                to feel this.
+                there is just <strong>90,000 acres of open savannah</strong> and you,<br />
+                standing in the middle of it,<br />
+                realizing your nervous system has been waiting your whole life to feel this.
               </p>
             </StaggerChild>
             <StaggerChild>
               <p style={{ marginBottom: 0 }}>
                 <strong><u>present.</u></strong><br />
-                <span style={{ display: "block", marginTop: 8 }}><strong><u>free.</u></strong></span>
-                <span style={{ display: "block", marginTop: 8 }}><strong><u>awake.</u></strong></span>
-                <span style={{ display: "block", marginTop: 28 }}>
-                  this is what it feels like<br />
-                  to be <em>alive outside of it all.</em><br /><br />
-                  and once you feel it —<br />
-                  <em>really feel it —</em><br />
-                  <strong>you can&apos;t unfeel it.</strong>
-                </span>
+                <strong><u>free.</u></strong><br />
+                <strong><u>awake.</u></strong><br />
+                this is what it feels like to be <em>alive outside of it all.</em>
+                <br /><br />
+                and once you feel it — <em>really feel it —</em> <strong>you can&apos;t unfeel it.</strong>
               </p>
             </StaggerChild>
           </StaggerBlock>
@@ -481,7 +471,7 @@ export default function KenyaPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <FadeIn>
             <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", fontWeight: 700, color: "var(--color-text-headline)", textAlign: "center", marginBottom: 64 }}>
-              how do we call her home?
+              how do we<span className="mobile-break"> </span>call her home?
             </h2>
           </FadeIn>
 
@@ -551,7 +541,7 @@ export default function KenyaPage() {
           </div>
 
         </div>
-        <style>{`@media(max-width:768px){.cards-row{grid-template-columns:1fr!important}.solo-card{grid-template-columns:1fr!important}}`}</style>
+        <style>{`@media(max-width:768px){.cards-row{grid-template-columns:1fr!important}.solo-card{grid-template-columns:1fr!important}.mobile-break{display:block}}`}</style>
       </section>
 
 
