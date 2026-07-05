@@ -442,20 +442,20 @@ export default function MoroccoPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12, alignItems: "stretch" }} className="cards-row">
             {[
               {
-                ph: "yoga/movement Morocco",
+                img: "/images/Morocco yoga.png",
                 title: "come back to your body",
                 body: <>gentle movement, somatic practices, and sound healing to release tension, numbness, and that <em>&ldquo;I&apos;m holding it all together&rdquo;</em> tightness you&apos;ve been living in.</>,
               },
               {
-                ph: "sound healing/reiki",
+                img: "/images/Morocco candles.jpeg",
                 title: "rebuild self-worth from the inside out",
                 body: <>not a pep talk. real rewiring. the kind that shifts the old stories of <em>&ldquo;I have to prove myself&rdquo;</em> into something <em>steady, calm, and true.</em></>,
               },
             ].map((card, i) => (
               <FadeIn key={i} delay={i * 0.1} style={{ height: "100%" }}>
                 <div style={{ background: "var(--color-bg-page)", border: "0.5px solid var(--color-border)", borderRadius: 10, overflow: "hidden", display: "flex", flexDirection: "column", height: "100%" }}>
-                  <div style={{ width: "100%", aspectRatio: "4/3", background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden", flexShrink: 0 }}>
-                    <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)", letterSpacing: "0.03em", textAlign: "center", padding: 16 }}>[PLACEHOLDER: {card.ph}]</span>
+                  <div style={{ width: "100%", aspectRatio: "4/3", position: "relative", overflow: "hidden", flexShrink: 0 }}>
+                    <Image src={card.img} alt={card.title} fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="(max-width: 768px) 100vw, 50vw" />
                   </div>
                   <div style={{ padding: "20px 24px 28px", textAlign: "center", flex: 1 }}>
                     <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 18, color: "var(--color-text-headline)", marginBottom: 10 }}>{card.title}</p>
@@ -470,20 +470,20 @@ export default function MoroccoPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12, alignItems: "stretch" }} className="cards-row">
             {[
               {
-                ph: "Morocco beauty/ritual",
+                img: "/images/healing 1.png",
                 title: "remember your beauty without performing",
                 body: <>beauty as presence. beauty as being at ease in your own skin. beauty as <em>&ldquo;I don&apos;t need to be chosen — I choose myself.&rdquo;</em></>,
               },
               {
-                ph: "Morocco ceremony/circle",
+                img: "/images/Morocco circle.jpeg",
                 title: "heal the patterns that keep you small",
                 body: <>the people-pleasing. the overthinking. the settling. the <em>&ldquo;maybe I&apos;m asking for too much.&rdquo;</em> we meet it with compassion… and we don&apos;t let it run the show anymore.</>,
               },
             ].map((card, i) => (
               <FadeIn key={i} delay={i * 0.1} style={{ height: "100%" }}>
                 <div style={{ background: "#2D2521", borderRadius: 10, overflow: "hidden", display: "flex", flexDirection: "column", height: "100%" }}>
-                  <div style={{ width: "100%", aspectRatio: "4/3", background: "rgba(255,255,255,0.05)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden", flexShrink: 0 }}>
-                    <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "rgba(255,255,255,0.3)", letterSpacing: "0.03em", textAlign: "center", padding: 16 }}>[PLACEHOLDER: {card.ph}]</span>
+                  <div style={{ width: "100%", aspectRatio: "4/3", position: "relative", overflow: "hidden", flexShrink: 0 }}>
+                    <Image src={card.img} alt={card.title} fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="(max-width: 768px) 100vw, 50vw" />
                   </div>
                   <div style={{ padding: "20px 24px 28px", textAlign: "center", flex: 1 }}>
                     <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 20, color: "#F1F0E5", marginBottom: 16 }}>{card.title}</p>
@@ -498,20 +498,20 @@ export default function MoroccoPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, alignItems: "stretch" }} className="cards-row">
             {[
               {
-                ph: "women's circle Morocco",
+                img: "/images/Morocco lounge.jpeg",
                 title: "let yourself be held by sisterhood",
                 body: <>honest circles. deep laughter. tears that don&apos;t need explaining. the kind of connection that makes you exhale because <strong>you&apos;re not doing life alone.</strong></>,
               },
               {
-                ph: "Morocco landscape/nature",
+                img: "/images/Morocco sunset.jpeg",
                 title: "return to what's real",
                 body: <>quiet. sun on skin. feet on sand. a slower rhythm that helps you hear your own inner voice again.</>,
               },
             ].map((card, i) => (
               <FadeIn key={i} delay={i * 0.1} style={{ height: "100%" }}>
                 <div style={{ background: "var(--color-bg-page)", border: "0.5px solid var(--color-border)", borderRadius: 10, overflow: "hidden", display: "flex", flexDirection: "column", height: "100%" }}>
-                  <div style={{ width: "100%", aspectRatio: "4/3", background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden", flexShrink: 0 }}>
-                    <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)", letterSpacing: "0.03em", textAlign: "center", padding: 16 }}>[PLACEHOLDER: {card.ph}]</span>
+                  <div style={{ width: "100%", aspectRatio: "4/3", position: "relative", overflow: "hidden", flexShrink: 0 }}>
+                    <Image src={card.img} alt={card.title} fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="(max-width: 768px) 100vw, 50vw" />
                   </div>
                   <div style={{ padding: "20px 24px 28px", textAlign: "center", flex: 1 }}>
                     <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 18, color: "var(--color-text-headline)", marginBottom: 10 }}>{card.title}</p>
