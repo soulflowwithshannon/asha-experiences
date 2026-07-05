@@ -189,7 +189,7 @@ function KenyaHero() {
           transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
           style={{ fontFamily: "var(--font-dm-sans)", fontSize: "clamp(15px,2.2vw,22px)", color: "#E8D5BC", maxWidth: 900, margin: "80px auto 0", lineHeight: 1.7, fontWeight: 700, textShadow: "0 2px 12px rgba(0,0,0,0.5)", textAlign: "center" }}
         >
-          seven days in one of the most extraordinary places on earth.
+          seven days in one of the most<span className="kenya-hero-break"> </span>extraordinary places on earth.
         </motion.p>
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }} style={{ marginTop: 60 }}>
           <a
@@ -541,7 +541,7 @@ export default function KenyaPage() {
           </div>
 
         </div>
-        <style>{`@media(max-width:768px){.cards-row{grid-template-columns:1fr!important}.solo-card{grid-template-columns:1fr!important}.mobile-break{display:block}}`}</style>
+        <style>{`@media(max-width:768px){.cards-row{grid-template-columns:1fr!important}.solo-card{grid-template-columns:1fr!important}.mobile-break{display:block}.kenya-hero-break{display:block}}`}</style>
       </section>
 
 
