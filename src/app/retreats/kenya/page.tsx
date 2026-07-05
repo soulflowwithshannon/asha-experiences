@@ -549,7 +549,7 @@ export default function KenyaPage() {
       {/* SECTION 3 — WHERE WE'RE STAYING */}
       <section style={{ background: "var(--color-bg-surface)", padding: "80px 48px" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center", maxWidth: 1280, margin: "0 auto" }} className="stay-grid">
-          <div style={{ position: "relative", borderRadius: 8, overflow: "hidden", aspectRatio: "4/5" }}>
+          <div className="stay-video" style={{ position: "relative", borderRadius: 8, overflow: "hidden", aspectRatio: "4/5" }}>
             <video
               autoPlay
               muted
@@ -560,7 +560,7 @@ export default function KenyaPage() {
               <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Ol%20Pejeta%20Sizzle%20Reel.mp4" type="video/mp4" />
             </video>
           </div>
-          <div style={{ maxWidth: 512 }}>
+          <div className="stay-copy" style={{ maxWidth: 512 }}>
             <FadeIn><p className="eyebrow-accent" style={{ marginBottom: 16, fontWeight: 700 }}>OL PEJETA CONSERVANCY</p></FadeIn>
             <FadeIn delay={0.1}>
               <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 24, whiteSpace: "nowrap" }}>
@@ -587,7 +587,7 @@ export default function KenyaPage() {
             </FadeIn>
           </div>
         </div>
-        <style>{`@media(max-width:768px){.stay-grid{grid-template-columns:1fr!important}.stay-grid>div:first-child{margin:0 auto;width:100%;max-width:480px}.stay-grid>div:last-child{margin:0 auto;width:100%;max-width:480px;text-align:center}}`}</style>
+        <style>{`@media(max-width:768px){.stay-grid{grid-template-columns:1fr!important}.stay-video{margin:0 auto;width:100%}.stay-copy{margin:0 auto;width:100%;text-align:center}}`}</style>
       </section>
 
       {/* SECTION 4 — ARC OF THE WEEK */}
