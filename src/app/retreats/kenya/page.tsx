@@ -460,7 +460,7 @@ export default function KenyaPage() {
                 <strong><u>awake.</u></strong><br />
                 this is what it feels like<br />to be <em>alive outside of it all.</em>
                 <br /><br />
-                and once you feel it — <em>really feel it —</em> <strong>you can&apos;t unfeel it.</strong>
+                and once you feel it — <em>really feel it —</em><br /><strong>you can&apos;t unfeel it.</strong>
               </p>
             </StaggerChild>
           </StaggerBlock>
