@@ -505,7 +505,7 @@ export default function MoroccoPage() {
                 body: <>honest circles. deep laughter. tears that don&apos;t need explaining. the kind of connection that makes you exhale because <strong>you&apos;re not doing life alone.</strong></>,
               },
               {
-                img: "/images/Morocco lounge.jpeg",
+                img: "/images/Milky Way Over Ait Benhaddou Village, Morocco.jpeg",
                 title: "return to what's real",
                 body: <>quiet. sun on skin. feet on sand. a slower rhythm that helps you hear your own inner voice again.</>,
               },
