@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     siteName: "ASHA Experiences",
     title: "ASHA Experiences — International Retreats for Women",
     description: "ASHA Experiences creates transformational international retreats for women — in Morocco, Mexico, and Kenya. Come back to yourself.",
-    images: [{ url: "/images/Morocco hero.png", width: 1920, height: 1080, alt: "ASHA Experiences — Women's Retreat" }],
+    images: [{ url: "/images/Return to Love group sunset.jpg", width: 1200, height: 630, alt: "ASHA Experiences — Women's Retreat" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ASHA Experiences — International Retreats for Women",
     description: "ASHA Experiences creates transformational international retreats for women — in Morocco, Mexico, and Kenya. Come back to yourself.",
-    images: ["/images/Morocco hero.png"],
+    images: ["/images/Return to Love group sunset.jpg"],
   },
   robots: {
     index: true,
