@@ -124,19 +124,18 @@ function MoroccoHero() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
-    <section ref={ref} style={{ position: "relative", minHeight: "100vw", maxHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
-      <motion.div style={{ position: "absolute", inset: 0, y }}>
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(45,37,33,0.3), rgba(45,37,33,0.6))", zIndex: 1 }} />
-        <Image
-          src="/images/Morocco hero.png"
-          alt="Sacred Sands — Atlas Kasbah, Morocco"
-          fill
-          style={{ objectFit: "cover", objectPosition: "center top" }}
-          priority
-        />
-      </motion.div>
-
-      <div style={{ position: "relative", zIndex: 2, textAlign: "center", padding: "0 24px" }}>
+    <section ref={ref} style={{ position: "relative" }}>
+      <Image
+        src="/images/Morocco hero.png"
+        alt="Sacred Sands — Atlas Kasbah, Morocco"
+        width={1920}
+        height={1080}
+        style={{ width: "100%", height: "auto", display: "block" }}
+        priority
+      />
+      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(45,37,33,0.3), rgba(45,37,33,0.6))", zIndex: 1 }} />
+      <div style={{ position: "absolute", inset: 0, zIndex: 2, display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <div style={{ textAlign: "center", padding: "0 24px" }}>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -179,6 +178,7 @@ function MoroccoHero() {
             journey with us ↓
           </a>
         </motion.div>
+      </div>
       </div>
     </section>
   );
