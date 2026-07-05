@@ -439,7 +439,7 @@ export default function MoroccoPage() {
           </FadeIn>
 
           {/* Row 1 — 2 light cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12 }} className="cards-row">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12, alignItems: "stretch" }} className="cards-row">
             {[
               {
                 ph: "yoga/movement Morocco",
@@ -452,12 +452,12 @@ export default function MoroccoPage() {
                 body: <>Not a pep talk. Real rewiring. The kind that shifts the old stories of &ldquo;I have to prove myself&rdquo; into something <em>steady, calm, and true.</em></>,
               },
             ].map((card, i) => (
-              <FadeIn key={i} delay={i * 0.1}>
-                <div style={{ background: "var(--color-bg-page)", border: "0.5px solid var(--color-border)", borderRadius: 10, overflow: "hidden" }}>
-                  <div style={{ width: "100%", aspectRatio: "4/3", background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
+              <FadeIn key={i} delay={i * 0.1} style={{ height: "100%" }}>
+                <div style={{ background: "var(--color-bg-page)", border: "0.5px solid var(--color-border)", borderRadius: 10, overflow: "hidden", display: "flex", flexDirection: "column", height: "100%" }}>
+                  <div style={{ width: "100%", aspectRatio: "4/3", background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden", flexShrink: 0 }}>
                     <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)", letterSpacing: "0.03em", textAlign: "center", padding: 16 }}>[PLACEHOLDER: {card.ph}]</span>
                   </div>
-                  <div style={{ padding: "20px 24px 28px", textAlign: "center" }}>
+                  <div style={{ padding: "20px 24px 28px", textAlign: "center", flex: 1 }}>
                     <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 18, color: "var(--color-text-headline)", marginBottom: 10 }}>{card.title}</p>
                     <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.8 }}>{card.body}</p>
                   </div>
@@ -467,28 +467,35 @@ export default function MoroccoPage() {
           </div>
 
           {/* Row 2 — 2 dark cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12 }} className="cards-row">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12, alignItems: "stretch" }} className="cards-row">
             {[
               {
+                ph: "Morocco beauty/ritual",
                 title: "remember your beauty without performing",
                 body: <>Beauty as presence. Beauty as being at ease in your own skin. Beauty as <em>&ldquo;I don&apos;t need to be chosen — I choose myself.&rdquo;</em></>,
               },
               {
+                ph: "Morocco ceremony/circle",
                 title: "heal the patterns that keep you small",
                 body: <>The people-pleasing. The overthinking. The settling. The <em>&ldquo;maybe I&apos;m asking for too much.&rdquo;</em> We meet it with compassion… and we don&apos;t let it run the show anymore.</>,
               },
             ].map((card, i) => (
-              <FadeIn key={i} delay={i * 0.1}>
-                <div style={{ background: "#2D2521", borderRadius: 10, overflow: "hidden", padding: "48px 40px", textAlign: "center", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                  <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 20, color: "#F1F0E5", marginBottom: 16 }}>{card.title}</p>
-                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "#C5AA9B", lineHeight: 1.8 }}>{card.body}</p>
+              <FadeIn key={i} delay={i * 0.1} style={{ height: "100%" }}>
+                <div style={{ background: "#2D2521", borderRadius: 10, overflow: "hidden", display: "flex", flexDirection: "column", height: "100%" }}>
+                  <div style={{ width: "100%", aspectRatio: "4/3", background: "rgba(255,255,255,0.05)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden", flexShrink: 0 }}>
+                    <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "rgba(255,255,255,0.3)", letterSpacing: "0.03em", textAlign: "center", padding: 16 }}>[PLACEHOLDER: {card.ph}]</span>
+                  </div>
+                  <div style={{ padding: "20px 24px 28px", textAlign: "center", flex: 1 }}>
+                    <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 20, color: "#F1F0E5", marginBottom: 16 }}>{card.title}</p>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "#C5AA9B", lineHeight: 1.8 }}>{card.body}</p>
+                  </div>
                 </div>
               </FadeIn>
             ))}
           </div>
 
           {/* Row 3 — 2 light cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }} className="cards-row">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, alignItems: "stretch" }} className="cards-row">
             {[
               {
                 ph: "women's circle Morocco",
@@ -501,12 +508,12 @@ export default function MoroccoPage() {
                 body: <>Quiet. Sun on skin. Feet on sand. A slower rhythm that helps you hear your own inner voice again.</>,
               },
             ].map((card, i) => (
-              <FadeIn key={i} delay={i * 0.1}>
-                <div style={{ background: "var(--color-bg-page)", border: "0.5px solid var(--color-border)", borderRadius: 10, overflow: "hidden" }}>
-                  <div style={{ width: "100%", aspectRatio: "4/3", background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
+              <FadeIn key={i} delay={i * 0.1} style={{ height: "100%" }}>
+                <div style={{ background: "var(--color-bg-page)", border: "0.5px solid var(--color-border)", borderRadius: 10, overflow: "hidden", display: "flex", flexDirection: "column", height: "100%" }}>
+                  <div style={{ width: "100%", aspectRatio: "4/3", background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden", flexShrink: 0 }}>
                     <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)", letterSpacing: "0.03em", textAlign: "center", padding: 16 }}>[PLACEHOLDER: {card.ph}]</span>
                   </div>
-                  <div style={{ padding: "20px 24px 28px", textAlign: "center" }}>
+                  <div style={{ padding: "20px 24px 28px", textAlign: "center", flex: 1 }}>
                     <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 18, color: "var(--color-text-headline)", marginBottom: 10 }}>{card.title}</p>
                     <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.8 }}>{card.body}</p>
                   </div>
