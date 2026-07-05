@@ -475,7 +475,7 @@ export default function MoroccoPage() {
                 body: <>beauty as presence. beauty as being at ease in your own skin. beauty as <em>&ldquo;I don&apos;t need to be chosen — I choose myself.&rdquo;</em></>,
               },
               {
-                img: "/images/Morocco circle.jpeg",
+                img: "/images/sound healing.jpg",
                 title: "heal the patterns that keep you small",
                 body: <>the people-pleasing. the overthinking. the settling. the <em>&ldquo;maybe I&apos;m asking for too much.&rdquo;</em> we meet it with compassion… and we don&apos;t let it run the show anymore.</>,
               },
