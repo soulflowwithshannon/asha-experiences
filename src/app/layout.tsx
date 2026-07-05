@@ -24,8 +24,35 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "ASHA Experiences — International Retreats for Women",
-  description: "International retreats for the women who've been waiting their whole life for this trip.",
+  title: {
+    default: "ASHA Experiences — International Retreats for Women",
+    template: "%s | ASHA Experiences",
+  },
+  description: "ASHA Experiences creates transformational international retreats for women — in Morocco, Mexico, and Kenya. Come back to yourself.",
+  keywords: ["women's retreat", "international retreat for women", "transformational travel", "Morocco retreat", "Mexico retreat", "Kenya retreat", "women's wellness retreat", "spiritual retreat for women", "ASHA Experiences"],
+  authors: [{ name: "ASHA Experiences" }],
+  creator: "ASHA Experiences",
+  metadataBase: new URL("https://ashaexperiences.com"),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://ashaexperiences.com",
+    siteName: "ASHA Experiences",
+    title: "ASHA Experiences — International Retreats for Women",
+    description: "ASHA Experiences creates transformational international retreats for women — in Morocco, Mexico, and Kenya. Come back to yourself.",
+    images: [{ url: "/images/Morocco hero.png", width: 1920, height: 1080, alt: "ASHA Experiences — Women's Retreat" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ASHA Experiences — International Retreats for Women",
+    description: "ASHA Experiences creates transformational international retreats for women — in Morocco, Mexico, and Kenya. Come back to yourself.",
+    images: ["/images/Morocco hero.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
 };
 
 export default function RootLayout({
