@@ -456,8 +456,9 @@ export default function KenyaPage() {
               <p style={{ marginBottom: 0 }}>
                 <strong><u>present.</u></strong><br />
                 <strong><u>free.</u></strong><br />
-                <strong><u>awake.</u></strong><br />
-                this is what it feels like<br />to be <em>alive outside of it all.</em>
+                <strong><u>awake.</u></strong>
+                <br /><br />
+                this is what it feels like<br /><em>to be alive outside of it all.</em>
                 <br /><br />
                 and once you feel it — <em>really feel it —</em><br /><strong>you can&apos;t unfeel it.</strong>
               </p>
