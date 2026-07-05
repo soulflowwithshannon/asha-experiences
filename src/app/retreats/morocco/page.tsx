@@ -427,7 +427,7 @@ export default function MoroccoPage() {
       </section>
 
       {/* SECTION 2b — HOW WE CALL HER HOME */}
-      <section style={{ background: "var(--color-bg-surface)", padding: "80px 32px" }}>
+      <section style={{ background: "var(--color-bg-surface)", padding: "80px 32px 48px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <FadeIn>
             <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", fontWeight: 700, color: "var(--color-text-headline)", textAlign: "center", marginBottom: 24 }}>
@@ -546,6 +546,13 @@ export default function MoroccoPage() {
               <p>
                 <strong>and to leave with a body that believes it.</strong>
               </p>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, margin: "40px 0 0" }}>
+              <div style={{ flex: 1, height: "0.5px", background: "var(--color-border)" }} />
+              <span style={{ color: "var(--color-accent)", fontSize: 14 }}>✦</span>
+              <div style={{ flex: 1, height: "0.5px", background: "var(--color-border)" }} />
             </div>
           </FadeIn>
         </div>
