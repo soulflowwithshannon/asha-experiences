@@ -586,7 +586,7 @@ export default function KenyaPage() {
             </FadeIn>
           </div>
         </div>
-        <style>{`@media(max-width:768px){.stay-grid{grid-template-columns:1fr!important}.stay-grid>div:first-child{margin:0 auto;width:100%;max-width:480px}}`}</style>
+        <style>{`@media(max-width:768px){.stay-grid{grid-template-columns:1fr!important}.stay-grid>div:first-child{margin:0 auto;width:100%;max-width:480px}.stay-grid>div:last-child{margin:0 auto;width:100%;max-width:480px;text-align:center}}`}</style>
       </section>
 
       {/* SECTION 4 — ARC OF THE WEEK */}
