@@ -119,6 +119,27 @@ function DaysGrid() {
   );
 }
 
+function ExpandableCard({ img, title, body }: { img: string; title: string; body: ReactNode }) {
+  const [expanded, setExpanded] = useState(false);
+  return (
+    <div style={{ background: "var(--color-bg-page)", border: "0.5px solid var(--color-border)", borderRadius: 10, overflow: "hidden", display: "flex", flexDirection: "column", height: "100%" }}>
+      <div style={{ position: "relative", height: 180, flexShrink: 0, overflow: "hidden" }}>
+        <Image src={img} alt={title} fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="(max-width: 768px) 100vw, 50vw" />
+      </div>
+      <div style={{ padding: "20px 24px 24px", textAlign: "center", display: "flex", flexDirection: "column", flex: 1 }}>
+        <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 18, color: "var(--color-text-headline)", marginBottom: 10 }}>{title}</p>
+        <p style={{
+          fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.8,
+          display: "-webkit-box", WebkitLineClamp: expanded ? "unset" : 4, WebkitBoxOrient: "vertical" as const, overflow: expanded ? "visible" : "hidden",
+        }}>{body}</p>
+        <button onClick={() => setExpanded(!expanded)} style={{ marginTop: 8, background: "none", border: "none", cursor: "pointer", fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", letterSpacing: "0.03em", padding: 0, alignSelf: "center" }}>
+          {expanded ? "read less →" : "read more →"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
 function KenyaHero() {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
@@ -166,7 +187,7 @@ function KenyaHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
-          style={{ fontFamily: "var(--font-dm-sans)", fontSize: 17, color: "#E8D5BC", maxWidth: 520, margin: "80px auto 0", lineHeight: 1.7 }}
+          style={{ fontFamily: "var(--font-dm-sans)", fontSize: 22, color: "#E8D5BC", maxWidth: 900, margin: "80px auto 0", lineHeight: 1.7, whiteSpace: "nowrap", fontWeight: 700, textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}
         >
           seven days in one of the most extraordinary places on earth.
         </motion.p>
@@ -465,35 +486,21 @@ export default function KenyaPage() {
           </FadeIn>
 
           {/* Row 1 — 2 cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12 }} className="cards-row">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12, alignItems: "stretch" }} className="cards-row">
             {[
               {
-                ph: null,
                 img: "/images/5.png",
                 title: "step into your body, fully",
                 body: <>through yoga, somatic practice, and movement<br />that wakes up what went quiet.<br /><br />your body knows how to feel alive —<br />it just needs permission and space</>,
               },
               {
-                ph: null,
                 img: "/images/Tanzania.jpeg",
                 title: "let the land be your mirror",
                 body: <>sunrise safari drives through open plains.<br />golden hour with lion trackers who&apos;ve walked<br />this land their whole lives.<br /><br /><em>wildlife that doesn&apos;t perform or pretend —<br />it just exists, fully, without apology.</em><br /><br />something about watching that<br />makes you want to do the same.</>,
               },
             ].map((card, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div style={{ background: "var(--color-bg-page)", border: "0.5px solid var(--color-border)", borderRadius: 10, overflow: "hidden" }}>
-                  <div style={{ width: "100%", aspectRatio: "1 / 1", background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
-                    {"img" in card && card.img ? (
-                      <Image src={card.img} alt={card.title} fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="(max-width: 768px) 100vw, 50vw" />
-                    ) : (
-                      <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)", letterSpacing: "0.03em", textAlign: "center", padding: 16 }}>[PLACEHOLDER: {card.ph}]</span>
-                    )}
-                  </div>
-                  <div style={{ padding: "20px 0", textAlign: "center" }}>
-                    <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 18, color: "var(--color-text-headline)", marginBottom: 10 }}>{card.title}</p>
-                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.8 }}>{card.body}</p>
-                  </div>
-                </div>
+                <ExpandableCard img={card.img} title={card.title} body={card.body} />
               </FadeIn>
             ))}
           </div>
@@ -524,35 +531,21 @@ export default function KenyaPage() {
           </FadeIn>
 
           {/* Row 3 — 2 cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }} className="cards-row">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, alignItems: "stretch" }} className="cards-row">
             {[
               {
-                ph: null,
                 img: "/images/ReturnToLove circle.jpg",
                 title: "go underneath the surface",
                 body: <>ashley&apos;s sound healing and reiki.<br />women&apos;s circles held under open sky.<br />ceremony that reaches <u>the layer<br />the everyday world never touches.</u><br /><br /><em>not therapy. not a workshop.</em><br /><strong>something older than both.</strong><br /><br />the part of you that&apos;s been waiting<br />to finally be heard.</>,
               },
               {
-                ph: null,
                 img: "/images/women laying down.jpeg",
                 title: "let yourself be found by each other",
                 body: <>you will arrive not knowing anyone.<br />by day three, these women will know things<br />about you that your oldest friends don&apos;t.<br /><br /><em>that&apos;s not an accident.</em><br />that&apos;s what happens when you take<br />the performance away<br />and <strong>just let yourself be seen.</strong><br /><br />in a place this wild,<br /><em>it happens faster than you&apos;d think.</em></>,
               },
             ].map((card, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div style={{ background: "var(--color-bg-page)", border: "0.5px solid var(--color-border)", borderRadius: 10, overflow: "hidden" }}>
-                  <div style={{ width: "100%", aspectRatio: "1 / 1", background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
-                    {"img" in card && card.img ? (
-                      <Image src={card.img} alt={card.title} fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="(max-width: 768px) 100vw, 50vw" />
-                    ) : (
-                      <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)", letterSpacing: "0.03em", textAlign: "center", padding: 16 }}>[PLACEHOLDER: {card.ph}]</span>
-                    )}
-                  </div>
-                  <div style={{ padding: "20px 0", textAlign: "center" }}>
-                    <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 18, color: "var(--color-text-headline)", marginBottom: 10 }}>{card.title}</p>
-                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.8 }}>{card.body}</p>
-                  </div>
-                </div>
+                <ExpandableCard img={card.img} title={card.title} body={card.body} />
               </FadeIn>
             ))}
           </div>

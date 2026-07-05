@@ -126,14 +126,14 @@ function MoroccoHero() {
   return (
     <section ref={ref} style={{ position: "relative" }}>
       <Image
-        src="/images/Morocco hero.png"
+        src="/images/morocco-hero-v2.png"
         alt="Sacred Sands — Atlas Kasbah, Morocco"
         width={1920}
         height={1080}
         style={{ width: "100%", height: "auto", display: "block" }}
         priority
       />
-      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(45,37,33,0.3), rgba(45,37,33,0.6))", zIndex: 1 }} />
+      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(45,37,33,0.3), rgba(45,37,33,0.65))", zIndex: 1 }} />
       <div style={{ position: "absolute", inset: 0, zIndex: 2, display: "flex", alignItems: "center", justifyContent: "center" }}>
       <div style={{ textAlign: "center", padding: "0 24px" }}>
         <motion.p
@@ -164,14 +164,14 @@ function MoroccoHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
-          style={{ fontFamily: "var(--font-dm-sans)", fontSize: 17, color: "#E8D5BC", maxWidth: 520, margin: "80px auto 0", lineHeight: 1.7 }}
+          style={{ fontFamily: "var(--font-dm-sans)", fontSize: 22, color: "#E8D5BC", maxWidth: 900, margin: "80px auto 0", lineHeight: 1.7, whiteSpace: "nowrap", fontWeight: 700, textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}
         >
-          seven days in one of the most extraordinary places on earth.
+          for women to come home to the part of them that&apos;s always been whole.
         </motion.p>
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }} style={{ marginTop: 60 }}>
           <a
             href="#invitation"
-            style={{ display: "inline-block", padding: "14px 36px", background: "rgba(195,158,136,0.85)", border: "1px solid #C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", fontWeight: 500, transition: "background 0.3s ease" }}
+            style={{ display: "inline-block", padding: "18px 48px", background: "rgba(195,158,136,0.85)", border: "1px solid #C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 16, letterSpacing: "0.04em", textDecoration: "none", fontWeight: 600, transition: "background 0.3s ease" }}
             onMouseEnter={(e) => (e.currentTarget.style.background = "#C39E88")}
             onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(195,158,136,0.85)")}
           >
@@ -287,13 +287,17 @@ const faqs: { question: string; answer: ReactNode }[] = [
     question: "how do I get to the retreat?",
     answer: (
       <div>
-        <p style={{ marginBottom: 12 }}>there are two airport options:</p>
+        <p style={{ marginBottom: 12 }}><strong>Your destination:</strong> Marrakech Menara Airport (RAK)</p>
+        <p style={{ marginBottom: 8 }}><strong>Best flight options:</strong></p>
         <ul style={{ listStyle: "disc", paddingLeft: 20, margin: "0 0 16px", display: "flex", flexDirection: "column", gap: 6 }}>
-          <li><strong>Agadir–Al Massira Airport (AGA)</strong> — closest, direct flights from many European hubs</li>
-          <li><strong>Marrakech Menara Airport (RAK)</strong> — approximately 3 hours from Atlas Kasbah, more international connections</li>
+          <li>International flights available from major US and European cities (direct flights available from NYC to Marrakech)</li>
+          <li>Most routes connect through major hubs (Paris, Madrid, London)</li>
+          <li>Average round-trip cost varies by departure city and season</li>
         </ul>
-        <p style={{ marginBottom: 8 }}><strong>Arrive:</strong> aim to be at Atlas Kasbah by 3pm on November 29th. private airport transfers are included and pre-arranged.</p>
-        <p><strong>Depart:</strong> December 5th. group transport back to the airport is provided.</p>
+        <p style={{ marginBottom: 8 }}><strong>Arrival/Departure:</strong></p>
+        <p style={{ marginBottom: 6 }}><strong>Arrive:</strong> Nov 29 — aim to land by 3pm to arrive by the evening (when the retreat officially starts).</p>
+        <p style={{ marginBottom: 16 }}><strong>Depart:</strong> Dec 5 — we&apos;ll have you back to RAK or AGA for afternoon/evening flights.</p>
+        <p>We coordinate your pickup time based on your flight details — just share your flight info with us after booking! From Marrakech airport to our retreat center is approximately 3 hours.</p>
       </div>
     ),
   },
@@ -360,30 +364,34 @@ export default function MoroccoPage() {
           <StaggerBlock>
             <StaggerChild>
               <p style={{ marginBottom: 28 }}>
-                there is a part of you<br />
-                that has always been whole.<br /><br />
-                <em>not the part that performs.</em><br />
-                not the part that holds it together.<br />
-                not the version that knows exactly<br />
-                what to say in every room.<br /><br />
-                the quiet part.<br />
-                <strong>the one underneath it all.</strong>
+                Somewhere along the way… we learned our worth was something we had to earn.
               </p>
             </StaggerChild>
             <StaggerChild>
               <p style={{ marginBottom: 28 }}>
-                she hasn&apos;t gone anywhere.<br />
-                <em>she&apos;s just been waiting<br />for you to come back to her.</em>
+                <em>👉 Be &ldquo;easy&rdquo;.<br />
+                👉 Be &ldquo;low maintenance&rdquo;.<br />
+                👉 Be beautiful, but not &ldquo;vain&rdquo;.<br />
+                👉 Be confident, but not intimidating.<br />
+                👉 Be soft, but not needy.<br />
+                👉 Be strong, but never need anything.</em>
               </p>
             </StaggerChild>
             <StaggerChild>
-              <p style={{ marginBottom: 40 }}>
-                <strong>your worth was never up for debate.</strong><br /><br />
-                but somewhere along the way,<br />
-                you started living like it was.
+              <p style={{ marginBottom: 28 }}>
+                So we got good at performing.<br /><br />
+                Good at shrinking.<br />
+                Good at saying &ldquo;<em>I&apos;m fine</em>&rdquo; while our body said &ldquo;<em>no you&apos;re not</em>&rdquo;.
               </p>
             </StaggerChild>
-
+            <StaggerChild>
+              <p style={{ marginBottom: 28 }}>
+                And it adds up..<br />
+                You start second-guessing what you want.<br />
+                Bargaining with your boundaries.<br />
+                Treating your beauty like it&apos;s a negotiation.
+              </p>
+            </StaggerChild>
             <StaggerChild>
               <div style={{ display: "flex", alignItems: "center", gap: 12, margin: "0 0 40px" }}>
                 <div style={{ flex: 1, height: "0.5px", background: "#D4C8AA" }} />
@@ -391,40 +399,27 @@ export default function MoroccoPage() {
                 <div style={{ flex: 1, height: "0.5px", background: "#D4C8AA" }} />
               </div>
             </StaggerChild>
-
             <StaggerChild>
               <p style={{ marginBottom: 28 }}>
-                <strong>Morocco doesn&apos;t care about your productivity.</strong><br /><br />
-                <em>the sands have been here for thousands of years.</em><br />
-                the light at dusk in the Atlas foothills<br />
-                doesn&apos;t negotiate with your schedule.<br /><br />
-                <u>it just is.</u><br />
-                <em>and being inside that kind of beauty<br />does something to a woman.</em>
+                <strong>Sacred Sands is a reset.</strong><br /><br />
+                Desert air.<br />
+                Warm sun.<br />
+                Sand under your feet.<br />
+                A slower rhythm that reminds your nervous system what safety feels like.
               </p>
             </StaggerChild>
-
-            <StaggerChild>
-              <div style={{ display: "flex", alignItems: "center", gap: 12, margin: "0 0 40px" }}>
-                <div style={{ flex: 1, height: "0.5px", background: "#D4C8AA" }} />
-                <span style={{ color: "#A67C52", fontSize: 14 }}>✦</span>
-                <div style={{ flex: 1, height: "0.5px", background: "#D4C8AA" }} />
-              </div>
-            </StaggerChild>
-
             <StaggerChild>
               <p style={{ marginBottom: 28 }}>
-                because this isn&apos;t the matrix.<br />
-                <em>there is no inbox. no algorithm.</em><br />
-                no performance of a life that looks good<br />
-                from the outside.
+                So you can remember this: <strong>Your worth was never up for debate. ❤️‍🔥</strong><br /><br />
+                Not with your body.<br />
+                Not with your age.<br />
+                Not with your life.
               </p>
             </StaggerChild>
             <StaggerChild>
               <p style={{ marginBottom: 0 }}>
-                there is just <strong>ancient land, warm air, and women<br />who are done pretending</strong> —<br />
-                and you, standing in the middle of it,<br />
-                finally remembering<br /><br />
-                <strong><u>who you are.</u></strong>
+                You don&apos;t need to fix yourself.<br /><br />
+                <strong>You need to stop abandoning yourself.</strong>
               </p>
             </StaggerChild>
           </StaggerBlock>
@@ -699,13 +694,13 @@ export default function MoroccoPage() {
             </p>
           </FadeIn>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 24, alignItems: "start" }} className="rooms-grid">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 24, alignItems: "stretch" }} className="rooms-grid">
 
             {/* The Jamila */}
             <FadeIn>
               <motion.div whileHover={{ y: -4, boxShadow: "0 16px 48px rgba(74,63,53,0.12)" }} transition={{ duration: 0.3 }} style={{ background: "var(--color-bg-card)", border: "0.5px solid var(--color-border)", borderRadius: 8, padding: 32, display: "flex", flexDirection: "column", height: "100%" }}>
-                <div style={{ background: "var(--color-bg-surface)", borderRadius: 6, overflow: "hidden", marginBottom: 24, aspectRatio: "4/3", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)", textAlign: "center", padding: 16 }}>[PLACEHOLDER: The Jamila]</span>
+                <div style={{ borderRadius: 6, overflow: "hidden", marginBottom: 24, aspectRatio: "809/770", position: "relative" }}>
+                  <Image src="/images/jamila-room.png" alt="The Jamila" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="400px" />
                 </div>
                 <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 24, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 8 }}>The Jamila</h3>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>private tower room · 1 available</p>
@@ -731,8 +726,8 @@ export default function MoroccoPage() {
             {/* The Amani */}
             <FadeIn delay={0.1}>
               <motion.div whileHover={{ y: -4, boxShadow: "0 16px 48px rgba(74,63,53,0.12)" }} transition={{ duration: 0.3 }} style={{ background: "var(--color-bg-card)", border: "0.5px solid var(--color-border)", borderRadius: 8, padding: 32, display: "flex", flexDirection: "column", height: "100%" }}>
-                <div style={{ background: "var(--color-bg-surface)", borderRadius: 6, overflow: "hidden", marginBottom: 24, aspectRatio: "4/3", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)", textAlign: "center", padding: 16 }}>[PLACEHOLDER: The Amani]</span>
+                <div style={{ borderRadius: 6, overflow: "hidden", marginBottom: 24, aspectRatio: "809/770", position: "relative" }}>
+                  <Image src="/images/13.png" alt="The Amani" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="400px" />
                 </div>
                 <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 24, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 8 }}>The Amani</h3>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>private room · 1 available</p>
@@ -758,8 +753,8 @@ export default function MoroccoPage() {
             {/* The Salima */}
             <FadeIn delay={0.2}>
               <motion.div whileHover={{ y: -4, boxShadow: "0 16px 48px rgba(74,63,53,0.12)" }} transition={{ duration: 0.3 }} style={{ background: "var(--color-bg-card)", border: "0.5px solid var(--color-border)", borderRadius: 8, padding: 32, display: "flex", flexDirection: "column", height: "100%" }}>
-                <div style={{ background: "var(--color-bg-surface)", borderRadius: 6, overflow: "hidden", marginBottom: 24, aspectRatio: "4/3", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)", textAlign: "center", padding: 16 }}>[PLACEHOLDER: The Salima]</span>
+                <div style={{ borderRadius: 6, overflow: "hidden", marginBottom: 24, aspectRatio: "809/770", position: "relative" }}>
+                  <Image src="/images/12.png" alt="The Salima" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="400px" />
                 </div>
                 <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 24, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 8 }}>The Salima</h3>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>shared 2-bedroom · 2 spaces available</p>
@@ -822,22 +817,23 @@ export default function MoroccoPage() {
       </section>
 
       {/* SECTION 10 — CLOSING CTA */}
-      <section style={{ position: "relative", padding: "140px 32px", background: "#2D2521", textAlign: "center", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, background: "#2D2521" }} />
+      <section style={{ position: "relative", padding: "280px 32px 220px", textAlign: "center", overflow: "hidden" }}>
+        <Image src="/images/Morocco final image.png" alt="" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="100vw" />
+        <div style={{ position: "absolute", inset: 0, background: "rgba(45,37,33,0.55)" }} />
         <div style={{ position: "relative", zIndex: 1 }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,4vw,40px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 40 }}>
-              something is calling you <em>here</em>
-            </h2>
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 24, color: "#BAAB92", maxWidth: 480, margin: "0 auto 24px", lineHeight: 1.7 }}>
+              seven days.<br />one ancient land.
+            </p>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 17, color: "#BAAB92", maxWidth: 480, margin: "0 auto 40px" }}>
-              seven days.<br />one ancient land.<br />the version of you<br />you&apos;ve been waiting to meet.
-            </p>
+            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,4vw,40px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 40 }}>
+              <em>consider this the moment you choose YOU</em>
+            </h2>
           </FadeIn>
           <FadeIn delay={0.2}>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
-              <a href="#rooms" style={{ display: "inline-block", padding: "12px 32px", background: "#C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 700, letterSpacing: "0.04em", textDecoration: "none", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "#b08d78")} onMouseLeave={(e) => (e.currentTarget.style.background = "#C39E88")}>
+              <a href="#rooms" style={{ display: "inline-block", padding: "18px 48px", background: "#C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 16, fontWeight: 700, letterSpacing: "0.04em", textDecoration: "none", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "#b08d78")} onMouseLeave={(e) => (e.currentTarget.style.background = "#C39E88")}>
                 reserve my spot →
               </a>
             </div>

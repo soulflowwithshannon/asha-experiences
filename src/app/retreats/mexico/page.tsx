@@ -567,10 +567,10 @@ export default function MexicoPage() {
       </div>
 
       {/* SECTION 9 — THE ROOMS */}
-      <section id="rooms" style={{ background: "#FFFCF5", padding: "80px 32px" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+      <section id="rooms" style={{ background: "#F5F1E6", padding: "80px 32px" }}>
+        <div style={{ maxWidth: 1000, margin: "0 auto" }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 8 }}>
+            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,48px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 8, paddingTop: 80 }}>
               your home in the jungle
             </h2>
           </FadeIn>
@@ -636,10 +636,10 @@ export default function MexicoPage() {
       </section>
 
       {/* SECTION 10 — FAQ */}
-      <section style={{ background: "var(--color-bg-page)", padding: "80px 32px" }}>
+      <section style={{ background: "#FFFCF5", padding: "80px 32px" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 56 }}>
+            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,48px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 56, paddingTop: 80 }}>
               everything you need to know
             </h2>
           </FadeIn>
