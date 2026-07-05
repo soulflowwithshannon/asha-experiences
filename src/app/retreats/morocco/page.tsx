@@ -148,7 +148,7 @@ function MoroccoHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.1, ease: "easeInOut" }}
-          style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(52px,8vw,80px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 16 }}
+          style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(36px,8vw,80px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 16 }}
         >
           Sacred Sands
         </motion.h1>
@@ -164,7 +164,7 @@ function MoroccoHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
-          style={{ fontFamily: "var(--font-dm-sans)", fontSize: 22, color: "#E8D5BC", maxWidth: 900, margin: "80px auto 0", lineHeight: 1.7, whiteSpace: "nowrap", fontWeight: 700, textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}
+          style={{ fontFamily: "var(--font-dm-sans)", fontSize: "clamp(15px,2.2vw,22px)", color: "#E8D5BC", maxWidth: 900, margin: "clamp(24px,5vw,80px) auto 0", lineHeight: 1.7, fontWeight: 700, textShadow: "0 2px 12px rgba(0,0,0,0.5)", textAlign: "center" }}
         >
           for women to come home to the part of them that&apos;s always been whole.
         </motion.p>
