@@ -364,9 +364,10 @@ export default function MexicoPage() {
       <section style={{ background: "#2D2521", padding: "100px 32px" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 16, textAlign: "center" }}>
-              How do we support that?
+            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 40, textAlign: "center" }}>
+              How do we<span className="mexico-support-break"> </span>support that?
             </h2>
+            <style>{`@media(max-width:640px){.mexico-support-break{display:block}}`}</style>
             <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, color: "#BAAB92", textAlign: "center", marginBottom: 64, lineHeight: 1.7 }}>
               Through embodied practices, rituals of release, honest reflection, and experiences that help you move what&apos;s been living under the surface.
             </p>
