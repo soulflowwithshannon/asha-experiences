@@ -525,21 +525,26 @@ export default function MoroccoPage() {
           <FadeIn delay={0.15}>
             <div style={{ maxWidth: 560, margin: "80px auto 0", textAlign: "center", fontFamily: "var(--font-dm-sans)", fontSize: 16, color: "var(--color-text-body)", lineHeight: 1.9, display: "flex", flexDirection: "column", gap: 20 }}>
               <p>
-                <strong>Sacred Sands gives you back what the noise took.</strong>
+                <em>by the end of Sacred Sands, you won&apos;t just understand self-worth.</em>
               </p>
               <p>
-                <em>the knowing.</em><br />
-                <em>the presence.</em><br />
-                <em>the feeling that you were never<br />as lost as you thought.</em>
+                <strong>you&apos;ll feel it.</strong>
               </p>
               <p>
-                you take that home.<br />
-                into the ordinary days,<br />
-                the world that will be exactly<br />
-                as you left it.
+                in how you take up space.<br />
+                in how you rest.<br />
+                in how you speak.<br />
+                in what you no longer tolerate.<br />
+                in how you look in the mirror and recognize yourself again.
               </p>
               <p>
-                <strong>except you won&apos;t be.</strong>
+                the goal isn&apos;t to become someone new.
+              </p>
+              <p>
+                <em>it&apos;s to remember who you are.</em>
+              </p>
+              <p>
+                <strong>and to leave with a body that believes it.</strong>
               </p>
             </div>
           </FadeIn>
