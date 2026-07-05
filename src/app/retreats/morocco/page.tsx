@@ -448,6 +448,7 @@ export default function MoroccoPage() {
               },
               {
                 img: "/images/Morocco candles.jpeg",
+                imgPosition: "center 70%",
                 title: "rebuild self-worth from the inside out",
                 body: <>not a pep talk. real rewiring. the kind that shifts the old stories of <em>&ldquo;I have to prove myself&rdquo;</em> into something <em>steady, calm, and true.</em></>,
               },
@@ -455,7 +456,7 @@ export default function MoroccoPage() {
               <FadeIn key={i} delay={i * 0.1} style={{ height: "100%" }}>
                 <div style={{ background: "var(--color-bg-page)", border: "0.5px solid var(--color-border)", borderRadius: 10, overflow: "hidden", display: "flex", flexDirection: "column", height: "100%" }}>
                   <div style={{ width: "100%", aspectRatio: "4/3", position: "relative", overflow: "hidden", flexShrink: 0 }}>
-                    <Image src={card.img} alt={card.title} fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="(max-width: 768px) 100vw, 50vw" />
+                    <Image src={card.img} alt={card.title} fill style={{ objectFit: "cover", objectPosition: card.imgPosition ?? "center" }} sizes="(max-width: 768px) 100vw, 50vw" />
                   </div>
                   <div style={{ padding: "20px 24px 28px", textAlign: "center", flex: 1 }}>
                     <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 18, color: "var(--color-text-headline)", marginBottom: 10 }}>{card.title}</p>
@@ -512,7 +513,7 @@ export default function MoroccoPage() {
               <FadeIn key={i} delay={i * 0.1} style={{ height: "100%" }}>
                 <div style={{ background: "var(--color-bg-page)", border: "0.5px solid var(--color-border)", borderRadius: 10, overflow: "hidden", display: "flex", flexDirection: "column", height: "100%" }}>
                   <div style={{ width: "100%", aspectRatio: "4/3", position: "relative", overflow: "hidden", flexShrink: 0 }}>
-                    <Image src={card.img} alt={card.title} fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="(max-width: 768px) 100vw, 50vw" />
+                    <Image src={card.img} alt={card.title} fill style={{ objectFit: "cover", objectPosition: card.imgPosition ?? "center" }} sizes="(max-width: 768px) 100vw, 50vw" />
                   </div>
                   <div style={{ padding: "20px 24px 28px", textAlign: "center", flex: 1 }}>
                     <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 18, color: "var(--color-text-headline)", marginBottom: 10 }}>{card.title}</p>
