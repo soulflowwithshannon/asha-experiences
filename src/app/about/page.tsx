@@ -203,7 +203,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeInOut" }}
-            style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(36px,6vw,56px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 16, lineHeight: 1.15 }}
+            style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,5vw,48px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 16, lineHeight: 1.15 }}
           >
             we became the women<br />we once needed.
           </motion.h1>
@@ -213,7 +213,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeInOut" }}
             style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "#BAAB92", marginTop: 16, lineHeight: 1.7 }}
           >
-            and now we guide others home too.
+            <strong>and now we guide others home too.</strong>
           </motion.p>
         </div>
       </section>
