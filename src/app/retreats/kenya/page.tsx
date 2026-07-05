@@ -563,7 +563,7 @@ export default function KenyaPage() {
           <div className="stay-copy" style={{ maxWidth: 512 }}>
             <FadeIn><p className="eyebrow-accent" style={{ marginBottom: 16, fontWeight: 700 }}>OL PEJETA CONSERVANCY</p></FadeIn>
             <FadeIn delay={0.1}>
-              <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 24, whiteSpace: "nowrap" }}>
+              <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 24 }}>
                 wild outside. held inside.
               </h2>
             </FadeIn>
@@ -587,7 +587,7 @@ export default function KenyaPage() {
             </FadeIn>
           </div>
         </div>
-        <style>{`@media(max-width:768px){.stay-grid{grid-template-columns:1fr!important}.stay-video{margin:0 auto;width:100%}.stay-copy{margin:0 auto;width:100%;text-align:center}}`}</style>
+        <style>{`@media(max-width:768px){.stay-grid{grid-template-columns:1fr!important}.stay-video{margin:0 auto;width:100%}.stay-copy{margin:0 auto;width:90%;padding:32px 24px;text-align:center}.stay-copy p,.stay-copy h2,.stay-copy div,.stay-copy span{text-align:center}}`}</style>
       </section>
 
       {/* SECTION 4 — ARC OF THE WEEK */}
