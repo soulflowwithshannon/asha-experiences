@@ -470,7 +470,7 @@ export default function MoroccoPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12, alignItems: "stretch" }} className="cards-row">
             {[
               {
-                img: "/images/healing 1.png",
+                img: "/images/Morocco circle.jpeg",
                 title: "remember your beauty without performing",
                 body: <>beauty as presence. beauty as being at ease in your own skin. beauty as <em>&ldquo;I don&apos;t need to be chosen — I choose myself.&rdquo;</em></>,
               },
