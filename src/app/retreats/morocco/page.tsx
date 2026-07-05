@@ -430,31 +430,34 @@ export default function MoroccoPage() {
       <section style={{ background: "var(--color-bg-surface)", padding: "80px 32px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", fontWeight: 700, color: "var(--color-text-headline)", textAlign: "center", marginBottom: 64 }}>
+            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", fontWeight: 700, color: "var(--color-text-headline)", textAlign: "center", marginBottom: 24 }}>
               how do we<span className="morocco-home-break"> </span>call her home?
             </h2>
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, color: "var(--color-text-body)", textAlign: "center", maxWidth: 640, margin: "0 auto 64px", lineHeight: 1.8 }}>
+              We guide you through somatic practices, sacred circles, grounded rituals, and cultural experiences that help you rebuild self-worth from the inside out.
+            </p>
           </FadeIn>
 
-          {/* Row 1 — 2 cards */}
+          {/* Row 1 — 2 light cards */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12 }} className="cards-row">
             {[
               {
                 ph: "yoga/movement Morocco",
-                title: "step into your body, fully",
-                body: <>somatic practices and gentle movement<br />that wake up what went quiet.<br /><br />your body knows how to feel alive —<br /><em>it just needs permission and space.</em></>,
+                title: "come back to your body",
+                body: <>Gentle movement, somatic practices, and sound healing to release tension, numbness, and that &ldquo;I&apos;m holding it all together&rdquo; tightness you&apos;ve been living in.</>,
               },
               {
                 ph: "sound healing/reiki",
-                title: "let sound do what words can't",
-                body: <>ashley&apos;s sound baths, reiki, and intuitive guidance.<br /><em>frequency that reaches the layer<br />words never quite touch.</em><br /><br />subconscious rewiring sessions<br />that meet you exactly where you are.</>,
+                title: "rebuild self-worth from the inside out",
+                body: <>Not a pep talk. Real rewiring. The kind that shifts the old stories of &ldquo;I have to prove myself&rdquo; into something <em>steady, calm, and true.</em></>,
               },
             ].map((card, i) => (
               <FadeIn key={i} delay={i * 0.1}>
                 <div style={{ background: "var(--color-bg-page)", border: "0.5px solid var(--color-border)", borderRadius: 10, overflow: "hidden" }}>
-                  <div style={{ width: "100%", aspectRatio: "1 / 1", background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
+                  <div style={{ width: "100%", aspectRatio: "4/3", background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
                     <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)", letterSpacing: "0.03em", textAlign: "center", padding: 16 }}>[PLACEHOLDER: {card.ph}]</span>
                   </div>
-                  <div style={{ padding: "20px 0", textAlign: "center" }}>
+                  <div style={{ padding: "20px 24px 28px", textAlign: "center" }}>
                     <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 18, color: "var(--color-text-headline)", marginBottom: 10 }}>{card.title}</p>
                     <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.8 }}>{card.body}</p>
                   </div>
@@ -463,46 +466,47 @@ export default function MoroccoPage() {
             ))}
           </div>
 
-          {/* Row 2 — dark center card */}
-          <FadeIn delay={0.1}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", borderRadius: 10, overflow: "hidden", marginBottom: 12, background: "#2D2521" }} className="solo-card">
-              <div style={{ background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center", minHeight: 340 }}>
-                <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)", textAlign: "center", padding: 16 }}>[PLACEHOLDER: Morocco cultural experience]</span>
-              </div>
-              <div style={{ padding: 40, display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center" }}>
-                <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 20, color: "#F1F0E5", marginBottom: 16 }}>sacred in every direction</p>
-                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "#C5AA9B", lineHeight: 1.8 }}>
-                  a land where <strong style={{ color: "#F1F0E5" }}>ancient culture and spirituality</strong><br />
-                  are still woven into everyday life.<br /><br />
-                  <strong style={{ color: "#F1F0E5" }}>grounded rituals</strong> and sacred circles<br />
-                  <em>held in one of the most atmospheric<br />places on earth.</em><br /><br />
-                  <strong style={{ color: "#F1F0E5" }}>cultural immersion</strong> —<br />
-                  <em>because beauty this old<br />does something to the soul.</em>
-                </p>
-              </div>
-            </div>
-          </FadeIn>
+          {/* Row 2 — 2 dark cards */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12 }} className="cards-row">
+            {[
+              {
+                title: "remember your beauty without performing",
+                body: <>Beauty as presence. Beauty as being at ease in your own skin. Beauty as <em>&ldquo;I don&apos;t need to be chosen — I choose myself.&rdquo;</em></>,
+              },
+              {
+                title: "heal the patterns that keep you small",
+                body: <>The people-pleasing. The overthinking. The settling. The <em>&ldquo;maybe I&apos;m asking for too much.&rdquo;</em> We meet it with compassion… and we don&apos;t let it run the show anymore.</>,
+              },
+            ].map((card, i) => (
+              <FadeIn key={i} delay={i * 0.1}>
+                <div style={{ background: "#2D2521", borderRadius: 10, overflow: "hidden", padding: "48px 40px", textAlign: "center", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                  <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 20, color: "#F1F0E5", marginBottom: 16 }}>{card.title}</p>
+                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "#C5AA9B", lineHeight: 1.8 }}>{card.body}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
 
-          {/* Row 3 — 2 cards */}
+          {/* Row 3 — 2 light cards */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }} className="cards-row">
             {[
               {
                 ph: "women's circle Morocco",
-                title: "go underneath the surface",
-                body: <>women&apos;s circles held under open sky.<br />ceremony that reaches <u>the layer<br />the everyday world never touches.</u><br /><br /><em>not therapy. not a workshop.</em><br /><strong>something older than both.</strong><br /><br />the part of you that&apos;s been waiting<br />to finally be heard.</>,
+                title: "let yourself be held by sisterhood",
+                body: <>Honest circles. Deep laughter. Tears that don&apos;t need explaining. The kind of connection that makes you exhale because <strong>you&apos;re not doing life alone.</strong></>,
               },
               {
-                ph: "sisterhood Morocco",
-                title: "let yourself be found by each other",
-                body: <>you will arrive not knowing anyone.<br />by day three, these women will know things<br />about you that your oldest friends don&apos;t.<br /><br /><em>that&apos;s not an accident.</em><br />that&apos;s what happens when you take<br />the performance away<br />and <strong>just let yourself be seen.</strong></>,
+                ph: "Morocco landscape/nature",
+                title: "return to what's real",
+                body: <>Quiet. Sun on skin. Feet on sand. A slower rhythm that helps you hear your own inner voice again.</>,
               },
             ].map((card, i) => (
               <FadeIn key={i} delay={i * 0.1}>
                 <div style={{ background: "var(--color-bg-page)", border: "0.5px solid var(--color-border)", borderRadius: 10, overflow: "hidden" }}>
-                  <div style={{ width: "100%", aspectRatio: "1 / 1", background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
+                  <div style={{ width: "100%", aspectRatio: "4/3", background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
                     <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)", letterSpacing: "0.03em", textAlign: "center", padding: 16 }}>[PLACEHOLDER: {card.ph}]</span>
                   </div>
-                  <div style={{ padding: "20px 0", textAlign: "center" }}>
+                  <div style={{ padding: "20px 24px 28px", textAlign: "center" }}>
                     <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 18, color: "var(--color-text-headline)", marginBottom: 10 }}>{card.title}</p>
                     <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.8 }}>{card.body}</p>
                   </div>
