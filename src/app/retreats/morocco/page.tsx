@@ -476,6 +476,7 @@ export default function MoroccoPage() {
               },
               {
                 img: "/images/sound healing.jpg",
+                imgPosition: "center 70%",
                 title: "heal the patterns that keep you small",
                 body: <>the people-pleasing. the overthinking. the settling. the <em>&ldquo;maybe I&apos;m asking for too much.&rdquo;</em> we meet it with compassion… and we don&apos;t let it run the show anymore.</>,
               },
@@ -483,7 +484,7 @@ export default function MoroccoPage() {
               <FadeIn key={i} delay={i * 0.1} style={{ height: "100%" }}>
                 <div style={{ background: "#2D2521", borderRadius: 10, overflow: "hidden", display: "flex", flexDirection: "column", height: "100%" }}>
                   <div style={{ width: "100%", aspectRatio: "4/3", position: "relative", overflow: "hidden", flexShrink: 0 }}>
-                    <Image src={card.img} alt={card.title} fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="(max-width: 768px) 100vw, 50vw" />
+                    <Image src={card.img} alt={card.title} fill style={{ objectFit: "cover", objectPosition: card.imgPosition ?? "center" }} sizes="(max-width: 768px) 100vw, 50vw" />
                   </div>
                   <div style={{ padding: "20px 24px 28px", textAlign: "center", flex: 1 }}>
                     <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 20, color: "#F1F0E5", marginBottom: 16 }}>{card.title}</p>
