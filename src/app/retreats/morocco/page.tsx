@@ -498,12 +498,12 @@ export default function MoroccoPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, alignItems: "stretch" }} className="cards-row">
             {[
               {
-                img: "/images/Morocco lounge.jpeg",
+                img: "/images/Morocco sunset.jpeg",
                 title: "let yourself be held by sisterhood",
                 body: <>honest circles. deep laughter. tears that don&apos;t need explaining. the kind of connection that makes you exhale because <strong>you&apos;re not doing life alone.</strong></>,
               },
               {
-                img: "/images/Morocco sunset.jpeg",
+                img: "/images/Morocco lounge.jpeg",
                 title: "return to what's real",
                 body: <>quiet. sun on skin. feet on sand. a slower rhythm that helps you hear your own inner voice again.</>,
               },
