@@ -639,15 +639,18 @@ export default function MexicoPage() {
       <section style={{ background: "#FFFCF5", padding: "80px 32px" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,48px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 56 }}>
-              everything you need to know
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)", letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center", marginBottom: 16 }}>everything you need to know</p>
+            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 56 }}>
+              Questions
             </h2>
           </FadeIn>
-          <div style={{ borderTop: "0.5px solid var(--color-border)" }}>
+          <FadeIn delay={0.1}>
+            <div style={{ borderTop: "0.5px solid var(--color-border)" }}>
             {faqs.map((faq, i) => (
               <FAQItem key={i} question={faq.question} answer={faq.answer} />
             ))}
-          </div>
+            </div>
+          </FadeIn>
           <FadeIn delay={0.15}>
             <div style={{ textAlign: "center", paddingTop: 56 }}>
               <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 22, color: "var(--color-text-headline)", marginBottom: 24 }}>
