@@ -276,37 +276,8 @@ export default function AboutPage() {
         /* NOTE: mobile layout needs real device check — squiggles and alternating layout may need further tuning */
       `}</style>
 
-      {/* SECTION 3 — SHANNON */}
+      {/* SECTION 3 — ASHLEY */}
       <section style={{ background: "var(--color-bg-surface)" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "45% 55%", minHeight: 600 }} className="shannon-grid">
-          <div style={{ position: "relative", minHeight: 500, background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <Image src="/images/4.png" alt="Shannon" fill style={{ objectFit: "cover", objectPosition: "center top" }} sizes="45vw" />
-          </div>
-          <div style={{ padding: "80px 60px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-            <FadeIn>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 16 }}>meet shannon</p>
-              <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: 48, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 8 }}>Shannon</h2>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-muted)", letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: 4 }}>somatic guide · women&apos;s circle facilitator · retreat host</p>
-              <a href="https://instagram.com/soulflowwithshannon" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", textDecoration: "none", display: "block", marginBottom: 32 }}>@soulflowwithshannon</a>
-            </FadeIn>
-            <FadeIn delay={0.1}>
-              <div style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.85, maxWidth: 460, display: "flex", flexDirection: "column", gap: 20 }}>
-                <p>shannon is based in bali — which tells you something about how she moves through the world. toward beauty. toward depth. toward the places that make ordinary life feel like a memory.</p>
-                <p>her background is in psychology, and it shows — not in a clinical way, but in the way she can hold a room full of women falling apart and make every single one of them feel safe.</p>
-                <p>in 2020, everything cracked open. drinking too much. depressed. anxious. carrying shame she&apos;d been lugging around for years and pretending didn&apos;t exist.</p>
-                <p>she finally got help.</p>
-                <p>and that decision — that one moment of choosing herself over the performance — became the foundation of everything she does now.</p>
-                <p>through somatic work, yoga, breathwork, and women&apos;s circles, she guides women back to the version of themselves that existed before the world told them to be smaller.</p>
-                <p>when she&apos;s not leading retreats, you&apos;ll find her upside down on an aerial hoop, talking to her cat, or convincing someone to move to bali.</p>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-        <style>{`@media(max-width:768px){.shannon-grid{grid-template-columns:1fr!important}}`}</style>
-      </section>
-
-      {/* SECTION 4 — ASHLEY */}
-      <section style={{ background: "var(--color-bg-page)" }}>
         <div style={{ display: "grid", gridTemplateColumns: "55% 45%", minHeight: 600 }} className="ashley-grid">
           <div style={{ padding: "80px 60px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
             <FadeIn>
@@ -333,6 +304,35 @@ export default function AboutPage() {
           </div>
         </div>
         <style>{`@media(max-width:768px){.ashley-grid{grid-template-columns:1fr!important}}`}</style>
+      </section>
+
+      {/* SECTION 4 — SHANNON */}
+      <section style={{ background: "var(--color-bg-page)" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "45% 55%", minHeight: 600 }} className="shannon-grid">
+          <div style={{ position: "relative", minHeight: 500, background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <Image src="/images/4.png" alt="Shannon" fill style={{ objectFit: "cover", objectPosition: "center top" }} sizes="45vw" />
+          </div>
+          <div style={{ padding: "80px 60px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+            <FadeIn>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 16 }}>meet shannon</p>
+              <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: 48, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 8 }}>Shannon</h2>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-muted)", letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: 4 }}>somatic guide · women&apos;s circle facilitator · retreat host</p>
+              <a href="https://instagram.com/soulflowwithshannon" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", textDecoration: "none", display: "block", marginBottom: 32 }}>@soulflowwithshannon</a>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <div style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.85, maxWidth: 460, display: "flex", flexDirection: "column", gap: 20 }}>
+                <p>shannon is based in bali — which tells you something about how she moves through the world. toward beauty. toward depth. toward the places that make ordinary life feel like a memory.</p>
+                <p>her background is in psychology, and it shows — not in a clinical way, but in the way she can hold a room full of women falling apart and make every single one of them feel safe.</p>
+                <p>in 2020, everything cracked open. drinking too much. depressed. anxious. carrying shame she&apos;d been lugging around for years and pretending didn&apos;t exist.</p>
+                <p>she finally got help.</p>
+                <p>and that decision — that one moment of choosing herself over the performance — became the foundation of everything she does now.</p>
+                <p>through somatic work, yoga, breathwork, and women&apos;s circles, she guides women back to the version of themselves that existed before the world told them to be smaller.</p>
+                <p>when she&apos;s not leading retreats, you&apos;ll find her upside down on an aerial hoop, talking to her cat, or convincing someone to move to bali.</p>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+        <style>{`@media(max-width:768px){.shannon-grid{grid-template-columns:1fr!important}}`}</style>
       </section>
 
       {/* SECTION 5 — THE ORIGIN MOMENT */}
