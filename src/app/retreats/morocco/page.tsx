@@ -506,6 +506,7 @@ export default function MoroccoPage() {
               },
               {
                 img: "/images/Milky Way Over Ait Benhaddou Village, Morocco.jpeg",
+                imgPosition: "center 70%",
                 title: "return to what's real",
                 body: <>quiet. sun on skin. feet on sand. a slower rhythm that helps you hear your own inner voice again.</>,
               },
