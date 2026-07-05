@@ -364,7 +364,7 @@ export default function MoroccoPage() {
           <StaggerBlock>
             <StaggerChild>
               <p style={{ marginBottom: 28 }}>
-                Somewhere along the way… we learned our worth was something we had to earn.
+                somewhere along the way… we learned our worth was something we had to earn.
               </p>
             </StaggerChild>
             <StaggerChild>
@@ -379,17 +379,17 @@ export default function MoroccoPage() {
             </StaggerChild>
             <StaggerChild>
               <p style={{ marginBottom: 28 }}>
-                So we got good at performing.<br /><br />
-                Good at shrinking.<br />
-                Good at saying &ldquo;<em>I&apos;m fine</em>&rdquo; while our body said &ldquo;<em>no you&apos;re not</em>&rdquo;.
+                so we got good at performing.<br /><br />
+                good at shrinking.<br />
+                good at saying &ldquo;<em>I&apos;m fine</em>&rdquo; while our body said &ldquo;<em>no you&apos;re not</em>&rdquo;.
               </p>
             </StaggerChild>
             <StaggerChild>
               <p style={{ marginBottom: 28 }}>
-                And it adds up..<br />
-                You start second-guessing what you want.<br />
-                Bargaining with your boundaries.<br />
-                Treating your beauty like it&apos;s a negotiation.
+                and it adds up..<br />
+                you start second-guessing what you want.<br />
+                bargaining with your boundaries.<br />
+                treating your beauty like it&apos;s a negotiation.
               </p>
             </StaggerChild>
             <StaggerChild>
@@ -402,24 +402,24 @@ export default function MoroccoPage() {
             <StaggerChild>
               <p style={{ marginBottom: 28 }}>
                 <strong>Sacred Sands is a reset.</strong><br /><br />
-                Desert air.<br />
-                Warm sun.<br />
-                Sand under your feet.<br />
-                A slower rhythm that reminds your nervous system what safety feels like.
+                desert air.<br />
+                warm sun.<br />
+                sand under your feet.<br />
+                a slower rhythm that reminds your nervous system what safety feels like.
               </p>
             </StaggerChild>
             <StaggerChild>
               <p style={{ marginBottom: 28 }}>
-                So you can remember this: <strong>Your worth was never up for debate. ❤️‍🔥</strong><br /><br />
-                Not with your body.<br />
-                Not with your age.<br />
-                Not with your life.
+                so you can remember this: <strong>your worth was never up for debate. ❤️‍🔥</strong><br /><br />
+                not with your body.<br />
+                not with your age.<br />
+                not with your life.
               </p>
             </StaggerChild>
             <StaggerChild>
               <p style={{ marginBottom: 0 }}>
-                You don&apos;t need to fix yourself.<br /><br />
-                <strong>You need to stop abandoning yourself.</strong>
+                you don&apos;t need to fix yourself.<br /><br />
+                <strong>you need to stop abandoning yourself.</strong>
               </p>
             </StaggerChild>
           </StaggerBlock>
