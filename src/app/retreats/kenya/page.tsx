@@ -458,7 +458,7 @@ export default function KenyaPage() {
                 <strong><u>present.</u></strong><br />
                 <strong><u>free.</u></strong><br />
                 <strong><u>awake.</u></strong><br />
-                this is what it feels like to be <em>alive outside of it all.</em>
+                this is what it feels like<br />to be <em>alive outside of it all.</em>
                 <br /><br />
                 and once you feel it — <em>really feel it —</em> <strong>you can&apos;t unfeel it.</strong>
               </p>
