@@ -279,7 +279,7 @@ export default function AboutPage() {
       {/* SECTION 3 — ASHLEY */}
       <section style={{ background: "var(--color-bg-surface)" }}>
         <div style={{ display: "grid", gridTemplateColumns: "55% 45%", minHeight: 600 }} className="ashley-grid">
-          <div style={{ padding: "80px 60px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+          <div className="ashley-text" style={{ padding: "80px 60px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
             <FadeIn>
               <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 16 }}>meet ashley</p>
               <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: 48, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 8 }}>Ashley</h2>
@@ -299,11 +299,11 @@ export default function AboutPage() {
               </div>
             </FadeIn>
           </div>
-          <div style={{ position: "relative", minHeight: 500, background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div className="ashley-photo" style={{ position: "relative", minHeight: 500, background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center" }}>
             <Image src="/images/3.png" alt="Ashley" fill style={{ objectFit: "cover", objectPosition: "center top" }} sizes="45vw" />
           </div>
         </div>
-        <style>{`@media(max-width:768px){.ashley-grid{grid-template-columns:1fr!important}}`}</style>
+        <style>{`@media(max-width:768px){.ashley-grid{grid-template-columns:1fr!important}.ashley-photo{order:-1}.ashley-text{order:0}}`}</style>
       </section>
 
       {/* SECTION 4 — SHANNON */}
