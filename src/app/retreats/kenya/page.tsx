@@ -422,6 +422,7 @@ export default function KenyaPage() {
                 something about being inside of this land<br />
                 <em>not watching it through a screen —</em><br />
                 <strong>cracks something open.</strong><br />
+                <br />
                 the need to manage.<br />
                 to anticipate.<br />
                 to stay ready.<br />it just... loosens.<br />
