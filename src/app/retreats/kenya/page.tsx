@@ -419,8 +419,9 @@ export default function KenyaPage() {
             </StaggerChild>
             <StaggerChild>
               <p style={{ marginBottom: 40 }}>
-                and something about being inside that — <em>really inside it,</em><br />
-                <em>not watching it through a screen —</em> <strong>cracks something open.</strong><br />
+                something about being inside of this land<br />
+                <em>not watching it through a screen —</em><br />
+                <strong>cracks something open.</strong><br />
                 the need to manage.<br />
                 to anticipate.<br />
                 to stay ready.<br />it just... loosens.<br />
