@@ -508,14 +508,12 @@ export default function KenyaPage() {
               <div style={{ padding: 40, display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center" }}>
                 <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 20, color: "#F1F0E5", marginBottom: 16 }}>be part of something that matters</p>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "#C5AA9B", lineHeight: 1.8 }}>
-                  a visit to the <strong style={{ color: "#F1F0E5" }}>northern white rhino sanctuary</strong> —<br />
-                  <em>the only two left on earth.</em><br /><br />
-                  a morning with <strong style={{ color: "#F1F0E5" }}>spinners and weavers</strong>,<br />
-                  a women&apos;s cooperative that has been<br />
-                  <u style={{ textDecorationColor: "#A67C52" }}>refusing to disappear since the 1970s.</u><br /><br />
+                  a visit to the northern white rhino sanctuary —<br />
+                  the only two left on earth, with conservation efforts to bring the population back.<br /><br />
+                  a morning with spinners and weavers,<br />
+                  to give back to a special women&apos;s cooperative.<br /><br />
                   standing beside that kind of resilience<br />
-                  does something to you.<br />
-                  <em>it reminds you what&apos;s actually possible<br />when you stop shrinking.</em>
+                  does something to you.
                 </p>
               </div>
               <div style={{ position: "relative", minHeight: 340 }}>
