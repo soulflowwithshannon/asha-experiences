@@ -530,7 +530,7 @@ export default function KenyaPage() {
               {
                 img: "/images/ReturnToLove circle.jpg",
                 title: "go underneath the surface",
-                body: <>ashley&apos;s sound healing and reiki.<br />women&apos;s circles held under open sky.<br />ceremony that reaches <u>the layer<br />the everyday world never touches.</u><br /><br /><em>not therapy. not a workshop.</em><br /><strong>something older than both.</strong><br /><br />the part of you that&apos;s been waiting<br />to finally be heard.</>,
+                body: <>sound healing and reiki.<br />women&apos;s circles held under open sky.<br />ceremony that reaches the layer<br />the everyday world never touches.<br /><br />making space for the part of you that&apos;s been waiting<br />to finally be seen and heard.</>,
               },
               {
                 img: "/images/women laying down.jpeg",
