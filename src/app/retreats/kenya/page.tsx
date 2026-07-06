@@ -423,7 +423,7 @@ export default function KenyaPage() {
                 <em>not watching it through a screen —</em> <strong>cracks something open.</strong><br />
                 the need to manage.<br />
                 to anticipate.<br />
-                to stay ready. it just... loosens.<br />
+                to stay ready.<br />it just... loosens.<br />
                 <em>maybe for the first time in years.</em>
               </p>
             </StaggerChild>
