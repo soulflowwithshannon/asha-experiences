@@ -379,7 +379,7 @@ export default function KenyaPage() {
           <StaggerBlock>
             <StaggerChild>
               <p style={{ marginBottom: 28 }}>
-                you&apos;ve been the one <strong>holding it together</strong> for so long, you don&apos;t even remember what it feels like to put it down.<br />
+                <strong>you&apos;ve been the one holding it together for so long, you don&apos;t even remember what it feels like to put it down.</strong><br />
                 <br />
                 because somewhere along the way,<br />
                 <em>letting go started to feel like losing.</em>
