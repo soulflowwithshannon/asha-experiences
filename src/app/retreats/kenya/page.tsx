@@ -631,7 +631,7 @@ export default function KenyaPage() {
             <style>{`@media(max-width:768px){.stay-section{padding:60px 16px!important}.stay-copy{width:100%!important;max-width:100%!important}.ol-pejeta-photo{aspect-ratio:4/3!important;width:100%;margin:0 auto}}`}</style>
           </div>
         </div>
-        <style>{`@media(max-width:768px){.stay-grid{grid-template-columns:1fr!important}.stay-video{margin:0 auto;width:100%}.stay-copy{margin:0 auto;width:90%;padding:32px 24px;text-align:center}.stay-copy p,.stay-copy h2,.stay-copy div,.stay-copy span{text-align:center}}`}</style>
+        <style>{`@media(max-width:768px){.stay-grid{grid-template-columns:1fr!important}.stay-video{margin:0 auto;width:100%}.stay-copy{margin:0 auto;width:100%;padding:24px 0;text-align:center}.stay-copy p,.stay-copy h2,.stay-copy div,.stay-copy span{text-align:center}.stay-copy h2{font-size:26px!important;white-space:nowrap}}`}</style>
       </section>
 
       {/* SECTION 4 — ARC OF THE WEEK */}
