@@ -557,23 +557,23 @@ export default function KenyaPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr", gridTemplateRows: "280px 280px", gap: 8 }} className="mosaic-grid">
             {/* Large left — spans 2 rows */}
             <div style={{ position: "relative", gridRow: "span 2", overflow: "hidden", borderRadius: 4 }}>
-              <Image src="/images/kenya-safari-jeep.JPG" alt="Safari at sunset" fill style={{ objectFit: "cover", objectPosition: "60% center" }} sizes="40vw" />
+              <Image src="/images/rhino.png" alt="Rhino" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="40vw" />
             </div>
             {/* Top middle */}
             <div style={{ position: "relative", overflow: "hidden", borderRadius: 4 }}>
-              <Image src="/images/rhino conservation.jpg" alt="Rhino conservation" fill style={{ objectFit: "cover", objectPosition: "center 40%" }} sizes="30vw" />
+              <Image src="/images/safari 1.jpeg" alt="Safari" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="30vw" />
             </div>
             {/* Top right */}
             <div style={{ position: "relative", overflow: "hidden", borderRadius: 4 }}>
-              <Image src="/images/kenya-yoga-zebras.JPG" alt="Yoga with zebras" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="30vw" />
+              <Image src="/images/leopard 3.png" alt="Leopard" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="30vw" />
             </div>
             {/* Bottom middle */}
             <div style={{ position: "relative", overflow: "hidden", borderRadius: 4 }}>
-              <Image src="/images/safari 1.jpeg" alt="Safari" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="30vw" />
+              <Image src="/images/lion 1.jpeg" alt="Lion" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="30vw" />
             </div>
             {/* Bottom right */}
             <div style={{ position: "relative", overflow: "hidden", borderRadius: 4 }}>
-              <Image src="/images/safari group.jpeg" alt="Safari group" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="30vw" />
+              <Image src="/images/elephant 5.jpeg" alt="Elephant" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="30vw" />
             </div>
           </div>
           <style>{`@media(max-width:768px){.mosaic-grid{grid-template-columns:1fr 1fr!important;grid-template-rows:200px 200px 200px!important}.mosaic-grid>div:first-child{grid-row:span 1!important}}`}</style>
