@@ -573,7 +573,7 @@ export default function KenyaPage() {
             </div>
             {/* Bottom right */}
             <div style={{ position: "relative", overflow: "hidden", borderRadius: 4 }}>
-              <Image src="/images/elephant 4.jpeg" alt="Elephant" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="30vw" />
+              <Image src="/images/elephant 3.jpeg" alt="Elephant" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="30vw" />
             </div>
           </div>
           <style>{`@media(max-width:768px){.mosaic-grid{grid-template-columns:1fr 1fr!important;grid-template-rows:200px 200px 200px!important}.mosaic-grid>div:first-child{grid-row:span 1!important}}`}</style>
