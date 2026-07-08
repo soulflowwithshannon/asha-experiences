@@ -615,7 +615,7 @@ export default function KenyaPage() {
                     <strong>your money goes somewhere that matters here.</strong> <em>this is conservation done right.</em>
                   </p>
                   <p>
-                    inside the conservancy, <strong>Ol Pejeta Safari Cottages</strong> has been recognised as one of the{" "}
+                    inside the conservancy, <strong>Ol Pejeta Safari Cottages</strong> has been recognized as one of the{" "}
                     <span style={{ textDecoration: "underline", textUnderlineOffset: 3 }}>top 10% of hotels in the world</span>{" "}
                     by TripAdvisor — and you&apos;ll understand why the moment you arrive.
                   </p>
@@ -628,7 +628,7 @@ export default function KenyaPage() {
                 <Image src="/images/kenya-elephant-plains.jpeg" alt="Elephants on the Ol Pejeta plains" fill style={{ objectFit: "cover", objectPosition: "50% 80%" }} sizes="(max-width: 768px) 90vw, 512px" />
               </div>
             </FadeIn>
-            <style>{`@media(max-width:768px){.stay-section{padding:60px 24px!important}.stay-copy{width:100%!important;max-width:100%!important}.ol-pejeta-photo{aspect-ratio:4/3!important;width:100%;margin:0 auto}}`}</style>
+            <style>{`@media(max-width:768px){.stay-section{padding:60px 16px!important}.stay-copy{width:100%!important;max-width:100%!important}.ol-pejeta-photo{aspect-ratio:4/3!important;width:100%;margin:0 auto}}`}</style>
           </div>
         </div>
         <style>{`@media(max-width:768px){.stay-grid{grid-template-columns:1fr!important}.stay-video{margin:0 auto;width:100%}.stay-copy{margin:0 auto;width:90%;padding:32px 24px;text-align:center}.stay-copy p,.stay-copy h2,.stay-copy div,.stay-copy span{text-align:center}}`}</style>
