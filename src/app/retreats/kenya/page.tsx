@@ -554,20 +554,20 @@ export default function KenyaPage() {
               a glimpse of what&apos;s waiting
             </p>
           </FadeIn>
-          <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr", gridTemplateRows: "280px 280px", gap: 8 }} className="mosaic-grid">
-            {/* Large left — spans 2 rows */}
-            <div style={{ position: "relative", gridRow: "span 2", overflow: "hidden", borderRadius: 4 }}>
-              <Image src="/images/rhino.png" alt="Rhino" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="40vw" />
-            </div>
-            {/* Top middle */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr 1fr", gridTemplateRows: "280px 280px", gap: 8 }} className="mosaic-grid">
+            {/* Top left */}
             <div style={{ position: "relative", overflow: "hidden", borderRadius: 4 }}>
               <Image src="/images/safari 1.jpeg" alt="Safari" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="30vw" />
+            </div>
+            {/* Large middle — spans 2 rows */}
+            <div style={{ position: "relative", gridRow: "span 2", overflow: "hidden", borderRadius: 4 }}>
+              <Image src="/images/rhino.png" alt="Rhino" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="40vw" />
             </div>
             {/* Top right */}
             <div style={{ position: "relative", overflow: "hidden", borderRadius: 4 }}>
               <Image src="/images/leopard 3.png" alt="Leopard" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="30vw" />
             </div>
-            {/* Bottom middle */}
+            {/* Bottom left */}
             <div style={{ position: "relative", overflow: "hidden", borderRadius: 4 }}>
               <Image src="/images/lion 1.jpeg" alt="Lion" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="30vw" />
             </div>
