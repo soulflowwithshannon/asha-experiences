@@ -582,7 +582,7 @@ export default function KenyaPage() {
 
 
       {/* SECTION 3 — WHERE WE'RE STAYING */}
-      <section style={{ background: "var(--color-bg-surface)", padding: "80px 48px" }}>
+      <section style={{ background: "var(--color-bg-surface)", padding: "80px 48px" }} className="stay-section">
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center", maxWidth: 1280, margin: "0 auto" }} className="stay-grid">
           <div className="stay-video" style={{ position: "relative", borderRadius: 8, overflow: "hidden", aspectRatio: "4/5" }}>
             <video
@@ -628,7 +628,7 @@ export default function KenyaPage() {
                 <Image src="/images/kenya-elephant-plains.jpeg" alt="Elephants on the Ol Pejeta plains" fill style={{ objectFit: "cover", objectPosition: "50% 80%" }} sizes="(max-width: 768px) 90vw, 512px" />
               </div>
             </FadeIn>
-            <style>{`@media(max-width:768px){.ol-pejeta-photo{aspect-ratio:4/3!important;width:90%;margin:0 auto}}`}</style>
+            <style>{`@media(max-width:768px){.stay-section{padding:60px 24px!important}.stay-copy{width:100%!important;max-width:100%!important}.ol-pejeta-photo{aspect-ratio:4/3!important;width:100%;margin:0 auto}}`}</style>
           </div>
         </div>
         <style>{`@media(max-width:768px){.stay-grid{grid-template-columns:1fr!important}.stay-video{margin:0 auto;width:100%}.stay-copy{margin:0 auto;width:90%;padding:32px 24px;text-align:center}.stay-copy p,.stay-copy h2,.stay-copy div,.stay-copy span{text-align:center}}`}</style>
