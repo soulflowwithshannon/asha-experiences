@@ -624,10 +624,11 @@ export default function KenyaPage() {
             </div>
             {/* Photo below text */}
             <FadeIn delay={0.3}>
-              <div style={{ position: "relative", borderRadius: 8, overflow: "hidden", aspectRatio: "16/9" }}>
-                <Image src="/images/kenya-elephant-plains.jpeg" alt="Elephants on the Ol Pejeta plains" fill style={{ objectFit: "cover", objectPosition: "50% 80%" }} sizes="(max-width: 768px) 100vw, 512px" />
+              <div style={{ position: "relative", borderRadius: 8, overflow: "hidden", aspectRatio: "16/9" }} className="ol-pejeta-photo">
+                <Image src="/images/kenya-elephant-plains.jpeg" alt="Elephants on the Ol Pejeta plains" fill style={{ objectFit: "cover", objectPosition: "50% 80%" }} sizes="(max-width: 768px) 90vw, 512px" />
               </div>
             </FadeIn>
+            <style>{`@media(max-width:768px){.ol-pejeta-photo{aspect-ratio:4/3!important;width:90%;margin:0 auto}}`}</style>
           </div>
         </div>
         <style>{`@media(max-width:768px){.stay-grid{grid-template-columns:1fr!important}.stay-video{margin:0 auto;width:100%}.stay-copy{margin:0 auto;width:90%;padding:32px 24px;text-align:center}.stay-copy p,.stay-copy h2,.stay-copy div,.stay-copy span{text-align:center}}`}</style>
