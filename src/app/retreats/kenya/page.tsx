@@ -546,6 +546,40 @@ export default function KenyaPage() {
         <style>{`@media(max-width:640px){.testimonial-break{display:block}}@media(max-width:768px){.cards-row{grid-template-columns:1fr!important}.solo-card{grid-template-columns:1fr!important}.mobile-break{display:block}.kenya-hero-break{display:block}}`}</style>
       </section>
 
+      {/* SECTION 3b — WILDLIFE MOSAIC */}
+      <section style={{ background: "#1E1612", padding: "64px 32px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <FadeIn>
+            <p style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(20px,2.5vw,28px)", color: "#BAAB92", textAlign: "center", fontStyle: "italic", marginBottom: 40 }}>
+              a glimpse of what&apos;s waiting
+            </p>
+          </FadeIn>
+          <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr", gridTemplateRows: "280px 280px", gap: 8 }} className="mosaic-grid">
+            {/* Large left — spans 2 rows */}
+            <div style={{ position: "relative", gridRow: "span 2", overflow: "hidden", borderRadius: 4 }}>
+              <Image src="/images/kenya-safari-jeep.JPG" alt="Safari at sunset" fill style={{ objectFit: "cover", objectPosition: "60% center" }} sizes="40vw" />
+            </div>
+            {/* Top middle */}
+            <div style={{ position: "relative", overflow: "hidden", borderRadius: 4 }}>
+              <Image src="/images/rhino conservation.jpg" alt="Rhino conservation" fill style={{ objectFit: "cover", objectPosition: "center 40%" }} sizes="30vw" />
+            </div>
+            {/* Top right */}
+            <div style={{ position: "relative", overflow: "hidden", borderRadius: 4 }}>
+              <Image src="/images/kenya-yoga-zebras.JPG" alt="Yoga with zebras" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="30vw" />
+            </div>
+            {/* Bottom middle */}
+            <div style={{ position: "relative", overflow: "hidden", borderRadius: 4 }}>
+              <Image src="/images/safari 1.jpeg" alt="Safari" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="30vw" />
+            </div>
+            {/* Bottom right */}
+            <div style={{ position: "relative", overflow: "hidden", borderRadius: 4 }}>
+              <Image src="/images/safari group.jpeg" alt="Safari group" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="30vw" />
+            </div>
+          </div>
+          <style>{`@media(max-width:768px){.mosaic-grid{grid-template-columns:1fr 1fr!important;grid-template-rows:200px 200px 200px!important}.mosaic-grid>div:first-child{grid-row:span 1!important}}`}</style>
+        </div>
+      </section>
+
 
       {/* SECTION 3 — WHERE WE'RE STAYING */}
       <section style={{ background: "var(--color-bg-surface)", padding: "80px 48px" }}>
@@ -561,29 +595,37 @@ export default function KenyaPage() {
               <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Ol%20Pejeta%20Sizzle%20Reel.mp4" type="video/mp4" />
             </video>
           </div>
-          <div className="stay-copy" style={{ maxWidth: 512 }}>
-            <FadeIn><p className="eyebrow-accent" style={{ marginBottom: 16, fontWeight: 700 }}>OL PEJETA CONSERVANCY</p></FadeIn>
-            <FadeIn delay={0.1}>
-              <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 24 }}>
-                wild outside. held inside.
-              </h2>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <div style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.8, display: "flex", flexDirection: "column", gap: 20 }}>
-                <p>
-                  picture <strong>90,000 acres</strong> at the base of <strong>Mount Kenya</strong>. open plains, acacia woodlands, <em>the big 5 roaming outside your door</em>, and night skies that make the rest of the world feel very far away.
-                </p>
-                <p>
-                  <strong>Ol Pejeta</strong> is one of the most extraordinary places on earth — <em>the largest black rhino sanctuary in East Africa</em>, with an active program bringing the white rhino population back. food sourced locally, staff genuinely cared for, animals looked after the way they should be.
-                </p>
-                <p>
-                  <strong>your money goes somewhere that matters here.</strong> <em>this is conservation done right.</em>
-                </p>
-                <p>
-                  inside the conservancy, <strong>Ol Pejeta Safari Cottages</strong> has been recognised as one of the{" "}
-                  <span style={{ textDecoration: "underline", textUnderlineOffset: 3 }}>top 10% of hotels in the world</span>{" "}
-                  by TripAdvisor — and you&apos;ll understand why the moment you arrive.
-                </p>
+          <div className="stay-copy" style={{ maxWidth: 512, display: "flex", flexDirection: "column", gap: 32 }}>
+            <div>
+              <FadeIn><p className="eyebrow-accent" style={{ marginBottom: 16, fontWeight: 700 }}>OL PEJETA CONSERVANCY</p></FadeIn>
+              <FadeIn delay={0.1}>
+                <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 24 }}>
+                  wild outside. held inside.
+                </h2>
+              </FadeIn>
+              <FadeIn delay={0.2}>
+                <div style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.8, display: "flex", flexDirection: "column", gap: 20 }}>
+                  <p>
+                    picture <strong>90,000 acres</strong> at the base of <strong>Mount Kenya</strong>. open plains, acacia woodlands, <em>the big 5 roaming outside your door</em>, and night skies that make the rest of the world feel very far away.
+                  </p>
+                  <p>
+                    <strong>Ol Pejeta</strong> is one of the most extraordinary places on earth — <em>the largest black rhino sanctuary in East Africa</em>, with an active program bringing the white rhino population back. food sourced locally, staff genuinely cared for, animals looked after the way they should be.
+                  </p>
+                  <p>
+                    <strong>your money goes somewhere that matters here.</strong> <em>this is conservation done right.</em>
+                  </p>
+                  <p>
+                    inside the conservancy, <strong>Ol Pejeta Safari Cottages</strong> has been recognised as one of the{" "}
+                    <span style={{ textDecoration: "underline", textUnderlineOffset: 3 }}>top 10% of hotels in the world</span>{" "}
+                    by TripAdvisor — and you&apos;ll understand why the moment you arrive.
+                  </p>
+                </div>
+              </FadeIn>
+            </div>
+            {/* Photo below text */}
+            <FadeIn delay={0.3}>
+              <div style={{ position: "relative", borderRadius: 8, overflow: "hidden", aspectRatio: "16/9" }}>
+                <Image src="/images/kenya-elephant-plains.jpeg" alt="Elephants on the Ol Pejeta plains" fill style={{ objectFit: "cover", objectPosition: "50% 60%" }} sizes="(max-width: 768px) 100vw, 512px" />
               </div>
             </FadeIn>
           </div>
@@ -648,8 +690,12 @@ export default function KenyaPage() {
       </div>
 
       {/* SECTION 5 — WHAT'S INCLUDED */}
-      <section style={{ background: "var(--color-bg-surface)", padding: "80px 32px" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+      <section style={{ position: "relative", padding: "80px 32px", overflow: "hidden" }}>
+        <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+          <Image src="/images/IMG_3437.JPG" alt="" fill style={{ objectFit: "cover", objectPosition: "center 30%" }} sizes="100vw" />
+          <div style={{ position: "absolute", inset: 0, background: "rgba(245,241,230,0.92)" }} />
+        </div>
+        <div style={{ maxWidth: 900, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <SplitHeadline
             text="what's taken care of"
             as="h2"
