@@ -625,7 +625,7 @@ export default function KenyaPage() {
             {/* Photo below text */}
             <FadeIn delay={0.3}>
               <div style={{ position: "relative", borderRadius: 8, overflow: "hidden", aspectRatio: "16/9" }}>
-                <Image src="/images/kenya-elephant-plains.jpeg" alt="Elephants on the Ol Pejeta plains" fill style={{ objectFit: "cover", objectPosition: "50% 60%" }} sizes="(max-width: 768px) 100vw, 512px" />
+                <Image src="/images/kenya-elephant-plains.jpeg" alt="Elephants on the Ol Pejeta plains" fill style={{ objectFit: "cover", objectPosition: "50% 80%" }} sizes="(max-width: 768px) 100vw, 512px" />
               </div>
             </FadeIn>
           </div>
