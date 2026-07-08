@@ -692,7 +692,7 @@ export default function KenyaPage() {
       {/* SECTION 5 — WHAT'S INCLUDED */}
       <section style={{ position: "relative", padding: "80px 32px", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
-          <Image src="/images/elephant 1.jpeg" alt="" fill style={{ objectFit: "cover", objectPosition: "center 70%" }} sizes="100vw" />
+          <Image src="/images/elephant 1.jpeg" alt="" fill style={{ objectFit: "cover", objectPosition: "center 90%" }} sizes="100vw" />
           <div style={{ position: "absolute", inset: 0, background: "rgba(245,241,230,0.92)" }} />
         </div>
         <div style={{ maxWidth: 900, margin: "0 auto", position: "relative", zIndex: 1 }}>
