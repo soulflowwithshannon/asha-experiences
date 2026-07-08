@@ -676,7 +676,7 @@ export default function KenyaPage() {
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", height: 560 }}>
         {[
           { src: "/images/lion 2.jpeg", alt: "Lion", pos: "center" },
-          { src: "/images/kenya-yoga-zebras.JPG", alt: "Yoga with zebras", pos: "center" },
+          { src: "/images/Untitled design.png", alt: "Into the Wild", pos: "center" },
           { src: "/images/IMG_3437.JPG", alt: "Group on safari jeep", pos: "50% 40%" },
         ].map((img) => (
           <motion.div
