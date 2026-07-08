@@ -674,7 +674,7 @@ export default function KenyaPage() {
       {/* SECTION 4b — PHOTO GALLERY STRIP */}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", height: 560 }}>
         {[
-          { src: "/images/kenya-safari-jeep.JPG", alt: "Safari at sunset", pos: "60% center" },
+          { src: "/images/lion 2.jpeg", alt: "Lion", pos: "center" },
           { src: "/images/kenya-yoga-zebras.JPG", alt: "Yoga with zebras", pos: "center" },
           { src: "/images/IMG_3437.JPG", alt: "Group on safari jeep", pos: "50% 40%" },
         ].map((img) => (
