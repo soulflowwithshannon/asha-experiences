@@ -746,7 +746,7 @@ export default function MoroccoPage() {
                   <Image src="/images/13.png" alt="The Amani" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="400px" />
                 </div>
                 <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 24, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 8 }}>The Amani</h3>
-                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>private room · 1 available</p>
+                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>private room</p>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
                   a beautiful private room in the main kasbah — privacy with the warmth of being close to the group.
                 </p>
@@ -773,7 +773,7 @@ export default function MoroccoPage() {
                   <Image src="/images/12.png" alt="The Salima" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="400px" />
                 </div>
                 <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 24, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 8 }}>The Salima</h3>
-                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>shared 2-bedroom · 2 spaces available</p>
+                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>shared 2-bedroom</p>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
                   the most connected option — a shared 2-bedroom suite. book with a friend or be paired with a like-minded woman in the group.
                 </p>
