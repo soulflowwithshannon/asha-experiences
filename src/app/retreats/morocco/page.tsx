@@ -133,12 +133,12 @@ function MoroccoHero() {
         priority
       />
       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(45,37,33,0.3), rgba(45,37,33,0.65))", zIndex: 1 }} />
-      <div style={{ position: "relative", zIndex: 2, textAlign: "center", padding: "80px 24px" }}>
+      <div style={{ position: "relative", zIndex: 2, textAlign: "center", padding: "80px 32px", maxWidth: 860, margin: "0 auto" }}>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(22px,3vw,34px)", color: "#E8B88A", fontWeight: 400, marginBottom: 20 }}
+          style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(18px,2.2vw,26px)", color: "#E8B88A", fontWeight: 400, marginBottom: 16, letterSpacing: "0.02em" }}
         >
           November 29 – December 5, 2026
         </motion.p>
@@ -146,7 +146,7 @@ function MoroccoHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.1, ease: "easeInOut" }}
-          style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(36px,8vw,80px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 16 }}
+          style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(52px,9vw,96px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 12, lineHeight: 1 }}
         >
           Sacred Sands
         </motion.h1>
@@ -154,7 +154,7 @@ function MoroccoHero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15, ease: "easeInOut" }}
-          style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(22px,3vw,34px)", color: "#F1F0E5", fontWeight: 700, fontStyle: "italic", marginBottom: 28, marginTop: -6 }}
+          style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(20px,2.5vw,30px)", color: "#E8D5BC", fontWeight: 400, fontStyle: "italic", marginBottom: 40 }}
         >
           Agadir, Morocco
         </motion.p>
@@ -162,14 +162,14 @@ function MoroccoHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
-          style={{ fontFamily: "var(--font-dm-sans)", fontSize: "clamp(15px,2.2vw,22px)", color: "#E8D5BC", maxWidth: 700, margin: "clamp(24px,5vw,80px) auto 0", lineHeight: 1.7, fontWeight: 700, textShadow: "0 2px 12px rgba(0,0,0,0.5)", textAlign: "center" }}
+          style={{ fontFamily: "var(--font-dm-sans)", fontSize: "clamp(14px,1.6vw,18px)", color: "#E8D5BC", maxWidth: 520, margin: "0 auto 40px", lineHeight: 1.8, fontWeight: 400, letterSpacing: "0.01em" }}
         >
           for women to come home to the part of them that&apos;s always been whole.
         </motion.p>
-        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }} style={{ marginTop: 40 }}>
+        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}>
           <a
             href="#invitation"
-            style={{ display: "inline-block", padding: "clamp(12px,2vw,18px) clamp(24px,4vw,48px)", background: "rgba(195,158,136,0.85)", border: "1px solid #C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: "clamp(13px,1.5vw,16px)", letterSpacing: "0.04em", textDecoration: "none", fontWeight: 600, transition: "background 0.3s ease" }}
+            style={{ display: "inline-block", padding: "14px 40px", background: "rgba(195,158,136,0.85)", border: "1px solid #C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 14, letterSpacing: "0.06em", textDecoration: "none", fontWeight: 600, transition: "background 0.3s ease" }}
             onMouseEnter={(e) => (e.currentTarget.style.background = "#C39E88")}
             onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(195,158,136,0.85)")}
           >
