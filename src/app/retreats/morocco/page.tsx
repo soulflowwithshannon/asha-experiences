@@ -717,26 +717,23 @@ export default function MoroccoPage() {
 
             {/* The Jamila */}
             <FadeIn>
-              <motion.div whileHover={{ y: -4, boxShadow: "0 16px 48px rgba(74,63,53,0.12)" }} transition={{ duration: 0.3 }} style={{ background: "var(--color-bg-card)", border: "0.5px solid var(--color-border)", borderRadius: 8, padding: 32, display: "flex", flexDirection: "column", height: "100%" }}>
+              <motion.div style={{ background: "var(--color-bg-card)", border: "0.5px solid var(--color-border)", borderRadius: 8, padding: 32, display: "flex", flexDirection: "column", height: "100%", opacity: 0.7 }}>
                 <div style={{ borderRadius: 6, overflow: "hidden", marginBottom: 24, aspectRatio: "809/770", position: "relative" }}>
-                  <Image src="/images/jamila-room.png" alt="The Jamila" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="400px" />
+                  <Image src="/images/jamila-room.png" alt="The Jamila" fill style={{ objectFit: "cover", objectPosition: "center", filter: "grayscale(40%)" }} sizes="400px" />
+                  <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(45,37,33,0.4)" }}>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#F1F0E5", background: "rgba(45,37,33,0.75)", padding: "8px 20px" }}>sold out</p>
+                  </div>
                 </div>
                 <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 24, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 8 }}>The Jamila</h3>
-                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>private tower room · 1 available</p>
+                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>private tower room · sold out</p>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
                   the most private option. your own tower room at Atlas Kasbah — a space that is entirely yours.
                 </p>
                 <div style={{ marginTop: "auto" }}>
-                  <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 32, color: "var(--color-accent)", fontWeight: 400, marginBottom: 4 }}>$4,000</p>
+                  <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 32, color: "var(--color-text-muted)", fontWeight: 400, marginBottom: 4 }}>$4,000</p>
                   <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", marginBottom: 24 }}>per person / private occupancy</p>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                    <a href="https://buy.stripe.com/fZu9AU5nG0hf8P88Dc0sU06" target="_blank" rel="noopener noreferrer" style={{ display: "block", padding: "12px 24px", background: "#C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 700, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "#b08d78")} onMouseLeave={(e) => (e.currentTarget.style.background = "#C39E88")}>
-                      reserve my spot →
-                    </a>
-                    <a href="https://buy.stripe.com/3cI5kEeYg1lje9s6v40sU07" target="_blank" rel="noopener noreferrer" style={{ display: "block", padding: "12px 24px", border: "1px solid var(--color-accent)", color: "var(--color-accent)", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "color-mix(in srgb, var(--color-accent) 10%, transparent)")} onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}>
-                      reserve with $1,000 deposit →
-                    </a>
-                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-body)", textAlign: "center", marginTop: 8, fontStyle: "italic" }}>*balance to be paid in full 30 days prior to retreat start date</p>
+                  <div style={{ display: "block", padding: "12px 24px", background: "var(--color-border)", color: "var(--color-text-muted)", fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 700, letterSpacing: "0.04em", textAlign: "center" }}>
+                    sold out
                   </div>
                 </div>
               </motion.div>
