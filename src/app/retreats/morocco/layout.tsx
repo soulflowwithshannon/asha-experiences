@@ -39,6 +39,45 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Sacred Sands — Women's Retreat Morocco 2026",
+  "description": "A 7-day women's transformational retreat at Atlas Kasbah, Agadir, Morocco. Yoga, sound healing, desert adventures, Moroccan culture, and deep sisterhood.",
+  "startDate": "2026-11-29",
+  "endDate": "2026-12-05",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "Atlas Kasbah",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Agadir",
+      "addressCountry": "MA"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "ASHA Experiences",
+    "url": "https://ashaexperiences.com"
+  },
+  "image": "https://ashaexperiences.com/images/morocco-hero-v2.png",
+  "url": "https://ashaexperiences.com/retreats/morocco",
+  "offers": {
+    "@type": "Offer",
+    "price": "3200",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/LimitedAvailability",
+    "url": "https://ashaexperiences.com/retreats/morocco"
+  }
+};
+
 export default function MoroccoLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {children}
+    </>
+  );
 }

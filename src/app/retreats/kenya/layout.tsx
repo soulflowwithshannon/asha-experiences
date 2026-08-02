@@ -37,6 +37,45 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Into the Wild — Women's Safari Retreat Kenya 2027",
+  "description": "A 7-day women's transformational safari retreat in Ol Pejeta Conservancy, Kenya. Yoga, sound healing, wildlife encounters, ceremony, and sisterhood.",
+  "startDate": "2027-11-28",
+  "endDate": "2027-12-04",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "Ol Pejeta Safari Cottages",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ol Pejeta Conservancy",
+      "addressCountry": "KE"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "ASHA Experiences",
+    "url": "https://ashaexperiences.com"
+  },
+  "image": "https://ashaexperiences.com/images/Into the Wild Hero.jpg",
+  "url": "https://ashaexperiences.com/retreats/kenya",
+  "offers": {
+    "@type": "Offer",
+    "price": "4500",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/LimitedAvailability",
+    "url": "https://ashaexperiences.com/retreats/kenya"
+  }
+};
+
 export default function KenyaLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {children}
+    </>
+  );
 }

@@ -39,6 +39,45 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Becoming HER — Women's Jungle Retreat Mexico 2026",
+  "description": "A 5-day women's transformational retreat in the jungle of the Riviera Maya, Mexico. Yoga, sound healing, cenotes, ceremony, and sisterhood.",
+  "startDate": "2026-10-27",
+  "endDate": "2026-10-31",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "Lunita Jungle Retreat",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Riviera Maya",
+      "addressCountry": "MX"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "ASHA Experiences",
+    "url": "https://ashaexperiences.com"
+  },
+  "image": "https://ashaexperiences.com/images/Mexico hero.jpeg",
+  "url": "https://ashaexperiences.com/retreats/mexico",
+  "offers": {
+    "@type": "Offer",
+    "price": "3500",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/LimitedAvailability",
+    "url": "https://ashaexperiences.com/retreats/mexico"
+  }
+};
+
 export default function MexicoLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {children}
+    </>
+  );
 }
