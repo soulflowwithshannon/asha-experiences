@@ -580,7 +580,7 @@ export default function MexicoPage() {
             </p>
           </FadeIn>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32, alignItems: "start" }} className="rooms-grid">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32, alignItems: "stretch" }} className="rooms-grid">
 
             {/* Casa Colectiva */}
             <FadeIn>
