@@ -608,9 +608,9 @@ export default function MexicoPage() {
               </div>
             </FadeIn>
 
-            {/* Casa Lienzo — Sold Out */}
+            {/* Casa Lienzo */}
             <FadeIn delay={0.15}>
-              <div style={{ background: "var(--color-bg-card)", border: "0.5px solid var(--color-border)", borderRadius: 8, padding: 40, display: "flex", flexDirection: "column", height: "100%", opacity: 0.6 }}>
+              <div style={{ background: "var(--color-bg-card)", border: "0.5px solid var(--color-border)", borderRadius: 8, padding: 40, display: "flex", flexDirection: "column", height: "100%" }}>
                 <div style={{ borderRadius: 6, overflow: "hidden", marginBottom: 24 }}>
                   <Image src="/images/casa lienzo.png" alt="Casa Lienzo" width={900} height={0} style={{ width: "100%", height: "auto", display: "block" }} sizes="600px" />
                 </div>
@@ -619,11 +619,12 @@ export default function MexicoPage() {
                   a more private accommodation option at Lunita. beautiful, spacious, and fully immersed in the jungle.
                 </p>
                 <div style={{ marginTop: "auto" }}>
-                  <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 36, color: "var(--color-text-muted)", fontWeight: 400, marginBottom: 4 }}>sold out</p>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 12, marginTop: 24 }}>
-                    <div style={{ display: "block", padding: "12px 24px", background: "var(--color-bg-surface)", color: "var(--color-text-muted)", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textAlign: "center", borderRadius: 2 }}>
-                      sold out
-                    </div>
+                  <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 36, color: "var(--color-accent)", fontWeight: 400, marginBottom: 4 }}>$2,700</p>
+                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", marginBottom: 8 }}>per person / private occupancy</p>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                    <a href="https://buy.stripe.com/fZudRa2bue850iC06G0sU0g" target="_blank" rel="noopener noreferrer" style={{ display: "block", padding: "12px 24px", background: "#C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 700, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "#b08d78")} onMouseLeave={(e) => (e.currentTarget.style.background = "#C39E88")}>
+                      reserve my spot →
+                    </a>
                   </div>
                 </div>
               </div>
