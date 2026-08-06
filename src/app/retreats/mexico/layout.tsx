@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Women's Jungle Retreat Mexico 2026 — Becoming HER | ASHA Experiences",
-  description: "A 5-day women's retreat in the jungle of the Riviera Maya, Mexico. Oct 27–31, 2026. Yoga, sound healing, cenotes, ceremony, and sisterhood. Limited spots available.",
+  title: "Women's Retreat Mexico 2026 — 5 Days in the Jungle | ASHA Experiences",
+  description: "Lose yourself in the jungle and find yourself again. A 5-day women's retreat in the Riviera Maya — yoga, sound healing, cenotes, ceremony, and sisterhood. Oct 27–31, 2026.",
   keywords: [
     "women's retreat Mexico",
     "jungle retreat Mexico",

@@ -25,10 +25,10 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   title: {
-    default: "ASHA Experiences — International Retreats for Women",
+    default: "ASHA Experiences — Transformational Retreats for Women in Morocco, Mexico & Kenya",
     template: "%s | ASHA Experiences",
   },
-  description: "ASHA Experiences creates transformational international retreats for women — in Morocco, Mexico, and Kenya. Yoga, sound healing, ceremony, and sisterhood. Come back to yourself.",
+  description: "You've been holding it together for so long. ASHA Experiences creates transformational international retreats for women — yoga, sound healing, ceremony, and sisterhood in Morocco, Mexico, and Kenya.",
   keywords: [
     // core retreat searches
     "women's retreat",

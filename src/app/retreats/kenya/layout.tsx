@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Women's Safari Retreat Kenya 2027 — Into the Wild | ASHA Experiences",
-  description: "A 7-day women's safari retreat in Kenya at Ol Pejeta Conservancy. Yoga, sound healing, wildlife, and sisterhood on the African savanna. 2027. Limited spots.",
+  title: "Women's Safari Retreat Kenya 2027 — 7 Days in the Wild | ASHA Experiences",
+  description: "Imagine waking up to elephants outside your door. A 7-day women's retreat in Kenya's Ol Pejeta Conservancy — yoga, sound healing, wildlife, ceremony, and sisterhood. Limited spots.",
   keywords: [
     "women's safari retreat",
     "safari retreat for women",
