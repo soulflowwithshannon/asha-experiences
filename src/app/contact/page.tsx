@@ -110,7 +110,7 @@ export default function ContactPage() {
           {/* Col 3 — form */}
           <FadeIn delay={0.2}>
             <div>
-              <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(20px,2vw,26px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 28 }}>
+              <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(20px,2vw,26px)", color: "var(--color-accent)", fontWeight: 700, marginBottom: 28 }}>
                 send us a message
               </h2>
 
@@ -183,8 +183,8 @@ export default function ContactPage() {
                       width: "100%",
                       padding: "14px 32px",
                       border: "1px solid var(--color-accent)",
-                      color: "var(--color-accent)",
-                      background: "transparent",
+                      color: "#FFFCF5",
+                      background: "var(--color-accent)",
                       fontFamily: "var(--font-dm-sans)",
                       fontSize: 13,
                       letterSpacing: "0.04em",
@@ -192,8 +192,8 @@ export default function ContactPage() {
                       transition: "background 0.3s ease, transform 0.3s ease",
                       opacity: formState === "submitting" ? 0.6 : 1,
                     }}
-                    onMouseEnter={(e) => { if (formState !== "submitting") { e.currentTarget.style.background = "color-mix(in srgb, var(--color-accent) 10%, transparent)"; e.currentTarget.style.transform = "scale(1.02)"; }}}
-                    onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.transform = "scale(1)"; }}
+                    onMouseEnter={(e) => { if (formState !== "submitting") { e.currentTarget.style.opacity = "0.85"; e.currentTarget.style.transform = "scale(1.02)"; }}}
+                    onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.transform = "scale(1)"; }}
                   >
                     {formState === "submitting" ? "sending..." : "send message →"}
                   </button>
