@@ -491,14 +491,13 @@ export const posts: Post[] = [
 <h2>For the practices</h2>
 <ul>
 <li>A journal — non-negotiable. Bring a pen you like. You will want to write things down</li>
-<li>A yoga mat is provided at Lunita, but bring your own if you have a preference</li>
+<li>A yoga mat is provided at Lunita</li>
 </ul>
 
 <h2>For the cenotes</h2>
 <ul>
 <li>Water shoes — optional but nice for rocky edges</li>
 <li>A waterproof bag for your phone if you want photos</li>
-<li>A light towel</li>
 </ul>
 
 <p>Note → the cenotes are sacred spaces. We ask that you go in without perfume or strong products on your skin.</p>
