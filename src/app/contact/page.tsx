@@ -59,11 +59,12 @@ export default function ContactPage() {
 
   return (
     <main style={{ paddingTop: 72 }}>
-      {/* SECTION 1 — INTRO */}
-      <section style={{ background: "var(--color-bg-page)", padding: "80px 32px" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }} className="contact-split">
-          {/* Left */}
-          <div>
+      {/* SECTION 1 — INTRO + FORM */}
+      <section style={{ background: "var(--color-bg-page)", padding: "80px 32px 80px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "start" }} className="contact-split">
+
+          {/* Left — intro */}
+          <div style={{ paddingTop: 16 }}>
             <FadeIn>
               <p className="eyebrow-accent" style={{ marginBottom: 20 }}>get in touch</p>
             </FadeIn>
@@ -93,119 +94,117 @@ export default function ContactPage() {
             </FadeIn>
           </div>
 
-          {/* Right — image */}
+          {/* Right — image + form stacked */}
           <FadeIn delay={0.1}>
-            <div style={{ position: "relative", aspectRatio: "4/3", borderRadius: 4, overflow: "hidden" }}>
-              <Image
-                src="/images/Ashley and Shannon contact.jpg"
-                alt="Shannon Tomascak and Ashley Scully"
-                fill
-                style={{ objectFit: "cover", objectPosition: "center" }}
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
+            <div style={{ display: "flex", flexDirection: "column", gap: 40 }}>
+
+              {/* Image */}
+              <div style={{ position: "relative", aspectRatio: "4/3", borderRadius: 4, overflow: "hidden" }}>
+                <Image
+                  src="/images/Ashley and Shannon contact.jpg"
+                  alt="Shannon Tomascak and Ashley Scully"
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+
+              {/* Form */}
+              <div>
+                <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(20px,2.5vw,26px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 28 }}>
+                  send us a message
+                </h2>
+
+                {formState === "success" ? (
+                  <motion.div
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                    style={{ padding: "40px 0" }}
+                  >
+                    <h3 style={{ fontFamily: "var(--font-cormorant)", fontSize: 24, color: "var(--color-text-headline)", fontWeight: 400, marginBottom: 12 }}>
+                      thank you
+                    </h3>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)" }}>
+                      we&apos;ll be in touch soon.
+                    </p>
+                  </motion.div>
+                ) : (
+                  <form onSubmit={handleSubmit} noValidate style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+                    <div>
+                      <label style={labelStyle} htmlFor="name">name</label>
+                      <input
+                        id="name"
+                        type="text"
+                        required
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        style={inputStyle}
+                        onFocus={(e) => (e.currentTarget.style.borderColor = "var(--color-accent)")}
+                        onBlur={(e) => (e.currentTarget.style.borderColor = "var(--color-border)")}
+                      />
+                    </div>
+                    <div>
+                      <label style={labelStyle} htmlFor="email">email</label>
+                      <input
+                        id="email"
+                        type="email"
+                        required
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        style={inputStyle}
+                        onFocus={(e) => (e.currentTarget.style.borderColor = "var(--color-accent)")}
+                        onBlur={(e) => (e.currentTarget.style.borderColor = "var(--color-border)")}
+                      />
+                    </div>
+                    <div>
+                      <label style={labelStyle} htmlFor="message">message</label>
+                      <textarea
+                        id="message"
+                        required
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        rows={4}
+                        style={{ ...inputStyle, resize: "vertical", minHeight: 100 }}
+                        onFocus={(e) => (e.currentTarget.style.borderColor = "var(--color-accent)")}
+                        onBlur={(e) => (e.currentTarget.style.borderColor = "var(--color-border)")}
+                      />
+                    </div>
+
+                    {formState === "error" && (
+                      <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-accent)" }}>
+                        something went wrong — please try again or reach us directly at imshannontomascak@gmail.com
+                      </p>
+                    )}
+
+                    <button
+                      type="submit"
+                      disabled={formState === "submitting"}
+                      style={{
+                        width: "100%",
+                        padding: "14px 32px",
+                        border: "1px solid var(--color-accent)",
+                        color: "var(--color-accent)",
+                        background: "transparent",
+                        fontFamily: "var(--font-dm-sans)",
+                        fontSize: 13,
+                        letterSpacing: "0.04em",
+                        cursor: formState === "submitting" ? "not-allowed" : "pointer",
+                        transition: "background 0.3s ease, transform 0.3s ease",
+                        opacity: formState === "submitting" ? 0.6 : 1,
+                      }}
+                      onMouseEnter={(e) => { if (formState !== "submitting") { e.currentTarget.style.background = "color-mix(in srgb, var(--color-accent) 10%, transparent)"; e.currentTarget.style.transform = "scale(1.02)"; }}}
+                      onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.transform = "scale(1)"; }}
+                    >
+                      {formState === "submitting" ? "sending..." : "send message →"}
+                    </button>
+                  </form>
+                )}
+              </div>
             </div>
           </FadeIn>
         </div>
         <style>{`@media(max-width:768px){.contact-split{grid-template-columns:1fr!important}}`}</style>
-      </section>
-
-      {/* SECTION 2 — FORM */}
-      <section style={{ background: "var(--color-bg-surface)", padding: "80px 32px" }}>
-        <div style={{ maxWidth: 600, margin: "0 auto" }}>
-          <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(24px,4vw,32px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 48 }}>
-              send us a message
-            </h2>
-          </FadeIn>
-
-          <FadeIn delay={0.1}>
-            {formState === "success" ? (
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeInOut" }}
-                style={{ textAlign: "center", padding: "60px 32px" }}
-              >
-                <h3 style={{ fontFamily: "var(--font-cormorant)", fontSize: 24, color: "var(--color-text-headline)", fontWeight: 400, marginBottom: 12 }}>
-                  thank you
-                </h3>
-                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)" }}>
-                  we&apos;ll be in touch soon.
-                </p>
-              </motion.div>
-            ) : (
-              <form onSubmit={handleSubmit} noValidate style={{ display: "flex", flexDirection: "column", gap: 28 }}>
-                <div>
-                  <label style={labelStyle} htmlFor="name">name</label>
-                  <input
-                    id="name"
-                    type="text"
-                    required
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    style={inputStyle}
-                    onFocus={(e) => (e.currentTarget.style.borderColor = "var(--color-accent)")}
-                    onBlur={(e) => (e.currentTarget.style.borderColor = "var(--color-border)")}
-                  />
-                </div>
-                <div>
-                  <label style={labelStyle} htmlFor="email">email</label>
-                  <input
-                    id="email"
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    style={inputStyle}
-                    onFocus={(e) => (e.currentTarget.style.borderColor = "var(--color-accent)")}
-                    onBlur={(e) => (e.currentTarget.style.borderColor = "var(--color-border)")}
-                  />
-                </div>
-                <div>
-                  <label style={labelStyle} htmlFor="message">message</label>
-                  <textarea
-                    id="message"
-                    required
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    rows={6}
-                    style={{ ...inputStyle, resize: "vertical", minHeight: 140 }}
-                    onFocus={(e) => (e.currentTarget.style.borderColor = "var(--color-accent)")}
-                    onBlur={(e) => (e.currentTarget.style.borderColor = "var(--color-border)")}
-                  />
-                </div>
-
-                {formState === "error" && (
-                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-accent)", textAlign: "center" }}>
-                    something went wrong — please try again or reach us directly at imshannontomascak@gmail.com
-                  </p>
-                )}
-
-                <button
-                  type="submit"
-                  disabled={formState === "submitting"}
-                  style={{
-                    width: "100%",
-                    padding: "14px 32px",
-                    border: "1px solid var(--color-accent)",
-                    color: "var(--color-accent)",
-                    background: "transparent",
-                    fontFamily: "var(--font-dm-sans)",
-                    fontSize: 13,
-                    letterSpacing: "0.04em",
-                    cursor: formState === "submitting" ? "not-allowed" : "pointer",
-                    transition: "background 0.3s ease, transform 0.3s ease",
-                    opacity: formState === "submitting" ? 0.6 : 1,
-                  }}
-                  onMouseEnter={(e) => { if (formState !== "submitting") { e.currentTarget.style.background = "color-mix(in srgb, var(--color-accent) 10%, transparent)"; e.currentTarget.style.transform = "scale(1.02)"; }}}
-                  onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.transform = "scale(1)"; }}
-                >
-                  {formState === "submitting" ? "sending..." : "send message →"}
-                </button>
-              </form>
-            )}
-          </FadeIn>
-        </div>
       </section>
 
       {/* SECTION 3 — PORTRAIT STRIP */}
