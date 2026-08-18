@@ -50,7 +50,7 @@ function ParallaxHero() {
           playsInline
           style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block", position: "absolute", inset: 0 }}
         >
-          <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/ASHA%20hero%20video.mp4" type="video/mp4" />
+          <source src="/videos/ASHA hero video.mp4" type="video/mp4" />
         </video>
       </motion.div>
 

@@ -592,7 +592,7 @@ export default function KenyaPage() {
               playsInline
               style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "60% center", display: "block", position: "absolute", inset: 0 }}
             >
-              <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Ol%20Pejeta%20Sizzle%20Reel.mp4" type="video/mp4" />
+              <source src="/videos/Ol Pejeta Sizzle Reel.mp4" type="video/mp4" />
             </video>
           </div>
           <div className="stay-copy" style={{ maxWidth: 512, display: "flex", flexDirection: "column", gap: 32 }}>
