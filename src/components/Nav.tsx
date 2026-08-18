@@ -75,7 +75,7 @@ export default function Nav() {
             fontSize: 24,
             fontWeight: 500,
             letterSpacing: "0.08em",
-            color: scrolled ? "var(--color-text-headline)" : "#F1F0E5",
+            color: scrolled ? "var(--color-text-headline)" : "#A89585",
             textDecoration: "none",
           }}
         >
@@ -222,7 +222,7 @@ export default function Nav() {
             background: "none",
             border: "none",
             cursor: "pointer",
-            color: scrolled ? "var(--color-text-headline)" : "#F1F0E5",
+            color: scrolled ? "var(--color-text-headline)" : "#A89585",
             padding: 4,
           }}
         >

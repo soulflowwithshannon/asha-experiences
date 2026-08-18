@@ -60,6 +60,8 @@ export default function BlogIndex() {
               color: "var(--color-text-headline)",
               padding: "2px 16px 6px",
               display: "inline",
+              WebkitBoxDecorationBreak: "clone",
+              boxDecorationBreak: "clone",
             }}>
               on the way back to themselves
             </span>
