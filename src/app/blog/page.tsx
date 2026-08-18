@@ -50,21 +50,30 @@ export default function BlogIndex() {
             fontSize: "clamp(26px, 4.5vw, 60px)",
             fontWeight: 300,
             fontStyle: "italic",
-            color: "var(--color-accent)",
+            color: "var(--color-text-headline)",
             lineHeight: 1.15,
             textAlign: "center",
             marginTop: 8,
           }}>
-            on the way back to themselves
+            <span style={{
+              background: "var(--color-accent)",
+              color: "#FFFCF5",
+              padding: "2px 16px 6px",
+              display: "inline",
+            }}>
+              on the way back to themselves
+            </span>
           </p>
 
           <p style={{
             fontFamily: "var(--font-dm-sans)",
-            fontSize: 14,
+            fontSize: "clamp(11px, 1.2vw, 14px)",
+            letterSpacing: "0.14em",
+            textTransform: "uppercase",
             color: "var(--color-text-body)",
             lineHeight: 1.7,
             textAlign: "center",
-            maxWidth: 440,
+            maxWidth: 520,
             margin: "28px auto 0",
           }}>
             Honest writing about retreats, healing, and what it actually feels like to choose yourself.
