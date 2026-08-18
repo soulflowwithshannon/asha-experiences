@@ -122,40 +122,40 @@ export const posts: Post[] = [
     body: `
 <p>It's the first question we get. And it's a fair one.</p>
 
-<p>Mexico is a big, complex country — and like any country, the answer to "is it safe?" depends entirely on where you're going, how you're going, and who you're with.</p>
+<p>Mexico is a big, complex country — and like any country, the answer to <em>"is it safe?"</em> depends entirely on <strong>where you're going, how you're going, and who you're with.</strong></p>
 
 <h2>The honest answer</h2>
 <p>Solo female travel in Mexico carries real considerations. Certain regions have well-documented safety concerns, and traveling alone as a woman anywhere in the world requires awareness and preparation.</p>
 
-<p>The Riviera Maya — where our retreat is based — is one of the most visited regions in Mexico. It's not without caution, but it's a very different reality than the headlines that typically represent Mexico as a whole.</p>
+<p><strong>The Riviera Maya — where our retreat is based — is one of the most visited regions in Mexico.</strong> It's not without caution, but it's a very different reality than the headlines that typically represent Mexico as a whole.</p>
 
 <h2>What makes a guided retreat different</h2>
 <ul>
-<li>You're not navigating alone — logistics are handled from the moment you land</li>
+<li>You're <strong>not navigating alone</strong> — logistics are handled from the moment you land</li>
 <li>Transfers, accommodation, meals, and activities are all taken care of</li>
 <li>You're never finding your way around an unfamiliar place by yourself at night</li>
-<li>You're staying in a private, vetted property in the jungle</li>
+<li>You're staying in a <strong>private, vetted property in the jungle</strong></li>
 <li>You're with other women and experienced facilitators who know the area</li>
 </ul>
 
-<p>The freedom of a retreat is that you get the experience of being somewhere extraordinary without the vulnerability of solo navigation.</p>
+<p><em>The freedom of a retreat is that you get the experience of being somewhere extraordinary without the vulnerability of solo navigation.</em></p>
 
 <h2>Where we stay</h2>
-<p>Our Mexico retreat is held at Lunita Jungle Retreat in the Riviera Maya — a private property fully immersed in the jungle, with its own cenote, yoga pavilion, and casitas. You're not in a busy resort corridor or navigating city streets.</p>
+<p>Our Mexico retreat is held at <a href="https://www.lunitajungleretreat.com/" target="_blank" rel="noopener noreferrer">Lunita Jungle Retreat</a> in the Riviera Maya — a private property fully immersed in the jungle, with its own cenote, yoga pavilion, and casitas. You're not in a busy resort corridor or navigating city streets.</p>
 
 <h2>Practical safety tips for solo travel in Mexico</h2>
 <ul>
-<li>Use registered taxis or Uber — never unmarked cars</li>
+<li>Use <strong>registered taxis or Uber</strong> — never unmarked cars</li>
 <li>Keep copies of your passport and documents separate from your bag</li>
 <li>Share your itinerary with someone at home</li>
-<li>Trust your gut — it's usually right</li>
+<li><em>Trust your gut — it's usually right</em></li>
 <li>Connect with other women travelers via Facebook groups or travel forums before you go</li>
 </ul>
 
 <h2>What we've seen again and again</h2>
-<p>Women who were nervous about coming to Mexico — who almost talked themselves out of it — are consistently the ones who say it was one of the most meaningful experiences of their lives.</p>
+<p>Women who were nervous about coming to Mexico — who <em>almost talked themselves out of it</em> — are consistently the ones who say it was one of the most meaningful experiences of their lives.</p>
 
-<p>Not because nothing felt unfamiliar. But because they did something that scared them a little, with the right support around them.</p>
+<p><strong>Not because nothing felt unfamiliar. But because they did something that scared them a little, with the right support around them.</strong></p>
 
 <hr />
 
