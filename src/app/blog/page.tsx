@@ -56,8 +56,8 @@ export default function BlogIndex() {
             marginTop: 8,
           }}>
             <span style={{
-              background: "var(--color-accent)",
-              color: "#FFFCF5",
+              background: "rgba(166, 124, 82, 0.35)",
+              color: "var(--color-text-headline)",
               padding: "2px 16px 6px",
               display: "inline",
             }}>
