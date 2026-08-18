@@ -652,64 +652,6 @@ __TESTIMONIAL_VIDEO__
     `.trim(),
   },
   {
-    slug: "what-happens-after-a-retreat-integration",
-    title: "What happens after a retreat — the integration no one talks about",
-    description: "The retreat ends. You fly home. And then something unexpected happens. Here's what integration actually looks like, and how to make it last.",
-    date: "2026-08-15",
-    readTime: "5 min read",
-    category: "Retreat Life",
-    image: "/images/ReturnToLove girls group.jpg",
-    body: `
-<p>Nobody warns you about the week after.</p>
-
-<p>You've had this profound experience. You felt things crack open. You cried with women you'd known for four days. You watched the sun set and thought: <em>this is what my life is supposed to feel like.</em></p>
-
-<p>And then you fly home.</p>
-
-<p>Your inbox is full. Your kids need dinner. Your partner asks "how was it?" and you open your mouth and nothing that comes out captures what actually happened.</p>
-
-<p>This is integration. And it's the part most people aren't prepared for.</p>
-
-<h2>What integration actually is</h2>
-<p>Integration is the process of weaving what you experienced — the insights, the shifts, the things you felt or released — into the fabric of your regular life.</p>
-
-<p>Without it → a retreat can feel like a beautiful dream you can barely remember a month later.</p>
-<p>With it → what happened on that trip keeps unfolding for months.</p>
-
-<h2>Why it can feel hard at first</h2>
-<ul>
-<li>You've just spent days in a completely different environment — different pace, people, food, air</li>
-<li>Your nervous system recalibrated — then stepped back into the same environment that shaped your old patterns</li>
-<li>The contrast can feel jarring</li>
-</ul>
-
-<p>Some women feel a low-grade grief in the first few days home. Some feel irritable or overstimulated. Some feel more sensitive than usual. All of this is normal. Your system is trying to land.</p>
-
-<h2>What actually helps</h2>
-<ul>
-<li><strong>Protect the slowness</strong> — don't schedule yourself into oblivion the week you get back</li>
-<li><strong>Write it down</strong> — what shifted? What do you want to carry forward? What are you leaving behind? Journaling in the first week locks in insights that otherwise fade</li>
-<li><strong>Stay in connection</strong> — the women you met on retreat are one of the most valuable things you're bringing home. Group chats, check-in calls, even a voice note</li>
-<li><strong>Notice what you don't want to go back to</strong> — integration often surfaces clarity about relationships, jobs, patterns. Don't push those realizations away</li>
-<li><strong>Be patient with the people at home</strong> — they haven't been where you've been. That's okay. You don't need them to fully understand</li>
-</ul>
-
-<h2>How long does it take?</h2>
-<p>It varies.</p>
-<ul>
-<li>Some shifts settle in a few weeks</li>
-<li>Some keep unfolding for months</li>
-<li>Some women make a major life decision six months after a retreat — a conversation they couldn't have had before, a boundary they finally drew</li>
-</ul>
-
-<p>The retreat plants something. Integration is what lets it grow.</p>
-
-<hr />
-
-<p>We think about integration as part of the retreat design itself — not an afterthought. Explore our upcoming retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>.</p>
-    `.trim(),
-  },
-  {
     slug: "what-to-pack-for-a-jungle-retreat",
     title: "What to pack for a jungle retreat in Mexico",
     description: "The practical packing list for Lunita — plus the things most people forget and the things they bring and never touch.",
@@ -845,6 +787,64 @@ __TESTIMONIAL_VIDEO__
 <p>You don't need to believe in it for it to work. You just have to be willing to lie down and listen.</p>
 
 <p>Sound healing is woven through all three of our retreat experiences. Our next is <a href="/retreats/mexico">Becoming HER in Mexico</a>, October 27–31, 2026.</p>
+    `.trim(),
+  },
+  {
+    slug: "what-happens-after-a-retreat-integration",
+    title: "What happens after a retreat — the integration no one talks about",
+    description: "The retreat ends. You fly home. And then something unexpected happens. Here's what integration actually looks like, and how to make it last.",
+    date: "2026-08-15",
+    readTime: "5 min read",
+    category: "Retreat Life",
+    image: "/images/ReturnToLove girls group.jpg",
+    body: `
+<p>Nobody warns you about the week after.</p>
+
+<p>You've had this profound experience. You felt things crack open. You cried with women you'd known for four days. You watched the sun set and thought: <em>this is what my life is supposed to feel like.</em></p>
+
+<p>And then you fly home.</p>
+
+<p>Your inbox is full. Your kids need dinner. Your partner asks "how was it?" and you open your mouth and nothing that comes out captures what actually happened.</p>
+
+<p>This is integration. And it's the part most people aren't prepared for.</p>
+
+<h2>What integration actually is</h2>
+<p>Integration is the process of weaving what you experienced — the insights, the shifts, the things you felt or released — into the fabric of your regular life.</p>
+
+<p>Without it → a retreat can feel like a beautiful dream you can barely remember a month later.</p>
+<p>With it → what happened on that trip keeps unfolding for months.</p>
+
+<h2>Why it can feel hard at first</h2>
+<ul>
+<li>You've just spent days in a completely different environment — different pace, people, food, air</li>
+<li>Your nervous system recalibrated — then stepped back into the same environment that shaped your old patterns</li>
+<li>The contrast can feel jarring</li>
+</ul>
+
+<p>Some women feel a low-grade grief in the first few days home. Some feel irritable or overstimulated. Some feel more sensitive than usual. All of this is normal. Your system is trying to land.</p>
+
+<h2>What actually helps</h2>
+<ul>
+<li><strong>Protect the slowness</strong> — don't schedule yourself into oblivion the week you get back</li>
+<li><strong>Write it down</strong> — what shifted? What do you want to carry forward? What are you leaving behind? Journaling in the first week locks in insights that otherwise fade</li>
+<li><strong>Stay in connection</strong> — the women you met on retreat are one of the most valuable things you're bringing home. Group chats, check-in calls, even a voice note</li>
+<li><strong>Notice what you don't want to go back to</strong> — integration often surfaces clarity about relationships, jobs, patterns. Don't push those realizations away</li>
+<li><strong>Be patient with the people at home</strong> — they haven't been where you've been. That's okay. You don't need them to fully understand</li>
+</ul>
+
+<h2>How long does it take?</h2>
+<p>It varies.</p>
+<ul>
+<li>Some shifts settle in a few weeks</li>
+<li>Some keep unfolding for months</li>
+<li>Some women make a major life decision six months after a retreat — a conversation they couldn't have had before, a boundary they finally drew</li>
+</ul>
+
+<p>The retreat plants something. Integration is what lets it grow.</p>
+
+<hr />
+
+<p>We think about integration as part of the retreat design itself — not an afterthought. Explore our upcoming retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>.</p>
     `.trim(),
   },
 ];
