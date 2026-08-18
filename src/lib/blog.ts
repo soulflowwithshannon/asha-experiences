@@ -6,6 +6,7 @@ export type Post = {
   readTime: string;
   category: string;
   image?: string;
+  cta: string;
   body: string;
 };
 
@@ -18,6 +19,7 @@ export const posts: Post[] = [
     readTime: "5 min read",
     category: "Retreat Life",
     image: "/images/Return to Love group sunset.jpg",
+    cta: "if more than a few of these landed — you already know. you don't have to have it all figured out before you go. you just have to say yes.",
     body: `
 <p>There's a specific kind of tired that sleep doesn't fix.</p>
 
@@ -57,6 +59,7 @@ export const posts: Post[] = [
     readTime: "6 min read",
     category: "Retreat Life",
     image: "/images/Morocco circle.jpeg",
+    cta: "all three retreats are designed with first-timers in mind. if you have questions before booking, we want you to feel ready.",
     body: `
 <p>If you've never been on a women's retreat before, it's normal to not quite know what you're signing up for.</p>
 
@@ -119,6 +122,7 @@ export const posts: Post[] = [
     readTime: "4 min read",
     category: "Travel",
     image: "/images/ReturnToLove group hug.jpg",
+    cta: "women who were nervous about coming to Mexico are consistently the ones who say it was one of the most meaningful experiences of their lives. we're happy to talk through it before you book.",
     body: `
 <p>It's the first question we get. And it's a fair one.</p>
 
@@ -172,6 +176,7 @@ export const posts: Post[] = [
     readTime: "5 min read",
     category: "Healing Practices",
     image: "/images/sound healing.jpg",
+    cta: "you don't need to believe in it for it to work. you just have to be willing to lie down and listen.",
     body: `
 <p>If you've seen "sound healing" or "sound bath" on a retreat schedule and thought — what does that even mean? — you're not alone.</p>
 
@@ -234,6 +239,7 @@ export const posts: Post[] = [
     readTime: "4 min read",
     category: "Retreat Life",
     image: "/images/Morocco sunset.jpeg",
+    cta: "both involve getting on a plane — but only one brings you back different. if you're trying to figure out which is right for you, we'd love to talk.",
     body: `
 <p>Both involve leaving your regular life behind. Both take you somewhere beautiful. Both can involve good food, warm weather, and time away from your responsibilities.</p>
 
@@ -295,6 +301,7 @@ export const posts: Post[] = [
     readTime: "5 min read",
     category: "Retreat Life",
     image: "/images/ReturnToLove girls group.jpg",
+    cta: "the retreat plants something. integration is what lets it grow. we think about it as part of the design itself — not an afterthought.",
     body: `
 <p>Nobody warns you about the week after.</p>
 
@@ -353,6 +360,7 @@ export const posts: Post[] = [
     readTime: "5 min read",
     category: "Practical",
     image: "/images/ReturnToLove bracelets.jpg",
+    cta: "what would you tell your best friend if she said she couldn't afford to prioritize herself right now? that's exactly the reason to go.",
     body: `
 <p>The first thing most women do when they find a retreat they love is look at the price. And then close the tab.</p>
 
@@ -398,6 +406,7 @@ export const posts: Post[] = [
     readTime: "6 min read",
     category: "Retreat Life",
     image: "/images/Into the Wild Hero.jpg",
+    cta: "trust the pull. the retreat that scares you slightly is often the one you need most.",
     body: `
 <p>We're often asked: which retreat should I do?</p>
 
@@ -461,6 +470,7 @@ export const posts: Post[] = [
     readTime: "4 min read",
     category: "Practical",
     image: "/images/Mexico hero.jpeg",
+    cta: "packing light is the first act of letting go. if you have questions about what to expect on the ground, we're here.",
     body: `
 <p>Packing for a retreat is different from packing for a vacation. You're not trying to look like a different version of yourself. You're trying to feel like the most comfortable, unencumbered version of yourself.</p>
 
@@ -538,6 +548,7 @@ export const posts: Post[] = [
     readTime: "4 min read",
     category: "Community",
     image: "/images/ReturnToLove girls group 2.jpg",
+    cta: "if you recognized yourself somewhere in here, that's not a coincidence. we'd love to have you.",
     body: `
 <p>People have ideas about who goes on women's retreats.</p>
 

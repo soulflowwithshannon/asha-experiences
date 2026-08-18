@@ -166,13 +166,12 @@ export default async function BlogPost({
             fontSize: "clamp(24px, 3.5vw, 38px)",
             fontWeight: 300,
             color: "var(--color-text-headline)",
-            marginBottom: 32,
             lineHeight: 1.3,
             maxWidth: 600,
             margin: "0 auto 32px",
           }}
         >
-          if you recognized yourself somewhere in here, that&apos;s not a coincidence. we&apos;d love to have you.
+          {post.cta}
         </p>
         <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
           <Link
