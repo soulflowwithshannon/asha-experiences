@@ -614,7 +614,7 @@ export const posts: Post[] = [
   {
     slug: "going-on-a-womens-retreat-alone-heres-what-happened",
     title: "Going on a women's retreat alone — here's what happened",
-    description: "Most of the women who come to ASHA don't know anyone else going. We asked them what it was actually like. Here's what they said.",
+    description: "Most of the women who arrive at an ASHA retreat don't know a single person going. Here's what it was actually like.",
     date: "2026-08-19",
     readTime: "4 min read",
     category: "Community",
@@ -626,7 +626,7 @@ export const posts: Post[] = [
 
 <p>Almost every single one of them says it was the best decision they made that year.</p>
 
-<p>We asked some of them to share what it was actually like — what surprised them, what shifted, what they wish they'd known before they came.</p>
+<p>We asked some of them to share what it was actually like — <em>what surprised them, what shifted, what they wish they'd known before they came.</em></p>
 
 <p>We'll let them tell it.</p>
 
@@ -642,7 +642,7 @@ __TESTIMONIAL_VIDEO__
 </ul>
 
 <h2>The question we get asked most</h2>
-<p>Is it weird to go alone?</p>
+<p><strong><em>"Is it weird to go alone?"</em></strong></p>
 
 <p>Honestly — no. Most people are in the same position. And there's something about arriving without history, without the version of yourself that your existing relationships know, that makes the whole experience more open. You get to just be a woman in a room with other women. It turns out that's enough.</p>
 
