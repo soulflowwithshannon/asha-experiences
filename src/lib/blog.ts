@@ -584,6 +584,282 @@ export const posts: Post[] = [
 <p>If you recognized yourself somewhere in here, that's not a coincidence. Our retreats are in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>. We'd love to have you.</p>
     `.trim(),
   },
+  {
+    slug: "what-actually-happens-at-a-womens-retreat-day-by-day",
+    title: "What actually happens at a women's retreat? (a day-by-day breakdown)",
+    description: "Not the brochure version. A real, honest look at what each day of a women's retreat actually feels like — from the first morning to the last goodbye.",
+    date: "2026-08-19",
+    readTime: "6 min read",
+    category: "Retreat Life",
+    image: "/images/Morocco yoga.png",
+    body: `
+<p>Most retreat websites show you the photos. The yoga at sunrise. The long table dinners. The women laughing by the pool.</p>
+
+<p>What they don't always show you is what it actually <em>feels</em> like — hour by hour, day by day, from the moment you arrive to the moment you have to leave.</p>
+
+<p>Here's a real breakdown.</p>
+
+<h2>Day 1 — arrival</h2>
+<p>You land. You're picked up. You arrive at the property and it's more beautiful than the photos.</p>
+
+<p>And then — almost immediately — something in you starts to exhale. You don't know why yet. Maybe it's the air. Maybe it's that no one needs anything from you.</p>
+
+<ul>
+<li>You meet the other women — there's a mix of nerves and warmth in the room</li>
+<li>There's usually a welcome circle — an opening ritual to mark the beginning</li>
+<li>An early dinner together, unhurried, with conversation that goes deeper than you expected for day one</li>
+<li>An early night — most women are surprised by how tired they are</li>
+</ul>
+
+<p>What most women feel on day 1 → relief, a little disorientation, and the beginning of something they can't name yet.</p>
+
+<h2>Day 2 — settling in</h2>
+<p>The first full day. This is usually when the schedule begins properly.</p>
+<ul>
+<li>Morning movement — yoga, breathwork, or gentle stretching before breakfast</li>
+<li>A nourishing breakfast with no agenda, no phones, no rushing</li>
+<li>A morning session — this might be a sound healing, a guided visualization, a somatic practice, or a workshop</li>
+<li>Free time in the afternoon — this is harder than it sounds for women who are used to being constantly productive</li>
+<li>An evening experience — ceremony, journaling, or a group share</li>
+</ul>
+
+<p>What most women feel on day 2 → the beginnings of real connection with the other women. Something starts to open.</p>
+
+<h2>Day 3 — the shift</h2>
+<p>Something happens around day 3. It's different for every woman, but it's almost universal.</p>
+
+<p>The wall comes down. Something surfaces — a feeling, a realization, a release. Sometimes it's tears. Sometimes it's laughter. Sometimes it's just a very quiet knowing.</p>
+
+<ul>
+<li>The practices go deeper</li>
+<li>Conversations with the other women become more honest</li>
+<li>You start to feel less like a visitor and more like you belong here</li>
+</ul>
+
+<p>What most women feel on day 3 → something cracks open. This is the day most women remember most.</p>
+
+<h2>Day 4 — integration begins</h2>
+<p>After the opening comes the integrating. Day 4 is often quieter, more internal.</p>
+<ul>
+<li>Space to journal, reflect, and process what's come up</li>
+<li>A day experience — on our Mexico retreat this might be the cenotes; in Morocco, a desert excursion; in Kenya, a safari morning</li>
+<li>Conversations with women who are becoming real friends</li>
+</ul>
+
+<p>What most women feel on day 4 → grounded. Present. Like time is moving differently.</p>
+
+<h2>Day 5 (and beyond) — the closing</h2>
+<p>The last day always comes too soon.</p>
+<ul>
+<li>A closing ceremony — marking the end with intention, not just logistics</li>
+<li>Final group share — what each woman is taking home</li>
+<li>The goodbyes, which are harder than expected for women who met five days ago</li>
+</ul>
+
+<p>What most women feel on the last day → grief mixed with gratitude. And something solid in their chest that wasn't there before.</p>
+
+<h2>What no schedule can capture</h2>
+<p>The moments between the schedule. The conversation over breakfast that changes something. The woman who says the thing you've been thinking for years. The silence by the pool where you finally just <em>are</em>.</p>
+
+<p>That's what a retreat actually is.</p>
+
+<hr />
+
+<p>Our retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a> are each designed with this arc in mind — enough structure to feel held, enough space to actually land. If you want to know more about what a specific retreat looks like day by day, <a href="/contact">reach out</a>.</p>
+    `.trim(),
+  },
+  {
+    slug: "womens-retreats-2026-ultimate-guide",
+    title: "Women's retreats 2026: the ultimate guide to finding the right one",
+    description: "There are hundreds of women's retreats out there. Here's how to cut through the noise — what to look for, what to avoid, and how to find the one that's actually right for you.",
+    date: "2026-08-19",
+    readTime: "7 min read",
+    category: "Practical",
+    image: "/images/Return to Love Waterfall.jpg",
+    body: `
+<p>The women's retreat industry has exploded. And that's mostly a good thing — more women choosing themselves, more spaces being created to hold them.</p>
+
+<p>But it also means the options are overwhelming. How do you know which retreat is actually worth your time, your money, and your trust?</p>
+
+<p>Here's what to look for.</p>
+
+<h2>Start with the why</h2>
+<p>Before you search, get clear on what you're actually looking for. The right retreat depends entirely on where you are right now.</p>
+
+<ul>
+<li><strong>Do you need rest and beauty?</strong> → look for a retreat with a slower pace, luxurious setting, plenty of free time</li>
+<li><strong>Do you need to go deep?</strong> → look for skilled facilitation, somatic or ceremonial practices, smaller groups</li>
+<li><strong>Do you need community?</strong> → look for a retreat that prioritizes group connection over solo experience</li>
+<li><strong>Do you need all three?</strong> → that's most of us, honestly</li>
+</ul>
+
+<h2>What to look for in a retreat</h2>
+
+<p><strong>Skilled facilitators</strong> — who are the people running this? What's their training, their background, their actual experience? A beautiful location with unqualified facilitation is just a holiday.</p>
+
+<p><strong>Small group size</strong> — the best retreats are intimate. You can't go deep in a room of 40 strangers. Look for groups of 8–16 women maximum.</p>
+
+<p><strong>A clear container</strong> — what is the retreat actually for? "Wellness" is not an answer. Look for a retreat that can articulate what it's designed to create and how.</p>
+
+<p><strong>Real testimonials</strong> — not just star ratings. Look for women describing actual experiences, specific moments, what shifted for them.</p>
+
+<p><strong>What's included</strong> — hidden costs are a red flag. A well-run retreat tells you exactly what's covered so you can arrive without surprises.</p>
+
+<h2>What to be cautious of</h2>
+<ul>
+<li>Retreats that promise transformation without explaining how they create it</li>
+<li>Facilitators with no verifiable training or credentials</li>
+<li>Very large groups marketed as "community"</li>
+<li>Pressure tactics — urgency, scarcity, aggressive follow-up</li>
+<li>No clear refund or cancellation policy</li>
+</ul>
+
+<h2>Questions to ask before you book</h2>
+<ul>
+<li>What does a typical day look like?</li>
+<li>How many women will be in the group?</li>
+<li>What training do the facilitators have?</li>
+<li>What happens if I need support during or after the retreat?</li>
+<li>What's the cancellation policy?</li>
+</ul>
+
+<p>A retreat worth booking will answer all of these without hesitation.</p>
+
+<h2>Types of retreats to know about</h2>
+
+<p><strong>Yoga retreats</strong> — movement-focused, often in beautiful locations. Great for physical reset and community. Depth varies widely by facilitator.</p>
+
+<p><strong>Wellness retreats</strong> — broad category. Can mean spa-focused or deeply transformational — read carefully to know which you're getting.</p>
+
+<p><strong>Transformational retreats</strong> — designed specifically for inner work. Usually involve somatic practices, ceremony, and skilled facilitation. These are the ones that change things.</p>
+
+<p><strong>Adventure retreats</strong> — combine meaningful experience (safari, hiking, cultural immersion) with inner work. The setting becomes part of the medicine.</p>
+
+<h2>What makes ASHA different</h2>
+<p>We run small, intentional retreats for women in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>. Every retreat includes:</p>
+<ul>
+<li>Groups of 10–14 women maximum</li>
+<li>Skilled facilitation in yoga, sound healing, somatic practices, and ceremony</li>
+<li>All accommodation, meals, experiences, and transfers included</li>
+<li>A clear arc — from arrival to integration — designed with intention</li>
+</ul>
+
+<hr />
+
+<p>If you're trying to figure out which retreat is right for you — ours or otherwise — <a href="/contact">reach out</a>. We'd rather help you find the right fit than have you book something that isn't.</p>
+    `.trim(),
+  },
+  {
+    slug: "how-to-talk-to-your-partner-about-a-solo-womens-retreat",
+    title: "How to talk to your partner about going on a solo women's retreat",
+    description: "The retreat calls to you. Your partner isn't sure. Here's how to have the conversation — and why this decision matters more than it might seem.",
+    date: "2026-08-19",
+    readTime: "5 min read",
+    category: "Practical",
+    image: "/images/ReturnToLove25-357.jpg",
+    body: `
+<p>You've found the retreat. Something in you knows it's right. And then you think about telling your partner — and you feel yourself already bracing.</p>
+
+<p>Maybe you're anticipating pushback about the cost. Maybe about the timing. Maybe about you leaving for five days to go "find yourself" in Mexico, which sounds, from the outside, like something people say before they don't come back the same.</p>
+
+<p>Here's how to have that conversation.</p>
+
+<h2>Start with the why — yours</h2>
+<p>Before you talk to your partner, get clear with yourself on why you actually want to go. Not the defensive version ("I deserve this"). The honest version.</p>
+<ul>
+<li>What are you carrying right now that isn't sustainable?</li>
+<li>What do you need that your daily life isn't giving you?</li>
+<li>What do you think this retreat might give you — for yourself and for the relationship?</li>
+</ul>
+
+<p>When you can answer those questions clearly, the conversation becomes much easier. You're not asking for permission. You're sharing something real.</p>
+
+<h2>Lead with what's true</h2>
+<p>Not: "I just really want to do this."</p>
+<p>But: "I've been running on empty for a long time and I think this is what I actually need."</p>
+
+<p>Most partners who push back aren't pushing back on the retreat — they're responding to the version of it they're imagining. The more clearly you can describe what you're actually seeking, the less mysterious it becomes.</p>
+
+<h2>Address the real concerns directly</h2>
+
+<p><strong>The cost</strong> — put it in context. What have you spent over the past year trying to feel better? Therapy, supplements, courses, the things you bought hoping they'd fill the gap? A retreat is often less, over time, and does more.</p>
+
+<p><strong>The timing</strong> — there is never a perfect time. If you wait for one, you'll wait forever. What would need to be covered? Who needs to know? Make a plan together rather than asking your partner to accept vague logistics.</p>
+
+<p><strong>"Why do you need to go alone?"</strong> — this is the real question. Because there are things that only become possible when you step outside your roles. You can't be someone's partner and parent and friend and still access the version of yourself that exists underneath all of that — not fully, not in five days. The retreat isn't away from your relationship. It's for it.</p>
+
+<h2>What often surprises partners</h2>
+<p>The woman who comes home.</p>
+
+<p>Partners who were hesitant before the retreat are, in the vast majority of cases, deeply glad afterward. Not because the woman changed into someone unrecognizable — but because she came back more herself. Less depleted. More present. With things to say that she couldn't access before.</p>
+
+<h2>If the answer is still no</h2>
+<p>That's worth sitting with. Is this a "not yet" or a "never"? Is your partner genuinely concerned, or are they uncomfortable with the idea of you having something that's just yours?</p>
+
+<p>Those are different conversations. And both of them matter.</p>
+
+<hr />
+
+<p>Whatever the conversation looks like — we're here if you have questions. Our retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a> are small, intentional, and designed for exactly the woman who almost didn't let herself come. <a href="/contact">Reach out</a> if you want to talk it through.</p>
+    `.trim(),
+  },
+  {
+    slug: "i-went-on-a-womens-retreat-alone-heres-what-happened",
+    title: "I went on a women's retreat alone — here's what happened",
+    description: "I didn't know anyone. I almost cancelled twice. This is what actually happened when I showed up anyway.",
+    date: "2026-08-19",
+    readTime: "6 min read",
+    category: "Community",
+    image: "/images/ReturnToLove group hug.jpg",
+    body: `
+<p>I booked it on a Tuesday night after a day that felt like too much of every day for the past two years.</p>
+
+<p>I didn't tell many people. Not because I was embarrassed, but because I didn't have words for it yet. I just knew I needed something and I didn't know what else to try.</p>
+
+<p>I didn't know a single person going. I almost cancelled twice — once because of the money, once because of the voice that said: <em>who do you think you are, going off to heal yourself in another country?</em></p>
+
+<p>I went anyway. Here's what happened.</p>
+
+<h2>The part I didn't expect: the first five minutes</h2>
+<p>I arrived before most of the other women. I sat with my bag in a beautiful space I didn't feel I belonged in yet, and I thought about getting back in the car.</p>
+
+<p>And then another woman walked in, set her bag down next to mine, and said: "Is it okay if I'm terrified?"</p>
+
+<p>We laughed. Something in the room shifted. By dinner that night, we were talking like we'd known each other for years.</p>
+
+<h2>The part that was harder than I expected</h2>
+<p>Free time.</p>
+
+<p>I am not someone who knows how to do nothing. And the retreat gave us real free time — unscheduled hours with no agenda and no one to take care of. I didn't know what to do with myself at first. I sat on a chair by the pool and felt vaguely anxious about not being productive.</p>
+
+<p>By day three, I was lying in a hammock doing nothing and it felt like the most important thing I'd done in months.</p>
+
+<h2>The part that surprised me most: the other women</h2>
+<p>I expected to like them. I didn't expect to need them.</p>
+
+<p>There was something that happened in that room — in the circles, over meals, in the walks between sessions — that I haven't been able to fully explain to anyone who wasn't there. Women being honest with each other. Women not performing okayness. Women saying the thing they actually mean.</p>
+
+<p>I cried in front of strangers. So did almost everyone else. And it wasn't uncomfortable — it was a relief.</p>
+
+<h2>The part that changed something</h2>
+<p>On day three, during a sound healing session, I felt something release that I'd been holding for so long I didn't know it was there. I don't have better words than that. Something I'd been carrying — some version of the story about who I had to be — loosened.</p>
+
+<p>I didn't come home enlightened. I came home tired in a different way. Quieter. With a few things I knew clearly that I hadn't known before.</p>
+
+<h2>What I'd tell someone who's thinking about going alone</h2>
+<ul>
+<li>The not-knowing-anyone part goes away faster than you think</li>
+<li>Everyone is nervous. You are not the only one</li>
+<li>The women you meet will not be strangers by day two</li>
+<li>The voice that says you don't deserve this is lying</li>
+<li>Go anyway</li>
+</ul>
+
+<hr />
+
+<p>ASHA Experiences runs small, intimate women's retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>. Most of the women who come don't know anyone else going. Most of them say it was the best decision they made that year. If you're on the edge — <a href="/contact">we'd love to hear from you</a>.</p>
+    `.trim(),
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {
