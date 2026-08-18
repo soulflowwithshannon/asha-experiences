@@ -300,7 +300,7 @@ export default function AboutPage() {
             </FadeIn>
           </div>
           <div className="ashley-photo" style={{ position: "relative", minHeight: 500, background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <Image src="/images/3.png" alt="Ashley" fill style={{ objectFit: "cover", objectPosition: "center top" }} sizes="45vw" />
+            <Image src="/images/3.png" alt="Ashley" fill style={{ objectFit: "contain", objectPosition: "center" }} sizes="45vw" />
           </div>
         </div>
         <style>{`@media(max-width:768px){.ashley-grid{grid-template-columns:1fr!important}.ashley-photo{order:-1}.ashley-text{order:0}}`}</style>
@@ -310,7 +310,7 @@ export default function AboutPage() {
       <section style={{ background: "var(--color-bg-page)" }}>
         <div style={{ display: "grid", gridTemplateColumns: "45% 55%", minHeight: 600 }} className="shannon-grid">
           <div style={{ position: "relative", minHeight: 500, background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <Image src="/images/4.png" alt="Shannon" fill style={{ objectFit: "cover", objectPosition: "center top" }} sizes="45vw" />
+            <Image src="/images/4.png" alt="Shannon" fill style={{ objectFit: "contain", objectPosition: "center" }} sizes="45vw" />
           </div>
           <div style={{ padding: "80px 60px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
             <FadeIn>
