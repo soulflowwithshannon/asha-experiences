@@ -152,103 +152,83 @@ export default async function BlogPost({
       {/* CTA */}
       <section
         style={{
-          background: "var(--color-bg-surface)",
+          background: "var(--color-bg-page)",
           borderTop: "0.5px solid var(--color-border)",
-          borderBottom: "0.5px solid var(--color-border)",
-          padding: "64px 32px",
-          textAlign: "center",
-          marginBottom: 80,
+          padding: "48px 32px",
         }}
       >
-        <p
+        <div
           style={{
+            maxWidth: 1200,
+            margin: "0 auto",
+            display: "grid",
+            gridTemplateColumns: "1fr auto 1fr",
+            alignItems: "center",
+            gap: 24,
+          }}
+          className="blog-cta-grid"
+        >
+          {/* Left — label */}
+          <p style={{
             fontFamily: "var(--font-cormorant)",
-            fontSize: "clamp(28px, 4vw, 44px)",
+            fontSize: "clamp(18px, 2vw, 24px)",
             fontWeight: 300,
+            fontStyle: "italic",
             color: "var(--color-text-headline)",
-            marginBottom: 16,
-            lineHeight: 1.2,
-          }}
-        >
-          ready to experience this for yourself?
-        </p>
-        <p
-          style={{
-            fontFamily: "var(--font-dm-sans)",
-            fontSize: 15,
-            color: "var(--color-text-body)",
-            marginBottom: 32,
-          }}
-        >
-          we have retreats in Mexico, Morocco, and Kenya.
-        </p>
-        <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-          <Link
-            href="/retreats/mexico"
-            style={{
-              fontFamily: "var(--font-dm-sans)",
-              fontSize: 12,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              color: "var(--color-bg-page)",
-              background: "var(--color-text-headline)",
-              padding: "14px 28px",
-              textDecoration: "none",
-              borderRadius: 1,
-            }}
-          >
-            Mexico — Oct 2026
-          </Link>
-          <Link
-            href="/retreats/morocco"
-            style={{
-              fontFamily: "var(--font-dm-sans)",
-              fontSize: 12,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              color: "var(--color-text-headline)",
-              border: "0.5px solid var(--color-text-headline)",
-              padding: "14px 28px",
-              textDecoration: "none",
-              borderRadius: 1,
-            }}
-          >
-            Morocco — Nov 2026
-          </Link>
-          <Link
-            href="/retreats/kenya"
-            style={{
-              fontFamily: "var(--font-dm-sans)",
-              fontSize: 12,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              color: "var(--color-text-headline)",
-              border: "0.5px solid var(--color-text-headline)",
-              padding: "14px 28px",
-              textDecoration: "none",
-              borderRadius: 1,
-            }}
-          >
-            Kenya — Nov 2027
-          </Link>
-        </div>
-      </section>
+          }}>
+            ready to experience this for yourself?
+          </p>
 
-      {/* Back link */}
-      <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 32px 120px" }}>
-        <Link
-          href="/blog"
-          style={{
-            fontFamily: "var(--font-dm-sans)",
-            fontSize: 12,
-            color: "var(--color-accent)",
-            letterSpacing: "0.1em",
-            textDecoration: "none",
-          }}
-        >
-          ← more from the journal
-        </Link>
-      </div>
+          {/* Center — retreat links */}
+          <div style={{ display: "flex", gap: 28, flexWrap: "wrap", justifyContent: "center" }}>
+            {[
+              { href: "/retreats/mexico", label: "mexico — oct 2026" },
+              { href: "/retreats/morocco", label: "morocco — nov 2026" },
+              { href: "/retreats/kenya", label: "kenya — nov 2027" },
+            ].map((r) => (
+              <Link
+                key={r.href}
+                href={r.href}
+                style={{
+                  fontFamily: "var(--font-dm-sans)",
+                  fontSize: 13,
+                  color: "var(--color-text-muted)",
+                  textDecoration: "none",
+                }}
+              >
+                {r.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* Right — back to journal */}
+          <div style={{ textAlign: "right" }}>
+            <Link
+              href="/blog"
+              style={{
+                fontFamily: "var(--font-dm-sans)",
+                fontSize: 13,
+                color: "var(--color-text-muted)",
+                textDecoration: "none",
+              }}
+            >
+              ← journal
+            </Link>
+          </div>
+        </div>
+
+        <style>{`
+          @media (max-width: 640px) {
+            .blog-cta-grid {
+              grid-template-columns: 1fr !important;
+              text-align: center;
+            }
+            .blog-cta-grid > div:last-child {
+              text-align: center !important;
+            }
+          }
+        `}</style>
+      </section>
     </main>
   );
 }
