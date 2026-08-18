@@ -403,7 +403,9 @@ export const posts: Post[] = [
 
 <p>And the honest answer is: the one that's calling you. But if that's not enough to go on, here's the breakdown.</p>
 
-<h2>Becoming HER — Mexico → Oct 2026</h2>
+<h2><a href="/retreats/mexico">Becoming HER — Mexico → Oct 2026</a></h2>
+
+<img src="/images/Mexico hero.jpeg" alt="Becoming HER — Women's Retreat Mexico" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:2px;margin-bottom:20px;" />
 
 <p><strong>The energy</strong> — lush, alive, sensory. Jungle surrounds you. Cenotes are cold and clear and ancient.</p>
 
@@ -417,7 +419,9 @@ export const posts: Post[] = [
 <li>You can't take too many days away from your life right now — it's 5 days</li>
 </ul>
 
-<h2>Sacred Sands — Morocco → Nov 2026</h2>
+<h2><a href="/retreats/morocco">Sacred Sands — Morocco → Nov 2026</a></h2>
+
+<img src="/images/morocco-hero-v2.png" alt="Sacred Sands — Women's Retreat Morocco" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:2px;margin-bottom:20px;" />
 
 <p><strong>The energy</strong> — ancient, grounding, expansive. The desert strips things away. What's left is what's real.</p>
 
@@ -431,7 +435,9 @@ export const posts: Post[] = [
 <li>You want 7 days — more spacious, more time to settle and go deeper</li>
 </ul>
 
-<h2>Into the Wild — Kenya → 2027</h2>
+<h2><a href="/retreats/kenya">Into the Wild — Kenya → 2027</a></h2>
+
+<img src="/images/Into the Wild Hero.jpg" alt="Into the Wild — Women's Safari Retreat Kenya" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:2px;margin-bottom:20px;" />
 
 <p><strong>The energy</strong> — raw, vast, humbling. Waking up to elephants. The savanna at sunrise. A place that reminds you, viscerally, that you are part of something much larger than your to-do list.</p>
 
