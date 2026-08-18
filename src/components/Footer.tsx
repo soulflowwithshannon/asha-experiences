@@ -40,6 +40,7 @@ export default function Footer() {
           {[
             { href: "/about", label: "about us" },
             { href: "/retreats/kenya", label: "retreats" },
+            { href: "/blog", label: "journal" },
             { href: "/contact", label: "contact us" },
           ].map((link) => (
             <Link
