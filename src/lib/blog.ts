@@ -17,6 +17,7 @@ export const posts: Post[] = [
     date: "2026-08-18",
     readTime: "5 min read",
     category: "Retreat Life",
+    image: "/images/ReturnToLove group sunset.jpg",
     body: `
 <p>There's a specific kind of tired that sleep doesn't fix.</p>
 
@@ -72,6 +73,7 @@ export const posts: Post[] = [
     date: "2026-08-12",
     readTime: "6 min read",
     category: "Retreat Life",
+    image: "/images/Morocco circle.jpeg",
     body: `
 <p>If you've never been on a women's retreat before, it's normal to not quite know what you're signing up for. What actually happens? Will it be too "woo"? Will you have to share things you're not ready to share? Will you like the other women?</p>
 
@@ -117,6 +119,7 @@ export const posts: Post[] = [
     date: "2026-08-05",
     readTime: "4 min read",
     category: "Travel",
+    image: "/images/travel.png",
     body: `
 <p>It's the first question we get. And it's a fair one.</p>
 
@@ -161,6 +164,7 @@ export const posts: Post[] = [
     date: "2026-07-28",
     readTime: "5 min read",
     category: "Healing Practices",
+    image: "/images/sound healing.jpg",
     body: `
 <p>If you've seen "sound healing" or "sound bath" on a retreat schedule and thought — what does that even mean? — you're not alone.</p>
 
@@ -207,6 +211,7 @@ export const posts: Post[] = [
     date: "2026-07-20",
     readTime: "4 min read",
     category: "Retreat Life",
+    image: "/images/Morocco sunset.jpeg",
     body: `
 <p>Both involve leaving your regular life behind. Both take you somewhere beautiful. Both can involve good food, warm weather, and time away from your responsibilities.</p>
 
@@ -251,6 +256,7 @@ export const posts: Post[] = [
     date: "2026-08-15",
     readTime: "5 min read",
     category: "Retreat Life",
+    image: "/images/ReturnToLove girls group.jpg",
     body: `
 <p>Nobody warns you about the week after.</p>
 
@@ -300,6 +306,7 @@ export const posts: Post[] = [
     date: "2026-08-10",
     readTime: "5 min read",
     category: "Practical",
+    image: "/images/ReturnToLove bracelets.jpg",
     body: `
 <p>The first thing most women do when they find a retreat they love is look at the price. And then close the tab.</p>
 
@@ -346,6 +353,7 @@ export const posts: Post[] = [
     date: "2026-08-03",
     readTime: "6 min read",
     category: "Retreat Life",
+    image: "/images/Into the Wild Hero.jpg",
     body: `
 <p>We're often asked: which retreat should I do?</p>
 
@@ -395,6 +403,7 @@ export const posts: Post[] = [
     date: "2026-07-15",
     readTime: "4 min read",
     category: "Practical",
+    image: "/images/Mexico hero.jpeg",
     body: `
 <p>Packing for a retreat is different from packing for a vacation. You're not trying to look like a different version of yourself. You're trying to feel like the most comfortable, unencumbered version of yourself.</p>
 
@@ -449,6 +458,7 @@ export const posts: Post[] = [
     date: "2026-07-08",
     readTime: "4 min read",
     category: "Community",
+    image: "/images/ReturnToLove girls group 2.jpg",
     body: `
 <p>People have ideas about who goes on women's retreats.</p>
 
