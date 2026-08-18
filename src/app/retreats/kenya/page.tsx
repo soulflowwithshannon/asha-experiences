@@ -755,26 +755,12 @@ export default function KenyaPage() {
           <FadeIn delay={0.1}>
             <div style={{ maxWidth: 900, margin: "0 auto", position: "relative", borderRadius: 8, overflow: "hidden" }}>
               {/* Warm overlay to match site tone */}
-              <div style={{
-                position: "absolute",
-                inset: 0,
-                background: "rgba(166, 124, 82, 0.08)",
-                mixBlendMode: "multiply",
-                zIndex: 1,
-                pointerEvents: "none",
-                borderRadius: 8,
-              }} />
-              <video
-                controls
-                style={{
-                  width: "100%",
-                  display: "block",
-                  borderRadius: 8,
-                  filter: "sepia(18%) saturate(90%) brightness(97%) contrast(103%)",
-                }}
-              >
-                <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Testimonials.mp4" type="video/mp4" />
-              </video>
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/QcIdDu9ZFeQ?rel=0&modestbranding=1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{ width: "100%", aspectRatio: "16/9", display: "block", border: "none", borderRadius: 8 }}
+              />
             </div>
           </FadeIn>
 

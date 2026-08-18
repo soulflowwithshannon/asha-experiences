@@ -321,14 +321,12 @@ export default function HomePage() {
 
           <FadeIn delay={0.1}>
             <div style={{ maxWidth: 900, margin: "0 auto", position: "relative", borderRadius: 8, overflow: "hidden" }}>
-              <div style={{ position: "absolute", inset: 0, background: "rgba(166, 124, 82, 0.12)", mixBlendMode: "multiply", zIndex: 1, pointerEvents: "none" }} />
-              <video
-                controls
-                preload="metadata"
-                style={{ width: "100%", display: "block", borderRadius: 8, filter: "sepia(15%) saturate(110%) brightness(100%) contrast(105%)" }}
-              >
-                <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Testimonials.mp4" type="video/mp4" />
-              </video>
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/QcIdDu9ZFeQ?rel=0&modestbranding=1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{ width: "100%", aspectRatio: "16/9", display: "block", border: "none", borderRadius: 8 }}
+              />
             </div>
           </FadeIn>
 
