@@ -229,7 +229,7 @@ export default async function BlogPost({
               borderRadius: 1,
             }}
           >
-            Kenya — 2027
+            Kenya — Nov 2027
           </Link>
         </div>
       </section>

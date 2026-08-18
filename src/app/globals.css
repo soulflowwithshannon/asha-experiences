@@ -99,7 +99,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .blog-body ul, .blog-body ol {
-  padding-left: 24px;
+  list-style: none;
+  padding-left: 0;
   margin-bottom: 24px;
 }
 
@@ -107,8 +108,44 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-dm-sans), sans-serif;
   font-size: 16px;
   color: var(--color-text-body);
-  line-height: 1.85;
-  margin-bottom: 8px;
+  line-height: 1.75;
+  margin-bottom: 12px;
+  padding-left: 24px;
+  position: relative;
+}
+
+.blog-body ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+.blog-body ol {
+  counter-reset: blog-counter;
+}
+
+.blog-body ol li {
+  counter-increment: blog-counter;
+}
+
+.blog-body ol li::before {
+  content: counter(blog-counter) ".";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-family: var(--font-dm-sans), sans-serif;
+  font-size: 13px;
+}
+
+.blog-body .dash-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.blog-body .dash-list li::before {
+  content: "—";
+  color: var(--color-accent);
 }
 
 .blog-body hr {
