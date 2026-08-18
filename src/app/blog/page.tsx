@@ -82,7 +82,7 @@ export default function BlogIndex() {
       </section>
 
       {/* ── Hero post — full bleed image left, text right ── */}
-      <section style={{ maxWidth: 1200, margin: "0 auto", padding: "80px 48px 0" }}>
+      <section style={{ maxWidth: 1200, margin: "0 auto", padding: "48px 48px 0" }}>
         <Link href={`/blog/${hero.slug}`} style={{ textDecoration: "none", display: "block" }}>
           <article style={{
             display: "grid",
@@ -168,7 +168,7 @@ export default function BlogIndex() {
       </section>
 
       {/* ── Divider with label ── */}
-      <div style={{ maxWidth: 1200, margin: "72px auto 0", padding: "0 48px" }}>
+      <div style={{ maxWidth: 1200, margin: "48px auto 0", padding: "0 48px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
           <div style={{ flex: 1, height: "0.5px", background: "var(--color-border)" }} />
           <span style={{
