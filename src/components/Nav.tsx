@@ -169,6 +169,21 @@ export default function Nav() {
           </div>
 
           <Link
+            href="/blog"
+            style={{
+              fontFamily: "var(--font-dm-sans)",
+              fontSize: 13,
+              color: pathname.startsWith("/blog") ? linkActiveColor : linkColor,
+              textDecoration: "none",
+              borderBottom: pathname.startsWith("/blog") ? "1px solid var(--color-accent)" : "1px solid transparent",
+              paddingBottom: 2,
+              transition: "color 0.2s ease",
+            }}
+          >
+            journal
+          </Link>
+
+          <Link
             href="/contact"
             style={{
               fontFamily: "var(--font-dm-sans)",
@@ -286,6 +301,9 @@ export default function Nav() {
             )}
           </div>
 
+          <Link href="/blog" style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: pathname.startsWith("/blog") ? "var(--color-accent)" : "var(--color-text-body)", textDecoration: "none" }}>
+            journal
+          </Link>
           <Link href="/contact" style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: pathname === "/contact" ? "var(--color-accent)" : "var(--color-text-body)", textDecoration: "none" }}>
             contact us
           </Link>
