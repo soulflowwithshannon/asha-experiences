@@ -145,12 +145,12 @@ export default async function BlogPost({
       {/* Body */}
       <article
         className="blog-body"
-        style={{ maxWidth: 720, margin: "0 auto", padding: "0 32px 80px" }}
+        style={{ maxWidth: 720, margin: "0 auto", padding: "0 32px 32px" }}
         dangerouslySetInnerHTML={{ __html: post.body }}
       />
 
       {/* Back link */}
-      <div style={{ maxWidth: 720, margin: "0 auto", padding: "24px 32px 80px" }}>
+      <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 32px 64px" }}>
         <Link
           href="/blog"
           style={{
