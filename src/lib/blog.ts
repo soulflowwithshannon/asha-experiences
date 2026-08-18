@@ -17,7 +17,7 @@ export const posts: Post[] = [
     date: "2026-08-18",
     readTime: "5 min read",
     category: "Retreat Life",
-    image: "/images/ReturnToLove group sunset.jpg",
+    image: "/images/Return to Love group sunset.jpg",
     body: `
 <p>There's a specific kind of tired that sleep doesn't fix.</p>
 
@@ -119,7 +119,7 @@ export const posts: Post[] = [
     date: "2026-08-05",
     readTime: "4 min read",
     category: "Travel",
-    image: "/images/travel.png",
+    image: "/images/ReturnToLove group hug.jpg",
     body: `
 <p>It's the first question we get. And it's a fair one.</p>
 
