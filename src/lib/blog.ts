@@ -622,7 +622,7 @@ export const posts: Post[] = [
     body: `
 <p>Most of the women who arrive at an ASHA experience don't know a single person going.</p>
 
-<p>They booked alone.</p>
+<p>They booked alone. They traveled alone. They showed up to a place full of strangers, with a bag full of things they weren't sure they'd need, and a quiet hope that this would be worth it.</p>
 
 <p>Almost every single one of them says it was the best decision they made that year.</p>
 
