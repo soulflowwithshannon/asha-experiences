@@ -397,7 +397,7 @@ export const posts: Post[] = [
     date: "2026-08-03",
     readTime: "6 min read",
     category: "Retreat Life",
-    image: "/images/Into the Wild Hero.jpg",
+    image: "/images/Mexican jungle.jpeg",
     body: `
 <p>We're often asked: which retreat should I do?</p>
 
@@ -405,7 +405,7 @@ export const posts: Post[] = [
 
 <h2><a href="/retreats/mexico">Becoming HER — Mexico → Oct 2026</a></h2>
 
-<img src="/images/Mexico hero.jpeg" alt="Becoming HER — Women's Retreat Mexico" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:2px;margin-bottom:20px;" />
+<img src="/images/Mexican jungle.jpeg" alt="Becoming HER — Women's Retreat Mexico" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:2px;margin-bottom:20px;" />
 
 <p><strong>The energy</strong> — lush, alive, sensory. Jungle surrounds you. Cenotes are cold and clear and ancient.</p>
 
@@ -466,7 +466,7 @@ export const posts: Post[] = [
     date: "2026-07-15",
     readTime: "4 min read",
     category: "Practical",
-    image: "/images/Mexico hero.jpeg",
+    image: "/images/Mexican jungle.jpeg",
     body: `
 <p>Packing for a retreat is different from packing for a vacation. You're not trying to look like a different version of yourself. You're trying to feel like the most comfortable, unencumbered version of yourself.</p>
 
