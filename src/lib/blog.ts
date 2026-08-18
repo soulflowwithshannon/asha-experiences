@@ -244,6 +244,243 @@ export const posts: Post[] = [
 <p>If you're trying to figure out which is right for you, <a href="/contact">we'd love to talk</a>.</p>
     `.trim(),
   },
+  {
+    slug: "what-happens-after-a-retreat-integration",
+    title: "What happens after a retreat — the integration no one talks about",
+    description: "The retreat ends. You fly home. And then something unexpected happens. Here's what integration actually looks like, and how to make it last.",
+    date: "2026-08-15",
+    readTime: "5 min read",
+    category: "Retreat Life",
+    body: `
+<p>Nobody warns you about the week after.</p>
+
+<p>You've had this profound experience. You felt things crack open. You cried with women you'd known for four days. You said things out loud that you'd never said before. You watched the sun set over the jungle and thought: <em>this is what my life is supposed to feel like.</em></p>
+
+<p>And then you fly home.</p>
+
+<p>And your inbox is full. And your kids need dinner. And your partner asks "how was it?" and you open your mouth and nothing that comes out captures what actually happened.</p>
+
+<p>This is integration. And it's the part most people aren't prepared for.</p>
+
+<h2>What integration actually is</h2>
+<p>Integration is the process of weaving what you experienced — the insights, the shifts, the things you felt or released — into the fabric of your regular life. It's the bridge between the retreat and the lasting change.</p>
+
+<p>Without it, a retreat can feel like a beautiful dream you can barely remember a month later. With it, what happened on that trip keeps unfolding for months.</p>
+
+<h2>Why it can feel hard at first</h2>
+<p>You've just spent several days in a completely different environment — different pace, different people, different food, different air. Your nervous system recalibrated. Then you stepped back into the same environment that shaped your old patterns.</p>
+
+<p>The contrast can feel jarring. Some women feel a low-grade grief in the first few days home. Some feel irritable or overstimulated. Some feel more sensitive than usual. All of this is normal. Your system is trying to land.</p>
+
+<h2>What actually helps</h2>
+<p><strong>Protect the slowness for as long as you can.</strong> Don't schedule yourself into oblivion the week you get back. Give yourself even two or three days of a lighter load if you possibly can.</p>
+
+<p><strong>Write it down.</strong> What shifted? What do you want to carry forward? What do you want to leave behind? Journaling in the first week locks in insights that otherwise fade.</p>
+
+<p><strong>Stay in connection.</strong> The women you met on retreat are one of the most valuable things you're bringing home. Group chats, check-in calls, even just a voice note — the container doesn't have to end when you leave.</p>
+
+<p><strong>Notice what you don't want to go back to.</strong> Integration often surfaces clarity: this relationship doesn't feel right. That job is draining me. I've been saying yes to the wrong things. Don't push those realizations away. Sit with them.</p>
+
+<p><strong>Be patient with the people at home.</strong> They haven't been where you've been. They can't fully understand it. That's okay. You don't need them to. You know what happened.</p>
+
+<h2>How long does integration take?</h2>
+<p>It varies. Some shifts settle in a few weeks. Some keep unfolding for months. Some women find themselves making a major life decision six months after a retreat — a conversation they couldn't have had before, a boundary they finally drew, a direction they finally chose.</p>
+
+<p>The retreat plants something. Integration is what lets it grow.</p>
+
+<hr />
+
+<p>We think about integration as part of the retreat design itself — not an afterthought. If you want to know more about what that looks like in practice, <a href="/contact">reach out</a> or explore our upcoming retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>.</p>
+    `.trim(),
+  },
+  {
+    slug: "how-to-afford-a-womens-retreat",
+    title: "How to afford a women's retreat (and why it's worth the investment)",
+    description: "The price tag can feel like the reason not to go. Here's a different way to look at it — and practical ways women actually make it happen.",
+    date: "2026-08-10",
+    readTime: "5 min read",
+    category: "Practical",
+    body: `
+<p>The first thing most women do when they find a retreat they love is look at the price. And then close the tab.</p>
+
+<p>We understand. It's a real number. And we want to talk honestly about it — because the way most of us have been taught to think about money and self-investment is specifically designed to keep us from choosing ourselves.</p>
+
+<h2>Let's put the number in context</h2>
+<p>A 5-day women's retreat that includes flights, all-inclusive accommodation, meals, experiences, facilitation, and the kind of transformation that keeps unfolding for months afterward — compared to what?</p>
+
+<p>Compared to a week at a resort where you come home rested but unchanged: similar price, different outcome.</p>
+
+<p>Compared to the therapy sessions, the wellness purchases, the courses, the self-help books you've been buying trying to feel better for years: often less, over time.</p>
+
+<p>Compared to the cost of continuing as you are — the health impact of chronic stress, the relationships that suffer, the opportunities you don't take because you're running on empty: incalculable.</p>
+
+<p>We're not saying it's not a real investment. It is. We're saying it's worth it to ask: <em>compared to what?</em></p>
+
+<h2>Practical ways women make it happen</h2>
+<p><strong>Ask for it as a gift.</strong> Birthday, milestone, holiday — a retreat as a gift from people who love you is increasingly common. Share the link. Make the ask. The women in your life who want to support you need to know what you actually want.</p>
+
+<p><strong>Start a dedicated savings fund.</strong> Even $200/month set aside 12 months out makes a retreat achievable for most people. Name the account something that reminds you what it's for.</p>
+
+<p><strong>Use a credit card with travel points.</strong> Flight costs can be significantly offset or eliminated entirely with the right card. Many women cover their flights entirely through points they've accumulated.</p>
+
+<p><strong>Talk to your employer about professional development.</strong> If the retreat has elements of leadership, resilience, or burnout recovery — some women have made this case successfully. It doesn't always work, but it's worth asking.</p>
+
+<p><strong>Consider what you'll stop spending.</strong> The month before a retreat, many women naturally spend less on the things they were using to cope with the life they haven't changed yet.</p>
+
+<h2>The harder question</h2>
+<p>What would you tell your best friend if she said "I really want to go but I can't afford to prioritize myself right now"?</p>
+
+<p>You'd probably tell her: that's exactly the reason to go.</p>
+
+<p>We have spent years as women making ourselves smaller, more affordable, more convenient for everyone around us. A retreat is one place where you get to practice something different. That practice has a cost. It also has a return.</p>
+
+<hr />
+
+<p>Our retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a> are priced to include as much as possible so there are no surprise costs when you arrive. If you have questions about what's included, <a href="/contact">we're happy to walk you through it</a>.</p>
+    `.trim(),
+  },
+  {
+    slug: "which-retreat-is-right-for-you-mexico-morocco-kenya",
+    title: "Mexico, Morocco, or Kenya — how to choose the right retreat for you",
+    description: "Three very different destinations. Three very different energies. Here's how to figure out which one is actually calling you.",
+    date: "2026-08-03",
+    readTime: "6 min read",
+    category: "Retreat Life",
+    body: `
+<p>We're often asked: which retreat should I do?</p>
+
+<p>And the honest answer is: the one that's calling you. But if that's not enough to go on, here's a more detailed breakdown.</p>
+
+<h2>Becoming HER — Mexico (Riviera Maya, Oct 2026)</h2>
+<p><strong>The energy:</strong> lush, alive, sensory. The jungle surrounds you. The cenotes are cold and clear and ancient. The property feels like it was made for exactly this.</p>
+
+<p><strong>The theme:</strong> identity. Becoming who you actually are — underneath the roles, the expectations, the version of yourself you built for everyone else. The name isn't subtle. If you're at a crossroads, shedding a skin, stepping into something new, this is the retreat.</p>
+
+<p><strong>5 days.</strong> Smaller in scope but no less deep. Intimate group. Fully immersive.</p>
+
+<p><strong>You might be drawn to this one if:</strong> you're in a transition, you feel like you've lost yourself a little, you want warmth and nature and a contained experience that doesn't require a long time away from your life.</p>
+
+<h2>Sacred Sands — Morocco (Agadir, Nov–Dec 2026)</h2>
+<p><strong>The energy:</strong> ancient, grounding, expansive. The desert has a particular quality — it strips things away. What's left is what's real. Atlas Kasbah is stunning: terracotta and tile and the Atlas Mountains in the distance.</p>
+
+<p><strong>The theme:</strong> coming home to yourself. The Moroccan desert has been a place of pilgrimage and reflection for centuries. There's something about the silence and the scale of it that puts everything in perspective.</p>
+
+<p><strong>7 days.</strong> Longer, more spacious. More time to settle, to go deeper, to explore the culture alongside the inner work.</p>
+
+<p><strong>You might be drawn to this one if:</strong> you want something that feels truly different from your everyday life, you've always felt pulled to Morocco, or you need the kind of silence that only a desert can give you.</p>
+
+<h2>Into the Wild — Kenya (2027)</h2>
+<p><strong>The energy:</strong> raw, vast, humbling. Waking up to elephants. The savanna at sunrise. A place that reminds you, viscerally, that you are part of something much larger than your to-do list.</p>
+
+<p><strong>The theme:</strong> belonging — to nature, to other women, to yourself. There's something that happens in the wild that's hard to manufacture anywhere else. Your nervous system registers it before your mind does.</p>
+
+<p><strong>7 days.</strong> Safari mornings, healing afternoons, deep evening conversations under a sky with no light pollution.</p>
+
+<p><strong>You might be drawn to this one if:</strong> Africa has always felt like a calling, you want the most immersive nature experience, or you're ready for something that will genuinely take your breath away.</p>
+
+<h2>Still not sure?</h2>
+<p>Trust the pull. If one of these keeps coming back into your mind, that's information. The retreat that scares you slightly is often the one you need most.</p>
+
+<p>You can also <a href="/contact">reach out to us directly</a> — we'll ask you a few questions and help you figure out which one is the right fit for where you are right now.</p>
+
+<hr />
+
+<p>All three retreats are small, intentional, and designed for women who are ready — even if they don't feel completely ready yet.</p>
+    `.trim(),
+  },
+  {
+    slug: "what-to-pack-for-a-jungle-retreat",
+    title: "What to pack for a jungle retreat in Mexico",
+    description: "The practical packing list for Lunita — plus the things most people forget and the things they bring and never touch.",
+    date: "2026-07-15",
+    readTime: "4 min read",
+    category: "Practical",
+    body: `
+<p>Packing for a retreat is different from packing for a vacation. You're not trying to look like a different version of yourself. You're trying to feel like the most comfortable, unencumbered version of yourself.</p>
+
+<p>Here's what we actually recommend for the Riviera Maya jungle in late October.</p>
+
+<h2>Clothing</h2>
+<p>Lightweight and breathable. October in the Riviera Maya is warm and humid — you'll want natural fabrics like linen, cotton, and bamboo. Most of your time will be in movement clothes (yoga, hikes, cenote swims) with a light layer for evenings when it cools slightly.</p>
+
+<p>Bring: 2–3 yoga or movement sets, 1–2 light sundresses or linen sets for evening, a lightweight long-sleeve layer, comfortable sandals, one pair of closed-toe shoes for jungle paths, and a swimsuit (you'll be in cenotes).</p>
+
+<p>Leave: the outfits you bought hoping you'd look a certain way. You won't care by day two.</p>
+
+<h2>Toiletries</h2>
+<p>Sunscreen (reef-safe — the cenotes require it and it matters), insect repellent, any medications you take regularly, a small first aid kit, and your skincare basics. You don't need much. The jungle air does something to your skin.</p>
+
+<h2>For the practices</h2>
+<p>A journal. This is non-negotiable. Bring a pen you like. You will want to write things down — during, after, in the middle of the night when something surfaces. A yoga mat is provided at Lunita, but you're welcome to bring your own if you have a strong preference.</p>
+
+<h2>For the cenotes</h2>
+<p>Water shoes (optional but nice for rocky edges), a waterproof bag for your phone if you want photos, a light towel. The cenotes are sacred spaces — we ask that you go in without perfume or strong products on your skin.</p>
+
+<h2>Technology</h2>
+<p>We gently encourage going lighter than you think you need to. Your phone for photos — yes. Laptop — you probably won't want it. The retreat schedule fills your time in a way that makes you forget to check things.</p>
+
+<p>That said: download any podcasts, playlists, or offline content before you go. The jungle property has WiFi but it's intentionally unhurried.</p>
+
+<h2>Things most people forget</h2>
+<ul>
+<li>A reusable water bottle (you'll go through a lot of water in the heat)</li>
+<li>Cash in pesos for any personal shopping or tips</li>
+<li>Electrolyte packets for the humid days</li>
+<li>A small headlamp for early mornings</li>
+<li>An open mind (we know, but it bears saying)</li>
+</ul>
+
+<h2>Things most people bring and never use</h2>
+<ul>
+<li>Three times as many clothes as they need</li>
+<li>Books (you'll journal instead)</li>
+<li>The anxiety about fitting in (gone by day one)</li>
+</ul>
+
+<hr />
+
+<p>Our <a href="/retreats/mexico">Becoming HER retreat in Mexico</a> runs October 27–31, 2026. If you have questions about what to bring or what to expect on the ground, <a href="/contact">reach out</a> — we're happy to help you prepare.</p>
+    `.trim(),
+  },
+  {
+    slug: "the-women-who-come-on-retreat",
+    title: "The women who come on retreat — and what brings them there",
+    description: "There's no one type of woman who comes on a retreat. But there are patterns. Here's who we see, over and over — and maybe you'll recognize yourself.",
+    date: "2026-07-08",
+    readTime: "4 min read",
+    category: "Community",
+    body: `
+<p>People have ideas about who goes on women's retreats.</p>
+
+<p>Wealthy women with lots of free time. Women who are "into" that sort of thing. Women who already have it together and just want a luxury experience.</p>
+
+<p>That is not who comes on our retreats. Here's who actually does.</p>
+
+<h2>The woman who has been holding it together for everyone</h2>
+<p>She's capable, competent, and completely exhausted. She's the one people call when things go wrong. She's been the strong one for so long she's forgotten she's allowed to need something too. She books the retreat a little nervously, convinced she doesn't have time. She comes back saying it was the most important thing she's done in years.</p>
+
+<h2>The woman at a crossroads</h2>
+<p>A relationship ending. A career that no longer fits. A life that made sense five years ago and doesn't anymore. She's not broken — she's between versions of herself. She needs space to figure out who she's becoming, and she can't find that space in the middle of her regular life.</p>
+
+<h2>The woman who gave herself away</h2>
+<p>In a relationship, in motherhood, in a job that required everything. She's been so focused on what everyone else needs that she genuinely doesn't know what she wants anymore. The retreat is the first time in years she's done something purely for herself. The first morning she wakes up without a responsibility, she cries and doesn't know why. By the last day, she does.</p>
+
+<h2>The woman who is already doing the work</h2>
+<p>She meditates. She sees a therapist. She reads the books. She's not coming to start her healing — she's coming to go deeper, to be in community with other women doing the same, and to experience something that isn't a solo practice.</p>
+
+<h2>The woman who almost didn't come</h2>
+<p>She talked herself out of it twice. She almost cancelled the week before. Something in her kept saying: you don't deserve this, you can't afford it, the timing isn't right. She came anyway. She is consistently the one who says: I almost didn't come, and I can't imagine who I'd be right now if I hadn't.</p>
+
+<h2>What they have in common</h2>
+<p>They're all done waiting for the right time. They know, at some level, that something needs to shift. And they've chosen — however nervously — to say yes to themselves.</p>
+
+<p>That's it. That's the requirement.</p>
+
+<hr />
+
+<p>If you recognized yourself somewhere in here, that's not a coincidence. Our retreats are in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>. We'd love to have you.</p>
+    `.trim(),
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {
