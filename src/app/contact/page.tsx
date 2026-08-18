@@ -73,11 +73,23 @@ export default function ContactPage() {
               </h1>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, color: "var(--color-text-body)", lineHeight: 1.9, maxWidth: 420 }}>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, color: "var(--color-text-body)", lineHeight: 1.9, maxWidth: 420, marginBottom: 32 }}>
                 questions about a retreat, want to know if this is the right time for you, or just need to hear a real person on the other end —
                 <br /><br />
                 we&apos;re here for all of it.
               </p>
+            </FadeIn>
+            <FadeIn delay={0.3}>
+              <a
+                href="https://calendar.app.google/Yt1VUQGEuhhEipt59"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: "inline-block", padding: "12px 32px", border: "1px solid var(--color-accent)", color: "var(--color-accent)", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", transition: "background 0.3s ease, transform 0.3s ease" }}
+                onMouseEnter={(e) => { e.currentTarget.style.background = "color-mix(in srgb, var(--color-accent) 10%, transparent)"; e.currentTarget.style.transform = "scale(1.02)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.transform = "scale(1)"; }}
+              >
+                book a call with us →
+              </a>
             </FadeIn>
           </div>
 
@@ -196,28 +208,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* SECTION 3 — OR SKIP THE FORM */}
-      <section style={{ background: "var(--color-bg-page)", padding: "80px 32px" }}>
-        <div style={{ maxWidth: 480, margin: "0 auto", textAlign: "center" }}>
-          <FadeIn>
-            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", marginBottom: 28 }}>
-              prefer to talk it through?
-            </p>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <a
-              href="https://calendar.app.google/Yt1VUQGEuhhEipt59"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ display: "inline-block", padding: "12px 32px", border: "1px solid var(--color-accent)", color: "var(--color-accent)", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", transition: "background 0.3s ease, transform 0.3s ease" }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "color-mix(in srgb, var(--color-accent) 10%, transparent)"; e.currentTarget.style.transform = "scale(1.02)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.transform = "scale(1)"; }}
-            >
-              book a call with us →
-            </a>
-          </FadeIn>
-        </div>
-      </section>
     </main>
   );
 }
