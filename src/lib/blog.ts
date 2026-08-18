@@ -56,7 +56,7 @@ export const posts: Post[] = [
     date: "2026-08-12",
     readTime: "6 min read",
     category: "Retreat Life",
-    image: "/images/Morocco circle.jpeg",
+    image: "/images/ReturnToLove group hug.jpg",
     body: `
 <p>If you've never been on a women's retreat before, it's normal to not quite know what you're signing up for.</p>
 
@@ -118,7 +118,7 @@ export const posts: Post[] = [
     date: "2026-08-05",
     readTime: "4 min read",
     category: "Travel",
-    image: "/images/ReturnToLove group hug.jpg",
+    image: "/images/aesthetic plane window.jpeg",
     body: `
 <p>It's the first question we get. And it's a fair one.</p>
 
