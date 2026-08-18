@@ -84,9 +84,9 @@ export default function ContactPage() {
                 href="https://calendar.app.google/Yt1VUQGEuhhEipt59"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ display: "inline-block", padding: "12px 32px", border: "1px solid var(--color-accent)", color: "var(--color-accent)", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", transition: "background 0.3s ease, transform 0.3s ease" }}
-                onMouseEnter={(e) => { e.currentTarget.style.background = "color-mix(in srgb, var(--color-accent) 10%, transparent)"; e.currentTarget.style.transform = "scale(1.02)"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.transform = "scale(1)"; }}
+                style={{ display: "inline-block", padding: "12px 32px", background: "var(--color-accent)", border: "1px solid var(--color-accent)", color: "#FFFCF5", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", transition: "opacity 0.2s ease, transform 0.2s ease" }}
+                onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.85"; e.currentTarget.style.transform = "scale(1.02)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.transform = "scale(1)"; }}
               >
                 book a call with us →
               </a>
