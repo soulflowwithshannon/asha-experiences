@@ -590,7 +590,7 @@ export default function MexicoPage() {
                 </div>
                 <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 28, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 12 }}>Casa Colectiva</h3>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
-                  shared accommodation — the most connected way to experience the retreat. you&apos;ll share space with your fellow women, building the kind of closeness that only comes from living together.
+                  a casita shared with one other woman — the most connected way to experience the retreat. built-in sisterhood from the moment you arrive.
                 </p>
                 <div style={{ marginTop: "auto" }}>
                   <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 36, color: "var(--color-accent)", fontWeight: 400, marginBottom: 4 }}>$2,300</p>
@@ -612,7 +612,7 @@ export default function MexicoPage() {
                 </div>
                 <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 28, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 12 }}>Casa Lienzo</h3>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
-                  a more private accommodation option at Lunita. beautiful, spacious, and fully immersed in the jungle.
+                  a casita for one — the more private option at Lunita. your own space to rest, integrate, and come back to yourself.
                 </p>
                 <div style={{ marginTop: "auto" }}>
                   <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 36, color: "var(--color-accent)", fontWeight: 400, marginBottom: 4 }}>$2,700</p>
