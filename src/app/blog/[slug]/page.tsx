@@ -163,24 +163,16 @@ export default async function BlogPost({
         <p
           style={{
             fontFamily: "var(--font-cormorant)",
-            fontSize: "clamp(28px, 4vw, 44px)",
+            fontSize: "clamp(24px, 3.5vw, 38px)",
             fontWeight: 300,
             color: "var(--color-text-headline)",
-            marginBottom: 16,
-            lineHeight: 1.2,
-          }}
-        >
-          ready to experience this for yourself?
-        </p>
-        <p
-          style={{
-            fontFamily: "var(--font-dm-sans)",
-            fontSize: 15,
-            color: "var(--color-text-body)",
             marginBottom: 32,
+            lineHeight: 1.3,
+            maxWidth: 600,
+            margin: "0 auto 32px",
           }}
         >
-          we have retreats in Mexico, Morocco, and Kenya.
+          if you recognized yourself somewhere in here, that&apos;s not a coincidence. we&apos;d love to have you.
         </p>
         <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
           <Link
@@ -235,7 +227,7 @@ export default async function BlogPost({
       </section>
 
       {/* Back link */}
-      <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 32px 120px" }}>
+      <div style={{ maxWidth: 720, margin: "0 auto", padding: "24px 32px 64px" }}>
         <Link
           href="/blog"
           style={{

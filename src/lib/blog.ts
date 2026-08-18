@@ -575,8 +575,6 @@ export const posts: Post[] = [
 <p>That's it. That's the only requirement.</p>
 
 <hr />
-
-<p>If you recognized yourself somewhere in here, that's not a coincidence. Our retreats are in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>. We'd love to have you.</p>
     `.trim(),
   },
 ];
