@@ -50,7 +50,7 @@ export default function ContactPage() {
   const labelStyle: React.CSSProperties = {
     fontFamily: "var(--font-dm-sans)",
     fontSize: 12,
-    color: "var(--color-text-muted)",
+    color: "var(--color-text-headline)",
     letterSpacing: "0.04em",
     textTransform: "uppercase" as const,
     display: "block",
