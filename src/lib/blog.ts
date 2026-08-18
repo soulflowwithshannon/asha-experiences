@@ -630,11 +630,7 @@ export const posts: Post[] = [
 
 <p>We'll let them tell it.</p>
 
-<div style="margin: 48px 0; border-radius: 4px; overflow: hidden; background: #000;">
-  <video controls style="width: 100%; display: block; max-height: 560px;">
-    <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Testimonials.mp4" type="video/mp4" />
-  </video>
-</div>
+__TESTIMONIAL_VIDEO__
 
 <h2>What we hear most</h2>
 <p>After every retreat, we stay in touch with the women who came. And across every group, across every destination, the same things come up.</p>

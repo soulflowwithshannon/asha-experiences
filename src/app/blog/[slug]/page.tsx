@@ -143,11 +143,34 @@ export default async function BlogPost({
       </div>
 
       {/* Body */}
-      <article
-        className="blog-body"
-        style={{ maxWidth: 720, margin: "0 auto", padding: "0 32px 32px" }}
-        dangerouslySetInnerHTML={{ __html: post.body }}
-      />
+      {post.body.includes("__TESTIMONIAL_VIDEO__") ? (
+        <>
+          <article
+            className="blog-body"
+            style={{ maxWidth: 720, margin: "0 auto", padding: "0 32px 0" }}
+            dangerouslySetInnerHTML={{ __html: post.body.split("__TESTIMONIAL_VIDEO__")[0] }}
+          />
+          <div style={{ maxWidth: 720, margin: "48px auto", padding: "0 32px", borderRadius: 4, overflow: "hidden" }}>
+            <video
+              controls
+              style={{ width: "100%", display: "block", maxHeight: 560, borderRadius: 4, background: "#000" }}
+            >
+              <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Testimonials.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <article
+            className="blog-body"
+            style={{ maxWidth: 720, margin: "0 auto", padding: "0 32px 32px" }}
+            dangerouslySetInnerHTML={{ __html: post.body.split("__TESTIMONIAL_VIDEO__")[1] }}
+          />
+        </>
+      ) : (
+        <article
+          className="blog-body"
+          style={{ maxWidth: 720, margin: "0 auto", padding: "0 32px 32px" }}
+          dangerouslySetInnerHTML={{ __html: post.body }}
+        />
+      )}
 
       {/* Back link */}
       <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 32px 64px" }}>
