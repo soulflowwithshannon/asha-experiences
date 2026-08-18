@@ -116,19 +116,21 @@ export default async function BlogPost({
           {post.title}
         </h1>
 
-        <p
-          style={{
-            fontFamily: "var(--font-dm-sans)",
-            fontSize: 16,
-            color: "var(--color-text-body)",
-            lineHeight: 1.7,
-            borderLeft: "2px solid var(--color-accent)",
-            paddingLeft: 20,
-            fontStyle: "italic",
-          }}
-        >
-          {post.description}
-        </p>
+        {post.description && (
+          <p
+            style={{
+              fontFamily: "var(--font-dm-sans)",
+              fontSize: 16,
+              color: "var(--color-text-body)",
+              lineHeight: 1.7,
+              borderLeft: "2px solid var(--color-accent)",
+              paddingLeft: 20,
+              fontStyle: "italic",
+            }}
+          >
+            {post.description}
+          </p>
+        )}
       </section>
 
       {/* Divider */}

@@ -614,15 +614,15 @@ export const posts: Post[] = [
   {
     slug: "going-on-a-womens-retreat-alone-heres-what-happened",
     title: "Going on a women's retreat alone — here's what happened",
-    description: "Most of the women who arrive at an ASHA retreat don't know a single person going. Here's what it was actually like.",
+    description: "",
     date: "2026-08-19",
     readTime: "4 min read",
     category: "Community",
     image: "/images/5.png",
     body: `
-<p>Most of the women who arrive at an ASHA retreat don't know a single person going.</p>
+<p>Most of the women who arrive at an ASHA experience don't know a single person going.</p>
 
-<p>They booked alone. They traveled alone. They showed up to a place full of strangers, with a bag full of things they weren't sure they'd need, and a quiet hope that this would be worth it.</p>
+<p>They booked alone.</p>
 
 <p>Almost every single one of them says it was the best decision they made that year.</p>
 
