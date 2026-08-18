@@ -612,8 +612,8 @@ export const posts: Post[] = [
     `.trim(),
   },
   {
-    slug: "i-went-on-a-womens-retreat-alone-heres-what-happened",
-    title: "I went on a women's retreat alone — here's what happened",
+    slug: "going-on-a-womens-retreat-alone-heres-what-happened",
+    title: "Going on a women's retreat alone — here's what happened",
     description: "Most of the women who come to ASHA don't know anyone else going. We asked them what it was actually like. Here's what they said.",
     date: "2026-08-19",
     readTime: "4 min read",

@@ -132,7 +132,7 @@ export default function BlogIndex() {
                 <h2 style={{
                   fontFamily: "var(--font-cormorant)",
                   fontSize: "clamp(28px, 3vw, 44px)",
-                  fontWeight: 300,
+                  fontWeight: 700,
                   color: "var(--color-text-headline)",
                   lineHeight: 1.1,
                   marginBottom: 20,
@@ -217,7 +217,7 @@ export default function BlogIndex() {
                 <h2 style={{
                   fontFamily: "var(--font-cormorant)",
                   fontSize: "clamp(24px, 2.8vw, 38px)",
-                  fontWeight: 300,
+                  fontWeight: 700,
                   color: "var(--color-text-headline)",
                   lineHeight: 1.15,
                   marginBottom: 16,
@@ -274,7 +274,7 @@ export default function BlogIndex() {
                 {/* Image */}
                 {post.image && (
                   <div style={{ position: "relative", height: 200, flexShrink: 0 }}>
-                    <Image src={post.image} alt={post.title} fill style={{ objectFit: "cover" }} />
+                    <Image src={post.image} alt={post.title} fill style={{ objectFit: "cover", objectPosition: post.slug === "what-is-sound-healing" ? "center 70%" : "center" }} />
                   </div>
                 )}
                 {/* Text */}
@@ -297,7 +297,7 @@ export default function BlogIndex() {
                   <h3 style={{
                     fontFamily: "var(--font-cormorant)",
                     fontSize: "clamp(20px, 1.8vw, 24px)",
-                    fontWeight: 400,
+                    fontWeight: 700,
                     color: "var(--color-text-headline)",
                     lineHeight: 1.2,
                     flex: 1,
