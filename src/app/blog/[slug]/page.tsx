@@ -149,84 +149,8 @@ export default async function BlogPost({
         dangerouslySetInnerHTML={{ __html: post.body }}
       />
 
-      {/* CTA */}
-      <section
-        style={{
-          background: "var(--color-bg-surface)",
-          borderTop: "0.5px solid var(--color-border)",
-          borderBottom: "0.5px solid var(--color-border)",
-          padding: "64px 32px",
-          textAlign: "center",
-          marginBottom: 80,
-        }}
-      >
-        <p
-          style={{
-            fontFamily: "var(--font-cormorant)",
-            fontSize: "clamp(24px, 3.5vw, 38px)",
-            fontWeight: 300,
-            color: "var(--color-text-headline)",
-            lineHeight: 1.3,
-            maxWidth: 600,
-            margin: "0 auto 32px",
-          }}
-        >
-          {post.cta}
-        </p>
-        <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-          <Link
-            href="/retreats/mexico"
-            style={{
-              fontFamily: "var(--font-dm-sans)",
-              fontSize: 12,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              color: "var(--color-bg-page)",
-              background: "var(--color-text-headline)",
-              padding: "14px 28px",
-              textDecoration: "none",
-              borderRadius: 1,
-            }}
-          >
-            Mexico — Oct 2026
-          </Link>
-          <Link
-            href="/retreats/morocco"
-            style={{
-              fontFamily: "var(--font-dm-sans)",
-              fontSize: 12,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              color: "var(--color-text-headline)",
-              border: "0.5px solid var(--color-text-headline)",
-              padding: "14px 28px",
-              textDecoration: "none",
-              borderRadius: 1,
-            }}
-          >
-            Morocco — Nov 2026
-          </Link>
-          <Link
-            href="/retreats/kenya"
-            style={{
-              fontFamily: "var(--font-dm-sans)",
-              fontSize: 12,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              color: "var(--color-text-headline)",
-              border: "0.5px solid var(--color-text-headline)",
-              padding: "14px 28px",
-              textDecoration: "none",
-              borderRadius: 1,
-            }}
-          >
-            Kenya — Nov 2027
-          </Link>
-        </div>
-      </section>
-
       {/* Back link */}
-      <div style={{ maxWidth: 720, margin: "0 auto", padding: "24px 32px 64px" }}>
+      <div style={{ maxWidth: 720, margin: "0 auto", padding: "24px 32px 80px" }}>
         <Link
           href="/blog"
           style={{
