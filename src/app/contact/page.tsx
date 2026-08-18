@@ -95,7 +95,7 @@ export default function ContactPage() {
 
           {/* Right — image */}
           <FadeIn delay={0.1}>
-            <div style={{ position: "relative", aspectRatio: "5/6", borderRadius: 4, overflow: "hidden" }}>
+            <div style={{ position: "relative", aspectRatio: "4/3", borderRadius: 4, overflow: "hidden" }}>
               <Image
                 src="/images/Ashley and Shannon contact.jpg"
                 alt="Shannon Tomascak and Ashley Scully"
@@ -206,6 +206,106 @@ export default function ContactPage() {
             )}
           </FadeIn>
         </div>
+      </section>
+
+      {/* SECTION 3 — PORTRAIT STRIP */}
+      <section style={{ background: "var(--color-bg-page)", borderTop: "0.5px solid var(--color-border)" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }} className="portrait-strip">
+
+          {/* Ashley */}
+          <a
+            href="https://instagram.com/ashleyscully"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ position: "relative", height: 420, display: "block", overflow: "hidden", textDecoration: "none" }}
+            className="portrait-card"
+          >
+            <Image
+              src="/images/Ashley (new).JPG"
+              alt="Ashley Scully"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center top", transition: "transform 0.5s ease" }}
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="portrait-img"
+            />
+            <div style={{
+              position: "absolute", bottom: 0, left: 0, right: 0,
+              padding: "48px 28px 28px",
+              background: "linear-gradient(transparent, rgba(0,0,0,0.68))",
+            }}>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(255,255,255,0.65)", marginBottom: 6 }}>meet ashley</p>
+              <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 26, fontWeight: 300, color: "#fff", marginBottom: 4, lineHeight: 1.1 }}>Ashley</p>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "rgba(255,255,255,0.7)", letterSpacing: "0.04em", marginBottom: 12 }}>sound healer · retreat host</p>
+              <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.55)", border: "0.5px solid rgba(255,255,255,0.35)", padding: "4px 10px" }}>
+                @ashleyscully →
+              </span>
+            </div>
+          </a>
+
+          {/* Shannon */}
+          <a
+            href="https://instagram.com/soulflowwithshannon"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ position: "relative", height: 420, display: "block", overflow: "hidden", textDecoration: "none", borderLeft: "0.5px solid rgba(255,255,255,0.1)", borderRight: "0.5px solid rgba(255,255,255,0.1)" }}
+            className="portrait-card"
+          >
+            <Image
+              src="/images/Shannon (new).JPG"
+              alt="Shannon Tomascak"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center top", transition: "transform 0.5s ease" }}
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="portrait-img"
+            />
+            <div style={{
+              position: "absolute", bottom: 0, left: 0, right: 0,
+              padding: "48px 28px 28px",
+              background: "linear-gradient(transparent, rgba(0,0,0,0.68))",
+            }}>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(255,255,255,0.65)", marginBottom: 6 }}>meet shannon</p>
+              <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 26, fontWeight: 300, color: "#fff", marginBottom: 4, lineHeight: 1.1 }}>Shannon</p>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "rgba(255,255,255,0.7)", letterSpacing: "0.04em", marginBottom: 12 }}>somatic guide · circle facilitator</p>
+              <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.55)", border: "0.5px solid rgba(255,255,255,0.35)", padding: "4px 10px" }}>
+                @soulflowwithshannon →
+              </span>
+            </div>
+          </a>
+
+          {/* ASHA */}
+          <a
+            href="https://instagram.com/asha_experiences"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ position: "relative", height: 420, display: "block", overflow: "hidden", textDecoration: "none" }}
+            className="portrait-card"
+          >
+            <Image
+              src="/images/ReturnToLove girls group 2.jpg"
+              alt="ASHA Experiences"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center", transition: "transform 0.5s ease" }}
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="portrait-img"
+            />
+            <div style={{
+              position: "absolute", bottom: 0, left: 0, right: 0,
+              padding: "48px 28px 28px",
+              background: "linear-gradient(transparent, rgba(0,0,0,0.68))",
+            }}>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(255,255,255,0.65)", marginBottom: 6 }}>follow along</p>
+              <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 26, fontWeight: 300, color: "#fff", marginBottom: 4, lineHeight: 1.1 }}>ASHA Experiences</p>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "rgba(255,255,255,0.7)", letterSpacing: "0.04em", marginBottom: 12 }}>Mexico · Morocco · Kenya</p>
+              <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.55)", border: "0.5px solid rgba(255,255,255,0.35)", padding: "4px 10px" }}>
+                @asha_experiences →
+              </span>
+            </div>
+          </a>
+        </div>
+        <style>{`
+          .portrait-card:hover .portrait-img { transform: scale(1.04); }
+          @media (max-width: 768px) { .portrait-strip { grid-template-columns: 1fr !important; } }
+        `}</style>
       </section>
 
     </main>
