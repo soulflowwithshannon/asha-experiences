@@ -38,7 +38,7 @@ export default function ContactPage() {
     width: "100%",
     padding: "14px 16px",
     background: "var(--color-bg-page)",
-    border: "0.5px solid var(--color-border)",
+    border: "1px solid var(--color-text-headline)",
     borderRadius: 4,
     fontFamily: "var(--font-dm-sans)",
     fontSize: 15,
@@ -61,10 +61,10 @@ export default function ContactPage() {
     <main style={{ paddingTop: 72 }}>
       {/* SECTION 1 — INTRO + IMAGE + FORM */}
       <section style={{ background: "var(--color-bg-page)", padding: "80px 32px 80px 0" }}>
-        <div style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "280px 1fr 1fr", gap: 48, alignItems: "start" }} className="contact-split">
+        <div style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "280px 1fr 1fr", gap: 48, alignItems: "center" }} className="contact-split">
 
           {/* Col 1 — intro */}
-          <div style={{ paddingTop: 16, paddingLeft: 32 }}>
+          <div style={{ paddingLeft: 32, display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
             <FadeIn>
               <p className="eyebrow-accent" style={{ marginBottom: 20 }}>get in touch</p>
             </FadeIn>
@@ -140,7 +140,7 @@ export default function ContactPage() {
                       onChange={(e) => setName(e.target.value)}
                       style={inputStyle}
                       onFocus={(e) => (e.currentTarget.style.borderColor = "var(--color-accent)")}
-                      onBlur={(e) => (e.currentTarget.style.borderColor = "var(--color-border)")}
+                      onBlur={(e) => (e.currentTarget.style.borderColor = "var(--color-text-headline)")}
                     />
                   </div>
                   <div>
@@ -153,7 +153,7 @@ export default function ContactPage() {
                       onChange={(e) => setEmail(e.target.value)}
                       style={inputStyle}
                       onFocus={(e) => (e.currentTarget.style.borderColor = "var(--color-accent)")}
-                      onBlur={(e) => (e.currentTarget.style.borderColor = "var(--color-border)")}
+                      onBlur={(e) => (e.currentTarget.style.borderColor = "var(--color-text-headline)")}
                     />
                   </div>
                   <div>
@@ -166,7 +166,7 @@ export default function ContactPage() {
                       rows={4}
                       style={{ ...inputStyle, resize: "vertical", minHeight: 100 }}
                       onFocus={(e) => (e.currentTarget.style.borderColor = "var(--color-accent)")}
-                      onBlur={(e) => (e.currentTarget.style.borderColor = "var(--color-border)")}
+                      onBlur={(e) => (e.currentTarget.style.borderColor = "var(--color-text-headline)")}
                     />
                   </div>
 
