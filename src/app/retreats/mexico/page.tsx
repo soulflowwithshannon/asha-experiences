@@ -537,12 +537,9 @@ export default function MexicoPage() {
           <style>{`@media(max-width:640px){.testimonial-break{display:block}}`}</style>
           <FadeIn delay={0.1}>
             <div style={{ maxWidth: 900, margin: "0 auto", position: "relative", borderRadius: 8, overflow: "hidden" }}>
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/QcIdDu9ZFeQ?rel=0&modestbranding=1"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                style={{ width: "100%", aspectRatio: "16/9", display: "block", border: "none", borderRadius: 8 }}
-              />
+              <video controls preload="metadata" style={{ width: "100%", display: "block", borderRadius: 8 }}>
+                <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Testimonials.mp4" type="video/mp4" />
+              </video>
             </div>
           </FadeIn>
         </div>

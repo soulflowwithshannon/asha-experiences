@@ -151,12 +151,9 @@ export default async function BlogPost({
             dangerouslySetInnerHTML={{ __html: post.body.split("__TESTIMONIAL_VIDEO__")[0] }}
           />
           <div style={{ maxWidth: 720, margin: "48px auto", padding: "0 32px" }}>
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/QcIdDu9ZFeQ?rel=0&modestbranding=1"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              style={{ width: "100%", aspectRatio: "16/9", display: "block", border: "none", borderRadius: 4 }}
-            />
+            <video controls preload="metadata" style={{ width: "100%", display: "block", borderRadius: 4 }}>
+              <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Testimonials.mp4" type="video/mp4" />
+            </video>
           </div>
           <article
             className="blog-body"
