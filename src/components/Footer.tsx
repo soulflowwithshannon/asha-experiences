@@ -39,7 +39,7 @@ export default function Footer() {
         <div style={{ display: "flex", gap: 28, flexWrap: "wrap", justifyContent: "center" }}>
           {[
             { href: "/about", label: "about us" },
-            { href: "/retreats/kenya", label: "retreats" },
+            { href: "/retreats/mexico", label: "retreats" },
             { href: "/blog", label: "journal" },
             { href: "/contact", label: "contact us" },
           ].map((link) => (
