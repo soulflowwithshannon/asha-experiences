@@ -768,26 +768,23 @@ export default function MoroccoPage() {
 
             {/* The Salima */}
             <FadeIn delay={0.2}>
-              <motion.div whileHover={{ y: -4, boxShadow: "0 16px 48px rgba(74,63,53,0.12)" }} transition={{ duration: 0.3 }} style={{ background: "var(--color-bg-card)", border: "0.5px solid var(--color-border)", borderRadius: 8, padding: 32, display: "flex", flexDirection: "column", height: "100%" }}>
+              <motion.div style={{ background: "var(--color-bg-card)", border: "0.5px solid var(--color-border)", borderRadius: 8, padding: 32, display: "flex", flexDirection: "column", height: "100%" }}>
                 <div style={{ borderRadius: 6, overflow: "hidden", marginBottom: 24, aspectRatio: "809/770", position: "relative" }}>
                   <Image src="/images/12.png" alt="The Salima" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="400px" />
+                  <div style={{ position: "absolute", top: 12, right: 12, background: "#2D2521", color: "#E8D5BC", fontFamily: "var(--font-dm-sans)", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "6px 14px", borderRadius: 2 }}>
+                    sold out
+                  </div>
                 </div>
                 <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 24, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 8 }}>The Salima</h3>
-                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>shared 2-bedroom</p>
+                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>shared 2-bedroom · sold out</p>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
                   the most connected option — a shared 2-bedroom suite. book with a friend or be paired with a like-minded woman in the group.
                 </p>
                 <div style={{ marginTop: "auto" }}>
                   <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 32, color: "var(--color-accent)", fontWeight: 400, marginBottom: 4 }}>$3,200</p>
                   <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", marginBottom: 24 }}>per person / shared occupancy</p>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                    <a href="https://buy.stripe.com/00wfZi4jCggdfdw3iS0sU0a" target="_blank" rel="noopener noreferrer" style={{ display: "block", padding: "12px 24px", background: "#C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 700, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "#b08d78")} onMouseLeave={(e) => (e.currentTarget.style.background = "#C39E88")}>
-                      reserve my spot →
-                    </a>
-                    <a href="https://buy.stripe.com/eVq5kE9DW8NL8P8g5E0sU0b" target="_blank" rel="noopener noreferrer" style={{ display: "block", padding: "12px 24px", border: "1px solid var(--color-accent)", color: "var(--color-accent)", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "color-mix(in srgb, var(--color-accent) 10%, transparent)")} onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}>
-                      reserve with $1,000 deposit →
-                    </a>
-                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-body)", textAlign: "center", marginTop: 8, fontStyle: "italic" }}>*balance to be paid in full 30 days prior to retreat start date</p>
+                  <div style={{ padding: "12px 24px", background: "var(--color-border)", color: "var(--color-text-muted)", fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", textAlign: "center", borderRadius: 2, cursor: "default" }}>
+                    sold out
                   </div>
                 </div>
               </motion.div>
