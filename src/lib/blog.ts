@@ -760,12 +760,12 @@ export const posts: Post[] = [
     body: `
 <p>You've found the retreat. Something in you knows it's right. And then you think about telling your partner — and you feel yourself already bracing.</p>
 
-<p>Maybe you're anticipating pushback about the cost. Maybe about the timing. Maybe about you leaving for five days to go "find yourself" in Mexico, which sounds, from the outside, like something people say before they don't come back the same.</p>
+<p>Maybe you're anticipating pushback about the cost. Maybe about the timing. Maybe about you leaving for five days to go <em>"find yourself"</em> in Mexico, which sounds, from the outside, like something people say before they don't come back the same.</p>
 
 <p>Here's how to have that conversation.</p>
 
 <h2>Start with the why — yours</h2>
-<p>Before you talk to your partner, get clear with yourself on why you actually want to go. Not the defensive version ("I deserve this"). The honest version.</p>
+<p>Before you talk to your partner, get clear with yourself on why you actually want to go. Not the defensive version (<em>"I deserve this"</em>). The honest version.</p>
 <ul>
 <li>What are you carrying right now that isn't sustainable?</li>
 <li>What do you need that your daily life isn't giving you?</li>
@@ -794,7 +794,7 @@ export const posts: Post[] = [
 <p>Partners who were hesitant before the retreat are, in the vast majority of cases, deeply glad afterward. Not because the woman changed into someone unrecognizable — but because she came back more herself. Less depleted. More present. With things to say that she couldn't access before.</p>
 
 <h2>If the answer is still no</h2>
-<p>That's worth sitting with. Is this a "not yet" or a "never"? Is your partner genuinely concerned, or are they uncomfortable with the idea of you having something that's just yours?</p>
+<p>That's worth sitting with. Is this a <em>"not yet"</em> or a <em>"never"</em>? Is your partner genuinely concerned, or are they uncomfortable with the idea of you having something that's just yours?</p>
 
 <p>Those are different conversations. And both of them matter.</p>
 
