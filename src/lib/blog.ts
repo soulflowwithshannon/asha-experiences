@@ -165,68 +165,8 @@ export const posts: Post[] = [
     `.trim(),
   },
   {
-    slug: "what-is-sound-healing",
-    title: "What is sound healing — and does it actually work?",
-    description: "Sound healing shows up at almost every women's retreat. Here's what it actually is, what the science says, and what most people feel during a session.",
-    date: "2026-07-28",
-    readTime: "5 min read",
-    category: "Healing Practices",
-    image: "/images/sound healing.jpg",
-    body: `
-<p>If you've seen "sound healing" or "sound bath" on a retreat schedule and thought — what does that even mean? — you're not alone.</p>
 
-<p>It sounds abstract. Maybe a little out there. And yet it's one of the practices that women consistently say surprised them most — because they felt something they didn't expect to feel.</p>
 
-<h2>What is it?</h2>
-<p>Sound healing uses specific instruments to create frequencies that affect your nervous system, body, and emotional state.</p>
-
-<p>Common instruments include:</p>
-<ul>
-<li>Crystal or Tibetan singing bowls</li>
-<li>Gongs</li>
-<li>Tuning forks</li>
-<li>Drums</li>
-<li>The voice</li>
-</ul>
-
-<p>A "sound bath" means you lie down, close your eyes, and are immersed in layers of sound. There's nothing you have to do. You just receive it.</p>
-
-<h2>What's actually happening in your body</h2>
-<ul>
-<li>Sound travels through the body as vibration</li>
-<li>Different frequencies shift your brainwave state — from busy beta waves down to alpha (relaxed awareness) or theta (between waking and sleep)</li>
-<li>Research shows it can reduce cortisol, lower heart rate, and reduce anxiety</li>
-<li>The vagus nerve — central to nervous system regulation — responds directly to sound and low-frequency vibration</li>
-</ul>
-
-<h2>What people actually experience</h2>
-<p>It varies — and none of these are wrong:</p>
-<ul>
-<li>Deep relaxation — the kind that feels different from sleep</li>
-<li>Emotions surfacing they didn't know were there</li>
-<li>Colors or images behind closed eyes</li>
-<li>Vibration in specific parts of the body</li>
-<li>Unexplained tears</li>
-<li>Simply — calm</li>
-</ul>
-
-<h2>Does it work?</h2>
-<p>If you mean: will one session permanently fix anxiety or trauma? No. Nothing does that in one session.</p>
-
-<p>If you mean: will you feel different afterward? Almost certainly yes.</p>
-
-<p>The nervous system response is real. The state shift is real. For many people, something moves — emotionally or physically — that had been stuck.</p>
-
-<p>Used consistently, sound healing is a legitimate nervous system regulation practice with a growing body of research behind it.</p>
-
-<hr />
-
-<p>You don't need to believe in it for it to work. You just have to be willing to lie down and listen.</p>
-
-<p>Sound healing is woven through all three of our retreat experiences. Our next is <a href="/retreats/mexico">Becoming HER in Mexico</a>, October 27–31, 2026.</p>
-    `.trim(),
-  },
-  {
     slug: "womens-retreat-vs-vacation-whats-the-difference",
     title: "Women's retreat vs. vacation — what's actually the difference?",
     description: "Both involve getting on a plane. But a retreat and a vacation do very different things for you. Here's how to know which one you actually need.",
@@ -288,64 +228,8 @@ export const posts: Post[] = [
     `.trim(),
   },
   {
-    slug: "what-happens-after-a-retreat-integration",
-    title: "What happens after a retreat — the integration no one talks about",
-    description: "The retreat ends. You fly home. And then something unexpected happens. Here's what integration actually looks like, and how to make it last.",
-    date: "2026-08-15",
-    readTime: "5 min read",
-    category: "Retreat Life",
-    image: "/images/ReturnToLove girls group.jpg",
-    body: `
-<p>Nobody warns you about the week after.</p>
 
-<p>You've had this profound experience. You felt things crack open. You cried with women you'd known for four days. You watched the sun set and thought: <em>this is what my life is supposed to feel like.</em></p>
 
-<p>And then you fly home.</p>
-
-<p>Your inbox is full. Your kids need dinner. Your partner asks "how was it?" and you open your mouth and nothing that comes out captures what actually happened.</p>
-
-<p>This is integration. And it's the part most people aren't prepared for.</p>
-
-<h2>What integration actually is</h2>
-<p>Integration is the process of weaving what you experienced — the insights, the shifts, the things you felt or released — into the fabric of your regular life.</p>
-
-<p>Without it → a retreat can feel like a beautiful dream you can barely remember a month later.</p>
-<p>With it → what happened on that trip keeps unfolding for months.</p>
-
-<h2>Why it can feel hard at first</h2>
-<ul>
-<li>You've just spent days in a completely different environment — different pace, people, food, air</li>
-<li>Your nervous system recalibrated — then stepped back into the same environment that shaped your old patterns</li>
-<li>The contrast can feel jarring</li>
-</ul>
-
-<p>Some women feel a low-grade grief in the first few days home. Some feel irritable or overstimulated. Some feel more sensitive than usual. All of this is normal. Your system is trying to land.</p>
-
-<h2>What actually helps</h2>
-<ul>
-<li><strong>Protect the slowness</strong> — don't schedule yourself into oblivion the week you get back</li>
-<li><strong>Write it down</strong> — what shifted? What do you want to carry forward? What are you leaving behind? Journaling in the first week locks in insights that otherwise fade</li>
-<li><strong>Stay in connection</strong> — the women you met on retreat are one of the most valuable things you're bringing home. Group chats, check-in calls, even a voice note</li>
-<li><strong>Notice what you don't want to go back to</strong> — integration often surfaces clarity about relationships, jobs, patterns. Don't push those realizations away</li>
-<li><strong>Be patient with the people at home</strong> — they haven't been where you've been. That's okay. You don't need them to fully understand</li>
-</ul>
-
-<h2>How long does it take?</h2>
-<p>It varies.</p>
-<ul>
-<li>Some shifts settle in a few weeks</li>
-<li>Some keep unfolding for months</li>
-<li>Some women make a major life decision six months after a retreat — a conversation they couldn't have had before, a boundary they finally drew</li>
-</ul>
-
-<p>The retreat plants something. Integration is what lets it grow.</p>
-
-<hr />
-
-<p>We think about integration as part of the retreat design itself — not an afterthought. Explore our upcoming retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>.</p>
-    `.trim(),
-  },
-  {
     slug: "how-to-afford-a-womens-retreat",
     title: "How to afford a women's retreat (and why it's worth the investment)",
     description: "The price tag can feel like the reason not to go. Here's a different way to look at it — and practical ways women actually make it happen.",
@@ -397,7 +281,7 @@ export const posts: Post[] = [
     date: "2026-08-03",
     readTime: "6 min read",
     category: "Retreat Life",
-    image: "/images/Mexican jungle.jpeg",
+    image: "/images/Into the Wild Hero.jpg",
     body: `
 <p>We're often asked: which retreat should I do?</p>
 
@@ -460,82 +344,8 @@ export const posts: Post[] = [
     `.trim(),
   },
   {
-    slug: "what-to-pack-for-a-jungle-retreat",
-    title: "What to pack for a jungle retreat in Mexico",
-    description: "The practical packing list for Lunita — plus the things most people forget and the things they bring and never touch.",
-    date: "2026-07-15",
-    readTime: "4 min read",
-    category: "Practical",
-    image: "/images/Mexican jungle.jpeg",
-    body: `
-<p>Packing for a retreat is different from packing for a vacation. You're not trying to look like a different version of yourself. You're trying to feel like the most comfortable, unencumbered version of yourself.</p>
 
-<p>Here's what we actually recommend for the Riviera Maya jungle in late October.</p>
 
-<h2>Clothing — keep it light</h2>
-<p>October in the Riviera Maya is warm and humid. Natural fabrics only — linen, cotton, bamboo.</p>
-<ul>
-<li>2–3 yoga or movement sets</li>
-<li>1–2 light sundresses or linen sets for evenings</li>
-<li>A lightweight long-sleeve layer (evenings cool slightly)</li>
-<li>Comfortable sandals</li>
-<li>One pair of closed-toe shoes for jungle paths</li>
-<li>A swimsuit — you will be in cenotes</li>
-</ul>
-
-<p>Leave behind → the outfits you bought hoping you'd look a certain way. You won't care by day two.</p>
-
-<h2>Toiletries</h2>
-<ul>
-<li>Reef-safe sunscreen — the cenotes require it and it matters</li>
-<li>Insect repellent</li>
-<li>Any medications you take regularly</li>
-<li>A small first aid kit</li>
-<li>Skincare basics — you don't need much, the jungle air does something to your skin</li>
-</ul>
-
-<h2>For the practices</h2>
-<ul>
-<li>A journal — non-negotiable. Bring a pen you like. You will want to write things down</li>
-<li>A yoga mat is provided at Lunita</li>
-</ul>
-
-<h2>For the cenotes</h2>
-<ul>
-<li>Water shoes — optional but nice for rocky edges</li>
-<li>A waterproof bag for your phone if you want photos</li>
-</ul>
-
-<p>Note → the cenotes are sacred spaces. We ask that you go in without perfume or strong products on your skin.</p>
-
-<h2>Technology — go lighter than you think</h2>
-<ul>
-<li>Phone for photos → yes</li>
-<li>Laptop → you probably won't want it</li>
-<li>Download offline content before you leave — the property has WiFi but it's intentionally unhurried</li>
-</ul>
-
-<h2>Things most people forget</h2>
-<ul>
-<li>A reusable water bottle — you'll go through a lot in the heat</li>
-<li>Cash in pesos for shopping or tips</li>
-<li>Electrolyte packets for the humid days</li>
-<li>A small headlamp for early mornings</li>
-</ul>
-
-<h2>Things most people bring and never use</h2>
-<ul>
-<li>Three times as many clothes as they need</li>
-<li>Books (you'll journal instead)</li>
-<li>The anxiety about fitting in — gone by day one</li>
-</ul>
-
-<hr />
-
-<p>Our <a href="/retreats/mexico">Becoming HER retreat in Mexico</a> runs October 27–31, 2026. If you have questions about what to expect on the ground, <a href="/contact">reach out</a>.</p>
-    `.trim(),
-  },
-  {
     slug: "the-women-who-come-on-retreat",
     title: "The women who come on retreat — and what brings them there",
     description: "There's no one type of woman who comes on a retreat. But there are patterns. Here's who we see, over and over — and maybe you'll recognize yourself.",
@@ -675,7 +485,7 @@ export const posts: Post[] = [
     date: "2026-08-19",
     readTime: "7 min read",
     category: "Practical",
-    image: "/images/Return to Love Waterfall.jpg",
+    image: "/images/women laying down.jpeg",
     body: `
 <p>The women's retreat industry has exploded. And that's mostly a good thing — more women choosing themselves, more spaces being created to hold them.</p>
 
@@ -845,6 +655,202 @@ export const posts: Post[] = [
 <hr />
 
 <p>Our retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a> are small and intentional — never more than 14 women. If you're thinking about coming alone, <a href="/contact">reach out</a>. We'll tell you exactly what to expect.</p>
+    `.trim(),
+  },
+  {
+    slug: "what-happens-after-a-retreat-integration",
+    title: "What happens after a retreat — the integration no one talks about",
+    description: "The retreat ends. You fly home. And then something unexpected happens. Here's what integration actually looks like, and how to make it last.",
+    date: "2026-08-15",
+    readTime: "5 min read",
+    category: "Retreat Life",
+    image: "/images/ReturnToLove girls group.jpg",
+    body: `
+<p>Nobody warns you about the week after.</p>
+
+<p>You've had this profound experience. You felt things crack open. You cried with women you'd known for four days. You watched the sun set and thought: <em>this is what my life is supposed to feel like.</em></p>
+
+<p>And then you fly home.</p>
+
+<p>Your inbox is full. Your kids need dinner. Your partner asks "how was it?" and you open your mouth and nothing that comes out captures what actually happened.</p>
+
+<p>This is integration. And it's the part most people aren't prepared for.</p>
+
+<h2>What integration actually is</h2>
+<p>Integration is the process of weaving what you experienced — the insights, the shifts, the things you felt or released — into the fabric of your regular life.</p>
+
+<p>Without it → a retreat can feel like a beautiful dream you can barely remember a month later.</p>
+<p>With it → what happened on that trip keeps unfolding for months.</p>
+
+<h2>Why it can feel hard at first</h2>
+<ul>
+<li>You've just spent days in a completely different environment — different pace, people, food, air</li>
+<li>Your nervous system recalibrated — then stepped back into the same environment that shaped your old patterns</li>
+<li>The contrast can feel jarring</li>
+</ul>
+
+<p>Some women feel a low-grade grief in the first few days home. Some feel irritable or overstimulated. Some feel more sensitive than usual. All of this is normal. Your system is trying to land.</p>
+
+<h2>What actually helps</h2>
+<ul>
+<li><strong>Protect the slowness</strong> — don't schedule yourself into oblivion the week you get back</li>
+<li><strong>Write it down</strong> — what shifted? What do you want to carry forward? What are you leaving behind? Journaling in the first week locks in insights that otherwise fade</li>
+<li><strong>Stay in connection</strong> — the women you met on retreat are one of the most valuable things you're bringing home. Group chats, check-in calls, even a voice note</li>
+<li><strong>Notice what you don't want to go back to</strong> — integration often surfaces clarity about relationships, jobs, patterns. Don't push those realizations away</li>
+<li><strong>Be patient with the people at home</strong> — they haven't been where you've been. That's okay. You don't need them to fully understand</li>
+</ul>
+
+<h2>How long does it take?</h2>
+<p>It varies.</p>
+<ul>
+<li>Some shifts settle in a few weeks</li>
+<li>Some keep unfolding for months</li>
+<li>Some women make a major life decision six months after a retreat — a conversation they couldn't have had before, a boundary they finally drew</li>
+</ul>
+
+<p>The retreat plants something. Integration is what lets it grow.</p>
+
+<hr />
+
+<p>We think about integration as part of the retreat design itself — not an afterthought. Explore our upcoming retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>.</p>
+    `.trim(),
+  },
+  {
+    slug: "what-to-pack-for-a-jungle-retreat",
+    title: "What to pack for a jungle retreat in Mexico",
+    description: "The practical packing list for Lunita — plus the things most people forget and the things they bring and never touch.",
+    date: "2026-07-15",
+    readTime: "4 min read",
+    category: "Practical",
+    image: "/images/Mexican jungle.jpeg",
+    body: `
+<p>Packing for a retreat is different from packing for a vacation. You're not trying to look like a different version of yourself. You're trying to feel like the most comfortable, unencumbered version of yourself.</p>
+
+<p>Here's what we actually recommend for the Riviera Maya jungle in late October.</p>
+
+<h2>Clothing — keep it light</h2>
+<p>October in the Riviera Maya is warm and humid. Natural fabrics only — linen, cotton, bamboo.</p>
+<ul>
+<li>2–3 yoga or movement sets</li>
+<li>1–2 light sundresses or linen sets for evenings</li>
+<li>A lightweight long-sleeve layer (evenings cool slightly)</li>
+<li>Comfortable sandals</li>
+<li>One pair of closed-toe shoes for jungle paths</li>
+<li>A swimsuit — you will be in cenotes</li>
+</ul>
+
+<p>Leave behind → the outfits you bought hoping you'd look a certain way. You won't care by day two.</p>
+
+<h2>Toiletries</h2>
+<ul>
+<li>Reef-safe sunscreen — the cenotes require it and it matters</li>
+<li>Insect repellent</li>
+<li>Any medications you take regularly</li>
+<li>A small first aid kit</li>
+<li>Skincare basics — you don't need much, the jungle air does something to your skin</li>
+</ul>
+
+<h2>For the practices</h2>
+<ul>
+<li>A journal — non-negotiable. Bring a pen you like. You will want to write things down</li>
+<li>A yoga mat is provided at Lunita</li>
+</ul>
+
+<h2>For the cenotes</h2>
+<ul>
+<li>Water shoes — optional but nice for rocky edges</li>
+<li>A waterproof bag for your phone if you want photos</li>
+</ul>
+
+<p>Note → the cenotes are sacred spaces. We ask that you go in without perfume or strong products on your skin.</p>
+
+<h2>Technology — go lighter than you think</h2>
+<ul>
+<li>Phone for photos → yes</li>
+<li>Laptop → you probably won't want it</li>
+<li>Download offline content before you leave — the property has WiFi but it's intentionally unhurried</li>
+</ul>
+
+<h2>Things most people forget</h2>
+<ul>
+<li>A reusable water bottle — you'll go through a lot in the heat</li>
+<li>Cash in pesos for shopping or tips</li>
+<li>Electrolyte packets for the humid days</li>
+<li>A small headlamp for early mornings</li>
+</ul>
+
+<h2>Things most people bring and never use</h2>
+<ul>
+<li>Three times as many clothes as they need</li>
+<li>Books (you'll journal instead)</li>
+<li>The anxiety about fitting in — gone by day one</li>
+</ul>
+
+<hr />
+
+<p>Our <a href="/retreats/mexico">Becoming HER retreat in Mexico</a> runs October 27–31, 2026. If you have questions about what to expect on the ground, <a href="/contact">reach out</a>.</p>
+    `.trim(),
+  },
+  {
+    slug: "what-is-sound-healing",
+    title: "What is sound healing — and does it actually work?",
+    description: "Sound healing shows up at almost every women's retreat. Here's what it actually is, what the science says, and what most people feel during a session.",
+    date: "2026-07-28",
+    readTime: "5 min read",
+    category: "Healing Practices",
+    image: "/images/sound healing.jpg",
+    body: `
+<p>If you've seen "sound healing" or "sound bath" on a retreat schedule and thought — what does that even mean? — you're not alone.</p>
+
+<p>It sounds abstract. Maybe a little out there. And yet it's one of the practices that women consistently say surprised them most — because they felt something they didn't expect to feel.</p>
+
+<h2>What is it?</h2>
+<p>Sound healing uses specific instruments to create frequencies that affect your nervous system, body, and emotional state.</p>
+
+<p>Common instruments include:</p>
+<ul>
+<li>Crystal or Tibetan singing bowls</li>
+<li>Gongs</li>
+<li>Tuning forks</li>
+<li>Drums</li>
+<li>The voice</li>
+</ul>
+
+<p>A "sound bath" means you lie down, close your eyes, and are immersed in layers of sound. There's nothing you have to do. You just receive it.</p>
+
+<h2>What's actually happening in your body</h2>
+<ul>
+<li>Sound travels through the body as vibration</li>
+<li>Different frequencies shift your brainwave state — from busy beta waves down to alpha (relaxed awareness) or theta (between waking and sleep)</li>
+<li>Research shows it can reduce cortisol, lower heart rate, and reduce anxiety</li>
+<li>The vagus nerve — central to nervous system regulation — responds directly to sound and low-frequency vibration</li>
+</ul>
+
+<h2>What people actually experience</h2>
+<p>It varies — and none of these are wrong:</p>
+<ul>
+<li>Deep relaxation — the kind that feels different from sleep</li>
+<li>Emotions surfacing they didn't know were there</li>
+<li>Colors or images behind closed eyes</li>
+<li>Vibration in specific parts of the body</li>
+<li>Unexplained tears</li>
+<li>Simply — calm</li>
+</ul>
+
+<h2>Does it work?</h2>
+<p>If you mean: will one session permanently fix anxiety or trauma? No. Nothing does that in one session.</p>
+
+<p>If you mean: will you feel different afterward? Almost certainly yes.</p>
+
+<p>The nervous system response is real. The state shift is real. For many people, something moves — emotionally or physically — that had been stuck.</p>
+
+<p>Used consistently, sound healing is a legitimate nervous system regulation practice with a growing body of research behind it.</p>
+
+<hr />
+
+<p>You don't need to believe in it for it to work. You just have to be willing to lie down and listen.</p>
+
+<p>Sound healing is woven through all three of our retreat experiences. Our next is <a href="/retreats/mexico">Becoming HER in Mexico</a>, October 27–31, 2026.</p>
     `.trim(),
   },
 ];
