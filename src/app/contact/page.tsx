@@ -214,7 +214,7 @@ export default function ContactPage() {
 
           {/* Ashley */}
           <a
-            href="https://instagram.com/ashleyscully"
+            href="https://instagram.com/ashleyscully_"
             target="_blank"
             rel="noopener noreferrer"
             style={{ position: "relative", height: 420, display: "block", overflow: "hidden", textDecoration: "none" }}
@@ -237,7 +237,7 @@ export default function ContactPage() {
               <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 26, fontWeight: 300, color: "#fff", marginBottom: 4, lineHeight: 1.1 }}>Ashley</p>
               <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "rgba(255,255,255,0.7)", letterSpacing: "0.04em", marginBottom: 12 }}>sound healer · retreat host</p>
               <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.55)", border: "0.5px solid rgba(255,255,255,0.35)", padding: "4px 10px" }}>
-                @ashleyscully →
+                @ashleyscully_ →
               </span>
             </div>
           </a>
