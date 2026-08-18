@@ -300,6 +300,67 @@ export const posts: Post[] = [
     `.trim(),
   },
   {
+    slug: "womens-retreat-vs-vacation-whats-the-difference",
+    title: "Women's retreat vs. vacation — what's actually the difference?",
+    description: "Both involve getting on a plane. But a retreat and a vacation do very different things for you. Here's how to know which one you actually need.",
+    date: "2026-07-20",
+    readTime: "4 min read",
+    category: "Retreat Life",
+    image: "/images/Morocco sunset.jpeg",
+    body: `
+<p>Both involve leaving your regular life behind. Both take you somewhere beautiful. Both can involve good food, warm weather, and time away from your responsibilities.</p>
+
+<p>But they're doing completely different things — and knowing which one you actually need right now matters.</p>
+
+<h2>A vacation gives you</h2>
+<ul>
+<li>A break from your environment</li>
+<li>Rest and decompression</li>
+<li>Fun, exploration, novelty</li>
+<li>A return home feeling rested — but largely unchanged</li>
+</ul>
+
+<p>There's nothing wrong with that. Sometimes that's exactly what you need.</p>
+
+<h2>A retreat gives you</h2>
+<ul>
+<li>A container for something to actually shift</li>
+<li>Facilitated practices designed to take you somewhere</li>
+<li>Women who are there for the same intentional reason</li>
+<li>The possibility to come back not just rested — but different</li>
+</ul>
+
+<h2>The key difference — intentionality</h2>
+<p>On a vacation → the goal is enjoyment and rest.</p>
+<p>On a retreat → the goal is something more. You're there to look at something, feel something, release something, become something.</p>
+
+<p>That requires a different kind of environment — one that's held. Where the facilitators know what they're doing. Where the practices are chosen specifically to take you somewhere.</p>
+
+<h2>How to know which one you need right now</h2>
+<ul>
+<li><strong>Vacation</strong> — you're tired and you just need to stop for a minute</li>
+<li><strong>Retreat</strong> — you're tired <em>and</em> something needs to change</li>
+</ul>
+
+<p>A lot of women who come on our retreats say some version of this: <em>"I thought I just needed a vacation, but I realized I needed something more. I needed to actually look at my life."</em></p>
+
+<h2>Can it be both?</h2>
+<p>Yes. A well-designed retreat includes:</p>
+<ul>
+<li>Beauty and incredible food</li>
+<li>Real rest and free time</li>
+<li>Experiences you couldn't have anywhere else</li>
+<li>Depth underneath all of it</li>
+</ul>
+
+<p>The difference is that it's also doing something beneath the surface — something you'll still feel weeks and months after you come home.</p>
+
+<hr />
+
+<p>Our retreats are in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>. If you're trying to figure out which is right for you, <a href="/contact">we'd love to talk</a>.</p>
+    `.trim(),
+  },
+  {
     slug: "what-actually-happens-at-a-womens-retreat-day-by-day",
     title: "What actually happens at a women's retreat? (a day-by-day breakdown)",
     description: "Not the brochure version. A real, honest look at what each day of a women's retreat actually feels like — from the first morning to the last goodbye.",
@@ -381,67 +442,6 @@ export const posts: Post[] = [
 <hr />
 
 <p>Our retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a> are each designed with this arc in mind — enough structure to feel held, enough space to actually land. If you want to know more about what a specific retreat looks like day by day, <a href="/contact">reach out</a>.</p>
-    `.trim(),
-  },
-  {
-    slug: "womens-retreat-vs-vacation-whats-the-difference",
-    title: "Women's retreat vs. vacation — what's actually the difference?",
-    description: "Both involve getting on a plane. But a retreat and a vacation do very different things for you. Here's how to know which one you actually need.",
-    date: "2026-07-20",
-    readTime: "4 min read",
-    category: "Retreat Life",
-    image: "/images/Morocco sunset.jpeg",
-    body: `
-<p>Both involve leaving your regular life behind. Both take you somewhere beautiful. Both can involve good food, warm weather, and time away from your responsibilities.</p>
-
-<p>But they're doing completely different things — and knowing which one you actually need right now matters.</p>
-
-<h2>A vacation gives you</h2>
-<ul>
-<li>A break from your environment</li>
-<li>Rest and decompression</li>
-<li>Fun, exploration, novelty</li>
-<li>A return home feeling rested — but largely unchanged</li>
-</ul>
-
-<p>There's nothing wrong with that. Sometimes that's exactly what you need.</p>
-
-<h2>A retreat gives you</h2>
-<ul>
-<li>A container for something to actually shift</li>
-<li>Facilitated practices designed to take you somewhere</li>
-<li>Women who are there for the same intentional reason</li>
-<li>The possibility to come back not just rested — but different</li>
-</ul>
-
-<h2>The key difference — intentionality</h2>
-<p>On a vacation → the goal is enjoyment and rest.</p>
-<p>On a retreat → the goal is something more. You're there to look at something, feel something, release something, become something.</p>
-
-<p>That requires a different kind of environment — one that's held. Where the facilitators know what they're doing. Where the practices are chosen specifically to take you somewhere.</p>
-
-<h2>How to know which one you need right now</h2>
-<ul>
-<li><strong>Vacation</strong> — you're tired and you just need to stop for a minute</li>
-<li><strong>Retreat</strong> — you're tired <em>and</em> something needs to change</li>
-</ul>
-
-<p>A lot of women who come on our retreats say some version of this: <em>"I thought I just needed a vacation, but I realized I needed something more. I needed to actually look at my life."</em></p>
-
-<h2>Can it be both?</h2>
-<p>Yes. A well-designed retreat includes:</p>
-<ul>
-<li>Beauty and incredible food</li>
-<li>Real rest and free time</li>
-<li>Experiences you couldn't have anywhere else</li>
-<li>Depth underneath all of it</li>
-</ul>
-
-<p>The difference is that it's also doing something beneath the surface — something you'll still feel weeks and months after you come home.</p>
-
-<hr />
-
-<p>Our retreats are in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>. If you're trying to figure out which is right for you, <a href="/contact">we'd love to talk</a>.</p>
     `.trim(),
   },
   {
