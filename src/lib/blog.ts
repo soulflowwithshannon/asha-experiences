@@ -775,8 +775,8 @@ export const posts: Post[] = [
 <p>When you can answer those questions clearly, the conversation becomes much easier. You're not asking for permission. You're sharing something real.</p>
 
 <h2>Lead with what's true</h2>
-<p>Not: "I just really want to do this."</p>
-<p>But: "I've been running on empty for a long time and I think this is what I actually need."</p>
+<p>Not: <em>"I just really want to do this."</em></p>
+<p>But: <em>"I've been running on empty for a long time and I think this is what I actually need."</em></p>
 
 <p>Most partners who push back aren't pushing back on the retreat — they're responding to the version of it they're imagining. The more clearly you can describe what you're actually seeking, the less mysterious it becomes.</p>
 
@@ -786,7 +786,7 @@ export const posts: Post[] = [
 
 <p><strong>The timing</strong> — there is never a perfect time. If you wait for one, you'll wait forever. What would need to be covered? Who needs to know? Make a plan together rather than asking your partner to accept vague logistics.</p>
 
-<p><strong>"Why do you need to go alone?"</strong> — this is the real question. Because there are things that only become possible when you step outside your roles. You can't be someone's partner and parent and friend and still access the version of yourself that exists underneath all of that — not fully, not in five days. The retreat isn't away from your relationship. It's for it.</p>
+<p><strong><em>"Why do you need to go alone?"</em></strong> — this is the real question. Because there are things that only become possible when you step outside your roles. You can't be someone's partner and parent and friend and still access the version of yourself that exists underneath all of that — not fully, not in five days. The retreat isn't away from your relationship. It's for it.</p>
 
 <h2>What often surprises partners</h2>
 <p>The woman who comes home.</p>
