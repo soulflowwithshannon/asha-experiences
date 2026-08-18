@@ -806,58 +806,45 @@ export const posts: Post[] = [
   {
     slug: "i-went-on-a-womens-retreat-alone-heres-what-happened",
     title: "I went on a women's retreat alone — here's what happened",
-    description: "I didn't know anyone. I almost cancelled twice. This is what actually happened when I showed up anyway.",
+    description: "Most of the women who come to ASHA don't know anyone else going. We asked them what it was actually like. Here's what they said.",
     date: "2026-08-19",
-    readTime: "6 min read",
+    readTime: "4 min read",
     category: "Community",
     image: "/images/ReturnToLove group hug.jpg",
     body: `
-<p>I booked it on a Tuesday night after a day that felt like too much of every day for the past two years.</p>
+<p>Most of the women who arrive at an ASHA retreat don't know a single person going.</p>
 
-<p>I didn't tell many people. Not because I was embarrassed, but because I didn't have words for it yet. I just knew I needed something and I didn't know what else to try.</p>
+<p>They booked alone. They traveled alone. They showed up to a place full of strangers, with a bag full of things they weren't sure they'd need, and a quiet hope that this would be worth it.</p>
 
-<p>I didn't know a single person going. I almost cancelled twice — once because of the money, once because of the voice that said: <em>who do you think you are, going off to heal yourself in another country?</em></p>
+<p>Almost every single one of them says it was the best decision they made that year.</p>
 
-<p>I went anyway. Here's what happened.</p>
+<p>We asked some of them to share what it was actually like — what surprised them, what shifted, what they wish they'd known before they came.</p>
 
-<h2>The part I didn't expect: the first five minutes</h2>
-<p>I arrived before most of the other women. I sat with my bag in a beautiful space I didn't feel I belonged in yet, and I thought about getting back in the car.</p>
+<p>We'll let them tell it.</p>
 
-<p>And then another woman walked in, set her bag down next to mine, and said: "Is it okay if I'm terrified?"</p>
+<div style="margin: 48px 0; border-radius: 4px; overflow: hidden; background: #000;">
+  <video controls style="width: 100%; display: block; max-height: 560px;">
+    <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Testimonials.mp4" type="video/mp4" />
+  </video>
+</div>
 
-<p>We laughed. Something in the room shifted. By dinner that night, we were talking like we'd known each other for years.</p>
-
-<h2>The part that was harder than I expected</h2>
-<p>Free time.</p>
-
-<p>I am not someone who knows how to do nothing. And the retreat gave us real free time — unscheduled hours with no agenda and no one to take care of. I didn't know what to do with myself at first. I sat on a chair by the pool and felt vaguely anxious about not being productive.</p>
-
-<p>By day three, I was lying in a hammock doing nothing and it felt like the most important thing I'd done in months.</p>
-
-<h2>The part that surprised me most: the other women</h2>
-<p>I expected to like them. I didn't expect to need them.</p>
-
-<p>There was something that happened in that room — in the circles, over meals, in the walks between sessions — that I haven't been able to fully explain to anyone who wasn't there. Women being honest with each other. Women not performing okayness. Women saying the thing they actually mean.</p>
-
-<p>I cried in front of strangers. So did almost everyone else. And it wasn't uncomfortable — it was a relief.</p>
-
-<h2>The part that changed something</h2>
-<p>On day three, during a sound healing session, I felt something release that I'd been holding for so long I didn't know it was there. I don't have better words than that. Something I'd been carrying — some version of the story about who I had to be — loosened.</p>
-
-<p>I didn't come home enlightened. I came home tired in a different way. Quieter. With a few things I knew clearly that I hadn't known before.</p>
-
-<h2>What I'd tell someone who's thinking about going alone</h2>
+<h2>What we hear most</h2>
+<p>After every retreat, we stay in touch with the women who came. And across every group, across every destination, the same things come up.</p>
 <ul>
-<li>The not-knowing-anyone part goes away faster than you think</li>
-<li>Everyone is nervous. You are not the only one</li>
-<li>The women you meet will not be strangers by day two</li>
-<li>The voice that says you don't deserve this is lying</li>
-<li>Go anyway</li>
+<li>The not-knowing-anyone part disappeared faster than they expected</li>
+<li>The women they met became some of the most real friendships they have</li>
+<li>Something shifted that they're still integrating weeks later</li>
+<li>They wish they'd done it sooner</li>
 </ul>
+
+<h2>The question we get asked most</h2>
+<p>Is it weird to go alone?</p>
+
+<p>Honestly — no. Most people are in the same position. And there's something about arriving without history, without the version of yourself that your existing relationships know, that makes the whole experience more open. You get to just be a woman in a room with other women. It turns out that's enough.</p>
 
 <hr />
 
-<p>ASHA Experiences runs small, intimate women's retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>. Most of the women who come don't know anyone else going. Most of them say it was the best decision they made that year. If you're on the edge — <a href="/contact">we'd love to hear from you</a>.</p>
+<p>Our retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a> are small and intentional — never more than 14 women. If you're thinking about coming alone, <a href="/contact">reach out</a>. We'll tell you exactly what to expect.</p>
     `.trim(),
   },
 ];
