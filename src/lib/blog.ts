@@ -56,7 +56,7 @@ export const posts: Post[] = [
     date: "2026-08-24",
     readTime: "5 min read",
     category: "Retreat Life",
-    image: "/images/Into the Wild Hero.jpg",
+    image: "/images/Kenya blog post.jpeg",
     body: `
 <p>There's a version of you that existed before you learned to be palatable.</p>
 
