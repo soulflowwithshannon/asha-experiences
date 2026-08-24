@@ -11,13 +11,52 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "10-signs-youre-ready-for-a-womens-retreat",
+    title: "10 signs you're ready for a women's retreat",
+    description: "You've been putting everyone else first for so long you can't remember what you actually want. Sound familiar? Here are 10 signs it might be time.",
+    date: "2026-08-18",
+    readTime: "5 min read",
+    category: "Retreat Life",
+    image: "/images/Return to Love group sunset.jpg",
+    body: `
+<p>There's a specific kind of tired that sleep doesn't fix.</p>
+
+<p>You wake up already behind. You move through your days doing everything for everyone — and somewhere along the way, you stopped being able to answer the question: <em>what do I actually want?</em></p>
+
+<p>A women's retreat isn't a vacation. It's intentional time away from your responsibilities, your roles, your routines — to actually hear yourself again.</p>
+
+<p>Here are 10 signs you might be ready.</p>
+
+<ol>
+<li><strong>You can't remember the last time you did something just for you.</strong> Not a haircut. Not a quick dinner. Something that required you to show up fully, just for yourself.</li>
+<li><strong>You're running on empty — but you can't stop.</strong> Burnout doesn't always look like falling apart. Sometimes it looks like being incredibly functional while feeling hollow inside.</li>
+<li><strong>You've been the strong one for too long.</strong> You're the one everyone leans on. The one who holds it together. And you're tired — not because you don't love the people in your life, but because no one has held space for you in a long time.</li>
+<li><strong>You've outgrown the version of yourself you've been living as.</strong> Something has shifted. The life you built doesn't fit anymore. You're ready to step into something more aligned, but you don't know what that looks like yet.</li>
+<li><strong>You crave real connection — not small talk.</strong> You want conversations that go beneath the surface. You want to be in a room full of women who are also asking the real questions.</li>
+<li><strong>Your nervous system is fried.</strong> You're reactive. You're anxious. Your body has been in survival mode for so long it's forgotten what it feels like to actually settle.</li>
+<li><strong>You keep saying "one day I'll do something like that."</strong> You've seen retreats. You've thought about them. But life doesn't slow down — you have to choose to step out of it.</li>
+<li><strong>You're at a crossroads.</strong> A relationship. A career. A city. A version of yourself. Something is ending and you need space to figure out what comes next.</li>
+<li><strong>You've been prioritizing everyone else's healing but your own.</strong> You've supported friends, held your family together, made space for everyone's growth — and your own healing got pushed to the back of the list.</li>
+<li><strong>You feel the pull and you're scared.</strong> Something in you is drawn to this — and something else is coming up with reasons not to do it. That friction? That's usually the sign.</li>
+</ol>
+
+<hr />
+
+<p>If more than a few of these landed — you already know.</p>
+
+<p>We run small, intimate women's retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>. Each one is designed to give you the time, the space, and the container to come back to yourself.</p>
+
+<p>You don't have to have it all figured out before you go. You just have to say yes.</p>
+    `.trim(),
+  },
+  {
     slug: "they-didnt-burn-the-wild-out-of-us",
     title: "They didn't burn the wild out of us — they taught us to hide her",
     description: "The instinct. The rage. The softness. The pleasure. The voice. Somewhere along the way we learned to keep all of it quiet. Here's what it takes to find her again.",
     date: "2026-08-24",
     readTime: "5 min read",
     category: "Retreat Life",
-    image: "/images/lion 1.jpeg",
+    image: "/images/Into the Wild Hero.jpg",
     body: `
 <p>There's a version of you that existed before you learned to be palatable.</p>
 
@@ -97,45 +136,6 @@ November 28 – December 4, 2027</p>
 <p>There are only ten places in this story. <a href="/retreats/kenya">Read the full itinerary</a>, or <a href="/contact">reach out</a> if you want to talk it through with us first — most women do before they book, and we'd rather you came in with your eyes open.</p>
 
 <p><em>Is one of them yours?</em></p>
-    `.trim(),
-  },
-  {
-    slug: "10-signs-youre-ready-for-a-womens-retreat",
-    title: "10 signs you're ready for a women's retreat",
-    description: "You've been putting everyone else first for so long you can't remember what you actually want. Sound familiar? Here are 10 signs it might be time.",
-    date: "2026-08-18",
-    readTime: "5 min read",
-    category: "Retreat Life",
-    image: "/images/Return to Love group sunset.jpg",
-    body: `
-<p>There's a specific kind of tired that sleep doesn't fix.</p>
-
-<p>You wake up already behind. You move through your days doing everything for everyone — and somewhere along the way, you stopped being able to answer the question: <em>what do I actually want?</em></p>
-
-<p>A women's retreat isn't a vacation. It's intentional time away from your responsibilities, your roles, your routines — to actually hear yourself again.</p>
-
-<p>Here are 10 signs you might be ready.</p>
-
-<ol>
-<li><strong>You can't remember the last time you did something just for you.</strong> Not a haircut. Not a quick dinner. Something that required you to show up fully, just for yourself.</li>
-<li><strong>You're running on empty — but you can't stop.</strong> Burnout doesn't always look like falling apart. Sometimes it looks like being incredibly functional while feeling hollow inside.</li>
-<li><strong>You've been the strong one for too long.</strong> You're the one everyone leans on. The one who holds it together. And you're tired — not because you don't love the people in your life, but because no one has held space for you in a long time.</li>
-<li><strong>You've outgrown the version of yourself you've been living as.</strong> Something has shifted. The life you built doesn't fit anymore. You're ready to step into something more aligned, but you don't know what that looks like yet.</li>
-<li><strong>You crave real connection — not small talk.</strong> You want conversations that go beneath the surface. You want to be in a room full of women who are also asking the real questions.</li>
-<li><strong>Your nervous system is fried.</strong> You're reactive. You're anxious. Your body has been in survival mode for so long it's forgotten what it feels like to actually settle.</li>
-<li><strong>You keep saying "one day I'll do something like that."</strong> You've seen retreats. You've thought about them. But life doesn't slow down — you have to choose to step out of it.</li>
-<li><strong>You're at a crossroads.</strong> A relationship. A career. A city. A version of yourself. Something is ending and you need space to figure out what comes next.</li>
-<li><strong>You've been prioritizing everyone else's healing but your own.</strong> You've supported friends, held your family together, made space for everyone's growth — and your own healing got pushed to the back of the list.</li>
-<li><strong>You feel the pull and you're scared.</strong> Something in you is drawn to this — and something else is coming up with reasons not to do it. That friction? That's usually the sign.</li>
-</ol>
-
-<hr />
-
-<p>If more than a few of these landed — you already know.</p>
-
-<p>We run small, intimate women's retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>. Each one is designed to give you the time, the space, and the container to come back to yourself.</p>
-
-<p>You don't have to have it all figured out before you go. You just have to say yes.</p>
     `.trim(),
   },
   {
