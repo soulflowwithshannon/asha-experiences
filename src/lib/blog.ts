@@ -11,6 +11,95 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "they-didnt-burn-the-wild-out-of-us",
+    title: "They didn't burn the wild out of us — they taught us to hide her",
+    description: "The instinct. The rage. The softness. The pleasure. The voice. Somewhere along the way we learned to keep all of it quiet. Here's what it takes to find her again.",
+    date: "2026-08-24",
+    readTime: "5 min read",
+    category: "Retreat Life",
+    image: "/images/lion 1.jpeg",
+    body: `
+<p>There's a version of you that existed before you learned to be palatable.</p>
+
+<p>She was loud. She wanted things out loud. She took up room without apologising for it, cried when she was sad, said no without a paragraph of explanation attached.</p>
+
+<p>You probably can't remember exactly when she went quiet. There's rarely one moment. It's a thousand small corrections — <em>don't be so much, don't be difficult, don't be dramatic, be nice</em> — until being smaller becomes so automatic you stop noticing you're doing it.</p>
+
+<p><strong>They didn't burn the wild out of us. They taught us to hide her.</strong></p>
+
+<h2>The pretty cage</h2>
+
+<p>Here's the part nobody warns you about: the cage is usually a nice one.</p>
+
+<p>It looks like a good job. A capable reputation. Being the one who holds everything together, who remembers the birthdays, who never drops the ball. From the outside it reads as a life well built — and a lot of it genuinely is.</p>
+
+<p>But there's a difference between a life you chose and a life you performed your way into. And the tell is simple: <em>you can't feel much inside it.</em></p>
+
+<p>Not the bad things. Not the good ones either. Just a low, competent hum.</p>
+
+<h2>What we mean by wild</h2>
+
+<p>Wild doesn't mean reckless. It isn't about burning your life down or becoming someone unrecognisable.</p>
+
+<p>It means the parts of you that were never supposed to be managed in the first place:</p>
+
+<ul>
+<li><strong>The instinct</strong> — the knowing that arrives before the reasoning does, the one you've been taught to override</li>
+<li><strong>The rage</strong> — not cruelty, but the clean anger that tells you a line was crossed</li>
+<li><strong>The softness</strong> — the ability to be moved, which you buried because it looked like weakness</li>
+<li><strong>The pleasure</strong> — wanting things simply because they feel good, with no productive justification attached</li>
+<li><strong>The voice</strong> — saying the true thing in the room instead of the smooth one</li>
+<li><strong>The courage to want more</strong> — a life bigger than the one you were quietly expected to settle for</li>
+</ul>
+
+<p>None of that is gone. It's just been unused for a long time, and unused things get stiff.</p>
+
+<h2>Why she doesn't come back at home</h2>
+
+<p>You can read about this. You can journal about it, therapise it, understand it completely — and still walk back into Monday exactly the same.</p>
+
+<p>Because the version of you that everyone knows is <em>held in place</em> by your environment. Your phone. Your roles. The people who need you to stay recognisable. At home you're surrounded by evidence of who you've agreed to be.</p>
+
+<p><strong>Something has to actually interrupt it.</strong></p>
+
+<p>That's what the land does. Not metaphorically — practically. It's very hard to keep performing composure in a place that doesn't care whether you're composed.</p>
+
+<h2>So we're taking ten women to Kenya</h2>
+
+<p>Seven days on wild land at <a href="/retreats/kenya">Ol Pejeta Conservancy</a>. Daily safaris. Sisterhood. Healing. Movement. Sound. Locally prepared meals. Wildlife close enough to reset your nervous system.</p>
+
+<p>Ten women. That's the whole group.</p>
+
+<p>Not because small sounds exclusive, but because you cannot do this work in a crowd. Ten is the number where nobody performs — where by day three the polite version of everyone has quietly left the building and something more honest shows up in her place.</p>
+
+<p>And we've made the logistics deliberately simple: <strong>everything is included except your flight.</strong> Accommodation, meals, safaris, facilitation, transport from Nairobi and back. You pick your room and book your flight. We handle the rest.</p>
+
+<p>The reason for that isn't convenience for its own sake. It's that <em>decision fatigue is the enemy of this kind of work.</em> Women who spend the week managing logistics never fully arrive.</p>
+
+<h2>The question underneath</h2>
+
+<p>Most women who read something like this feel two things at once.</p>
+
+<p>A yes — immediate, physical, somewhere in the chest.</p>
+
+<p>And then, about four seconds later, the list. <em>The timing. The money. Who would cover things. It's self-indulgent. Maybe next year.</em></p>
+
+<p>Notice which one came first.</p>
+
+<p>The list isn't wrong, exactly. Those are real considerations. But it's worth being honest that the list has been showing up for years, and it will have a fresh version ready next year too. <strong>The yes is the part that's harder to manufacture.</strong></p>
+
+<hr />
+
+<p><strong>Into the Wild</strong><br />
+Ol Pejeta Conservancy, Kenya<br />
+November 28 – December 4, 2027</p>
+
+<p>There are only ten places in this story. <a href="/retreats/kenya">Read the full itinerary</a>, or <a href="/contact">reach out</a> if you want to talk it through with us first — most women do before they book, and we'd rather you came in with your eyes open.</p>
+
+<p><em>Is one of them yours?</em></p>
+    `.trim(),
+  },
+  {
     slug: "10-signs-youre-ready-for-a-womens-retreat",
     title: "10 signs you're ready for a women's retreat",
     description: "You've been putting everyone else first for so long you can't remember what you actually want. Sound familiar? Here are 10 signs it might be time.",
