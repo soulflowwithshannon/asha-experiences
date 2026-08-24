@@ -36,6 +36,9 @@ export const metadata: Metadata = {
     "women finding themselves retreat",
     "come back to yourself retreat",
   ],
+  alternates: {
+    canonical: "/retreats/morocco",
+  },
   openGraph: {
     title: "Women's Retreat Morocco 2026 — Sacred Sands | ASHA Experiences",
     description: "A 7-day women's retreat at Atlas Kasbah, Agadir, Morocco. Nov 29–Dec 5, 2026. Yoga, sound healing, desert adventures, and deep sisterhood. Limited spots.",

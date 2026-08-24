@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "retreat for burnt out women",
     "ASHA Experiences journal",
   ],
+  alternates: {
+    canonical: "/blog",
+  },
   openGraph: {
     title: "Journal | ASHA Experiences",
     description: "Writing about retreats, healing, and what it actually feels like to choose yourself.",

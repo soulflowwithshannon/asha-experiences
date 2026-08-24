@@ -136,6 +136,9 @@ export const metadata: Metadata = {
     "international retreat for women",
     "women's retreat abroad 2026",
   ],
+  alternates: {
+    canonical: "/retreats/mexico",
+  },
   openGraph: {
     title: "Women's Jungle Retreat Mexico 2026 — Becoming HER | ASHA Experiences",
     description: "A 5-day women's retreat in the jungle of the Riviera Maya, Mexico. Oct 27–31, 2026. Yoga, sound healing, cenotes, ceremony, and sisterhood. Limited spots.",

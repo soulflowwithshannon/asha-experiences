@@ -35,6 +35,9 @@ export const metadata: Metadata = {
     "Into the Wild retreat Kenya",
     "ASHA Experiences Kenya",
   ],
+  alternates: {
+    canonical: "/retreats/kenya",
+  },
   openGraph: {
     title: "Women's Safari Retreat Kenya 2027 — Into the Wild | ASHA Experiences",
     description: "A 7-day women's safari retreat in Kenya at Ol Pejeta Conservancy. Yoga, sound healing, wildlife, and sisterhood on the African savanna. Limited spots.",

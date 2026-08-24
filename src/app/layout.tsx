@@ -89,6 +89,9 @@ export const metadata: Metadata = {
   authors: [{ name: "ASHA Experiences" }],
   creator: "ASHA Experiences",
   metadataBase: new URL("https://ashaexperiences.com"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
