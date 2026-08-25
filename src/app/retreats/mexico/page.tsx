@@ -248,19 +248,10 @@ const faqs: { question: string; answer: ReactNode }[] = [
     ),
   },
   {
-    question: "do you offer payment plans?",
-    answer: (
-      <div>
-        <p style={{ marginBottom: 12 }}>yes. you can secure your spot with a $1,000 deposit today. we'll work out a flexible payment plan from there.</p>
-        <p>on the payment page, simply choose the deposit option instead of paying in full.</p>
-      </div>
-    ),
-  },
-  {
     question: "what's the cancellation policy?",
     answer: (
       <div>
-        <p style={{ marginBottom: 12 }}><strong>all payments are non-refundable</strong> — including the $1,000 deposit and any balance paid. this covers accommodation, facilitators, and logistics we commit to well in advance on your behalf.</p>
+        <p style={{ marginBottom: 12 }}><strong>all payments are non-refundable.</strong> this covers accommodation, facilitators, and logistics we commit to well in advance on your behalf.</p>
         <p style={{ marginBottom: 12 }}>if your plans change, reach out as soon as you can. at our discretion, we may be able to transfer your payment to another woman if you find someone to take your place.</p>
         <p>we strongly recommend travel insurance to protect your investment.</p>
       </div>
