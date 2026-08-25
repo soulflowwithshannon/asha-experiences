@@ -260,8 +260,9 @@ const faqs: { question: string; answer: ReactNode }[] = [
     question: "what's the cancellation policy?",
     answer: (
       <div>
-        <p style={{ marginBottom: 12 }}>the $1,000 deposit is non-refundable, as it secures your spot and covers upfront costs. if you need to cancel after paying more, additional payments may be transferable if we can fill your spot.</p>
-        <p>we highly recommend travel insurance to protect your investment. if something comes up, reach out to us as soon as possible.</p>
+        <p style={{ marginBottom: 12 }}><strong>all payments are non-refundable</strong> — including the $1,000 deposit and any balance paid. this covers accommodation, facilitators, and logistics we commit to well in advance on your behalf.</p>
+        <p style={{ marginBottom: 12 }}>if your plans change, reach out as soon as you can. at our discretion, we may be able to transfer your payment to another woman if you find someone to take your place.</p>
+        <p>we strongly recommend travel insurance to protect your investment.</p>
       </div>
     ),
   },
@@ -595,6 +596,7 @@ export default function MexicoPage() {
                     <a href="https://buy.stripe.com/4gM5kEeYgaVT3uO3iS0sU04" target="_blank" rel="noopener noreferrer" style={{ display: "block", padding: "12px 24px", background: "#C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 700, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "#b08d78")} onMouseLeave={(e) => (e.currentTarget.style.background = "#C39E88")}>
                       reserve my spot →
                     </a>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-body)", textAlign: "center", marginTop: 8, fontStyle: "italic" }}>all payments are non-refundable</p>
                   </div>
                 </div>
               </div>
@@ -617,6 +619,7 @@ export default function MexicoPage() {
                     <a href="https://buy.stripe.com/fZudRa2bue850iC06G0sU0g" target="_blank" rel="noopener noreferrer" style={{ display: "block", padding: "12px 24px", background: "#C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 700, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "#b08d78")} onMouseLeave={(e) => (e.currentTarget.style.background = "#C39E88")}>
                       reserve my spot →
                     </a>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-body)", textAlign: "center", marginTop: 8, fontStyle: "italic" }}>all payments are non-refundable</p>
                   </div>
                 </div>
               </div>

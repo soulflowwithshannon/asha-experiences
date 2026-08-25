@@ -359,9 +359,9 @@ const faqs: { question: string; answer: ReactNode }[] = [
     question: "what's the cancellation policy?",
     answer: (
       <div>
-        <p style={{ marginBottom: 12 }}>we understand that life happens — and we also need to honor the commitment and planning that goes into creating this retreat.</p>
-        <p style={{ marginBottom: 12 }}>the $1,000 deposit is non-refundable, as it secures your spot and covers upfront retreat costs. if you need to cancel after paying more than the deposit, any additional payments may be transferable to another woman if you find someone to take your place (with our approval).</p>
-        <p>we highly recommend purchasing travel insurance to protect your investment. if something comes up, please reach out to us as soon as possible.</p>
+        <p style={{ marginBottom: 12 }}><strong>all payments are non-refundable</strong> — including the $1,000 deposit and any balance paid. this covers accommodation, facilitators, and logistics we commit to well in advance on your behalf.</p>
+        <p style={{ marginBottom: 12 }}>if your plans change, reach out as soon as you can. at our discretion, we may be able to transfer your payment to another woman if you find someone to take your place.</p>
+        <p>we strongly recommend travel insurance to protect your investment.</p>
       </div>
     ),
   },
@@ -855,7 +855,7 @@ export default function KenyaPage() {
                     <a href="https://buy.stripe.com/00w3cw7vO3traXg8Dc0sU01" target="_blank" rel="noopener noreferrer" style={{ display: "block", padding: "12px 24px", border: "1px solid var(--color-accent)", color: "var(--color-accent)", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "color-mix(in srgb, var(--color-accent) 10%, transparent)")} onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}>
                       reserve with $1,000 deposit →
                     </a>
-                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-body)", textAlign: "center", marginTop: 8, fontStyle: "italic" }}>*balance to be paid in full 60 days prior to retreat start date</p>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-body)", textAlign: "center", marginTop: 8, fontStyle: "italic" }}>all payments are non-refundable · balance due 60 days prior to the retreat</p>
                   </div>
                 </div>
               </motion.div>
@@ -910,7 +910,7 @@ export default function KenyaPage() {
                     <a href="https://buy.stripe.com/aFa7sMdUc9RP2qK3iS0sU03" target="_blank" rel="noopener noreferrer" style={{ display: "block", padding: "12px 24px", border: "1px solid var(--color-accent)", color: "var(--color-accent)", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "color-mix(in srgb, var(--color-accent) 10%, transparent)")} onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}>
                       reserve with $1,000 deposit →
                     </a>
-                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-body)", textAlign: "center", marginTop: 8, fontStyle: "italic" }}>*balance to be paid in full 60 days prior to retreat start date</p>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-body)", textAlign: "center", marginTop: 8, fontStyle: "italic" }}>all payments are non-refundable · balance due 60 days prior to the retreat</p>
                   </div>
                 </div>
               </motion.div>
