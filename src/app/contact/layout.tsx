@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Questions About a Retreat | ASHA Experiences",
+  title: "Contact Us — Questions About a Retreat",
   description: "Questions about a retreat, or want to know if this is the right time for you? Get in touch with Ashley and Shannon at ASHA Experiences.",
   alternates: {
     canonical: "/contact",

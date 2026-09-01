@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Women's Retreat Morocco 2026 — 7 Days in the Desert | ASHA Experiences",
+  title: "Women's Retreat Morocco 2026 — 7 Days in the Desert",
   description: "Come home to yourself in the Moroccan desert. A 7-day women's retreat at Atlas Kasbah, Agadir — yoga, sound healing, ceremony, and deep sisterhood. Nov 29–Dec 5, 2026.",
   keywords: [
     "women's retreat Morocco",
