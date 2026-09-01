@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useRef, useState, ReactNode } from "react";
 import FadeIn from "@/components/FadeIn";
+import MeetUs from "@/components/MeetUs";
 import GuidesCompact from "@/components/GuidesCompact";
 import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/AnimatedText";
 
@@ -936,23 +937,13 @@ export default function KenyaPage() {
               ))}
             </div>
           </FadeIn>
-          <FadeIn delay={0.15}>
-            <div style={{ textAlign: "center", paddingTop: 56 }}>
-              <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 22, color: "var(--color-text-headline)", marginBottom: 24 }}>
-                still have questions?<span className="mobile-break"> </span>we&apos;d love to hear from you —
-              </p>
-              <a
-                href="https://calendar.app.google/Yt1VUQGEuhhEipt59"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ghost-btn"
-              >
-                book a call with <strong>Shannon</strong> or <strong>Ashley</strong> →
-              </a>
-            </div>
-          </FadeIn>
         </div>
       </section>
+
+      <MeetUs
+        headline="you're thinking about flying to Kenya, and that's a big thing to sit with on your own."
+        body="this one is the furthest out and the biggest leap, so we'd genuinely rather talk to you first. no pressure and no pitch — just an honest conversation about whether this is your year."
+      />
 
       {/* SECTION 10 — CLOSING CTA */}
       <section style={{ position: "relative", padding: "140px 32px", background: "#2D2521", textAlign: "center", overflow: "hidden" }}>
