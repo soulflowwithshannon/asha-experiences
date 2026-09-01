@@ -13,7 +13,7 @@ const hosts = [
 
 export default function MeetUs({
   headline = "let's talk it through first",
-  body = "most women talk to us before they book. no pressure and no pitch — just an honest conversation about whether this is your year.",
+  body = "most women talk to us before they book. no pressure — just an honest conversation about whether this is your year.",
   spaceAbove = 0,
 }: {
   headline?: string;
@@ -73,7 +73,7 @@ export default function MeetUs({
             fontFamily: "var(--font-dm-sans)",
             fontSize: 14,
             color: "var(--color-text-body)",
-            lineHeight: 1.8,
+            lineHeight: 1.6,
             maxWidth: 440,
             margin: "0 auto 28px",
           }}>
