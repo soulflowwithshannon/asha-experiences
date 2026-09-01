@@ -73,7 +73,7 @@ export default function MeetUs({
             fontFamily: "var(--font-dm-sans)",
             fontSize: 14,
             color: "var(--color-text-body)",
-            lineHeight: 1.6,
+            lineHeight: 1.3,
             maxWidth: 440,
             margin: "0 auto 28px",
           }}>
