@@ -14,12 +14,14 @@ const hosts = [
 export default function MeetUs({
   headline = "let's talk it through first",
   body = "most women talk to us before they book. no pressure and no pitch — just an honest conversation about whether this is your year.",
+  spaceAbove = 0,
 }: {
   headline?: string;
   body?: string;
+  spaceAbove?: number;
 }) {
   return (
-    <section style={{ background: "var(--color-bg-page)", padding: "0 32px 80px" }}>
+    <section style={{ background: "var(--color-bg-page)", padding: `${spaceAbove}px 32px 80px` }}>
       <div style={{ maxWidth: 640, margin: "0 auto", textAlign: "center" }}>
         <FadeIn>
           <p className="eyebrow-accent" style={{ marginBottom: 20 }}>before you book</p>

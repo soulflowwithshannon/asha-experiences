@@ -943,6 +943,7 @@ export default function KenyaPage() {
       <MeetUs
         headline="you're thinking about flying to Kenya, and that's a big thing to sit with on your own."
         body="this one is the furthest out and the biggest leap, so we'd genuinely rather talk to you first. no pressure and no pitch — just an honest conversation about whether this is your year."
+        spaceAbove={56}
       />
 
       {/* SECTION 10 — CLOSING CTA */}
