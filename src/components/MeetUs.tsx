@@ -13,7 +13,7 @@ const hosts = [
 
 export default function MeetUs({
   headline = "let's talk it through first",
-  body = "most women talk to us before they book. no pressure — just an honest conversation about whether this is your year.",
+  body = "most women talk to us before they book. no pressure — just an honest conversation about whether this is the right experience for you.",
   spaceAbove = 0,
 }: {
   headline?: string;
