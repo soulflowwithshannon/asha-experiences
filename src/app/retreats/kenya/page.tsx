@@ -128,7 +128,7 @@ function ExpandableCard({ img, title, body }: { img: string; title: string; body
         <Image src={img} alt={title} fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="(max-width: 768px) 100vw, 50vw" />
       </div>
       <div style={{ padding: "20px 24px 24px", textAlign: "center", display: "flex", flexDirection: "column", flex: 1 }}>
-        <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 18, color: "var(--color-text-headline)", marginBottom: 10 }}>{title}</p>
+        <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 21, fontWeight: 600, color: "var(--color-text-headline)", marginBottom: 12 }}>{title}</p>
         <p style={{
           fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.8,
           display: "-webkit-box", WebkitLineClamp: expanded ? "unset" : 4, WebkitBoxOrient: "vertical" as const, overflow: expanded ? "visible" : "hidden",
@@ -507,7 +507,7 @@ export default function KenyaPage() {
                 <Image src="/images/baskets and weavers.jpg" alt="Baskets and weavers" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="33vw" />
               </div>
               <div style={{ padding: 40, display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center" }}>
-                <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 20, color: "#F1F0E5", marginBottom: 16 }}>be part of something that matters</p>
+                <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 23, fontWeight: 600, color: "#F1F0E5", marginBottom: 16 }}>be part of something that matters</p>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "#C5AA9B", lineHeight: 1.8 }}>
                   a visit to the northern white rhino sanctuary —<br />
                   the only two left on earth, with conservation efforts to bring the population back.<br /><br />
