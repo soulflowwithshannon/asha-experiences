@@ -33,7 +33,7 @@ export default function MeetUs({
             fontStyle: "italic",
             fontSize: "clamp(24px,3vw,30px)",
             color: "var(--color-text-headline)",
-            lineHeight: 1.4,
+            lineHeight: 1.2,
             marginBottom: 32,
           }}>
             {headline}
