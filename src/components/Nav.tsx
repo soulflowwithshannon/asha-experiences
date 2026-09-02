@@ -40,8 +40,15 @@ export default function Nav() {
   }, []);
 
   const isRetreatsActive = pathname.startsWith("/retreats");
-  const linkColor = scrolled ? "var(--color-text-body)" : "#C5AA9B";
-  const linkActiveColor = "var(--color-accent)";
+  // pages whose hero is a full-bleed photo/video need light nav text;
+  // cream-backgrounded pages need dark. one colour cannot serve both.
+  const darkHero = pathname === "/" || pathname.startsWith("/retreats/");
+  const linkColor = scrolled
+    ? "var(--color-text-body)"
+    : darkHero ? "#F1F0E5" : "var(--color-text-body)";
+  const linkActiveColor = scrolled || !darkHero ? "var(--color-accent)" : "#FFFFFF";
+  // lifts light text off pale photos (the Kenya hero is very washed out at the top)
+  const heroShadow = !scrolled && darkHero ? "0 1px 14px rgba(45,37,33,0.55)" : "none";
 
   return (
     <nav
@@ -75,7 +82,8 @@ export default function Nav() {
             fontSize: 24,
             fontWeight: 500,
             letterSpacing: "0.08em",
-            color: scrolled ? "var(--color-text-headline)" : "#A89585",
+            color: scrolled ? "var(--color-text-headline)" : darkHero ? "#F1F0E5" : "var(--color-text-headline)",
+            textShadow: heroShadow,
             textDecoration: "none",
           }}
         >
@@ -93,6 +101,7 @@ export default function Nav() {
               textDecoration: "none",
               borderBottom: pathname === "/about" ? "1px solid var(--color-accent)" : "1px solid transparent",
               paddingBottom: 2,
+              textShadow: heroShadow,
               transition: "color 0.2s ease",
             }}
           >
@@ -108,6 +117,7 @@ export default function Nav() {
               textDecoration: "none",
               borderBottom: pathname === "/find-your-retreat" ? "1px solid var(--color-accent)" : "1px solid transparent",
               paddingBottom: 2,
+              textShadow: heroShadow,
               transition: "color 0.2s ease",
             }}
           >
@@ -126,6 +136,7 @@ export default function Nav() {
                 border: "none",
                 borderBottom: isRetreatsActive ? "1px solid var(--color-accent)" : "1px solid transparent",
                 paddingBottom: 2,
+                textShadow: heroShadow,
                 cursor: "pointer",
                 display: "flex",
                 alignItems: "center",
@@ -193,6 +204,7 @@ export default function Nav() {
               textDecoration: "none",
               borderBottom: pathname.startsWith("/blog") ? "1px solid var(--color-accent)" : "1px solid transparent",
               paddingBottom: 2,
+              textShadow: heroShadow,
               transition: "color 0.2s ease",
             }}
           >
@@ -208,6 +220,7 @@ export default function Nav() {
               textDecoration: "none",
               borderBottom: pathname === "/contact" ? "1px solid var(--color-accent)" : "1px solid transparent",
               paddingBottom: 2,
+              textShadow: heroShadow,
               transition: "color 0.2s ease",
             }}
           >
@@ -219,7 +232,7 @@ export default function Nav() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            style={{ color: linkColor, display: "flex" }}
+            style={{ color: linkColor, display: "flex", filter: !scrolled && darkHero ? "drop-shadow(0 1px 10px rgba(45,37,33,0.55))" : "none" }}
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
@@ -238,7 +251,8 @@ export default function Nav() {
             background: "none",
             border: "none",
             cursor: "pointer",
-            color: scrolled ? "var(--color-text-headline)" : "#A89585",
+            color: scrolled ? "var(--color-text-headline)" : darkHero ? "#F1F0E5" : "var(--color-text-headline)",
+            filter: !scrolled && darkHero ? "drop-shadow(0 1px 10px rgba(45,37,33,0.55))" : "none",
             padding: 4,
           }}
         >

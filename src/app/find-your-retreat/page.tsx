@@ -9,9 +9,6 @@ export default function FindYourRetreatPage() {
       {/* Masthead */}
       <section style={{ padding: "64px 24px 40px" }}>
         <div style={{ maxWidth: 620, margin: "0 auto", textAlign: "center" }}>
-          <FadeIn>
-            <p className="eyebrow-accent" style={{ marginBottom: 20 }}>five questions</p>
-          </FadeIn>
           <FadeIn delay={0.05}>
             <h1
               style={{
@@ -33,11 +30,12 @@ export default function FindYourRetreatPage() {
                 fontSize: 15,
                 lineHeight: 1.4,
                 color: "var(--color-text-body)",
-                maxWidth: 420,
+                maxWidth: 480,
                 margin: "0 auto",
+                textWrap: "balance",
               }}
             >
-              there are no wrong answers. just choose whichever response pulls at you most, even if you relate to more than one.
+              don&apos;t overthink this. just choose whichever response pulls at you most, even if you relate to more than one.
             </p>
           </FadeIn>
         </div>

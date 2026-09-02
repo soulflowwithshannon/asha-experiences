@@ -218,7 +218,7 @@ export default function QuizWidget() {
                 you don't need to pick a country. you need to pick a feeling.
               </h2>
               <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.6, color: "var(--color-text-body)", marginBottom: 22 }}>
-                five questions, about a minute. tell us where to send your result and we'll begin.
+                five questions, about a minute. we&apos;ll send your result so you can keep it.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                 <input style={input} type="text" required placeholder="first name" value={name} onChange={(e) => setName(e.target.value)} aria-label="first name" />

@@ -35,6 +35,7 @@ export default function MeetUs({
             color: "var(--color-text-headline)",
             lineHeight: 1.2,
             marginBottom: 32,
+            textWrap: "balance",
           }}>
             {headline}
           </p>
