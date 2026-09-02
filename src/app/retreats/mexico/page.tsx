@@ -591,6 +591,39 @@ export default function MexicoPage() {
             </p>
           </FadeIn>
 
+          <FadeIn delay={0.15}>
+            <div style={{
+              maxWidth: 620,
+              margin: "0 auto 56px",
+              padding: "28px 30px",
+              background: "var(--color-bg-page)",
+              border: "0.5px solid var(--color-accent)",
+              borderRadius: 6,
+              textAlign: "center",
+            }}>
+              <p style={{
+                fontFamily: "var(--font-fraunces)",
+                fontWeight: 700,
+                fontSize: "clamp(20px,2.8vw,26px)",
+                lineHeight: 1.25,
+                color: "var(--color-text-headline)",
+                marginBottom: 14,
+                textWrap: "balance",
+              }}>
+                this one doesn&apos;t come around again.
+              </p>
+              <p style={{
+                fontFamily: "var(--font-dm-sans)",
+                fontSize: 15,
+                lineHeight: 1.8,
+                color: "var(--color-text-body)",
+                textWrap: "balance",
+              }}>
+                Becoming HER is built around Día de Muertos. the ceremony on night three — burying the version of you that&apos;s finished — only works because of when it falls. October 27–31 is the date.
+              </p>
+            </div>
+          </FadeIn>
+
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32, alignItems: "stretch" }} className="rooms-grid">
 
             {/* Casa Colectiva */}
