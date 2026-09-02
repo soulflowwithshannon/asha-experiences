@@ -3,26 +3,23 @@ import { Resend } from "resend";
 
 export const dynamic = "force-dynamic";
 
-const RESULTS: Record<string, { title: string; retreat: string; location: string; dates: string; href: string }> = {
+const RESULTS: Record<string, { title: string; retreat: string; place: string; href: string }> = {
   releaser: {
     title: "the releaser",
     retreat: "Becoming HER",
-    location: "Riviera Maya, Mexico",
-    dates: "October 27 – 31, 2026",
+    place: "Riviera Maya, Mexico · Oct 27–31, 2026",
     href: "https://ashaexperiences.com/retreats/mexico",
   },
   wild: {
     title: "the wild one",
     retreat: "Into the Wild",
-    location: "Ol Pejeta Conservancy, Kenya",
-    dates: "November 28 – December 4, 2027",
+    place: "Ol Pejeta Conservancy, Kenya · Nov 28 – Dec 4, 2027",
     href: "https://ashaexperiences.com/retreats/kenya",
   },
-  reconnector: {
+  dusk: {
     title: "the reconnector",
     retreat: "Sacred Sands",
-    location: "Agadir, Morocco",
-    dates: "November 29 – December 5, 2026",
+    place: "Agadir, Morocco · Nov 29 – Dec 5, 2026",
     href: "https://ashaexperiences.com/retreats/morocco",
   },
 };
@@ -42,7 +39,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 });
     }
 
-    const r = RESULTS[archetype] ?? RESULTS.reconnector;
+    const r = RESULTS[archetype] ?? RESULTS.dusk;
 
     /* stage "start" — she's entered her details but hasn't answered yet.
        Add her to the audience now so an abandoned quiz is still a captured lead. */
@@ -83,7 +80,7 @@ export async function POST(request: NextRequest) {
       subject: `you're ${r.title} — here's your retreat`,
       text: `${name ? name + "," : "hi,"}
 
-you came out as ${r.title}, which means your retreat is ${r.retreat} — ${r.location}, ${r.dates}.
+you came out as ${r.title}, which means your retreat is ${r.retreat} — ${r.place}.
 
 see the full retreat: ${r.href}
 
@@ -95,8 +92,7 @@ if you have questions, just reply to this email. it comes straight to us — Ash
           <p style="margin: 0 0 28px;">${name ? name + ", based" : "Based"} on your answers, the retreat that matches where you are right now is:</p>
           <div style="border: 1px solid #E2D8C3; border-radius: 6px; padding: 22px 24px; background: #FFFCF5; margin-bottom: 28px;">
             <p style="font-family: Georgia, serif; font-size: 21px; color: #4A3F35; margin: 0 0 6px;">${r.retreat}</p>
-            <p style="margin: 0 0 2px; font-size: 14px;">${r.location}</p>
-            <p style="margin: 0 0 18px; font-size: 14px;">${r.dates}</p>
+            <p style="margin: 0 0 18px; font-size: 14px;">${r.place}</p>
             <a href="${r.href}" style="display: inline-block; padding: 11px 22px; background: #A67C52; color: #FFFCF5; text-decoration: none; font-size: 13px; letter-spacing: 0.04em;">see the full retreat</a>
           </div>
           <p style="margin: 0 0 28px;">most women talk to us before they book. if you have questions, just reply to this email — it comes straight to us.</p>

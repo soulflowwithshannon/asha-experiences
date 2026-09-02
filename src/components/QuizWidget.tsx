@@ -5,96 +5,80 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
-type Archetype = "releaser" | "wild" | "reconnector";
+type Archetype = "releaser" | "wild" | "dusk";
 
 const QUESTIONS: { q: string; options: { label: string; type: Archetype }[] }[] = [
   {
-    q: "when you picture yourself getting on the plane, what's underneath it?",
+    q: "what's pulling at you right now?",
     options: [
-      { label: "relief — like finally putting something down", type: "releaser" },
-      { label: "restlessness — like something in me wants out", type: "wild" },
-      { label: "longing — like I'm going to meet someone I used to be", type: "reconnector" },
+      { label: "something in my life just ended, and i don't fully know who i am without it yet.", type: "releaser" },
+      { label: "i want to feel my own aliveness again — not managed, not scheduled, just alive.", type: "wild" },
+      { label: "i just need everything to go quiet. all of it.", type: "dusk" },
     ],
   },
   {
-    q: "what's been the hardest part of this year?",
+    q: "what does your nervous system need most?",
     options: [
-      { label: "carrying something I can't seem to set down", type: "releaser" },
-      { label: "being the version of me everyone expects", type: "wild" },
-      { label: "feeling far from myself, and not knowing when that started", type: "reconnector" },
+      { label: "release", type: "releaser" },
+      { label: "aliveness", type: "wild" },
+      { label: "stillness", type: "dusk" },
     ],
   },
   {
-    q: "what does your body want most right now?",
+    q: "pick the moment that sounds like relief.",
     options: [
-      { label: "to finally exhale", type: "releaser" },
-      { label: "to move, sweat, feel something real", type: "wild" },
-      { label: "to be still, somewhere beautiful and quiet", type: "reconnector" },
+      { label: "burning something that no longer fits, and not looking back.", type: "releaser" },
+      { label: "standing somewhere so wild it makes your problems feel small.", type: "wild" },
+      { label: "sitting in silence long enough to hear your own voice again.", type: "dusk" },
     ],
   },
   {
-    q: "which landscape pulls at you?",
+    q: "what's been the loudest thing in your head lately?",
     options: [
-      { label: "deep jungle — heat, and water running underground", type: "releaser" },
-      { label: "open plains — animals, and an enormous sky", type: "wild" },
-      { label: "desert light — mountains and warm stone", type: "reconnector" },
+      { label: "the version of me that existed before all this changed.", type: "releaser" },
+      { label: "how long it's been since i felt anything at all.", type: "wild" },
+      { label: "everyone else's needs, on a loop, with no off switch.", type: "dusk" },
     ],
   },
   {
-    q: "a year from now, what would make this worth it?",
+    q: "if you could only bring one feeling home, what would it be?",
     options: [
-      { label: "I let go of something I'd outgrown", type: "releaser" },
-      { label: "I remembered I'm not as small as I've been acting", type: "wild" },
-      { label: "I came home to myself", type: "reconnector" },
+      { label: "closure.", type: "releaser" },
+      { label: "freedom.", type: "wild" },
+      { label: "clarity.", type: "dusk" },
     ],
   },
 ];
 
-/* Evergreen: archetypes never change. Only these retreat/status fields need
-   updating as dates sell out or new retreats are added. */
+/* Evergreen: archetypes never change. Only the retreat/dates/status fields
+   below need updating as inventory changes. */
 const RESULTS: Record<
   Archetype,
-  {
-    title: string;
-    subtitle: string;
-    body: string;
-    retreat: string;
-    location: string;
-    dates: string;
-    status: string;
-    href: string;
-    image: string;
-  }
+  { title: string; body: string; retreat: string; place: string; status: string; href: string; image: string }
 > = {
   releaser: {
-    title: "the releaser",
-    subtitle: "you came to put something down",
-    body: "you're not looking for a holiday. you're carrying a version of yourself that doesn't fit anymore, and some part of you knows it has to be set down somewhere — deliberately, with witnesses. you need ceremony, not a spa.",
+    title: "you are the releaser.",
+    body: "something in your life already ended, or is ending — and you're standing exactly where this retreat gets its name. becoming her was never about arriving somewhere finished. it's a ceremony for whoever you're turning into next.",
     retreat: "Becoming HER",
-    location: "Riviera Maya, Mexico",
-    dates: "October 27 – 31, 2026",
-    status: "limited spots",
+    place: "Riviera Maya, Mexico · Oct 27–31, 2026",
+    status: "4 spots left",
     href: "/retreats/mexico",
     image: "/images/Mexico hero.jpeg",
   },
   wild: {
-    title: "the wild one",
-    subtitle: "you came to stop being so manageable",
-    body: "you've been well-behaved for a long time and it's starting to cost you. you don't need fixing — you need somewhere big enough, and wild enough, that the polite version of you can't survive the week.",
+    title: "you are the wild one.",
+    body: "you've been managing everything for so long, you forgot what your own aliveness feels like. you don't need rest. you need something big enough to remind your nervous system what it's like to feel small in the best way.",
     retreat: "Into the Wild",
-    location: "Ol Pejeta Conservancy, Kenya",
-    dates: "November 28 – December 4, 2027",
-    status: "10 places only",
+    place: "Ol Pejeta Conservancy, Kenya · Nov 28 – Dec 4, 2027",
+    status: "capped at 10 women",
     href: "/retreats/kenya",
     image: "/images/Into the Wild Hero.jpg",
   },
-  reconnector: {
-    title: "the reconnector",
-    subtitle: "you came to find your way back",
-    body: "nothing is wrong, exactly. you've just been away from yourself for long enough to notice. you don't need to be broken open — you need somewhere quiet and beautiful, and enough time to hear yourself again.",
+  dusk: {
+    title: "you are the reconnector.",
+    body: "the noise got too loud, and somewhere in all of it, you got quiet too. you don't need more input. you need enough silence to hear your own voice again.",
     retreat: "Sacred Sands",
-    location: "Agadir, Morocco",
-    dates: "November 29 – December 5, 2026",
+    place: "Agadir, Morocco · Nov 29 – Dec 5, 2026",
     status: "spots available",
     href: "/retreats/morocco",
     image: "/images/morocco-hero-v2.png",
@@ -118,7 +102,7 @@ export default function QuizWidget() {
     // ties resolve to the earliest-chosen archetype, so her first answer carries weight
     return (Object.keys(tally).sort(
       (a, b) => tally[b] - tally[a] || answers.indexOf(a as Archetype) - answers.indexOf(b as Archetype)
-    )[0] as Archetype) || "reconnector";
+    )[0] as Archetype) || "dusk";
   })();
 
   const r = RESULTS[result];
@@ -231,10 +215,10 @@ export default function QuizWidget() {
                 fontSize: "clamp(21px,3.6vw,25px)", lineHeight: 1.25,
                 color: "var(--color-text-headline)", marginBottom: 10,
               }}>
-                first — where should we send your result?
+                you don't need to pick a country. you need to pick a feeling.
               </h2>
               <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.6, color: "var(--color-text-body)", marginBottom: 22 }}>
-                so you can come back to it later, and so we can send you a little more about the retreat that matches you.
+                five questions, about a minute. tell us where to send your result and we'll begin.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                 <input style={input} type="text" required placeholder="first name" value={name} onChange={(e) => setName(e.target.value)} aria-label="first name" />
@@ -247,7 +231,7 @@ export default function QuizWidget() {
                   cursor: gateState === "sending" ? "not-allowed" : "pointer",
                   opacity: gateState === "sending" ? 0.6 : 1, borderRadius: 0,
                 }}>
-                  {gateState === "sending" ? "one moment..." : "start the quiz →"}
+                  {gateState === "sending" ? "one moment..." : "begin →"}
                 </button>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-body)", textAlign: "center" }}>
                   no spam. leave any time.
@@ -302,7 +286,7 @@ export default function QuizWidget() {
         ) : (
           <motion.div key="result" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease }}>
             <p className="eyebrow-accent" style={{ marginBottom: 14 }}>
-              {name ? `${name}, you are` : "you are"}
+              your result
             </p>
             <h2 style={{
               fontFamily: "var(--font-fraunces)", fontWeight: 700,
@@ -311,12 +295,6 @@ export default function QuizWidget() {
             }}>
               {r.title}
             </h2>
-            <p style={{
-              fontFamily: "var(--font-cormorant)", fontStyle: "italic",
-              fontSize: "clamp(19px,3vw,23px)", color: "var(--color-accent)", marginBottom: 22,
-            }}>
-              {r.subtitle}
-            </p>
             <p style={{
               fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.75,
               color: "var(--color-text-body)", marginBottom: 36,
@@ -339,8 +317,7 @@ export default function QuizWidget() {
                   <p style={{ fontFamily: "var(--font-fraunces)", fontWeight: 700, fontSize: 22, color: "var(--color-text-headline)", marginBottom: 6 }}>
                     {r.retreat}
                   </p>
-                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", marginBottom: 4 }}>{r.location}</p>
-                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", marginBottom: 16 }}>{r.dates}</p>
+                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", marginBottom: 16 }}>{r.place}</p>
                   <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, letterSpacing: ".04em", color: "var(--color-accent)" }}>
                     see the full retreat →
                   </span>
