@@ -169,6 +169,21 @@ export default function Nav() {
           </div>
 
           <Link
+            href="/find-your-retreat"
+            style={{
+              fontFamily: "var(--font-dm-sans)",
+              fontSize: 13,
+              color: pathname === "/find-your-retreat" ? linkActiveColor : linkColor,
+              textDecoration: "none",
+              borderBottom: pathname === "/find-your-retreat" ? "1px solid var(--color-accent)" : "1px solid transparent",
+              paddingBottom: 2,
+              transition: "color 0.2s ease",
+            }}
+          >
+            find your retreat
+          </Link>
+
+          <Link
             href="/blog"
             style={{
               fontFamily: "var(--font-dm-sans)",
@@ -301,6 +316,9 @@ export default function Nav() {
             )}
           </div>
 
+          <Link href="/find-your-retreat" style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: pathname === "/find-your-retreat" ? "var(--color-accent)" : "var(--color-text-body)", textDecoration: "none" }}>
+            find your retreat
+          </Link>
           <Link href="/blog" style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: pathname.startsWith("/blog") ? "var(--color-accent)" : "var(--color-text-body)", textDecoration: "none" }}>
             journal
           </Link>
