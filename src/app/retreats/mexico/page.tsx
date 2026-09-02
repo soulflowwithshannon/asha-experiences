@@ -619,7 +619,7 @@ export default function MexicoPage() {
                 color: "var(--color-text-body)",
                 textWrap: "balance",
               }}>
-                Becoming HER is built around Día de Muertos. the ceremony on night three — burying the version of you that&apos;s finished — only works because of when it falls. October 27–31 is the date.
+                Becoming HER is built around Día de Muertos. the ceremony on night three — burying the version of you that&apos;s finished — only works because of when it falls.
               </p>
             </div>
           </FadeIn>
