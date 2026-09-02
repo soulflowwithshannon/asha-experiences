@@ -104,19 +104,18 @@ const RESULTS: Record<
 const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function QuizWidget() {
+  const [phase, setPhase] = useState<"gate" | "quiz" | "result">("gate");
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Archetype[]>([]);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [state, setState] = useState<"idle" | "sending" | "done" | "error">("idle");
+  const [gateState, setGateState] = useState<"idle" | "sending">("idle");
   const [err, setErr] = useState("");
-
-  const done = answers.length === QUESTIONS.length;
 
   const result: Archetype = (() => {
     const tally: Record<string, number> = {};
     answers.forEach((a) => (tally[a] = (tally[a] || 0) + 1));
-    // ties resolve to the earliest-chosen archetype, so the first answer carries weight
+    // ties resolve to the earliest-chosen archetype, so her first answer carries weight
     return (Object.keys(tally).sort(
       (a, b) => tally[b] - tally[a] || answers.indexOf(a as Archetype) - answers.indexOf(b as Archetype)
     )[0] as Archetype) || "reconnector";
@@ -124,27 +123,51 @@ export default function QuizWidget() {
 
   const r = RESULTS[result];
 
-  function choose(type: Archetype) {
-    const next = [...answers.slice(0, step), type];
-    setAnswers(next);
-    setStep(step + 1);
-  }
-
-  async function submit(e: React.FormEvent) {
+  /* Gate: capture her before the questions. Adds her to the audience immediately,
+     so an abandoned quiz is still a captured lead. */
+  async function startQuiz(e: React.FormEvent) {
     e.preventDefault();
+    if (!name.trim()) { setErr("please add your first name"); return; }
     if (!email.trim()) { setErr("please add your email"); return; }
-    setState("sending"); setErr("");
+    setGateState("sending"); setErr("");
     try {
       const res = await fetch("/api/quiz-submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, archetype: result, retreat: r.retreat }),
+        body: JSON.stringify({ name, email, stage: "start" }),
       });
-      if (!res.ok) throw new Error();
-      setState("done");
+      if (!res.ok) {
+        const d = await res.json().catch(() => ({}));
+        setErr(d.error || "something went wrong — please try again");
+        setGateState("idle");
+        return;
+      }
+      setPhase("quiz");
+      setGateState("idle");
     } catch {
-      setState("error");
       setErr("something went wrong — try again, or email us at connect@ashaexperiences.com");
+      setGateState("idle");
+    }
+  }
+
+  function choose(type: Archetype) {
+    const next = [...answers.slice(0, step), type];
+    setAnswers(next);
+    if (next.length === QUESTIONS.length) {
+      setPhase("result");
+      // send her the result — she's already captured, so a failure here is not fatal
+      const tally: Record<string, number> = {};
+      next.forEach((a) => (tally[a] = (tally[a] || 0) + 1));
+      const arch = Object.keys(tally).sort(
+        (a, b) => tally[b] - tally[a] || next.indexOf(a as Archetype) - next.indexOf(b as Archetype)
+      )[0];
+      fetch("/api/quiz-submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, archetype: arch, stage: "result" }),
+      }).catch(() => {});
+    } else {
+      setStep(step + 1);
     }
   }
 
@@ -178,9 +201,8 @@ export default function QuizWidget() {
 
   return (
     <div style={{ maxWidth: 620, margin: "0 auto", width: "100%" }}>
-      {/* progress */}
-      {!done && (
-        <div style={{ marginBottom: 36 }}>
+      {phase === "quiz" && (
+        <div style={{ marginBottom: 32 }}>
           <div style={{ display: "flex", gap: 5, marginBottom: 12 }}>
             {QUESTIONS.map((_, i) => (
               <div key={i} style={{
@@ -197,14 +219,44 @@ export default function QuizWidget() {
       )}
 
       <AnimatePresence mode="wait">
-        {!done ? (
-          <motion.div
-            key={step}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.45, ease }}
-          >
+        {phase === "gate" ? (
+          <motion.div key="gate" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.45, ease }}>
+            <form onSubmit={startQuiz} style={{
+              background: "var(--color-bg-surface)",
+              border: "0.5px solid var(--color-bg-card)",
+              borderRadius: 6, padding: "28px 26px",
+            }}>
+              <h2 style={{
+                fontFamily: "var(--font-fraunces)", fontWeight: 700,
+                fontSize: "clamp(21px,3.6vw,25px)", lineHeight: 1.25,
+                color: "var(--color-text-headline)", marginBottom: 10,
+              }}>
+                first — where should we send your result?
+              </h2>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.6, color: "var(--color-text-body)", marginBottom: 22 }}>
+                so you can come back to it later, and so we can send you a little more about the retreat that matches you.
+              </p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                <input style={input} type="text" required placeholder="first name" value={name} onChange={(e) => setName(e.target.value)} aria-label="first name" />
+                <input style={input} type="email" required placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} aria-label="email" />
+                {err && <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-accent)" }}>{err}</p>}
+                <button type="submit" disabled={gateState === "sending"} style={{
+                  padding: "14px 28px", background: "var(--color-accent)",
+                  border: "1px solid var(--color-accent)", color: "#FFFCF5",
+                  fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: ".04em",
+                  cursor: gateState === "sending" ? "not-allowed" : "pointer",
+                  opacity: gateState === "sending" ? 0.6 : 1, borderRadius: 0,
+                }}>
+                  {gateState === "sending" ? "one moment..." : "start the quiz →"}
+                </button>
+                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-body)", textAlign: "center" }}>
+                  no spam. leave any time.
+                </p>
+              </div>
+            </form>
+          </motion.div>
+        ) : phase === "quiz" ? (
+          <motion.div key={step} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.45, ease }}>
             <h2 style={{
               fontFamily: "var(--font-fraunces)", fontWeight: 700,
               fontSize: "clamp(22px,4vw,27px)", lineHeight: 1.25,
@@ -239,25 +291,19 @@ export default function QuizWidget() {
             ))}
 
             {step > 0 && (
-              <button
-                onClick={() => setStep(step - 1)}
-                style={{
-                  marginTop: 12, background: "none", border: "none", cursor: "pointer",
-                  fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", padding: 0,
-                }}
-              >
+              <button onClick={() => setStep(step - 1)} style={{
+                marginTop: 12, background: "none", border: "none", cursor: "pointer",
+                fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", padding: 0,
+              }}>
                 ← back
               </button>
             )}
           </motion.div>
         ) : (
-          <motion.div
-            key="result"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease }}
-          >
-            <p className="eyebrow-accent" style={{ marginBottom: 14 }}>you are</p>
+          <motion.div key="result" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease }}>
+            <p className="eyebrow-accent" style={{ marginBottom: 14 }}>
+              {name ? `${name}, you are` : "you are"}
+            </p>
             <h2 style={{
               fontFamily: "var(--font-fraunces)", fontWeight: 700,
               fontSize: "clamp(30px,6vw,44px)", color: "var(--color-text-headline)",
@@ -278,11 +324,10 @@ export default function QuizWidget() {
               {r.body}
             </p>
 
-            {/* matched retreat */}
             <Link href={r.href} style={{ textDecoration: "none", display: "block" }}>
               <div style={{
                 border: "0.5px solid var(--color-border)", borderRadius: 6,
-                overflow: "hidden", marginBottom: 36, background: "var(--color-bg-surface)",
+                overflow: "hidden", marginBottom: 28, background: "var(--color-bg-surface)",
               }}>
                 <div style={{ position: "relative", width: "100%", aspectRatio: "16/9" }}>
                   <Image src={r.image} alt={r.retreat} fill style={{ objectFit: "cover" }} sizes="(max-width:768px) 100vw, 620px" />
@@ -303,49 +348,16 @@ export default function QuizWidget() {
               </div>
             </Link>
 
-            {/* email capture */}
-            {state === "done" ? (
-              <div style={{ borderTop: "0.5px solid var(--color-border)", paddingTop: 28 }}>
-                <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 22, color: "var(--color-text-headline)", marginBottom: 8 }}>
-                  it&apos;s on its way.
-                </p>
-                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.7, color: "var(--color-text-body)" }}>
-                  check your inbox — we&apos;ve sent your result and a bit more about what the week actually looks like.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={submit} style={{ borderTop: "0.5px solid var(--color-border)", paddingTop: 28 }}>
-                <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 21, color: "var(--color-text-headline)", marginBottom: 8 }}>
-                  want this in your inbox?
-                </p>
-                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, lineHeight: 1.6, color: "var(--color-text-body)", marginBottom: 20 }}>
-                  we&apos;ll send your result plus what a day on retreat actually looks like. no spam, and you can leave any time.
-                </p>
-                <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                  <input style={input} type="text" placeholder="first name" value={name} onChange={(e) => setName(e.target.value)} aria-label="first name" />
-                  <input style={input} type="email" required placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} aria-label="email" />
-                  {err && <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-accent)" }}>{err}</p>}
-                  <button
-                    type="submit"
-                    disabled={state === "sending"}
-                    style={{
-                      padding: "14px 28px", background: "var(--color-accent)",
-                      border: "1px solid var(--color-accent)", color: "#FFFCF5",
-                      fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: ".04em",
-                      cursor: state === "sending" ? "not-allowed" : "pointer",
-                      opacity: state === "sending" ? 0.6 : 1, borderRadius: 0,
-                    }}
-                  >
-                    {state === "sending" ? "sending..." : "send me my result →"}
-                  </button>
-                </div>
-              </form>
-            )}
+            <div style={{ borderTop: "0.5px solid var(--color-border)", paddingTop: 24 }}>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.7, color: "var(--color-text-body)" }}>
+                we&apos;ve sent this to <strong style={{ color: "var(--color-text-headline)", fontWeight: 500 }}>{email}</strong> — along with a little more about what the week actually looks like.
+              </p>
+            </div>
 
             <button
-              onClick={() => { setAnswers([]); setStep(0); setState("idle"); setErr(""); }}
+              onClick={() => { setAnswers([]); setStep(0); setPhase("quiz"); }}
               style={{
-                marginTop: 28, background: "none", border: "none", cursor: "pointer",
+                marginTop: 24, background: "none", border: "none", cursor: "pointer",
                 fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-text-body)", padding: 0,
               }}
             >

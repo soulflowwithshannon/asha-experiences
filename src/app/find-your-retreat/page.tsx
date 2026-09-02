@@ -37,7 +37,7 @@ export default function FindYourRetreatPage() {
                 margin: "0 auto",
               }}
             >
-              not about where you want to go — about where you actually are. answer honestly and we&apos;ll tell you which one is yours.
+              there are no wrong answers. just choose whichever response pulls at you most — even if you relate to more than one.
             </p>
           </FadeIn>
         </div>

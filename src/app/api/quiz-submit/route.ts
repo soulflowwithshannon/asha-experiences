@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
   const audienceId = process.env.RESEND_AUDIENCE_ID;
 
   try {
-    const { name, email, archetype } = await request.json();
+    const { name, email, archetype, stage } = await request.json();
 
     if (!email) {
       return NextResponse.json({ error: "Email is required." }, { status: 400 });
@@ -43,6 +43,21 @@ export async function POST(request: NextRequest) {
     }
 
     const r = RESULTS[archetype] ?? RESULTS.reconnector;
+
+    /* stage "start" — she's entered her details but hasn't answered yet.
+       Add her to the audience now so an abandoned quiz is still a captured lead. */
+    if (stage === "start") {
+      if (audienceId) {
+        try {
+          await resend.contacts.create({ audienceId, email, firstName: name || undefined, unsubscribed: false });
+        } catch (e) {
+          console.error("quiz-submit: audience add failed", e);
+        }
+      } else {
+        console.warn("quiz-submit: RESEND_AUDIENCE_ID is not set — contact not added to audience");
+      }
+      return NextResponse.json({ success: true });
+    }
 
     // 1. Add to the Resend audience. Never let a duplicate/list failure lose the lead.
     if (audienceId) {
