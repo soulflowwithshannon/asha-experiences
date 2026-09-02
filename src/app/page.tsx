@@ -85,7 +85,7 @@ function ParallaxHero() {
             whiteSpace: "normal",
             wordWrap: "break-word",
             margin: "0 auto 40px",
-            lineHeight: 1.7,
+            lineHeight: 1.3,
           }}
         >
           international retreats for women choosing themselves
