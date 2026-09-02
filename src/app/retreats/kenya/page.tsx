@@ -258,6 +258,36 @@ const b = (text: string) => <strong style={{ fontWeight: 600 }}>{text}</strong>;
 
 const faqs: { question: string; answer: ReactNode }[] = [
   {
+    question: "I've never done a retreat before — is that a problem?",
+    answer: <p>most women who show up at our retreats haven&apos;t either. you don&apos;t need retreat experience. you need enough curiosity to say yes before you feel ready.</p>,
+  },
+  {
+    question: "I'm in the middle of something really hard right now — a breakup, a loss, a big change. is this the right time, or should I wait until I'm more \"together\"?",
+    answer: <p>this is usually exactly the right time. most women don&apos;t come to us after they&apos;ve healed — they come while they&apos;re still in it. you don&apos;t need to arrive with it figured out. that&apos;s not the prerequisite. showing up is.</p>,
+  },
+  {
+    question: "I don't really \"do\" vulnerability. do I have to share personal stuff?",
+    answer: <p>no. some women arrive ready to go deep on day one. others need the first day or two just to watch and feel safe before they open up, if they open up at all. both are welcome. nothing here is mandatory.</p>,
+  },
+  {
+    question: "I never take time for myself. how do I even justify this?",
+    answer: <p>we hear this from almost every woman who books. the ones who feel like they can&apos;t afford to take a week for themselves are usually the ones who need it most. this isn&apos;t selfish — it&apos;s the thing that lets you keep showing up for everyone else without running yourself empty.</p>,
+  },
+  {
+    question: "what's the vibe of the group?",
+    answer: (
+      <div>
+        <p style={{ marginBottom: 12 }}>intimate. we cap it at 10 women.</p>
+        <p style={{ marginBottom: 12 }}>you&apos;ll find a mix — late 20s to 50s, all coming from different places in life. some are mid-heartbreak, some are pivoting careers, some are deep in motherhood, some just need a few days that are entirely their own. there&apos;s always the same thing underneath it all — a readiness to actually show up for themselves.</p>
+        <p>by day two, you&apos;d never guess they were strangers.</p>
+      </div>
+    ),
+  },
+  {
+    question: "do I have to come with a friend or know someone?",
+    answer: <p>not at all. most women come solo — and many say the sisterhood they found was the most unexpected gift. this space is designed to make you feel safe, welcome, and deeply connected from day one.</p>,
+  },
+  {
     question: "what do I need for traveling to Kenya?",
     answer: (
       <div>
@@ -316,28 +346,6 @@ const faqs: { question: string; answer: ReactNode }[] = [
     ),
   },
   {
-    question: "can dietary restrictions be accommodated?",
-    answer: <p>yes. the retreat center can accommodate most dietary preferences — vegetarian, vegan, gluten-free, and dairy-free. we&apos;ll ask for your dietary needs after booking.</p>,
-  },
-  {
-    question: "what's the vibe of the group?",
-    answer: (
-      <div>
-        <p style={{ marginBottom: 12 }}>intimate. we cap it at 10 women.</p>
-        <p style={{ marginBottom: 12 }}>you&apos;ll find a mix — late 20s to 50s, all coming from different places in life. some are mid-heartbreak, some are pivoting careers, some are deep in motherhood, some just need a few days that are entirely their own. there&apos;s always the same thing underneath it all — a readiness to actually show up for themselves.</p>
-        <p>by day two, you&apos;d never guess they were strangers.</p>
-      </div>
-    ),
-  },
-  {
-    question: "do I have to come with a friend or know someone?",
-    answer: <p>not at all. most women come solo — and many say the sisterhood they found was the most unexpected gift. this space is designed to make you feel safe, welcome, and deeply connected from day one.</p>,
-  },
-  {
-    question: "will there be free time?",
-    answer: <p>absolutely. this retreat blends guided experiences with spaciousness so you can rest, reflect, or connect as you need. your energy is honored every step of the way.</p>,
-  },
-  {
     question: "can I arrive early or stay longer in Kenya?",
     answer: (
       <div>
@@ -367,6 +375,15 @@ const faqs: { question: string; answer: ReactNode }[] = [
       </div>
     ),
   },
+  {
+    question: "can dietary restrictions be accommodated?",
+    answer: <p>yes. the retreat center can accommodate most dietary preferences — vegetarian, vegan, gluten-free, and dairy-free. we&apos;ll ask for your dietary needs after booking.</p>,
+  },
+  {
+    question: "will there be free time?",
+    answer: <p>absolutely. this retreat blends guided experiences with spaciousness so you can rest, reflect, or connect as you need. your energy is honored every step of the way.</p>,
+  },
+
 ];
 
 export default function KenyaPage() {

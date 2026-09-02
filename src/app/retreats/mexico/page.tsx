@@ -205,22 +205,20 @@ function ParallaxImage({ src, alt, height, objectPosition = "center", sizes = "1
 
 const faqs: { question: string; answer: ReactNode }[] = [
   {
-    question: "how do I get there?",
-    answer: (
-      <div>
-        <p style={{ marginBottom: 12 }}>fly into <strong>Cancun International Airport (CUN)</strong>. the retreat center is about a 40-minute drive away in Puerto Morelos.</p>
-        <p style={{ marginBottom: 12 }}><strong>Arrive:</strong> aim to land by 3pm on October 27th so we can all travel together to Lunita. we'll coordinate group transport.</p>
-        <p><strong>Depart:</strong> October 31st. we'll organize group transport back to the airport.</p>
-      </div>
-    ),
+    question: "I've never done a retreat before — is that a problem?",
+    answer: <p>most women who show up at our retreats haven&apos;t either. you don&apos;t need retreat experience. you need enough curiosity to say yes before you feel ready.</p>,
   },
   {
-    question: "do I need a visa?",
-    answer: <p>most travelers do not need a visa to enter Mexico for short stays. check your country's specific requirements. we'll send a full pre-travel guide once you're booked.</p>,
+    question: "I'm in the middle of something really hard right now — a breakup, a loss, a big change. is this the right time, or should I wait until I'm more \"together\"?",
+    answer: <p>this is usually exactly the right time. most women don&apos;t come to us after they&apos;ve healed — they come while they&apos;re still in it. you don&apos;t need to arrive with it figured out. that&apos;s not the prerequisite. showing up is.</p>,
   },
   {
-    question: "can dietary restrictions be accommodated?",
-    answer: <p>yes. the retreat center can accommodate most dietary preferences — vegetarian, vegan, gluten-free, and dairy-free. we'll ask for your dietary needs after booking.</p>,
+    question: "I don't really \"do\" vulnerability. do I have to share personal stuff?",
+    answer: <p>no. some women arrive ready to go deep on day one. others need the first day or two just to watch and feel safe before they open up, if they open up at all. both are welcome. nothing here is mandatory.</p>,
+  },
+  {
+    question: "I never take time for myself. how do I even justify this?",
+    answer: <p>we hear this from almost every woman who books. the ones who feel like they can&apos;t afford to take a week for themselves are usually the ones who need it most. this isn&apos;t selfish — it&apos;s the thing that lets you keep showing up for everyone else without running yourself empty.</p>,
   },
   {
     question: "what's the vibe of the group?",
@@ -237,8 +235,18 @@ const faqs: { question: string; answer: ReactNode }[] = [
     answer: <p>not at all. most women come solo — and many say the sisterhood they found was the most unexpected gift. this space is designed to make you feel safe, welcome, and deeply connected from day one.</p>,
   },
   {
-    question: "will there be free time?",
-    answer: <p>yes. this retreat blends guided experiences with spaciousness so you can rest, reflect, or just be. your energy is honored the whole way through.</p>,
+    question: "how do I get there?",
+    answer: (
+      <div>
+        <p style={{ marginBottom: 12 }}>fly into <strong>Cancun International Airport (CUN)</strong>. the retreat center is about a 40-minute drive away in Puerto Morelos.</p>
+        <p style={{ marginBottom: 12 }}><strong>Arrive:</strong> aim to land by 3pm on October 27th so we can all travel together to Lunita. we'll coordinate group transport.</p>
+        <p><strong>Depart:</strong> October 31st. we'll organize group transport back to the airport.</p>
+      </div>
+    ),
+  },
+  {
+    question: "do I need a visa?",
+    answer: <p>most travelers do not need a visa to enter Mexico for short stays. check your country's specific requirements. we'll send a full pre-travel guide once you're booked.</p>,
   },
   {
     question: "can I arrive early or stay longer?",
@@ -259,6 +267,15 @@ const faqs: { question: string; answer: ReactNode }[] = [
       </div>
     ),
   },
+  {
+    question: "can dietary restrictions be accommodated?",
+    answer: <p>yes. the retreat center can accommodate most dietary preferences — vegetarian, vegan, gluten-free, and dairy-free. we'll ask for your dietary needs after booking.</p>,
+  },
+  {
+    question: "will there be free time?",
+    answer: <p>yes. this retreat blends guided experiences with spaciousness so you can rest, reflect, or just be. your energy is honored the whole way through.</p>,
+  },
+
 ];
 
 export default function MexicoPage() {
