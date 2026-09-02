@@ -197,6 +197,16 @@ export default function ContactPage() {
                   >
                     {formState === "submitting" ? "sending..." : "send message →"}
                   </button>
+                  <p style={{
+                    fontFamily: "var(--font-dm-sans)",
+                    fontSize: 12,
+                    lineHeight: 1.6,
+                    color: "var(--color-text-body)",
+                    textAlign: "center",
+                    marginTop: 4,
+                  }}>
+                    this goes straight to our inbox. no helpdesk, no ticket number — Ashley or Shannon will write back.
+                  </p>
                 </form>
               )}
             </div>

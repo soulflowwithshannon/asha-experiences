@@ -85,6 +85,18 @@ export default function Footer() {
           marginTop: 32,
         }}
       >
+        two women. no team, no ads. just retreats we&apos;d want to go on ourselves.
+      </p>
+
+      <p
+        style={{
+          fontFamily: "var(--font-dm-sans)",
+          fontSize: 12,
+          color: "var(--color-text-muted)",
+          textAlign: "center",
+          marginTop: 10,
+        }}
+      >
         © 2026 ASHA Experiences LLC
       </p>
 

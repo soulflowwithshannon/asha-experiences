@@ -398,6 +398,34 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* SECTION 6b — NO TEAM */}
+      <section style={{ background: "var(--color-bg-page)", padding: "100px 32px" }}>
+        <div style={{ maxWidth: 620, margin: "0 auto", textAlign: "center" }}>
+          <FadeIn>
+            <h2 style={{
+              fontFamily: "var(--font-fraunces)",
+              fontSize: "clamp(26px,3.6vw,36px)",
+              color: "var(--color-text-headline)",
+              fontWeight: 700,
+              marginBottom: 22,
+            }}>
+              there is no team.
+            </h2>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <p style={{
+              fontFamily: "var(--font-dm-sans)",
+              fontSize: 15,
+              lineHeight: 1.9,
+              color: "var(--color-text-body)",
+              textWrap: "balance",
+            }}>
+              it&apos;s the two of us. we answer the emails, we plan the itineraries, and we&apos;re the ones on the ground with you for the whole week. no assistants, no agency, no ads.
+            </p>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* SECTION 7 — CLOSING CTA */}
       <section style={{ position: "relative", padding: "160px 32px", background: "#2D2521", textAlign: "center", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0 }}>
