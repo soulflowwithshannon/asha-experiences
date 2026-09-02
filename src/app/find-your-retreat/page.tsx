@@ -31,13 +31,13 @@ export default function FindYourRetreatPage() {
               style={{
                 fontFamily: "var(--font-dm-sans)",
                 fontSize: 15,
-                lineHeight: 1.8,
+                lineHeight: 1.4,
                 color: "var(--color-text-body)",
                 maxWidth: 420,
                 margin: "0 auto",
               }}
             >
-              there are no wrong answers. just choose whichever response pulls at you most — even if you relate to more than one.
+              there are no wrong answers. just choose whichever response pulls at you most, even if you relate to more than one.
             </p>
           </FadeIn>
         </div>
