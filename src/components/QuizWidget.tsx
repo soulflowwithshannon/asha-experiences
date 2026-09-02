@@ -215,10 +215,10 @@ export default function QuizWidget() {
                 fontSize: "clamp(21px,3.6vw,25px)", lineHeight: 1.25,
                 color: "var(--color-text-headline)", marginBottom: 10,
               }}>
-                you don't need to pick a country. you need to pick a feeling.
+                don&apos;t overthink this.
               </h2>
               <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.6, color: "var(--color-text-body)", marginBottom: 22 }}>
-                five questions, about a minute. we&apos;ll send your result so you can keep it.
+                just choose whichever response pulls at you most, even if you relate to more than one. five questions, about a minute. we&apos;ll send your result so you can keep it.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                 <input style={input} type="text" required placeholder="first name" value={name} onChange={(e) => setName(e.target.value)} aria-label="first name" />

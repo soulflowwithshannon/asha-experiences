@@ -14,29 +14,15 @@ export default function FindYourRetreatPage() {
               style={{
                 fontFamily: "var(--font-cormorant)",
                 fontWeight: 300,
-                fontSize: "clamp(40px,10vw,72px)",
-                lineHeight: 1.02,
+                fontSize: "clamp(34px,7.5vw,58px)",
+                lineHeight: 1.05,
                 color: "var(--color-text-headline)",
-                marginBottom: 20,
-              }}
-            >
-              find your retreat
-            </h1>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <p
-              style={{
-                fontFamily: "var(--font-dm-sans)",
-                fontSize: 15,
-                lineHeight: 1.4,
-                color: "var(--color-text-body)",
-                maxWidth: 480,
-                margin: "0 auto",
+                marginBottom: 0,
                 textWrap: "balance",
               }}
             >
-              don&apos;t overthink this. just choose whichever response pulls at you most, even if you relate to more than one.
-            </p>
+              find your experience archetype
+            </h1>
           </FadeIn>
         </div>
       </section>

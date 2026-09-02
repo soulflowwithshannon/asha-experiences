@@ -121,7 +121,7 @@ export default function Nav() {
               transition: "color 0.2s ease",
             }}
           >
-            find your retreat
+            quiz
           </Link>
 
           {/* Retreats dropdown */}
@@ -290,7 +290,7 @@ export default function Nav() {
           </Link>
 
           <Link href="/find-your-retreat" style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: pathname === "/find-your-retreat" ? "var(--color-accent)" : "var(--color-text-body)", textDecoration: "none" }}>
-            find your retreat
+            quiz
           </Link>
 
           {/* Mobile retreats accordion */}
