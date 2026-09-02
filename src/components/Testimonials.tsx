@@ -34,12 +34,14 @@ export const quotes: Quote[] = [
 export default function Testimonials({
   items = quotes,
   maxWidth = 1100,
+  margin = "0 auto 48px",
 }: {
   items?: Quote[];
   maxWidth?: number;
+  margin?: string;
 }) {
   return (
-    <div style={{ maxWidth, margin: "0 auto 48px" }}>
+    <div style={{ maxWidth, margin }}>
       <div
         style={{
           display: "grid",

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import FadeIn from "@/components/FadeIn";
-import Testimonials from "@/components/Testimonials";
+import Testimonials, { quotes } from "@/components/Testimonials";
 import GuidesCompact from "@/components/GuidesCompact";
 import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/AnimatedText";
 
@@ -320,7 +320,7 @@ export default function HomePage() {
             <style>{`@media(max-width:640px){.testimonial-break{display:block}}`}</style>
           </FadeIn>
 
-          <Testimonials />
+          <Testimonials items={quotes.slice(0, 3)} />
 
           <FadeIn delay={0.1}>
             <div style={{ maxWidth: 900, margin: "0 auto", position: "relative", borderRadius: 8, overflow: "hidden" }}>
@@ -329,6 +329,8 @@ export default function HomePage() {
               </video>
             </div>
           </FadeIn>
+
+          <Testimonials items={quotes.slice(3)} margin="48px auto 0" />
 
         </div>
       </section>
