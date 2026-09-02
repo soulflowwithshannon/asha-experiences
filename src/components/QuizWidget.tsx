@@ -11,9 +11,9 @@ const QUESTIONS: { q: string; options: { label: string; type: Archetype }[] }[] 
   {
     q: "what's pulling at you right now?",
     options: [
-      { label: "something in my life just ended, and i don't fully know who i am without it yet.", type: "releaser" },
-      { label: "i want to feel my own aliveness again — not managed, not scheduled, just alive.", type: "wild" },
-      { label: "i just need everything to go quiet. all of it.", type: "dusk" },
+      { label: "something in my life just ended, and I don't fully know who I am without it yet.", type: "releaser" },
+      { label: "I want to feel my own aliveness again — not managed, not scheduled, just alive.", type: "wild" },
+      { label: "I just need everything to go quiet. all of it.", type: "dusk" },
     ],
   },
   {
@@ -36,7 +36,7 @@ const QUESTIONS: { q: string; options: { label: string; type: Archetype }[] }[] 
     q: "what's been the loudest thing in your head lately?",
     options: [
       { label: "the version of me that existed before all this changed.", type: "releaser" },
-      { label: "how long it's been since i felt anything at all.", type: "wild" },
+      { label: "how long it's been since I felt anything at all.", type: "wild" },
       { label: "everyone else's needs, on a loop, with no off switch.", type: "dusk" },
     ],
   },

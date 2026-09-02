@@ -53,6 +53,16 @@ export async function POST(request: NextRequest) {
       } else {
         console.warn("quiz-submit: RESEND_AUDIENCE_ID is not set — contact not added to audience");
       }
+
+      // tell us straight away, so an abandoned quiz is still a lead we know about
+      await resend.emails.send({
+        from: "ASHA Experiences <connect@ashaexperiences.com>",
+        to: ["connect@ashaexperiences.com"],
+        replyTo: email,
+        subject: `quiz started — ${name || email}`,
+        text: `${name || "(no name)"} <${email}> just started the quiz.\n\nyou'll get a second email with her result if she finishes.`,
+      });
+
       return NextResponse.json({ success: true });
     }
 
@@ -107,8 +117,8 @@ if you have questions, just reply to this email. it comes straight to us — Ash
       from: "ASHA Experiences <connect@ashaexperiences.com>",
       to: ["connect@ashaexperiences.com"],
       replyTo: email,
-      subject: `quiz lead — ${r.title} — ${name || email}`,
-      text: `name: ${name || "(not given)"}\nemail: ${email}\nresult: ${r.title}\nmatched retreat: ${r.retreat}`,
+      subject: `quiz completed — ${r.title} — ${name || email}`,
+      text: `name: ${name || "(not given)"}\nemail: ${email}\nresult: ${r.title}\nmatched retreat: ${r.retreat}\n\nshe has been sent her result and added to the audience.`,
     });
 
     return NextResponse.json({ success: true });
