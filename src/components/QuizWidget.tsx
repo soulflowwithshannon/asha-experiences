@@ -149,14 +149,23 @@ export default function QuizWidget() {
   }
 
   const btn: React.CSSProperties = {
-    display: "block", width: "100%", textAlign: "left",
-    padding: "18px 20px", marginBottom: 12,
-    background: "var(--color-bg-page)",
-    border: "0.5px solid var(--color-border)",
+    display: "flex", alignItems: "center", gap: 14,
+    width: "100%", textAlign: "left",
+    padding: "16px 18px", marginBottom: 10,
+    background: "var(--color-bg-surface)",
+    border: "0.5px solid var(--color-bg-card)",
     borderRadius: 4, cursor: "pointer",
-    fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.5,
-    color: "var(--color-text-body)",
-    transition: "border-color .2s ease, background .2s ease, transform .2s ease",
+    fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.45,
+    color: "var(--color-text-headline)",
+    transition: "background .2s ease, border-color .2s ease, color .2s ease",
+  };
+
+  const key: React.CSSProperties = {
+    flex: "none", width: 24, height: 24, borderRadius: "50%",
+    display: "flex", alignItems: "center", justifyContent: "center",
+    fontFamily: "var(--font-dm-sans)", fontSize: 11, fontWeight: 500,
+    background: "var(--color-bg-card)", color: "var(--color-text-headline)",
+    transition: "background .2s ease, color .2s ease",
   };
 
   const input: React.CSSProperties = {
@@ -172,17 +181,17 @@ export default function QuizWidget() {
       {/* progress */}
       {!done && (
         <div style={{ marginBottom: 36 }}>
-          <div style={{ display: "flex", gap: 6, marginBottom: 14 }}>
+          <div style={{ display: "flex", gap: 5, marginBottom: 12 }}>
             {QUESTIONS.map((_, i) => (
               <div key={i} style={{
-                flex: 1, height: 2, borderRadius: 2,
-                background: i <= step ? "var(--color-accent)" : "var(--color-border)",
+                flex: 1, height: 3, borderRadius: 2,
+                background: i <= step ? "var(--color-accent)" : "var(--color-bg-card)",
                 transition: "background .4s ease",
               }} />
             ))}
           </div>
-          <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "var(--color-text-body)" }}>
-            {step + 1} of {QUESTIONS.length}
+          <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 10, letterSpacing: ".16em", textTransform: "uppercase", color: "var(--color-accent)" }}>
+            question {step + 1} of {QUESTIONS.length}
           </p>
         </div>
       )}
@@ -197,27 +206,34 @@ export default function QuizWidget() {
             transition={{ duration: 0.45, ease }}
           >
             <h2 style={{
-              fontFamily: "var(--font-cormorant)", fontStyle: "italic",
-              fontSize: "clamp(24px,4.5vw,32px)", lineHeight: 1.25,
-              color: "var(--color-text-headline)", marginBottom: 28,
+              fontFamily: "var(--font-fraunces)", fontWeight: 700,
+              fontSize: "clamp(22px,4vw,27px)", lineHeight: 1.25,
+              color: "var(--color-text-headline)", marginBottom: 24,
             }}>
               {QUESTIONS[step].q}
             </h2>
 
-            {QUESTIONS[step].options.map((o) => (
+            {QUESTIONS[step].options.map((o, i) => (
               <button
                 key={o.label}
                 onClick={() => choose(o.type)}
                 style={btn}
                 onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "var(--color-accent)";
                   e.currentTarget.style.borderColor = "var(--color-accent)";
-                  e.currentTarget.style.background = "var(--color-bg-surface)";
+                  e.currentTarget.style.color = "#FFFCF5";
+                  const k = e.currentTarget.firstElementChild as HTMLElement;
+                  if (k) { k.style.background = "rgba(255,252,245,0.25)"; k.style.color = "#FFFCF5"; }
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = "var(--color-border)";
-                  e.currentTarget.style.background = "var(--color-bg-page)";
+                  e.currentTarget.style.background = "var(--color-bg-surface)";
+                  e.currentTarget.style.borderColor = "var(--color-bg-card)";
+                  e.currentTarget.style.color = "var(--color-text-headline)";
+                  const k = e.currentTarget.firstElementChild as HTMLElement;
+                  if (k) { k.style.background = "var(--color-bg-card)"; k.style.color = "var(--color-text-headline)"; }
                 }}
               >
+                <span style={key} aria-hidden="true">{["A", "B", "C"][i]}</span>
                 {o.label}
               </button>
             ))}
