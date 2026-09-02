@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getPost, getAllSlugs } from "@/lib/blog";
+import QuizCTA from "@/components/QuizCTA";
 
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -147,32 +148,40 @@ export default async function BlogPost({
         <hr style={{ border: "none", borderTop: "0.5px solid var(--color-border)" }} />
       </div>
 
-      {/* Body */}
-      {post.body.includes("__TESTIMONIAL_VIDEO__") ? (
-        <>
+      {/* Body — split on inline tokens so real React blocks can sit mid-article */}
+      {post.body.split(/(__TESTIMONIAL_VIDEO__|__QUIZ_CTA__)/).map((part, i) => {
+        if (part === "__TESTIMONIAL_VIDEO__") {
+          return (
+            <div key={i} style={{ maxWidth: 720, margin: "48px auto", padding: "0 32px" }}>
+              <video controls preload="metadata" style={{ width: "100%", display: "block", borderRadius: 4 }}>
+                <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Testimonials.mp4" type="video/mp4" />
+              </video>
+            </div>
+          );
+        }
+        if (part === "__QUIZ_CTA__") {
+          return (
+            <QuizCTA
+              key={i}
+              variant="inline"
+              heading="or let us just tell you"
+              body="five questions about how you're actually feeling — and we'll match you to one of the three."
+            />
+          );
+        }
+        if (!part.trim()) return null;
+        return (
           <article
+            key={i}
             className="blog-body"
-            style={{ maxWidth: 720, margin: "0 auto", padding: "0 32px 0" }}
-            dangerouslySetInnerHTML={{ __html: post.body.split("__TESTIMONIAL_VIDEO__")[0] }}
+            style={{ maxWidth: 720, margin: "0 auto", padding: "0 32px" }}
+            dangerouslySetInnerHTML={{ __html: part }}
           />
-          <div style={{ maxWidth: 720, margin: "48px auto", padding: "0 32px" }}>
-            <video controls preload="metadata" style={{ width: "100%", display: "block", borderRadius: 4 }}>
-              <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Testimonials.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <article
-            className="blog-body"
-            style={{ maxWidth: 720, margin: "0 auto", padding: "0 32px 32px" }}
-            dangerouslySetInnerHTML={{ __html: post.body.split("__TESTIMONIAL_VIDEO__")[1] }}
-          />
-        </>
-      ) : (
-        <article
-          className="blog-body"
-          style={{ maxWidth: 720, margin: "0 auto", padding: "0 32px 32px" }}
-          dangerouslySetInnerHTML={{ __html: post.body }}
-        />
-      )}
+        );
+      })}
+
+      {/* Closing CTA */}
+      <QuizCTA />
 
       {/* Back link */}
       <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 32px 64px" }}>

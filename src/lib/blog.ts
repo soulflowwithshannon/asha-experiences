@@ -646,6 +646,8 @@ November 28 – December 4, 2027</p>
 
 <p>The retreat that scares you slightly is often the one you need most.</p>
 
+__QUIZ_CTA__
+
 <p>You can also <a href="/contact">reach out to us directly</a> — we'll ask you a few questions and help you find the right fit for where you are right now.</p>
     `.trim(),
   },

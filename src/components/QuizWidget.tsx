@@ -212,15 +212,15 @@ export default function QuizWidget() {
             }}>
               <h2 style={{
                 fontFamily: "var(--font-fraunces)", fontWeight: 700,
-                fontSize: "clamp(21px,3.6vw,25px)", lineHeight: 1.25,
-                color: "var(--color-text-headline)", marginBottom: 10,
+                fontSize: "clamp(21px,3.6vw,25px)", lineHeight: 1.3,
+                color: "var(--color-text-headline)", marginBottom: 18,
               }}>
-                five questions, a few minutes.
+                five questions.
               </h2>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.6, color: "var(--color-text-body)", marginBottom: 14 }}>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.7, color: "var(--color-text-body)", marginBottom: 12 }}>
                 don&apos;t overthink this. just choose whichever response pulls at you most, even if you relate to more than one.
               </p>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.6, color: "var(--color-text-body)", marginBottom: 22 }}>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.7, color: "var(--color-text-body)", marginBottom: 22 }}>
                 we&apos;ll send your result so you can keep it.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
