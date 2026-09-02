@@ -2,7 +2,7 @@
 
 import FadeIn from "@/components/FadeIn";
 
-export type Quote = { text: string; name: string; context?: string };
+export type Quote = { text: string; name: string };
 
 export const quotes: Quote[] = [
   {
@@ -15,22 +15,19 @@ export const quotes: Quote[] = [
   },
   {
     text: "in just 6 days I learned the importance of having community who can share openly and vulnerably — and I learned to see the light I see in others in myself too.",
-    name: "past participant",
+    name: "Jess",
   },
   {
-    text: "I've had several Reiki sessions before with other healers but she's different. I felt tingles throughout my body and she shared insight that really resonated with me. she is truly gifted and a beautiful soul.",
+    text: "Ashley is an amazing healer. I've had several Reiki sessions before with other healers but she's different. I felt tingles throughout my body and she shared insight that really resonated with me. she is truly gifted and a beautiful soul.",
     name: "Sarah",
-    context: "on Ashley",
   },
   {
-    text: "I had terrible anxiety and was in so much pain physically and mentally. it helped me so much. she has a calming, nurturing energy and creates a safe space.",
+    text: "I saw Ashley for Reiki and sound bath. I had terrible anxiety and was in so much pain physically and mentally. it helped me so much. she has a calming, nurturing energy.",
     name: "Anna",
-    context: "on Ashley",
   },
   {
-    text: "thank you so much for this session and connecting me with incredible women who carry so much strength, vulnerability, and courage.",
+    text: "thank you so much for this session Shannon, and connecting me with incredible women who carry so much strength, vulnerability, and courage.",
     name: "Amber",
-    context: "on Shannon",
   },
 ];
 
@@ -83,9 +80,6 @@ export default function Testimonials({
                 }}
               >
                 {q.name}
-                {q.context && (
-                  <span style={{ color: "var(--color-text-body)" }}> · {q.context}</span>
-                )}
               </footer>
             </blockquote>
           </FadeIn>
