@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useRef, useState, ReactNode } from "react";
 import FadeIn from "@/components/FadeIn";
+import Testimonials from "@/components/Testimonials";
 import MeetUs from "@/components/MeetUs";
 import GuidesCompact from "@/components/GuidesCompact";
 import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/AnimatedText";
@@ -753,6 +754,8 @@ export default function KenyaPage() {
           <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 48 }}>
             women who came<span className="testimonial-break"> </span>back different
           </h2>
+          <Testimonials />
+
           <FadeIn delay={0.1}>
             <div style={{ maxWidth: 900, margin: "0 auto", position: "relative", borderRadius: 8, overflow: "hidden" }}>
               <video controls preload="metadata" style={{ width: "100%", display: "block", borderRadius: 8 }}>
