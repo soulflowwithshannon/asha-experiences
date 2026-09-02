@@ -12,16 +12,16 @@ export default function FindYourRetreatPage() {
           <FadeIn delay={0.05}>
             <h1
               style={{
-                fontFamily: "var(--font-cormorant)",
-                fontWeight: 300,
-                fontSize: "clamp(34px,7.5vw,58px)",
+                fontFamily: "var(--font-fraunces)",
+                fontWeight: 700,
+                fontSize: "clamp(30px,6.5vw,52px)",
                 lineHeight: 1.05,
                 color: "var(--color-text-headline)",
                 marginBottom: 0,
                 textWrap: "balance",
               }}
             >
-              find your experience archetype
+              find your ASHA experience archetype
             </h1>
           </FadeIn>
         </div>
