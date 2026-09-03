@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Journal — Women's Retreats, Healing & Intentional Travel",
+  title: {
+    default: "Journal — Women's Retreats, Healing & Intentional Travel",
+    template: "%s | ASHA Experiences",
+  },
   description: "Honest writing about women's retreats, healing practices, solo travel, and what it means to choose yourself. From the team behind ASHA Experiences.",
   keywords: [
     "women's retreat blog",

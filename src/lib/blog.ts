@@ -139,6 +139,73 @@ November 28 – December 4, 2027</p>
     `.trim(),
   },
   {
+    slug: "who-am-i-outside-of-my-roles",
+    title: "Who am I outside of all the roles I carry?",
+    description: "A journaling practice for women who've lost themselves in busyness and distraction. 4 prompts to help you reconnect with who you actually are.",
+    date: "2026-09-02",
+    readTime: "5 min read",
+    category: "Healing Practices",
+    body: `
+<p>I felt shocked when I realized I didn't really know who I was.</p>
+
+<p>And honestly — maybe I never gave myself the space to find out.</p>
+
+<p>I was always on the go. Numbing out with alcohol, distractions, staying busy enough that the question never had room to surface. And when it finally did, I didn't have an answer.</p>
+
+<p>That was uncomfortable. But it was also the most important moment of my life.</p>
+
+<p>Because it was the first time I stopped running long enough to actually ask.</p>
+
+<p>If you're reading this, something in you is asking too.</p>
+
+<p>Maybe you've been so deep in the doing — the work, the relationships, the showing up for everyone else — that you've lost the thread back to yourself.</p>
+
+<p>Maybe you're at a crossroads. Something ended, something shifted, and now you're standing in a gap wondering who you actually are outside of all of it.</p>
+
+<p><strong>You don't need to have the answer yet. You just need to be willing to sit with the question.</strong></p>
+
+<h2>Why we stop asking</h2>
+
+<p>It's easier not to.</p>
+
+<p>Staying busy, staying needed, staying distracted — these aren't character flaws. They're how a lot of us learned to cope with not feeling like enough just as we are.</p>
+
+<p>But at some point the noise stops working. The distraction stops sticking. And what's underneath starts asking to be seen.</p>
+
+<p><em>That's not a breakdown. That's your inner voice getting louder because you're finally ready to hear it.</em></p>
+
+<h2>A journaling practice to start coming home</h2>
+
+<p>20 minutes. Somewhere quiet. Phone face down. No right answers.</p>
+
+<p><strong>1. Who was I before I learned to be useful?</strong><br />
+What did you love before the roles stacked up? What made you feel alive before you started optimizing your life around everyone else's needs?</p>
+
+<p><strong>2. Which roles am I wearing that no longer fit?</strong><br />
+Not the ones you want to shed entirely. Just the ones that feel tight. The version of you that made sense once but is ready for an update.</p>
+
+<p><strong>3. What have I been numbing that's worth feeling?</strong><br />
+This one takes courage. What are the distractions actually covering? What would you find if you got quiet enough to look?</p>
+
+<p><strong>4. Who am I outside of what I do for others?</strong><br />
+Sit with this one. <em>"I don't know"</em> is a completely valid answer. Write it down anyway. That's where it starts.</p>
+
+<h2>This isn't about fixing yourself</h2>
+
+<p>It's about stopping long enough to remember that there's a self worth coming back to.</p>
+
+<p>I spent years not giving myself that space. The retreats I now lead exist because I finally did — and what I found on the other side changed everything.</p>
+
+<p>You don't have to figure it all out today.</p>
+
+<p><strong>You just have to start asking.</strong></p>
+
+<hr />
+
+<p>Ready for more than a journaling practice? We'd love to have you with us in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, or <a href="/retreats/kenya">Kenya</a>.</p>
+    `.trim(),
+  },
+  {
     slug: "what-to-expect-at-your-first-womens-retreat",
     title: "What to expect at your first women's retreat",
     description: "Nervous about what actually happens at a women's retreat? Here's an honest breakdown — the practices, the people, and what most women say surprised them most.",
