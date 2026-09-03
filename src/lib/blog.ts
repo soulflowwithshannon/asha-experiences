@@ -145,6 +145,7 @@ November 28 â€“ December 4, 2027</p>
     date: "2026-09-02",
     readTime: "5 min read",
     theme: "the inner work",
+    image: "/images/IMG_3342.jpg",
     body: `
 <p>I felt shocked when I realized I didn't really know who I was.</p>
 
@@ -212,6 +213,7 @@ Sit with this one. <em>"I don't know"</em> is a completely valid answer. Write i
     date: "2026-09-02",
     readTime: "4 min read",
     theme: "the inner work",
+    image: "/images/IMG_3160.jpg",
     body: `
 <p>Pure joy, I've realized, is pure presence.</p>
 
@@ -271,6 +273,7 @@ This is the hardest one. Joy has a way of being immediately followed by guilt â€
     date: "2026-09-02",
     readTime: "4 min read",
     theme: "the inner work",
+    image: "/images/where-theres-peace.jpeg",
     body: `
 <p>It feels like something is wrong.</p>
 
