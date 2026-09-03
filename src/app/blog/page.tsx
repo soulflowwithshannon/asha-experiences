@@ -15,7 +15,7 @@ function formatDate(dateStr: string) {
 
 const [hero, second, ...grid] = posts;
 
-const THEMES = ["the inner work", "the experience", "before you go"] as const;
+const THEMES = ["the inner work", "before you go", "the experience"] as const;
 
 export default function BlogIndex() {
   const [active, setActive] = useState<string | null>(null);
