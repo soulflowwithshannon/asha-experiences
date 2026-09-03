@@ -139,6 +139,149 @@ November 28 – December 4, 2027</p>
     `.trim(),
   },
   {
+    slug: "what-to-expect-at-your-first-womens-retreat",
+    title: "What to expect at your first women's retreat",
+    description: "Nervous about what actually happens at a women's retreat? Here's an honest breakdown — the practices, the people, and what most women say surprised them most.",
+    date: "2026-08-12",
+    readTime: "6 min read",
+    theme: "the experience",
+    image: "/images/ReturnToLove group hug.jpg",
+    body: `
+<p>If you've never been on a women's retreat before, it's normal to not quite know what you're signing up for.</p>
+
+<p>Will it be too "woo"? Will you have to share things you're not ready to share? Will you like the other women?</p>
+
+<p>Here's an honest answer.</p>
+
+<h2>What it's not</h2>
+<ul>
+<li>A group therapy session — there's no pressure to share your deepest wounds in a circle on day one</li>
+<li>A yoga bootcamp — it's not about flexibility or headstands</li>
+<li>A performance — you don't have to arrive healed or arrive broken</li>
+</ul>
+
+<h2>What a typical day looks like</h2>
+<ul>
+<li>Morning movement — yoga, breathwork, or gentle stretching</li>
+<li>A nourishing breakfast eaten slowly, without a phone in your hand</li>
+<li>An experience — a cenote swim, sound healing, guided ceremony, or a hike</li>
+<li>Free time to rest, journal, or sit in the sun</li>
+<li>An evening meal with women who are starting to feel like real friends</li>
+<li>Sleep that's deeper than you've had in months</li>
+</ul>
+
+<h2>The practices you'll encounter</h2>
+
+<p><strong>Sound healing</strong> — uses singing bowls, drums, and tuning forks to shift your nervous system. It sounds abstract until you're lying there and feel something release in your chest that you didn't know was held there.</p>
+
+<p><strong>Ceremony</strong> — intentional ritual. Setting intentions, releasing what you're ready to let go of, marking a transition. No specific belief system required. Just willingness.</p>
+
+<p><strong>Somatic practices</strong> — body-based work. The body holds what the mind can't always process — moving, breathing, and feeling can unlock things that talking alone can't reach.</p>
+
+<h2>The part most women say surprised them most</h2>
+<p>The other women.</p>
+
+<p>Most people arrive a little nervous about the group dynamic. And then, almost without exception, something happens within the first day or two — the walls come down. Women who are strangers start talking like they've known each other for years.</p>
+
+<p>There's a specific kind of connection that forms when women are honest with each other in the same container. It's faster and deeper than most friendships built over years of surface-level interaction.</p>
+
+<h2>What you don't have to do</h2>
+<ul>
+<li>Share anything you don't want to share</li>
+<li>Participate in anything that doesn't feel right</li>
+<li>Have a breakthrough</li>
+<li>Arrive knowing what you need</li>
+</ul>
+
+<p>You just have to show up.</p>
+
+<hr />
+
+<p>Our upcoming retreats — <a href="/retreats/mexico">Becoming HER in Mexico</a>, <a href="/retreats/morocco">Sacred Sands in Morocco</a>, and <a href="/retreats/kenya">Into the Wild in Kenya</a> — are all designed with first-timers in mind. If you have questions before booking, <a href="/contact">reach out</a>. We want you to feel ready.</p>
+    `.trim(),
+  },
+  {
+    slug: "womens-retreats-2026-ultimate-guide",
+    title: "Women's retreats 2026: the ultimate guide to finding the right one",
+    description: "There are hundreds of women's retreats out there. Here's how to cut through the noise — what to look for, what to avoid, and how to find the one that's actually right for you.",
+    date: "2026-08-19",
+    readTime: "7 min read",
+    theme: "before you go",
+    image: "/images/women laying down.jpeg",
+    body: `
+<p>The women's retreat industry has exploded. And that's mostly a good thing — more women choosing themselves, more spaces being created to hold them.</p>
+
+<p>But it also means the options are overwhelming. How do you know which retreat is actually worth your time, your money, and your trust?</p>
+
+<p>Here's what to look for.</p>
+
+<h2>Start with the why</h2>
+<p>Before you search, get clear on what you're actually looking for. The right retreat depends entirely on where you are right now.</p>
+
+<ul>
+<li><strong>Do you need rest and beauty?</strong> → look for a retreat with a slower pace, luxurious setting, plenty of free time</li>
+<li><strong>Do you need to go deep?</strong> → look for skilled facilitation, somatic or ceremonial practices, smaller groups</li>
+<li><strong>Do you need community?</strong> → look for a retreat that prioritizes group connection over solo experience</li>
+<li><strong>Do you need all three?</strong> → that's most of us, honestly</li>
+</ul>
+
+<h2>What to look for in a retreat</h2>
+
+<p><strong>Skilled facilitators</strong> — who are the people running this? What's their training, their background, their actual experience? A beautiful location with unqualified facilitation is just a holiday.</p>
+
+<p><strong>Small group size</strong> — the best retreats are intimate. You can't go deep in a room of 40 strangers. Look for groups of 8–16 women maximum.</p>
+
+<p><strong>A clear container</strong> — what is the retreat actually for? "Wellness" is not an answer. Look for a retreat that can articulate what it's designed to create and how.</p>
+
+<p><strong>Real testimonials</strong> — not just star ratings. Look for women describing actual experiences, specific moments, what shifted for them.</p>
+
+<p><strong>What's included</strong> — hidden costs are a red flag. A well-run retreat tells you exactly what's covered so you can arrive without surprises.</p>
+
+<h2>What to be cautious of</h2>
+<ul>
+<li>Retreats that promise transformation without explaining how they create it</li>
+<li>Facilitators with no verifiable training or credentials</li>
+<li>Very large groups marketed as "community"</li>
+<li>Pressure tactics — urgency, scarcity, aggressive follow-up</li>
+<li>No clear refund or cancellation policy</li>
+</ul>
+
+<h2>Questions to ask before you book</h2>
+<ul>
+<li>What does a typical day look like?</li>
+<li>How many women will be in the group?</li>
+<li>What training do the facilitators have?</li>
+<li>What happens if I need support during or after the retreat?</li>
+<li>What's the cancellation policy?</li>
+</ul>
+
+<p>A retreat worth booking will answer all of these without hesitation.</p>
+
+<h2>Types of retreats to know about</h2>
+
+<p><strong>Yoga retreats</strong> — movement-focused, often in beautiful locations. Great for physical reset and community. Depth varies widely by facilitator.</p>
+
+<p><strong>Wellness retreats</strong> — broad category. Can mean spa-focused or deeply transformational — read carefully to know which you're getting.</p>
+
+<p><strong>Transformational retreats</strong> — designed specifically for inner work. Usually involve somatic practices, ceremony, and skilled facilitation. These are the ones that change things.</p>
+
+<p><strong>Adventure retreats</strong> — combine meaningful experience (safari, hiking, cultural immersion) with inner work. The setting becomes part of the medicine.</p>
+
+<h2>What makes ASHA different</h2>
+<p>We run small, intentional retreats for women in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>. Every retreat includes:</p>
+<ul>
+<li>Groups of 10–14 women maximum</li>
+<li>Skilled facilitation in yoga, sound healing, somatic practices, and ceremony</li>
+<li>All accommodation, meals, experiences, and transfers included</li>
+<li>A clear arc — from arrival to integration — designed with intention</li>
+</ul>
+
+<hr />
+
+<p>If you're trying to figure out which retreat is right for you — ours or otherwise — <a href="/contact">reach out</a>. We'd rather help you find the right fit than have you book something that isn't.</p>
+    `.trim(),
+  },
+  {
     slug: "who-am-i-outside-of-my-roles",
     title: "Who am I outside of all the roles I carry?",
     description: "A journaling practice for women who've lost themselves in busyness and distraction. 4 prompts to help you reconnect with who you actually are.",
@@ -323,149 +466,6 @@ Who are you waiting for? And what if that permission was yours to give yourself 
 <hr />
 
 <p>Ready for more than a journaling practice? We'd love to have you with us in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, or <a href="/retreats/kenya">Kenya</a>.</p>
-    `.trim(),
-  },
-  {
-    slug: "what-to-expect-at-your-first-womens-retreat",
-    title: "What to expect at your first women's retreat",
-    description: "Nervous about what actually happens at a women's retreat? Here's an honest breakdown — the practices, the people, and what most women say surprised them most.",
-    date: "2026-08-12",
-    readTime: "6 min read",
-    theme: "the experience",
-    image: "/images/ReturnToLove group hug.jpg",
-    body: `
-<p>If you've never been on a women's retreat before, it's normal to not quite know what you're signing up for.</p>
-
-<p>Will it be too "woo"? Will you have to share things you're not ready to share? Will you like the other women?</p>
-
-<p>Here's an honest answer.</p>
-
-<h2>What it's not</h2>
-<ul>
-<li>A group therapy session — there's no pressure to share your deepest wounds in a circle on day one</li>
-<li>A yoga bootcamp — it's not about flexibility or headstands</li>
-<li>A performance — you don't have to arrive healed or arrive broken</li>
-</ul>
-
-<h2>What a typical day looks like</h2>
-<ul>
-<li>Morning movement — yoga, breathwork, or gentle stretching</li>
-<li>A nourishing breakfast eaten slowly, without a phone in your hand</li>
-<li>An experience — a cenote swim, sound healing, guided ceremony, or a hike</li>
-<li>Free time to rest, journal, or sit in the sun</li>
-<li>An evening meal with women who are starting to feel like real friends</li>
-<li>Sleep that's deeper than you've had in months</li>
-</ul>
-
-<h2>The practices you'll encounter</h2>
-
-<p><strong>Sound healing</strong> — uses singing bowls, drums, and tuning forks to shift your nervous system. It sounds abstract until you're lying there and feel something release in your chest that you didn't know was held there.</p>
-
-<p><strong>Ceremony</strong> — intentional ritual. Setting intentions, releasing what you're ready to let go of, marking a transition. No specific belief system required. Just willingness.</p>
-
-<p><strong>Somatic practices</strong> — body-based work. The body holds what the mind can't always process — moving, breathing, and feeling can unlock things that talking alone can't reach.</p>
-
-<h2>The part most women say surprised them most</h2>
-<p>The other women.</p>
-
-<p>Most people arrive a little nervous about the group dynamic. And then, almost without exception, something happens within the first day or two — the walls come down. Women who are strangers start talking like they've known each other for years.</p>
-
-<p>There's a specific kind of connection that forms when women are honest with each other in the same container. It's faster and deeper than most friendships built over years of surface-level interaction.</p>
-
-<h2>What you don't have to do</h2>
-<ul>
-<li>Share anything you don't want to share</li>
-<li>Participate in anything that doesn't feel right</li>
-<li>Have a breakthrough</li>
-<li>Arrive knowing what you need</li>
-</ul>
-
-<p>You just have to show up.</p>
-
-<hr />
-
-<p>Our upcoming retreats — <a href="/retreats/mexico">Becoming HER in Mexico</a>, <a href="/retreats/morocco">Sacred Sands in Morocco</a>, and <a href="/retreats/kenya">Into the Wild in Kenya</a> — are all designed with first-timers in mind. If you have questions before booking, <a href="/contact">reach out</a>. We want you to feel ready.</p>
-    `.trim(),
-  },
-  {
-    slug: "womens-retreats-2026-ultimate-guide",
-    title: "Women's retreats 2026: the ultimate guide to finding the right one",
-    description: "There are hundreds of women's retreats out there. Here's how to cut through the noise — what to look for, what to avoid, and how to find the one that's actually right for you.",
-    date: "2026-08-19",
-    readTime: "7 min read",
-    theme: "before you go",
-    image: "/images/women laying down.jpeg",
-    body: `
-<p>The women's retreat industry has exploded. And that's mostly a good thing — more women choosing themselves, more spaces being created to hold them.</p>
-
-<p>But it also means the options are overwhelming. How do you know which retreat is actually worth your time, your money, and your trust?</p>
-
-<p>Here's what to look for.</p>
-
-<h2>Start with the why</h2>
-<p>Before you search, get clear on what you're actually looking for. The right retreat depends entirely on where you are right now.</p>
-
-<ul>
-<li><strong>Do you need rest and beauty?</strong> → look for a retreat with a slower pace, luxurious setting, plenty of free time</li>
-<li><strong>Do you need to go deep?</strong> → look for skilled facilitation, somatic or ceremonial practices, smaller groups</li>
-<li><strong>Do you need community?</strong> → look for a retreat that prioritizes group connection over solo experience</li>
-<li><strong>Do you need all three?</strong> → that's most of us, honestly</li>
-</ul>
-
-<h2>What to look for in a retreat</h2>
-
-<p><strong>Skilled facilitators</strong> — who are the people running this? What's their training, their background, their actual experience? A beautiful location with unqualified facilitation is just a holiday.</p>
-
-<p><strong>Small group size</strong> — the best retreats are intimate. You can't go deep in a room of 40 strangers. Look for groups of 8–16 women maximum.</p>
-
-<p><strong>A clear container</strong> — what is the retreat actually for? "Wellness" is not an answer. Look for a retreat that can articulate what it's designed to create and how.</p>
-
-<p><strong>Real testimonials</strong> — not just star ratings. Look for women describing actual experiences, specific moments, what shifted for them.</p>
-
-<p><strong>What's included</strong> — hidden costs are a red flag. A well-run retreat tells you exactly what's covered so you can arrive without surprises.</p>
-
-<h2>What to be cautious of</h2>
-<ul>
-<li>Retreats that promise transformation without explaining how they create it</li>
-<li>Facilitators with no verifiable training or credentials</li>
-<li>Very large groups marketed as "community"</li>
-<li>Pressure tactics — urgency, scarcity, aggressive follow-up</li>
-<li>No clear refund or cancellation policy</li>
-</ul>
-
-<h2>Questions to ask before you book</h2>
-<ul>
-<li>What does a typical day look like?</li>
-<li>How many women will be in the group?</li>
-<li>What training do the facilitators have?</li>
-<li>What happens if I need support during or after the retreat?</li>
-<li>What's the cancellation policy?</li>
-</ul>
-
-<p>A retreat worth booking will answer all of these without hesitation.</p>
-
-<h2>Types of retreats to know about</h2>
-
-<p><strong>Yoga retreats</strong> — movement-focused, often in beautiful locations. Great for physical reset and community. Depth varies widely by facilitator.</p>
-
-<p><strong>Wellness retreats</strong> — broad category. Can mean spa-focused or deeply transformational — read carefully to know which you're getting.</p>
-
-<p><strong>Transformational retreats</strong> — designed specifically for inner work. Usually involve somatic practices, ceremony, and skilled facilitation. These are the ones that change things.</p>
-
-<p><strong>Adventure retreats</strong> — combine meaningful experience (safari, hiking, cultural immersion) with inner work. The setting becomes part of the medicine.</p>
-
-<h2>What makes ASHA different</h2>
-<p>We run small, intentional retreats for women in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>. Every retreat includes:</p>
-<ul>
-<li>Groups of 10–14 women maximum</li>
-<li>Skilled facilitation in yoga, sound healing, somatic practices, and ceremony</li>
-<li>All accommodation, meals, experiences, and transfers included</li>
-<li>A clear arc — from arrival to integration — designed with intention</li>
-</ul>
-
-<hr />
-
-<p>If you're trying to figure out which retreat is right for you — ours or otherwise — <a href="/contact">reach out</a>. We'd rather help you find the right fit than have you book something that isn't.</p>
     `.trim(),
   },
   {
