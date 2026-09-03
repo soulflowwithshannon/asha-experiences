@@ -4,7 +4,7 @@ export type Post = {
   description: string;
   date: string;
   readTime: string;
-  category: string;
+  theme: string;
   image?: string;
   body: string;
 };
@@ -16,7 +16,7 @@ export const posts: Post[] = [
     description: "You've been putting everyone else first for so long you can't remember what you actually want. Sound familiar? Here are 10 signs it might be time.",
     date: "2026-08-18",
     readTime: "5 min read",
-    category: "Retreat Life",
+    theme: "the inner work",
     image: "/images/Return to Love group sunset.jpg",
     body: `
 <p>There's a specific kind of tired that sleep doesn't fix.</p>
@@ -55,7 +55,7 @@ export const posts: Post[] = [
     description: "The instinct. The rage. The softness. The pleasure. The voice. Somewhere along the way we learned to keep all of it quiet. Here's what it takes to find her again.",
     date: "2026-08-24",
     readTime: "5 min read",
-    category: "Retreat Life",
+    theme: "the inner work",
     image: "/images/Kenya blog post.jpeg",
     body: `
 <p>There's a version of you that existed before you learned to be palatable.</p>
@@ -144,7 +144,7 @@ November 28 – December 4, 2027</p>
     description: "A journaling practice for women who've lost themselves in busyness and distraction. 4 prompts to help you reconnect with who you actually are.",
     date: "2026-09-02",
     readTime: "5 min read",
-    category: "Healing Practices",
+    theme: "the inner work",
     body: `
 <p>I felt shocked when I realized I didn't really know who I was.</p>
 
@@ -211,7 +211,7 @@ Sit with this one. <em>"I don't know"</em> is a completely valid answer. Write i
     description: "Nervous about what actually happens at a women's retreat? Here's an honest breakdown — the practices, the people, and what most women say surprised them most.",
     date: "2026-08-12",
     readTime: "6 min read",
-    category: "Retreat Life",
+    theme: "the experience",
     image: "/images/ReturnToLove group hug.jpg",
     body: `
 <p>If you've never been on a women's retreat before, it's normal to not quite know what you're signing up for.</p>
@@ -273,7 +273,7 @@ Sit with this one. <em>"I don't know"</em> is a completely valid answer. Write i
     description: "The safety question comes up every time. Here's an honest, practical answer — and what makes a guided group retreat a very different experience than traveling alone.",
     date: "2026-08-05",
     readTime: "4 min read",
-    category: "Travel",
+    theme: "before you go",
     image: "/images/aesthetic plane window.jpeg",
     body: `
 <p>It's the first question we get. And it's a fair one.</p>
@@ -326,7 +326,7 @@ Sit with this one. <em>"I don't know"</em> is a completely valid answer. Write i
     description: "There are hundreds of women's retreats out there. Here's how to cut through the noise — what to look for, what to avoid, and how to find the one that's actually right for you.",
     date: "2026-08-19",
     readTime: "7 min read",
-    category: "Practical",
+    theme: "before you go",
     image: "/images/women laying down.jpeg",
     body: `
 <p>The women's retreat industry has exploded. And that's mostly a good thing — more women choosing themselves, more spaces being created to hold them.</p>
@@ -407,7 +407,7 @@ Sit with this one. <em>"I don't know"</em> is a completely valid answer. Write i
     description: "The retreat calls to you. Your partner isn't sure. Here's how to have the conversation — and why this decision matters more than it might seem.",
     date: "2026-08-19",
     readTime: "5 min read",
-    category: "Practical",
+    theme: "before you go",
     image: "/images/ReturnToLove25-357.jpg",
     body: `
 <p>You've found the retreat. Something in you knows it's right. And then you think about telling your partner — and you feel yourself already bracing.</p>
@@ -461,7 +461,7 @@ Sit with this one. <em>"I don't know"</em> is a completely valid answer. Write i
     description: "Both involve getting on a plane. But a retreat and a vacation do very different things for you. Here's how to know which one you actually need.",
     date: "2026-07-20",
     readTime: "4 min read",
-    category: "Retreat Life",
+    theme: "before you go",
     image: "/images/Morocco sunset.jpeg",
     body: `
 <p>Both involve leaving your regular life behind. Both take you somewhere beautiful. Both can involve good food, warm weather, and time away from your responsibilities.</p>
@@ -522,7 +522,7 @@ Sit with this one. <em>"I don't know"</em> is a completely valid answer. Write i
     description: "Not the brochure version. A real, honest look at what each day of a women's retreat actually feels like — from the first morning to the last goodbye.",
     date: "2026-08-19",
     readTime: "6 min read",
-    category: "Retreat Life",
+    theme: "the experience",
     image: "/images/Morocco yoga.png",
     body: `
 <p>Most retreat websites show you the photos. The yoga at sunrise. The long table dinners. The women laughing by the pool.</p>
@@ -608,7 +608,7 @@ Sit with this one. <em>"I don't know"</em> is a completely valid answer. Write i
     description: "The price tag can feel like the reason not to go. Here's a different way to look at it — and practical ways women actually make it happen.",
     date: "2026-08-10",
     readTime: "5 min read",
-    category: "Practical",
+    theme: "before you go",
     image: "/images/ReturnToLove bracelets.jpg",
     body: `
 <p>The first thing most women do when they find a retreat they love is look at the price. And then close the tab.</p>
@@ -653,7 +653,7 @@ Sit with this one. <em>"I don't know"</em> is a completely valid answer. Write i
     description: "Three very different destinations. Three very different energies. Here's how to figure out which one is actually calling you.",
     date: "2026-08-03",
     readTime: "6 min read",
-    category: "Retreat Life",
+    theme: "before you go",
     image: "/images/Into the Wild Hero.jpg",
     body: `
 <p>We're often asked: which retreat should I do?</p>
@@ -726,7 +726,7 @@ __QUIZ_CTA__
     description: "There's no one type of woman who comes on a retreat. But there are patterns. Here's who we see, over and over — and maybe you'll recognize yourself.",
     date: "2026-07-08",
     readTime: "4 min read",
-    category: "Community",
+    theme: "the experience",
     image: "/images/ReturnToLove girls group 2.jpg",
     body: `
 <p>People have ideas about who goes on women's retreats.</p>
@@ -775,7 +775,7 @@ __QUIZ_CTA__
     description: "",
     date: "2026-08-19",
     readTime: "4 min read",
-    category: "Community",
+    theme: "the experience",
     image: "/images/5.png",
     body: `
 <p>Most of the women who arrive at an ASHA experience don't know a single person going.</p>
@@ -815,7 +815,7 @@ __TESTIMONIAL_VIDEO__
     description: "The practical packing list for Lunita — plus the things most people forget and the things they bring and never touch.",
     date: "2026-07-15",
     readTime: "4 min read",
-    category: "Practical",
+    theme: "before you go",
     image: "/images/Mexican jungle.jpeg",
     body: `
 <p>Packing for a retreat is different from packing for a vacation. You're not trying to look like a different version of yourself. You're trying to feel like the most comfortable, unencumbered version of yourself.</p>
@@ -891,7 +891,7 @@ __TESTIMONIAL_VIDEO__
     description: "Sound healing shows up at almost every women's retreat. Here's what it actually is, what the science says, and what most people feel during a session.",
     date: "2026-07-28",
     readTime: "5 min read",
-    category: "Healing Practices",
+    theme: "the inner work",
     image: "/images/sound healing.jpg",
     body: `
 <p>If you've seen "sound healing" or "sound bath" on a retreat schedule and thought — what does that even mean? — you're not alone.</p>
@@ -953,7 +953,7 @@ __TESTIMONIAL_VIDEO__
     description: "The retreat ends. You fly home. And then something unexpected happens. Here's what integration actually looks like, and how to make it last.",
     date: "2026-08-15",
     readTime: "5 min read",
-    category: "Retreat Life",
+    theme: "the inner work",
     image: "/images/ReturnToLove girls group.jpg",
     body: `
 <p>Nobody warns you about the week after.</p>

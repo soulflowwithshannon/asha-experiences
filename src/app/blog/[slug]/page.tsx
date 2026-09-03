@@ -83,7 +83,7 @@ export default async function BlogPost({
               color: "var(--color-accent)",
             }}
           >
-            {post.category}
+            {post.theme}
           </span>
           <span style={{ color: "var(--color-border)" }}>·</span>
           <span

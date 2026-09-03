@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { posts } from "@/lib/blog";
@@ -14,7 +15,25 @@ function formatDate(dateStr: string) {
 
 const [hero, second, ...grid] = posts;
 
+const THEMES = ["the inner work", "the experience", "before you go"] as const;
+
 export default function BlogIndex() {
+  const [active, setActive] = useState<string | null>(null);
+  const filtered = active ? posts.filter((p) => p.theme === active) : [];
+
+  const chip = (label: string, on: boolean): React.CSSProperties => ({
+    padding: "9px 18px",
+    borderRadius: 999,
+    border: "0.5px solid " + (on ? "var(--color-accent)" : "var(--color-bg-card)"),
+    background: on ? "var(--color-accent)" : "transparent",
+    color: on ? "#FFFCF5" : "var(--color-text-body)",
+    fontFamily: "var(--font-dm-sans)",
+    fontSize: 12,
+    letterSpacing: "0.04em",
+    cursor: "pointer",
+    transition: "background .2s ease, color .2s ease, border-color .2s ease",
+  });
+
   return (
     <main style={{ background: "var(--color-bg-page)", minHeight: "100vh" }}>
 
@@ -84,6 +103,66 @@ export default function BlogIndex() {
         </div>
       </section>
 
+      {/* ── Theme filter ── */}
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "32px 48px 0" }}>
+        <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
+          <button onClick={() => setActive(null)} style={chip("everything", active === null)}>
+            everything
+          </button>
+          {THEMES.map((t) => (
+            <button key={t} onClick={() => setActive(t)} style={chip(t, active === t)}>
+              {t}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {active ? (
+        <section style={{ maxWidth: 1200, margin: "40px auto 120px", padding: "0 48px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }} className="blog-grid">
+            {filtered.map((post) => (
+              <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
+                <article style={{
+                  border: "0.5px solid var(--color-border)",
+                  borderRadius: 2,
+                  overflow: "hidden",
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}>
+                  {post.image && (
+                    <div style={{ position: "relative", height: 200, flexShrink: 0 }}>
+                      <Image src={post.image} alt={post.title} fill style={{ objectFit: "cover", objectPosition: post.slug === "what-is-sound-healing" ? "center 70%" : "center" }} />
+                    </div>
+                  )}
+                  <div style={{ padding: "28px 28px 24px", display: "flex", flexDirection: "column", flex: 1, gap: 12 }}>
+                    <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+                      <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-accent)" }}>
+                        {post.theme}
+                      </span>
+                      <span style={{ color: "var(--color-border)" }}>·</span>
+                      <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 10, color: "var(--color-text-muted)" }}>
+                        {post.readTime}
+                      </span>
+                    </div>
+                    <h3 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(20px, 1.8vw, 24px)", fontWeight: 700, color: "var(--color-text-headline)", lineHeight: 1.2, flex: 1 }}>
+                      {post.title}
+                    </h3>
+                    <div style={{ paddingTop: 14, borderTop: "0.5px solid var(--color-border)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                      <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)" }}>
+                        {formatDate(post.date)}
+                      </span>
+                      <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)" }}>read →</span>
+                    </div>
+                  </div>
+                </article>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : (
+      <>
+
       {/* ── Hero post — full bleed image left, text right ── */}
       <section style={{ maxWidth: 1200, margin: "0 auto", padding: "48px 48px 0" }}>
         <Link href={`/blog/${hero.slug}`} style={{ textDecoration: "none", display: "block" }}>
@@ -125,7 +204,7 @@ export default function BlogIndex() {
                     textTransform: "uppercase",
                     color: "var(--color-accent)",
                   }}>
-                    {hero.category}
+                    {hero.theme}
                   </span>
                   <span style={{ color: "var(--color-border)" }}>·</span>
                   <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 10, color: "var(--color-text-muted)" }}>
@@ -212,7 +291,7 @@ export default function BlogIndex() {
               <div>
                 <div style={{ display: "flex", gap: 10, alignItems: "center", marginBottom: 20 }}>
                   <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-accent)" }}>
-                    {second.category}
+                    {second.theme}
                   </span>
                   <span style={{ color: "var(--color-border)" }}>·</span>
                   <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 10, color: "var(--color-text-muted)" }}>
@@ -292,7 +371,7 @@ export default function BlogIndex() {
                 }}>
                   <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
                     <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-accent)" }}>
-                      {post.category}
+                      {post.theme}
                     </span>
                     <span style={{ color: "var(--color-border)" }}>·</span>
                     <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 10, color: "var(--color-text-muted)" }}>
@@ -329,6 +408,9 @@ export default function BlogIndex() {
           ))}
         </div>
       </section>
+
+      </>
+      )}
 
       <style>{`
         @media (max-width: 768px) {
