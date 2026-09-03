@@ -6,8 +6,8 @@ import Link from "next/link";
    end    — closes every blog post, above the retreat links   */
 export default function QuizCTA({
   variant = "end",
-  heading = "not sure which retreat is yours?",
-  body = "five questions, and we'll tell you which of the three you actually belong on.",
+  heading = "not sure where you’re at?",
+  body = "five questions and we’ll help you find what you need right now based on your archetype",
 }: {
   variant?: "band" | "inline" | "end";
   heading?: string;
