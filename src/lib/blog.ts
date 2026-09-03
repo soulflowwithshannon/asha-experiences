@@ -206,6 +206,123 @@ Sit with this one. <em>"I don't know"</em> is a completely valid answer. Write i
     `.trim(),
   },
   {
+    slug: "how-to-create-joy-you-dont-have-to-earn",
+    title: "How to create joy you don't have to earn",
+    description: "Joy isn't waiting on the other side of your goals. A practice for women who've been rationing happiness — and are ready to start living in the present moment.",
+    date: "2026-09-02",
+    readTime: "4 min read",
+    theme: "the inner work",
+    body: `
+<p>Pure joy, I've realized, is pure presence.</p>
+
+<p>It's the moment when you're not trying to fix anything, change anything, or get anywhere. When the present moment is so full that there's no room for the mental noise that usually follows you around.</p>
+
+<p>I know that feeling now. But it took me a long time to get here — and honestly, I'm still learning it.</p>
+
+<p>Because I have goals. Passions. Projects I care deeply about and am always working toward. The drive doesn't go away and I don't want it to. But somewhere along the way I started treating joy like a reward I hadn't quite earned yet. Like I'd allow myself to fully land in a moment <em>after</em> I'd done enough, achieved enough, figured enough out.</p>
+
+<p><strong>The problem is "enough" never actually arrives.</strong></p>
+
+<p>So you keep moving. Keep grinding. Keep putting the good stuff on layaway for a version of your life that's always just around the corner.</p>
+
+<p>And meanwhile, the moments that are trying to show you that you're exactly where you're meant to be — you're half in them. Checking your phone. Running the mental to-do list. Already thinking about what's next.</p>
+
+<p>I've had moments in Guatemala, sitting at the edge of Lake Atitlán watching the sun set over the volcano, where I thought — <em>this is it. This is the whole point.</em> Not the destination, not the achievement. Just this. Just being alive inside a moment this extraordinary.</p>
+
+<p>Those moments don't ask you to have it all figured out first. They just ask you to show up.</p>
+
+<p><strong>That's what joy actually requires. Not achievement. Presence.</strong></p>
+
+<p>And presence is a practice — especially for women who've spent years in their heads, running on adrenaline, measuring their worth in output.</p>
+
+<h2>The practice</h2>
+
+<p>This one isn't about journaling prompts as much as it is about noticing.</p>
+
+<p><strong>1. Notice when you're half in a moment.</strong><br />
+Not to judge yourself — just to catch it. The dinner you're eating while scrolling. The conversation you're in while mentally composing your to-do list. The beautiful evening you're documenting instead of experiencing. Just notice.</p>
+
+<p><strong>2. Ask yourself: what would it feel like to fully land here?</strong><br />
+Not forever. Just for this moment. What would you have to put down — mentally, physically — to actually be inside this experience instead of observing it from a slight distance?</p>
+
+<p><strong>3. Find one moment a day that doesn't need to be productive.</strong><br />
+A coffee on the balcony before the day starts. A walk with no destination. A conversation you're not rushing. Something small that exists purely because it feels good. No justification required.</p>
+
+<p><strong>4. When joy shows up, let it be enough.</strong><br />
+This is the hardest one. Joy has a way of being immediately followed by guilt — <em>I should be working, I should be doing more, this is indulgent.</em> When that voice shows up, notice it. Then choose to stay in the moment anyway.</p>
+
+<h2>Joy isn't on the other side of your goals</h2>
+
+<p>It's available right now, in the life you're already living — if you're willing to actually be in it.</p>
+
+<p>You were made for more than surviving your own life. You were made for moments that take your breath away.</p>
+
+<p><strong>Start collecting them. They're already there.</strong></p>
+
+<hr />
+
+<p>Ready to experience what full presence actually feels like — in one of the most extraordinary places on earth? We'd love to have you with us in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, or <a href="/retreats/kenya">Kenya</a>.</p>
+    `.trim(),
+  },
+  {
+    slug: "journaling-practice-for-women-at-a-crossroads",
+    title: "A journaling practice for women at a crossroads",
+    description: "Feeling stuck, or like something needs to change but you don't know what? A journaling practice for women standing between chapters and ready to find their footing.",
+    date: "2026-09-02",
+    readTime: "4 min read",
+    theme: "the inner work",
+    body: `
+<p>It feels like something is wrong.</p>
+
+<p>Not a crisis you can point to. Not a problem with an obvious solution. Just this quiet, persistent feeling that you're not where you're supposed to be — and you can't figure out what it is you're supposed to be figuring out.</p>
+
+<p>That's what a crossroads actually feels like. Not a dramatic fork in the road with clear signs. More like standing in a fog, knowing you need to move but not sure which direction.</p>
+
+<p>It tends to show up at transition points. A relationship ends. A job that used to feel meaningful stops feeling that way. Or maybe nothing dramatic happened at all — you just woke up one day and realized you've been on autopilot for longer than you can remember.</p>
+
+<p><strong>Whatever brought you here, you're not lost. You're just between chapters.</strong></p>
+
+<p>And that space — as uncomfortable as it is — means something in you is ready to shift.</p>
+
+<h2>Why uncertainty feels unbearable</h2>
+
+<p>We're not taught to sit in it. We're taught to fix it, solve it, move forward. So when the answer isn't clear, we either force a decision before we're ready — or we stay frozen, waiting for clarity that never comes because we're too busy drowning out <em>the quiet voice that actually has the answers.</em></p>
+
+<p>Journaling isn't about forcing clarity. It's about creating enough stillness that you can finally hear yourself think.</p>
+
+<h2>The practice</h2>
+
+<p>No pressure to have answers. Just show up honestly.</p>
+
+<p><strong>1. What does my life look like right now versus what I actually want it to feel like?</strong><br />
+Not the logistics — the feeling. What's the gap between where you are and where something in you knows you could be?</p>
+
+<p><strong>2. What have I been ignoring because it feels too big or too scary to look at?</strong><br />
+The thing you keep circling back to and then pushing away. Write it down. You don't have to act on it yet — just stop pretending it isn't there.</p>
+
+<p><strong>3. If I trusted myself completely, what would I do?</strong><br />
+Take away the fear, the opinions of other people, the practicalities. What does your gut actually say?</p>
+
+<p><strong>4. What chapter is ending — and what does that ask me to let go of?</strong><br />
+Crossroads almost always involve grief. Naming what you're leaving behind is just as important as imagining what comes next.</p>
+
+<p><strong>5. What would it mean to stop waiting for permission to move forward?</strong><br />
+Who are you waiting for? And what if that permission was yours to give yourself all along?</p>
+
+<h2>Clarity comes from movement</h2>
+
+<p>Not from waiting. You don't need to have it all figured out — you just need to stop pretending you're okay standing still.</p>
+
+<p>Start there. Get honest with yourself on paper. You'll find your footing.</p>
+
+<p><strong>You already are — otherwise you wouldn't be here asking the question.</strong></p>
+
+<hr />
+
+<p>Ready for more than a journaling practice? We'd love to have you with us in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, or <a href="/retreats/kenya">Kenya</a>.</p>
+    `.trim(),
+  },
+  {
     slug: "what-to-expect-at-your-first-womens-retreat",
     title: "What to expect at your first women's retreat",
     description: "Nervous about what actually happens at a women's retreat? Here's an honest breakdown — the practices, the people, and what most women say surprised them most.",
@@ -265,59 +382,6 @@ Sit with this one. <em>"I don't know"</em> is a completely valid answer. Write i
 <hr />
 
 <p>Our upcoming retreats — <a href="/retreats/mexico">Becoming HER in Mexico</a>, <a href="/retreats/morocco">Sacred Sands in Morocco</a>, and <a href="/retreats/kenya">Into the Wild in Kenya</a> — are all designed with first-timers in mind. If you have questions before booking, <a href="/contact">reach out</a>. We want you to feel ready.</p>
-    `.trim(),
-  },
-  {
-    slug: "is-mexico-safe-for-solo-women-travelers",
-    title: "Is Mexico safe for solo women travelers? (honest answer)",
-    description: "The safety question comes up every time. Here's an honest, practical answer — and what makes a guided group retreat a very different experience than traveling alone.",
-    date: "2026-08-05",
-    readTime: "4 min read",
-    theme: "before you go",
-    image: "/images/aesthetic plane window.jpeg",
-    body: `
-<p>It's the first question we get. And it's a fair one.</p>
-
-<p>Mexico is a big, complex country — and like any country, the answer to <em>"is it safe?"</em> depends entirely on <strong>where you're going, how you're going, and who you're with.</strong></p>
-
-<h2>The honest answer</h2>
-<p>Solo female travel in Mexico carries real considerations. Certain regions have well-documented safety concerns, and traveling alone as a woman anywhere in the world requires awareness and preparation.</p>
-
-<p><strong>The Riviera Maya — where our retreat is based — is one of the most visited regions in Mexico.</strong> It's not without caution, but it's a very different reality than the headlines that typically represent Mexico as a whole.</p>
-
-<h2>What makes a guided retreat different</h2>
-<ul>
-<li>You're <strong>not navigating alone</strong> — logistics are handled from the moment you land</li>
-<li>Transfers, accommodation, meals, and activities are all taken care of</li>
-<li>You're never finding your way around an unfamiliar place by yourself at night</li>
-<li>You're staying in a <strong>private, vetted property in the jungle</strong></li>
-<li>You're with other women and experienced facilitators who know the area</li>
-</ul>
-
-<p><em>The freedom of a retreat is that you get the experience of being somewhere extraordinary without the vulnerability of solo navigation.</em></p>
-
-<h2>Where we stay</h2>
-<p>Our Mexico retreat is held at <a href="https://www.lunitajungleretreat.com/" target="_blank" rel="noopener noreferrer">Lunita Jungle Retreat</a> in the Riviera Maya — a private property fully immersed in the jungle, with its own cenote, yoga pavilion, and casitas. You're not in a busy resort corridor or navigating city streets.</p>
-
-<h2>Practical safety tips for solo travel in Mexico</h2>
-<ul>
-<li>Use <strong>registered taxis or Uber</strong> — never unmarked cars</li>
-<li>Keep copies of your passport and documents separate from your bag</li>
-<li>Share your itinerary with someone at home</li>
-<li><em>Trust your gut — it's usually right</em></li>
-<li>Connect with other women travelers via Facebook groups or travel forums before you go</li>
-</ul>
-
-<h2>What we've seen again and again</h2>
-<p>Women who were nervous about coming to Mexico — who <em>almost talked themselves out of it</em> — are consistently the ones who say it was one of the most meaningful experiences of their lives.</p>
-
-<p><strong>Not because nothing felt unfamiliar. But because they did something that scared them a little, with the right support around them.</strong></p>
-
-<hr />
-
-<p>If you have specific questions about the area or the property, <a href="/contact">reach out</a>. We're happy to talk through it before you book.</p>
-
-<p>Our <a href="/retreats/mexico">Becoming HER retreat in Mexico</a> runs October 27–31, 2026. Limited spots remaining.</p>
     `.trim(),
   },
   {
@@ -399,6 +463,59 @@ Sit with this one. <em>"I don't know"</em> is a completely valid answer. Write i
 <hr />
 
 <p>If you're trying to figure out which retreat is right for you — ours or otherwise — <a href="/contact">reach out</a>. We'd rather help you find the right fit than have you book something that isn't.</p>
+    `.trim(),
+  },
+  {
+    slug: "is-mexico-safe-for-solo-women-travelers",
+    title: "Is Mexico safe for solo women travelers? (honest answer)",
+    description: "The safety question comes up every time. Here's an honest, practical answer — and what makes a guided group retreat a very different experience than traveling alone.",
+    date: "2026-08-05",
+    readTime: "4 min read",
+    theme: "before you go",
+    image: "/images/aesthetic plane window.jpeg",
+    body: `
+<p>It's the first question we get. And it's a fair one.</p>
+
+<p>Mexico is a big, complex country — and like any country, the answer to <em>"is it safe?"</em> depends entirely on <strong>where you're going, how you're going, and who you're with.</strong></p>
+
+<h2>The honest answer</h2>
+<p>Solo female travel in Mexico carries real considerations. Certain regions have well-documented safety concerns, and traveling alone as a woman anywhere in the world requires awareness and preparation.</p>
+
+<p><strong>The Riviera Maya — where our retreat is based — is one of the most visited regions in Mexico.</strong> It's not without caution, but it's a very different reality than the headlines that typically represent Mexico as a whole.</p>
+
+<h2>What makes a guided retreat different</h2>
+<ul>
+<li>You're <strong>not navigating alone</strong> — logistics are handled from the moment you land</li>
+<li>Transfers, accommodation, meals, and activities are all taken care of</li>
+<li>You're never finding your way around an unfamiliar place by yourself at night</li>
+<li>You're staying in a <strong>private, vetted property in the jungle</strong></li>
+<li>You're with other women and experienced facilitators who know the area</li>
+</ul>
+
+<p><em>The freedom of a retreat is that you get the experience of being somewhere extraordinary without the vulnerability of solo navigation.</em></p>
+
+<h2>Where we stay</h2>
+<p>Our Mexico retreat is held at <a href="https://www.lunitajungleretreat.com/" target="_blank" rel="noopener noreferrer">Lunita Jungle Retreat</a> in the Riviera Maya — a private property fully immersed in the jungle, with its own cenote, yoga pavilion, and casitas. You're not in a busy resort corridor or navigating city streets.</p>
+
+<h2>Practical safety tips for solo travel in Mexico</h2>
+<ul>
+<li>Use <strong>registered taxis or Uber</strong> — never unmarked cars</li>
+<li>Keep copies of your passport and documents separate from your bag</li>
+<li>Share your itinerary with someone at home</li>
+<li><em>Trust your gut — it's usually right</em></li>
+<li>Connect with other women travelers via Facebook groups or travel forums before you go</li>
+</ul>
+
+<h2>What we've seen again and again</h2>
+<p>Women who were nervous about coming to Mexico — who <em>almost talked themselves out of it</em> — are consistently the ones who say it was one of the most meaningful experiences of their lives.</p>
+
+<p><strong>Not because nothing felt unfamiliar. But because they did something that scared them a little, with the right support around them.</strong></p>
+
+<hr />
+
+<p>If you have specific questions about the area or the property, <a href="/contact">reach out</a>. We're happy to talk through it before you book.</p>
+
+<p>Our <a href="/retreats/mexico">Becoming HER retreat in Mexico</a> runs October 27–31, 2026. Limited spots remaining.</p>
     `.trim(),
   },
   {
@@ -953,7 +1070,7 @@ __TESTIMONIAL_VIDEO__
     description: "The retreat ends. You fly home. And then something unexpected happens. Here's what integration actually looks like, and how to make it last.",
     date: "2026-08-15",
     readTime: "5 min read",
-    theme: "the inner work",
+    theme: "the experience",
     image: "/images/ReturnToLove girls group.jpg",
     body: `
 <p>Nobody warns you about the week after.</p>
