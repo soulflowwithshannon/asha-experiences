@@ -967,6 +967,8 @@ export default function KenyaPage() {
       <VideoPair
         headline="to the woman on the fence"
         orientation="vertical"
+        labelTone="dark"
+        padding="80px 32px 32px"
         clips={[
           { file: "Ashley women on the fence.MOV", label: "ashley" },
           { file: "Shannon to the women.MOV", label: "shannon" },

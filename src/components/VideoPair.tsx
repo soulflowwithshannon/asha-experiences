@@ -21,12 +21,15 @@ function mimeFor(file: string) {
 export default function VideoPair({
   clips,
   headline,
+  labelTone = "muted",
   orientation = "vertical",
   background = "var(--color-bg-page)",
   padding = "80px 32px",
 }: {
   clips: [Clip, Clip];
   headline?: string;
+  /** Caption colour under each clip. */
+  labelTone?: "muted" | "dark";
   /** "vertical" = 9:16 story clips; "horizontal" = 16:9. */
   orientation?: "vertical" | "horizontal";
   background?: string;
@@ -83,7 +86,7 @@ export default function VideoPair({
                 style={{
                   fontFamily: "var(--font-dm-sans)",
                   fontSize: 12,
-                  color: "var(--color-text-muted)",
+                  color: labelTone === "dark" ? "var(--color-text-headline)" : "var(--color-text-muted)",
                   letterSpacing: "0.06em",
                   textTransform: "uppercase",
                   textAlign: "center",
