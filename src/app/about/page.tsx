@@ -224,8 +224,8 @@ export default function AboutPage() {
         headline="why we created ASHA"
         orientation="vertical"
         clips={[
-          { file: "Ashley ASHA.mov", label: "ashley" },
-          { file: "Shannon ASHA.mov", label: "shannon" },
+          { file: "Ashley ASHA.MOV", label: "ashley" },
+          { file: "Shannon ASHA.MOV", label: "shannon" },
         ]}
       />
 

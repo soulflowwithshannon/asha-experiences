@@ -840,8 +840,8 @@ export default function MoroccoPage() {
         headline="to the woman on the fence"
         orientation="vertical"
         clips={[
-          { file: "Ashley women on the fence.mov", label: "ashley" },
-          { file: "Shannon to the women.mov", label: "shannon" },
+          { file: "Ashley women on the fence.MOV", label: "ashley" },
+          { file: "Shannon to the women.MOV", label: "shannon" },
         ]}
       />
 

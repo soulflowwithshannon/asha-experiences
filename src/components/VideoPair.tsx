@@ -6,7 +6,7 @@ import FadeIn from "@/components/FadeIn";
 const R2_BASE = "https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/";
 
 export interface Clip {
-  /** Filename inside the R2 videos/ folder, e.g. "Ashley ASHA.mov". */
+  /** Filename inside the R2 videos/ folder, e.g. "Ashley ASHA.MOV". */
   file: string;
   /** Caption under the video. Omit for no caption. */
   label?: string;
@@ -15,7 +15,7 @@ export interface Clip {
 }
 
 function mimeFor(file: string) {
-  return file.toLowerCase().endsWith(".mov") ? "video/quicktime" : "video/mp4";
+  return file.toLowerCase().endsWith(".MOV") ? "video/quicktime" : "video/mp4";
 }
 
 export default function VideoPair({

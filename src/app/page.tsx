@@ -268,8 +268,8 @@ export default function HomePage() {
         headline="a moment from retreat"
         orientation="vertical"
         clips={[
-          { file: "Ashley moment from retreat.mov", label: "ashley" },
-          { file: "Shannon moment from retreat.mov", label: "shannon" },
+          { file: "Ashley moment from retreat.MOV", label: "ashley" },
+          { file: "Shannon moment from retreat.MOV", label: "shannon" },
         ]}
       />
 
