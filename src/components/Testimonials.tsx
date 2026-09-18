@@ -37,6 +37,11 @@ export const quotes: Quote[] = [
   },
 ];
 
+// the three shown on retreat pages, in display order
+export const retreatQuotes: Quote[] = ["Jess", "M'Lyn", "Alani"].map(
+  (name) => quotes.find((q) => q.name === name)!
+);
+
 function Stars() {
   return (
     <p
