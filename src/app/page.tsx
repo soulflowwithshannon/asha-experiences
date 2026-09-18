@@ -7,6 +7,7 @@ import { useRef } from "react";
 import FadeIn from "@/components/FadeIn";
 import Testimonials, { quotes } from "@/components/Testimonials";
 import GuidesCompact from "@/components/GuidesCompact";
+import VideoPair from "@/components/VideoPair";
 import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/AnimatedText";
 
 function ParallaxHero() {
@@ -261,6 +262,16 @@ export default function HomePage() {
         </div>
         <style>{`@media(max-width:640px){.pillars-grid{grid-template-columns:1fr!important}}`}</style>
       </section>
+
+      {/* SECTION 3b — MOMENTS FROM RETREAT (two story-format videos) */}
+      <VideoPair
+        headline="a moment from retreat"
+        orientation="vertical"
+        clips={[
+          { file: "Ashley moment from retreat.mov", label: "ashley" },
+          { file: "Shannon moment from retreat.mov", label: "shannon" },
+        ]}
+      />
 
       {/* SECTION 4 — FEATURED RETREAT */}
       <section style={{ background: "var(--color-bg-page)" }}>

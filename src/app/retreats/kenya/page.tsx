@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { useRef, useState, ReactNode } from "react";
 import FadeIn from "@/components/FadeIn";
 import Testimonials, { quotes } from "@/components/Testimonials";
+import VideoPair from "@/components/VideoPair";
 import MeetUs from "@/components/MeetUs";
 import GuidesCompact from "@/components/GuidesCompact";
 import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/AnimatedText";
@@ -961,6 +962,16 @@ export default function KenyaPage() {
           </FadeIn>
         </div>
       </section>
+
+      {/* SECTION — ON THE FENCE (two story-format videos) */}
+      <VideoPair
+        headline="to the woman on the fence"
+        orientation="vertical"
+        clips={[
+          { file: "Ashley women on the fence.mov", label: "ashley" },
+          { file: "Shannon to the women.mov", label: "shannon" },
+        ]}
+      />
 
       <MeetUs
         headline="you're thinking about flying to Kenya. that's a big thing to sit with on your own."

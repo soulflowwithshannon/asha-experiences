@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import FadeIn from "@/components/FadeIn";
 import { SplitHeadline } from "@/components/AnimatedText";
+import VideoPair from "@/components/VideoPair";
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 20 },
@@ -217,6 +218,16 @@ export default function AboutPage() {
           </motion.p>
         </div>
       </section>
+
+      {/* SECTION 1b — WHY WE CREATED ASHA (two story-format videos) */}
+      <VideoPair
+        headline="why we created ASHA"
+        orientation="vertical"
+        clips={[
+          { file: "Ashley ASHA.mov", label: "ashley" },
+          { file: "Shannon ASHA.mov", label: "shannon" },
+        ]}
+      />
 
       {/* SECTION 2 — THE SHARED STORY (timeline) */}
       <section style={{ background: "var(--color-bg-page)", padding: "80px 32px 80px" }}>
