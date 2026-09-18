@@ -1,21 +1,8 @@
-import Link from "next/link";
 import Image from "next/image";
 import { ReactNode } from "react";
 import FadeIn from "./FadeIn";
 
 const guides: { name: string; role: string; handle: string; bio: ReactNode[]; photo: string; delay: number }[] = [
-  {
-    name: "Shannon Tomascak",
-    role: "somatics & movement",
-    handle: "@soulflowwithshannon",
-    bio: [
-      <><strong>Shannon</strong> is a women&apos;s guide and circle facilitator, working at the intersection of somatic healing and subconscious rewiring.</>,
-      <>her path here wasn&apos;t linear — <em>more a spiral of unraveling, questioning, and slowly remembering who she is deep down.</em></>,
-      "now she holds that same space for women to come back to themselves, with softness, strength, and soul.",
-    ],
-    photo: "/images/Shannon (new).JPG",
-    delay: 0,
-  },
   {
     name: "Ashley Scully",
     role: "healing & energetics",
@@ -26,6 +13,18 @@ const guides: { name: string; role: string; handle: string; bio: ReactNode[]; ph
       "her sessions hold both stillness and joy at once, giving women room to feel what they've been outrunning, and land somewhere steadier.",
     ],
     photo: "/images/Ashley (new).JPG",
+    delay: 0,
+  },
+  {
+    name: "Shannon Tomascak",
+    role: "somatics & movement",
+    handle: "@soulflowwithshannon",
+    bio: [
+      <><strong>Shannon</strong> is a women&apos;s guide and circle facilitator, working at the intersection of somatic healing and subconscious rewiring.</>,
+      <>her path here wasn&apos;t linear — <em>more a spiral of unraveling, questioning, and slowly remembering who she is deep down.</em></>,
+      "now she holds that same space for women to come back to themselves, with softness, strength, and soul.",
+    ],
+    photo: "/images/Shannon (new).JPG",
     delay: 0.15,
   },
 ];
@@ -95,24 +94,9 @@ export default function GuidesCompact({ darkQuote = false }: { darkQuote?: boole
         </div>
       </div>
 
-      <FadeIn delay={0.2}>
-        <div style={{ textAlign: "center", marginTop: 32 }}>
-          <Link
-            href="/about"
-            className="guides-cta-btn"
-            style={{ display: "inline-block", padding: "12px 32px", border: "1px solid var(--color-accent)", background: "var(--color-accent)", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", fontWeight: 700, transition: "background 0.3s ease, transform 0.3s ease" }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = "#B8864A"; e.currentTarget.style.transform = "scale(1.02)"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = "var(--color-accent)"; e.currentTarget.style.transform = "scale(1)"; }}
-          >
-            learn more about our story and why we created ASHA →
-          </Link>
-        </div>
-      </FadeIn>
-
       <style>{`
         @media (max-width: 640px) {
           .guides-grid { grid-template-columns: 1fr !important; }
-          .guides-cta-btn { max-width: 300px; text-align: center; padding: 12px 20px !important; }
         }
       `}</style>
     </section>

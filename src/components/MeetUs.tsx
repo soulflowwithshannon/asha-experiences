@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 
 const CALENDAR_URL = "https://calendar.app.google/Yt1VUQGEuhhEipt59";
@@ -13,7 +14,7 @@ const hosts = [
 
 export default function MeetUs({
   headline = "let's talk it through first",
-  body = "most women talk to us before they book. no pressure — just an honest conversation about whether this is the right experience for you.",
+  body = "most women talk to us before they book. just an honest conversation about whether this is the right experience for you.",
   spaceAbove = 0,
 }: {
   headline?: string;
@@ -138,6 +139,24 @@ export default function MeetUs({
             marginTop: 16,
           }}>
             we both manage @asha_experiences, so you&apos;ll always be talking to Ashley or Shannon — never an assistant.
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={0.3}>
+          <p style={{ marginTop: 20 }}>
+            <Link
+              href="/about"
+              style={{
+                fontFamily: "var(--font-dm-sans)",
+                fontSize: 12,
+                color: "var(--color-text-body)",
+                textDecoration: "underline",
+                textDecorationThickness: "0.5px",
+                textUnderlineOffset: 3,
+              }}
+            >
+              or read our story and why we created ASHA →
+            </Link>
           </p>
         </FadeIn>
       </div>

@@ -976,7 +976,7 @@ export default function KenyaPage() {
 
       <MeetUs
         headline="you're thinking about flying to Kenya. that's a big thing to sit with on your own."
-        body="this one is the furthest out and the biggest leap, so we'd rather talk to you first. no pressure — just an honest conversation about whether this is the right experience for you."
+        body="this one is the furthest out and the biggest leap, so we'd rather talk to you first. just an honest conversation about whether this is the right experience for you."
         spaceAbove={56}
       />
 
