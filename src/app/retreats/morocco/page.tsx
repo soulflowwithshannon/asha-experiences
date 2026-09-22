@@ -262,16 +262,6 @@ const faqs: { question: string; answer: ReactNode }[] = [
     answer: <p>not at all. most women come solo — and many say the sisterhood they found was the most unexpected gift. this space is designed to make you feel safe, welcome, and deeply connected from day one.</p>,
   },
   {
-    question: "is Morocco safe?",
-    answer: (
-      <div>
-        <p style={{ marginBottom: 12 }}>Morocco is a well-traveled destination known for its rich culture, deep spirituality, and warm hospitality.</p>
-        <p style={{ marginBottom: 12 }}>Agadir, in particular, is a relaxed coastal city — chosen specifically for its safety, ease, and peaceful atmosphere. we&apos;ve done our homework on this.</p>
-        <p>all transportation is pre-arranged with trusted, private drivers. we move together as a group for all excursions, and there&apos;s on-site support at Atlas Kasbah throughout the retreat.</p>
-      </div>
-    ),
-  },
-  {
     question: "what do I need for traveling to Morocco?",
     answer: (
       <div>
