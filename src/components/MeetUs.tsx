@@ -1,16 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 
 const CALENDAR_URL = "https://calendar.app.google/Yt1VUQGEuhhEipt59";
 const INSTAGRAM_URL = "https://instagram.com/asha_experiences";
-
-const hosts = [
-  { name: "Ashley", src: "/images/Ashley (new).JPG", alt: "Ashley Scully" },
-  { name: "Shannon", src: "/images/Shannon (new).JPG", alt: "Shannon Tomascak" },
-];
 
 export default function MeetUs({
   headline = "let's talk it through first",
@@ -40,34 +34,6 @@ export default function MeetUs({
           }}>
             {headline}
           </p>
-        </FadeIn>
-
-        <FadeIn delay={0.1}>
-          <div style={{ display: "flex", gap: 20, justifyContent: "center", marginBottom: 28 }}>
-            {hosts.map((h) => (
-              <div key={h.name} style={{ textAlign: "center" }}>
-                <div style={{
-                  position: "relative",
-                  width: 120,
-                  aspectRatio: "4/5",
-                  borderRadius: 3,
-                  overflow: "hidden",
-                  marginBottom: 10,
-                }}>
-                  <Image
-                    src={h.src}
-                    alt={h.alt}
-                    fill
-                    style={{ objectFit: "cover", objectPosition: "center top" }}
-                    sizes="120px"
-                  />
-                </div>
-                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-headline)" }}>
-                  {h.name}
-                </p>
-              </div>
-            ))}
-          </div>
         </FadeIn>
 
         <FadeIn delay={0.15}>
