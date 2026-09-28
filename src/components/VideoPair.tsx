@@ -12,10 +12,15 @@ export interface Clip {
   label?: string;
   /** Poster image, so the player isn't a black rectangle before play. */
   poster?: string;
+  /**
+   * Seconds to seek to once metadata loads, so that frame shows as the
+   * thumbnail instead of the clip's first frame. Ignored when `poster` is set.
+   */
+  posterTime?: number;
 }
 
 function mimeFor(file: string) {
-  return file.toLowerCase().endsWith(".MOV") ? "video/quicktime" : "video/mp4";
+  return file.toLowerCase().endsWith(".mov") ? "video/quicktime" : "video/mp4";
 }
 
 export default function VideoPair({
@@ -76,6 +81,15 @@ export default function VideoPair({
                 playsInline
                 preload="metadata"
                 poster={clip.poster}
+                onLoadedMetadata={
+                  !clip.poster && clip.posterTime
+                    ? (e) => {
+                        // park on a frame worth looking at; the first one rarely is
+                        const v = e.currentTarget;
+                        if (v.currentTime === 0) v.currentTime = clip.posterTime!;
+                      }
+                    : undefined
+                }
                 style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               >
                 <source src={R2_BASE + encodeURIComponent(clip.file)} type={mimeFor(clip.file)} />

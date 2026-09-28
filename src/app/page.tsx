@@ -269,7 +269,7 @@ export default function HomePage() {
         orientation="vertical"
         clips={[
           { file: "Ashley moment from retreat.MOV", label: "ashley" },
-          { file: "Shannon moment from retreat.MOV", label: "shannon" },
+          { file: "Shannon moment from retreat.MOV", label: "shannon", posterTime: 1 },
         ]}
       />
 
