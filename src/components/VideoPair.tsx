@@ -19,10 +19,6 @@ export interface Clip {
   posterTime?: number;
 }
 
-function mimeFor(file: string) {
-  return file.toLowerCase().endsWith(".mov") ? "video/quicktime" : "video/mp4";
-}
-
 export default function VideoPair({
   clips,
   headline,
@@ -92,7 +88,10 @@ export default function VideoPair({
                 }
                 style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               >
-                <source src={R2_BASE + encodeURIComponent(clip.file)} type={mimeFor(clip.file)} />
+                {/* No type attribute on purpose: our .MOV files are H.264, but Chrome
+                    reports it cannot play "video/quicktime" and skips the source
+                    outright. With no hint it sniffs the container and plays them. */}
+                <source src={R2_BASE + encodeURIComponent(clip.file)} />
               </video>
             </div>
             {clip.label && (
