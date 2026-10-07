@@ -828,64 +828,9 @@ export default function KenyaPage() {
             </div>
           </FadeIn>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }} className="rooms-grid">
-            {/* One Bedroom Cottage */}
-            <FadeIn>
-              <motion.div whileHover={{ y: -4, boxShadow: "0 16px 48px rgba(74,63,53,0.12)" }} transition={{ duration: 0.3 }} style={{ background: "var(--color-bg-card)", border: "0.5px solid var(--color-border)", borderRadius: 8, padding: 40, display: "flex", flexDirection: "column", height: "100%" }}>
-                <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gridTemplateRows: "1fr 1fr", gap: 4, borderRadius: 6, overflow: "hidden", marginBottom: 24, aspectRatio: "8/5" }}>
-                  <div style={{ position: "relative", gridRow: "1 / 3" }}>
-                    <Image src="/images/one bedroom cottage.jpg" alt="One bedroom cottage" fill style={{ objectFit: "cover" }} sizes="400px" />
-                  </div>
-                  <div style={{ position: "relative" }}>
-                    <Image src="/images/one bedroom cottage outside.jpg" alt="One bedroom cottage exterior" fill style={{ objectFit: "cover" }} sizes="200px" />
-                  </div>
-                  <div style={{ position: "relative" }}>
-                    <Image src="/images/one bedroom cottage lounge.jpg" alt="One bedroom cottage lounge" fill style={{ objectFit: "cover" }} sizes="200px" />
-                  </div>
-                </div>
-                <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 28, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 12 }}>the one bedroom cottage</h3>
-                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
-                  the most private option, shared with one other woman.
-                  <br /><br />
-                  enjoy a cozy living and dining room, ensuite bathroom and comfortable verandah; the ideal spot to lounge on in the afternoon with a cup of tea and a good book whilst the elephants rumble through the bushes near by.
-                </p>
-                <div style={{ marginBottom: 24 }}>
-                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>all cottages include</p>
-                  <ul style={{ listStyle: "disc", paddingLeft: 18, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
-                    {[
-                      "flexible bed arrangements (2 twin beds or king size)",
-                      "ensuite bathrooms with walk-in showers",
-                      "hot and cold running water",
-                      "bathroom utilities — shampoo, conditioner, and fabric detergent",
-                      "drinking water and water bottles",
-                      "solar powered electricity to charge your devices",
-                      "basic wifi",
-                      "access to viewing decks for private bush meals",
-                    ].map((item, i) => (
-                      <li key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", lineHeight: 1.6 }}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div style={{ marginTop: 8 }}>
-                  <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 36, color: "var(--color-accent)", fontWeight: 400, marginBottom: 4 }}>$7,500</p>
-                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", marginBottom: 24 }}>per person / shared occupancy</p>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                    {/* STRIPE LINK: one bedroom cottage - pay in full */}
-                    <a href="https://buy.stripe.com/dRm5kEg2k9RPe9s5r00sU00" target="_blank" rel="noopener noreferrer" style={{ display: "block", padding: "12px 24px", border: "1px solid var(--color-accent)", color: "var(--color-accent)", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "color-mix(in srgb, var(--color-accent) 10%, transparent)")} onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}>
-                      pay in full →
-                    </a>
-                    {/* STRIPE LINK: one bedroom cottage - $1,000 deposit */}
-                    <a href="https://buy.stripe.com/00w3cw7vO3traXg8Dc0sU01" target="_blank" rel="noopener noreferrer" style={{ display: "block", padding: "12px 24px", border: "1px solid var(--color-accent)", color: "var(--color-accent)", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "color-mix(in srgb, var(--color-accent) 10%, transparent)")} onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}>
-                      reserve with $1,000 deposit →
-                    </a>
-                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-body)", textAlign: "center", marginTop: 8, fontStyle: "italic" }}>all payments are non-refundable<br />balance due 60 days prior to the retreat</p>
-                  </div>
-                </div>
-              </motion.div>
-            </FadeIn>
-
+          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 32, maxWidth: 560, margin: "0 auto" }} className="rooms-grid">
             {/* Two Bedroom Cottage */}
-            <FadeIn delay={0.15}>
+            <FadeIn>
               <motion.div whileHover={{ y: -4, boxShadow: "0 16px 48px rgba(74,63,53,0.12)" }} transition={{ duration: 0.3 }} style={{ background: "var(--color-bg-card)", border: "0.5px solid var(--color-border)", borderRadius: 8, padding: 40, display: "flex", flexDirection: "column", height: "100%" }}>
                 <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gridTemplateRows: "1fr 1fr", gap: 4, borderRadius: 6, overflow: "hidden", marginBottom: 24, aspectRatio: "8/5" }}>
                   <div style={{ position: "relative", gridRow: "1 / 3" }}>
