@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import PostHogProvider from "@/components/PostHogProvider";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -122,9 +123,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${fraunces.variable}`}>
       <body className="min-h-full flex flex-col">
-        <Nav />
-        {children}
-        <Footer />
+        <PostHogProvider>
+          <Nav />
+          {children}
+          <Footer />
+        </PostHogProvider>
 
         {/* Google Analytics (GA4) */}
         <Script
