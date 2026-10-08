@@ -842,26 +842,26 @@ export default function KenyaPage() {
                   display: "grid",
                   gridTemplateColumns: "1fr 1fr",
                   gap: 40,
-                  alignItems: "start",
+                  alignItems: "stretch",
                 }}
                 className="cottage-card"
               >
                 {/* Left — images */}
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gridTemplateRows: "auto auto", gap: 6, borderRadius: 6, overflow: "hidden" }}>
-                  <div style={{ position: "relative", gridColumn: "1 / 3", aspectRatio: "3/2" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gridTemplateRows: "1.7fr 1fr", gap: 6, borderRadius: 6, overflow: "hidden", height: "100%", minHeight: 460 }}>
+                  <div style={{ position: "relative", gridColumn: "1 / 3" }}>
                     <Image src="/images/two bedroom cottage lounge 2.jpg" alt="Cottage lounge" fill style={{ objectFit: "cover" }} sizes="500px" />
                   </div>
-                  <div style={{ position: "relative", aspectRatio: "1/1" }}>
+                  <div style={{ position: "relative" }}>
                     <Image src="/images/two bedroom cottage.jpg" alt="Cottage bedroom" fill style={{ objectFit: "cover" }} sizes="250px" />
                   </div>
-                  <div style={{ position: "relative", aspectRatio: "1/1" }}>
+                  <div style={{ position: "relative" }}>
                     <Image src="/images/two bedroom cottage lounge.jpg" alt="Cottage verandah" fill style={{ objectFit: "cover" }} sizes="250px" />
                   </div>
                 </div>
 
                 {/* Right — details */}
                 <div style={{ display: "flex", flexDirection: "column" }}>
-                  <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 28, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 12 }}>the cottage</h3>
+                  <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 34, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 20, lineHeight: 1.1 }}>the cottage</h3>
                   <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
                     two bedroom cottages have spacious rooms and ensuite bathrooms flanking a large living area, dining room, and a verandah spreading across the length of the building.
                   </p>
@@ -887,13 +887,13 @@ export default function KenyaPage() {
                       <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 40, color: "var(--color-accent)", fontWeight: 400 }}>$6,900</p>
                       <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)" }}>per person / shared occupancy</p>
                     </div>
-                    <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }} className="cottage-buttons">
+                    <div style={{ display: "flex", flexDirection: "column", gap: 10 }} className="cottage-buttons">
                       {/* STRIPE LINK: cottage - pay in full */}
-                      <a href="https://buy.stripe.com/3cIaEY03mfc9d5o4mW0sU02" target="_blank" rel="noopener noreferrer" style={{ flex: 1, minWidth: 170, display: "block", padding: "13px 20px", background: "var(--color-accent)", border: "1px solid var(--color-accent)", color: "#FFFCF5", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "opacity 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")} onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}>
+                      <a href="https://buy.stripe.com/3cIaEY03mfc9d5o4mW0sU02" target="_blank" rel="noopener noreferrer" style={{ display: "block", width: "100%", boxSizing: "border-box", padding: "14px 20px", background: "var(--color-accent)", border: "1px solid var(--color-accent)", color: "#FFFCF5", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "opacity 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")} onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}>
                         pay in full →
                       </a>
                       {/* STRIPE LINK: cottage - $1,000 deposit */}
-                      <a href="https://buy.stripe.com/aFa7sMdUc9RP2qK3iS0sU03" target="_blank" rel="noopener noreferrer" style={{ flex: 1, minWidth: 170, display: "block", padding: "13px 20px", border: "1px solid var(--color-accent)", color: "var(--color-accent)", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "color-mix(in srgb, var(--color-accent) 10%, transparent)")} onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}>
+                      <a href="https://buy.stripe.com/aFa7sMdUc9RP2qK3iS0sU03" target="_blank" rel="noopener noreferrer" style={{ display: "block", width: "100%", boxSizing: "border-box", padding: "14px 20px", border: "1px solid var(--color-accent)", color: "var(--color-accent)", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "color-mix(in srgb, var(--color-accent) 10%, transparent)")} onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}>
                         reserve with $1,000 deposit →
                       </a>
                     </div>
