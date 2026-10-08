@@ -869,7 +869,6 @@ export default function KenyaPage() {
                     <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>all cottages include</p>
                     <ul style={{ listStyle: "disc", paddingLeft: 18, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
                       {[
-                        "flexible bed arrangements (2 twin beds or king size)",
                         "ensuite bathrooms with walk-in showers",
                         "hot and cold running water",
                         "bathroom utilities — shampoo, conditioner, and fabric detergent",
