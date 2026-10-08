@@ -860,7 +860,7 @@ export default function KenyaPage() {
                 </div>
 
                 {/* Right — details */}
-                <div style={{ display: "flex", flexDirection: "column" }}>
+                <div style={{ display: "flex", flexDirection: "column", paddingTop: 12 }}>
                   <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 34, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 20, lineHeight: 1.1 }}>the cottage</h3>
                   <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
                     two bedroom cottages have spacious rooms and ensuite bathrooms flanking a large living area, dining room, and a verandah spreading across the length of the building.
@@ -896,7 +896,7 @@ export default function KenyaPage() {
                         reserve with $1,000 deposit →
                       </a>
                     </div>
-                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-body)", textAlign: "center", marginTop: 14, fontStyle: "italic" }}>all payments are non-refundable<br />balance due 60 days prior to the retreat</p>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-body)", textAlign: "center", marginTop: 14, fontStyle: "italic" }}>all payments are non-refundable<br />balance due 30 days prior to the retreat</p>
                   </div>
                 </div>
               </motion.div>
