@@ -861,9 +861,12 @@ export default function KenyaPage() {
 
                 {/* Right — details */}
                 <div style={{ display: "flex", flexDirection: "column", paddingTop: 12 }}>
-                  <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 34, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 20, lineHeight: 1.1 }}>the cottage</h3>
+                  <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 34, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 10, lineHeight: 1.1 }}>the cottage</h3>
+                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-accent)", marginBottom: 18 }}>
+                    two bedrooms · two women per room · four per cottage
+                  </p>
                   <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
-                    two bedroom cottages have spacious rooms and ensuite bathrooms flanking a large living area, dining room, and a verandah spreading across the length of the building.
+                    you&apos;ll share a bedroom with one other woman, and the cottage with three. each bedroom has its own ensuite bathroom, and the living area, dining room and verandah run the full length of the building.
                   </p>
                   <div style={{ marginBottom: 28 }}>
                     <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>all cottages include</p>
@@ -884,7 +887,7 @@ export default function KenyaPage() {
                   <div style={{ marginTop: "auto", paddingTop: 20, borderTop: "0.5px solid var(--color-border)" }}>
                     <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 20, flexWrap: "wrap" }}>
                       <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 40, color: "var(--color-accent)", fontWeight: 400 }}>$6,900</p>
-                      <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)" }}>per person / shared occupancy</p>
+                      <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)" }}>per person · shared room</p>
                     </div>
                     <div style={{ display: "flex", flexDirection: "column", gap: 10 }} className="cottage-buttons">
                       {/* STRIPE LINK: cottage - pay in full */}
