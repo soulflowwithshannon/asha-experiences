@@ -828,62 +828,83 @@ export default function KenyaPage() {
             </div>
           </FadeIn>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 32, maxWidth: 560, margin: "0 auto" }} className="rooms-grid">
-            {/* Two Bedroom Cottage */}
+          <div style={{ maxWidth: 1000, margin: "0 auto" }}>
+            {/* The cottage — single option, laid out horizontally */}
             <FadeIn>
-              <motion.div whileHover={{ y: -4, boxShadow: "0 16px 48px rgba(74,63,53,0.12)" }} transition={{ duration: 0.3 }} style={{ background: "var(--color-bg-card)", border: "0.5px solid var(--color-border)", borderRadius: 8, padding: 40, display: "flex", flexDirection: "column", height: "100%" }}>
-                <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gridTemplateRows: "1fr 1fr", gap: 4, borderRadius: 6, overflow: "hidden", marginBottom: 24, aspectRatio: "8/5" }}>
-                  <div style={{ position: "relative", gridRow: "1 / 3" }}>
-                    <Image src="/images/two bedroom cottage lounge 2.jpg" alt="Two bedroom cottage lounge" fill style={{ objectFit: "cover" }} sizes="400px" />
+              <motion.div
+                whileHover={{ y: -4, boxShadow: "0 16px 48px rgba(74,63,53,0.12)" }}
+                transition={{ duration: 0.3 }}
+                style={{
+                  background: "var(--color-bg-card)",
+                  border: "0.5px solid var(--color-border)",
+                  borderRadius: 8,
+                  padding: 40,
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr",
+                  gap: 40,
+                  alignItems: "start",
+                }}
+                className="cottage-card"
+              >
+                {/* Left — images */}
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gridTemplateRows: "auto auto", gap: 6, borderRadius: 6, overflow: "hidden" }}>
+                  <div style={{ position: "relative", gridColumn: "1 / 3", aspectRatio: "3/2" }}>
+                    <Image src="/images/two bedroom cottage lounge 2.jpg" alt="Cottage lounge" fill style={{ objectFit: "cover" }} sizes="500px" />
                   </div>
-                  <div style={{ position: "relative" }}>
-                    <Image src="/images/two bedroom cottage.jpg" alt="Two bedroom cottage" fill style={{ objectFit: "cover" }} sizes="200px" />
+                  <div style={{ position: "relative", aspectRatio: "1/1" }}>
+                    <Image src="/images/two bedroom cottage.jpg" alt="Cottage bedroom" fill style={{ objectFit: "cover" }} sizes="250px" />
                   </div>
-                  <div style={{ position: "relative" }}>
-                    <Image src="/images/two bedroom cottage lounge.jpg" alt="Two bedroom cottage lounge" fill style={{ objectFit: "cover" }} sizes="200px" />
+                  <div style={{ position: "relative", aspectRatio: "1/1" }}>
+                    <Image src="/images/two bedroom cottage lounge.jpg" alt="Cottage verandah" fill style={{ objectFit: "cover" }} sizes="250px" />
                   </div>
                 </div>
-                <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 28, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 12 }}>the cottage</h3>
-                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
-                  two bedroom cottages have spacious rooms and ensuite bathrooms flanking a large living area, dining room, and a verandah spreading across the length of the building.
-                </p>
-                <div style={{ marginBottom: 24 }}>
-                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>all cottages include</p>
-                  <ul style={{ listStyle: "disc", paddingLeft: 18, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
-                    {[
-                      "flexible bed arrangements (2 twin beds or king size)",
-                      "ensuite bathrooms with walk-in showers",
-                      "hot and cold running water",
-                      "bathroom utilities — shampoo, conditioner, and fabric detergent",
-                      "drinking water and water bottles",
-                      "solar powered electricity to charge your devices",
-                      "basic wifi",
-                      "access to viewing decks for private bush meals",
-                    ].map((item, i) => (
-                      <li key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", lineHeight: 1.6 }}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div style={{ marginTop: 8 }}>
-                  <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 36, color: "var(--color-accent)", fontWeight: 400, marginBottom: 4 }}>$6,900</p>
-                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", marginBottom: 24 }}>per person / shared occupancy</p>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                    {/* STRIPE LINK: two bedroom cottage - pay in full */}
-                    <a href="https://buy.stripe.com/3cIaEY03mfc9d5o4mW0sU02" target="_blank" rel="noopener noreferrer" style={{ display: "block", padding: "12px 24px", border: "1px solid var(--color-accent)", color: "var(--color-accent)", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "color-mix(in srgb, var(--color-accent) 10%, transparent)")} onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}>
-                      pay in full →
-                    </a>
-                    {/* STRIPE LINK: two bedroom cottage - $1,000 deposit */}
-                    <a href="https://buy.stripe.com/aFa7sMdUc9RP2qK3iS0sU03" target="_blank" rel="noopener noreferrer" style={{ display: "block", padding: "12px 24px", border: "1px solid var(--color-accent)", color: "var(--color-accent)", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "color-mix(in srgb, var(--color-accent) 10%, transparent)")} onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}>
-                      reserve with $1,000 deposit →
-                    </a>
-                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-body)", textAlign: "center", marginTop: 8, fontStyle: "italic" }}>all payments are non-refundable<br />balance due 60 days prior to the retreat</p>
+
+                {/* Right — details */}
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 28, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 12 }}>the cottage</h3>
+                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
+                    two bedroom cottages have spacious rooms and ensuite bathrooms flanking a large living area, dining room, and a verandah spreading across the length of the building.
+                  </p>
+                  <div style={{ marginBottom: 28 }}>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>all cottages include</p>
+                    <ul style={{ listStyle: "disc", paddingLeft: 18, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
+                      {[
+                        "flexible bed arrangements (2 twin beds or king size)",
+                        "ensuite bathrooms with walk-in showers",
+                        "hot and cold running water",
+                        "bathroom utilities — shampoo, conditioner, and fabric detergent",
+                        "drinking water and water bottles",
+                        "solar powered electricity to charge your devices",
+                        "basic wifi",
+                        "access to viewing decks for private bush meals",
+                      ].map((item, i) => (
+                        <li key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", lineHeight: 1.6 }}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div style={{ marginTop: "auto", paddingTop: 20, borderTop: "0.5px solid var(--color-border)" }}>
+                    <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 20, flexWrap: "wrap" }}>
+                      <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 40, color: "var(--color-accent)", fontWeight: 400 }}>$6,900</p>
+                      <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)" }}>per person / shared occupancy</p>
+                    </div>
+                    <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }} className="cottage-buttons">
+                      {/* STRIPE LINK: cottage - pay in full */}
+                      <a href="https://buy.stripe.com/3cIaEY03mfc9d5o4mW0sU02" target="_blank" rel="noopener noreferrer" style={{ flex: 1, minWidth: 170, display: "block", padding: "13px 20px", background: "var(--color-accent)", border: "1px solid var(--color-accent)", color: "#FFFCF5", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "opacity 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")} onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}>
+                        pay in full →
+                      </a>
+                      {/* STRIPE LINK: cottage - $1,000 deposit */}
+                      <a href="https://buy.stripe.com/aFa7sMdUc9RP2qK3iS0sU03" target="_blank" rel="noopener noreferrer" style={{ flex: 1, minWidth: 170, display: "block", padding: "13px 20px", border: "1px solid var(--color-accent)", color: "var(--color-accent)", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "color-mix(in srgb, var(--color-accent) 10%, transparent)")} onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}>
+                        reserve with $1,000 deposit →
+                      </a>
+                    </div>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-body)", textAlign: "center", marginTop: 14, fontStyle: "italic" }}>all payments are non-refundable<br />balance due 60 days prior to the retreat</p>
                   </div>
                 </div>
               </motion.div>
             </FadeIn>
           </div>
         </div>
-        <style>{`@media(max-width:768px){.rooms-grid{grid-template-columns:1fr!important}} @media(max-width:640px){.mobile-break{display:block}}`}</style>
+        <style>{`@media(max-width:860px){.cottage-card{grid-template-columns:1fr!important;gap:28px!important;padding:28px!important}} @media(max-width:640px){.mobile-break{display:block}}`}</style>
       </section>
 
       {/* SECTION 8 — FAQ */}
