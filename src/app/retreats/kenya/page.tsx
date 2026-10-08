@@ -820,7 +820,7 @@ export default function KenyaPage() {
           <FadeIn delay={0.2}>
             <div style={{ maxWidth: 620, margin: "0 auto 48px", textAlign: "center", display: "flex", flexDirection: "column", gap: 16 }}>
               <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.8 }}>
-                <em>while solo occupancy is not available due to limited capacity, both room options are beautifully designed and thoughtfully appointed.</em>
+                <em>while solo occupancy is not available due to limited capacity, every cottage is beautifully designed and thoughtfully appointed.</em>
               </p>
               <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.8 }}>
                 <strong>book with a friend</strong> or be paired with a like-minded woman in your group.
@@ -843,10 +843,8 @@ export default function KenyaPage() {
                     <Image src="/images/two bedroom cottage lounge.jpg" alt="Two bedroom cottage lounge" fill style={{ objectFit: "cover" }} sizes="200px" />
                   </div>
                 </div>
-                <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 28, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 12 }}>the two bedroom cottage</h3>
+                <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 28, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 12 }}>the cottage</h3>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
-                  the more connected option, shared with 3 other women.
-                  <br /><br />
                   two bedroom cottages have spacious rooms and ensuite bathrooms flanking a large living area, dining room, and a verandah spreading across the length of the building.
                 </p>
                 <div style={{ marginBottom: 24 }}>
