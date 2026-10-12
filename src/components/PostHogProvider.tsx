@@ -5,7 +5,10 @@ import { usePathname, useSearchParams } from "next/navigation";
 import posthog from "posthog-js";
 import { PostHogProvider as Provider } from "posthog-js/react";
 
-const KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY;
+// The project key is public by design — it ships in the client bundle either
+// way — so it is defaulted here rather than depending on an env var being set
+// in Vercel. NEXT_PUBLIC_POSTHOG_KEY still overrides it.
+const KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY ?? "phc_mdqs6K4epfrCJQuackhxaZ2jjcvrmfDURgG7BhhLT4hK";
 const HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.i.posthog.com";
 
 if (typeof window !== "undefined" && KEY && !posthog.__loaded) {
