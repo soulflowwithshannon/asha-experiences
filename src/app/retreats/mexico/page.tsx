@@ -629,21 +629,21 @@ export default function MexicoPage() {
             {/* Casa Colectiva */}
             <FadeIn>
               <div style={{ background: "var(--color-bg-card)", border: "0.5px solid var(--color-border)", borderRadius: 8, padding: 40, display: "flex", flexDirection: "column", height: "100%" }}>
-                <div style={{ borderRadius: 6, overflow: "hidden", marginBottom: 24 }}>
+                <div style={{ borderRadius: 6, overflow: "hidden", marginBottom: 24, position: "relative" }}>
                   <Image src="/images/casa colectia.png" alt="Casa Colectiva" width={900} height={0} style={{ width: "100%", height: "auto", display: "block" }} sizes="600px" />
+                  <div style={{ position: "absolute", top: 12, right: 12, background: "#2D2521", color: "#E8D5BC", fontFamily: "var(--font-dm-sans)", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "6px 14px", borderRadius: 2 }}>
+                    sold out
+                  </div>
                 </div>
                 <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 28, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 12 }}>Casa Colectiva</h3>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
                   a casita shared with one other woman — the most connected way to experience the retreat. built-in sisterhood from the moment you arrive.
                 </p>
                 <div style={{ marginTop: "auto" }}>
-                  <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 36, color: "var(--color-accent)", fontWeight: 400, marginBottom: 4 }}>$2,300</p>
+                  <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 36, color: "var(--color-text-muted)", fontWeight: 400, marginBottom: 4 }}>$2,300</p>
                   <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", marginBottom: 8 }}>per person / shared occupancy</p>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                    <a href="https://buy.stripe.com/4gM5kEeYgaVT3uO3iS0sU04" target="_blank" rel="noopener noreferrer" style={{ display: "block", padding: "12px 24px", background: "#C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 700, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "#b08d78")} onMouseLeave={(e) => (e.currentTarget.style.background = "#C39E88")}>
-                      reserve my spot →
-                    </a>
-                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-body)", textAlign: "center", marginTop: 8, fontStyle: "italic" }}>all payments are non-refundable</p>
+                  <div style={{ padding: "12px 24px", background: "var(--color-border)", color: "var(--color-text-muted)", fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", textAlign: "center", borderRadius: 2, cursor: "default" }}>
+                    sold out
                   </div>
                 </div>
               </div>
