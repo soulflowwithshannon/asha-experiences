@@ -49,7 +49,7 @@ export default function Footer() {
               style={{
                 fontFamily: "var(--font-dm-sans)",
                 fontSize: 13,
-                color: "var(--color-text-muted)",
+                color: "var(--color-logo-brown)",
                 textDecoration: "none",
               }}
             >
@@ -63,7 +63,7 @@ export default function Footer() {
             style={{
               fontFamily: "var(--font-dm-sans)",
               fontSize: 13,
-              color: "var(--color-text-muted)",
+              color: "var(--color-logo-brown)",
               textDecoration: "none",
             }}
           >

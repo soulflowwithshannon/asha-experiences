@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="ASHA Experiences">
+  <circle cx="50" cy="50" r="50" fill="#61372E"/>
+  <circle cx="50" cy="50" r="42" fill="none" stroke="#FFFCF5" stroke-width="2.5"/>
+  <!-- the A is drawn as a path so it is the same serif letterform everywhere;
+       a <text> element would fall back to whatever serif the viewer has -->
+  <path fill="#FFFCF5" d="M50 24.5 L66.5 68.5 L71.5 68.5 L71.5 72 L57 72 L57 68.5 L61.6 68.5 L57.9 58.6 L42.6 58.6 L39 68.5 L43.8 68.5 L43.8 72 L30.5 72 L30.5 68.5 L35.2 68.5 L51 24.5 Z M50.3 35.6 L43.9 55.1 L56.6 55.1 Z"/>
+</svg>

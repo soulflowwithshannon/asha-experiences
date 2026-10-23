@@ -9,6 +9,8 @@
   --color-text-body:     #5C4D3F;
   --color-text-muted:    #D4C8AA;
   --color-accent:        #A67C52;
+  /* the brown of the logo lockup, sampled from the artwork */
+  --color-logo-brown:    #61372E;
 }
 
 [data-theme="dark"] {
@@ -20,6 +22,7 @@
   --color-text-body:     #C5AA9B;
   --color-text-muted:    #BAAB92;
   --color-accent:        #C39E88;
+  --color-logo-brown:    #E8D5BC;
 }
 
 * {
