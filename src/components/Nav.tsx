@@ -108,22 +108,6 @@ export default function Nav() {
             about us
           </Link>
 
-          <Link
-            href="/find-your-retreat"
-            style={{
-              fontFamily: "var(--font-dm-sans)",
-              fontSize: 13,
-              color: pathname === "/find-your-retreat" ? linkActiveColor : linkColor,
-              textDecoration: "none",
-              borderBottom: pathname === "/find-your-retreat" ? "1px solid var(--color-accent)" : "1px solid transparent",
-              paddingBottom: 2,
-              textShadow: heroShadow,
-              transition: "color 0.2s ease",
-            }}
-          >
-            quiz
-          </Link>
-
           {/* Retreats dropdown */}
           <div ref={dropdownRef} style={{ position: "relative" }}>
             <button
@@ -287,10 +271,6 @@ export default function Nav() {
         >
           <Link href="/about" style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: pathname === "/about" ? "var(--color-accent)" : "var(--color-text-body)", textDecoration: "none" }}>
             about us
-          </Link>
-
-          <Link href="/find-your-retreat" style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: pathname === "/find-your-retreat" ? "var(--color-accent)" : "var(--color-text-body)", textDecoration: "none" }}>
-            quiz
           </Link>
 
           {/* Mobile retreats accordion */}
