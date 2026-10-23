@@ -8,6 +8,7 @@ import FadeIn from "@/components/FadeIn";
 import Testimonials, { quotes } from "@/components/Testimonials";
 import GuidesCompact from "@/components/GuidesCompact";
 import VideoPair from "@/components/VideoPair";
+import DestinationRequest from "@/components/DestinationRequest";
 import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/AnimatedText";
 
 function ParallaxHero() {
@@ -320,6 +321,9 @@ export default function HomePage() {
         </div>
         <style>{`@media(max-width:768px){.split-grid{grid-template-columns:1fr!important}}`}</style>
       </section>
+
+      {/* SECTION 4b — WHERE SHOULD WE GO NEXT */}
+      <DestinationRequest />
 
       {/* SECTION 5 — TESTIMONIALS */}
       <section style={{ background: "var(--color-bg-surface)", padding: "80px 32px" }}>
