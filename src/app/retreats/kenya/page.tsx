@@ -936,6 +936,7 @@ export default function KenyaPage() {
         headline="you're thinking about flying to Kenya. that's a big thing to sit with on your own."
         body="this one is the furthest out and the biggest leap, so we'd rather talk to you first. just an honest conversation about whether this is the right experience for you."
         spaceAbove={56}
+        spaceBelow={48}
       />
 
       {/* SECTION — ON THE FENCE (two story-format videos) */}
@@ -943,6 +944,7 @@ export default function KenyaPage() {
         headline="to the woman on the fence"
         orientation="vertical"
         labelTone="dark"
+        padding="40px 32px 80px"
         clips={[
           { file: "Ashley women on the fence.MOV", label: "ashley" },
           { file: "Shannon to the women.MOV", label: "shannon" },

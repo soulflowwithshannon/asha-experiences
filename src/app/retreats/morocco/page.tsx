@@ -815,13 +815,14 @@ export default function MoroccoPage() {
         </div>
       </section>
 
-      <MeetUs spaceAbove={56} />
+      <MeetUs spaceAbove={56} spaceBelow={48} />
 
       {/* SECTION — ON THE FENCE (two story-format videos) */}
       <VideoPair
         headline="to the woman on the fence"
         orientation="vertical"
         labelTone="dark"
+        padding="40px 32px 80px"
         clips={[
           { file: "Ashley women on the fence.MOV", label: "ashley" },
           { file: "Shannon to the women.MOV", label: "shannon" },

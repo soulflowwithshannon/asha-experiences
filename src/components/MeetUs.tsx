@@ -10,13 +10,15 @@ export default function MeetUs({
   headline = "let's talk it through first",
   body = "most women talk to us before they book. just an honest conversation about whether this is the right experience for you.",
   spaceAbove = 0,
+  spaceBelow = 80,
 }: {
   headline?: string;
   body?: string;
   spaceAbove?: number;
+  spaceBelow?: number;
 }) {
   return (
-    <section style={{ background: "var(--color-bg-page)", padding: `${spaceAbove}px 32px 80px` }}>
+    <section style={{ background: "var(--color-bg-page)", padding: `${spaceAbove}px 32px ${spaceBelow}px` }}>
       <div style={{ maxWidth: 640, margin: "0 auto", textAlign: "center" }}>
         <FadeIn>
           <p className="eyebrow-accent" style={{ marginBottom: 20 }}>before you book</p>
