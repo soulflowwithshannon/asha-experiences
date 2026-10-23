@@ -8,6 +8,7 @@ import FadeIn from "@/components/FadeIn";
 import GuidesCompact from "@/components/GuidesCompact";
 import VideoPair from "@/components/VideoPair";
 import DestinationRequest from "@/components/DestinationRequest";
+import QuietNote from "@/components/QuietNote";
 import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/AnimatedText";
 
 function ParallaxHero() {
@@ -209,6 +210,9 @@ export default function HomePage() {
         </div>
         <style>{`@media(max-width:640px){.values-row{flex-direction:column!important;align-items:center!important}.values-row>*{width:100%!important;max-width:320px}}`}</style>
       </section>
+
+      {/* SECTION 2b — A QUIET NOTE */}
+      <QuietNote />
 
       {/* SECTION 3 — PILLARS */}
       <section style={{ background: "var(--color-bg-surface)", padding: "80px 32px" }}>
