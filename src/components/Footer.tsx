@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -21,18 +22,17 @@ export default function Footer() {
         className="footer-grid"
       >
         {/* Left — wordmark */}
-        <Link
-          href="/"
-          style={{
-            fontFamily: "var(--font-cormorant)",
-            fontSize: 22,
-            fontWeight: 500,
-            letterSpacing: "0.08em",
-            color: "var(--color-text-headline)",
-            textDecoration: "none",
-          }}
-        >
-          ASHA
+        <Link href="/" aria-label="ASHA Experiences — home" style={{ display: "inline-block", lineHeight: 0 }}>
+          {/* the white-background file, multiplied, so the square drops away
+              onto any of our creams — the cream-background file leaves a patch */}
+          <Image
+            src="/images/asha-logo-white.webp"
+            alt="ASHA Experiences"
+            width={300}
+            height={300}
+            sizes="150px"
+            style={{ width: 140, height: "auto", display: "block", mixBlendMode: "multiply" }}
+          />
         </Link>
 
         {/* Center — links */}

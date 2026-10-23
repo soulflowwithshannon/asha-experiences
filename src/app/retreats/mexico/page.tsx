@@ -678,6 +678,9 @@ export default function MexicoPage() {
         <style>{`@media(max-width:768px){.rooms-grid{grid-template-columns:1fr!important}} @media(max-width:640px){.mobile-break{display:block}}`}</style>
       </section>
 
+      {/* SECTION — HOW IT WORKS */}
+      <HowItWorks arrival="from Cancún" background="var(--color-bg-surface)" />
+
       {/* SECTION 10 — FAQ */}
       <section style={{ background: "#FFFCF5", padding: "80px 32px" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
@@ -696,9 +699,6 @@ export default function MexicoPage() {
           </FadeIn>
         </div>
       </section>
-
-      {/* SECTION — HOW IT WORKS */}
-      <HowItWorks arrival="from Cancún" />
 
       {/* SECTION — ON THE FENCE (two story-format videos) */}
       <VideoPair

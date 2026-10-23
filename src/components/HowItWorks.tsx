@@ -10,7 +10,7 @@ import FadeIn from "@/components/FadeIn";
  */
 export default function HowItWorks({
   arrival = "from the airport",
-  background = "var(--color-bg-surface)",
+  background = "var(--color-bg-page)",
 }: {
   /** e.g. "from Nairobi" — the transfer each page already lists as included. */
   arrival?: string;
@@ -32,55 +32,65 @@ export default function HowItWorks({
   ];
 
   return (
-    <section style={{ background, padding: "80px 32px" }}>
-      <div style={{ maxWidth: 900, margin: "0 auto" }}>
+    <section style={{ background, borderTop: "0.5px solid var(--color-border)", padding: "80px 32px" }}>
+      <div style={{ maxWidth: 720, margin: "0 auto" }}>
         <FadeIn>
-          <p className="eyebrow-accent" style={{ marginBottom: 14, textAlign: "center" }}>how it works</p>
+          <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 18 }}>
+            <span style={{ width: 36, height: 1, background: "var(--color-accent)", flexShrink: 0 }} />
+            <p className="eyebrow-accent" style={{ margin: 0 }}>how it works</p>
+          </div>
           <h2
             style={{
               fontFamily: "var(--font-fraunces)",
-              fontSize: "clamp(26px,3.6vw,32px)",
+              fontSize: "clamp(28px,4vw,38px)",
               color: "var(--color-text-headline)",
               fontWeight: 700,
-              textAlign: "center",
-              marginBottom: 56,
+              lineHeight: 1.15,
+              marginBottom: 48,
             }}
           >
-            what happens after you say yes
+            what happens{" "}
+            <em style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontWeight: 500, color: "var(--color-accent)" }}>
+              after you say yes
+            </em>
           </h2>
         </FadeIn>
 
-        <div className="how-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 32 }}>
-          {steps.map((step, i) => (
+        {steps.map((step, i) => {
+          const last = i === steps.length - 1;
+          return (
             <FadeIn key={step.title} delay={i * 0.1}>
-              <div className="how-step" style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
-                <div
-                  className="how-numeral"
-                  style={{
-                    width: 54,
-                    height: 54,
-                    borderRadius: "50%",
-                    background: "var(--color-accent)",
-                    color: "#FFFCF5",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontFamily: "var(--font-cormorant)",
-                    fontSize: 24,
-                    flexShrink: 0,
-                    marginBottom: 20,
-                  }}
-                >
-                  {i + 1}
+              <div style={{ display: "flex", gap: 24, alignItems: "stretch" }}>
+                {/* numeral + connector */}
+                <div style={{ display: "flex", flexDirection: "column", alignItems: "center", flexShrink: 0 }}>
+                  <div
+                    style={{
+                      width: 54,
+                      height: 54,
+                      borderRadius: "50%",
+                      background: "var(--color-accent)",
+                      color: "#FFFCF5",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontFamily: "var(--font-cormorant)",
+                      fontSize: 24,
+                      flexShrink: 0,
+                    }}
+                  >
+                    {i + 1}
+                  </div>
+                  {!last && <div style={{ flex: 1, width: 1, background: "var(--color-accent)", opacity: 0.45, marginTop: 8 }} />}
                 </div>
-                <div className="how-copy">
+
+                <div style={{ paddingTop: 6, paddingBottom: last ? 0 : 36 }}>
                   <h3
                     style={{
                       fontFamily: "var(--font-fraunces)",
-                      fontSize: 19,
+                      fontSize: "clamp(19px,2.4vw,23px)",
                       color: "var(--color-text-headline)",
                       fontWeight: 700,
-                      marginBottom: 10,
+                      marginBottom: 8,
                     }}
                   >
                     {step.title}
@@ -88,11 +98,10 @@ export default function HowItWorks({
                   <p
                     style={{
                       fontFamily: "var(--font-dm-sans)",
-                      fontSize: 14,
+                      fontSize: 15,
                       lineHeight: 1.8,
                       color: "var(--color-text-body)",
-                      maxWidth: 260,
-                      margin: "0 auto",
+                      maxWidth: 480,
                     }}
                   >
                     {step.body}
@@ -100,18 +109,9 @@ export default function HowItWorks({
                 </div>
               </div>
             </FadeIn>
-          ))}
-        </div>
+          );
+        })}
       </div>
-
-      <style>{`
-        @media (max-width: 760px) {
-          .how-grid { grid-template-columns: 1fr !important; gap: 28px !important; max-width: 420px; margin: 0 auto; }
-          .how-step { flex-direction: row !important; align-items: flex-start !important; text-align: left !important; gap: 18px; }
-          .how-numeral { margin-bottom: 0 !important; width: 44px !important; height: 44px !important; font-size: 20px !important; }
-          .how-copy p { margin: 0 !important; max-width: none !important; }
-        }
-      `}</style>
     </section>
   );
 }

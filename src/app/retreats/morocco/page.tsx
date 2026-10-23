@@ -793,6 +793,9 @@ export default function MoroccoPage() {
         <style>{`@media(max-width:900px){.rooms-grid{grid-template-columns:1fr!important}} @media(max-width:640px){.mobile-break{display:block}}`}</style>
       </section>
 
+      {/* SECTION — HOW IT WORKS */}
+      <HowItWorks arrival="from Marrakech" background="var(--color-bg-page)" />
+
       {/* SECTION 9 — FAQ */}
       <section style={{ background: "#F5F1E6", padding: "80px 32px 80px" }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
@@ -811,9 +814,6 @@ export default function MoroccoPage() {
           </FadeIn>
         </div>
       </section>
-
-      {/* SECTION — HOW IT WORKS */}
-      <HowItWorks arrival="from Marrakech" />
 
       {/* SECTION — ON THE FENCE (two story-format videos) */}
       <VideoPair
