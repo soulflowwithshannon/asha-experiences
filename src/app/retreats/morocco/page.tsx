@@ -6,6 +6,7 @@ import { useRef, useState, ReactNode } from "react";
 import FadeIn from "@/components/FadeIn";
 import Testimonials, { retreatQuotes } from "@/components/Testimonials";
 import VideoPair from "@/components/VideoPair";
+import HowItWorks from "@/components/HowItWorks";
 import MeetUs from "@/components/MeetUs";
 import GuidesCompact from "@/components/GuidesCompact";
 import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/AnimatedText";
@@ -810,6 +811,9 @@ export default function MoroccoPage() {
           </FadeIn>
         </div>
       </section>
+
+      {/* SECTION — HOW IT WORKS */}
+      <HowItWorks arrival="from Marrakech" />
 
       {/* SECTION — ON THE FENCE (two story-format videos) */}
       <VideoPair
