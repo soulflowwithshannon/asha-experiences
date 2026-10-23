@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const retreats = [
@@ -49,6 +50,7 @@ export default function Nav() {
   const linkActiveColor = scrolled || !darkHero ? "var(--color-accent)" : "#FFFFFF";
   // lifts light text off pale photos (the Kenya hero is very washed out at the top)
   const heroShadow = !scrolled && darkHero ? "0 1px 14px rgba(45,37,33,0.55)" : "none";
+  const lightOnDark = !scrolled && darkHero;
 
   return (
     <nav
@@ -75,19 +77,42 @@ export default function Nav() {
         }}
       >
         {/* Wordmark */}
-        <Link
-          href="/"
-          style={{
-            fontFamily: "var(--font-cormorant)",
-            fontSize: 24,
-            fontWeight: 500,
-            letterSpacing: "0.08em",
-            color: scrolled ? "var(--color-text-headline)" : darkHero ? "#F1F0E5" : "var(--color-text-headline)",
-            textShadow: heroShadow,
-            textDecoration: "none",
-          }}
-        >
-          ASHA
+        <Link href="/" aria-label="ASHA Experiences — home" style={{ display: "block", lineHeight: 0 }}>
+          {/* The logo file is a square with a white ground and a wide margin,
+              so it is zoomed inside a clipped box to crop to the lockup.
+              On cream: multiply drops the white ground away and the letters
+              stay brand brown. Over a photo hero: inverted to near-white and
+              screened, which drops the (now black) ground away instead. */}
+          <span
+            style={{
+              display: "block",
+              width: 104,
+              height: 44,
+              overflow: "hidden",
+              position: "relative",
+            }}
+          >
+            <Image
+              src="/images/asha-logo-white.webp"
+              alt="ASHA Experiences"
+              width={300}
+              height={300}
+              priority
+              sizes="160px"
+              style={{
+                position: "absolute",
+                left: "50%",
+                top: "50%",
+                width: 156,
+                height: "auto",
+                transform: "translate(-50%, -50%)",
+                mixBlendMode: lightOnDark ? "screen" : "multiply",
+                filter: lightOnDark
+                  ? "invert(1) grayscale(1) brightness(1.35)"
+                  : "none",
+              }}
+            />
+          </span>
         </Link>
 
         {/* Desktop links */}

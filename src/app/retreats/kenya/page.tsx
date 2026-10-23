@@ -932,23 +932,23 @@ export default function KenyaPage() {
         </div>
       </section>
 
+      <MeetUs
+        headline="you're thinking about flying to Kenya. that's a big thing to sit with on your own."
+        body="this one is the furthest out and the biggest leap, so we'd rather talk to you first. just an honest conversation about whether this is the right experience for you."
+        spaceAbove={56}
+      />
+
       {/* SECTION — ON THE FENCE (two story-format videos) */}
       <VideoPair
         headline="to the woman on the fence"
         orientation="vertical"
         labelTone="dark"
-        padding="80px 32px 32px"
         clips={[
           { file: "Ashley women on the fence.MOV", label: "ashley" },
           { file: "Shannon to the women.MOV", label: "shannon" },
         ]}
       />
 
-      <MeetUs
-        headline="you're thinking about flying to Kenya. that's a big thing to sit with on your own."
-        body="this one is the furthest out and the biggest leap, so we'd rather talk to you first. just an honest conversation about whether this is the right experience for you."
-        spaceAbove={56}
-      />
 
       {/* SECTION 10 — CLOSING CTA */}
       <section style={{ position: "relative", padding: "140px 32px", background: "#2D2521", textAlign: "center", overflow: "hidden" }}>

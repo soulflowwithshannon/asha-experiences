@@ -815,19 +815,19 @@ export default function MoroccoPage() {
         </div>
       </section>
 
+      <MeetUs spaceAbove={56} />
+
       {/* SECTION — ON THE FENCE (two story-format videos) */}
       <VideoPair
         headline="to the woman on the fence"
         orientation="vertical"
         labelTone="dark"
-        padding="80px 32px 32px"
         clips={[
           { file: "Ashley women on the fence.MOV", label: "ashley" },
           { file: "Shannon to the women.MOV", label: "shannon" },
         ]}
       />
 
-      <MeetUs spaceAbove={56} />
 
       {/* SECTION 10 — CLOSING CTA */}
       <section style={{ position: "relative", padding: "280px 32px 220px", textAlign: "center", overflow: "hidden" }}>

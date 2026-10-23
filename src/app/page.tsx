@@ -5,7 +5,6 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import FadeIn from "@/components/FadeIn";
-import Testimonials, { quotes } from "@/components/Testimonials";
 import GuidesCompact from "@/components/GuidesCompact";
 import VideoPair from "@/components/VideoPair";
 import DestinationRequest from "@/components/DestinationRequest";
@@ -324,38 +323,6 @@ export default function HomePage() {
 
       {/* SECTION 4b — WHERE SHOULD WE GO NEXT */}
       <DestinationRequest />
-
-      {/* SECTION 5 — TESTIMONIALS */}
-      <section style={{ background: "var(--color-bg-surface)", padding: "80px 32px" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 48 }}>
-              women who came<span className="testimonial-break"> </span>back different
-            </h2>
-            <style>{`@media(max-width:640px){.testimonial-break{display:block}}`}</style>
-          </FadeIn>
-
-          <Testimonials items={quotes.slice(0, 3)} />
-
-          <FadeIn delay={0.1}>
-            <div style={{ maxWidth: 900, margin: "0 auto", position: "relative", borderRadius: 8, overflow: "hidden" }}>
-              <video controls preload="metadata" style={{ width: "100%", display: "block", borderRadius: 8 }}>
-                <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Testimonials.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </FadeIn>
-
-          <Testimonials items={quotes.slice(3)} margin="48px auto 0" />
-
-        </div>
-      </section>
-
-      {/* DIVIDER */}
-      <div style={{ background: "#2D2521", height: 100, display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(18px,2.5vw,24px)", color: "#EFE6D3", textAlign: "center" }}>
-          ↑ this is what we created ASHA for.
-        </p>
-      </div>
 
       {/* SECTION 6 — GALLERY STRIP */}
       <section style={{ background: "var(--color-bg-page)", padding: "80px 0", overflow: "hidden" }}>

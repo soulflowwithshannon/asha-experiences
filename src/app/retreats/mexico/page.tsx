@@ -700,19 +700,19 @@ export default function MexicoPage() {
         </div>
       </section>
 
+      <MeetUs />
+
       {/* SECTION — ON THE FENCE (two story-format videos) */}
       <VideoPair
         headline="to the woman on the fence"
         orientation="vertical"
         labelTone="dark"
-        padding="80px 32px 56px"
         clips={[
           { file: "Ashley women on the fence.MOV", label: "ashley" },
           { file: "Shannon to the women.MOV", label: "shannon" },
         ]}
       />
 
-      <MeetUs />
 
       {/* WHERE ENDINGS BECOME BEGINNINGS */}
       <section style={{ background: "var(--color-bg-page)", padding: "0 32px 80px" }}>
