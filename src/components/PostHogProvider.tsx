@@ -11,7 +11,15 @@ import { PostHogProvider as Provider } from "posthog-js/react";
 const KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY ?? "phc_mdqs6K4epfrCJQuackhxaZ2jjcvrmfDURgG7BhhLT4hK";
 const HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.i.posthog.com";
 
-if (typeof window !== "undefined" && KEY && !posthog.__loaded) {
+/**
+ * Started from an effect, never at import time. posthog.init injects its own
+ * <script> tags into <head>, and doing that before React hydrates made React
+ * line up the wrong script nodes — it hydrated our JSON-LD against PostHog's
+ * tag and warned that the mismatch "won't be patched up", which puts the
+ * retreat pages' structured data at risk.
+ */
+function ensurePostHog() {
+  if (typeof window === "undefined" || !KEY || posthog.__loaded) return;
   posthog.init(KEY, {
     api_host: HOST,
     // the App Router changes routes without a reload, so we send pageviews
@@ -29,6 +37,9 @@ function PageViews() {
 
   useEffect(() => {
     if (!KEY || !pathname) return;
+    // child effects run before the provider's, so this is where PostHog
+    // actually starts — early enough that the first pageview still lands
+    ensurePostHog();
     const query = searchParams.toString();
     posthog.capture("$pageview", {
       $current_url: window.origin + pathname + (query ? `?${query}` : ""),

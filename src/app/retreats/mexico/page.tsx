@@ -8,6 +8,7 @@ import FadeIn from "@/components/FadeIn";
 import Testimonials, { retreatQuotes } from "@/components/Testimonials";
 import VideoPair from "@/components/VideoPair";
 import HowItWorks from "@/components/HowItWorks";
+import Divider from "@/components/Divider";
 import MeetUs from "@/components/MeetUs";
 import GuidesCompact from "@/components/GuidesCompact";
 import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/AnimatedText";
@@ -700,14 +701,16 @@ export default function MexicoPage() {
         </div>
       </section>
 
-      <MeetUs spaceBelow={48} />
+      <MeetUs spaceBelow={56} />
+
+      <Divider background="var(--color-bg-page)" />
 
       {/* SECTION — ON THE FENCE (two story-format videos) */}
       <VideoPair
         headline="to the woman on the fence"
         orientation="vertical"
         labelTone="dark"
-        padding="40px 32px 80px"
+        padding="16px 32px 80px"
         clips={[
           { file: "Ashley women on the fence.MOV", label: "ashley" },
           { file: "Shannon to the women.MOV", label: "shannon" },
