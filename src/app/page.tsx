@@ -57,40 +57,30 @@ function ParallaxHero() {
       </motion.div>
 
       <div style={{ position: "relative", zIndex: 2, textAlign: "center", padding: "0 24px" }}>
+        {/* The tagline carries the h1 now that the wordmark is gone, so the
+            page still has exactly one top-level heading. Cormorant, because
+            DM Sans is loaded without an italic face and would be slanted by
+            the browser rather than truly italic. */}
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
           style={{
-            fontFamily: "var(--font-fraunces)",
-            fontSize: "clamp(36px,6vw,72px)",
+            fontFamily: "var(--font-cormorant)",
+            fontStyle: "italic",
+            fontSize: "clamp(28px,4.4vw,46px)",
             color: "#F1F0E5",
-            fontWeight: 700,
-            letterSpacing: "0.01em",
-            marginBottom: 24,
-          }}
-        >
-          ASHA Experiences
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.15, ease: "easeInOut" }}
-          style={{
-            fontFamily: "var(--font-dm-sans)",
-            fontSize: "clamp(18px,2.5vw,26px)",
-            color: "#C5AA9B",
+            fontWeight: 400,
             width: "90%",
-            maxWidth: 480,
+            maxWidth: 640,
             whiteSpace: "normal",
             wordWrap: "break-word",
             margin: "0 auto 40px",
-            lineHeight: 1.3,
+            lineHeight: 1.25,
           }}
         >
           international retreats for women choosing themselves
-        </motion.p>
+        </motion.h1>
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
