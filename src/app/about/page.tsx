@@ -238,10 +238,10 @@ export default function AboutPage() {
       <section style={{ background: "#2D2521", color: "#F1F0E5", padding: "88px 0 0" }}>
         <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 48px 56px" }} className="story-intro">
           <FadeIn>
-            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase", color: "#C39E88", marginBottom: 22 }}>
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 600, letterSpacing: "0.16em", textTransform: "uppercase", color: "#C39E88", marginBottom: 22 }}>
               how we got here
             </p>
-            <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(24px,3.4vw,38px)", lineHeight: 1.35, color: "#F1F0E5", maxWidth: 760 }}>
+            <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(24px,3.4vw,38px)", lineHeight: 1.18, color: "#F1F0E5", maxWidth: 760 }}>
               we met in a women&apos;s circle — two strangers who turned out to want the exact same thing.
             </p>
           </FadeIn>
@@ -383,7 +383,7 @@ export default function AboutPage() {
       <section style={{ background: "var(--color-bg-page)" }}>
         <div style={{ maxWidth: 1240, margin: "0 auto", padding: "88px 48px 24px" }}>
           <FadeIn>
-            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-accent)" }}>
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, fontWeight: 600, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-accent)" }}>
               the two of us
             </p>
           </FadeIn>
@@ -463,7 +463,7 @@ export default function AboutPage() {
           .chapter { grid-template-columns: 1fr !important; }
           .chapter-photo { min-height: 0 !important; height: 125vw; }
           .chapter-num { display: none !important; }
-        .chapter-text { padding: 48px 24px 56px !important; }
+        .chapter-text { padding: 48px 24px 28px !important; }
           .story-intro { padding: 0 24px 40px !important; }
           .guide-row { grid-template-columns: 1fr !important; }
           .guide-photo { order: 1 !important; min-height: 0 !important; height: 125vw; }

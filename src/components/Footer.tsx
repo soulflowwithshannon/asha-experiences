@@ -7,7 +7,7 @@ export default function Footer() {
       style={{
         background: "var(--color-bg-page)",
         borderTop: "0.5px solid var(--color-border)",
-        padding: "38px 32px 40px",
+        padding: "52px 32px 40px",
       }}
     >
       <div
