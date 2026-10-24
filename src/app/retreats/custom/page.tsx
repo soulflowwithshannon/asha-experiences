@@ -321,17 +321,9 @@ export default function CustomRetreatPage() {
         <div style={{ maxWidth: 640, margin: "0 auto" }}>
           <FadeIn>
             <p className="eyebrow-accent" style={{ marginBottom: 14, textAlign: "center" }}>tell us about it</p>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,3.6vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, textAlign: "center", marginBottom: 20 }}>
+            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,3.6vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, textAlign: "center", marginBottom: 40 }}>
               let&apos;s start planning your retreat
             </h2>
-            <div style={{ maxWidth: 560, margin: "0 auto 40px", textAlign: "center", display: "flex", flexDirection: "column", gap: 14 }}>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.85, color: "var(--color-text-body)" }}>
-                fill this out and we&apos;ll come back to you within a day or two — it&apos;s the two of us reading it, not a team, so it takes as long as it takes.
-              </p>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.85, color: "var(--color-text-body)" }}>
-                nothing here is binding. the more you tell us about who&apos;s coming and what you want them to walk away with, the more useful our first reply will be.
-              </p>
-            </div>
           </FadeIn>
 
           <FadeIn delay={0.1}>
