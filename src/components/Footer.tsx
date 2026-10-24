@@ -27,7 +27,7 @@ export default function Footer() {
               so the window is sized to those bounds and the image is offset
               into it. maxWidth none is needed or Tailwind's preflight caps it
               back to the box. */}
-          <span style={{ display: "block", width: 150, height: 72, overflow: "hidden", position: "relative" }}>
+          <span style={{ display: "block", width: 120, height: 58, overflow: "hidden", position: "relative" }}>
             <Image
               src="/images/asha-logo-white.webp"
               alt="ASHA Experiences"
@@ -36,11 +36,11 @@ export default function Footer() {
               sizes="220px"
               style={{
                 position: "absolute",
-                width: 215,
+                width: 172,
                 maxWidth: "none",
                 height: "auto",
-                left: -32,
-                top: -76,
+                left: -26,
+                top: -61,
               }}
             />
           </span>

@@ -70,7 +70,7 @@ export default function Nav() {
         className="nav-bar"
         style={{
           width: "100%",
-          padding: "0 48px 0 16px",
+          padding: "0 48px 0 24px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -86,7 +86,7 @@ export default function Nav() {
             .nav-bar { padding: 0 !important; }
             /* Pulled into the corner: aligning to the top of the bar rather
                than centring lets the gap above match the gap to the left. */
-            .nav-logo { margin-left: 8px; align-self: flex-start; margin-top: 8px; }
+            .nav-logo { margin-left: 14px; align-self: flex-start; margin-top: 14px; }
             .nav-menu-btn { margin-right: 21px; }
           }
         `}</style>
@@ -103,7 +103,7 @@ export default function Nav() {
               the logo's edge is the box's edge and the margin alone decides how
               close it sits to the corner. Over a photo hero it is flipped to
               white; on cream the brown ink is used as-is. */}
-          <span style={{ display: "block", width: 104, height: 50, overflow: "hidden", position: "relative" }}>
+          <span style={{ display: "block", width: 84, height: 41, overflow: "hidden", position: "relative" }}>
             <Image
               src="/images/asha-logo-white.webp"
               alt="ASHA Experiences"
@@ -113,13 +113,13 @@ export default function Nav() {
               sizes="150px"
               style={{
                 position: "absolute",
-                width: 149,
+                width: 120,
                 // Tailwind's preflight caps images at max-width 100%, which
                 // would shrink this back to the box and undo the crop
                 maxWidth: "none",
                 height: "auto",
-                left: -22,
-                top: -53,
+                left: -18,
+                top: -43,
                 filter: lightOnDark ? "brightness(0) invert(1)" : "none",
               }}
             />
