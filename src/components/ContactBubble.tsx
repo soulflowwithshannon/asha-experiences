@@ -151,7 +151,11 @@ export default function ContactBubble() {
                 color: "var(--color-text-body)",
               }}
             >
-              hi — it&apos;s Ashley and Shannon. ask us anything about the retreats. there are just the two of us, so we&apos;ll answer you by email when we come back online soon.
+              hi — it&apos;s Ashley and Shannon. ask us anything about the retreats.
+              <br />
+              <span style={{ display: "inline-block", marginTop: 8 }}>
+                there are just the two of us, so we&apos;ll respond by email when we come back online soon.
+              </span>
             </div>
 
             {sent && (
