@@ -370,20 +370,20 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div style={{ padding: "40px 48px 72px", textAlign: "center" }}>
-          <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(18px,2.4vw,24px)", color: "#C5AA9B" }}>
-            {current.text.split("\n")[0] && chapter === last
-              ? "if this story feels like yours — you're exactly where you're supposed to be."
-              : " "}
-          </p>
-        </div>
+        {chapter === last && (
+          <div className="chapter-close" style={{ padding: "40px 48px 72px", textAlign: "center" }}>
+            <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(18px,2.4vw,24px)", color: "#C5AA9B" }}>
+              if this story feels like yours — you&apos;re exactly where you&apos;re supposed to be.
+            </p>
+          </div>
+        )}
       </section>
 
       {/* SECTION 3 — THE TWO OF US */}
       <section style={{ background: "var(--color-bg-page)" }}>
-        <div style={{ maxWidth: 1240, margin: "0 auto", padding: "88px 48px 24px" }}>
+        <div className="two-of-us-head" style={{ maxWidth: 1240, margin: "0 auto", padding: "72px 48px 56px", textAlign: "center" }}>
           <FadeIn>
-            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, fontWeight: 600, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-accent)" }}>
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: "clamp(16px,2.2vw,24px)", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-accent)" }}>
               the two of us
             </p>
           </FadeIn>
@@ -463,7 +463,11 @@ export default function AboutPage() {
           .chapter { grid-template-columns: 1fr !important; }
           .chapter-photo { min-height: 0 !important; height: 125vw; }
           .chapter-num { display: none !important; }
-        .chapter-text { padding: 48px 24px 28px !important; }
+        .chapter-text { padding: 48px 24px 0 !important; }
+          /* same 36 above the label as below it, so it sits between the story
+             and Ashley rather than against either one */
+          .two-of-us-head { padding: 40px 24px !important; }
+          .chapter-close { padding: 28px 24px 36px !important; }
           .story-intro { padding: 0 24px 40px !important; }
           .guide-row { grid-template-columns: 1fr !important; }
           .guide-photo { order: 1 !important; min-height: 0 !important; height: 125vw; }
