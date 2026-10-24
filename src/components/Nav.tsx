@@ -70,7 +70,7 @@ export default function Nav() {
         className="nav-bar"
         style={{
           width: "100%",
-          padding: "0 48px",
+          padding: "0 48px 0 24px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -84,7 +84,9 @@ export default function Nav() {
              the logo box is 44px tall in a 72px bar, the hamburger 30px. */
           @media (max-width: 768px) {
             .nav-bar { padding: 0 !important; }
-            .nav-logo { margin-left: 14px; }
+            /* Pulled into the corner: aligning to the top of the bar rather
+               than centring lets the gap above match the gap to the left. */
+            .nav-logo { margin-left: 10px; align-self: flex-start; margin-top: 10px; }
             .nav-menu-btn { margin-right: 21px; }
           }
         `}</style>
