@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
 import FadeIn from "@/components/FadeIn";
 import VideoPair from "@/components/VideoPair";
@@ -12,8 +12,6 @@ import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/Animated
 
 function ParallaxHero() {
   const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
     <section
@@ -21,20 +19,22 @@ function ParallaxHero() {
       className="section-dark"
       style={{
         position: "relative",
-        minHeight: "100vh",
+        /* The hero video is 16:9. At 100vh it was being blown up and cropped
+           by about 400px of its width; matching its own ratio makes the
+           section shorter and shows the whole frame. minHeight keeps the
+           headline readable on a phone, where 16:9 alone is too short. */
+        aspectRatio: "16 / 9",
+        minHeight: 460,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         overflow: "hidden",
       }}
     >
-      <motion.div
-        style={{
-          position: "absolute",
-          inset: "-20%",
-          y,
-        }}
-      >
+      {/* Sits flush to the section rather than oversized: the video is 16:9
+          and so is the section, so the whole frame shows with nothing cropped.
+          The old -20% inset existed to give the parallax room to drift. */}
+      <div style={{ position: "absolute", inset: 0 }}>
         <div
           style={{
             width: "100%",
@@ -54,7 +54,7 @@ function ParallaxHero() {
         >
           <source src="/videos/ASHA hero video.mp4" type="video/mp4" />
         </video>
-      </motion.div>
+      </div>
 
       <div style={{ position: "relative", zIndex: 2, textAlign: "center", padding: "0 24px" }}>
         {/* The tagline carries the h1 now that the wordmark is gone, so the
@@ -79,7 +79,7 @@ function ParallaxHero() {
             lineHeight: 1.25,
           }}
         >
-          international retreats for women choosing themselves
+          international retreats for women choosing joy, freedom, and connection
         </motion.h1>
 
         <motion.div
@@ -107,20 +107,6 @@ function ParallaxHero() {
             explore retreats →
           </Link>
         </motion.div>
-
-        <motion.div
-          animate={{ y: [0, -8, 0] }}
-          transition={{ duration: 5, ease: "easeInOut", repeat: Infinity }}
-          style={{
-            position: "absolute",
-            bottom: -100,
-            left: "50%",
-            transform: "translateX(-50%)",
-            width: 1,
-            height: 60,
-            background: "rgba(195,158,136,0.4)",
-          }}
-        />
       </div>
     </section>
   );
