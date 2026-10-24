@@ -67,6 +67,7 @@ export default function Nav() {
       }}
     >
       <div
+        className="nav-bar"
         style={{
           width: "100%",
           padding: "0 48px",
@@ -77,7 +78,13 @@ export default function Nav() {
           boxSizing: "border-box",
         }}
       >
-        {/* Wordmark */}
+<style>{`
+          @media (max-width: 768px) {
+            .nav-bar { padding: 0 18px !important; }
+          }
+        `}</style>
+
+                {/* Wordmark */}
         <Link href="/" aria-label="ASHA Experiences — home" style={{ display: "block", lineHeight: 0 }}>
           {/* The logo file is a square with a white ground and a wide margin,
               so it is zoomed inside a clipped box to crop to the lockup.

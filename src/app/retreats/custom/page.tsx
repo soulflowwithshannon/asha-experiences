@@ -26,8 +26,12 @@ const INCLUDED = [
   },
   {
     title: "Practices led by us",
-    lead: "The part we are actually trained in — never subcontracted.",
-    points: ["somatic work, breathwork and yoga", "sound healing and reiki", "women's circles held by Ashley and Shannon"],
+    lead: "We hold the core of the week ourselves, and bring in others when you want more.",
+    points: [
+      "somatic work, breathwork, yoga, sound healing and reiki — led by us",
+      "local guides, shamans and ceremony leaders where you want them",
+      "extra practitioners and sessions booked on request",
+    ],
   },
   {
     title: "Meals, transfers, excursions",

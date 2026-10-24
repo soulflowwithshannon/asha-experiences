@@ -36,23 +36,14 @@ export default function Footer() {
         </Link>
 
         {/* Center — links */}
-        <div style={{ display: "flex", gap: 28, flexWrap: "wrap", justifyContent: "center" }}>
+        <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "center" }}>
           {[
             { href: "/about", label: "about us" },
             { href: "/retreats/mexico", label: "retreats" },
             { href: "/blog", label: "journal" },
             { href: "/contact", label: "contact us" },
           ].map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              style={{
-                fontFamily: "var(--font-dm-sans)",
-                fontSize: 13,
-                color: "var(--color-logo-brown)",
-                textDecoration: "none",
-              }}
-            >
+            <Link key={link.href} href={link.href} className="footer-pill">
               {link.label}
             </Link>
           ))}
@@ -60,12 +51,7 @@ export default function Footer() {
             href="https://instagram.com/asha_experiences"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              fontFamily: "var(--font-dm-sans)",
-              fontSize: 13,
-              color: "var(--color-logo-brown)",
-              textDecoration: "none",
-            }}
+            className="footer-pill"
           >
             instagram
           </a>
@@ -75,7 +61,7 @@ export default function Footer() {
         <div />
       </div>
 
-      {/* Copyright */}
+
       <p
         style={{
           fontFamily: "var(--font-dm-sans)",
@@ -85,22 +71,29 @@ export default function Footer() {
           marginTop: 32,
         }}
       >
-        two women. no team, no ads. just retreats we&apos;d want to go on ourselves.
-      </p>
-
-      <p
-        style={{
-          fontFamily: "var(--font-dm-sans)",
-          fontSize: 12,
-          color: "var(--color-text-muted)",
-          textAlign: "center",
-          marginTop: 10,
-        }}
-      >
         © 2026 ASHA Experiences LLC
       </p>
 
       <style>{`
+        .footer-pill {
+          font-family: var(--font-dm-sans);
+          font-size: 13px;
+          line-height: 1;
+          color: var(--color-logo-brown);
+          text-decoration: none;
+          padding: 10px 18px;
+          border: 0.5px solid var(--color-bg-card);
+          border-radius: 999px;
+          background: var(--color-bg-page);
+          transition: background 0.25s ease, border-color 0.25s ease;
+          display: inline-flex;
+          align-items: center;
+          min-height: 38px;
+        }
+        .footer-pill:hover {
+          background: var(--color-bg-surface);
+          border-color: var(--color-accent);
+        }
         @media (max-width: 640px) {
           .footer-grid {
             grid-template-columns: 1fr !important;
