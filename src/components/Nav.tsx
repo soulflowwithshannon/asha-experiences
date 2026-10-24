@@ -9,7 +9,7 @@ const retreats = [
   { href: "/retreats/mexico", label: "Becoming HER — Mexico 2026" },
   { href: "/retreats/morocco", label: "Sacred Sands — Morocco 2026" },
   { href: "/retreats/kenya", label: "Into the Wild — Kenya 2027" },
-  { href: "/retreats/custom", label: "customize a retreat" },
+  { href: "/retreats/custom", label: "Customize a Retreat" },
 ];
 
 export default function Nav() {

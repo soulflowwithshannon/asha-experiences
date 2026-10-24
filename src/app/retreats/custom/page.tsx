@@ -4,36 +4,40 @@ import { useState } from "react";
 import Image from "next/image";
 import posthog from "posthog-js";
 import FadeIn from "@/components/FadeIn";
-import Divider from "@/components/Divider";
-import MeetUs from "@/components/MeetUs";
 
 const CALENDAR_URL = "https://calendar.app.google/Yt1VUQGEuhhEipt59";
 
 /* What we actually do on our own retreats, offered bespoke. */
 const INCLUDED = [
   {
-    title: "we find the place",
-    body: "you tell us the feeling you're after — desert, jungle, ocean, somewhere nobody has heard of — and we come back with places that match your group, your budget and the way you want the week to feel. we have done this three times for our own retreats and we know what a property looks like when it photographs well and still falls apart in practice.",
+    title: "Location sourcing",
+    lead: "You describe the feeling. We come back with places that match it.",
+    points: ["desert, jungle, coast or somewhere unheard of", "matched to your group size, budget and pace", "vetted for how it actually runs, not how it photographs"],
   },
   {
-    title: "we handle the property",
-    body: "once you choose, we deal with the venue: rates, contracts, deposits, who sleeps where, and every awkward question about dietary needs and accessibility that you would otherwise be chasing over email for a month.",
+    title: "Property booking",
+    lead: "Once you choose, the venue is ours to deal with.",
+    points: ["rates, contracts and deposits negotiated", "room assignments handled", "dietary needs and accessibility confirmed in writing"],
   },
   {
-    title: "we design the week",
-    body: "the arc matters more than the activities. we build a rhythm that opens slowly, goes deep in the middle and sends everyone home steady — rather than a packed schedule that leaves your people more tired than when they arrived.",
+    title: "The arc of the week",
+    lead: "A rhythm, not a packed schedule.",
+    points: ["opens slowly, goes deep in the middle, lands steady", "built around the outcome you name", "free time protected on purpose"],
   },
   {
-    title: "we lead the practices ourselves",
-    body: "somatic work, breathwork, yoga, sound healing, reiki and women's circles — led by the two of us, not subcontracted to whoever is local. this is the part we are actually trained in, and it is the reason women come back different.",
+    title: "Practices led by us",
+    lead: "The part we are actually trained in — never subcontracted.",
+    points: ["somatic work, breathwork and yoga", "sound healing and reiki", "women's circles held by Ashley and Shannon"],
   },
   {
-    title: "meals, transfers, the day-to-day",
-    body: "airport pickups, every meal, excursions, the boat or the hike or the market morning. the logistics that eat your evenings are simply handled.",
+    title: "Meals, transfers, excursions",
+    lead: "The logistics that would otherwise eat your evenings.",
+    points: ["airport pickups both ways", "every meal, every dietary need", "the hike, the boat, the market morning"],
   },
   {
-    title: "we are there the whole time",
-    body: "no agency, no assistants, no handover to a local coordinator. it is Ashley and Shannon on the ground with your group from the first airport run to the last morning.",
+    title: "Both of us, on the ground",
+    lead: "No agency. No assistants. No handover to a local coordinator.",
+    points: ["with your group from the first airport run", "running the day so you don't have to", "there until the last morning"],
   },
 ];
 
@@ -184,52 +188,82 @@ export default function CustomRetreatPage() {
         </div>
       </section>
 
-      {/* THE PITCH */}
-      <section style={{ background: "var(--color-bg-page)", padding: "88px 32px" }}>
-        <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
-          <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,3.6vw,34px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 24 }}>
-              the same week we run for strangers, built for your people instead
-            </h2>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, lineHeight: 1.9, color: "var(--color-text-body)", textWrap: "balance" }}>
-              our three retreats have set dates and set places. this is the other door. you tell us who is coming and
-              what you want them to walk away with, and we build the whole thing around that — then we show up and
-              hold it with you.
-            </p>
-          </FadeIn>
-        </div>
-      </section>
-
-      <Divider background="var(--color-bg-page)" />
-
       {/* WHAT'S INCLUDED */}
-      <section style={{ background: "var(--color-bg-surface)", marginTop: 56, padding: "84px 32px" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+      <section style={{ background: "var(--color-bg-surface)", padding: "88px 32px 96px" }}>
+        <div style={{ maxWidth: 980, margin: "0 auto" }}>
           <FadeIn>
-            <p className="eyebrow-accent" style={{ marginBottom: 14, textAlign: "center" }}>what we take off your plate</p>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,3.6vw,34px)", color: "var(--color-text-headline)", fontWeight: 700, textAlign: "center", marginBottom: 56 }}>
-              everything except who to invite
-            </h2>
+            <div style={{ textAlign: "center", marginBottom: 56 }}>
+              <h2
+                style={{
+                  display: "inline-block",
+                  fontFamily: "var(--font-fraunces)",
+                  fontSize: "clamp(27px,3.6vw,36px)",
+                  color: "var(--color-text-headline)",
+                  fontWeight: 700,
+                  paddingBottom: 14,
+                  borderBottom: "1px solid var(--color-accent)",
+                }}
+              >
+                What&apos;s Included
+              </h2>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.8, color: "var(--color-text-body)", maxWidth: 520, margin: "20px auto 0" }}>
+                every part of it, except deciding who to invite.
+              </p>
+            </div>
           </FadeIn>
 
-          <div className="included-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: "44px 48px" }}>
+          <div className="included-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 20 }}>
             {INCLUDED.map((item, i) => (
               <FadeIn key={item.title} delay={(i % 2) * 0.08}>
-                <div>
-                  <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 20, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 10 }}>
-                    {item.title}
-                  </h3>
-                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14.5, lineHeight: 1.85, color: "var(--color-text-body)" }}>
-                    {item.body}
+                <div
+                  style={{
+                    height: "100%",
+                    boxSizing: "border-box",
+                    background: "var(--color-bg-page)",
+                    border: "0.5px solid var(--color-border)",
+                    borderRadius: 4,
+                    padding: "28px 28px 26px",
+                  }}
+                >
+                  <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 12 }}>
+                    <span
+                      style={{
+                        fontFamily: "var(--font-cormorant)",
+                        fontSize: 15,
+                        letterSpacing: "0.06em",
+                        color: "var(--color-accent)",
+                        flexShrink: 0,
+                      }}
+                    >
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 19, color: "var(--color-text-headline)", fontWeight: 700, lineHeight: 1.3 }}>
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.75, color: "var(--color-text-body)", marginBottom: 18 }}>
+                    {item.lead}
                   </p>
+
+                  <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 9, borderTop: "0.5px solid var(--color-border)", paddingTop: 16 }}>
+                    {item.points.map((point) => (
+                      <li key={point} style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" strokeWidth="2.2" style={{ flexShrink: 0, marginTop: 4 }} aria-hidden="true">
+                          <path d="M4 12.5l5.5 5.5L20 6.5" />
+                        </svg>
+                        <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13.5, lineHeight: 1.65, color: "var(--color-text-body)" }}>
+                          {point}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </FadeIn>
             ))}
           </div>
         </div>
-        <style>{`@media(max-width:760px){.included-grid{grid-template-columns:1fr!important;gap:36px!important}}`}</style>
+        <style>{`@media(max-width:760px){.included-grid{grid-template-columns:1fr!important}}`}</style>
       </section>
 
       {/* WHO IT'S FOR */}
@@ -471,11 +505,6 @@ export default function CustomRetreatPage() {
         </div>
       </section>
 
-      <MeetUs
-        headline="not sure what you're building yet?"
-        body="that's usually how these start. a call is the fastest way to find out whether there's a retreat in it."
-        spaceAbove={56}
-      />
     </main>
   );
 }
