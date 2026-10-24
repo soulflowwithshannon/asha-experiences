@@ -147,7 +147,7 @@ export default function ContactBubble() {
                 padding: "11px 14px",
                 fontFamily: "var(--font-dm-sans)",
                 fontSize: 13,
-                lineHeight: 1.7,
+                lineHeight: 1.5,
                 color: "var(--color-text-body)",
               }}
             >
@@ -165,7 +165,7 @@ export default function ContactBubble() {
                   padding: "11px 14px",
                   fontFamily: "var(--font-dm-sans)",
                   fontSize: 13,
-                  lineHeight: 1.7,
+                  lineHeight: 1.5,
                   color: "var(--color-text-body)",
                 }}
               >
