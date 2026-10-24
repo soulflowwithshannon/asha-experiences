@@ -177,7 +177,7 @@ export default function CustomRetreatPage() {
           <h1 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(30px,5vw,50px)", color: "#F1F0E5", fontWeight: 700, lineHeight: 1.15, marginBottom: 20 }}>
             you bring the women.<br />we build the week.
           </h1>
-          <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, lineHeight: 1.5, color: "#E8D5BC", maxWidth: 520, margin: "0 auto 32px" }}>
+          <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, lineHeight: 1.5, color: "#E8D5BC", maxWidth: 520, margin: "0 auto 32px", textWrap: "balance" }}>
             from one, to groups of up to 25. your circle, your closest friends, or your team.
           </p>
           <a
@@ -218,7 +218,7 @@ export default function CustomRetreatPage() {
               >
                 What&apos;s Included
               </h2>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.8, color: "var(--color-text-body)", maxWidth: 520, margin: "20px auto 0" }}>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.8, color: "var(--color-text-body)", maxWidth: 520, margin: "20px auto 0", textWrap: "balance" }}>
                 every part of it, except deciding who to invite.
               </p>
             </div>
@@ -282,10 +282,10 @@ export default function CustomRetreatPage() {
       <section style={{ background: "var(--color-bg-page)", padding: "84px 32px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(24px,3.2vw,30px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 18 }}>
+            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(24px,3.2vw,30px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 18, textWrap: "balance" }}>
               built around the experience you want
             </h2>
-            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15.5, lineHeight: 1.5, color: "var(--color-text-body)", maxWidth: 560, margin: "0 auto 40px" }}>
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15.5, lineHeight: 1.5, color: "var(--color-text-body)", maxWidth: 560, margin: "0 auto 40px", textWrap: "balance" }}>
               from a personal customized retreat for one, to groups of up to 25.
             </p>
           </FadeIn>

@@ -16,13 +16,15 @@ function ParallaxHero() {
   return (
     <section
       ref={ref}
-      className="section-dark"
+      className="section-dark hero-section"
       style={{
         position: "relative",
         /* The hero video is 16:9. At 100vh it was being blown up and cropped
            by about 400px of its width; matching its own ratio makes the
-           section shorter and shows the whole frame. minHeight keeps the
-           headline readable on a phone, where 16:9 alone is too short. */
+           section shorter and shows the whole frame. A phone is too narrow
+           for that — 16:9 at 390px is ~220px tall, no room for the headline —
+           so narrow screens fall back to a tall box and the crop that needs
+           (see the media query below). */
         aspectRatio: "16 / 9",
         minHeight: 460,
         display: "flex",
@@ -34,7 +36,13 @@ function ParallaxHero() {
       {/* Sits flush to the section rather than oversized: the video is 16:9
           and so is the section, so the whole frame shows with nothing cropped.
           The old -20% inset existed to give the parallax room to drift. */}
-      <div style={{ position: "absolute", inset: 0 }}>
+<style>{`
+        @media (max-width: 768px) {
+          .hero-section { aspect-ratio: auto !important; min-height: 78vh !important; }
+        }
+      `}</style>
+
+            <div style={{ position: "absolute", inset: 0 }}>
         <div
           style={{
             width: "100%",
