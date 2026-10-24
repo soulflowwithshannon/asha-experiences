@@ -435,7 +435,7 @@ export default function AboutPage() {
           <SplitHeadline
             text="you were made for more than just surviving"
             as="h2"
-            style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,4vw,38px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 22 }}
+            style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,4vw,38px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 22, textWrap: "balance", maxWidth: 560, marginLeft: "auto", marginRight: "auto" }}
           />
           <FadeIn delay={0.3}>
             <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.9, color: "#E8D5BC", marginBottom: 36 }}>
