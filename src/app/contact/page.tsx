@@ -60,11 +60,11 @@ export default function ContactPage() {
   return (
     <main style={{ paddingTop: 72 }}>
       {/* SECTION 1 — INTRO + IMAGE + FORM */}
-      <section style={{ background: "var(--color-bg-page)", padding: "80px 32px 80px 0" }}>
+      <section className="contact-section" style={{ background: "var(--color-bg-page)", padding: "80px 32px 80px 0" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "280px 1fr 1fr", gap: 48, alignItems: "center" }} className="contact-split">
 
           {/* Col 1 — intro */}
-          <div style={{ paddingLeft: 32, display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
+          <div className="contact-intro" style={{ paddingLeft: 32, display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
             <FadeIn>
               <p className="eyebrow-accent" style={{ marginBottom: 20 }}>get in touch</p>
             </FadeIn>
@@ -212,7 +212,17 @@ export default function ContactPage() {
             </div>
           </FadeIn>
         </div>
-        <style>{`@media(max-width:900px){.contact-split{grid-template-columns:1fr!important;padding-left:32px!important}}`}</style>
+        <style>{`
+          /* The desktop layout is deliberately lopsided — the section has no
+             left padding and the grid and intro column add their own. Stacked
+             on a phone that compounded into 64px left against 32px right, so
+             everything inside read as off-centre. */
+          @media (max-width: 900px) {
+            .contact-split { grid-template-columns: 1fr !important; padding-left: 0 !important; }
+            .contact-section { padding: 80px 24px !important; }
+            .contact-intro { padding-left: 0 !important; }
+          }
+        `}</style>
       </section>
 
       {/* SECTION 3 — PORTRAIT STRIP */}
