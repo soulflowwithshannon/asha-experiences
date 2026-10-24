@@ -79,13 +79,18 @@ export default function Nav() {
         }}
       >
 <style>{`
+          /* On a phone each element sits the same distance from its own side
+             as from the top. They are different heights, so the offsets differ:
+             the logo box is 44px tall in a 72px bar, the hamburger 30px. */
           @media (max-width: 768px) {
-            .nav-bar { padding: 0 18px !important; }
+            .nav-bar { padding: 0 !important; }
+            .nav-logo { margin-left: 14px; }
+            .nav-menu-btn { margin-right: 21px; }
           }
         `}</style>
 
                 {/* Wordmark */}
-        <Link href="/" aria-label="ASHA Experiences — home" style={{ display: "block", lineHeight: 0 }}>
+        <Link href="/" aria-label="ASHA Experiences — home" className="nav-logo" style={{ display: "block", lineHeight: 0 }}>
           {/* The logo file is a square with a white ground and a wide margin,
               so it is zoomed inside a clipped box to crop to the lockup.
               On cream: multiply drops the white ground away and the letters
@@ -261,7 +266,7 @@ export default function Nav() {
 
         {/* Mobile hamburger */}
         <button
-          className="flex md:hidden"
+          className="flex md:hidden nav-menu-btn"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
           style={{
