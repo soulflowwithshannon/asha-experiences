@@ -23,25 +23,24 @@ export default function Footer() {
       >
         {/* Left — wordmark */}
         <Link href="/" aria-label="ASHA Experiences — home" className="footer-logo" style={{ display: "inline-block", lineHeight: 0 }}>
-          {/* The file is a 2000px square with the lockup floating in the middle,
-              so at 140px it carried ~35px of empty space above the letters.
-              Clipped and zoomed to crop that away. Multiply drops the white
-              ground onto our creams; the cream file leaves a patch. */}
-          <span style={{ display: "block", width: 150, height: 62, overflow: "hidden", position: "relative" }}>
+          {/* The file is transparent with the lockup at x 15-85%, y 35-69%,
+              so the window is sized to those bounds and the image is offset
+              into it. maxWidth none is needed or Tailwind's preflight caps it
+              back to the box. */}
+          <span style={{ display: "block", width: 150, height: 72, overflow: "hidden", position: "relative" }}>
             <Image
               src="/images/asha-logo-white.webp"
               alt="ASHA Experiences"
               width={300}
               height={300}
-              sizes="230px"
+              sizes="220px"
               style={{
                 position: "absolute",
-                left: "50%",
-                top: "50%",
-                width: 224,
+                width: 215,
+                maxWidth: "none",
                 height: "auto",
-                transform: "translate(-50%, -50%)",
-                mixBlendMode: "multiply",
+                left: -32,
+                top: -76,
               }}
             />
           </span>

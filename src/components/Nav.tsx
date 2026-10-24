@@ -70,7 +70,7 @@ export default function Nav() {
         className="nav-bar"
         style={{
           width: "100%",
-          padding: "0 48px 0 24px",
+          padding: "0 48px 0 16px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -86,7 +86,7 @@ export default function Nav() {
             .nav-bar { padding: 0 !important; }
             /* Pulled into the corner: aligning to the top of the bar rather
                than centring lets the gap above match the gap to the left. */
-            .nav-logo { margin-left: 10px; align-self: flex-start; margin-top: 10px; }
+            .nav-logo { margin-left: 8px; align-self: flex-start; margin-top: 8px; }
             .nav-menu-btn { margin-right: 21px; }
           }
         `}</style>
@@ -98,33 +98,29 @@ export default function Nav() {
               On cream: multiply drops the white ground away and the letters
               stay brand brown. Over a photo hero: inverted to near-white and
               screened, which drops the (now black) ground away instead. */}
-          <span
-            style={{
-              display: "block",
-              width: 104,
-              height: 44,
-              overflow: "hidden",
-              position: "relative",
-            }}
-          >
+          {/* The file is transparent and the lockup sits inside it at x 15-85%,
+              y 36-69%. The window below is sized to exactly those bounds, so
+              the logo's edge is the box's edge and the margin alone decides how
+              close it sits to the corner. Over a photo hero it is flipped to
+              white; on cream the brown ink is used as-is. */}
+          <span style={{ display: "block", width: 104, height: 50, overflow: "hidden", position: "relative" }}>
             <Image
               src="/images/asha-logo-white.webp"
               alt="ASHA Experiences"
               width={300}
               height={300}
               priority
-              sizes="160px"
+              sizes="150px"
               style={{
                 position: "absolute",
-                left: "50%",
-                top: "50%",
-                width: 156,
+                width: 149,
+                // Tailwind's preflight caps images at max-width 100%, which
+                // would shrink this back to the box and undo the crop
+                maxWidth: "none",
                 height: "auto",
-                transform: "translate(-50%, -50%)",
-                mixBlendMode: lightOnDark ? "screen" : "multiply",
-                filter: lightOnDark
-                  ? "invert(1) grayscale(1) brightness(1.35)"
-                  : "none",
+                left: -22,
+                top: -53,
+                filter: lightOnDark ? "brightness(0) invert(1)" : "none",
               }}
             />
           </span>
