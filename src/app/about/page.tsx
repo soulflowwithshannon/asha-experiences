@@ -385,7 +385,7 @@ export default function AboutPage() {
       <section style={{ background: "var(--color-bg-page)" }}>
         <div className="two-of-us-head" style={{ maxWidth: 1240, margin: "0 auto", padding: "72px 48px 56px", textAlign: "center" }}>
           <FadeIn>
-            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: "clamp(16px,2.2vw,24px)", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-accent)" }}>
+            <p style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(17px,2.4vw,26px)", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-accent)" }}>
               the two of us
             </p>
           </FadeIn>
@@ -465,7 +465,7 @@ export default function AboutPage() {
           .chapter { grid-template-columns: 1fr !important; }
           .chapter-photo { min-height: 0 !important; height: 125vw; }
           .chapter-num { display: none !important; }
-        .chapter-text { padding: 48px 24px 0 !important; }
+        .chapter-text { padding: 48px 24px 26px !important; }
           /* same 36 above the label as below it, so it sits between the story
              and Ashley rather than against either one */
           .two-of-us-head { padding: 40px 24px !important; }
