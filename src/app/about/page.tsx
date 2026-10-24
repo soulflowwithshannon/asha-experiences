@@ -237,7 +237,7 @@ export default function AboutPage() {
       />
 
       {/* SECTION 2 — THE STORY, ONE CHAPTER AT A TIME */}
-      <section style={{ background: "#2D2521", color: "#F1F0E5", padding: "88px 0 0" }}>
+      <section className="story-section" style={{ background: "#2D2521", color: "#F1F0E5", padding: "64px 0 72px" }}>
         <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 48px 56px" }} className="story-intro">
           <FadeIn>
             <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 600, letterSpacing: "0.16em", textTransform: "uppercase", color: "#C39E88", marginBottom: 22 }}>
@@ -373,7 +373,7 @@ export default function AboutPage() {
         </div>
 
         {chapter === last && (
-          <div className="chapter-close" style={{ padding: "40px 48px 72px", textAlign: "center" }}>
+          <div className="chapter-close" style={{ padding: "40px 48px 0", textAlign: "center" }}>
             <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(18px,2.4vw,24px)", color: "#C5AA9B" }}>
               if this story feels like yours — you&apos;re exactly where you&apos;re supposed to be.
             </p>
@@ -385,7 +385,7 @@ export default function AboutPage() {
       <section style={{ background: "var(--color-bg-page)" }}>
         <div className="two-of-us-head" style={{ maxWidth: 1240, margin: "0 auto", padding: "72px 48px 56px", textAlign: "center" }}>
           <FadeIn>
-            <p style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(17px,2.4vw,26px)", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-accent)" }}>
+            <p style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(21px,3vw,32px)", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-accent)" }}>
               the two of us
             </p>
           </FadeIn>
@@ -465,11 +465,12 @@ export default function AboutPage() {
           .chapter { grid-template-columns: 1fr !important; }
           .chapter-photo { min-height: 0 !important; height: 125vw; }
           .chapter-num { display: none !important; }
-        .chapter-text { padding: 48px 24px 26px !important; }
+        .chapter-text { padding: 48px 24px 0 !important; }
           /* same 36 above the label as below it, so it sits between the story
              and Ashley rather than against either one */
           .two-of-us-head { padding: 40px 24px !important; }
-          .chapter-close { padding: 28px 24px 36px !important; }
+          .chapter-close { padding: 28px 24px 0 !important; }
+          .story-section { padding: 44px 0 26px !important; }
           .story-intro { padding: 0 24px 40px !important; }
           .guide-row { grid-template-columns: 1fr !important; }
           .guide-photo { order: 1 !important; min-height: 0 !important; height: 125vw; }
