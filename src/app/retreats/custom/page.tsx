@@ -249,7 +249,7 @@ export default function CustomRetreatPage() {
                     >
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 19, color: "var(--color-text-headline)", fontWeight: 700, lineHeight: 1.3 }}>
+                    <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 19, color: "var(--color-text-headline)", fontWeight: 700, lineHeight: 1.3, textWrap: "balance" }}>
                       {item.title}
                     </h3>
                   </div>
@@ -333,7 +333,7 @@ export default function CustomRetreatPage() {
         <div style={{ maxWidth: 640, margin: "0 auto" }}>
           <FadeIn>
             <p className="eyebrow-accent" style={{ marginBottom: 14, textAlign: "center" }}>tell us about it</p>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,3.6vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, textAlign: "center", marginBottom: 40 }}>
+            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,3.6vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, textAlign: "center", marginBottom: 40, textWrap: "balance" }}>
               let&apos;s start planning your retreat
             </h2>
           </FadeIn>
