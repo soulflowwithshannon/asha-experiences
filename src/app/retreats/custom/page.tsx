@@ -178,7 +178,7 @@ export default function CustomRetreatPage() {
             you bring the women.<br />we build the week.
           </h1>
           <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, lineHeight: 1.8, color: "#E8D5BC", maxWidth: 520, margin: "0 auto 32px" }}>
-            one woman to twenty. your circle, your closest friends, or your team.
+            from one, to groups of up to 25. your circle, your closest friends, or your team.
           </p>
           <a
             href="#enquire"
@@ -282,12 +282,11 @@ export default function CustomRetreatPage() {
       <section style={{ background: "var(--color-bg-page)", padding: "84px 32px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(24px,3.2vw,30px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 20 }}>
-              from one woman to twenty
+            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(24px,3.2vw,30px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 18 }}>
+              built around the experience you want
             </h2>
-            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.9, color: "var(--color-text-body)", maxWidth: 560, margin: "0 auto 40px" }}>
-              we don&apos;t run retreats for hundreds. we never will. small is the whole point — it is the only way every
-              woman in the room actually gets seen.
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15.5, lineHeight: 1.9, color: "var(--color-text-body)", maxWidth: 560, margin: "0 auto 40px" }}>
+              from a personal customized retreat for one, to groups of up to 25.
             </p>
           </FadeIn>
 
@@ -387,7 +386,7 @@ export default function CustomRetreatPage() {
                     </div>
                     <div style={{ display: "flex", flexDirection: "column", gap: 7, flex: "1 1 150px", minWidth: 0 }}>
                       <label htmlFor="cr-count" style={labelStyle}>how many</label>
-                      <input id="cr-count" type="number" min={1} max={20} placeholder="1–20" value={headcount} onChange={(e) => setHeadcount(e.target.value)} style={inputStyle} />
+                      <input id="cr-count" type="number" min={1} max={25} placeholder="1–25" value={headcount} onChange={(e) => setHeadcount(e.target.value)} style={inputStyle} />
                     </div>
                   </div>
 
