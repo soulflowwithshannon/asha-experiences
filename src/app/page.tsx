@@ -5,7 +5,6 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import FadeIn from "@/components/FadeIn";
-import GuidesCompact from "@/components/GuidesCompact";
 import VideoPair from "@/components/VideoPair";
 import DestinationRequest from "@/components/DestinationRequest";
 import QuietNote from "@/components/QuietNote";
@@ -349,9 +348,6 @@ export default function HomePage() {
         </FadeIn>
       </section>
 
-
-      {/* SECTION 7 — GUIDES */}
-      <GuidesCompact />
 
       {/* SECTION 8 — CLOSING CTA */}
       <section style={{ position: "relative", padding: "180px 32px", background: "#2D2521", textAlign: "center", overflow: "hidden" }}>
