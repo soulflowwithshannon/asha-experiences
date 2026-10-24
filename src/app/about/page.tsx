@@ -440,7 +440,7 @@ export default function AboutPage() {
             style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,4vw,38px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 22, textWrap: "balance", maxWidth: 560, marginLeft: "auto", marginRight: "auto" }}
           />
           <FadeIn delay={0.3}>
-            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.6, color: "#E8D5BC", marginBottom: 36 }}>
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.45, color: "#E8D5BC", marginBottom: 36 }}>
               there is no team. it&apos;s the two of us — we answer the emails, we plan the itineraries, and we&apos;re the ones on the ground with you for the whole week.
             </p>
           </FadeIn>
@@ -461,12 +461,12 @@ export default function AboutPage() {
         @media (max-width: 860px) {
           .about-hero { min-height: 68vh !important; }
           .chapter { grid-template-columns: 1fr !important; }
-          .chapter-photo { min-height: 0 !important; aspect-ratio: 4 / 5; }
+          .chapter-photo { min-height: 0 !important; height: 125vw; }
           .chapter-num { display: none !important; }
         .chapter-text { padding: 48px 24px 56px !important; }
           .story-intro { padding: 0 24px 40px !important; }
           .guide-row { grid-template-columns: 1fr !important; }
-          .guide-photo { order: 1 !important; min-height: 0 !important; aspect-ratio: 4 / 5; }
+          .guide-photo { order: 1 !important; min-height: 0 !important; height: 125vw; }
           .guide-text { order: 2 !important; padding: 44px 24px 64px !important; }
           .beliefs { grid-template-columns: 1fr !important; gap: 36px !important; }
         }
