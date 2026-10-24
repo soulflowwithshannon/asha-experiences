@@ -22,7 +22,7 @@ export default function Footer() {
         className="footer-grid"
       >
         {/* Left — wordmark */}
-        <Link href="/" aria-label="ASHA Experiences — home" style={{ display: "inline-block", lineHeight: 0 }}>
+        <Link href="/" aria-label="ASHA Experiences — home" className="footer-logo" style={{ display: "inline-block", lineHeight: 0 }}>
           {/* the white-background file, multiplied, so the square drops away
               onto any of our creams — the cream-background file leaves a patch */}
           <Image
@@ -75,6 +75,11 @@ export default function Footer() {
       </p>
 
       <style>{`
+        /* Stacked on a phone the column is centred, but the logo is a block
+           and ignores that — it needs its own centring. */
+        @media (max-width: 640px) {
+          .footer-logo { margin-left: auto; margin-right: auto; }
+        }
         .footer-pill {
           font-family: var(--font-dm-sans);
           font-size: 13px;

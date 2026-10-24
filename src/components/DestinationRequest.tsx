@@ -85,7 +85,7 @@ export default function DestinationRequest() {
                   where should we go next?
                 </h2>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.85, color: "var(--color-text-body)", maxWidth: 460, margin: "0 auto" }}>
-                  tell us where you want to go, and we&apos;ll tell you if we build it.
+                  tell us where you want to go.
                 </p>
               </div>
             </FadeIn>
