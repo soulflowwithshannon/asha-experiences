@@ -835,7 +835,7 @@ export default function MoroccoPage() {
 
       {/* SECTION 10 — CLOSING CTA */}
       <section style={{ position: "relative", padding: "280px 32px 220px", textAlign: "center", overflow: "hidden" }}>
-        <Image src="/images/Morocco final image.png" alt="" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="100vw" />
+        <Image src="/images/Morocco final image.png" alt="Women on the Sacred Sands retreat in the Moroccan desert" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="100vw" />
         <div style={{ position: "absolute", inset: 0, background: "rgba(45,37,33,0.55)" }} />
         <div style={{ position: "relative", zIndex: 1 }}>
           <FadeIn>

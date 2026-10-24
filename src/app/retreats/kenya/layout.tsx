@@ -42,13 +42,13 @@ export const metadata: Metadata = {
     title: "Women's Safari Retreat Kenya 2027 — Into the Wild | ASHA Experiences",
     description: "A 7-day women's safari retreat in Kenya at Ol Pejeta Conservancy. Yoga, sound healing, wildlife, and sisterhood on the African savanna. Limited spots.",
     url: "https://ashaexperiences.com/retreats/kenya",
-    images: [{ url: "/images/Kenya hero.jpeg", width: 1200, height: 800, alt: "Women's Safari Retreat Kenya — Into the Wild 2027" }],
+    images: [{ url: "/images/Into the Wild Hero.jpg", width: 1200, height: 800, alt: "Women's Safari Retreat Kenya — Into the Wild 2027" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Women's Safari Retreat Kenya 2027 | ASHA Experiences",
     description: "A 7-day women's safari retreat in Kenya. Yoga, sound healing, wildlife, and sisterhood on the African savanna.",
-    images: ["/images/Kenya hero.jpeg"],
+    images: ["/images/Into the Wild Hero.jpg"],
   },
 };
 
@@ -75,7 +75,7 @@ const jsonLd = {
     "name": "ASHA Experiences",
     "url": "https://ashaexperiences.com"
   },
-  "image": "https://ashaexperiences.com/images/Into the Wild Hero.jpg",
+  "image": "https://ashaexperiences.com/images/Into%20the%20Wild%20Hero.jpg",
   "url": "https://ashaexperiences.com/retreats/kenya",
   "offers": {
     "@type": "Offer",

@@ -176,7 +176,7 @@ const jsonLd = {
     "name": "ASHA Experiences",
     "url": "https://ashaexperiences.com"
   },
-  "image": "https://ashaexperiences.com/images/Mexico hero.jpeg",
+  "image": "https://ashaexperiences.com/images/Mexico%20hero.jpeg",
   "url": "https://ashaexperiences.com/retreats/mexico",
   "offers": {
     "@type": "Offer",

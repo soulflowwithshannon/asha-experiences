@@ -26,6 +26,13 @@ export const metadata: Metadata = {
     title: "Journal | ASHA Experiences",
     description: "Writing about retreats, healing, and what it actually feels like to choose yourself.",
     url: "https://ashaexperiences.com/blog",
+    images: [{ url: "/images/Return to Love group sunset.jpg", width: 1200, height: 800, alt: "ASHA Experiences journal — writing for women on the way back to themselves" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Journal | ASHA Experiences",
+    description: "Writing about retreats, healing, and what it actually feels like to choose yourself.",
+    images: ["/images/Return to Love group sunset.jpg"],
   },
 };
 

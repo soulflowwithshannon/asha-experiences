@@ -116,6 +116,39 @@ export const metadata: Metadata = {
   },
 };
 
+// Site-wide identity. The retreat pages add their own Event schema on top.
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ashaexperiences.com/#organization",
+      name: "ASHA Experiences",
+      legalName: "ASHA Experiences LLC",
+      url: "https://ashaexperiences.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ashaexperiences.com/images/asha-logo-white.webp",
+      },
+      description:
+        "Transformational international retreats for women — yoga, sound healing, ceremony, and sisterhood in Morocco, Mexico, and Kenya.",
+      email: "connect@ashaexperiences.com",
+      sameAs: ["https://instagram.com/asha_experiences"],
+      founder: [
+        { "@type": "Person", name: "Ashley" },
+        { "@type": "Person", name: "Shannon" },
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ashaexperiences.com/#website",
+      url: "https://ashaexperiences.com",
+      name: "ASHA Experiences",
+      publisher: { "@id": "https://ashaexperiences.com/#organization" },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -124,6 +157,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${fraunces.variable}`}>
       <body className="min-h-full flex flex-col">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
         <PostHogProvider>
           <Nav />
           {children}
