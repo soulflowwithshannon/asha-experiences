@@ -151,7 +151,7 @@ export default function ContactBubble() {
                 color: "var(--color-text-body)",
               }}
             >
-              hi — it&apos;s Ashley and Shannon. ask us anything about the retreats. there are just the two of us, so we answer by email rather than sitting here live.
+              hi — it&apos;s Ashley and Shannon. ask us anything about the retreats. there are just the two of us, so we&apos;ll answer you by email when we come back online soon.
             </div>
 
             {sent && (
@@ -299,8 +299,8 @@ export default function ContactBubble() {
         aria-expanded={open}
         aria-label={open ? "Close the message window" : "Message Ashley and Shannon"}
         style={{
-          width: 54,
-          height: 54,
+          width: 68,
+          height: 68,
           borderRadius: "50%",
           background: "var(--color-logo-brown)",
           border: "none",
@@ -309,18 +309,18 @@ export default function ContactBubble() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          boxShadow: "0 8px 24px rgba(45,37,33,0.22)",
+          boxShadow: "0 10px 30px rgba(45,37,33,0.26)",
           transition: "transform 0.2s ease",
         }}
         onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
         onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
       >
         {open ? (
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFCF5" strokeWidth="1.6" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFCF5" strokeWidth="1.6" aria-hidden="true">
             <path d="M5 5l14 14M19 5L5 19" />
           </svg>
         ) : (
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFCF5" strokeWidth="1.5" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFCF5" strokeWidth="1.5" aria-hidden="true">
             <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.5 9.5 0 0 1-3.1-.5L3 21l1.7-5a8.2 8.2 0 0 1-.7-3.4 8.4 8.4 0 0 1 8.5-8.1 8.4 8.4 0 0 1 8.5 8z" />
           </svg>
         )}
