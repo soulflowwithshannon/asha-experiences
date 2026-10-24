@@ -291,7 +291,7 @@ export default function CustomRetreatPage() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>
+            <div className="who-bubbles" style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>
               {[
                 "a solo reset, just you",
                 "your women's circle",
@@ -317,6 +317,15 @@ export default function CustomRetreatPage() {
             </div>
           </FadeIn>
         </div>
+
+        <style>{`
+          /* Wrapping left a ragged 2-2-1 on a phone. Stacked full width they
+             read as a list instead of leftovers. */
+          @media (max-width: 640px) {
+            .who-bubbles { flex-direction: column; align-items: stretch; gap: 10px; }
+            .who-bubbles p { text-align: center; }
+          }
+        `}</style>
       </section>
 
       {/* THE FORM */}
