@@ -87,10 +87,10 @@ function Guide({ guide, flip }: { guide: (typeof guides)[0]; flip: boolean }) {
           position: "relative",
           minHeight: 560,
           order: flip ? 2 : 1,
-          background: "var(--color-bg-card)",
+          background: "var(--color-bg-page)",
         }}
       >
-        <Image src={guide.photo} alt={guide.name} fill style={{ objectFit: "cover", objectPosition: "center top" }} sizes="(max-width: 860px) 100vw, 50vw" />
+        <Image src={guide.photo} alt={guide.name} fill style={{ objectFit: "contain", objectPosition: "center" }} sizes="(max-width: 860px) 100vw, 50vw" />
       </div>
 
       <div
@@ -199,7 +199,7 @@ export default function AboutPage() {
   return (
     <main>
       {/* SECTION 1 — HERO */}
-      <section style={{ position: "relative", minHeight: "80vh", display: "flex", alignItems: "center", justifyContent: "center", background: "#2D2521", overflow: "hidden" }}>
+      <section className="about-hero" style={{ position: "relative", minHeight: "56vh", display: "flex", alignItems: "center", justifyContent: "center", background: "#2D2521", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0 }}>
           <Image src="/images/shannonandashley.jpg" alt="Shannon and Ashley" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="100vw" priority />
         </div>
@@ -249,7 +249,7 @@ export default function AboutPage() {
 
         {/* the chapter itself */}
         <div className="chapter" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", alignItems: "stretch", minHeight: 540 }}>
-          <div style={{ position: "relative", background: "#3A2E28", minHeight: 420 }}>
+          <div className="chapter-photo" style={{ position: "relative", background: "#2D2521", minHeight: 560 }}>
             {chapters.map((c, i) => (
               <Image
                 key={c.photo}
@@ -258,8 +258,9 @@ export default function AboutPage() {
                 fill
                 sizes="(max-width: 860px) 100vw, 50vw"
                 style={{
-                  objectFit: "cover",
-                  objectPosition: "center top",
+                  // contain, not cover: the whole photograph shows
+                  objectFit: "contain",
+                  objectPosition: "center",
                   opacity: i === chapter ? 1 : 0,
                   transition: "opacity 600ms ease",
                 }}
@@ -456,11 +457,13 @@ export default function AboutPage() {
 
       <style>{`
         @media (max-width: 860px) {
+          .about-hero { min-height: 68vh !important; }
           .chapter { grid-template-columns: 1fr !important; }
-          .chapter-text { padding: 48px 24px 56px !important; }
+          .chapter-photo { min-height: 0 !important; aspect-ratio: 4 / 5; }
+        .chapter-text { padding: 48px 24px 56px !important; }
           .story-intro { padding: 0 24px 40px !important; }
           .guide-row { grid-template-columns: 1fr !important; }
-          .guide-photo { order: 1 !important; min-height: 420px !important; }
+          .guide-photo { order: 1 !important; min-height: 0 !important; aspect-ratio: 4 / 5; }
           .guide-text { order: 2 !important; padding: 44px 24px 64px !important; }
           .beliefs { grid-template-columns: 1fr !important; gap: 36px !important; }
         }

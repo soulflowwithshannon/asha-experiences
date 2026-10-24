@@ -86,13 +86,20 @@ export default function Nav() {
             .nav-bar { padding: 0 !important; }
             /* Pulled into the corner: aligning to the top of the bar rather
                than centring lets the gap above match the gap to the left. */
-            .nav-logo { margin-left: 14px; align-self: flex-start; margin-top: 14px; }
+            .nav-logo { margin-left: 14px; margin-top: 18px !important; }
             .nav-menu-btn { margin-right: 21px; }
           }
         `}</style>
 
                 {/* Wordmark */}
-        <Link href="/" aria-label="ASHA Experiences — home" className="nav-logo" style={{ display: "block", lineHeight: 0 }}>
+        <Link
+          href="/"
+          aria-label="ASHA Experiences — home"
+          className="nav-logo"
+          /* aligned to the top of the bar rather than centred, so the gap
+             above it is a set number instead of whatever centring leaves */
+          style={{ display: "block", lineHeight: 0, alignSelf: "flex-start", marginTop: 20 }}
+        >
           {/* The logo file is a square with a white ground and a wide margin,
               so it is zoomed inside a clipped box to crop to the lockup.
               On cream: multiply drops the white ground away and the letters
