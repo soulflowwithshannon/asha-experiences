@@ -1,196 +1,201 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
+import { useCallback, useEffect, useState } from "react";
 import FadeIn from "@/components/FadeIn";
 import { SplitHeadline } from "@/components/AnimatedText";
 import VideoPair from "@/components/VideoPair";
 
-const fadeUpVariant = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
+/* The nine beats of the shared story, read one at a time rather than scrolled. */
+const chapters = [
+  { photo: "/images/little girls.png", alt: "Childhood", text: "once, we were little girls who played outside and believed in magic." },
+  { photo: "/images/makeup.png", alt: "Teenage years", text: "then the world taught us to tone it down.\ntoughen up.\nfit in.\n\nso we did." },
+  { photo: "/images/partying.png", alt: "Early twenties", text: "we chased love in all the wrong places.\npartied to escape our pain.\nlaughed loudly while quietly unraveling." },
+  { photo: "/images/degrees.png", alt: "Degrees", text: "we did everything society told us to do.\nwe even got masters degrees.\n\nbut inside, we felt lost and unworthy." },
+  { photo: "/images/floral.png", alt: "The weight of it", text: "we felt the heartbreak.\nthe shame.\nthe constant need to prove and please.\n\nwe learned to wear masks before we even knew our true face." },
+  { photo: "/images/travel.png", alt: "Breaking open", text: "eventually, the pretending got too heavy.\n\nand the pain cracked us open." },
+  { photo: "/images/france.png", alt: "Choosing the work", text: "we chose the path of healing.\n\nwe met our shadows, our shame,\nand chose love.\n\nover and over again." },
+  { photo: "/images/healing 1.png", alt: "The real work", text: "that's when the real work began.\n\nbreath by breath.\nchoice by choice.\n\nwe came home to ourselves." },
+  { photo: "/images/healing 2.png", alt: "Now", text: "we became the women we once needed.\n\nand now, we guide others home too." },
+];
 
-function StoryBlock({
-  children,
-  delay = 0,
-}: {
-  children: React.ReactNode;
-  delay?: number;
-}) {
-  return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
-      variants={fadeUpVariant}
-      transition={{ duration: 0.8, ease: "easeInOut", delay }}
-      style={{ maxWidth: 900, margin: "0 auto 80px" }}
-    >
-      {children}
-    </motion.div>
-  );
-}
-
-function Divider() {
-  return (
-    <div style={{ display: "flex", alignItems: "center", gap: 12, margin: "0 auto 48px", maxWidth: 480 }}>
-      <div style={{ flex: 1, height: "0.5px", background: "var(--color-border)" }} />
-      <span style={{ color: "#A67C52", fontSize: 14 }}>✦</span>
-      <div style={{ flex: 1, height: "0.5px", background: "var(--color-border)" }} />
-    </div>
-  );
-}
-
-// Squiggly connector — travels diagonally from beneath one stop's photo to the next stop's photo
-// fromLeft=true means the current stop has its photo on the left, so squiggle starts left and ends right
-// SVG is 800px wide matching the container; photo centers are at ~160 (left) and ~640 (right)
-function Squiggle({ fromLeft }: { fromLeft: boolean }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  // fromLeft: starts at left photo center (160), curves to right photo center (640)
-  // fromRight: starts at right photo center (640), curves to left photo center (160)
-  const path = fromLeft
-    ? "M 160 0 C 120 50, 360 50, 380 100 C 400 150, 620 150, 640 200"
-    : "M 640 0 C 680 50, 440 50, 420 100 C 400 150, 180 150, 160 200";
-  return (
-    <div ref={ref} style={{ position: "relative", width: "100%", maxWidth: 800, margin: "0 auto", padding: "0 16px", boxSizing: "border-box" }}>
-      <svg width="100%" height="auto" viewBox="0 0 800 200" fill="none" preserveAspectRatio="xMidYMid meet" style={{ display: "block", overflow: "hidden" }}>
-        <motion.path
-          d={path}
-          stroke="#C9B89A"
-          strokeWidth="2"
-          strokeLinecap="round"
-          fill="none"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={inView ? { pathLength: 1, opacity: 1 } : { pathLength: 0, opacity: 0 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
-        />
-      </svg>
-    </div>
-  );
-}
-
-const timelineStops = [
+const guides = [
   {
-    photo: "/images/little girls.png",
-    alt: "Childhood photo",
-    text: "once, we were little girls who played outside and believed in magic.",
-    isRealPhoto: true,
-    placeholder: null,
+    name: "Ashley",
+    photo: "/images/3.png",
+    role: "reiki healer · sound bath dj · life coach · retreat host",
+    handle: "@ashleyscully_",
+    href: "https://instagram.com/ashleyscully_",
+    lead: [
+      "ashley's journey didn't start in peace. it started in chaos.",
+      "in 2020, she was coming out of an abusive relationship — completely disconnected from herself, stuck in the same painful patterns, wanting to heal not just from him, but from her.",
+      "that's when she found reiki. her first session cracked her open.",
+    ],
+    rest: [
+      "she could feel energy move through her body for the first time — like remembering who she was. then came sound healing. and the first time she heard a singing bowl, her anxious brain finally went quiet.",
+      "it became the medicine she didn't know she needed.",
+      "today she leads sound baths at equinox and hush, holds reiki sessions, coaches women through heartbreak and rebuilding, and hosts retreats that take women across the world and back to themselves.",
+      "she's also a total animal lover, dog mom, future animal sanctuary dreamer, writer of poetry, discoverer of house music, and the kind of person who ends up eating brooklyn pizza at 3am with sparkles on her face after a rave.",
+      "the girl who once felt broken now helps others rise. with grace, wisdom, and sound.",
+    ],
   },
   {
-    photo: "/images/makeup.png",
-    alt: "Teenage years",
-    text: "then the world taught us to tone it down.\ntoughen up.\nfit in.\n\nso we did.",
-    isRealPhoto: true,
-    placeholder: null,
-  },
-  {
-    photo: "/images/partying.png",
-    alt: "Early twenties",
-    text: "we chased love in all the wrong places.\npartied to escape our pain.\nlaughed loudly while quietly unraveling.",
-    isRealPhoto: true,
-    placeholder: null,
-  },
-  {
-    photo: "/images/degrees.png",
-    alt: "Degrees",
-    text: "we did everything society told us to do.\nwe even got masters degrees.\n\nbut inside, we felt lost and unworthy.",
-    isRealPhoto: true,
-    placeholder: null,
-  },
-  {
-    photo: "/images/floral.png",
-    alt: "Pain",
-    text: "we felt the heartbreak.\nthe shame.\nthe constant need to prove and please.\n\nwe learned to wear masks before we even knew our true face.",
-    isRealPhoto: true,
-    placeholder: null,
-  },
-  {
-    photo: "/images/travel.png",
-    alt: "Pain 2",
-    text: "eventually, the pretending got too heavy.\n\nand the pain cracked us open.",
-    isRealPhoto: true,
-    placeholder: null,
-  },
-  {
-    photo: "/images/france.png",
-    alt: "Early somatic work",
-    text: "we chose the path of healing.\n\nwe met our shadows, our shame,\nand chose love.\n\nover and over again.",
-    isRealPhoto: true,
-    placeholder: null,
-  },
-  {
-    photo: "/images/healing 1.png",
-    alt: "Deeper work",
-    text: "that's when the real work began.\n\nbreath by breath.\nchoice by choice.\n\nwe came home to ourselves.",
-    isRealPhoto: true,
-    placeholder: null,
-  },
-  {
-    // PLACEHOLDER COPY — swap with real version later
-    photo: "/images/healing 2.png",
-    alt: "Healing",
-    text: "we became the women we once needed.\n\nand now, we guide others home too.",
-    isRealPhoto: true,
-    placeholder: null,
+    name: "Shannon",
+    photo: "/images/4.png",
+    role: "somatic guide · women's circle facilitator · retreat host",
+    handle: "@soulflowwithshannon",
+    href: "https://instagram.com/soulflowwithshannon",
+    lead: [
+      "shannon is based in bali — which tells you something about how she moves through the world. toward beauty. toward depth. toward the places that make ordinary life feel like a memory.",
+      "in 2020, everything cracked open. drinking too much. depressed. anxious. carrying shame she'd been lugging around for years and pretending didn't exist.",
+      "she finally got help.",
+    ],
+    rest: [
+      "and that decision — that one moment of choosing herself over the performance — became the foundation of everything she does now.",
+      "her background is in psychology, and it shows — not in a clinical way, but in the way she can hold a room full of women falling apart and make every single one of them feel safe.",
+      "through somatic work, yoga, breathwork, and women's circles, she guides women back to the version of themselves that existed before the world told them to be smaller.",
+      "when she's not leading retreats, you'll find her upside down on an aerial hoop, talking to her cat, or convincing someone to move to bali.",
+    ],
   },
 ];
 
-function TimelineStop({ stop, index }: { stop: typeof timelineStops[0]; index: number }) {
-  const isLeft = index % 2 === 0; // even index = photo left; odd index = photo right
+const beliefs = [
+  {
+    statement: "healing doesn't have to be heavy.",
+    body: "it can look like dancing until midnight, laughing until your stomach hurts, and waking up to coffee on a veranda while the sun comes up over the savannah.",
+  },
+  {
+    statement: "the right environment changes everything.",
+    body: "you can do all the work at home. but something about being somewhere extraordinary — truly outside your ordinary life — cracks open what nothing else could reach.",
+  },
+  {
+    statement: "you already know what you need.",
+    body: "you don't need to be fixed. you don't need someone to tell you who to be. you just need somewhere safe enough to remember.",
+  },
+];
+
+function Guide({ guide, flip }: { guide: (typeof guides)[0]; flip: boolean }) {
+  const [open, setOpen] = useState(false);
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.7, ease: "easeInOut" }}
-      className="timeline-stop"
-      style={{
-        display: "flex",
-        flexDirection: isLeft ? "row" : "row-reverse",
-        alignItems: "center",
-        gap: 64,
-        maxWidth: 800,
-        margin: "0 auto",
-        padding: "0 32px",
-      }}
-    >
-      {/* Photo */}
-      <div style={{ flexShrink: 0, width: 320, height: 380, borderRadius: 12, overflow: "hidden", background: "var(--color-bg-card)", position: "relative" }}>
-        {stop.photo ? (
-          <img src={stop.photo} alt={stop.alt} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center", display: "block" }} />
-        ) : (
-          <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)", letterSpacing: "0.03em", textAlign: "center", padding: 16 }}>
-              [PLACEHOLDER: {stop.placeholder}]
-            </span>
-          </div>
-        )}
-      </div>
-      {/* Text */}
-      <p
-        className="timeline-text"
+    <div className="guide-row" style={{ display: "grid", gridTemplateColumns: flip ? "1fr 1.05fr" : "1.05fr 1fr", alignItems: "center", gap: 0 }}>
+      {/* portrait, bleeding to the page edge rather than sitting in a frame */}
+      <div
+        className="guide-photo"
         style={{
-          fontFamily: "var(--font-dm-sans)",
-          fontSize: 14,
-          color: "var(--color-text-body)",
-          lineHeight: 1.7,
-          flex: "1 1 0",
-          minWidth: 0,
-          textAlign: isLeft ? "left" : "right",
-          whiteSpace: "pre-line",
+          position: "relative",
+          minHeight: 560,
+          order: flip ? 2 : 1,
+          background: "var(--color-bg-card)",
         }}
       >
-        {stop.text}
-      </p>
-    </motion.div>
+        <Image src={guide.photo} alt={guide.name} fill style={{ objectFit: "cover", objectPosition: "center top" }} sizes="(max-width: 860px) 100vw, 50vw" />
+      </div>
+
+      <div
+        className="guide-text"
+        style={{
+          order: flip ? 1 : 2,
+          padding: flip ? "80px 72px 80px 56px" : "80px 56px 80px 72px",
+        }}
+      >
+        <FadeIn>
+          <h3
+            style={{
+              fontFamily: "var(--font-fraunces)",
+              fontSize: "clamp(44px,6vw,76px)",
+              lineHeight: 0.95,
+              color: "var(--color-text-headline)",
+              fontWeight: 700,
+              marginBottom: 18,
+            }}
+          >
+            {guide.name}
+          </h3>
+          <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-accent)", marginBottom: 28 }}>
+            {guide.role}
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={0.08}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 18, maxWidth: 440 }}>
+            {guide.lead.map((p) => (
+              <p key={p} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.8, color: "var(--color-text-body)" }}>
+                {p}
+              </p>
+            ))}
+
+            {open &&
+              guide.rest.map((p) => (
+                <motion.p
+                  key={p}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.8, color: "var(--color-text-body)" }}
+                >
+                  {p}
+                </motion.p>
+              ))}
+          </div>
+
+          <div style={{ display: "flex", alignItems: "center", gap: 24, marginTop: 28, flexWrap: "wrap" }}>
+            <button
+              type="button"
+              onClick={() => setOpen((v) => !v)}
+              aria-expanded={open}
+              style={{
+                background: "none",
+                border: "none",
+                padding: "10px 0",
+                cursor: "pointer",
+                fontFamily: "var(--font-dm-sans)",
+                fontSize: 13,
+                color: "var(--color-text-headline)",
+                borderBottom: "1px solid var(--color-accent)",
+                minHeight: 44,
+              }}
+            >
+              {open ? "close" : `read ${guide.name === "Ashley" ? "her" : "her"} whole story`}
+            </button>
+            <a
+              href={guide.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", textDecoration: "none" }}
+            >
+              {guide.handle}
+            </a>
+          </div>
+        </FadeIn>
+      </div>
+    </div>
   );
 }
 
 export default function AboutPage() {
+  const [chapter, setChapter] = useState(0);
+  const last = chapters.length - 1;
+
+  const go = useCallback(
+    (delta: number) => setChapter((c) => Math.min(last, Math.max(0, c + delta))),
+    [last]
+  );
+
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      const tag = (e.target as HTMLElement)?.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA") return;
+      if (e.key === "ArrowRight") go(1);
+      if (e.key === "ArrowLeft") go(-1);
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [go]);
+
+  const current = chapters[chapter];
+
   return (
     <main>
       {/* SECTION 1 — HERO */}
@@ -219,7 +224,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 1b — WHY WE CREATED ASHA (two story-format videos) */}
+      {/* SECTION 1b — WHY WE CREATED ASHA */}
       <VideoPair
         headline="why we created ASHA"
         orientation="vertical"
@@ -229,244 +234,237 @@ export default function AboutPage() {
         ]}
       />
 
-      {/* SECTION 2 — THE SHARED STORY (timeline) */}
-      <section style={{ background: "var(--color-bg-page)", padding: "80px 32px 80px" }}>
-        <FadeIn>
-          <p style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,4vw,36px)", fontWeight: 700, color: "var(--color-text-headline)", textAlign: "center", marginBottom: 64 }}>
-            how we got here
-          </p>
-        </FadeIn>
-
-        {timelineStops.map((stop, i) => (
-          <div key={i}>
-            <TimelineStop stop={stop} index={i} />
-            {i < timelineStops.length - 1 && (
-              // fromLeft=true when current stop has photo on left (even index), squiggle travels right toward next photo
-              <Squiggle fromLeft={i % 2 === 0} />
-            )}
-          </div>
-        ))}
-
-      </section>
-
-      {/* DARK BRIDGE BAR */}
-      <div style={{ background: "#2D2521", height: 100, display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(18px,2.5vw,24px)", color: "#EFE6D3", textAlign: "center" }}>
-          <span className="about-bridge-line">if this story feels like yours —</span>
-          <span className="about-bridge-line"> you&apos;re exactly where you&apos;re supposed to be.</span>
-        </p>
-        <style>{`
-          @media (max-width: 640px) {
-            .about-bridge-line { display: block; }
-          }
-          @media (min-width: 641px) {
-            .about-bridge-line { display: inline; }
-          }
-        `}</style>
-      </div>
-
-      {/* CLOSING PHOTO */}
-      <section style={{ background: "var(--color-bg-page)", padding: "80px 32px" }}>
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.7 }}
-        >
-          <div style={{ position: "relative", width: "100%", maxWidth: 560, margin: "0 auto", aspectRatio: "16/9", borderRadius: 8, overflow: "hidden" }}>
-            <Image src="/images/Tezza-8936.JPG" alt="Retreat circle" fill style={{ objectFit: "cover", objectPosition: "center 61%" }} sizes="(max-width: 640px) 100vw, 560px" />
-          </div>
-        </motion.div>
-      </section>
-
-      <style>{`
-        @media (max-width: 640px) {
-          .timeline-stop { flex-direction: column !important; gap: 24px !important; padding: 0 16px !important; }
-          .timeline-text { text-align: left !important; width: 100% !important; }
-        }
-        /* NOTE: mobile layout needs real device check — squiggles and alternating layout may need further tuning */
-      `}</style>
-
-      {/* SECTION 3 — ASHLEY */}
-      <section style={{ background: "var(--color-bg-surface)" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "55% 45%", minHeight: 600 }} className="ashley-grid">
-          <div className="ashley-text" style={{ padding: "80px 60px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-            <FadeIn>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 16 }}>meet ashley</p>
-              <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: 48, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 8 }}>Ashley</h2>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-muted)", letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: 4 }}>reiki healer · sound bath dj · life coach · retreat host</p>
-              <a href="https://instagram.com/ashleyscully_" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", textDecoration: "none", display: "block", marginBottom: 32 }}>@ashleyscully_</a>
-            </FadeIn>
-            <FadeIn delay={0.1}>
-              <div style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.85, maxWidth: 460, display: "flex", flexDirection: "column", gap: 20 }}>
-                <p>ashley&apos;s journey didn&apos;t start in peace. it started in chaos.</p>
-                <p>in 2020, she was coming out of an abusive relationship — completely disconnected from herself, stuck in the same painful patterns, wanting to heal not just from him, but from her.</p>
-                <p>that&apos;s when she found reiki.</p>
-                <p>her first session cracked her open. she could feel energy move through her body for the first time — like remembering who she was. then came sound healing. and the first time she heard a singing bowl, her anxious brain finally went quiet.</p>
-                <p>it became the medicine she didn&apos;t know she needed.</p>
-                <p>today she leads sound baths at equinox and hush, holds reiki sessions, coaches women through heartbreak and rebuilding, and hosts retreats that take women across the world and back to themselves.</p>
-                <p>she&apos;s also a total animal lover, dog mom, future animal sanctuary dreamer, writer of poetry, discoverer of house music, and the kind of person who ends up eating brooklyn pizza at 3am with sparkles on her face after a rave.</p>
-                <p>the girl who once felt broken now helps others rise. with grace, wisdom, and sound.</p>
-              </div>
-            </FadeIn>
-          </div>
-          <div className="ashley-photo" style={{ position: "relative", minHeight: 500, background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <Image src="/images/3.png" alt="Ashley" fill style={{ objectFit: "contain", objectPosition: "center" }} sizes="45vw" />
-          </div>
-        </div>
-        <style>{`@media(max-width:768px){.ashley-grid{grid-template-columns:1fr!important}.ashley-photo{order:-1}.ashley-text{order:0}}`}</style>
-      </section>
-
-      {/* SECTION 4 — SHANNON */}
-      <section style={{ background: "var(--color-bg-page)" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "45% 55%", minHeight: 600 }} className="shannon-grid">
-          <div style={{ position: "relative", minHeight: 500, background: "var(--color-bg-card)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <Image src="/images/4.png" alt="Shannon" fill style={{ objectFit: "contain", objectPosition: "center" }} sizes="45vw" />
-          </div>
-          <div style={{ padding: "80px 60px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-            <FadeIn>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 16 }}>meet shannon</p>
-              <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: 48, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 8 }}>Shannon</h2>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-muted)", letterSpacing: "0.04em", textTransform: "uppercase", marginBottom: 4 }}>somatic guide · women&apos;s circle facilitator · retreat host</p>
-              <a href="https://instagram.com/soulflowwithshannon" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", textDecoration: "none", display: "block", marginBottom: 32 }}>@soulflowwithshannon</a>
-            </FadeIn>
-            <FadeIn delay={0.1}>
-              <div style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.85, maxWidth: 460, display: "flex", flexDirection: "column", gap: 20 }}>
-                <p>shannon is based in bali — which tells you something about how she moves through the world. toward beauty. toward depth. toward the places that make ordinary life feel like a memory.</p>
-                <p>her background is in psychology, and it shows — not in a clinical way, but in the way she can hold a room full of women falling apart and make every single one of them feel safe.</p>
-                <p>in 2020, everything cracked open. drinking too much. depressed. anxious. carrying shame she&apos;d been lugging around for years and pretending didn&apos;t exist.</p>
-                <p>she finally got help.</p>
-                <p>and that decision — that one moment of choosing herself over the performance — became the foundation of everything she does now.</p>
-                <p>through somatic work, yoga, breathwork, and women&apos;s circles, she guides women back to the version of themselves that existed before the world told them to be smaller.</p>
-                <p>when she&apos;s not leading retreats, you&apos;ll find her upside down on an aerial hoop, talking to her cat, or convincing someone to move to bali.</p>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-        <style>{`@media(max-width:768px){.shannon-grid{grid-template-columns:1fr!important}}`}</style>
-      </section>
-
-      {/* SECTION 5 — THE ORIGIN MOMENT */}
-      <section style={{ background: "#2D2521", padding: "100px 32px", textAlign: "center" }}>
-        <FadeIn>
-          <div style={{ maxWidth: 600, margin: "0 auto", borderRadius: 12, overflow: "hidden" }}>
-            <Image
-              src="/images/Asha created.png"
-              alt="ASHA created"
-              width={0}
-              height={0}
-              sizes="(max-width: 640px) 100vw, 600px"
-              style={{ width: "100%", height: "auto", display: "block" }}
-            />
-          </div>
-        </FadeIn>
-        <FadeIn delay={0.2}>
-          <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 20, color: "#F1F0E5", maxWidth: 520, margin: "48px auto 0", lineHeight: 1.8 }}>
-            &ldquo;we met in a women&apos;s circle — two strangers who turned out to want the exact same thing. healing, travel, and community.&rdquo;
-          </p>
-        </FadeIn>
-      </section>
-
-      {/* SECTION 6 — WHAT WE BELIEVE */}
-      <section style={{ background: "var(--color-bg-surface)", padding: "100px 32px" }}>
-        <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
+      {/* SECTION 2 — THE STORY, ONE CHAPTER AT A TIME */}
+      <section style={{ background: "#2D2521", color: "#F1F0E5", padding: "88px 0 0" }}>
+        <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 48px 56px" }} className="story-intro">
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 56 }}>
-              what we believe
-            </h2>
-          </FadeIn>
-
-          {[
-            {
-              statement: "that healing doesn't have to be heavy.",
-              body: "it can look like dancing until midnight, laughing until your stomach hurts, and waking up to coffee on a veranda while the sun comes up over the savannah.",
-            },
-            {
-              statement: "that the right environment changes everything.",
-              body: "you can do all the work at home. but something about being somewhere extraordinary — truly outside your ordinary life — cracks open what nothing else could reach.",
-            },
-            {
-              statement: "that women need each other.",
-              body: "not in a performative way. in a real way. the kind that happens when the masks come off and someone finally sees you without the roles.",
-            },
-            {
-              statement: "that you already know what you need.",
-              body: "you don't need to be fixed. you don't need someone to tell you who to be. you just need somewhere safe enough to remember.",
-            },
-          ].map((belief, i, arr) => (
-            <FadeIn key={i} delay={i * 0.1}>
-              <div style={{ marginBottom: i < arr.length - 1 ? 48 : 0 }}>
-                <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 22, color: "var(--color-text-headline)", marginBottom: 8 }}>
-                  {belief.statement}
-                </p>
-                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", maxWidth: 480, margin: "0 auto", lineHeight: 1.8 }}>
-                  {belief.body}
-                </p>
-              </div>
-              {i < arr.length - 1 && <Divider />}
-            </FadeIn>
-          ))}
-        </div>
-      </section>
-
-      {/* SECTION 6b — NO TEAM */}
-      <section style={{ background: "var(--color-bg-page)", padding: "100px 32px" }}>
-        <div style={{ maxWidth: 620, margin: "0 auto", textAlign: "center" }}>
-          <FadeIn>
-            <h2 style={{
-              fontFamily: "var(--font-fraunces)",
-              fontSize: "clamp(26px,3.6vw,36px)",
-              color: "var(--color-text-headline)",
-              fontWeight: 700,
-              marginBottom: 22,
-            }}>
-              there is no team.
-            </h2>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <p style={{
-              fontFamily: "var(--font-dm-sans)",
-              fontSize: 15,
-              lineHeight: 1.9,
-              color: "var(--color-text-body)",
-              textWrap: "balance",
-            }}>
-              it&apos;s the two of us. we answer the emails, we plan the itineraries, and we&apos;re the ones on the ground with you for the whole week. no assistants, no agency, no ads.
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase", color: "#C39E88", marginBottom: 22 }}>
+              how we got here
+            </p>
+            <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(24px,3.4vw,38px)", lineHeight: 1.35, color: "#F1F0E5", maxWidth: 760 }}>
+              we met in a women&apos;s circle — two strangers who turned out to want the exact same thing.
             </p>
           </FadeIn>
         </div>
+
+        {/* the chapter itself */}
+        <div className="chapter" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", alignItems: "stretch", minHeight: 540 }}>
+          <div style={{ position: "relative", background: "#3A2E28", minHeight: 420 }}>
+            {chapters.map((c, i) => (
+              <Image
+                key={c.photo}
+                src={c.photo}
+                alt={c.alt}
+                fill
+                sizes="(max-width: 860px) 100vw, 50vw"
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center top",
+                  opacity: i === chapter ? 1 : 0,
+                  transition: "opacity 600ms ease",
+                }}
+              />
+            ))}
+          </div>
+
+          <div className="chapter-text" style={{ position: "relative", padding: "72px 72px 72px 64px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+            {/* the numeral is the decoration — no flourishes needed */}
+            <span
+              aria-hidden="true"
+              style={{
+                position: "absolute",
+                top: 28,
+                right: 56,
+                fontFamily: "var(--font-cormorant)",
+                fontSize: "clamp(90px,11vw,170px)",
+                lineHeight: 1,
+                color: "#F1F0E5",
+                opacity: 0.09,
+                pointerEvents: "none",
+              }}
+            >
+              {String(chapter + 1).padStart(2, "0")}
+            </span>
+
+            {/* every chapter stays in the markup so the whole story is still readable
+                to anyone — and anything — that does not run the buttons */}
+            {chapters.map((c, i) => (
+              <p
+                key={c.photo}
+                style={{
+                  display: i === chapter ? "block" : "none",
+                  position: "relative",
+                  fontFamily: "var(--font-dm-sans)",
+                  fontSize: "clamp(16px,1.5vw,19px)",
+                  lineHeight: 1.75,
+                  color: "#E8D5BC",
+                  whiteSpace: "pre-line",
+                  maxWidth: 420,
+                }}
+              >
+                {c.text}
+              </p>
+            ))}
+
+            {/* progress: a rule and numerals, not dots */}
+            <div style={{ position: "relative", marginTop: 44, maxWidth: 420 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 18 }}>
+                <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.14em", color: "#C39E88" }}>
+                  {String(chapter + 1).padStart(2, "0")} / {String(chapters.length).padStart(2, "0")}
+                </span>
+                <span style={{ flex: 1, height: 1, background: "rgba(241,240,229,0.18)", position: "relative" }}>
+                  <span
+                    style={{
+                      position: "absolute",
+                      left: 0,
+                      top: 0,
+                      height: 1,
+                      width: `${((chapter + 1) / chapters.length) * 100}%`,
+                      background: "#C39E88",
+                      transition: "width 400ms ease",
+                    }}
+                  />
+                </span>
+              </div>
+
+              <div style={{ display: "flex", gap: 10 }}>
+                <button
+                  type="button"
+                  onClick={() => go(-1)}
+                  disabled={chapter === 0}
+                  aria-label="Previous chapter"
+                  style={{
+                    width: 52,
+                    height: 44,
+                    background: "none",
+                    border: "1px solid rgba(241,240,229,0.3)",
+                    color: "#F1F0E5",
+                    cursor: chapter === 0 ? "default" : "pointer",
+                    opacity: chapter === 0 ? 0.3 : 1,
+                  }}
+                >
+                  ←
+                </button>
+                <button
+                  type="button"
+                  onClick={() => go(1)}
+                  disabled={chapter === last}
+                  aria-label="Next chapter"
+                  style={{
+                    width: 52,
+                    height: 44,
+                    background: chapter === last ? "none" : "rgba(195,158,136,0.22)",
+                    border: "1px solid rgba(241,240,229,0.3)",
+                    color: "#F1F0E5",
+                    cursor: chapter === last ? "default" : "pointer",
+                    opacity: chapter === last ? 0.3 : 1,
+                  }}
+                >
+                  →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style={{ padding: "40px 48px 72px", textAlign: "center" }}>
+          <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(18px,2.4vw,24px)", color: "#C5AA9B" }}>
+            {current.text.split("\n")[0] && chapter === last
+              ? "if this story feels like yours — you're exactly where you're supposed to be."
+              : " "}
+          </p>
+        </div>
       </section>
 
-      {/* SECTION 7 — CLOSING CTA */}
-      <section style={{ position: "relative", padding: "160px 32px", background: "#2D2521", textAlign: "center", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0 }}>
-          <Image
-            src="/images/Return to Love group sunset.jpg"
-            alt="Return to Love group sunset"
-            fill
-            style={{ objectFit: "cover", objectPosition: "center 65%" }}
-            sizes="100vw"
-          />
-          <div style={{ position: "absolute", inset: 0, background: "rgba(45,37,33,0.45)" }} />
+      {/* SECTION 3 — THE TWO OF US */}
+      <section style={{ background: "var(--color-bg-page)" }}>
+        <div style={{ maxWidth: 1240, margin: "0 auto", padding: "88px 48px 24px" }}>
+          <FadeIn>
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-accent)" }}>
+              the two of us
+            </p>
+          </FadeIn>
         </div>
-        <div style={{ position: "relative", zIndex: 1 }}>
+        {guides.map((g, i) => (
+          <Guide key={g.name} guide={g} flip={i % 2 === 1} />
+        ))}
+      </section>
+
+      {/* SECTION 4 — WHAT WE BELIEVE */}
+      <section style={{ background: "var(--color-bg-surface)", padding: "96px 48px" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <FadeIn>
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-accent)", marginBottom: 56 }}>
+              what we believe
+            </p>
+          </FadeIn>
+
+          <div className="beliefs" style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 48 }}>
+            {beliefs.map((b, i) => (
+              <FadeIn key={b.statement} delay={i * 0.08}>
+                <div>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-fraunces)",
+                      fontSize: "clamp(20px,2.2vw,25px)",
+                      lineHeight: 1.25,
+                      color: "var(--color-text-headline)",
+                      fontWeight: 700,
+                      marginBottom: 16,
+                      textWrap: "balance",
+                    }}
+                  >
+                    {b.statement}
+                  </p>
+                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.8, color: "var(--color-text-body)" }}>{b.body}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5 — CLOSING */}
+      <section style={{ position: "relative", padding: "150px 32px", background: "#2D2521", textAlign: "center", overflow: "hidden" }}>
+        <div style={{ position: "absolute", inset: 0 }}>
+          <Image src="/images/Return to Love group sunset.jpg" alt="Return to Love group sunset" fill style={{ objectFit: "cover", objectPosition: "center 65%" }} sizes="100vw" />
+          <div style={{ position: "absolute", inset: 0, background: "rgba(45,37,33,0.5)" }} />
+        </div>
+        <div style={{ position: "relative", zIndex: 1, maxWidth: 680, margin: "0 auto" }}>
           <SplitHeadline
             text="you were made for more than just surviving"
             as="h2"
-            style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,4vw,36px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 40 }}
+            style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,4vw,38px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 22 }}
           />
+          <FadeIn delay={0.3}>
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.9, color: "#E8D5BC", marginBottom: 36 }}>
+              there is no team. it&apos;s the two of us — we answer the emails, we plan the itineraries, and we&apos;re the ones on the ground with you for the whole week.
+            </p>
+          </FadeIn>
           <FadeIn delay={0.4}>
-            <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-              <a href="/retreats/kenya" style={{ display: "inline-block", padding: "12px 32px", border: "1px solid #C39E88", background: "rgba(195,158,136,0.25)", color: "#F1F0E5", fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 500, letterSpacing: "0.04em", textDecoration: "none", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(195,158,136,0.45)")} onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(195,158,136,0.25)")}>
-                explore retreats
+            <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
+              <a href="/retreats/kenya" style={{ display: "inline-block", padding: "14px 32px", border: "1px solid #C39E88", background: "rgba(195,158,136,0.25)", color: "#F1F0E5", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none" }}>
+                explore retreats →
               </a>
-              <a href="https://instagram.com/asha_experiences" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 32px", border: "1px solid #C39E88", background: "rgba(195,158,136,0.25)", color: "#F1F0E5", fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 500, letterSpacing: "0.04em", textDecoration: "none", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(195,158,136,0.45)")} onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(195,158,136,0.25)")}>
-                follow along @asha_experiences →
+              <a href="https://instagram.com/asha_experiences" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "14px 32px", border: "1px solid #C39E88", color: "#F1F0E5", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none" }}>
+                follow along →
               </a>
             </div>
           </FadeIn>
         </div>
       </section>
+
+      <style>{`
+        @media (max-width: 860px) {
+          .chapter { grid-template-columns: 1fr !important; }
+          .chapter-text { padding: 48px 24px 56px !important; }
+          .story-intro { padding: 0 24px 40px !important; }
+          .guide-row { grid-template-columns: 1fr !important; }
+          .guide-photo { order: 1 !important; min-height: 420px !important; }
+          .guide-text { order: 2 !important; padding: 44px 24px 64px !important; }
+          .beliefs { grid-template-columns: 1fr !important; gap: 36px !important; }
+        }
+      `}</style>
     </main>
   );
 }
