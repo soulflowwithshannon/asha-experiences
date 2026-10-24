@@ -7,7 +7,7 @@ export default function Footer() {
       style={{
         background: "var(--color-bg-page)",
         borderTop: "0.5px solid var(--color-border)",
-        padding: "48px 32px",
+        padding: "28px 32px 40px",
       }}
     >
       <div
@@ -23,16 +23,28 @@ export default function Footer() {
       >
         {/* Left — wordmark */}
         <Link href="/" aria-label="ASHA Experiences — home" className="footer-logo" style={{ display: "inline-block", lineHeight: 0 }}>
-          {/* the white-background file, multiplied, so the square drops away
-              onto any of our creams — the cream-background file leaves a patch */}
-          <Image
-            src="/images/asha-logo-white.webp"
-            alt="ASHA Experiences"
-            width={300}
-            height={300}
-            sizes="150px"
-            style={{ width: 140, height: "auto", display: "block", mixBlendMode: "multiply" }}
-          />
+          {/* The file is a 2000px square with the lockup floating in the middle,
+              so at 140px it carried ~35px of empty space above the letters.
+              Clipped and zoomed to crop that away. Multiply drops the white
+              ground onto our creams; the cream file leaves a patch. */}
+          <span style={{ display: "block", width: 150, height: 62, overflow: "hidden", position: "relative" }}>
+            <Image
+              src="/images/asha-logo-white.webp"
+              alt="ASHA Experiences"
+              width={300}
+              height={300}
+              sizes="230px"
+              style={{
+                position: "absolute",
+                left: "50%",
+                top: "50%",
+                width: 224,
+                height: "auto",
+                transform: "translate(-50%, -50%)",
+                mixBlendMode: "multiply",
+              }}
+            />
+          </span>
         </Link>
 
         {/* Center — links */}
