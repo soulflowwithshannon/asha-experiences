@@ -361,9 +361,6 @@ export default function Nav() {
           <Link href="/contact" style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: pathname === "/contact" ? "var(--color-accent)" : "var(--color-text-body)", textDecoration: "none" }}>
             contact us
           </Link>
-          <a href="https://instagram.com/asha_experiences" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", textDecoration: "none" }}>
-            instagram
-          </a>
         </div>
       )}
     </nav>
