@@ -5,6 +5,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import PostHogProvider from "@/components/PostHogProvider";
+import ContactBubble from "@/components/ContactBubble";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -127,6 +128,7 @@ export default function RootLayout({
           <Nav />
           {children}
           <Footer />
+          <ContactBubble />
         </PostHogProvider>
 
         {/* Google Analytics (GA4) */}
