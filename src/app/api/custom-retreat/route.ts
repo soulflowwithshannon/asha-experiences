@@ -42,17 +42,20 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: true });
     }
 
-    const { who, headcount, company, when, where, outcome, budget } = body;
+    const { who, headcount, company, when, where, outcome, budget, leading, anythingElse, phone, based } = body;
 
     const rows: [string, string][] = [
       ["name", name || "—"],
       ["email", email],
+      ["phone", phone || "—"],
+      ["based in", based || "—"],
       ["who's coming", who || "—"],
       ["how many", headcount || "—"],
       ["company", company || "—"],
       ["when", when || "—"],
       ["where", where || "—"],
       ["budget per person", budget || "—"],
+      ["who leads the week", leading || "—"],
     ];
 
     const subjectBits = [headcount && `${headcount} women`, where, name].filter(Boolean).join(" — ");
@@ -64,7 +67,8 @@ export async function POST(request: NextRequest) {
       subject: `custom retreat — ${subjectBits || email}`,
       text:
         rows.map(([k, v]) => `${k}: ${v}`).join("\n") +
-        `\n\nwhat they want them to leave with:\n${outcome || "—"}`,
+        `\n\nwhat they want them to leave with:\n${outcome || "—"}` +
+        `\n\nanything else:\n${anythingElse || "—"}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; color: #5C4D3F;">
           <h2 style="font-family: Georgia, serif; color: #4A3F35; font-weight: 400;">a custom retreat enquiry</h2>
@@ -72,6 +76,8 @@ export async function POST(request: NextRequest) {
           <hr style="border: 0.5px solid #E2D8C3; margin: 20px 0;" />
           <p><strong>what they want them to leave with</strong></p>
           <p style="white-space: pre-wrap;">${outcome || "—"}</p>
+          <p style="margin-top:16px;"><strong>anything else</strong></p>
+          <p style="white-space: pre-wrap;">${anythingElse || "—"}</p>
         </div>
       `,
     });

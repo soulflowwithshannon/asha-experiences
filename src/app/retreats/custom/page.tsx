@@ -73,6 +73,10 @@ export default function CustomRetreatPage() {
   const [where, setWhere] = useState("");
   const [outcome, setOutcome] = useState("");
   const [budget, setBudget] = useState("");
+  const [phone, setPhone] = useState("");
+  const [based, setBased] = useState("");
+  const [leading, setLeading] = useState("");
+  const [anythingElse, setAnythingElse] = useState("");
 
   async function startEnquiry(e: React.FormEvent) {
     e.preventDefault();
@@ -115,6 +119,10 @@ export default function CustomRetreatPage() {
           where,
           outcome,
           budget,
+          phone,
+          based,
+          leading,
+          anythingElse,
         }),
       });
 
@@ -313,9 +321,17 @@ export default function CustomRetreatPage() {
         <div style={{ maxWidth: 640, margin: "0 auto" }}>
           <FadeIn>
             <p className="eyebrow-accent" style={{ marginBottom: 14, textAlign: "center" }}>tell us about it</p>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,3.6vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, textAlign: "center", marginBottom: 40 }}>
-              what are you building?
+            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,3.6vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, textAlign: "center", marginBottom: 20 }}>
+              let&apos;s start planning your retreat
             </h2>
+            <div style={{ maxWidth: 560, margin: "0 auto 40px", textAlign: "center", display: "flex", flexDirection: "column", gap: 14 }}>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.85, color: "var(--color-text-body)" }}>
+                fill this out and we&apos;ll come back to you within a day or two — it&apos;s the two of us reading it, not a team, so it takes as long as it takes.
+              </p>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.85, color: "var(--color-text-body)" }}>
+                nothing here is binding. the more you tell us about who&apos;s coming and what you want them to walk away with, the more useful our first reply will be.
+              </p>
+            </div>
           </FadeIn>
 
           <FadeIn delay={0.1}>
@@ -391,6 +407,19 @@ export default function CustomRetreatPage() {
 
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 20 }}>
                     <div style={{ display: "flex", flexDirection: "column", gap: 7, flex: "1 1 200px", minWidth: 0 }}>
+                      <label htmlFor="cr-based" style={labelStyle}>where are you based</label>
+                      <input id="cr-based" type="text" placeholder="city or country" value={based} onChange={(e) => setBased(e.target.value)} style={inputStyle} />
+                    </div>
+                    <div style={{ display: "flex", flexDirection: "column", gap: 7, flex: "1 1 200px", minWidth: 0 }}>
+                      <label htmlFor="cr-phone" style={labelStyle}>
+                        phone <span style={{ fontStyle: "italic" }}>(optional)</span>
+                      </label>
+                      <input id="cr-phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} style={inputStyle} />
+                    </div>
+                  </div>
+
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 20 }}>
+                    <div style={{ display: "flex", flexDirection: "column", gap: 7, flex: "1 1 200px", minWidth: 0 }}>
                       <label htmlFor="cr-when" style={labelStyle}>when, roughly</label>
                       <input id="cr-when" type="text" placeholder="spring 2027, or “open”" value={when} onChange={(e) => setWhen(e.target.value)} style={inputStyle} />
                     </div>
@@ -398,6 +427,17 @@ export default function CustomRetreatPage() {
                       <label htmlFor="cr-where" style={labelStyle}>where you&apos;re drawn to</label>
                       <input id="cr-where" type="text" placeholder="Morocco, Bali, open to ideas…" value={where} onChange={(e) => setWhere(e.target.value)} style={inputStyle} />
                     </div>
+                  </div>
+
+                  <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
+                    <label htmlFor="cr-leading" style={labelStyle}>who leads the week?</label>
+                    <select id="cr-leading" value={leading} onChange={(e) => setLeading(e.target.value)} style={{ ...inputStyle, minHeight: 44 }}>
+                      <option value="">choose one</option>
+                      <option value="ASHA leads everything">we want you to lead all of it</option>
+                      <option value="shared — ASHA plus our own sessions">some of it you, some of it us</option>
+                      <option value="we bring our own programming">we bring our own programming, you handle the rest</option>
+                      <option value="not sure yet">not sure yet</option>
+                    </select>
                   </div>
 
                   <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
@@ -423,6 +463,19 @@ export default function CustomRetreatPage() {
                       <option value="$4,000 – $6,000">$4,000 – $6,000</option>
                       <option value="$6,000+">$6,000+</option>
                     </select>
+                  </div>
+
+                  <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
+                    <label htmlFor="cr-else" style={labelStyle}>
+                      anything else we should know? <span style={{ fontStyle: "italic" }}>(optional)</span>
+                    </label>
+                    <textarea
+                      id="cr-else"
+                      rows={3}
+                      value={anythingElse}
+                      onChange={(e) => setAnythingElse(e.target.value)}
+                      style={{ ...inputStyle, resize: "vertical", lineHeight: 1.7 }}
+                    />
                   </div>
 
                   {error && <p role="alert" style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "#9A4A3A" }}>{error}</p>}
