@@ -19,10 +19,17 @@ export interface Clip {
   posterTime?: number;
 }
 
+const labelTones = {
+  muted: { color: "var(--color-text-muted)", fontSize: 12 },
+  dark: { color: "var(--color-text-headline)", fontSize: 12 },
+  brown: { color: "var(--color-logo-brown)", fontSize: 14 },
+} as const;
+
 export default function VideoPair({
   clips,
   headline,
   labelTone = "muted",
+  highlightHeadline = false,
   orientation = "vertical",
   background = "var(--color-bg-page)",
   padding = "80px 32px",
@@ -30,7 +37,9 @@ export default function VideoPair({
   clips: [Clip, Clip];
   headline?: string;
   /** Caption colour under each clip. */
-  labelTone?: "muted" | "dark";
+  labelTone?: keyof typeof labelTones;
+  /** Draws the journal page's highlighter band behind the headline. */
+  highlightHeadline?: boolean;
   /** "vertical" = 9:16 story clips; "horizontal" = 16:9. */
   orientation?: "vertical" | "horizontal";
   background?: string;
@@ -53,7 +62,21 @@ export default function VideoPair({
               marginBottom: 48,
             }}
           >
-            {headline}
+            {highlightHeadline ? (
+              <span
+                style={{
+                  background: "rgba(166, 124, 82, 0.35)",
+                  padding: "2px 16px 6px",
+                  display: "inline",
+                  WebkitBoxDecorationBreak: "clone",
+                  boxDecorationBreak: "clone",
+                }}
+              >
+                {headline}
+              </span>
+            ) : (
+              headline
+            )}
           </p>
         </FadeIn>
       )}
@@ -98,8 +121,7 @@ export default function VideoPair({
               <p
                 style={{
                   fontFamily: "var(--font-dm-sans)",
-                  fontSize: 12,
-                  color: labelTone === "dark" ? "var(--color-text-headline)" : "var(--color-text-muted)",
+                  ...labelTones[labelTone],
                   letterSpacing: "0.06em",
                   textTransform: "uppercase",
                   textAlign: "center",

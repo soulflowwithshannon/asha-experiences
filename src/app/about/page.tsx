@@ -227,6 +227,8 @@ export default function AboutPage() {
       {/* SECTION 1b — WHY WE CREATED ASHA */}
       <VideoPair
         headline="why we created ASHA"
+        highlightHeadline
+        labelTone="brown"
         orientation="vertical"
         clips={[
           { file: "Ashley ASHA.MOV", label: "ashley" },
