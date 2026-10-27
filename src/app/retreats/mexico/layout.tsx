@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  // Hidden while the retreat is no longer open: off the nav and out of
+  // search, but the URL stays live so existing links still resolve.
+  robots: { index: false, follow: true },
   title: "Women's Retreat Mexico 2026 — 5 Days in the Jungle",
   description: "5 days in the jungle. Yoga, sound healing, cenotes, ceremony, and women who get it. A transformational women's retreat in the Riviera Maya, Mexico — Oct 27–31, 2026. Limited spots.",
   keywords: [

@@ -6,7 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const retreats = [
-  { href: "/retreats/mexico", label: "Becoming HER — Mexico 2026" },
+  // Mexico ran Oct 27-31 2026 and is hidden; the page itself is still live.
   { href: "/retreats/morocco", label: "Sacred Sands — Morocco 2026" },
   { href: "/retreats/kenya", label: "Into the Wild — Kenya 2027" },
   { href: "/retreats/custom", label: "Customize a Retreat" },
