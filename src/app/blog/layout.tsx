@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     "women's wellness blog",
     "sound healing explained",
     "what to expect at a women's retreat",
-    "is Mexico safe for solo women",
     "signs you need a retreat",
     "women's retreat vs vacation",
     "retreat for burnt out women",

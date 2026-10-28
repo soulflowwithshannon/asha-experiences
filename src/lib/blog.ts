@@ -469,59 +469,6 @@ Who are you waiting for? And what if that permission was yours to give yourself 
     `.trim(),
   },
   {
-    slug: "is-mexico-safe-for-solo-women-travelers",
-    title: "Is Mexico safe for solo women travelers? (honest answer)",
-    description: "The safety question comes up every time. Here's an honest, practical answer — and what makes a guided group retreat a very different experience than traveling alone.",
-    date: "2026-08-05",
-    readTime: "4 min read",
-    theme: "before you go",
-    image: "/images/aesthetic plane window.jpeg",
-    body: `
-<p>It's the first question we get. And it's a fair one.</p>
-
-<p>Mexico is a big, complex country — and like any country, the answer to <em>"is it safe?"</em> depends entirely on <strong>where you're going, how you're going, and who you're with.</strong></p>
-
-<h2>The honest answer</h2>
-<p>Solo female travel in Mexico carries real considerations. Certain regions have well-documented safety concerns, and traveling alone as a woman anywhere in the world requires awareness and preparation.</p>
-
-<p><strong>The Riviera Maya — where our retreat is based — is one of the most visited regions in Mexico.</strong> It's not without caution, but it's a very different reality than the headlines that typically represent Mexico as a whole.</p>
-
-<h2>What makes a guided retreat different</h2>
-<ul>
-<li>You're <strong>not navigating alone</strong> — logistics are handled from the moment you land</li>
-<li>Transfers, accommodation, meals, and activities are all taken care of</li>
-<li>You're never finding your way around an unfamiliar place by yourself at night</li>
-<li>You're staying in a <strong>private, vetted property in the jungle</strong></li>
-<li>You're with other women and experienced facilitators who know the area</li>
-</ul>
-
-<p><em>The freedom of a retreat is that you get the experience of being somewhere extraordinary without the vulnerability of solo navigation.</em></p>
-
-<h2>Where we stay</h2>
-<p>Our Mexico retreat is held at <a href="https://www.lunitajungleretreat.com/" target="_blank" rel="noopener noreferrer">Lunita Jungle Retreat</a> in the Riviera Maya — a private property fully immersed in the jungle, with its own cenote, yoga pavilion, and casitas. You're not in a busy resort corridor or navigating city streets.</p>
-
-<h2>Practical safety tips for solo travel in Mexico</h2>
-<ul>
-<li>Use <strong>registered taxis or Uber</strong> — never unmarked cars</li>
-<li>Keep copies of your passport and documents separate from your bag</li>
-<li>Share your itinerary with someone at home</li>
-<li><em>Trust your gut — it's usually right</em></li>
-<li>Connect with other women travelers via Facebook groups or travel forums before you go</li>
-</ul>
-
-<h2>What we've seen again and again</h2>
-<p>Women who were nervous about coming to Mexico — who <em>almost talked themselves out of it</em> — are consistently the ones who say it was one of the most meaningful experiences of their lives.</p>
-
-<p><strong>Not because nothing felt unfamiliar. But because they did something that scared them a little, with the right support around them.</strong></p>
-
-<hr />
-
-<p>If you have specific questions about the area or the property, <a href="/contact">reach out</a>. We're happy to talk through it before you book.</p>
-
-<p>Our next retreats are <a href="/retreats/morocco">Sacred Sands in Morocco</a> and <a href="/retreats/kenya">Into the Wild in Kenya</a>.</p>
-    `.trim(),
-  },
-  {
     slug: "how-to-talk-to-your-partner-about-a-solo-womens-retreat",
     title: "How to talk to your partner about going on a solo women's retreat",
     description: "The retreat calls to you. Your partner isn't sure. Here's how to have the conversation — and why this decision matters more than it might seem.",
@@ -532,7 +479,7 @@ Who are you waiting for? And what if that permission was yours to give yourself 
     body: `
 <p>You've found the retreat. Something in you knows it's right. And then you think about telling your partner — and you feel yourself already bracing.</p>
 
-<p>Maybe you're anticipating pushback about the cost. Maybe about the timing. Maybe about you leaving for five days to go <em>"find yourself"</em> in Mexico, which sounds, from the outside, like something people say before they don't come back the same.</p>
+<p>Maybe you're anticipating pushback about the cost. Maybe about the timing. Maybe about you leaving for a week to go <em>"find yourself"</em> abroad, which sounds, from the outside, like something people say before they don't come back the same.</p>
 
 <p>Here's how to have that conversation.</p>
 
@@ -694,7 +641,7 @@ Who are you waiting for? And what if that permission was yours to give yourself 
 <p>After the opening comes the integrating. Day 4 is often quieter, more internal.</p>
 <ul>
 <li>Space to journal, reflect, and process what's come up</li>
-<li>A day experience — on our Mexico retreat this might be the cenotes; in Morocco, a desert excursion; in Kenya, a safari morning</li>
+<li>A day experience — in Morocco this might be a desert excursion; in Kenya, a safari morning</li>
 <li>Conversations with women who are becoming real friends</li>
 </ul>
 
@@ -769,8 +716,8 @@ Who are you waiting for? And what if that permission was yours to give yourself 
   },
   {
     slug: "which-retreat-is-right-for-you-mexico-morocco-kenya",
-    title: "Mexico, Morocco, or Kenya — how to choose the right retreat for you",
-    description: "Three very different destinations. Three very different energies. Here's how to figure out which one is actually calling you.",
+    title: "Morocco or Kenya — how to choose the right retreat for you",
+    description: "Two very different destinations. Two very different energies. Here's how to figure out which one is actually calling you.",
     date: "2026-08-03",
     readTime: "6 min read",
     theme: "before you go",
@@ -779,22 +726,6 @@ Who are you waiting for? And what if that permission was yours to give yourself 
 <p>We're often asked: which retreat should I do?</p>
 
 <p>And the honest answer is: the one that's calling you. But if that's not enough to go on, here's the breakdown.</p>
-
-<h2>Becoming HER — Mexico</h2>
-
-<img src="/images/Mexican jungle.jpeg" alt="Becoming HER — Women's Retreat Mexico" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:2px;margin-bottom:20px;" />
-
-<p><strong>The energy</strong> — lush, alive, sensory. Jungle surrounds you. Cenotes are cold and clear and ancient.</p>
-
-<p><strong>The theme</strong> — identity. Becoming who you actually are underneath the roles, the expectations, the version of yourself you built for everyone else.</p>
-
-<p><strong>You might be drawn here if:</strong></p>
-<ul>
-<li>You're in a transition or shedding a skin</li>
-<li>You feel like you've lost yourself a little</li>
-<li>You want warmth, nature, and something contained</li>
-<li>You can't take too many days away from your life right now — it's 5 days</li>
-</ul>
 
 <h2><a href="/retreats/morocco">Sacred Sands — Morocco → Nov 2026</a></h2>
 
@@ -927,82 +858,6 @@ __TESTIMONIAL_VIDEO__
 <hr />
 
 <p>Our retreats in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a> are small and intentional — never more than 14 women. If you're thinking about coming alone, <a href="/contact">reach out</a>. We'll tell you exactly what to expect.</p>
-    `.trim(),
-  },
-  {
-    slug: "what-to-pack-for-a-jungle-retreat",
-    title: "What to pack for a jungle retreat in Mexico",
-    description: "The practical packing list for Lunita — plus the things most people forget and the things they bring and never touch.",
-    date: "2026-07-15",
-    readTime: "4 min read",
-    theme: "before you go",
-    image: "/images/Mexican jungle.jpeg",
-    body: `
-<p>Packing for a retreat is different from packing for a vacation. You're not trying to look like a different version of yourself. You're trying to feel like the most comfortable, unencumbered version of yourself.</p>
-
-<p>Here's what we actually recommend for the Riviera Maya jungle in late October.</p>
-
-<h2>Clothing — keep it light</h2>
-<p>October in the Riviera Maya is warm and humid. Natural fabrics only — linen, cotton, bamboo.</p>
-<ul>
-<li>2–3 yoga or movement sets</li>
-<li>1–2 light sundresses or linen sets for evenings</li>
-<li>A lightweight long-sleeve layer (evenings cool slightly)</li>
-<li>Comfortable sandals</li>
-<li>One pair of closed-toe shoes for jungle paths</li>
-<li>A swimsuit — you will be in cenotes</li>
-</ul>
-
-<p>Leave behind → the outfits you bought hoping you'd look a certain way. You won't care by day two.</p>
-
-<h2>Toiletries</h2>
-<ul>
-<li>Reef-safe sunscreen — the cenotes require it and it matters</li>
-<li>Insect repellent</li>
-<li>Any medications you take regularly</li>
-<li>A small first aid kit</li>
-<li>Skincare basics — you don't need much, the jungle air does something to your skin</li>
-</ul>
-
-<h2>For the practices</h2>
-<ul>
-<li>A journal — non-negotiable. Bring a pen you like. You will want to write things down</li>
-<li>A yoga mat is provided at Lunita</li>
-</ul>
-
-<h2>For the cenotes</h2>
-<ul>
-<li>Water shoes — optional but nice for rocky edges</li>
-<li>A waterproof bag for your phone if you want photos</li>
-</ul>
-
-<p>Note → the cenotes are sacred spaces. We ask that you go in without perfume or strong products on your skin.</p>
-
-<h2>Technology — go lighter than you think</h2>
-<ul>
-<li>Phone for photos → yes</li>
-<li>Laptop → you probably won't want it</li>
-<li>Download offline content before you leave — the property has WiFi but it's intentionally unhurried</li>
-</ul>
-
-<h2>Things most people forget</h2>
-<ul>
-<li>A reusable water bottle — you'll go through a lot in the heat</li>
-<li>Cash in pesos for shopping or tips</li>
-<li>Electrolyte packets for the humid days</li>
-<li>A small headlamp for early mornings</li>
-</ul>
-
-<h2>Things most people bring and never use</h2>
-<ul>
-<li>Three times as many clothes as they need</li>
-<li>Books (you'll journal instead)</li>
-<li>The anxiety about fitting in — gone by day one</li>
-</ul>
-
-<hr />
-
-<p>Our next retreats are <a href="/retreats/morocco">Sacred Sands in Morocco</a> and <a href="/retreats/kenya">Into the Wild in Kenya</a>. If you have questions about what to expect on the ground, <a href="/contact">reach out</a>.</p>
     `.trim(),
   },
   {
