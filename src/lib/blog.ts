@@ -44,7 +44,7 @@ export const posts: Post[] = [
 
 <p>If more than a few of these landed — you already know.</p>
 
-<p>We run small, intimate women's retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>. Each one is designed to give you the time, the space, and the container to come back to yourself.</p>
+<p>We run small, intimate women's retreats in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a>. Each one is designed to give you the time, the space, and the container to come back to yourself.</p>
 
 <p>You don't have to have it all figured out before you go. You just have to say yes.</p>
     `.trim(),
@@ -197,7 +197,7 @@ November 28 – December 4, 2027</p>
 
 <hr />
 
-<p>Our upcoming retreats — <a href="/retreats/mexico">Becoming HER in Mexico</a>, <a href="/retreats/morocco">Sacred Sands in Morocco</a>, and <a href="/retreats/kenya">Into the Wild in Kenya</a> — are all designed with first-timers in mind. If you have questions before booking, <a href="/contact">reach out</a>. We want you to feel ready.</p>
+<p>Our upcoming retreats — <a href="/retreats/morocco">Sacred Sands in Morocco</a> and <a href="/retreats/kenya">Into the Wild in Kenya</a> — are all designed with first-timers in mind. If you have questions before booking, <a href="/contact">reach out</a>. We want you to feel ready.</p>
     `.trim(),
   },
   {
@@ -268,7 +268,7 @@ November 28 – December 4, 2027</p>
 <p><strong>Adventure retreats</strong> — combine meaningful experience (safari, hiking, cultural immersion) with inner work. The setting becomes part of the medicine.</p>
 
 <h2>What makes ASHA different</h2>
-<p>We run small, intentional retreats for women in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>. Every retreat includes:</p>
+<p>We run small, intentional retreats for women in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a>. Every retreat includes:</p>
 <ul>
 <li>Groups of 10–14 women maximum</li>
 <li>Skilled facilitation in yoga, sound healing, somatic practices, and ceremony</li>
@@ -346,7 +346,7 @@ Sit with this one. <em>"I don't know"</em> is a completely valid answer. Write i
 
 <hr />
 
-<p>Ready for more than a journaling practice? We'd love to have you with us in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, or <a href="/retreats/kenya">Kenya</a>.</p>
+<p>Ready for more than a journaling practice? We'd love to have you with us in <a href="/retreats/morocco">Morocco</a> or <a href="/retreats/kenya">Kenya</a>.</p>
     `.trim(),
   },
   {
@@ -406,7 +406,7 @@ This is the hardest one. Joy has a way of being immediately followed by guilt �
 
 <hr />
 
-<p>Ready to experience what full presence actually feels like — in one of the most extraordinary places on earth? We'd love to have you with us in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, or <a href="/retreats/kenya">Kenya</a>.</p>
+<p>Ready to experience what full presence actually feels like — in one of the most extraordinary places on earth? We'd love to have you with us in <a href="/retreats/morocco">Morocco</a> or <a href="/retreats/kenya">Kenya</a>.</p>
     `.trim(),
   },
   {
@@ -465,7 +465,7 @@ Who are you waiting for? And what if that permission was yours to give yourself 
 
 <hr />
 
-<p>Ready for more than a journaling practice? We'd love to have you with us in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, or <a href="/retreats/kenya">Kenya</a>.</p>
+<p>Ready for more than a journaling practice? We'd love to have you with us in <a href="/retreats/morocco">Morocco</a> or <a href="/retreats/kenya">Kenya</a>.</p>
     `.trim(),
   },
   {
@@ -518,7 +518,7 @@ Who are you waiting for? And what if that permission was yours to give yourself 
 
 <p>If you have specific questions about the area or the property, <a href="/contact">reach out</a>. We're happy to talk through it before you book.</p>
 
-<p>Our <a href="/retreats/mexico">Becoming HER retreat in Mexico</a> runs October 27–31, 2026. Limited spots remaining.</p>
+<p>Our next retreats are <a href="/retreats/morocco">Sacred Sands in Morocco</a> and <a href="/retreats/kenya">Into the Wild in Kenya</a>.</p>
     `.trim(),
   },
   {
@@ -572,7 +572,7 @@ Who are you waiting for? And what if that permission was yours to give yourself 
 
 <hr />
 
-<p>Whatever the conversation looks like — we're here if you have questions. Our retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a> are small, intentional, and designed for exactly the woman who almost didn't let herself come. <a href="/contact">Reach out</a> if you want to talk it through.</p>
+<p>Whatever the conversation looks like — we're here if you have questions. Our retreats in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a> are small, intentional, and designed for exactly the woman who almost didn't let herself come. <a href="/contact">Reach out</a> if you want to talk it through.</p>
     `.trim(),
   },
   {
@@ -633,7 +633,7 @@ Who are you waiting for? And what if that permission was yours to give yourself 
 
 <hr />
 
-<p>Our retreats are in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>. If you're trying to figure out which is right for you, <a href="/contact">we'd love to talk</a>.</p>
+<p>Our retreats are in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a>. If you're trying to figure out which is right for you, <a href="/contact">we'd love to talk</a>.</p>
     `.trim(),
   },
   {
@@ -717,7 +717,7 @@ Who are you waiting for? And what if that permission was yours to give yourself 
 
 <hr />
 
-<p>Our retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a> are each designed with this arc in mind — enough structure to feel held, enough space to actually land. If you want to know more about what a specific retreat looks like day by day, <a href="/contact">reach out</a>.</p>
+<p>Our retreats in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a> are each designed with this arc in mind — enough structure to feel held, enough space to actually land. If you want to know more about what a specific retreat looks like day by day, <a href="/contact">reach out</a>.</p>
     `.trim(),
   },
   {
@@ -764,7 +764,7 @@ Who are you waiting for? And what if that permission was yours to give yourself 
 
 <hr />
 
-<p>Our retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a> are priced to include as much as possible — no surprise costs when you arrive. If you have questions about what's included, <a href="/contact">we're happy to walk you through it</a>.</p>
+<p>Our retreats in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a> are priced to include as much as possible — no surprise costs when you arrive. If you have questions about what's included, <a href="/contact">we're happy to walk you through it</a>.</p>
     `.trim(),
   },
   {
@@ -780,7 +780,7 @@ Who are you waiting for? And what if that permission was yours to give yourself 
 
 <p>And the honest answer is: the one that's calling you. But if that's not enough to go on, here's the breakdown.</p>
 
-<h2><a href="/retreats/mexico">Becoming HER — Mexico → Oct 2026</a></h2>
+<h2>Becoming HER — Mexico</h2>
 
 <img src="/images/Mexican jungle.jpeg" alt="Becoming HER — Women's Retreat Mexico" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:2px;margin-bottom:20px;" />
 
@@ -886,7 +886,7 @@ __QUIZ_CTA__
 
 <hr />
 
-<p>If you recognized yourself somewhere in here, that's not a coincidence. Our retreats are in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>. We'd love to have you.</p>
+<p>If you recognized yourself somewhere in here, that's not a coincidence. Our retreats are in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a>. We'd love to have you.</p>
     `.trim(),
   },
   {
@@ -926,7 +926,7 @@ __TESTIMONIAL_VIDEO__
 
 <hr />
 
-<p>Our retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a> are small and intentional — never more than 14 women. If you're thinking about coming alone, <a href="/contact">reach out</a>. We'll tell you exactly what to expect.</p>
+<p>Our retreats in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a> are small and intentional — never more than 14 women. If you're thinking about coming alone, <a href="/contact">reach out</a>. We'll tell you exactly what to expect.</p>
     `.trim(),
   },
   {
@@ -1002,7 +1002,7 @@ __TESTIMONIAL_VIDEO__
 
 <hr />
 
-<p>Our <a href="/retreats/mexico">Becoming HER retreat in Mexico</a> runs October 27–31, 2026. If you have questions about what to expect on the ground, <a href="/contact">reach out</a>.</p>
+<p>Our next retreats are <a href="/retreats/morocco">Sacred Sands in Morocco</a> and <a href="/retreats/kenya">Into the Wild in Kenya</a>. If you have questions about what to expect on the ground, <a href="/contact">reach out</a>.</p>
     `.trim(),
   },
   {
@@ -1064,7 +1064,7 @@ __TESTIMONIAL_VIDEO__
 
 <p>You don't need to believe in it for it to work. You just have to be willing to lie down and listen.</p>
 
-<p>Sound healing is woven through all three of our retreat experiences. Our next is <a href="/retreats/mexico">Becoming HER in Mexico</a>, October 27–31, 2026.</p>
+<p>Sound healing is woven through every one of our retreat experiences. Our next is <a href="/retreats/morocco">Sacred Sands in Morocco</a>, November 29 – December 5, 2026.</p>
     `.trim(),
   },
   {
@@ -1122,7 +1122,7 @@ __TESTIMONIAL_VIDEO__
 
 <hr />
 
-<p>We think about integration as part of the retreat design itself — not an afterthought. Explore our upcoming retreats in <a href="/retreats/mexico">Mexico</a>, <a href="/retreats/morocco">Morocco</a>, and <a href="/retreats/kenya">Kenya</a>.</p>
+<p>We think about integration as part of the retreat design itself — not an afterthought. Explore our upcoming retreats in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a>.</p>
     `.trim(),
   },
 ];

@@ -58,12 +58,12 @@ const RESULTS: Record<
 > = {
   releaser: {
     title: "you are the releaser.",
-    body: "something in your life already ended, or is ending — and you're standing exactly where this retreat gets its name. becoming her was never about arriving somewhere finished. it's a ceremony for whoever you're turning into next.",
-    retreat: "Becoming HER",
-    place: "Riviera Maya, Mexico · Oct 27–31, 2026",
-    status: "4 spots left",
-    href: "/retreats/mexico",
-    image: "/images/Mexico hero.jpeg",
+    body: "something in your life already ended, or is ending — and you're standing in the space it left behind. this one is a ceremony for whoever you're turning into next, in a place quiet enough to hear it happen.",
+    retreat: "Sacred Sands",
+    place: "Agadir, Morocco · Nov 29 – Dec 5, 2026",
+    status: "spots available",
+    href: "/retreats/morocco",
+    image: "/images/morocco-hero-v2.png",
   },
   wild: {
     title: "you are the wild one.",

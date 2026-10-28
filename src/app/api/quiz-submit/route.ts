@@ -6,9 +6,9 @@ export const dynamic = "force-dynamic";
 const RESULTS: Record<string, { title: string; retreat: string; place: string; href: string }> = {
   releaser: {
     title: "the releaser",
-    retreat: "Becoming HER",
-    place: "Riviera Maya, Mexico · Oct 27–31, 2026",
-    href: "https://ashaexperiences.com/retreats/mexico",
+    retreat: "Sacred Sands",
+    place: "Agadir, Morocco · Nov 29 – Dec 5, 2026",
+    href: "https://ashaexperiences.com/retreats/morocco",
   },
   wild: {
     title: "the wild one",
