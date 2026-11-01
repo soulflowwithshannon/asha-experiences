@@ -21,6 +21,17 @@ const nextConfig: NextConfig = {
         destination: "/blog",
         permanent: true,
       },
+      /**
+       * Becoming HER ran Oct 27-31 2026. The page is kept in the repo and
+       * sent home instead, temporary rather than permanent: a permanent
+       * redirect is cached by browsers for good, which would fight us if
+       * Mexico comes back on the calendar.
+       */
+      {
+        source: "/retreats/mexico",
+        destination: "/",
+        permanent: false,
+      },
     ];
   },
 };
