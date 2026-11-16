@@ -33,8 +33,8 @@ const pools: { label: string; shots: { src: string; alt: string; pos?: string }[
   {
     label: "the women",
     shots: [
-      { src: "/images/group hug.jpg", alt: "Women laughing in a group hug on retreat", pos: "center 30%" },
-      { src: "/images/group arm raise.jpg", alt: "Women with hands joined and raised", pos: "center 36%" },
+      { src: "/images/group hug 2.jpg", alt: "Women embracing on retreat" },
+      { src: "/images/ReturnToLove girls group.jpg", alt: "The group together on retreat" },
       { src: "/images/ReturnToLove group hug.jpg", alt: "A group hug on retreat" },
       { src: "/images/Kimberley and Ashley hug.jpg", alt: "Two women embracing on retreat" },
     ],

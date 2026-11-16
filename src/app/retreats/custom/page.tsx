@@ -232,40 +232,44 @@ export default function CustomRetreatPage() {
                   style={{
                     height: "100%",
                     boxSizing: "border-box",
+                    display: "flex",
+                    flexDirection: "column",
                     background: "var(--color-bg-page)",
                     border: "0.5px solid var(--color-border)",
                     borderRadius: 4,
                     padding: "28px 28px 26px",
                   }}
                 >
-                  <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 12 }}>
-                    <span
-                      style={{
-                        fontFamily: "var(--font-cormorant)",
-                        fontSize: 15,
-                        letterSpacing: "0.06em",
-                        color: "var(--color-accent)",
-                        flexShrink: 0,
-                      }}
-                    >
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 19, color: "var(--color-text-headline)", fontWeight: 700, lineHeight: 1.3, textWrap: "balance" }}>
-                      {item.title}
-                    </h3>
-                  </div>
+                  {/* the numeral sits above the title: as a baseline-aligned
+                      sibling, Cormorant against Fraunces never lined up */}
+                  <span
+                    style={{
+                      fontFamily: "var(--font-dm-sans)",
+                      fontSize: 11,
+                      letterSpacing: "0.16em",
+                      color: "var(--color-accent)",
+                      display: "block",
+                      marginBottom: 10,
+                    }}
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
 
-                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.5, color: "var(--color-text-body)", marginBottom: 18 }}>
+                  <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 20, color: "var(--color-text-headline)", fontWeight: 700, lineHeight: 1.25, marginBottom: 12, textWrap: "balance" }}>
+                    {item.title}
+                  </h3>
+
+                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.7, color: "var(--color-text-body)", marginBottom: 20, textWrap: "balance" }}>
                     {item.lead}
                   </p>
 
-                  <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 9, borderTop: "0.5px solid var(--color-border)", paddingTop: 16 }}>
+                  <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 10, borderTop: "0.5px solid var(--color-border)", paddingTop: 16, marginTop: "auto" }}>
                     {item.points.map((point) => (
                       <li key={point} style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
                         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" strokeWidth="2.2" style={{ flexShrink: 0, marginTop: 4 }} aria-hidden="true">
                           <path d="M4 12.5l5.5 5.5L20 6.5" />
                         </svg>
-                        <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13.5, lineHeight: 1.45, color: "var(--color-text-body)" }}>
+                        <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13.5, lineHeight: 1.6, color: "var(--color-text-body)" }}>
                           {point}
                         </span>
                       </li>
