@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useRef, useState, ReactNode } from "react";
 import FadeIn from "@/components/FadeIn";
+import CallHerHome from "@/components/CallHerHome";
 import Testimonials, { retreatQuotes } from "@/components/Testimonials";
 import VideoPair from "@/components/VideoPair";
 import HowItWorks from "@/components/HowItWorks";
@@ -119,27 +120,6 @@ function DaysGrid() {
           </AnimatePresence>
         </div>
       ))}
-      </div>
-    </div>
-  );
-}
-
-function ExpandableCard({ img, title, body }: { img: string; title: string; body: ReactNode }) {
-  const [expanded, setExpanded] = useState(false);
-  return (
-    <div style={{ background: "var(--color-bg-page)", border: "0.5px solid var(--color-border)", borderRadius: 10, overflow: "hidden", display: "flex", flexDirection: "column", height: "100%" }}>
-      <div style={{ position: "relative", aspectRatio: "4/3", flexShrink: 0, overflow: "hidden" }}>
-        <Image src={img} alt={title} fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="(max-width: 768px) 100vw, 50vw" />
-      </div>
-      <div style={{ padding: "20px 24px 24px", textAlign: "center", display: "flex", flexDirection: "column", flex: 1 }}>
-        <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 21, fontWeight: 600, color: "var(--color-text-headline)", marginBottom: 12 }}>{title}</p>
-        <p style={{
-          fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.8,
-          display: "-webkit-box", WebkitLineClamp: expanded ? "unset" : 4, WebkitBoxOrient: "vertical" as const, overflow: expanded ? "visible" : "hidden",
-        }}>{body}</p>
-        <button onClick={() => setExpanded(!expanded)} style={{ marginTop: 8, background: "none", border: "none", cursor: "pointer", fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", letterSpacing: "0.03em", padding: 0, alignSelf: "center" }}>
-          {expanded ? "read less →" : "read more →"}
-        </button>
       </div>
     </div>
   );
@@ -493,80 +473,65 @@ export default function KenyaPage() {
       </section>
 
       {/* SECTION 2b — HOW WE CALL HER HOME */}
-      <section style={{ background: "var(--color-bg-surface)", padding: "80px 32px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", fontWeight: 700, color: "var(--color-text-headline)", textAlign: "center", marginBottom: 64 }}>
-              how do we<span className="mobile-break"> </span>call her home?
-            </h2>
-          </FadeIn>
-
-          {/* Row 1 — 2 cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12, alignItems: "stretch" }} className="cards-row">
-            {[
-              {
-                img: "/images/5.png",
-                title: "step into your body, fully",
-                body: <>through yoga, somatic practice, and movement<br />that wakes up what went quiet.<br /><br />your body knows how to feel alive —<br />it just needs permission and space</>,
-              },
-              {
-                img: "/images/Tanzania.jpeg",
-                title: "let the land be your mirror",
-                body: <>sunrise safari drives through open plains.<br />golden hour with lion trackers who&apos;ve walked<br />this land their whole lives.<br /><br /><em>wildlife that doesn&apos;t perform or pretend —<br />it just exists, fully, without apology.</em><br /><br />something about watching that<br />makes you want to do the same.</>,
-              },
-            ].map((card, i) => (
-              <FadeIn key={i} delay={i * 0.1}>
-                <ExpandableCard img={card.img} title={card.title} body={card.body} />
-              </FadeIn>
-            ))}
-          </div>
-
-          {/* Row 2 — solo dark card */}
-          <FadeIn delay={0.1}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", borderRadius: 10, overflow: "hidden", marginBottom: 12, background: "#2D2521" }} className="solo-card">
-              <div style={{ position: "relative", minHeight: 340 }}>
-                <Image src="/images/baskets and weavers.jpg" alt="Baskets and weavers" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="33vw" />
-              </div>
-              <div style={{ padding: 40, display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center" }}>
-                <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 23, fontWeight: 600, color: "#F1F0E5", marginBottom: 16 }}>be part of something that matters</p>
-                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "#C5AA9B", lineHeight: 1.8 }}>
-                  a visit to the northern white rhino sanctuary —<br />
-                  the only two left on earth, with conservation efforts to bring the population back.<br /><br />
-                  a morning with spinners and weavers,<br />
-                  to give back to a special women&apos;s cooperative.<br /><br />
-                  standing beside that kind of resilience<br />
-                  does something to you.
-                </p>
-              </div>
-              <div style={{ position: "relative", minHeight: 340 }}>
-                <Image src="/images/rhino conservation.jpg" alt="Rhino conservation" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="33vw" />
-              </div>
-            </div>
-          </FadeIn>
-
-          {/* Row 3 — 2 cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, alignItems: "stretch" }} className="cards-row">
-            {[
-              {
-                img: "/images/ReturnToLove circle.jpg",
-                title: "go underneath the surface",
-                body: <>sound healing and reiki.<br />women&apos;s circles held under open sky.<br />ceremony that reaches the layer<br />the everyday world never touches.<br /><br />making space for the part of you that&apos;s been waiting<br />to finally be seen and heard.</>,
-              },
-              {
-                img: "/images/women laying down.jpeg",
-                title: "let yourself be found by each other",
-                body: <>you will arrive not knowing anyone.<br />by day three, these women will know things<br />about you that your oldest friends don&apos;t.<br /><br /><em>that&apos;s not an accident.</em><br />that&apos;s what happens when you take<br />the performance away<br />and <strong>just let yourself be seen.</strong><br /><br />in a place this wild,<br /><em>it happens faster than you&apos;d think.</em></>,
-              },
-            ].map((card, i) => (
-              <FadeIn key={i} delay={i * 0.1}>
-                <ExpandableCard img={card.img} title={card.title} body={card.body} />
-              </FadeIn>
-            ))}
-          </div>
-
-        </div>
-        <style>{`@media(max-width:640px){.testimonial-break{display:block}}@media(max-width:768px){.cards-row{grid-template-columns:1fr!important}.solo-card{grid-template-columns:1fr!important}.mobile-break{display:block}.kenya-hero-break{display:block}}`}</style>
-      </section>
+      <CallHerHome
+        intro={
+          <>
+            movement, open sky, ceremony, and the kind of land that puts everything back in
+            proportion.
+          </>
+        }
+        steps={[
+          {
+            img: "/images/5.png",
+            title: "step into your body, fully",
+            body: (
+              <>
+                through yoga, somatic practice, and movement that wakes up what went quiet. your
+                body knows how to feel alive — it just needs permission and space.
+              </>
+            ),
+            practices: "yoga with the plains in view · somatic practice · daily movement",
+          },
+          {
+            img: "/images/kenya-yoga-zebras.JPG",
+            title: "let the land be your mirror",
+            body: (
+              <>
+                sunrise safari drives through open plains. golden hour with lion trackers
+                who&apos;ve walked this land their whole lives. <em>wildlife that doesn&apos;t
+                perform or pretend — it just exists, fully, without apology.</em> something about
+                watching that makes you want to do the same.
+              </>
+            ),
+            practices: "sunrise game drives · lion trackers · golden hour · open plains",
+          },
+          {
+            img: "/images/ReturnToLove circle.jpg",
+            title: "go underneath the surface",
+            body: (
+              <>
+                sound healing and reiki. women&apos;s circles held under open sky. ceremony that
+                reaches the layer the everyday world never touches — making space for the part of
+                you that&apos;s been waiting to be seen and heard.
+              </>
+            ),
+            practices: "sound healing · reiki · circles under open sky · ceremony",
+          },
+          {
+            img: "/images/group hug.jpg",
+            title: "let yourself be found by each other",
+            body: (
+              <>
+                you will arrive not knowing anyone. by day three, these women will know things
+                about you that your oldest friends don&apos;t. <em>that&apos;s not an accident.</em>{" "}
+                that&apos;s what happens when you take the performance away and{" "}
+                <strong>just let yourself be seen.</strong>
+              </>
+            ),
+            practices: "shared tents · long dinners · fireside · ten women, no more",
+          },
+        ]}
+      />
 
       {/* SECTION 3b — WILDLIFE MOSAIC */}
       <section style={{ background: "#1E1612", padding: "64px 32px" }}>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useRef, useState, ReactNode } from "react";
 import FadeIn from "@/components/FadeIn";
+import CallHerHome from "@/components/CallHerHome";
 import Testimonials, { retreatQuotes } from "@/components/Testimonials";
 import VideoPair from "@/components/VideoPair";
 import HowItWorks from "@/components/HowItWorks";
@@ -428,140 +429,63 @@ export default function MoroccoPage() {
       </section>
 
       {/* SECTION 2b — HOW WE CALL HER HOME */}
-      <section style={{ background: "var(--color-bg-surface)", padding: "80px 32px 48px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", fontWeight: 700, color: "var(--color-text-headline)", textAlign: "center", marginBottom: 24 }}>
-              how do we<span className="morocco-home-break"> </span>call her home?
-            </h2>
-            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, color: "var(--color-text-body)", textAlign: "center", maxWidth: 640, margin: "0 auto 64px", lineHeight: 1.8 }}>
-              We guide you through somatic practices, sacred circles, grounded rituals, and cultural experiences that help you rebuild self-worth from the inside out.
-            </p>
-          </FadeIn>
-
-          {/* Row 1 — 2 light cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12, alignItems: "stretch" }} className="cards-row">
-            {[
-              {
-                img: "/images/Morocco yoga.png",
-                title: "come back to your body",
-                body: <>gentle movement, somatic practices, and sound healing to release tension, numbness, and that <em>&ldquo;I&apos;m holding it all together&rdquo;</em> tightness you&apos;ve been living in.</>,
-              },
-              {
-                img: "/images/Morocco candles.jpeg",
-                imgPosition: "center 90%",
-                title: "rebuild self-worth from the inside out",
-                body: <>not a pep talk. real rewiring. the kind that shifts the old stories of <em>&ldquo;I have to prove myself&rdquo;</em> into something <em>steady, calm, and true.</em></>,
-              },
-            ].map((card, i) => (
-              <FadeIn key={i} delay={i * 0.1} style={{ height: "100%" }}>
-                <div style={{ background: "var(--color-bg-page)", border: "0.5px solid var(--color-border)", borderRadius: 10, overflow: "hidden", display: "flex", flexDirection: "column", height: "100%" }}>
-                  <div style={{ width: "100%", aspectRatio: "4/3", position: "relative", overflow: "hidden", flexShrink: 0 }}>
-                    <Image src={card.img} alt={card.title} fill style={{ objectFit: "cover", objectPosition: card.imgPosition ?? "center" }} sizes="(max-width: 768px) 100vw, 50vw" />
-                  </div>
-                  <div style={{ padding: "20px 24px 28px", textAlign: "center", flex: 1 }}>
-                    <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 18, color: "var(--color-text-headline)", marginBottom: 10 }}>{card.title}</p>
-                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.8 }}>{card.body}</p>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-
-          {/* Row 2 — 2 dark cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12, alignItems: "stretch" }} className="cards-row">
-            {[
-              {
-                img: "/images/Morocco circle.jpeg",
-                title: "remember your beauty without performing",
-                body: <>beauty as presence. beauty as being at ease in your own skin. beauty as <em>&ldquo;I don&apos;t need to be chosen — I choose myself.&rdquo;</em></>,
-              },
-              {
-                img: "/images/sound healing.jpg",
-                imgPosition: "center 70%",
-                title: "heal the patterns that keep you small",
-                body: <>the people-pleasing. the overthinking. the settling. the <em>&ldquo;maybe I&apos;m asking for too much.&rdquo;</em> we meet it with compassion… and we don&apos;t let it run the show anymore.</>,
-              },
-            ].map((card, i) => (
-              <FadeIn key={i} delay={i * 0.1} style={{ height: "100%" }}>
-                <div style={{ background: "#2D2521", borderRadius: 10, overflow: "hidden", display: "flex", flexDirection: "column", height: "100%" }}>
-                  <div style={{ width: "100%", aspectRatio: "4/3", position: "relative", overflow: "hidden", flexShrink: 0 }}>
-                    <Image src={card.img} alt={card.title} fill style={{ objectFit: "cover", objectPosition: card.imgPosition ?? "center" }} sizes="(max-width: 768px) 100vw, 50vw" />
-                  </div>
-                  <div style={{ padding: "20px 24px 28px", textAlign: "center", flex: 1 }}>
-                    <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 20, color: "#F1F0E5", marginBottom: 16 }}>{card.title}</p>
-                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "#C5AA9B", lineHeight: 1.8 }}>{card.body}</p>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-
-          {/* Row 3 — 2 light cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, alignItems: "stretch" }} className="cards-row">
-            {[
-              {
-                img: "/images/Morocco sunset.jpeg",
-                title: "let yourself be held by sisterhood",
-                body: <>honest circles. deep laughter. tears that don&apos;t need explaining. the kind of connection that makes you exhale because <strong>you&apos;re not doing life alone.</strong></>,
-              },
-              {
-                img: "/images/Milky Way Over Ait Benhaddou Village, Morocco.jpeg",
-                imgPosition: "center 70%",
-                title: "return to what's real",
-                body: <>quiet. sun on skin. feet on sand. a slower rhythm that helps you hear your own inner voice again.</>,
-              },
-            ].map((card, i) => (
-              <FadeIn key={i} delay={i * 0.1} style={{ height: "100%" }}>
-                <div style={{ background: "var(--color-bg-page)", border: "0.5px solid var(--color-border)", borderRadius: 10, overflow: "hidden", display: "flex", flexDirection: "column", height: "100%" }}>
-                  <div style={{ width: "100%", aspectRatio: "4/3", position: "relative", overflow: "hidden", flexShrink: 0 }}>
-                    <Image src={card.img} alt={card.title} fill style={{ objectFit: "cover", objectPosition: card.imgPosition ?? "center" }} sizes="(max-width: 768px) 100vw, 50vw" />
-                  </div>
-                  <div style={{ padding: "20px 24px 28px", textAlign: "center", flex: 1 }}>
-                    <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 18, color: "var(--color-text-headline)", marginBottom: 10 }}>{card.title}</p>
-                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.8 }}>{card.body}</p>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-
-          <FadeIn delay={0.15}>
-            <div style={{ maxWidth: 560, margin: "80px auto 0", textAlign: "center", fontFamily: "var(--font-dm-sans)", fontSize: 16, color: "var(--color-text-body)", lineHeight: 1.9, display: "flex", flexDirection: "column", gap: 20 }}>
-              <p>
-                <em>by the end of Sacred Sands, you won&apos;t just understand self-worth.</em>
-              </p>
-              <p>
-                <strong>you&apos;ll feel it.</strong>
-              </p>
-              <p>
-                in how you take up space.<br />
-                in how you rest.<br />
-                in how you speak.<br />
-                in what you no longer tolerate.<br />
-                in how you look in the mirror and recognize yourself again.
-              </p>
-              <p>
-                the goal isn&apos;t to become someone new.
-              </p>
-              <p>
-                <em>it&apos;s to remember who you are.</em>
-              </p>
-              <p>
-                <strong>and to leave with a body that believes it.</strong>
-              </p>
-            </div>
-          </FadeIn>
-          <FadeIn delay={0.2}>
-            <div style={{ display: "flex", alignItems: "center", gap: 12, margin: "40px 0 0" }}>
-              <div style={{ flex: 1, height: "0.5px", background: "var(--color-border)" }} />
-              <span style={{ color: "var(--color-accent)", fontSize: 14 }}>✦</span>
-              <div style={{ flex: 1, height: "0.5px", background: "var(--color-border)" }} />
-            </div>
-          </FadeIn>
-        </div>
-        <style>{`@media(max-width:640px){.morocco-home-break{display:block}}@media(max-width:768px){.cards-row{grid-template-columns:1fr!important}.solo-card{grid-template-columns:1fr!important}}`}</style>
-      </section>
+      <CallHerHome
+        intro={
+          <>
+            somatic practices, sacred circles, grounded rituals, and cultural experiences that
+            rebuild self-worth from the inside out.
+          </>
+        }
+        steps={[
+          {
+            img: "/images/Morocco yoga.png",
+            title: "come back to your body",
+            body: (
+              <>
+                gentle movement, somatic practices, and sound healing to release tension, numbness,
+                and that <em>&ldquo;I&apos;m holding it all together&rdquo;</em> tightness you&apos;ve
+                been living in.
+              </>
+            ),
+            practices: "sunrise yoga · somatic release · sound healing · breathwork",
+          },
+          {
+            img: "/images/Morocco candles.jpeg",
+            imgPosition: "center 90%",
+            title: "rebuild self-worth from the inside out",
+            body: (
+              <>
+                not a pep talk. real rewiring. we meet the people-pleasing, the overthinking, the
+                settling, the <em>&ldquo;maybe I&apos;m asking for too much&rdquo;</em> — and we stop
+                letting them run the show. beauty as presence, not performance.
+              </>
+            ),
+            practices: "guided inner work · shadow practice · candlelit ceremony · journaling",
+          },
+          {
+            img: "/images/Morocco circle.jpeg",
+            title: "let yourself be held by sisterhood",
+            body: (
+              <>
+                honest circles. deep laughter. tears that don&apos;t need explaining. the kind of
+                connection that makes you exhale because <strong>you&apos;re not doing life alone.</strong>
+              </>
+            ),
+            practices: "women’s circles · shared meals · long tables · no small talk",
+          },
+          {
+            img: "/images/Morocco sunset.jpeg",
+            title: "return to what’s real",
+            body: (
+              <>
+                quiet. sun on skin. feet on sand. a slower rhythm that helps you hear your own inner
+                voice again.
+              </>
+            ),
+            practices: "desert hours · medina wandering · stargazing · unhurried mornings",
+          },
+        ]}
+      />
 
       {/* SECTION 3 — THE LOCATION */}
       <section style={{ background: "var(--color-bg-surface)", padding: "80px 48px" }}>

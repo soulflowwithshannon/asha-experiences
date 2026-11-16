@@ -8,6 +8,7 @@ import FadeIn from "@/components/FadeIn";
 import VideoPair from "@/components/VideoPair";
 import DestinationRequest from "@/components/DestinationRequest";
 import QuietNote from "@/components/QuietNote";
+import RetreatGallery from "@/components/RetreatGallery";
 import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/AnimatedText";
 
 function ParallaxHero() {
@@ -156,6 +157,21 @@ export default function HomePage() {
             </StaggerChild>
           </StaggerBlock>
 
+          {/* two frames between the copy and the pillars, so the block is not
+              one long unbroken stretch of text */}
+          <FadeIn delay={0.15}>
+            <div className="intro-pair" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, margin: "0 auto 52px" }}>
+              {[
+                { src: "/images/Ashley and I hug.jpg", alt: "Ashley and Shannon on retreat", pos: "center 30%" },
+                { src: "/images/Bre ceremony.jpg", alt: "A woman in ceremony on retreat", pos: "center 28%" },
+              ].map((shot) => (
+                <div key={shot.src} style={{ position: "relative", aspectRatio: "4/5", borderRadius: 2, overflow: "hidden", background: "var(--color-bg-card)" }}>
+                  <Image src={shot.src} alt={shot.alt} fill sizes="(max-width: 640px) 50vw, 300px" style={{ objectFit: "cover", objectPosition: shot.pos }} />
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "nowrap" }} className="values-row">
             {[
               { label: "Intentional", caption: "every detail curated with purpose" },
@@ -249,6 +265,9 @@ export default function HomePage() {
         </div>
         <style>{`@media(max-width:640px){.pillars-grid{grid-template-columns:1fr!important}}`}</style>
       </section>
+
+      {/* SECTION 3a — FROM OUR RETREATS */}
+      <RetreatGallery />
 
       {/* SECTION 3b — MOMENTS FROM RETREAT (two story-format videos) */}
       <VideoPair

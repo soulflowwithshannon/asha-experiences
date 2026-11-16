@@ -278,6 +278,24 @@ export default function CustomRetreatPage() {
         <style>{`@media(max-width:760px){.included-grid{grid-template-columns:1fr!important}}`}</style>
       </section>
 
+      {/* PROOF — the page was 2,900px of text with one photo on it */}
+      <section style={{ position: "relative", height: "clamp(320px,46vw,520px)", overflow: "hidden" }}>
+        <Image
+          src="/images/group hug.jpg"
+          alt="Women laughing together on an ASHA retreat"
+          fill
+          sizes="100vw"
+          style={{ objectFit: "cover", objectPosition: "center 32%" }}
+        />
+        <div style={{ position: "absolute", inset: 0, background: "rgba(45,37,33,0.32)" }} />
+        <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "flex-end", padding: "0 32px 40px" }}>
+          <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(20px,3vw,30px)", color: "#F1F0E5", maxWidth: 620, margin: "0 auto", textAlign: "center", lineHeight: 1.35, textWrap: "balance" }}>
+            we have run this week for strangers who left as family. we can run it for the women you
+            already love.
+          </p>
+        </div>
+      </section>
+
       {/* WHO IT'S FOR */}
       <section style={{ background: "var(--color-bg-page)", padding: "84px 32px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
@@ -326,6 +344,29 @@ export default function CustomRetreatPage() {
             .who-bubbles p { text-align: center; }
           }
         `}</style>
+
+        <div className="custom-strip" style={{ maxWidth: 1080, margin: "56px auto 0" }}>
+          {[
+            { src: "/images/Shannon stretch.jpg", alt: "Morning movement on retreat" },
+            { src: "/images/Rebecca fire.jpg", alt: "A fire ceremony on retreat" },
+            { src: "/images/Kimberley and Ashley hug.jpg", alt: "Two women embracing on retreat" },
+          ].map((shot, i) => (
+            <FadeIn key={shot.src} delay={i * 0.08}>
+              <div style={{ position: "relative", aspectRatio: "3/4", borderRadius: 2, overflow: "hidden", background: "var(--color-bg-card)" }}>
+                <Image src={shot.src} alt={shot.alt} fill sizes="(max-width: 760px) 50vw, 33vw" style={{ objectFit: "cover" }} />
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+        <style>{`
+          .custom-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+          @media (max-width: 760px) {
+            /* the third would sit alone on a phone, so it carries the full width */
+            .custom-strip { grid-template-columns: 1fr 1fr; gap: 8px; }
+            .custom-strip > *:last-child { grid-column: span 2; }
+            .custom-strip > *:last-child > div { aspect-ratio: 16/9 !important; }
+          }
+        `}</style>
       </section>
 
       {/* THE FORM */}
@@ -336,6 +377,18 @@ export default function CustomRetreatPage() {
             <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,3.6vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, textAlign: "center", marginBottom: 40, textWrap: "balance" }}>
               let&apos;s start planning your retreat
             </h2>
+          </FadeIn>
+
+          <FadeIn delay={0.05}>
+            <div style={{ position: "relative", aspectRatio: "16/7", borderRadius: 2, overflow: "hidden", marginBottom: 36, background: "var(--color-bg-card)" }}>
+              <Image
+                src="/images/group arm raise.jpg"
+                alt="Women with hands joined and raised on retreat"
+                fill
+                sizes="(max-width: 700px) 100vw, 640px"
+                style={{ objectFit: "cover", objectPosition: "center 38%" }}
+              />
+            </div>
           </FadeIn>
 
           <FadeIn delay={0.1}>
