@@ -330,28 +330,6 @@ export default function HomePage() {
       {/* SECTION 4b — WHERE SHOULD WE GO NEXT */}
       <DestinationRequest />
 
-      {/* SECTION 6 — GALLERY STRIP */}
-      <section style={{ background: "var(--color-bg-page)", padding: "80px 0", overflow: "hidden" }}>
-        <FadeIn>
-          <div style={{ display: "flex", gap: 16, overflowX: "auto", padding: "0 32px", scrollbarWidth: "none" }}>
-            {[
-              { src: "/images/Return to Love Waterfall.jpg", alt: "Return to Love waterfall", w: 300 },
-              { src: "/images/ReturnToLove group hug.jpg", alt: "Return to Love group hug", w: 460 },
-              { src: "/images/ReturnToLove bracelets.jpg", alt: "Return to Love bracelets", w: 340 },
-              { src: "/images/ReturnToLove25-357.jpg", alt: "Return to Love", w: 480 },
-              { src: "/images/ReturnToLove yogajpg.jpg", alt: "Return to Love yoga", w: 360 },
-              { src: "/images/ReturnToLove25-401.jpg", alt: "Return to Love", w: 440 },
-              { src: "/images/ReturnToLove25-396.jpg", alt: "Return to Love", w: 380 },
-            ].map((photo, i) => (
-              <div key={i} style={{ flexShrink: 0, width: photo.w, height: 360, borderRadius: 4, overflow: "hidden", position: "relative" }}>
-                <Image src={photo.src} alt={photo.alt} fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="500px" />
-              </div>
-            ))}
-          </div>
-        </FadeIn>
-      </section>
-
-
       {/* SECTION 8 — CLOSING CTA */}
       <section style={{ position: "relative", padding: "180px 32px", background: "#2D2521", textAlign: "center", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0 }}>

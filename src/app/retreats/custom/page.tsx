@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import posthog from "posthog-js";
 import FadeIn from "@/components/FadeIn";
+import RotatingTrio from "@/components/RotatingTrio";
 
 const CALENDAR_URL = "https://calendar.app.google/Yt1VUQGEuhhEipt59";
 
@@ -345,28 +346,7 @@ export default function CustomRetreatPage() {
           }
         `}</style>
 
-        <div className="custom-strip" style={{ maxWidth: 1080, margin: "56px auto 0" }}>
-          {[
-            { src: "/images/Shannon stretch.jpg", alt: "Morning movement on retreat" },
-            { src: "/images/Rebecca fire.jpg", alt: "A fire ceremony on retreat" },
-            { src: "/images/Kimberley and Ashley hug.jpg", alt: "Two women embracing on retreat" },
-          ].map((shot, i) => (
-            <FadeIn key={shot.src} delay={i * 0.08}>
-              <div style={{ position: "relative", aspectRatio: "3/4", borderRadius: 2, overflow: "hidden", background: "var(--color-bg-card)" }}>
-                <Image src={shot.src} alt={shot.alt} fill sizes="(max-width: 760px) 50vw, 33vw" style={{ objectFit: "cover" }} />
-              </div>
-            </FadeIn>
-          ))}
-        </div>
-        <style>{`
-          .custom-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-          @media (max-width: 760px) {
-            /* the third would sit alone on a phone, so it carries the full width */
-            .custom-strip { grid-template-columns: 1fr 1fr; gap: 8px; }
-            .custom-strip > *:last-child { grid-column: span 2; }
-            .custom-strip > *:last-child > div { aspect-ratio: 16/9 !important; }
-          }
-        `}</style>
+        <RotatingTrio />
       </section>
 
       {/* THE FORM */}

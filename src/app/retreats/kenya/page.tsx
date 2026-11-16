@@ -493,7 +493,7 @@ export default function KenyaPage() {
             practices: "yoga with the plains in view · somatic practice · daily movement",
           },
           {
-            img: "/images/kenya-yoga-zebras.JPG",
+            img: "/images/Tanzania.jpeg",
             title: "let the land be your mirror",
             body: (
               <>
