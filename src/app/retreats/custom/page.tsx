@@ -225,7 +225,7 @@ export default function CustomRetreatPage() {
               <h2
                 style={{
                   fontFamily: "var(--font-fraunces)",
-                  fontSize: "clamp(22px,2.7vw,28px)",
+                  fontSize: "clamp(18px,2vw,22px)",
                   color: "#F1F0E5",
                   fontWeight: 700,
                   lineHeight: 1.2,
