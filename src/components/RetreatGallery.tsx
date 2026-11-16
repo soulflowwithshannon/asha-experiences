@@ -11,30 +11,36 @@ import FadeIn from "@/components/FadeIn";
  * moves across it instead of reading it as a contact sheet.
  *
  * The grid is 6 columns; a wide tile spans 4 and a square 2. Keep each run a
- * multiple of 6 or rows come out ragged. The first ten are 24 units (four
- * rows) and the remaining seven are 18 (three more), so both the collapsed and
- * the expanded state tile cleanly.
+ * multiple of 6 or rows come out ragged. The first ten are 24 units and the
+ * remaining eleven are another 24, so both the collapsed and the expanded
+ * state tile into full rows. New photos are interleaved rather than appended,
+ * so the two shoots read as one body of work.
  */
 const shots = [
   { src: "/images/group hug.jpg", alt: "Women laughing in a group hug on retreat" },
-  { src: "/images/Rebecca fire.jpg", alt: "A fire ceremony on retreat", wide: true },
-  { src: "/images/Shannon stretch.jpg", alt: "Morning movement on retreat" },
-  { src: "/images/group at the moon.jpg", alt: "Women together at the moon sculpture in the jungle" },
-  { src: "/images/Kimberley in prayer.jpg", alt: "A quiet moment in ceremony" },
   { src: "/images/ReturnToLove bracelets.jpg", alt: "Bracelets made on retreat", wide: true },
-  { src: "/images/planting ceremony.jpg", alt: "A planting ceremony on retreat" },
-  { src: "/images/group arm raise.jpg", alt: "Women with hands joined and raised in the jungle" },
-  { src: "/images/Ashley ceremony.jpg", alt: "Ashley holding ceremony on retreat" },
-  { src: "/images/group hug 2.jpg", alt: "Women embracing on retreat" },
-  // ── everything below appears only once the gallery is opened ──
+  { src: "/images/Shannon stretch.jpg", alt: "Morning movement on retreat" },
+  { src: "/images/ReturnToLove girls group.jpg", alt: "The group together on retreat" },
+  { src: "/images/Kimberley in prayer.jpg", alt: "A quiet moment in ceremony" },
   { src: "/images/ReturnToLove25-357.jpg", alt: "Women together on retreat", wide: true },
+  { src: "/images/planting ceremony.jpg", alt: "A planting ceremony on retreat" },
+  { src: "/images/Return to Love group sunset.jpg", alt: "The group at sunset on retreat" },
+  { src: "/images/group arm raise.jpg", alt: "Women with hands joined and raised in the jungle" },
+  { src: "/images/ReturnToLove circle.jpg", alt: "A women's circle on retreat" },
+  // ── everything below appears only once the gallery is opened ──
+  { src: "/images/Rebecca fire.jpg", alt: "A fire ceremony on retreat", wide: true },
   { src: "/images/ReturnToLove group hug.jpg", alt: "A group hug on retreat" },
-  { src: "/images/Return to Love Waterfall.jpg", alt: "A waterfall on retreat" },
+  { src: "/images/Ashley ceremony.jpg", alt: "Ashley holding ceremony on retreat" },
   { src: "/images/ReturnToLove yogajpg.jpg", alt: "Yoga on retreat" },
+  { src: "/images/group at the moon.jpg", alt: "Women together at the moon sculpture in the jungle" },
+  { src: "/images/ReturnToLove25-401.jpg", alt: "Women on retreat" },
+  { src: "/images/group hug 2.jpg", alt: "Women embracing on retreat" },
+  { src: "/images/Return to Love Waterfall.jpg", alt: "A waterfall on retreat" },
   { src: "/images/Kimberley and Ashley hug.jpg", alt: "Two women embracing on retreat" },
-  { src: "/images/ReturnToLove25-401.jpg", alt: "Women on retreat", wide: true },
   { src: "/images/ReturnToLove25-396.jpg", alt: "A moment on retreat" },
+  { src: "/images/ReturnToLove girls group 2.jpg", alt: "The group together on retreat" },
 ];
+
 
 const COLLAPSED = 10;
 
@@ -46,9 +52,6 @@ export default function RetreatGallery() {
     <section style={{ background: "var(--color-bg-page)", padding: "88px 32px 96px" }}>
       <div style={{ maxWidth: 1240, margin: "0 auto" }}>
         <FadeIn>
-          <p className="eyebrow-accent" style={{ textAlign: "center", marginBottom: 14 }}>
-            from our retreats
-          </p>
           <h2
             style={{
               fontFamily: "var(--font-fraunces)",
@@ -60,7 +63,7 @@ export default function RetreatGallery() {
               textWrap: "balance",
             }}
           >
-            not stock photos. these are the women who came.
+            from our retreats
           </h2>
         </FadeIn>
 
