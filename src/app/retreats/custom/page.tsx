@@ -202,21 +202,31 @@ export default function CustomRetreatPage() {
       </section>
 
       {/* WHAT'S INCLUDED */}
-      {/* An editorial list, not a grid of bordered cards: six boxes of
-          identical shape read as box soup, and a card that stretches to match
-          its row partner trails dead space. Rows here size to their own
-          content, and the points run inline the way the retreat pages set
-          their practices out. */}
-      <section style={{ background: "var(--color-bg-surface)", padding: "88px 32px 96px" }}>
+      {/* Dark, so the page is not cream the whole way down, and an editorial
+          list rather than a grid of bordered cards: identical boxes read as
+          box soup, and a card stretching to match its row partner trails dead
+          space whatever its padding. Rows here size to their own content. */}
+      <section style={{ background: "#2D2521", padding: "96px 32px 104px" }}>
         <div style={{ maxWidth: 1000, margin: "0 auto" }}>
           <FadeIn>
-            <div style={{ textAlign: "center", marginBottom: 64 }}>
-              <p className="eyebrow-accent" style={{ marginBottom: 14 }}>what&apos;s included</p>
+            <div style={{ textAlign: "center", marginBottom: 72 }}>
+              <p
+                style={{
+                  fontFamily: "var(--font-dm-sans)",
+                  fontSize: 11,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "#C39E88",
+                  marginBottom: 18,
+                }}
+              >
+                what&apos;s included
+              </p>
               <h2
                 style={{
                   fontFamily: "var(--font-fraunces)",
-                  fontSize: "clamp(27px,3.6vw,36px)",
-                  color: "var(--color-text-headline)",
+                  fontSize: "clamp(22px,2.7vw,28px)",
+                  color: "#F1F0E5",
                   fontWeight: 700,
                   lineHeight: 1.2,
                   textWrap: "balance",
@@ -233,8 +243,8 @@ export default function CustomRetreatPage() {
                 <div
                   className="inc-row"
                   style={{
-                    borderTop: "0.5px solid var(--color-border)",
-                    padding: "34px 0",
+                    borderTop: "0.5px solid rgba(241,240,229,0.14)",
+                    padding: "36px 0",
                   }}
                 >
                   <div className="inc-head">
@@ -243,21 +253,22 @@ export default function CustomRetreatPage() {
                       style={{
                         fontFamily: "var(--font-dm-sans)",
                         fontSize: 11,
-                        letterSpacing: "0.16em",
-                        color: "var(--color-accent)",
+                        letterSpacing: "0.18em",
+                        color: "#C39E88",
                         display: "block",
-                        marginBottom: 10,
+                        marginBottom: 12,
                       }}
                     >
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <h3
                       style={{
-                        fontFamily: "var(--font-fraunces)",
-                        fontSize: "clamp(19px,2.1vw,23px)",
-                        color: "var(--color-text-headline)",
-                        fontWeight: 700,
-                        lineHeight: 1.25,
+                        fontFamily: "var(--font-cormorant)",
+                        fontStyle: "italic",
+                        fontWeight: 400,
+                        fontSize: "clamp(23px,2.6vw,30px)",
+                        color: "#F1F0E5",
+                        lineHeight: 1.2,
                         textWrap: "balance",
                       }}
                     >
@@ -271,28 +282,26 @@ export default function CustomRetreatPage() {
                         fontFamily: "var(--font-dm-sans)",
                         fontSize: 15.5,
                         lineHeight: 1.75,
-                        color: "var(--color-text-body)",
+                        color: "#E8D5BC",
                         marginBottom: 14,
                         textWrap: "balance",
                       }}
                     >
                       {item.lead}
                     </p>
-                    {/* clay on the cream surface is only 3.3:1, so the words
-                        carry body colour and the accent is left to the marks */}
                     <p
                       style={{
                         fontFamily: "var(--font-dm-sans)",
                         fontSize: 13.5,
                         lineHeight: 1.9,
-                        color: "var(--color-text-body)",
+                        color: "#C5AA9B",
                         margin: 0,
                       }}
                     >
                       {item.points.map((point, n) => (
                         <span key={point}>
                           {n > 0 && (
-                            <span aria-hidden="true" style={{ color: "var(--color-accent)", padding: "0 9px" }}>
+                            <span aria-hidden="true" style={{ color: "#C39E88", padding: "0 9px" }}>
                               ·
                             </span>
                           )}
@@ -304,7 +313,7 @@ export default function CustomRetreatPage() {
                 </div>
               </FadeIn>
             ))}
-            <div style={{ borderTop: "0.5px solid var(--color-border)" }} />
+            <div style={{ borderTop: "0.5px solid rgba(241,240,229,0.14)" }} />
           </div>
         </div>
         <style>{`
@@ -315,7 +324,7 @@ export default function CustomRetreatPage() {
             align-items: start;
           }
           @media (max-width: 760px) {
-            .inc-row { grid-template-columns: 1fr !important; gap: 14px !important; padding: 28px 0 !important; }
+            .inc-row { grid-template-columns: 1fr !important; gap: 14px !important; padding: 30px 0 !important; }
           }
         `}</style>
       </section>
