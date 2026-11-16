@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import FadeIn from "@/components/FadeIn";
 
 // Videos live in Cloudflare R2, not public/videos — see AGENTS.md.
@@ -24,6 +25,89 @@ const labelTones = {
   dark: { color: "var(--color-text-headline)", fontSize: 12 },
   brown: { color: "var(--color-logo-brown)", fontSize: 14 },
 } as const;
+
+function ClipPlayer({
+  clip,
+  isVertical,
+  labelTone,
+}: {
+  clip: Clip;
+  isVertical: boolean;
+  labelTone: keyof typeof labelTones;
+}) {
+  const ref = useRef<HTMLVideoElement>(null);
+  const rewound = useRef(false);
+  const wantsSeek = !clip.poster && !!clip.posterTime;
+
+  useEffect(() => {
+    const v = ref.current;
+    if (!v || !wantsSeek) return;
+    // park on a frame worth looking at; the first one rarely is. Done from an
+    // effect as well as the event because a cached video fires loadedmetadata
+    // before hydration, and the handler would never see it.
+    const seek = () => {
+      if (!rewound.current && v.currentTime === 0) v.currentTime = clip.posterTime!;
+    };
+    if (v.readyState >= 1) seek();
+    v.addEventListener("loadedmetadata", seek);
+    return () => v.removeEventListener("loadedmetadata", seek);
+  }, [wantsSeek, clip.posterTime]);
+
+  return (
+    <>
+      <div
+        style={{
+          position: "relative",
+          aspectRatio: isVertical ? "9/16" : "16/9",
+          borderRadius: 12,
+          overflow: "hidden",
+          background: "var(--color-bg-card)",
+        }}
+      >
+        <video
+          ref={ref}
+          controls
+          playsInline
+          preload="metadata"
+          poster={clip.poster}
+          onPlay={
+            wantsSeek
+              ? (e) => {
+                  // that seek is only a thumbnail, so rewind on the first play
+                  // rather than skipping the opening seconds. Left alone if the
+                  // viewer has already scrubbed somewhere else.
+                  const v = e.currentTarget;
+                  if (rewound.current) return;
+                  rewound.current = true;
+                  if (Math.abs(v.currentTime - clip.posterTime!) < 0.25) v.currentTime = 0;
+                }
+              : undefined
+          }
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+        >
+          {/* No type attribute on purpose: our .MOV files are H.264, but Chrome
+              reports it cannot play "video/quicktime" and skips the source
+              outright. With no hint it sniffs the container and plays them. */}
+          <source src={R2_BASE + encodeURIComponent(clip.file)} />
+        </video>
+      </div>
+      {clip.label && (
+        <p
+          style={{
+            fontFamily: "var(--font-dm-sans)",
+            ...labelTones[labelTone],
+            letterSpacing: "0.06em",
+            textTransform: "uppercase",
+            textAlign: "center",
+            marginTop: 12,
+          }}
+        >
+          {clip.label}
+        </p>
+      )}
+    </>
+  );
+}
 
 export default function VideoPair({
   clips,
@@ -86,51 +170,7 @@ export default function VideoPair({
       >
         {clips.map((clip, i) => (
           <FadeIn key={clip.file} delay={i * 0.1}>
-            <div
-              style={{
-                position: "relative",
-                aspectRatio: isVertical ? "9/16" : "16/9",
-                borderRadius: 12,
-                overflow: "hidden",
-                background: "var(--color-bg-card)",
-              }}
-            >
-              <video
-                controls
-                playsInline
-                preload="metadata"
-                poster={clip.poster}
-                onLoadedMetadata={
-                  !clip.poster && clip.posterTime
-                    ? (e) => {
-                        // park on a frame worth looking at; the first one rarely is
-                        const v = e.currentTarget;
-                        if (v.currentTime === 0) v.currentTime = clip.posterTime!;
-                      }
-                    : undefined
-                }
-                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-              >
-                {/* No type attribute on purpose: our .MOV files are H.264, but Chrome
-                    reports it cannot play "video/quicktime" and skips the source
-                    outright. With no hint it sniffs the container and plays them. */}
-                <source src={R2_BASE + encodeURIComponent(clip.file)} />
-              </video>
-            </div>
-            {clip.label && (
-              <p
-                style={{
-                  fontFamily: "var(--font-dm-sans)",
-                  ...labelTones[labelTone],
-                  letterSpacing: "0.06em",
-                  textTransform: "uppercase",
-                  textAlign: "center",
-                  marginTop: 12,
-                }}
-              >
-                {clip.label}
-              </p>
-            )}
+            <ClipPlayer clip={clip} isVertical={isVertical} labelTone={labelTone} />
           </FadeIn>
         ))}
       </div>
