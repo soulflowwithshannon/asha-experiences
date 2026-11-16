@@ -163,7 +163,7 @@ export default function HomePage() {
             <div className="intro-pair" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, margin: "0 auto 52px" }}>
               {[
                 { src: "/images/Ashley and I hug.jpg", alt: "Ashley and Shannon on retreat", pos: "center 30%" },
-                { src: "/images/Bre ceremony.jpg", alt: "A woman in ceremony on retreat", pos: "center 28%" },
+                { src: "/images/Ashley ceremony.jpg", alt: "Ashley holding ceremony on retreat", pos: "center 25%" },
               ].map((shot) => (
                 <div key={shot.src} style={{ position: "relative", aspectRatio: "4/5", borderRadius: 2, overflow: "hidden", background: "var(--color-bg-card)" }}>
                   <Image src={shot.src} alt={shot.alt} fill sizes="(max-width: 640px) 50vw, 300px" style={{ objectFit: "cover", objectPosition: shot.pos }} />

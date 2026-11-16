@@ -202,85 +202,122 @@ export default function CustomRetreatPage() {
       </section>
 
       {/* WHAT'S INCLUDED */}
+      {/* An editorial list, not a grid of bordered cards: six boxes of
+          identical shape read as box soup, and a card that stretches to match
+          its row partner trails dead space. Rows here size to their own
+          content, and the points run inline the way the retreat pages set
+          their practices out. */}
       <section style={{ background: "var(--color-bg-surface)", padding: "88px 32px 96px" }}>
-        <div style={{ maxWidth: 980, margin: "0 auto" }}>
+        <div style={{ maxWidth: 1000, margin: "0 auto" }}>
           <FadeIn>
-            <div style={{ textAlign: "center", marginBottom: 56 }}>
+            <div style={{ textAlign: "center", marginBottom: 64 }}>
+              <p className="eyebrow-accent" style={{ marginBottom: 14 }}>what&apos;s included</p>
               <h2
                 style={{
-                  display: "inline-block",
                   fontFamily: "var(--font-fraunces)",
                   fontSize: "clamp(27px,3.6vw,36px)",
                   color: "var(--color-text-headline)",
                   fontWeight: 700,
-                  paddingBottom: 14,
-                  borderBottom: "1px solid var(--color-accent)",
+                  lineHeight: 1.2,
+                  textWrap: "balance",
                 }}
               >
-                What&apos;s Included
+                every part of it, except deciding who to invite
               </h2>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.8, color: "var(--color-text-body)", maxWidth: 520, margin: "20px auto 0", textWrap: "balance" }}>
-                every part of it, except deciding who to invite.
-              </p>
             </div>
           </FadeIn>
 
-          <div className="included-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 20 }}>
+          <div>
             {INCLUDED.map((item, i) => (
-              <FadeIn key={item.title} delay={(i % 2) * 0.08}>
+              <FadeIn key={item.title} delay={0.04}>
                 <div
+                  className="inc-row"
                   style={{
-                    height: "100%",
-                    boxSizing: "border-box",
-                    display: "flex",
-                    flexDirection: "column",
-                    background: "var(--color-bg-page)",
-                    border: "0.5px solid var(--color-border)",
-                    borderRadius: 4,
-                    padding: "28px 28px 26px",
+                    borderTop: "0.5px solid var(--color-border)",
+                    padding: "34px 0",
                   }}
                 >
-                  {/* the numeral sits above the title: as a baseline-aligned
-                      sibling, Cormorant against Fraunces never lined up */}
-                  <span
-                    style={{
-                      fontFamily: "var(--font-dm-sans)",
-                      fontSize: 11,
-                      letterSpacing: "0.16em",
-                      color: "var(--color-accent)",
-                      display: "block",
-                      marginBottom: 10,
-                    }}
-                  >
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
+                  <div className="inc-head">
+                    <span
+                      aria-hidden="true"
+                      style={{
+                        fontFamily: "var(--font-dm-sans)",
+                        fontSize: 11,
+                        letterSpacing: "0.16em",
+                        color: "var(--color-accent)",
+                        display: "block",
+                        marginBottom: 10,
+                      }}
+                    >
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <h3
+                      style={{
+                        fontFamily: "var(--font-fraunces)",
+                        fontSize: "clamp(19px,2.1vw,23px)",
+                        color: "var(--color-text-headline)",
+                        fontWeight: 700,
+                        lineHeight: 1.25,
+                        textWrap: "balance",
+                      }}
+                    >
+                      {item.title}
+                    </h3>
+                  </div>
 
-                  <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 20, color: "var(--color-text-headline)", fontWeight: 700, lineHeight: 1.25, marginBottom: 12, textWrap: "balance" }}>
-                    {item.title}
-                  </h3>
-
-                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.7, color: "var(--color-text-body)", marginBottom: 20, textWrap: "balance" }}>
-                    {item.lead}
-                  </p>
-
-                  <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 10, borderTop: "0.5px solid var(--color-border)", paddingTop: 16, marginTop: "auto" }}>
-                    {item.points.map((point) => (
-                      <li key={point} style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
-                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" strokeWidth="2.2" style={{ flexShrink: 0, marginTop: 4 }} aria-hidden="true">
-                          <path d="M4 12.5l5.5 5.5L20 6.5" />
-                        </svg>
-                        <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13.5, lineHeight: 1.6, color: "var(--color-text-body)" }}>
+                  <div>
+                    <p
+                      style={{
+                        fontFamily: "var(--font-dm-sans)",
+                        fontSize: 15.5,
+                        lineHeight: 1.75,
+                        color: "var(--color-text-body)",
+                        marginBottom: 14,
+                        textWrap: "balance",
+                      }}
+                    >
+                      {item.lead}
+                    </p>
+                    {/* clay on the cream surface is only 3.3:1, so the words
+                        carry body colour and the accent is left to the marks */}
+                    <p
+                      style={{
+                        fontFamily: "var(--font-dm-sans)",
+                        fontSize: 13.5,
+                        lineHeight: 1.9,
+                        color: "var(--color-text-body)",
+                        margin: 0,
+                      }}
+                    >
+                      {item.points.map((point, n) => (
+                        <span key={point}>
+                          {n > 0 && (
+                            <span aria-hidden="true" style={{ color: "var(--color-accent)", padding: "0 9px" }}>
+                              ·
+                            </span>
+                          )}
                           {point}
                         </span>
-                      </li>
-                    ))}
-                  </ul>
+                      ))}
+                    </p>
+                  </div>
                 </div>
               </FadeIn>
             ))}
+            <div style={{ borderTop: "0.5px solid var(--color-border)" }} />
           </div>
         </div>
-        <style>{`@media(max-width:760px){.included-grid{grid-template-columns:1fr!important}}`}</style>
+        <style>{`
+          .inc-row {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 48px;
+            align-items: start;
+          }
+          @media (max-width: 760px) {
+            .inc-row { grid-template-columns: 1fr !important; gap: 14px !important; padding: 28px 0 !important; }
+          }
+        `}</style>
       </section>
 
       {/* PROOF — the page was 2,900px of text with one photo on it */}

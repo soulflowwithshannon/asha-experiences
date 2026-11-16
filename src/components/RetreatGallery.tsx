@@ -30,7 +30,7 @@ const shots = [
   // ── everything below appears only once the gallery is opened ──
   { src: "/images/Rebecca fire.jpg", alt: "A fire ceremony on retreat", wide: true },
   { src: "/images/ReturnToLove group hug.jpg", alt: "A group hug on retreat" },
-  { src: "/images/Ashley ceremony.jpg", alt: "Ashley holding ceremony on retreat" },
+  { src: "/images/Bre ceremony.jpg", alt: "A woman receiving a blessing in ceremony" },
   { src: "/images/ReturnToLove yogajpg.jpg", alt: "Yoga on retreat" },
   { src: "/images/group at the moon.jpg", alt: "Women together at the moon sculpture in the jungle" },
   { src: "/images/ReturnToLove25-401.jpg", alt: "Women on retreat" },
