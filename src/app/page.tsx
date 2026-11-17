@@ -9,6 +9,7 @@ import VideoPair from "@/components/VideoPair";
 import DestinationRequest from "@/components/DestinationRequest";
 import QuietNote from "@/components/QuietNote";
 import RetreatGallery from "@/components/RetreatGallery";
+import Divider from "@/components/Divider";
 import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/AnimatedText";
 
 function ParallaxHero() {
@@ -268,11 +269,13 @@ export default function HomePage() {
 
       {/* SECTION 3a — FROM OUR RETREATS */}
       <RetreatGallery />
+      <Divider background="var(--color-bg-page)" />
 
       {/* SECTION 3b — MOMENTS FROM RETREAT (two story-format videos) */}
       <VideoPair
         headline="a moment from retreat"
         orientation="vertical"
+        padding="48px 32px 80px"
         clips={[
           { file: "Ashley moment from retreat.MOV", label: "ashley" },
           { file: "Shannon moment from retreat.MOV", label: "shannon", posterTime: 3.6 },
