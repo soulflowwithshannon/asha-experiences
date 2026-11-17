@@ -1,4 +1,5 @@
 "use client";
+import ListIcon from "@/components/ListIcon";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -504,7 +505,7 @@ export default function MexicoPage() {
             <FadeIn>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-accent)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 24, fontWeight: 700 }}>included</p>
-                <ul style={{ listStyle: "disc", paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
                   {([
                     <><strong>5 days / 4 nights</strong> held deep in the jungle</>,
                     <><strong>airport transfers</strong> to/from Cancún Airport</>,
@@ -518,7 +519,7 @@ export default function MexicoPage() {
                     <>a <strong>powerful passage</strong> into <em>becoming her</em></>,
                     <><em>and a few more surprises waiting for you when you arrive</em></>,
                   ] as ReactNode[]).map((item, i) => (
-                    <li key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7 }}>{item}</li>
+                    <li key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7 , display: "flex", gap: 12}}><ListIcon kind="included" /><span>{item}</span></li>
                   ))}
                 </ul>
               </div>
@@ -526,13 +527,13 @@ export default function MexicoPage() {
             <FadeIn delay={0.1}>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "#9C8E7E", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 24, fontWeight: 700 }}>not included</p>
-                <ul style={{ listStyle: "disc", paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
                   {([
                     <><strong>flights</strong> to/from Cancun, Mexico (CUN)</>,
                     <>personal spending and souvenirs</>,
                     <>travel insurance <em>(recommended but not required)</em></>,
                   ] as ReactNode[]).map((item, i) => (
-                    <li key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7 }}>{item}</li>
+                    <li key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7 , display: "flex", gap: 12}}><ListIcon kind="excluded" /><span>{item}</span></li>
                   ))}
                 </ul>
               </div>

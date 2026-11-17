@@ -6,6 +6,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import PostHogProvider from "@/components/PostHogProvider";
 import ContactBubble from "@/components/ContactBubble";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -159,10 +160,12 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
         <PostHogProvider>
+          <SmoothScroll>
           <Nav />
           {children}
           <Footer />
           <ContactBubble />
+          </SmoothScroll>
         </PostHogProvider>
 
         {/* Google Analytics (GA4) */}

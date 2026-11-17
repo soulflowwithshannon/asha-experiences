@@ -136,7 +136,7 @@ export default function ContactBubble() {
           </div>
 
           {/* conversation */}
-          <div style={{ padding: 16, display: "flex", flexDirection: "column", gap: 10, maxHeight: 220, overflowY: "auto" }}>
+          <div data-lenis-prevent style={{ padding: 16, display: "flex", flexDirection: "column", gap: 10, maxHeight: 220, overflowY: "auto" }}>
             <div
               style={{
                 alignSelf: "flex-start",

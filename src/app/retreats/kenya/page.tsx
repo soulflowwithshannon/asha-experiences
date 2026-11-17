@@ -1,4 +1,6 @@
 "use client";
+import ListIcon from "@/components/ListIcon";
+import { IdentificationCard, Syringe, ShieldCheck, Airplane, Shower, Drop, Sparkle, Jar, PlugCharging, WifiMedium, Binoculars } from "@phosphor-icons/react";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -279,7 +281,7 @@ const faqs: { question: string; answer: ReactNode }[] = [
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           {/* Visa */}
           <div>
-            <p style={{ fontWeight: 600, marginBottom: 8 }}>Visa</p>
+            <p style={{ fontWeight: 600, marginBottom: 8, display: "flex", alignItems: "center", gap: 8 }}><IdentificationCard aria-hidden="true" size={18} weight="light" color="var(--color-accent)" />Visa</p>
             <ul style={{ listStyle: "disc", paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
               <li>most travelers need a Kenyan evisa, applied for online — simple process, around $50. we&apos;ll walk you through it step by step.</li>
             </ul>
@@ -287,7 +289,7 @@ const faqs: { question: string; answer: ReactNode }[] = [
 
           {/* Vaccines & Mosquitoes */}
           <div>
-            <p style={{ fontWeight: 600, marginBottom: 8 }}>Vaccines & Mosquitoes</p>
+            <p style={{ fontWeight: 600, marginBottom: 8, display: "flex", alignItems: "center", gap: 8 }}><Syringe aria-hidden="true" size={18} weight="light" color="var(--color-accent)" />Vaccines & Mosquitoes</p>
             <ul style={{ listStyle: "disc", paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
               <li>if you&apos;ve traveled through certain countries in the last 6 months (even with a layover), a yellow fever vaccination card may be required.</li>
               <li>check with your healthcare provider or airline if you&apos;re unsure.</li>
@@ -299,7 +301,7 @@ const faqs: { question: string; answer: ReactNode }[] = [
 
           {/* Travel Insurance */}
           <div>
-            <p style={{ fontWeight: 600, marginBottom: 8 }}>Travel Insurance</p>
+            <p style={{ fontWeight: 600, marginBottom: 8, display: "flex", alignItems: "center", gap: 8 }}><ShieldCheck aria-hidden="true" size={18} weight="light" color="var(--color-accent)" />Travel Insurance</p>
             <ul style={{ listStyle: "disc", paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
               <li>not required but highly recommended.</li>
               <li>we suggest World Nomads or SafetyWing — both cover medical emergencies and trip interruptions.</li>
@@ -309,7 +311,7 @@ const faqs: { question: string; answer: ReactNode }[] = [
 
           {/* Passport */}
           <div>
-            <p style={{ fontWeight: 600, marginBottom: 8 }}>Passport</p>
+            <p style={{ fontWeight: 600, marginBottom: 8, display: "flex", alignItems: "center", gap: 8 }}><Airplane aria-hidden="true" size={18} weight="light" color="var(--color-accent)" />Passport</p>
             <ul style={{ listStyle: "disc", paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
               <li>ensure your passport is valid for at least 6 months beyond your travel dates.</li>
             </ul>
@@ -693,7 +695,7 @@ export default function KenyaPage() {
             <FadeIn>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-accent)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 24, fontWeight: 700 }}>included</p>
-                <ul style={{ listStyle: "disc", paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
                   {([
                     <><strong>7 days / 6 nights</strong> of luxury retreat in <em>Ol Pejeta Conservancy</em></>,
                     <>private ground transport <strong>to/from Nairobi</strong></>,
@@ -706,7 +708,7 @@ export default function KenyaPage() {
                     <><strong>traditional Kenyan cooking class</strong> with our hosts</>,
                     <><em>unforgettable wildlife encounters</em> in their natural habitat</>,
                   ] as React.ReactNode[]).map((item, i) => (
-                    <li key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.7 }}>{item}</li>
+                    <li key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.7 , display: "flex", gap: 12}}><ListIcon kind="included" /><span>{item}</span></li>
                   ))}
                 </ul>
               </div>
@@ -714,7 +716,7 @@ export default function KenyaPage() {
             <FadeIn delay={0.15}>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "#9C8E7E", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 24, fontWeight: 700 }}>not included</p>
-                <ul style={{ listStyle: "disc", paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
                   {([
                     <><strong>flights</strong> to/from Nairobi, Kenya</>,
                     <>hotel stay in Nairobi before the retreat <em>(recommended — we&apos;ll share our favorites)</em></>,
@@ -723,7 +725,7 @@ export default function KenyaPage() {
                     <><strong>Kenya visa</strong> <em>(around $50 USD)</em></>,
                     <><strong>gratuities</strong> for local staff + guides <em>(suggested $100–$200 total — goes a long way)</em></>,
                   ] as React.ReactNode[]).map((item, i) => (
-                    <li key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.7, opacity: 0.7 }}>{item}</li>
+                    <li key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.7, opacity: 0.7 , display: "flex", gap: 12}}><ListIcon kind="excluded" /><span>{item}</span></li>
                   ))}
                 </ul>
               </div>
@@ -837,17 +839,17 @@ export default function KenyaPage() {
                   </p>
                   <div style={{ marginBottom: 28 }}>
                     <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>all cottages include</p>
-                    <ul style={{ listStyle: "disc", paddingLeft: 18, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
+                    <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
                       {[
-                        "ensuite bathrooms with walk-in showers",
-                        "hot and cold running water",
-                        "bathroom utilities — shampoo, conditioner, and fabric detergent",
-                        "drinking water and water bottles",
-                        "solar powered electricity to charge your devices",
-                        "basic wifi",
-                        "access to viewing decks for private bush meals",
+                        { text: "ensuite bathrooms with walk-in showers", icon: Shower },
+                        { text: "hot and cold running water", icon: Drop },
+                        { text: "bathroom utilities — shampoo, conditioner, and fabric detergent", icon: Sparkle },
+                        { text: "drinking water and water bottles", icon: Jar },
+                        { text: "solar powered electricity to charge your devices", icon: PlugCharging },
+                        { text: "basic wifi", icon: WifiMedium },
+                        { text: "access to viewing decks for private bush meals", icon: Binoculars },
                       ].map((item, i) => (
-                        <li key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", lineHeight: 1.6 }}>{item}</li>
+                        <li key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", lineHeight: 1.6, display: "flex", gap: 10 }}><ListIcon icon={item.icon} /><span>{item.text}</span></li>
                       ))}
                     </ul>
                   </div>

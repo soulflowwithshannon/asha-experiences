@@ -1,4 +1,6 @@
 "use client";
+import ListIcon from "@/components/ListIcon";
+import { IdentificationCard, Syringe, ShieldCheck, Airplane, Coins } from "@phosphor-icons/react";
 
 import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
@@ -271,25 +273,25 @@ const faqs: { question: string; answer: ReactNode }[] = [
         <p style={{ marginBottom: 24 }}>here&apos;s a quick overview — we&apos;ll send you a full pre-travel guide once you&apos;re booked.</p>
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <div>
-            <p style={{ fontWeight: 600, marginBottom: 8 }}>Visa</p>
+            <p style={{ fontWeight: 600, marginBottom: 8, display: "flex", alignItems: "center", gap: 8 }}><IdentificationCard aria-hidden="true" size={18} weight="light" color="var(--color-accent)" />Visa</p>
             <ul style={{ listStyle: "disc", paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
               <li>US citizens do not need a visa for stays under 90 days. most other western passport holders are also visa-free — we&apos;ll confirm your specific situation.</li>
             </ul>
           </div>
           <div>
-            <p style={{ fontWeight: 600, marginBottom: 8 }}>Passport</p>
+            <p style={{ fontWeight: 600, marginBottom: 8, display: "flex", alignItems: "center", gap: 8 }}><Airplane aria-hidden="true" size={18} weight="light" color="var(--color-accent)" />Passport</p>
             <ul style={{ listStyle: "disc", paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
               <li>ensure your passport is valid for at least 6 months beyond your travel dates.</li>
             </ul>
           </div>
           <div>
-            <p style={{ fontWeight: 600, marginBottom: 8 }}>Currency</p>
+            <p style={{ fontWeight: 600, marginBottom: 8, display: "flex", alignItems: "center", gap: 8 }}><Coins aria-hidden="true" size={18} weight="light" color="var(--color-accent)" />Currency</p>
             <ul style={{ listStyle: "disc", paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
               <li>Moroccan Dirham (MAD). exchange at the airport or in the city — ATMs are widely available in Agadir.</li>
             </ul>
           </div>
           <div>
-            <p style={{ fontWeight: 600, marginBottom: 8 }}>Travel Insurance</p>
+            <p style={{ fontWeight: 600, marginBottom: 8, display: "flex", alignItems: "center", gap: 8 }}><ShieldCheck aria-hidden="true" size={18} weight="light" color="var(--color-accent)" />Travel Insurance</p>
             <ul style={{ listStyle: "disc", paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
               <li>not required but highly recommended.</li>
               <li>we suggest World Nomads or SafetyWing — both cover medical emergencies and trip interruptions.</li>
@@ -297,7 +299,7 @@ const faqs: { question: string; answer: ReactNode }[] = [
             </ul>
           </div>
           <div>
-            <p style={{ fontWeight: 600, marginBottom: 8 }}>Vaccinations</p>
+            <p style={{ fontWeight: 600, marginBottom: 8, display: "flex", alignItems: "center", gap: 8 }}><Syringe aria-hidden="true" size={18} weight="light" color="var(--color-accent)" />Vaccinations</p>
             <ul style={{ listStyle: "disc", paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
               <li>no vaccinations are required for entry into Morocco. as always, consult your healthcare provider for personal recommendations.</li>
             </ul>
@@ -550,7 +552,7 @@ export default function MoroccoPage() {
             <FadeIn>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-accent)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 24, fontWeight: 700 }}>included</p>
-                <ul style={{ listStyle: "disc", paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
                   {([
                     <><strong>7 days / 6 nights</strong> in a castle retreat center</>,
                     <><strong>Transfer</strong> to/from Marrakech (RAK) airport</>,
@@ -564,7 +566,7 @@ export default function MoroccoPage() {
                     <><strong>A return to your sacred divinity</strong></>,
                     <><em>..and so much more!</em></>,
                   ] as ReactNode[]).map((item, i) => (
-                    <li key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.7 }}>{item}</li>
+                    <li key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.7 , display: "flex", gap: 12}}><ListIcon kind="included" /><span>{item}</span></li>
                   ))}
                 </ul>
               </div>
@@ -572,14 +574,14 @@ export default function MoroccoPage() {
             <FadeIn delay={0.15}>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "#9C8E7E", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 24, fontWeight: 700 }}>not included</p>
-                <ul style={{ listStyle: "disc", paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
                   {([
                     <><strong>flights</strong> to/from Morocco</>,
                     <>personal spending and souvenirs</>,
                     <><strong>travel insurance</strong> <em>(recommended but not required)</em></>,
                     <><strong>gratuities</strong> for local staff <em>(suggested and always appreciated)</em></>,
                   ] as ReactNode[]).map((item, i) => (
-                    <li key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.7, opacity: 0.7 }}>{item}</li>
+                    <li key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.7, opacity: 0.7 , display: "flex", gap: 12}}><ListIcon kind="excluded" /><span>{item}</span></li>
                   ))}
                 </ul>
               </div>
