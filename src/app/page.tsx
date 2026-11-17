@@ -64,6 +64,9 @@ function ParallaxHero() {
           poster="/images/hero-video-poster.jpg"
           style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block", position: "absolute", inset: 0 }}
         >
+          {/* Phones get a 720p, ~3 MB cut; the hero sits behind a dark
+              gradient there and the 1080p file was the page's slowest load. */}
+          <source src="/videos/ASHA hero video mobile.mp4" type="video/mp4" media="(max-width: 768px)" />
           <source src="/videos/ASHA hero video.mp4" type="video/mp4" />
         </video>
       </div>
