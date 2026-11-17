@@ -21,6 +21,16 @@ const nextConfig: NextConfig = {
         destination: "/blog",
         permanent: true,
       },
+      {
+        source: "/blog/they-didnt-burn-the-wild-out-of-us",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/blog/which-retreat-is-right-for-you-mexico-morocco-kenya",
+        destination: "/blog",
+        permanent: true,
+      },
       /**
        * Becoming HER ran Oct 27-31 2026. The page is kept in the repo and
        * sent home instead, temporary rather than permanent: a permanent
