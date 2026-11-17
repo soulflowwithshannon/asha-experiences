@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import PostHogProvider from "@/components/PostHogProvider";
 import ContactBubble from "@/components/ContactBubble";
 import SmoothScroll from "@/components/SmoothScroll";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -167,6 +168,7 @@ export default function RootLayout({
           <ContactBubble />
           </SmoothScroll>
         </PostHogProvider>
+        <SpeedInsights />
 
         {/* Google Analytics (GA4) */}
         <Script
