@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Find Your Retreat — Which Women's Retreat Is Right for You?",
-  description: "A short, feeling-based quiz to help you find the women's retreat that matches where you actually are right now — Mexico, Morocco, or Kenya.",
+  description: "A short, feeling-based quiz to help you find the women's retreat that matches where you actually are right now — Kenya or Morocco.",
   keywords: [
     "which women's retreat is right for me",
     "women's retreat quiz",
     "find your retreat",
-    "women's retreat Mexico Morocco Kenya",
+    "women's retreat Kenya Morocco",
     "how to choose a women's retreat",
   ],
   alternates: {

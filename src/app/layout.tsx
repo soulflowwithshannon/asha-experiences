@@ -30,10 +30,10 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   title: {
-    default: "ASHA Experiences — Transformational Retreats for Women in Morocco, Mexico & Kenya",
+    default: "ASHA Experiences — Transformational Retreats for Women in Kenya & Morocco",
     template: "%s | ASHA Experiences",
   },
-  description: "You've been holding it together for so long. ASHA Experiences creates transformational international retreats for women — yoga, sound healing, ceremony, and sisterhood in Morocco, Mexico, and Kenya.",
+  description: "You've been holding it together for so long. ASHA Experiences creates transformational international retreats for women — yoga, sound healing, ceremony, and sisterhood in Kenya and Morocco.",
   keywords: [
     // core retreat searches
     "women's retreat",
@@ -80,11 +80,9 @@ export const metadata: Metadata = {
     "group retreat for women",
     "women's friendship retreat",
     // destinations
-    "Morocco retreat for women",
-    "Mexico retreat for women",
     "Kenya retreat for women",
+    "Morocco retreat for women",
     "safari retreat women",
-    "jungle retreat women",
     "desert retreat women",
     // brand
     "ASHA Experiences",
@@ -102,13 +100,13 @@ export const metadata: Metadata = {
     url: "https://ashaexperiences.com",
     siteName: "ASHA Experiences",
     title: "ASHA Experiences — International Retreats for Women",
-    description: "ASHA Experiences creates transformational international retreats for women — in Morocco, Mexico, and Kenya. Come back to yourself.",
+    description: "ASHA Experiences creates transformational international retreats for women — in Kenya and Morocco. Come back to yourself.",
     images: [{ url: "/images/Return to Love group sunset.jpg", width: 1200, height: 630, alt: "ASHA Experiences — Women's Retreat" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ASHA Experiences — International Retreats for Women",
-    description: "ASHA Experiences creates transformational international retreats for women — in Morocco, Mexico, and Kenya. Come back to yourself.",
+    description: "ASHA Experiences creates transformational international retreats for women — in Kenya and Morocco. Come back to yourself.",
     images: ["/images/Return to Love group sunset.jpg"],
   },
   robots: {
@@ -133,7 +131,7 @@ const orgJsonLd = {
         url: "https://ashaexperiences.com/images/asha-logo-white.webp",
       },
       description:
-        "Transformational international retreats for women — yoga, sound healing, ceremony, and sisterhood in Morocco, Mexico, and Kenya.",
+        "Transformational international retreats for women — yoga, sound healing, ceremony, and sisterhood in Kenya and Morocco.",
       email: "connect@ashaexperiences.com",
       sameAs: ["https://instagram.com/asha_experiences"],
       founder: [

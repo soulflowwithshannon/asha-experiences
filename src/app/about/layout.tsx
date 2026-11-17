@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Us — Meet Ashley & Shannon",
-  description: "The women behind ASHA Experiences. Ashley and Shannon create transformational international retreats for women in Morocco, Mexico, and Kenya.",
+  description: "The women behind ASHA Experiences. Ashley and Shannon create transformational international retreats for women in Kenya and Morocco.",
   alternates: {
     canonical: "/about",
   },

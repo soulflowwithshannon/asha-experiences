@@ -79,7 +79,7 @@ const jsonLd = {
   "url": "https://ashaexperiences.com/retreats/kenya",
   "offers": {
     "@type": "Offer",
-    "price": "4500",
+    "price": "6900",
     "priceCurrency": "USD",
     "availability": "https://schema.org/LimitedAvailability",
     "url": "https://ashaexperiences.com/retreats/kenya"

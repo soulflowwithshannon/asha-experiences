@@ -60,6 +60,8 @@ function ParallaxHero() {
           muted
           loop
           playsInline
+          preload="auto"
+          poster="/images/hero-video-poster.jpg"
           style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block", position: "absolute", inset: 0 }}
         >
           <source src="/videos/ASHA hero video.mp4" type="video/mp4" />
@@ -71,11 +73,10 @@ function ParallaxHero() {
             page still has exactly one top-level heading. Cormorant, because
             DM Sans is loaded without an italic face and would be slanted by
             the browser rather than truly italic. */}
-        <motion.h1
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+        <h1
+          className="hero-rise"
           style={{
+            animationDuration: "1s",
             fontFamily: "var(--font-cormorant)",
             fontStyle: "italic",
             fontSize: "clamp(28px,4.4vw,46px)",
@@ -90,12 +91,10 @@ function ParallaxHero() {
           }}
         >
           international retreats for women choosing joy, freedom, and connection
-        </motion.h1>
+        </h1>
 
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
+        <div
+          className="hero-rise" style={{ animationDuration: "1s", animationDelay: "0.3s" }}
         >
           <Link
             href="/retreats/kenya"
@@ -116,7 +115,7 @@ function ParallaxHero() {
           >
             explore retreats →
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

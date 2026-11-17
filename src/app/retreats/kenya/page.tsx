@@ -14,6 +14,7 @@ import HowItWorks from "@/components/HowItWorks";
 import Divider from "@/components/Divider";
 import MeetUs from "@/components/MeetUs";
 import GuidesCompact from "@/components/GuidesCompact";
+import FaqJsonLd from "@/components/FaqJsonLd";
 import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/AnimatedText";
 
 const daysData = [
@@ -146,39 +147,31 @@ function KenyaHero() {
       </motion.div>
 
       <div style={{ position: "relative", zIndex: 2, textAlign: "center", padding: "0 24px" }}>
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(22px,3vw,34px)", color: "#E8B88A", fontWeight: 400, marginBottom: 20 }}
+        <p
+          className="hero-rise-sm"
+          style={{ animationDuration: "0.8s", animationDelay: "0s", fontFamily: "var(--font-cormorant)", fontSize: "clamp(22px,3vw,34px)", color: "#E8B88A", fontWeight: 400, marginBottom: 20 }}
         >
           November 28 – December 4, 2027
-        </motion.p>
-        <motion.h1
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.1, ease: "easeInOut" }}
-          style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(52px,8vw,80px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 16 }}
+        </p>
+        <h1
+          className="hero-rise"
+          style={{ animationDuration: "1s", animationDelay: "0.1s", fontFamily: "var(--font-fraunces)", fontSize: "clamp(52px,8vw,80px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 16 }}
         >
           Into the Wild
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.15, ease: "easeInOut" }}
-          style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(22px,3vw,34px)", color: "#F1F0E5", fontWeight: 700, fontStyle: "italic", marginBottom: 28, marginTop: -6 }}
+        </h1>
+        <p
+          className="hero-rise-sm"
+          style={{ animationDuration: "0.8s", animationDelay: "0.15s", fontFamily: "var(--font-cormorant)", fontSize: "clamp(22px,3vw,34px)", color: "#F1F0E5", fontWeight: 700, fontStyle: "italic", marginBottom: 28, marginTop: -6 }}
         >
           Ol Pejeta Conservancy, Kenya
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
-          style={{ fontFamily: "var(--font-dm-sans)", fontSize: "clamp(15px,2.2vw,22px)", color: "#E8D5BC", maxWidth: 900, margin: "80px auto 0", lineHeight: 1.7, fontWeight: 700, textShadow: "0 2px 12px rgba(0,0,0,0.5)", textAlign: "center" }}
+        </p>
+        <p
+          className="hero-rise"
+          style={{ animationDuration: "1s", animationDelay: "0.2s", fontFamily: "var(--font-dm-sans)", fontSize: "clamp(15px,2.2vw,22px)", color: "#E8D5BC", maxWidth: 900, margin: "80px auto 0", lineHeight: 1.7, fontWeight: 700, textShadow: "0 2px 12px rgba(0,0,0,0.5)", textAlign: "center" }}
         >
           seven days in one of the most<span className="kenya-hero-break"> </span>extraordinary places on earth.
-        </motion.p>
-        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }} style={{ marginTop: 60 }}>
+        </p>
+        <div className="hero-rise" style={{ animationDuration: "1s", animationDelay: "0.3s", marginTop: 60 }}>
           <a
             href="#invitation"
             style={{ display: "inline-block", padding: "14px 36px", background: "rgba(195,158,136,0.85)", border: "1px solid #C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", fontWeight: 500, transition: "background 0.3s ease" }}
@@ -187,7 +180,7 @@ function KenyaHero() {
           >
             journey with us ↓
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
@@ -892,6 +885,7 @@ export default function KenyaPage() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <div style={{ borderTop: "0.5px solid var(--color-border)" }}>
+              <FaqJsonLd faqs={faqs} />
               {faqs.map((faq, i) => (
                 <FAQItem key={i} question={faq.question} answer={faq.answer} />
               ))}
