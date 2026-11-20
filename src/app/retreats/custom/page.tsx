@@ -317,7 +317,7 @@ export default function CustomRetreatPage() {
                 marginBottom: 56,
               }}
             >
-              what ASHA co-creates for you
+              the ASHA experience
             </h2>
           </FadeIn>
 
