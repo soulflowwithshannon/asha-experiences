@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import posthog from "posthog-js";
 import FadeIn from "@/components/FadeIn";
-import RotatingTrio from "@/components/RotatingTrio";
 
 const CALENDAR_URL = "https://calendar.app.google/Yt1VUQGEuhhEipt59";
 
@@ -44,6 +43,59 @@ const INCLUDED = [
     lead: "No agency. No assistants. No handover to a local coordinator.",
     points: ["with your group from the first airport run", "running the day so you don't have to", "there until the last morning"],
   },
+];
+
+/* The three kinds of client the custom offer is built for. */
+const AUDIENCES = [
+  {
+    image: "/images/Morocco circle.jpeg",
+    alt: "A candlelit long-table dinner in Morocco",
+    eyebrow: "for women-led brands",
+    title: "bring your community somewhere unforgettable",
+    body: "a retreat that feels like your brand, lived for a week. for your customers, ambassadors, creators or the women who built it with you.",
+    examples: ["community and customer retreats", "ambassador and creator trips", "launches and brand experiences"],
+  },
+  {
+    image: "/images/Return to Love group sunset.jpg",
+    alt: "A group of women together at sunset above Lake Atitlán",
+    eyebrow: "for companies",
+    title: "give your team more than an offsite",
+    body: "time away that people actually come back changed from. built around the outcome you need, with the logistics off your plate.",
+    examples: ["leadership and women's leadership offsites", "team resets and incentive trips", "employee wellbeing retreats"],
+  },
+  {
+    image: "/images/women laying down.jpeg",
+    alt: "Women resting together on retreat",
+    eyebrow: "for you",
+    title: "a week that is finally yours",
+    body: "for the woman who holds everything together and rarely gets held. come alone, or bring the friends who get it.",
+    examples: ["high-functioning women running on empty", "corporate women who need to come up for air", "moms who need a real break"],
+  },
+];
+
+const LEADS = [
+  {
+    image: "/images/Ashley (new).JPG",
+    name: "Ashley",
+    role: "co-founder and lead facilitator",
+    bio: "reiki practitioner, sound bath facilitator and life coach who leads the ceremony and sound work on every retreat.",
+  },
+  {
+    image: "/images/Shannon (new).JPG",
+    name: "Shannon",
+    role: "co-founder and lead facilitator",
+    bio: "yoga teacher and somatic guide with a background in psychology, drawing on somatics and embodiment work.",
+  },
+];
+
+
+/* How a custom retreat comes together, from first call to last morning. */
+const PROCESS = [
+  { title: "let's dream together", body: "we explore your vision, your goals, your people and what you want them to take home." },
+  { title: "your custom proposal", body: "we come back with up to three tailored destinations and experience concepts, each shaped around what matters to you." },
+  { title: "align on the details", body: "together we refine your favorite concept, the scope, the logistics and the investment." },
+  { title: "make it official", body: "once you approve, a deposit secures your dates and we start bringing it to life." },
+  { title: "we handle the rest", body: "biweekly check-ins or fully hands-off. we plan, coordinate and facilitate from start to finish." },
 ];
 
 const inputStyle: React.CSSProperties = {
@@ -176,10 +228,10 @@ export default function CustomRetreatPage() {
             custom retreats
           </p>
           <h1 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(30px,5vw,50px)", color: "#F1F0E5", fontWeight: 700, lineHeight: 1.15, marginBottom: 20 }}>
-            you bring the women.<br />we build the week.
+            your vision. our expertise.<br />an experience entirely your own.
           </h1>
-          <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, lineHeight: 1.5, color: "#E8D5BC", maxWidth: 520, margin: "0 auto 32px", textWrap: "balance" }}>
-            from one, to groups of up to 25. your circle, your closest friends, or your team.
+          <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, lineHeight: 1.5, color: "#E8D5BC", maxWidth: 560, margin: "0 auto 32px", textWrap: "balance" }}>
+            retreats built for women-led brands, for companies, and for women who need a week of their own. from one guest to 25.
           </p>
           <a
             href="#enquire"
@@ -199,6 +251,57 @@ export default function CustomRetreatPage() {
             start the conversation →
           </a>
         </div>
+      </section>
+
+      {/* WHO WE BUILD FOR */}
+      <section style={{ background: "var(--color-bg-page)", padding: "88px 32px 92px" }}>
+        <div style={{ maxWidth: 1080, margin: "0 auto" }}>
+          <FadeIn>
+            <div style={{ textAlign: "center", marginBottom: 52 }}>
+              <p className="eyebrow-accent" style={{ marginBottom: 14 }}>who we build for</p>
+              <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(24px,3.2vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, lineHeight: 1.2, marginBottom: 16, textWrap: "balance" }}>
+                for years we have built retreats for our own community. now we build them for yours.
+              </h2>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15.5, lineHeight: 1.6, color: "var(--color-text-body)", maxWidth: 580, margin: "0 auto", textWrap: "balance" }}>
+                the same care, the same depth, the same two people on the ground. shaped around your people and what you want them to carry home.
+              </p>
+            </div>
+          </FadeIn>
+
+          <div className="aud-grid">
+            {AUDIENCES.map((a, i) => (
+              <FadeIn key={a.eyebrow} delay={0.06 * i}>
+                <div style={{ height: "100%", background: "var(--color-bg-surface)", borderRadius: 4, overflow: "hidden" }}>
+                  <div style={{ position: "relative", aspectRatio: "16/10", background: "var(--color-bg-card)" }}>
+                    <Image src={a.image} alt={a.alt} fill sizes="(max-width: 900px) 100vw, 340px" style={{ objectFit: "cover" }} />
+                  </div>
+                  <div style={{ padding: "26px 28px 30px" }}>
+                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-accent)", marginBottom: 14 }}>
+                    {a.eyebrow}
+                  </p>
+                  <h3 style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontWeight: 500, fontSize: 26, color: "var(--color-text-headline)", lineHeight: 1.2, marginBottom: 14, textWrap: "balance" }}>
+                    {a.title}
+                  </h3>
+                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14.5, lineHeight: 1.7, color: "var(--color-text-body)", marginBottom: 18 }}>
+                    {a.body}
+                  </p>
+                  <ul style={{ listStyle: "none", padding: 0, margin: 0, borderTop: "0.5px solid var(--color-border)" }}>
+                    {a.examples.map((ex) => (
+                      <li key={ex} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13.5, lineHeight: 1.5, color: "var(--color-text-body)", padding: "10px 0", borderBottom: "0.5px solid var(--color-border)" }}>
+                        {ex}
+                      </li>
+                    ))}
+                  </ul>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+        <style>{`
+          .aud-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+          @media (max-width: 900px) { .aud-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; } }
+        `}</style>
       </section>
 
       {/* WHAT'S INCLUDED */}
@@ -232,7 +335,7 @@ export default function CustomRetreatPage() {
                   textWrap: "balance",
                 }}
               >
-                every part of it, except deciding who to invite
+                every part of it, except deciding who comes
               </h2>
             </div>
           </FadeIn>
@@ -341,74 +444,119 @@ export default function CustomRetreatPage() {
         <div style={{ position: "absolute", inset: 0, background: "rgba(45,37,33,0.32)" }} />
         <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "flex-end", padding: "0 32px 40px" }}>
           <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(20px,3vw,30px)", color: "#F1F0E5", maxWidth: 620, margin: "0 auto", textAlign: "center", lineHeight: 1.35, textWrap: "balance" }}>
-            we have run this week for strangers who left as family. we can run it for the women you
-            already love.
+            we have run this week for strangers who left as family. we can run it for your team, your
+            community, or just for you.
           </p>
         </div>
       </section>
 
-      {/* WHO IT'S FOR */}
-      <section style={{ background: "var(--color-bg-page)", padding: "84px 32px" }}>
-        <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
+      {/* WHO LEADS IT */}
+      <section style={{ background: "var(--color-bg-surface)", padding: "88px 32px 92px" }}>
+        <div style={{ maxWidth: 1000, margin: "0 auto" }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(24px,3.2vw,30px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 18, textWrap: "balance" }}>
-              built around the experience you want
+            <div style={{ textAlign: "center", marginBottom: 44 }}>
+              <p className="eyebrow-accent" style={{ marginBottom: 14 }}>who leads it</p>
+              <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(24px,3.2vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, lineHeight: 1.2, marginBottom: 14, textWrap: "balance" }}>
+                with you the whole way
+              </h2>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15.5, lineHeight: 1.6, color: "var(--color-text-body)", maxWidth: 520, margin: "0 auto", textWrap: "balance" }}>
+                both of us are there every day, and you have one point of contact from the first call to the last goodbye.
+              </p>
+            </div>
+          </FadeIn>
+          <div className="lead-grid">
+            {LEADS.map((l, i) => (
+              <FadeIn key={l.name} delay={0.06 * i}>
+                <div className="lead-card" style={{ background: "var(--color-bg-page)", borderRadius: 4, overflow: "hidden", height: "100%" }}>
+                  <div style={{ position: "relative", background: "var(--color-bg-card)" }} className="lead-photo">
+                    <Image src={l.image} alt={`Portrait of ${l.name}`} fill sizes="(max-width: 760px) 100vw, 220px" style={{ objectFit: "cover", objectPosition: "center 25%" }} />
+                  </div>
+                  <div style={{ padding: "26px 26px 28px" }}>
+                    <h3 style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontWeight: 500, fontSize: 32, color: "var(--color-text-headline)", lineHeight: 1.1, marginBottom: 4 }}>{l.name}</h3>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, letterSpacing: "0.06em", color: "var(--color-accent)", marginBottom: 12 }}>{l.role}</p>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14.5, lineHeight: 1.65, color: "var(--color-text-body)", margin: 0 }}>{l.bio}</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+        <style>{`
+          .lead-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+          .lead-card { display: grid; grid-template-columns: 200px 1fr; }
+          .lead-photo { min-height: 260px; }
+          @media (max-width: 900px) { .lead-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; } }
+          @media (max-width: 520px) {
+            .lead-card { grid-template-columns: 1fr; }
+            .lead-photo { min-height: 0; aspect-ratio: 4/3; }
+          }
+        `}</style>
+      </section>
+
+      {/* THE PROCESS */}
+      <section style={{ background: "var(--color-bg-page)", borderTop: "0.5px solid var(--color-border)", padding: "72px 32px 84px" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <FadeIn>
+            <p className="eyebrow-accent" style={{ marginBottom: 14, textAlign: "center" }}>how it works</p>
+            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(24px,3.2vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, textAlign: "center", marginBottom: 12, textWrap: "balance" }}>
+              from vision to experience
             </h2>
-            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15.5, lineHeight: 1.5, color: "var(--color-text-body)", maxWidth: 560, margin: "0 auto 40px", textWrap: "balance" }}>
-              from a personal customized retreat for one, to groups of up to 25.
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15.5, lineHeight: 1.6, color: "var(--color-text-body)", textAlign: "center", marginBottom: 44 }}>
+              a collaborative process, designed around you.
             </p>
           </FadeIn>
 
-          <FadeIn delay={0.1}>
-            <div className="who-bubbles" style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>
-              {[
-                "a solo reset, just you",
-                "your women's circle",
-                "a group of friends",
-                "a company offsite",
-                "a milestone — a birthday, a divorce, a beginning",
-              ].map((who) => (
-                <p
-                  key={who}
-                  style={{
-                    padding: "10px 18px",
-                    border: "0.5px solid var(--color-bg-card)",
-                    borderRadius: 2,
-                    background: "var(--color-bg-surface)",
-                    fontFamily: "var(--font-dm-sans)",
-                    fontSize: 13.5,
-                    color: "var(--color-text-body)",
-                  }}
-                >
-                  {who}
-                </p>
-              ))}
-            </div>
+          <ol style={{ listStyle: "none", padding: 0, margin: 0, borderTop: "0.5px solid var(--color-bg-card)" }}>
+            {PROCESS.map((step, i) => (
+              <FadeIn key={step.title} delay={0.04}>
+                <li className="proc-row" style={{ display: "flex", gap: 22, alignItems: "flex-start", padding: "24px 0", borderBottom: "0.5px solid var(--color-bg-card)" }}>
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      flex: "0 0 auto",
+                      width: 46,
+                      height: 46,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      background: "var(--color-bg-card)",
+                      borderRadius: 4,
+                      fontFamily: "var(--font-dm-sans)",
+                      fontSize: 15,
+                      color: "var(--color-text-headline)",
+                    }}
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <h3 style={{ fontFamily: "var(--font-fraunces)", fontWeight: 700, fontSize: 19, color: "var(--color-text-headline)", lineHeight: 1.3, marginBottom: 6 }}>
+                      {step.title}
+                    </h3>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.65, color: "var(--color-text-body)", margin: 0 }}>
+                      {step.body}
+                    </p>
+                  </div>
+                </li>
+              </FadeIn>
+            ))}
+          </ol>
+
+          <FadeIn>
+            <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(20px,2.6vw,26px)", color: "var(--color-accent)", textAlign: "center", marginTop: 44, lineHeight: 1.35, textWrap: "balance" }}>
+              your vision. our expertise. an experience entirely your own.
+            </p>
           </FadeIn>
         </div>
-
         <style>{`
-          /* Wrapping left a ragged 2-2-1 on a phone. Stacked full width they
-             read as a list instead of leftovers. */
-          @media (max-width: 640px) {
-            .who-bubbles { flex-direction: column; align-items: stretch; gap: 10px; }
-            .who-bubbles p { text-align: center; }
+          @media (max-width: 520px) {
+            .proc-row { gap: 16px !important; }
           }
         `}</style>
-
-        <RotatingTrio />
       </section>
 
       {/* THE FORM */}
       <section id="enquire" style={{ background: "var(--color-bg-surface)", padding: "84px 32px 92px", scrollMarginTop: 80 }}>
         <div style={{ maxWidth: 640, margin: "0 auto" }}>
-          <FadeIn>
-            <p className="eyebrow-accent" style={{ marginBottom: 14, textAlign: "center" }}>tell us about it</p>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,3.6vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, textAlign: "center", marginBottom: 40, textWrap: "balance" }}>
-              let&apos;s start planning your retreat
-            </h2>
-          </FadeIn>
-
           <FadeIn delay={0.05}>
             <div style={{ position: "relative", aspectRatio: "16/7", borderRadius: 2, overflow: "hidden", marginBottom: 36, background: "var(--color-bg-card)" }}>
               <Image
@@ -469,10 +617,11 @@ export default function CustomRetreatPage() {
                       <label htmlFor="cr-who" style={labelStyle}>who&apos;s coming</label>
                       <select id="cr-who" value={who} onChange={(e) => setWho(e.target.value)} style={{ ...inputStyle, minHeight: 44 }}>
                         <option value="">choose one</option>
+                        <option value="my brand's community">my brand&apos;s community</option>
+                        <option value="my company">my company or team</option>
                         <option value="just me">just me</option>
-                        <option value="my women's circle">my women&apos;s circle</option>
                         <option value="a group of friends">a group of friends</option>
-                        <option value="my company">my company</option>
+                        <option value="my women's circle">my women&apos;s circle</option>
                         <option value="not sure yet">not sure yet</option>
                       </select>
                     </div>
@@ -482,9 +631,9 @@ export default function CustomRetreatPage() {
                     </div>
                   </div>
 
-                  {who === "my company" && (
+                  {(who === "my company" || who === "my brand's community") && (
                     <div style={{ display: "flex", flexDirection: "column", gap: 7, background: "var(--color-bg-surface)", border: "0.5px solid var(--color-border)", borderRadius: 2, padding: 18 }}>
-                      <label htmlFor="cr-company" style={labelStyle}>company name</label>
+                      <label htmlFor="cr-company" style={labelStyle}>{who === "my company" ? "company name" : "brand name"}</label>
                       <input id="cr-company" type="text" value={company} onChange={(e) => setCompany(e.target.value)} style={inputStyle} />
                       <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, lineHeight: 1.7, color: "var(--color-text-body)", marginTop: 4 }}>
                         we can invoice the company and work to a procurement timeline — say the word on the call.

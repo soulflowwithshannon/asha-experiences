@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Custom Retreats — Built Around Your People",
+  title: "Custom Retreats for Brands, Companies & You",
   description:
-    "A retreat built around your group, for one, or a group of up to 25. Your circle, your friends, or your team — designed and hosted by Ashley and Shannon.",
+    "Custom retreats for women-led brands, companies and women who need a week of their own. From one guest to 25, designed and hosted by Ashley and Shannon.",
   keywords: [
     "custom women's retreat",
     "private retreat for women",
@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     "plan a retreat for my group",
     "retreat planner for small groups",
     "custom wellness retreat",
+    "brand community retreat",
+    "women's leadership retreat",
+    "retreat for moms",
   ],
   alternates: {
     canonical: "/retreats/custom",
@@ -22,14 +25,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Custom Retreats — ASHA Experiences",
     description:
-      "A retreat built around your group, for one, or a group of up to 25. Designed and hosted by Ashley and Shannon.",
+      "Custom retreats for women-led brands, companies and women who need a week of their own. Designed and hosted by Ashley and Shannon.",
     url: "https://ashaexperiences.com/retreats/custom",
     images: [{ url: "/images/ReturnToLove circle.jpg", width: 1200, height: 800, alt: "A custom ASHA retreat circle" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Custom Retreats — ASHA Experiences",
-    description: "A retreat built around your group, for one, or a group of up to 25.",
+    description: "Custom retreats for women-led brands, companies and women who need a week of their own.",
     images: ["/images/ReturnToLove circle.jpg"],
   },
 };
