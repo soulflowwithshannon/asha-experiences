@@ -254,18 +254,12 @@ export default function CustomRetreatPage() {
       </section>
 
       {/* WHO WE BUILD FOR */}
-      <section style={{ background: "var(--color-bg-page)", padding: "88px 32px 92px" }}>
+      <section style={{ background: "var(--color-bg-page)", padding: "56px 32px 92px" }}>
         <div style={{ maxWidth: 1080, margin: "0 auto" }}>
           <FadeIn>
-            <div style={{ textAlign: "center", marginBottom: 52 }}>
-              <p className="eyebrow-accent" style={{ marginBottom: 14 }}>who we build for</p>
-              <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(24px,3.2vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, lineHeight: 1.2, marginBottom: 16, textWrap: "balance" }}>
-                for years we have built retreats for our own community. now we build them for yours.
-              </h2>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15.5, lineHeight: 1.6, color: "var(--color-text-body)", maxWidth: 580, margin: "0 auto", textWrap: "balance" }}>
-                the same care, the same depth, the same two people on the ground. shaped around your people and what you want them to carry home.
-              </p>
-            </div>
+            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(24px,3.2vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, lineHeight: 1.2, textAlign: "center", marginBottom: 44 }}>
+              who we build for
+            </h2>
           </FadeIn>
 
           <div className="aud-grid">
@@ -309,35 +303,22 @@ export default function CustomRetreatPage() {
           list rather than a grid of bordered cards: identical boxes read as
           box soup, and a card stretching to match its row partner trails dead
           space whatever its padding. Rows here size to their own content. */}
-      <section style={{ background: "#2D2521", padding: "96px 32px 104px" }}>
+      <section style={{ background: "#2D2521", padding: "56px 32px 104px" }}>
         <div style={{ maxWidth: 1000, margin: "0 auto" }}>
           <FadeIn>
-            <div style={{ textAlign: "center", marginBottom: 72 }}>
-              <p
-                style={{
-                  fontFamily: "var(--font-dm-sans)",
-                  fontSize: 11,
-                  letterSpacing: "0.16em",
-                  textTransform: "uppercase",
-                  color: "#C39E88",
-                  marginBottom: 18,
-                }}
-              >
-                what&apos;s included
-              </p>
-              <h2
-                style={{
-                  fontFamily: "var(--font-fraunces)",
-                  fontSize: "clamp(18px,2vw,22px)",
-                  color: "#F1F0E5",
-                  fontWeight: 700,
-                  lineHeight: 1.2,
-                  textWrap: "balance",
-                }}
-              >
-                every part of it, except deciding who comes
-              </h2>
-            </div>
+            <h2
+              style={{
+                fontFamily: "var(--font-fraunces)",
+                fontSize: "clamp(24px,3.2vw,32px)",
+                color: "#F1F0E5",
+                fontWeight: 700,
+                lineHeight: 1.2,
+                textAlign: "center",
+                marginBottom: 56,
+              }}
+            >
+              what ASHA co-creates for you
+            </h2>
           </FadeIn>
 
           <div>
@@ -435,11 +416,11 @@ export default function CustomRetreatPage() {
       {/* PROOF — the page was 2,900px of text with one photo on it */}
       <section style={{ position: "relative", height: "clamp(320px,46vw,520px)", overflow: "hidden" }}>
         <Image
-          src="/images/group hug.jpg"
-          alt="Women laughing together on an ASHA retreat"
+          src="/images/ReturnToLove girls group 2.jpg"
+          alt="The Return to Love group celebrating together with arms raised"
           fill
           sizes="100vw"
-          style={{ objectFit: "cover", objectPosition: "center 32%" }}
+          style={{ objectFit: "cover", objectPosition: "center 45%" }}
         />
         <div style={{ position: "absolute", inset: 0, background: "rgba(45,37,33,0.32)" }} />
         <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "flex-end", padding: "0 32px 40px" }}>
@@ -451,7 +432,7 @@ export default function CustomRetreatPage() {
       </section>
 
       {/* WHO LEADS IT */}
-      <section style={{ background: "var(--color-bg-surface)", padding: "88px 32px 92px" }}>
+      <section style={{ background: "var(--color-bg-surface)", padding: "56px 32px 92px" }}>
         <div style={{ maxWidth: 1000, margin: "0 auto" }}>
           <FadeIn>
             <div style={{ textAlign: "center", marginBottom: 44 }}>
@@ -494,7 +475,7 @@ export default function CustomRetreatPage() {
       </section>
 
       {/* THE PROCESS */}
-      <section style={{ background: "var(--color-bg-page)", borderTop: "0.5px solid var(--color-border)", padding: "72px 32px 84px" }}>
+      <section style={{ background: "var(--color-bg-page)", borderTop: "0.5px solid var(--color-border)", padding: "56px 32px 84px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <FadeIn>
             <p className="eyebrow-accent" style={{ marginBottom: 14, textAlign: "center" }}>how it works</p>
