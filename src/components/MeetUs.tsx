@@ -3,7 +3,7 @@
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 
-const CALENDAR_URL = "https://calendar.app.google/Yt1VUQGEuhhEipt59";
+export const CALENDAR_URL = "https://calendar.app.google/Yt1VUQGEuhhEipt59";
 const INSTAGRAM_URL = "https://instagram.com/asha_experiences";
 
 export default function MeetUs({

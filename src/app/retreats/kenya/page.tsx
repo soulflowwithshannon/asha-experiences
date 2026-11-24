@@ -5,15 +5,12 @@ import { IdentificationCard, Syringe, ShieldCheck, Airplane, Shower, Drop, Spark
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import { useRef, useState, ReactNode } from "react";
+import { useEffect, useRef, useState, ReactNode } from "react";
 import FadeIn from "@/components/FadeIn";
 import CallHerHome from "@/components/CallHerHome";
 import Testimonials, { retreatQuotes } from "@/components/Testimonials";
 import VideoPair from "@/components/VideoPair";
-import HowItWorks from "@/components/HowItWorks";
-import Divider from "@/components/Divider";
-import MeetUs from "@/components/MeetUs";
-import GuidesCompact from "@/components/GuidesCompact";
+import { CALENDAR_URL } from "@/components/MeetUs";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/AnimatedText";
 
@@ -319,17 +316,8 @@ const faqs: { question: string; answer: ReactNode }[] = [
       <div>
         <p style={{ marginBottom: 16 }}>fly into Jomo Kenyatta International Airport (NBO) in Nairobi, Kenya.</p>
         <p style={{ marginBottom: 8 }}><strong style={{ fontWeight: 600 }}>Arrive:</strong> group transport to Ol Pejeta Conservancy departs the morning of November 28th — we recommend arriving in Nairobi at least one day before.</p>
-        <p><strong style={{ fontWeight: 600 }}>Depart:</strong> group transport back to Nairobi is provided on December 4th.</p>
-      </div>
-    ),
-  },
-  {
-    question: "can I arrive early or stay longer in Kenya?",
-    answer: (
-      <div>
-        <p style={{ marginBottom: 12 }}>yes, and we recommend it.</p>
-        <p style={{ marginBottom: 12 }}>the official retreat runs November 28 – December 4, 2027. we suggest arriving the night before (November 27) and staying in Nairobi — we&apos;ll all take transport together to the retreat on the 28th. return transport back to Nairobi on December 4 is included.</p>
-        <p>want to arrive a few days early to explore Nairobi or ease into the time difference? we can coordinate that with the group. want to stay on longer or extend your trip elsewhere? just reach out — we&apos;ll figure it out together.</p>
+        <p style={{ marginBottom: 12 }}><strong style={{ fontWeight: 600 }}>Depart:</strong> group transport back to Nairobi is provided on December 4th.</p>
+        <p>want to arrive a few days early to explore Nairobi or ease into the time difference, or stay on and extend your trip? just reach out and we&apos;ll plan it with you.</p>
       </div>
     ),
   },
@@ -353,16 +341,144 @@ const faqs: { question: string; answer: ReactNode }[] = [
       </div>
     ),
   },
-  {
-    question: "can dietary restrictions be accommodated?",
-    answer: <p>yes. the retreat center can accommodate most dietary preferences — vegetarian, vegan, gluten-free, and dairy-free. we&apos;ll ask for your dietary needs after booking.</p>,
-  },
-  {
-    question: "will there be free time?",
-    answer: <p>absolutely. this retreat blends guided experiences with spaciousness so you can rest, reflect, or connect as you need. your energy is honored every step of the way.</p>,
-  },
 
 ];
+
+/* ---------- back half, consolidated (Nov 2026) ----------
+   proof → the cottage (+ booking steps) → meet us (+ videos + call)
+   → questions → closing, plus a sticky booking bar on phones. */
+
+const TESTIMONIAL_VIDEO = "https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Testimonials.mp4";
+
+function TestimonialVideo() {
+  const [playing, setPlaying] = useState(false);
+  return (
+    <div style={{ maxWidth: 720, margin: "0 auto" }}>
+      {playing ? (
+        <video controls autoPlay playsInline style={{ width: "100%", display: "block", borderRadius: 8 }}>
+          <source src={TESTIMONIAL_VIDEO} type="video/mp4" />
+        </video>
+      ) : (
+        <button onClick={() => setPlaying(true)} aria-label="play the testimonial video" style={{ position: "relative", display: "block", width: "100%", aspectRatio: "16/9", border: "none", padding: 0, borderRadius: 8, overflow: "hidden", cursor: "pointer", background: "#2D2521" }}>
+          <Image src="/images/ReturnToLove group hug.jpg" alt="" fill sizes="720px" style={{ objectFit: "cover", opacity: 0.8 }} />
+          <span style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12, background: "linear-gradient(to top, rgba(45,37,33,0.65), rgba(45,37,33,0.1))" }}>
+            <span style={{ width: 64, height: 64, borderRadius: "50%", background: "var(--color-accent)", color: "#FFFCF5", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, paddingLeft: 4 }}>▶</span>
+            <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, fontWeight: 600, color: "#FFFCF5", letterSpacing: "0.04em" }}>hear it from them</span>
+          </span>
+        </button>
+      )}
+    </div>
+  );
+}
+
+const bookingSteps = [
+  { title: "reserve your spot", body: "pay in full, or hold your spot with a $1,000 deposit." },
+  { title: "you hear from us", body: "Ashley and Shannon reach out personally, ask about dietary needs and send your pre-travel guide." },
+  { title: "we meet you in Nairobi", body: "group transport to Ol Pejeta is included, and we're with you all week." },
+];
+
+function BookingSteps() {
+  return (
+    <ol className="kenya-steps" style={{ listStyle: "none", padding: 0, margin: "48px auto 0", maxWidth: 1000, display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+      {bookingSteps.map((st, i) => (
+        <li key={st.title} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
+          <span style={{ flexShrink: 0, width: 30, height: 30, borderRadius: "50%", border: "1px solid var(--color-accent)", color: "var(--color-accent)", fontFamily: "var(--font-cormorant)", fontSize: 18, display: "flex", alignItems: "center", justifyContent: "center" }}>{i + 1}</span>
+          <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13.5, lineHeight: 1.6, color: "var(--color-text-body)" }}>
+            <strong style={{ display: "block", color: "var(--color-text-headline)", fontSize: 14.5, fontWeight: 600 }}>{st.title}</strong>
+            {st.body}
+          </span>
+        </li>
+      ))}
+      <style>{`@media(max-width:760px){.kenya-steps{grid-template-columns:1fr!important;max-width:440px!important}}`}</style>
+    </ol>
+  );
+}
+
+const guideIntros = [
+  { name: "Ashley", photo: "/images/Ashley (new).JPG", role: "sound healer, reiki practitioner & dj", line: "she helps your body do what it's been holding off on: exhale." },
+  { name: "Shannon", photo: "/images/Shannon (new).JPG", role: "somatic guide & circle facilitator", line: "she holds space for women to come back to themselves, with softness, strength and soul." },
+];
+
+const clayButton: React.CSSProperties = { display: "inline-block", padding: "13px 30px", background: "var(--color-accent)", border: "1px solid var(--color-accent)", color: "#FFFCF5", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center" };
+
+function MeetSection() {
+  return (
+    <section id="meet" style={{ background: "var(--color-bg-surface)", padding: "88px 24px" }}>
+      <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
+        <FadeIn>
+          <p className="eyebrow-accent" style={{ marginBottom: 14 }}>who&apos;s holding the space</p>
+          <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 40 }}>
+            meet Shannon &amp; Ashley
+          </h2>
+        </FadeIn>
+        <div className="kenya-guides" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32, marginBottom: 56 }}>
+          {guideIntros.map((g) => (
+            <FadeIn key={g.name}>
+              <div style={{ display: "flex", alignItems: "center", gap: 18, textAlign: "left" }}>
+                <div style={{ position: "relative", width: 96, height: 96, flexShrink: 0, borderRadius: "50%", overflow: "hidden", border: "1px solid var(--color-accent)" }}>
+                  <Image src={g.photo} alt={g.name} fill sizes="96px" style={{ objectFit: "cover", objectPosition: "center 25%" }} />
+                </div>
+                <div>
+                  <p style={{ fontFamily: "var(--font-heading)", fontSize: 22, color: "var(--color-text-headline)", fontWeight: 700 }}>{g.name}</p>
+                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-accent)", marginBottom: 6 }}>{g.role}</p>
+                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.6, color: "var(--color-text-body)" }}>{g.line}</p>
+                </div>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+        <FadeIn>
+          <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontWeight: 500, fontSize: "clamp(22px,3vw,28px)", color: "var(--color-text-headline)", marginBottom: 24 }}>
+            to the woman on the fence
+          </p>
+        </FadeIn>
+      </div>
+
+      <VideoPair
+        orientation="vertical"
+        labelTone="dark"
+        background="transparent"
+        padding="0"
+        clips={[
+          { file: "Ashley women on the fence.MOV", label: "ashley" },
+          { file: "Shannon to the women.MOV", label: "shannon" },
+        ]}
+      />
+
+      <FadeIn>
+        <div style={{ textAlign: "center", marginTop: 56, maxWidth: 560, marginLeft: "auto", marginRight: "auto" }}>
+          <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(22px,3vw,28px)", color: "var(--color-text-headline)", lineHeight: 1.25, marginBottom: 16, textWrap: "balance" }}>
+            you&apos;re thinking about flying to Kenya. that&apos;s a big thing to sit with on your own.
+          </p>
+          <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
+            this one is the furthest out and the biggest leap, so we&apos;d rather talk to you first. just an honest conversation about whether this is the right experience for you.
+          </p>
+          <a href={CALENDAR_URL} target="_blank" rel="noopener noreferrer" style={clayButton}>book a call with us →</a>
+        </div>
+      </FadeIn>
+      <style>{`@media(max-width:700px){.kenya-guides{grid-template-columns:1fr!important;gap:24px!important;max-width:420px;margin-left:auto;margin-right:auto}}`}</style>
+    </section>
+  );
+}
+
+/** Phones only: slides up once she scrolls past the hero. */
+function StickyBookBar() {
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setShow(window.scrollY > window.innerHeight * 0.8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  const pill: React.CSSProperties = { flex: 1, padding: "11px 10px", borderRadius: 999, fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 600, textAlign: "center", textDecoration: "none" };
+  return (
+    <div className="kenya-sticky" aria-hidden={!show} style={{ position: "fixed", left: 12, right: 84, bottom: 14, zIndex: 90, display: "none", gap: 8, padding: 6, borderRadius: 999, background: "rgba(45,37,33,0.94)", backdropFilter: "blur(8px)", boxShadow: "0 8px 24px rgba(0,0,0,0.25)", transform: show ? "translateY(0)" : "translateY(140%)", transition: "transform 0.35s ease" }}>
+      <a href="#rooms" tabIndex={show ? 0 : -1} style={{ ...pill, background: "var(--color-accent)", color: "#FFFCF5" }}>reserve</a>
+      <a href={CALENDAR_URL} target="_blank" rel="noopener noreferrer" tabIndex={show ? 0 : -1} style={{ ...pill, border: "1px solid #E8D5BC", color: "#F1F0E5" }}>book a call</a>
+      <style>{`@media (max-width: 760px) { .kenya-sticky { display: flex !important; } }`}</style>
+    </div>
+  );
+}
 
 export default function KenyaPage() {
   return (
@@ -376,28 +492,17 @@ export default function KenyaPage() {
           <StaggerBlock>
             <StaggerChild>
               <p style={{ marginBottom: 28 }}>
-                <strong>you&apos;ve been the one holding it together for so long, you don&apos;t even remember what it feels like to put it down.</strong><br />
-                <br />
-                because somewhere along the way,<br />
-                <em>letting go started to feel like losing.</em>
-              </p>
-            </StaggerChild>
-            <StaggerChild>
-              <p style={{ marginBottom: 28 }}>
-                so you plan.<br />
-                you prepare.<br />
-                you stay one step ahead of everything that might catch you off guard.<br /><br />
-                <em>and it works.</em><br />
-                <strong>until it doesn&apos;t.</strong>
+                <strong>you&apos;ve been the one holding it together for so long, you don&apos;t remember what it feels like to put it down.</strong>
               </p>
             </StaggerChild>
             <StaggerChild>
               <p style={{ marginBottom: 40 }}>
-                until you&apos;re <u>exhausted by your own competence</u>{" "}and quietly starving for something you can&apos;t organize your way into.
+                so you plan. you prepare. you stay one step ahead.<br />
+                <em>and it works.</em> <strong>until it doesn&apos;t.</strong><br />
+                until you&apos;re <strong>exhausted by your own competence.</strong>
               </p>
             </StaggerChild>
 
-            {/* Divider 1 */}
             <StaggerChild>
               <div style={{ display: "flex", alignItems: "center", gap: 12, margin: "0 0 40px" }}>
                 <div style={{ flex: 1, height: "0.5px", background: "#D4C8AA" }} />
@@ -411,56 +516,21 @@ export default function KenyaPage() {
                 <strong>kenya doesn&apos;t care about your plans.</strong>
                 <br /><br />
                 the lion moves when she wants to move.<br />
-                the sun sets and still rises.<br />
-                the land is proof that <u>the most extraordinary things on earth are not controlled by anyone.</u>
-              </p>
-            </StaggerChild>
-            <StaggerChild>
-              <p style={{ marginBottom: 40 }}>
-                something about being inside of this land<br />
-                <em>not watching it through a screen —</em><br />
-                <strong>cracks something open.</strong><br />
-                <br />
-                the need to manage.<br />
-                to anticipate.<br />
-                to stay ready.<br />it just... loosens.<br />
-                <em>maybe for the first time in years.</em>
-              </p>
-            </StaggerChild>
-
-            {/* Divider 2 */}
-            <StaggerChild>
-              <div style={{ display: "flex", alignItems: "center", gap: 12, margin: "0 0 40px" }}>
-                <div style={{ flex: 1, height: "0.5px", background: "#D4C8AA" }} />
-                <span style={{ color: "#A67C52", fontSize: 14 }}>✦</span>
-                <div style={{ flex: 1, height: "0.5px", background: "#D4C8AA" }} />
-              </div>
-            </StaggerChild>
-
-            <StaggerChild>
-              <p style={{ marginBottom: 28 }}>
-                because this isn&apos;t the matrix.<br />
-                <em>there is no inbox.</em><br />
-                <em>no algorithm.</em><br />
-                no performance of a life that looks good from the outside.
+                the sun sets and still rises.
               </p>
             </StaggerChild>
             <StaggerChild>
               <p style={{ marginBottom: 28 }}>
-                there is just <strong>90,000 acres of open savannah</strong> and you,<br />
-                standing in the middle of it,<br />
-                realizing your nervous system has been waiting your whole life to feel this.
+                no inbox. no algorithm.<br />
+                just <strong>90,000 acres of open savannah</strong> and you, standing in the middle of it.
+                <br /><br />
+                <em>the need to manage loosens, maybe for the first time in years.</em>
               </p>
             </StaggerChild>
             <StaggerChild>
               <p style={{ marginBottom: 0 }}>
-                <strong><u>present.</u></strong><br />
-                <strong><u>free.</u></strong><br />
-                <strong><u>awake.</u></strong>
-                <br /><br />
-                this is what it feels like<br /><em>to be alive outside of it all.</em>
-                <br /><br />
-                and once you feel it — <em>really feel it —</em><br /><strong>you can&apos;t unfeel it.</strong>
+                <strong>present. free. awake.</strong><br />
+                and once you feel it, <em>you can&apos;t unfeel it.</em>
               </p>
             </StaggerChild>
           </StaggerBlock>
@@ -737,33 +807,12 @@ export default function KenyaPage() {
           <Testimonials items={retreatQuotes} />
 
           <FadeIn delay={0.1}>
-            <div style={{ maxWidth: 900, margin: "0 auto", position: "relative", borderRadius: 8, overflow: "hidden" }}>
-              <video controls preload="metadata" style={{ width: "100%", display: "block", borderRadius: 8 }}>
-                <source src="https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/Testimonials.mp4" type="video/mp4" />
-              </video>
-            </div>
+            <TestimonialVideo />
           </FadeIn>
 
 
         </div>
       </section>
-
-      {/* DIVIDER */}
-      <div style={{ background: "#2D2521", height: 100, display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(18px,2.5vw,24px)", color: "#EFE6D3", textAlign: "center" }}>
-          ↑ this is what we created ASHA for.
-        </p>
-      </div>
-
-      {/* SECTION 7 — GUIDES */}
-      <GuidesCompact darkQuote />
-
-      {/* DIVIDER */}
-      <div style={{ background: "#2D2521", height: 100, display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(18px,2.5vw,24px)", color: "#EFE6D3", textAlign: "center" }}>
-          now, the place that holds all of this.
-        </p>
-      </div>
 
       {/* SECTION 9 — THE ROOMS */}
       <section id="rooms" style={{ background: "#FFFCF5", padding: "80px 32px" }}>
@@ -866,13 +915,14 @@ export default function KenyaPage() {
                 </div>
               </motion.div>
             </FadeIn>
+            <BookingSteps />
           </div>
         </div>
         <style>{`@media(max-width:860px){.cottage-card{grid-template-columns:1fr!important;gap:28px!important;padding:28px!important}} @media(max-width:640px){.mobile-break{display:block}}`}</style>
       </section>
 
-      {/* SECTION — HOW IT WORKS */}
-      <HowItWorks arrival="from Nairobi" background="var(--color-bg-page)" />
+      {/* MEET US + VIDEOS + CALL (replaces guides, "before you book" and the videos section) */}
+      <MeetSection />
 
       {/* SECTION 8 — FAQ */}
       <section style={{ background: "#F5F1E6", padding: "80px 32px 80px" }}>
@@ -891,30 +941,12 @@ export default function KenyaPage() {
               ))}
             </div>
           </FadeIn>
+          <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", textAlign: "center", marginTop: 36 }}>
+            still wondering about something?{" "}
+            <a href={CALENDAR_URL} target="_blank" rel="noopener noreferrer" style={{ color: "var(--color-accent)", fontWeight: 600, textDecoration: "none" }}>book a call with us →</a>
+          </p>
         </div>
       </section>
-
-      <MeetUs
-        headline="you're thinking about flying to Kenya. that's a big thing to sit with on your own."
-        body="this one is the furthest out and the biggest leap, so we'd rather talk to you first. just an honest conversation about whether this is the right experience for you."
-        spaceAbove={56}
-        spaceBelow={56}
-      />
-
-      <Divider background="var(--color-bg-page)" />
-
-      {/* SECTION — ON THE FENCE (two story-format videos) */}
-      <VideoPair
-        headline="to the woman on the fence"
-        orientation="vertical"
-        labelTone="dark"
-        padding="16px 32px 80px"
-        clips={[
-          { file: "Ashley women on the fence.MOV", label: "ashley" },
-          { file: "Shannon to the women.MOV", label: "shannon" },
-        ]}
-      />
-
 
       {/* SECTION 10 — CLOSING CTA */}
       <section style={{ position: "relative", padding: "140px 32px", background: "#2D2521", textAlign: "center", overflow: "hidden" }}>
@@ -938,10 +970,14 @@ export default function KenyaPage() {
               <a href="#rooms" style={{ display: "inline-block", padding: "12px 32px", background: "#C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 700, letterSpacing: "0.04em", textDecoration: "none", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "#b08d78")} onMouseLeave={(e) => (e.currentTarget.style.background = "#C39E88")}>
                 reserve my spot →
               </a>
+              <a href={CALENDAR_URL} target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 32px", border: "1px solid #E8D5BC", color: "#F1F0E5", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none" }}>
+                book a call first
+              </a>
             </div>
           </FadeIn>
         </div>
       </section>
+      <StickyBookBar />
     </main>
   );
 }
