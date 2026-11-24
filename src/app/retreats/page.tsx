@@ -106,7 +106,7 @@ function Card({ r, i }: { r: Retreat; i: number }) {
   const inner = (
     <>
       <div className="rc-img">
-        <Image src={r.image} alt={r.alt} fill sizes="(max-width: 760px) 100vw, 540px" style={{ objectFit: "cover", objectPosition: r.position ?? "center" }} priority={i < 2} />
+        <Image src={r.image} alt={r.alt} fill sizes="(max-width: 760px) 100vw, (max-width: 1080px) 380px, 300px" style={{ objectFit: "cover", objectPosition: r.position ?? "center" }} priority={i < 2} />
       </div>
       <div className="rc-shade" aria-hidden="true" />
       <span className="rc-status">{r.status}</span>
@@ -161,24 +161,28 @@ export default function RetreatsPage() {
       </section>
 
       <style>{`
-        .rc-grid { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-        .rc { position: relative; display: block; aspect-ratio: 4 / 5; border-radius: 10px; overflow: hidden; text-decoration: none; background: #2D2521; box-shadow: 0 10px 30px rgba(45,37,33,0.12); transition: transform 0.35s ease, box-shadow 0.35s ease; }
+        .rc-grid { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+        .rc { position: relative; display: block; aspect-ratio: 3 / 4.6; border-radius: 10px; overflow: hidden; text-decoration: none; background: #2D2521; box-shadow: 0 10px 30px rgba(45,37,33,0.12); transition: transform 0.35s ease, box-shadow 0.35s ease; }
         .rc:hover { transform: translateY(-6px); box-shadow: 0 22px 48px rgba(45,37,33,0.22); }
         .rc:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; }
         .rc-img { position: absolute; inset: 0; transition: transform 0.9s ease; }
         .rc:hover .rc-img { transform: scale(1.06); }
         .rc-shade { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(45,37,33,0.05) 35%, rgba(45,37,33,0.82) 100%); }
-        .rc-status { position: absolute; top: 18px; left: 18px; font-family: var(--font-dm-sans); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #2D2521; background: rgba(255,252,245,0.92); padding: 6px 12px; border-radius: 999px; }
-        .rc-body { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px; color: #F1F0E5; }
+        .rc-status { position: absolute; top: 14px; left: 14px; font-family: var(--font-dm-sans); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #2D2521; background: rgba(255,252,245,0.92); padding: 6px 12px; border-radius: 999px; }
+        .rc-body { position: absolute; left: 0; right: 0; bottom: 0; padding: 20px; color: #F1F0E5; }
         .rc-place { font-family: var(--font-dm-sans); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #E8D5BC; margin-bottom: 6px; }
-        .rc-name { font-family: var(--font-heading); font-size: clamp(30px, 3.4vw, 42px); line-height: 1.05; color: #F1F0E5; margin-bottom: 6px; }
-        .rc-dates { font-family: var(--font-cormorant); font-style: italic; font-size: 20px; color: #E8D5BC; margin-bottom: 10px; }
-        .rc-line { font-family: var(--font-dm-sans); font-size: 14px; line-height: 1.6; color: #EFE6D3; max-width: 380px; margin-bottom: 18px; }
-        .rc-cta { display: inline-block; font-family: var(--font-dm-sans); font-size: 13px; letter-spacing: 0.04em; color: #2D2521; background: #C39E88; padding: 10px 20px; transition: background 0.3s ease; }
+        .rc-name { font-family: var(--font-heading); font-size: clamp(24px, 2.2vw, 30px); line-height: 1.05; color: #F1F0E5; margin-bottom: 6px; }
+        .rc-dates { font-family: var(--font-cormorant); font-style: italic; font-size: 18px; color: #E8D5BC; margin-bottom: 10px; }
+        .rc-line { font-family: var(--font-dm-sans); font-size: 13px; line-height: 1.55; color: #EFE6D3; margin-bottom: 16px; }
+        .rc-cta { display: inline-block; font-family: var(--font-dm-sans); font-size: 12px; letter-spacing: 0.04em; color: #2D2521; background: #C39E88; padding: 9px 16px; transition: background 0.3s ease; }
         .rc:hover .rc-cta { background: #E8D5BC; }
         .rc-btn { display: inline-block; padding: 13px 28px; font-family: var(--font-dm-sans); font-size: 13px; letter-spacing: 0.04em; text-decoration: none; }
         .rc-btn-fill { background: var(--color-accent); color: #FFFCF5; border: 1px solid var(--color-accent); }
         .rc-btn-line { border: 1px solid var(--color-accent); color: var(--color-accent); }
+        @media (max-width: 1080px) {
+          .rc-grid { grid-template-columns: 1fr 1fr; max-width: 760px; }
+          .rc { aspect-ratio: 4 / 5; }
+        }
         @media (max-width: 760px) {
           .rc-grid { grid-template-columns: 1fr; gap: 16px; }
           .rc { aspect-ratio: 4 / 3.6; }
