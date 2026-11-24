@@ -78,7 +78,7 @@ const retreats: Retreat[] = [
   {
     name: "Casa Amor",
     place: "Andalusia, Spain",
-    dates: "June 2027",
+    dates: "June 15 – 20, 2027",
     line: "five nights between the countryside of Vejer and the beaches of the Costa de la Luz.",
     status: "coming June 2027",
     href: "/retreats/spain-waitlist",
