@@ -316,7 +316,7 @@ const faqs: { question: string; answer: ReactNode }[] = [
       <div>
         <p style={{ marginBottom: 12 }}>Nairobi is a big city, so treat it like one: stay at a hotel we recommend, use cars the hotel arranges, and keep valuables out of sight.</p>
         <p style={{ marginBottom: 12 }}>Ol Pejeta is a different world: 90,000 acres of conservancy, and whenever you&apos;re out on the land you&apos;re with expert guides. from the moment group transport leaves Nairobi, you&apos;re with us and the conservancy&apos;s guides the whole week.</p>
-        <p>we meet you in Nairobi, and Ashley and Shannon are with you all week. if anything goes wrong, Ol Pejeta runs its own security and emergency response teams around the clock, and Nanyuki, the nearest town, has private hospital care within an hour of Ol Pejeta Safari Cottages. [CHECK: confirm the hospital, drive time and evacuation plan with the cottages] we strongly recommend travel insurance that covers medical evacuation.</p>
+        <p>we meet you in Nairobi, and Ashley and Shannon are with you all week. if anything goes wrong, Ol Pejeta runs its own security and emergency response teams around the clock, and Nanyuki, the nearest town, has private hospital care within an hour of Ol Pejeta Safari Cottages. we strongly recommend travel insurance that covers medical evacuation.</p>
       </div>
     ),
   },
