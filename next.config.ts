@@ -31,6 +31,22 @@ const nextConfig: NextConfig = {
         destination: "/blog",
         permanent: true,
       },
+      /** Merged into stronger posts (Nov 2026), so they point at the post that absorbed them. */
+      {
+        source: "/blog/what-to-expect-at-your-first-womens-retreat",
+        destination: "/blog/what-actually-happens-at-a-womens-retreat-day-by-day",
+        permanent: true,
+      },
+      {
+        source: "/blog/womens-retreat-vs-vacation-whats-the-difference",
+        destination: "/blog/how-to-afford-a-womens-retreat",
+        permanent: true,
+      },
+      {
+        source: "/blog/the-women-who-come-on-retreat",
+        destination: "/blog/10-signs-youre-ready-for-a-womens-retreat",
+        permanent: true,
+      },
       /**
        * Becoming HER ran Oct 27-31 2026. The page is kept in the repo and
        * sent home instead, temporary rather than permanent: a permanent

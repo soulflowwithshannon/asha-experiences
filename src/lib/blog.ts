@@ -15,7 +15,7 @@ export const posts: Post[] = [
     title: "10 signs you're ready for a women's retreat",
     description: "You've been putting everyone else first for so long you can't remember what you actually want. Sound familiar? Here are 10 signs it might be time.",
     date: "2026-08-18",
-    readTime: "5 min read",
+    readTime: "6 min read",
     theme: "the inner work",
     image: "/images/Return to Love group sunset.jpg",
     body: `
@@ -40,6 +40,26 @@ export const posts: Post[] = [
 <li><strong>You feel the pull and you're scared.</strong> Something in you is drawn to this — and something else is coming up with reasons not to do it. That friction? That's usually the sign.</li>
 </ol>
 
+<h2>Who comes on retreat</h2>
+<p>There's no one type of woman who comes on retreat. But there are patterns, and maybe you'll recognize yourself in one of them.</p>
+
+<ul>
+<li><strong>The woman who has been holding it together for everyone.</strong> Capable, competent, and completely exhausted. She's been the strong one for so long she's forgotten she's allowed to need something too.</li>
+<li><strong>The woman at a crossroads.</strong> She's not broken. She's between versions of herself, and needs space to figure out who she's becoming.</li>
+<li><strong>The woman who gave herself away.</strong> In a relationship, in motherhood, in a job that required everything, until she genuinely doesn't know what she wants anymore.</li>
+<li><strong>The woman who is already doing the work.</strong> She meditates, sees a therapist, reads the books. She's coming to go deeper, in community with other women doing the same.</li>
+<li><strong>The woman who almost didn't come.</strong> She talked herself out of it twice. She came anyway, and can't imagine who she'd be right now if she hadn't.</li>
+</ul>
+
+<h2>What they all have in common</h2>
+<ul>
+<li>They're done waiting for the right time</li>
+<li>They know, at some level, that something needs to shift</li>
+<li>They've chosen, however nervously, to say yes to themselves</li>
+</ul>
+
+<p>That's it. That's the only requirement.</p>
+
 <hr />
 
 <p>If more than a few of these landed — you already know.</p>
@@ -50,72 +70,10 @@ export const posts: Post[] = [
     `.trim(),
   },
   {
-    slug: "what-to-expect-at-your-first-womens-retreat",
-    title: "What to expect at your first women's retreat",
-    description: "Nervous about what actually happens at a women's retreat? Here's an honest breakdown — the practices, the people, and what most women say surprised them most.",
-    date: "2026-08-12",
-    readTime: "6 min read",
-    theme: "the experience",
-    image: "/images/ReturnToLove group hug.jpg",
-    body: `
-<p>If you've never been on a women's retreat before, it's normal to not quite know what you're signing up for.</p>
-
-<p>Will it be too "woo"? Will you have to share things you're not ready to share? Will you like the other women?</p>
-
-<p>Here's an honest answer.</p>
-
-<h2>What it's not</h2>
-<ul>
-<li>A group therapy session — there's no pressure to share your deepest wounds in a circle on day one</li>
-<li>A yoga bootcamp — it's not about flexibility or headstands</li>
-<li>A performance — you don't have to arrive healed or arrive broken</li>
-</ul>
-
-<h2>What a typical day looks like</h2>
-<ul>
-<li>Morning movement — yoga, breathwork, or gentle stretching</li>
-<li>A nourishing breakfast eaten slowly, without a phone in your hand</li>
-<li>An experience — a cenote swim, sound healing, guided ceremony, or a hike</li>
-<li>Free time to rest, journal, or sit in the sun</li>
-<li>An evening meal with women who are starting to feel like real friends</li>
-<li>Sleep that's deeper than you've had in months</li>
-</ul>
-
-<h2>The practices you'll encounter</h2>
-
-<p><strong>Sound healing</strong> — uses singing bowls, drums, and tuning forks to shift your nervous system. It sounds abstract until you're lying there and feel something release in your chest that you didn't know was held there.</p>
-
-<p><strong>Ceremony</strong> — intentional ritual. Setting intentions, releasing what you're ready to let go of, marking a transition. No specific belief system required. Just willingness.</p>
-
-<p><strong>Somatic practices</strong> — body-based work. The body holds what the mind can't always process — moving, breathing, and feeling can unlock things that talking alone can't reach.</p>
-
-<h2>The part most women say surprised them most</h2>
-<p>The other women.</p>
-
-<p>Most people arrive a little nervous about the group dynamic. And then, almost without exception, something happens within the first day or two — the walls come down. Women who are strangers start talking like they've known each other for years.</p>
-
-<p>There's a specific kind of connection that forms when women are honest with each other in the same container. It's faster and deeper than most friendships built over years of surface-level interaction.</p>
-
-<h2>What you don't have to do</h2>
-<ul>
-<li>Share anything you don't want to share</li>
-<li>Participate in anything that doesn't feel right</li>
-<li>Have a breakthrough</li>
-<li>Arrive knowing what you need</li>
-</ul>
-
-<p>You just have to show up.</p>
-
-<hr />
-
-<p>Our upcoming retreats — <a href="/retreats/morocco">Sacred Sands in Morocco</a> and <a href="/retreats/kenya">Into the Wild in Kenya</a> — are all designed with first-timers in mind. If you have questions before booking, <a href="/contact">reach out</a>. We want you to feel ready.</p>
-    `.trim(),
-  },
-  {
     slug: "womens-retreats-2026-ultimate-guide",
-    title: "Women's retreats 2026: the ultimate guide to finding the right one",
+    title: "Women's retreats 2027: the ultimate guide to finding the right one",
     description: "There are hundreds of women's retreats out there. Here's how to cut through the noise — what to look for, what to avoid, and how to find the one that's actually right for you.",
-    date: "2026-08-19",
+    date: "2026-11-24",
     readTime: "7 min read",
     theme: "before you go",
     image: "/images/women laying down.jpeg",
@@ -434,72 +392,11 @@ Who are you waiting for? And what if that permission was yours to give yourself 
     `.trim(),
   },
   {
-    slug: "womens-retreat-vs-vacation-whats-the-difference",
-    title: "Women's retreat vs. vacation — what's actually the difference?",
-    description: "Both involve getting on a plane. But a retreat and a vacation do very different things for you. Here's how to know which one you actually need.",
-    date: "2026-07-20",
-    readTime: "4 min read",
-    theme: "before you go",
-    image: "/images/Morocco sunset.jpeg",
-    body: `
-<p>Both involve leaving your regular life behind. Both take you somewhere beautiful. Both can involve good food, warm weather, and time away from your responsibilities.</p>
-
-<p>But they're doing completely different things — and knowing which one you actually need right now matters.</p>
-
-<h2>A vacation gives you</h2>
-<ul>
-<li>A break from your environment</li>
-<li>Rest and decompression</li>
-<li>Fun, exploration, novelty</li>
-<li>A return home feeling rested — but largely unchanged</li>
-</ul>
-
-<p>There's nothing wrong with that. Sometimes that's exactly what you need.</p>
-
-<h2>A retreat gives you</h2>
-<ul>
-<li>A container for something to actually shift</li>
-<li>Facilitated practices designed to take you somewhere</li>
-<li>Women who are there for the same intentional reason</li>
-<li>The possibility to come back not just rested — but different</li>
-</ul>
-
-<h2>The key difference — intentionality</h2>
-<p>On a vacation → the goal is enjoyment and rest.</p>
-<p>On a retreat → the goal is something more. You're there to look at something, feel something, release something, become something.</p>
-
-<p>That requires a different kind of environment — one that's held. Where the facilitators know what they're doing. Where the practices are chosen specifically to take you somewhere.</p>
-
-<h2>How to know which one you need right now</h2>
-<ul>
-<li><strong>Vacation</strong> — you're tired and you just need to stop for a minute</li>
-<li><strong>Retreat</strong> — you're tired <em>and</em> something needs to change</li>
-</ul>
-
-<p>A lot of women who come on our retreats say some version of this: <em>"I thought I just needed a vacation, but I realized I needed something more. I needed to actually look at my life."</em></p>
-
-<h2>Can it be both?</h2>
-<p>Yes. A well-designed retreat includes:</p>
-<ul>
-<li>Beauty and incredible food</li>
-<li>Real rest and free time</li>
-<li>Experiences you couldn't have anywhere else</li>
-<li>Depth underneath all of it</li>
-</ul>
-
-<p>The difference is that it's also doing something beneath the surface — something you'll still feel weeks and months after you come home.</p>
-
-<hr />
-
-<p>Our retreats are in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a>. If you're trying to figure out which is right for you, <a href="/contact">we'd love to talk</a>.</p>
-    `.trim(),
-  },
-  {
     slug: "what-actually-happens-at-a-womens-retreat-day-by-day",
     title: "What actually happens at a women's retreat? (a day-by-day breakdown)",
     description: "Not the brochure version. A real, honest look at what each day of a women's retreat actually feels like — from the first morning to the last goodbye.",
     date: "2026-08-19",
-    readTime: "6 min read",
+    readTime: "8 min read",
     theme: "the experience",
     image: "/images/Morocco yoga.png",
     body: `
@@ -568,6 +465,31 @@ Who are you waiting for? And what if that permission was yours to give yourself 
 
 <p>What most women feel on the last day → grief mixed with gratitude. And something solid in their chest that wasn't there before.</p>
 
+<h2>The practices you'll encounter</h2>
+
+<p><strong>Sound healing</strong> — uses singing bowls, drums, and tuning forks to shift your nervous system. It sounds abstract until you're lying there and feel something release in your chest that you didn't know was held there.</p>
+
+<p><strong>Ceremony</strong> — intentional ritual. Setting intentions, releasing what you're ready to let go of, marking a transition. No specific belief system required. Just willingness.</p>
+
+<p><strong>Somatic practices</strong> — body-based work. The body holds what the mind can't always process. Moving, breathing, and feeling can unlock things that talking alone can't reach.</p>
+
+<h2>The part most women say surprised them most</h2>
+<p>The other women.</p>
+
+<p>Most people arrive a little nervous about the group dynamic. And then, almost without exception, something happens within the first day or two and the walls come down. Women who are strangers start talking like they've known each other for years.</p>
+
+<p>There's a specific kind of connection that forms when women are honest with each other in the same container. It's faster and deeper than most friendships built over years of surface-level interaction.</p>
+
+<h2>What you don't have to do</h2>
+<ul>
+<li>Share anything you don't want to share</li>
+<li>Participate in anything that doesn't feel right</li>
+<li>Have a breakthrough</li>
+<li>Arrive knowing what you need</li>
+</ul>
+
+<p>You just have to show up.</p>
+
 <h2>What no schedule can capture</h2>
 <p>The moments between the schedule. The conversation over breakfast that changes something. The woman who says the thing you've been thinking for years. The silence by the pool where you finally just <em>are</em>.</p>
 
@@ -585,7 +507,7 @@ Who are you waiting for? And what if that permission was yours to give yourself 
     title: "How to afford a women's retreat (and why it's worth the investment)",
     description: "The price tag can feel like the reason not to go. Here's a different way to look at it — and practical ways women actually make it happen.",
     date: "2026-08-10",
-    readTime: "5 min read",
+    readTime: "6 min read",
     theme: "before you go",
     image: "/images/ReturnToLove bracelets.jpg",
     body: `
@@ -613,6 +535,18 @@ Who are you waiting for? And what if that permission was yours to give yourself 
 <li><strong>Notice what you'll stop spending</strong> — the month before a retreat, women naturally spend less on the things they were using to cope with the life they haven't changed yet</li>
 </ul>
 
+<h2>Retreat or vacation?</h2>
+<p>A vacation gives you a break from your environment: rest, fun, novelty, and a return home feeling rested but largely unchanged. Sometimes that's exactly what you need.</p>
+
+<p>A retreat gives you a container for something to actually shift. Facilitated practices chosen to take you somewhere, women who are there for the same intentional reason, and the possibility of coming home not just rested, but different.</p>
+
+<ul>
+<li><strong>Vacation</strong> — you're tired and you just need to stop for a minute</li>
+<li><strong>Retreat</strong> — you're tired <em>and</em> something needs to change</li>
+</ul>
+
+<p>A lot of women who come on our retreats say some version of this: <em>"I thought I just needed a vacation, but I realized I needed something more. I needed to actually look at my life."</em></p>
+
 <h2>The harder question</h2>
 <p>What would you tell your best friend if she said: <em>"I really want to go but I can't afford to prioritize myself right now"?</em></p>
 
@@ -623,57 +557,6 @@ Who are you waiting for? And what if that permission was yours to give yourself 
 <hr />
 
 <p>Our retreats in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a> are priced to include as much as possible — no surprise costs when you arrive. If you have questions about what's included, <a href="/contact">we're happy to walk you through it</a>.</p>
-    `.trim(),
-  },
-  {
-
-
-    slug: "the-women-who-come-on-retreat",
-    title: "The women who come on retreat — and what brings them there",
-    description: "There's no one type of woman who comes on a retreat. But there are patterns. Here's who we see, over and over — and maybe you'll recognize yourself.",
-    date: "2026-07-08",
-    readTime: "4 min read",
-    theme: "the experience",
-    image: "/images/ReturnToLove girls group 2.jpg",
-    body: `
-<p>People have ideas about who goes on women's retreats.</p>
-
-<p>Wealthy women with lots of free time. Women who are "into" that sort of thing. Women who already have it together and just want a luxury experience.</p>
-
-<p>That is not who comes on our retreats. Here's who actually does.</p>
-
-<h2>The woman who has been holding it together for everyone</h2>
-<p>She's capable, competent, and completely exhausted. She's the one people call when things go wrong. She's been the strong one for so long she's forgotten she's allowed to need something too.</p>
-<p>→ She books the retreat nervously, convinced she doesn't have time. She comes back saying it was the most important thing she's done in years.</p>
-
-<h2>The woman at a crossroads</h2>
-<p>A relationship ending. A career that no longer fits. A life that made sense five years ago and doesn't anymore.</p>
-<p>→ She's not broken — she's between versions of herself. She needs space to figure out who she's becoming, away from the noise of her regular life.</p>
-
-<h2>The woman who gave herself away</h2>
-<p>In a relationship, in motherhood, in a job that required everything. She's been so focused on what everyone else needs that she genuinely doesn't know what she wants anymore.</p>
-<p>→ The retreat is the first time in years she's done something purely for herself. The first morning she wakes up without a responsibility, she cries and doesn't know why. By the last day, she does.</p>
-
-<h2>The woman who is already doing the work</h2>
-<p>She meditates. She sees a therapist. She reads the books. She's not coming to start her healing — she's coming to go deeper, and to be in community with other women doing the same.</p>
-<p>→ She leaves with a circle of women she's known for five days and will know for life.</p>
-
-<h2>The woman who almost didn't come</h2>
-<p>She talked herself out of it twice. She almost cancelled the week before. Something in her kept saying: you don't deserve this, you can't afford it, the timing isn't right.</p>
-<p>→ She came anyway. She is consistently the one who says: <em>I almost didn't come, and I can't imagine who I'd be right now if I hadn't.</em></p>
-
-<h2>What they all have in common</h2>
-<ul>
-<li>They're done waiting for the right time</li>
-<li>They know, at some level, that something needs to shift</li>
-<li>They've chosen — however nervously — to say yes to themselves</li>
-</ul>
-
-<p>That's it. That's the only requirement.</p>
-
-<hr />
-
-<p>If you recognized yourself somewhere in here, that's not a coincidence. Our retreats are in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a>. We'd love to have you.</p>
     `.trim(),
   },
   {
@@ -775,7 +658,7 @@ __TESTIMONIAL_VIDEO__
 
 <p>You don't need to believe in it for it to work. You just have to be willing to lie down and listen.</p>
 
-<p>Sound healing is woven through every one of our retreat experiences. Our next is <a href="/retreats/morocco">Sacred Sands in Morocco</a>, November 29 – December 5, 2026.</p>
+<p>Sound healing is woven through every one of our retreat experiences. Our next is <a href="/retreats/kenya">Into the Wild in Kenya</a>, November 28 – December 4, 2027.</p>
     `.trim(),
   },
   {
