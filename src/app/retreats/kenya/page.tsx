@@ -14,6 +14,10 @@ import FaqJsonLd from "@/components/FaqJsonLd";
 import StillDeciding from "@/components/StillDeciding";
 import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/AnimatedText";
 
+// Spots left on the hero price line ("8 of 10 spots left"). Update by hand as
+// women book. Set to "" to show just the price and room type.
+const SPOTS_LEFT = "8";
+
 const daysData = [
   {
     day: "01",
@@ -192,12 +196,6 @@ function KenyaHero() {
       </motion.div>
 
       <div style={{ position: "relative", zIndex: 2, textAlign: "center", padding: "0 24px" }}>
-        <p
-          className="hero-rise-sm"
-          style={{ animationDuration: "0.8s", animationDelay: "0s", fontFamily: "var(--font-cormorant)", fontSize: "clamp(22px,3vw,34px)", color: "#E8B88A", fontWeight: 400, marginBottom: 20 }}
-        >
-          November 28 – December 4, 2027
-        </p>
         <h1
           className="hero-rise"
           style={{ animationDuration: "1s", animationDelay: "0.1s", fontFamily: "var(--font-heading)", fontSize: "clamp(52px,8vw,80px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 16 }}
@@ -208,15 +206,21 @@ function KenyaHero() {
           className="hero-rise-sm"
           style={{ animationDuration: "0.8s", animationDelay: "0.15s", fontFamily: "var(--font-cormorant)", fontSize: "clamp(22px,3vw,34px)", color: "#F1F0E5", fontWeight: 700, fontStyle: "italic", marginBottom: 28, marginTop: -6 }}
         >
-          Ol Pejeta Conservancy, Kenya
+          Ol Pejeta Conservancy, Kenya · <span style={{ whiteSpace: "nowrap" }}>Nov 28 – Dec 4, 2027</span>
         </p>
         <p
           className="hero-rise"
-          style={{ animationDuration: "1s", animationDelay: "0.2s", fontFamily: "var(--font-dm-sans)", fontSize: "clamp(15px,2.2vw,22px)", color: "#E8D5BC", maxWidth: 900, margin: "80px auto 0", lineHeight: 1.7, fontWeight: 700, textShadow: "0 2px 12px rgba(0,0,0,0.5)", textAlign: "center" }}
+          style={{ animationDuration: "1s", animationDelay: "0.2s", fontFamily: "var(--font-dm-sans)", fontSize: "clamp(15px,2.2vw,22px)", color: "#E8D5BC", maxWidth: 760, margin: "48px auto 0", lineHeight: 1.7, fontWeight: 700, textShadow: "0 2px 12px rgba(0,0,0,0.5)", textAlign: "center" }}
         >
-          seven days in one of the most<span className="kenya-hero-break"> </span>extraordinary places on earth.
+          ten women. seven days on 90,000 acres at the foot of Mount Kenya. sunrise game drives, yoga with the plains in view, circles under the open sky, and the two of us with you from Nairobi to the last morning.
         </p>
-        <div className="hero-rise" style={{ animationDuration: "1s", animationDelay: "0.3s", marginTop: 60 }}>
+        <p
+          className="hero-rise"
+          style={{ animationDuration: "1s", animationDelay: "0.25s", fontFamily: "var(--font-dm-sans)", fontSize: 14, letterSpacing: "0.04em", color: "#E8D5BC", marginTop: 24, textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}
+        >
+          $6,900 · shared cottage{SPOTS_LEFT ? ` · ${SPOTS_LEFT} of 10 spots left` : ""}
+        </p>
+        <div className="hero-rise kenya-hero-btns" style={{ animationDuration: "1s", animationDelay: "0.3s", marginTop: 40, display: "flex", gap: 14, justifyContent: "center", alignItems: "center" }}>
           <a
             href="#week"
             style={{ display: "inline-block", padding: "14px 36px", background: "rgba(195,158,136,0.85)", border: "1px solid #C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", fontWeight: 500, transition: "background 0.3s ease" }}
@@ -225,7 +229,19 @@ function KenyaHero() {
           >
             see the week ↓
           </a>
+          {/* STRIPE LINK: cottage - $1,000 deposit (same link as the rooms section) */}
+          <a
+            href="https://buy.stripe.com/aFa7sMdUc9RP2qK3iS0sU03"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "inline-block", padding: "14px 36px", background: "rgba(45,37,33,0.35)", border: "1px solid #E8D5BC", color: "#F1F0E5", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", fontWeight: 500, transition: "background 0.3s ease" }}
+            onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(45,37,33,0.6)")}
+            onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(45,37,33,0.35)")}
+          >
+            hold my spot — $1,000
+          </a>
         </div>
+        <style>{`@media(max-width:560px){.kenya-hero-btns{flex-direction:column!important;align-items:stretch!important;max-width:300px;margin-left:auto;margin-right:auto}.kenya-hero-btns a{text-align:center}}`}</style>
       </div>
     </section>
   );
@@ -561,41 +577,10 @@ export default function KenyaPage() {
               </p>
             </StaggerChild>
             <StaggerChild>
-              <p style={{ marginBottom: 40 }}>
+              <p style={{ marginBottom: 0 }}>
                 so you plan. you prepare. you stay one step ahead.<br />
                 <em>and it works.</em> <strong>until it doesn&apos;t.</strong><br />
                 until you&apos;re <strong>exhausted by your own competence.</strong>
-              </p>
-            </StaggerChild>
-
-            <StaggerChild>
-              <div style={{ display: "flex", alignItems: "center", gap: 12, margin: "0 0 40px" }}>
-                <div style={{ flex: 1, height: "0.5px", background: "#D4C8AA" }} />
-                <span style={{ color: "#A67C52", fontSize: 14 }}>✦</span>
-                <div style={{ flex: 1, height: "0.5px", background: "#D4C8AA" }} />
-              </div>
-            </StaggerChild>
-
-            <StaggerChild>
-              <p style={{ marginBottom: 28 }}>
-                <strong>kenya doesn&apos;t care about your plans.</strong>
-                <br /><br />
-                the lion moves when she wants to move.<br />
-                the sun sets and still rises.
-              </p>
-            </StaggerChild>
-            <StaggerChild>
-              <p style={{ marginBottom: 28 }}>
-                no inbox. no algorithm.<br />
-                just <strong>90,000 acres of open savannah</strong> and you, standing in the middle of it.
-                <br /><br />
-                <em>the need to manage loosens, maybe for the first time in years.</em>
-              </p>
-            </StaggerChild>
-            <StaggerChild>
-              <p style={{ marginBottom: 0 }}>
-                <strong>present. free. awake.</strong><br />
-                and once you feel it, <em>you can&apos;t unfeel it.</em>
               </p>
             </StaggerChild>
           </StaggerBlock>
