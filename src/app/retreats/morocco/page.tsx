@@ -333,7 +333,7 @@ const faqs: { question: string; answer: ReactNode }[] = [
     answer: (
       <div>
         <p style={{ marginBottom: 12 }}><strong>all payments are non-refundable</strong> — including any balance paid. this covers accommodation, facilitators, and logistics we commit to well in advance on your behalf.</p>
-        <p style={{ marginBottom: 12 }}>if your plans change, you can transfer your spot to another woman, or to a future ASHA retreat. just email us.</p>
+        <p style={{ marginBottom: 12 }}>if your plans change, you can transfer your spot to another woman, or to a future ASHA retreat, up to 4 months before the retreat starts. just email us.</p>
         <p>we strongly recommend travel insurance to protect your investment.</p>
       </div>
     ),
@@ -715,7 +715,7 @@ export default function MoroccoPage() {
       <HowItWorks arrival="from Marrakech" background="var(--color-bg-page)" />
 
       {/* STILL DECIDING — sits above the FAQ so "the questions below" holds */}
-      <StillDeciding background="var(--color-bg-page)" padding="0 32px 72px" />
+      <StillDeciding retreat="Morocco" weekLine="see what a typical day looks like above" background="var(--color-bg-page)" padding="0 32px 72px" />
 
       {/* SECTION 9 — FAQ */}
       <section style={{ background: "#F5F1E6", padding: "80px 32px 80px" }}>
@@ -739,9 +739,8 @@ export default function MoroccoPage() {
 
       <Divider background="var(--color-bg-page)" />
 
-      {/* SECTION — ON THE FENCE (two story-format videos) */}
+      {/* SECTION — two story-format videos from Ashley and Shannon */}
       <VideoPair
-        headline="to the woman on the fence"
         orientation="vertical"
         labelTone="dark"
         padding="16px 32px 80px"

@@ -316,7 +316,7 @@ const faqs: { question: string; answer: ReactNode }[] = [
       <div>
         <p style={{ marginBottom: 12 }}>Nairobi is a big city, so treat it like one: stay at a hotel we recommend, use cars the hotel arranges, and keep valuables out of sight.</p>
         <p style={{ marginBottom: 12 }}>Ol Pejeta is a different world: 90,000 acres of conservancy, and whenever you&apos;re out on the land you&apos;re with expert guides. from the moment group transport leaves Nairobi, you&apos;re with us and the conservancy&apos;s guides the whole week.</p>
-        <p>we meet you in Nairobi, and Ashley and Shannon are with you all week. if anything goes wrong, our retreat center has medical staff nearby and local doctors it can call on.</p>
+        <p>we meet you in Nairobi, and Ashley and Shannon are with you all week. if anything goes wrong, Ol Pejeta runs its own security and emergency response teams around the clock, and Nanyuki, the nearest town, has private hospital care within an hour of Ol Pejeta Safari Cottages. [CHECK: confirm the hospital, drive time and evacuation plan with the cottages] we strongly recommend travel insurance that covers medical evacuation.</p>
       </div>
     ),
   },
@@ -418,7 +418,7 @@ const faqs: { question: string; answer: ReactNode }[] = [
     answer: (
       <div>
         <p style={{ marginBottom: 12 }}><strong>all payments are non-refundable</strong> — including the $1,000 deposit and any balance paid. this covers accommodation, facilitators, and logistics we commit to well in advance on your behalf.</p>
-        <p style={{ marginBottom: 12 }}>if your plans change, you can transfer your spot to another woman, or to a future ASHA retreat. just email us.</p>
+        <p style={{ marginBottom: 12 }}>if your plans change, you can transfer your spot to another woman, or to a future ASHA retreat, up to 4 months before the retreat starts. just email us.</p>
         <p>we strongly recommend travel insurance to protect your investment.</p>
       </div>
     ),
@@ -520,7 +520,7 @@ function MeetSection() {
         ]}
       />
 
-      <StillDeciding background="transparent" padding="56px 0 0" />
+      <StillDeciding retreat="Kenya" background="transparent" padding="56px 0 0" />
       <style>{`@media(max-width:700px){.kenya-guides{grid-template-columns:1fr!important;gap:24px!important;max-width:420px;margin-left:auto;margin-right:auto}}`}</style>
     </section>
   );
@@ -1041,7 +1041,7 @@ export default function KenyaPage() {
           </FadeIn>
           <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", textAlign: "center", marginTop: 36 }}>
             still wondering about something?{" "}
-            <Link href="/contact" style={{ color: "var(--color-accent)", fontWeight: 600, textDecoration: "none" }}>ask us here →</Link>
+            <Link href="/contact?retreat=Kenya#send" style={{ color: "var(--color-accent)", fontWeight: 600, textDecoration: "none" }}>ask us here →</Link>
           </p>
         </div>
       </section>

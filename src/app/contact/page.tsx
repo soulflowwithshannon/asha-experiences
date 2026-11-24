@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import FadeIn from "@/components/FadeIn";
@@ -12,6 +12,22 @@ export default function ContactPage() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [formState, setFormState] = useState<FormState>("idle");
+
+  /* Retreat pages link here as /contact?retreat=Kenya#send (and
+     &about=past-guest). Land on the form, not the call button above it, and
+     prefill the ask so she only has to add her name and email. Read from
+     window, not useSearchParams, so the page stays statically rendered. */
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search);
+    const retreat = (q.get("retreat") || "").replace(/[^A-Za-z ]/g, "").slice(0, 30);
+    if (q.get("about") === "past-guest") {
+      setMessage(`hi, I'm thinking about ${retreat ? `the ${retreat} retreat` : "a retreat"}. could you connect me with a past guest?`);
+    }
+    if (window.location.hash === "#send") {
+      const t = setTimeout(() => document.getElementById("send")?.scrollIntoView({ block: "start" }), 300);
+      return () => clearTimeout(t);
+    }
+  }, []);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -110,7 +126,7 @@ export default function ContactPage() {
           {/* Col 3 — form */}
           <FadeIn delay={0.2}>
             <div>
-              <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(20px,2vw,26px)", color: "var(--color-accent)", fontWeight: 700, marginBottom: 28 }}>
+              <h2 id="send" style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(20px,2vw,26px)", color: "var(--color-accent)", fontWeight: 700, marginBottom: 28, scrollMarginTop: 96 }}>
                 send us a message
               </h2>
 
