@@ -333,7 +333,7 @@ const faqs: { question: string; answer: ReactNode }[] = [
     answer: (
       <div>
         <p style={{ marginBottom: 12 }}><strong>all payments are non-refundable</strong> — including any balance paid. this covers accommodation, facilitators, and logistics we commit to well in advance on your behalf.</p>
-        <p style={{ marginBottom: 12 }}>if your plans change, you can transfer your spot to another woman, or to a future ASHA retreat, [TODO: up to X days before the retreat / any conditions]. just email us.</p>
+        <p style={{ marginBottom: 12 }}>if your plans change, you can transfer your spot to another woman, or to a future ASHA retreat. just email us.</p>
         <p>we strongly recommend travel insurance to protect your investment.</p>
       </div>
     ),

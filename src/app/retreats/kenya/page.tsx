@@ -325,21 +325,21 @@ const faqs: { question: string; answer: ReactNode }[] = [
     answer: (
       <div>
         <p style={{ marginBottom: 12 }}>land in Nairobi at least a day early. group transport to Ol Pejeta leaves the morning of November 28th, and an extra night gives a late flight room to be late.</p>
-        <p>we&apos;ll share our favorite Nairobi hotels once you&apos;re booked. [CHECK: name one here?] [CHECK: does anyone meet her at the airport?] [CHECK: what happens if she misses the morning departure?]</p>
+        <p>we&apos;ll recommend a hotel in Nairobi where we&apos;ll all stay together the night before. and if your flight is late and you miss the morning departure, another safe, secure shuttle will be waiting to bring you to Ol Pejeta.</p>
       </div>
     ),
   },
   {
     question: "I'll be sharing a room. how does that work?",
-    answer: <p>two women to a bedroom, four to a cottage, each bedroom with its own bathroom. come with a friend, or we&apos;ll pair you with a like-minded woman in the group. once you book, Ashley and Shannon reach out personally, and [CHECK: how you match roommates]. solo rooms aren&apos;t available on this one.</p>,
+    answer: <p>two women to a bedroom, four to a cottage, each bedroom with its own bathroom. come with a friend, or meet someone before you go: we hold a Zoom call before the retreat so everyone can meet. otherwise, we&apos;ll pair you with a like-minded woman, based on the form you fill out when you book. solo rooms aren&apos;t available on this one.</p>,
   },
   {
     question: "how fit do I need to be?",
-    answer: <p>[CHECK] you don&apos;t need to be especially fit. most of the week happens in safari vehicles, on the verandah and in circle, and the movement is yoga and gentle practice. Ol Pejeta sits at high elevation, so go easy on the first day. [CHECK: any walks, and how long?]</p>,
+    answer: <p>you don&apos;t need to be especially fit. most of the week happens in safari vehicles, on the verandah and in circle, and the movement is yoga and gentle practice. Ol Pejeta sits at high elevation, so go easy on the first day.</p>,
   },
   {
     question: "what happens when I get home?",
-    answer: <p>this is the part most retreats skip. [TODO: what the post-retreat community actually is: how often, how long, what happens in it]</p>,
+    answer: <p>this is the part most retreats skip. we&apos;re building a community to keep you in touch with each other. every retreat has its own group chat, we schedule a follow-up Zoom call once everyone&apos;s home, and most women stay in touch on their own.</p>,
   },
   {
     question: "why does Kenya cost more than Morocco?",
@@ -418,7 +418,7 @@ const faqs: { question: string; answer: ReactNode }[] = [
     answer: (
       <div>
         <p style={{ marginBottom: 12 }}><strong>all payments are non-refundable</strong> — including the $1,000 deposit and any balance paid. this covers accommodation, facilitators, and logistics we commit to well in advance on your behalf.</p>
-        <p style={{ marginBottom: 12 }}>if your plans change, you can transfer your spot to another woman, or to a future ASHA retreat, [TODO: up to X days before the retreat / any conditions]. just email us.</p>
+        <p style={{ marginBottom: 12 }}>if your plans change, you can transfer your spot to another woman, or to a future ASHA retreat. just email us.</p>
         <p>we strongly recommend travel insurance to protect your investment.</p>
       </div>
     ),
