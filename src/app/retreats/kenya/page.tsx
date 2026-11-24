@@ -145,9 +145,7 @@ function KenyaHero() {
           className="hero-rise"
           style={{ animationDuration: "1s", animationDelay: "0.2s", fontFamily: "var(--font-dm-sans)", fontSize: "clamp(15px,1.5vw,18px)", color: "#F1F0E5", maxWidth: 760, margin: "48px auto 0", lineHeight: 1.6, fontWeight: 700, textAlign: "center", textWrap: "balance" }}
         >
-          <span style={{ display: "block", textWrap: "balance", marginBottom: 14 }}>ten women. seven days on 90,000 acres at the foot of Mount Kenya.</span>
-          <span style={{ display: "block", textWrap: "balance", marginBottom: 14 }}>sunrise game drives, yoga with the plains in view, circles under the open sky,</span>
-          <span style={{ display: "block", textWrap: "balance" }}>and the two of us with you from Nairobi to the last morning.</span>
+          seven days on the savannah, somewhere wild enough to put it all down.
         </p>
         <p
           className="hero-rise"
