@@ -535,10 +535,41 @@ export default function KenyaPage() {
               </p>
             </StaggerChild>
             <StaggerChild>
-              <p style={{ marginBottom: 0 }}>
+              <p style={{ marginBottom: 40 }}>
                 so you plan. you prepare. you stay one step ahead.<br />
                 <em>and it works.</em> <strong>until it doesn&apos;t.</strong><br />
                 until you&apos;re <strong>exhausted by your own competence.</strong>
+              </p>
+            </StaggerChild>
+
+            <StaggerChild>
+              <div style={{ display: "flex", alignItems: "center", gap: 12, margin: "0 0 40px" }}>
+                <div style={{ flex: 1, height: "0.5px", background: "#D4C8AA" }} />
+                <span style={{ color: "#A67C52", fontSize: 14 }}>✦</span>
+                <div style={{ flex: 1, height: "0.5px", background: "#D4C8AA" }} />
+              </div>
+            </StaggerChild>
+
+            <StaggerChild>
+              <p style={{ marginBottom: 28 }}>
+                <strong>kenya doesn&apos;t care about your plans.</strong>
+                <br /><br />
+                the lion moves when she wants to move.<br />
+                the sun sets and still rises.
+              </p>
+            </StaggerChild>
+            <StaggerChild>
+              <p style={{ marginBottom: 28 }}>
+                no inbox. no algorithm.<br />
+                just <strong>90,000 acres of open savannah</strong> and you, standing in the middle of it.
+                <br /><br />
+                <em>the need to manage loosens, maybe for the first time in years.</em>
+              </p>
+            </StaggerChild>
+            <StaggerChild>
+              <p style={{ marginBottom: 0 }}>
+                <strong>present. free. awake.</strong><br />
+                and once you feel it, <em>you can&apos;t unfeel it.</em>
               </p>
             </StaggerChild>
           </StaggerBlock>
