@@ -20,38 +20,38 @@ import { SPOTS_LEFT } from "@/lib/kenya";
 // one hairline style for both week sections: the clay accent at low opacity
 const HAIRLINE = "0.5px solid color-mix(in srgb, var(--color-accent) 35%, transparent)";
 
+// one line per day, taken from the confirmed itinerary
 const weekDays = [
-  { day: "01", title: "arrive & exhale" },
-  { day: "02", title: "roots" },
-  { day: "03", title: "open plains" },
-  { day: "04", title: "into the wild" },
-  { day: "05", title: "still water" },
-  { day: "06", title: "the fire" },
-  { day: "07", title: "carry it home" },
+  { day: "01", title: "arrive & exhale", line: "private transport in from Nairobi, a welcome dinner and our first circle" },
+  { day: "02", title: "roots", line: "yoga and journaling over the plains, a grounding workshop, a sunset drive" },
+  { day: "03", title: "open plains", line: "a full day in Ol Pejeta, including the Northern White Rhino Sanctuary" },
+  { day: "04", title: "into the wild", line: "the deep end: a ceremony, a women's circle, and the fire" },
+  { day: "05", title: "still water", line: "a slower morning and a visit to Spinners and Weavers. rest, on purpose" },
+  { day: "06", title: "the fire", line: "a picnic in the wild, a Kenyan cooking class, the closing ceremony" },
+  { day: "07", title: "carry it home", line: "a sunrise farewell, then private transport back to Nairobi" },
 ];
 
-/** Static list: a row of 7 on desktop, a vertical list on narrower screens.
-    Hairlines sit only between days (none before the first or after the last). */
+/** Seven sand cards in a row on desktop, stacked on narrower screens.
+    Day 04, the day the retreat is named for, sits on the dark band colour. */
 function WeekList() {
   return (
     <>
-      <ol className="week-list" style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gridTemplateColumns: "repeat(7, minmax(0, 1fr))" }}>
-        {weekDays.map((d) => (
-          <li key={d.day} className="week-day" style={{ padding: "8px 14px", textAlign: "center" }}>
-            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.1em", color: "var(--color-accent)", textTransform: "uppercase", marginBottom: 8 }}>DAY {d.day}<span className="week-dot" aria-hidden="true"> ·</span></p>
-            <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 20, lineHeight: 1.2, color: "var(--color-text-headline)" }}>{d.title}</p>
-          </li>
-        ))}
+      <ol className="week-list" style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gridTemplateColumns: "repeat(7, minmax(0, 1fr))", gap: 10 }}>
+        {weekDays.map((d) => {
+          const deep = d.day === "04";
+          return (
+            <li key={d.day} className="week-day" style={{ background: deep ? "#2D2521" : "var(--color-bg-surface)", borderRadius: 8, padding: "20px 16px 22px" }}>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.1em", color: deep ? "#C5AA9B" : "var(--color-accent)", textTransform: "uppercase", marginBottom: 8 }}>DAY {d.day}</p>
+              <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 21, lineHeight: 1.2, color: deep ? "#F1F0E5" : "var(--color-text-headline)", marginBottom: 10 }}>{d.title}</p>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, lineHeight: 1.55, color: deep ? "#E8D5BC" : "var(--color-text-body)" }}>{d.line}</p>
+            </li>
+          );
+        })}
       </ol>
       <style>{`
-        .week-day + .week-day { border-left: ${HAIRLINE}; }
-        .week-dot { display: none; }
-        @media (max-width: 900px) {
-          .week-list { grid-template-columns: 1fr !important; max-width: 360px; margin: 0 auto !important; }
-          .week-day { display: flex; align-items: baseline; justify-content: center; gap: 12px; padding: 14px 0 !important; }
-          .week-day p { margin-bottom: 0 !important; }
-          .week-dot { display: inline; }
-          .week-day + .week-day { border-left: none; border-top: ${HAIRLINE}; }
+        @media (max-width: 1000px) {
+          .week-list { grid-template-columns: 1fr !important; max-width: 480px; margin: 0 auto !important; gap: 8px !important; }
+          .week-day { padding: 16px 20px 18px !important; }
         }
       `}</style>
     </>
@@ -649,28 +649,6 @@ export default function KenyaPage() {
               the shape of the week, from landing softly to the closing fire. the exact flow is built around the group.
             </p>
           </FadeIn>
-          <Ornament />
-          <FadeIn delay={0.15}>
-            <div style={{ maxWidth: 560, margin: "0 auto", textAlign: "center", fontFamily: "var(--font-dm-sans)", fontSize: 16, color: "var(--color-text-body)", lineHeight: 1.9, display: "flex", flexDirection: "column", gap: 20 }}>
-              <p>
-                <strong>Into the Wild gives you back what the noise took.</strong>
-              </p>
-              <p>
-                <em>the knowing.</em><br />
-                <em>the presence.</em><br />
-                <em>the feeling that life is supposed<br />to feel wild and free.</em>
-              </p>
-              <p>
-                you take that home.<br />
-                into the chaos, the routine,<br />
-                the world that will be exactly<br />
-                as you left it.
-              </p>
-              <p>
-                <strong>except you won&apos;t be.</strong>
-              </p>
-            </div>
-          </FadeIn>
         </div>
       </section>
 
@@ -694,6 +672,31 @@ export default function KenyaPage() {
           </motion.div>
         ))}
       </div>
+
+      {/* SECTION 4c — THE POEM, its own pause after the photos */}
+      <section style={{ background: "var(--color-bg-page)", padding: "88px 32px" }}>
+        <FadeIn delay={0.15}>
+          <div style={{ maxWidth: 560, margin: "0 auto", textAlign: "center", fontFamily: "var(--font-dm-sans)", fontSize: 16, color: "var(--color-text-body)", lineHeight: 1.9, display: "flex", flexDirection: "column", gap: 20 }}>
+            <p>
+              <strong>Into the Wild gives you back what the noise took.</strong>
+            </p>
+            <p>
+              <em>the knowing.</em><br />
+              <em>the presence.</em><br />
+              <em>the feeling that life is supposed<br />to feel wild and free.</em>
+            </p>
+            <p>
+              you take that home.<br />
+              into the chaos, the routine,<br />
+              the world that will be exactly<br />
+              as you left it.
+            </p>
+            <p>
+              <strong>except you won&apos;t be.</strong>
+            </p>
+          </div>
+        </FadeIn>
+        </section>
 
       {/* SECTION 5 — WHAT'S INCLUDED */}
       <section style={{ position: "relative", padding: "80px 32px", overflow: "hidden" }}>
