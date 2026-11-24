@@ -756,7 +756,7 @@ export default function KenyaPage() {
       </section>
 
       {/* SECTION 6 — TESTIMONIALS (shared with the home page) */}
-      <InTheirWords heading={<>women who came<span className="testimonial-break"> </span>back different</>} />
+      <InTheirWords heading={<>women who came<span className="testimonial-break"> </span>back different</>} compact />
 
       {/* SECTION 9 — THE ROOMS */}
       {/* full-bleed opener: the cottage verandah at dawn */}
