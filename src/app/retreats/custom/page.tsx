@@ -223,14 +223,14 @@ export default function CustomRetreatPage() {
           />
           <div style={{ position: "absolute", inset: 0, background: "rgba(45,37,33,0.5)" }} />
         </div>
-        <div style={{ position: "relative", zIndex: 1, textAlign: "center", padding: "0 24px", maxWidth: 720, margin: "0 auto" }}>
+        <div className="custom-hero-copy" style={{ position: "relative", zIndex: 1, textAlign: "center", padding: "0 24px", maxWidth: 720, margin: "0 auto" }}>
           <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "#C39E88", marginBottom: 18 }}>
             custom retreats
           </p>
-          <h1 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(30px,5vw,50px)", color: "#F1F0E5", fontWeight: 700, lineHeight: 1.15, marginBottom: 20 }}>
+          <h1 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(30px,5vw,50px)", color: "#F1F0E5", fontWeight: 700, lineHeight: 1.15, marginBottom: 20, textWrap: "balance" }}>
             your vision. our expertise.<br />an experience entirely your own.
           </h1>
-          <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, lineHeight: 1.5, color: "#E8D5BC", maxWidth: 560, margin: "0 auto 32px", textWrap: "balance" }}>
+          <p className="custom-hero-sub" style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, lineHeight: 1.5, color: "#E8D5BC", maxWidth: 560, margin: "0 auto 32px", textWrap: "balance" }}>
             retreats built for women-led brands, for companies, and for women who need a week of their own. from one guest to 25.
           </p>
           <a
@@ -251,6 +251,8 @@ export default function CustomRetreatPage() {
             start the conversation →
           </a>
         </div>
+        {/* phones: more room from the screen edges, tighter subhead lines */}
+        <style>{`@media(max-width:600px){.custom-hero-copy{padding:0 40px!important}.custom-hero-copy h1{font-size:28px!important}.custom-hero-sub{line-height:1.35!important}}`}</style>
       </section>
 
       {/* WHO WE BUILD FOR */}

@@ -70,7 +70,7 @@ export default function Nav() {
         className="nav-bar"
         style={{
           width: "100%",
-          padding: "0 48px 0 24px",
+          padding: "0 48px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -79,14 +79,14 @@ export default function Nav() {
         }}
       >
 <style>{`
-          /* On a phone each element sits the same distance from its own side
-             as from the top. They are different heights, so the offsets differ:
-             the logo box is 44px tall in a 72px bar, the hamburger 30px. */
+          /* On a phone the logo sits 28px in from the left (Nov 2026: 14px read
+             as jammed against the edge) and 18px from the top. The logo box is
+             44px tall in a 72px bar, the hamburger 30px. */
           @media (max-width: 768px) {
             .nav-bar { padding: 0 !important; }
             /* Pulled into the corner: aligning to the top of the bar rather
                than centring lets the gap above match the gap to the left. */
-            .nav-logo { margin-left: 14px; margin-top: 18px !important; }
+            .nav-logo { margin-left: 28px; margin-top: 18px !important; }
             .nav-menu-btn { margin-right: 21px; }
           }
         `}</style>
