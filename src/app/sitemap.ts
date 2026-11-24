@@ -17,6 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: "https://ashaexperiences.com/retreats",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
       url: "https://ashaexperiences.com/retreats/custom",
       lastModified: new Date(),
       changeFrequency: "monthly",
