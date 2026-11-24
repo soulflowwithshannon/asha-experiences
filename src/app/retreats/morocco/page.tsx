@@ -11,7 +11,7 @@ import Testimonials, { retreatQuotes } from "@/components/Testimonials";
 import VideoPair from "@/components/VideoPair";
 import HowItWorks from "@/components/HowItWorks";
 import Divider from "@/components/Divider";
-import MeetUs from "@/components/MeetUs";
+import StillDeciding from "@/components/StillDeciding";
 import GuidesCompact from "@/components/GuidesCompact";
 import FaqJsonLd from "@/components/FaqJsonLd";
 import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/AnimatedText";
@@ -716,6 +716,9 @@ export default function MoroccoPage() {
       {/* SECTION — HOW IT WORKS */}
       <HowItWorks arrival="from Marrakech" background="var(--color-bg-page)" />
 
+      {/* STILL DECIDING — sits above the FAQ so "the questions below" holds */}
+      <StillDeciding background="var(--color-bg-page)" padding="0 32px 72px" />
+
       {/* SECTION 9 — FAQ */}
       <section style={{ background: "#F5F1E6", padding: "80px 32px 80px" }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
@@ -735,8 +738,6 @@ export default function MoroccoPage() {
           </FadeIn>
         </div>
       </section>
-
-      <MeetUs spaceAbove={56} spaceBelow={56} />
 
       <Divider background="var(--color-bg-page)" />
 

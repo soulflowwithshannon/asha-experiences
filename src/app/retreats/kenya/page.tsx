@@ -11,6 +11,7 @@ import CallHerHome from "@/components/CallHerHome";
 import VideoPair from "@/components/VideoPair";
 import { CALENDAR_URL } from "@/components/MeetUs";
 import FaqJsonLd from "@/components/FaqJsonLd";
+import StillDeciding from "@/components/StillDeciding";
 import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/AnimatedText";
 
 const daysData = [
@@ -398,8 +399,6 @@ const guideIntros = [
   { name: "Shannon", photo: "/images/Shannon (new).JPG", role: "somatic guide & circle facilitator", line: "she holds space for women to come back to themselves, with softness, strength and soul." },
 ];
 
-const clayButton: React.CSSProperties = { display: "inline-block", padding: "13px 30px", background: "var(--color-accent)", border: "1px solid var(--color-accent)", color: "#FFFCF5", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center" };
-
 function MeetSection() {
   return (
     <section id="meet" style={{ background: "var(--color-bg-surface)", padding: "88px 24px" }}>
@@ -426,11 +425,6 @@ function MeetSection() {
             </FadeIn>
           ))}
         </div>
-        <FadeIn>
-          <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontWeight: 500, fontSize: "clamp(22px,3vw,28px)", color: "var(--color-text-headline)", marginBottom: 24 }}>
-            to the woman on the fence
-          </p>
-        </FadeIn>
       </div>
 
       <VideoPair
@@ -444,17 +438,7 @@ function MeetSection() {
         ]}
       />
 
-      <FadeIn>
-        <div style={{ textAlign: "center", marginTop: 56, maxWidth: 560, marginLeft: "auto", marginRight: "auto" }}>
-          <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(22px,3vw,28px)", color: "var(--color-text-headline)", lineHeight: 1.25, marginBottom: 16, textWrap: "balance" }}>
-            you&apos;re thinking about flying to Kenya. that&apos;s a big thing to sit with on your own.
-          </p>
-          <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
-            this one is the furthest out and the biggest leap, so we&apos;d rather talk to you first. just an honest conversation about whether this is the right experience for you.
-          </p>
-          <a href={CALENDAR_URL} target="_blank" rel="noopener noreferrer" style={clayButton}>book a call with us →</a>
-        </div>
-      </FadeIn>
+      <StillDeciding background="transparent" padding="56px 0 0" />
       <style>{`@media(max-width:700px){.kenya-guides{grid-template-columns:1fr!important;gap:24px!important;max-width:420px;margin-left:auto;margin-right:auto}}`}</style>
     </section>
   );
@@ -947,7 +931,7 @@ export default function KenyaPage() {
         <style>{`@media(max-width:860px){.rooms-intro{grid-template-columns:1fr!important;gap:36px!important}}@media(max-width:860px){.cottage-card{grid-template-columns:1fr!important;gap:28px!important;padding:28px!important}} @media(max-width:640px){.mobile-break{display:block}}`}</style>
       </section>
 
-      {/* MEET US + VIDEOS + CALL (replaces guides, "before you book" and the videos section) */}
+      {/* MEET US + VIDEOS + STILL DECIDING */}
       <MeetSection />
 
       {/* SECTION 8 — FAQ */}
@@ -975,7 +959,7 @@ export default function KenyaPage() {
           </FadeIn>
           <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", textAlign: "center", marginTop: 36 }}>
             still wondering about something?{" "}
-            <a href={CALENDAR_URL} target="_blank" rel="noopener noreferrer" style={{ color: "var(--color-accent)", fontWeight: 600, textDecoration: "none" }}>book a call with us →</a>
+            <Link href="/contact" style={{ color: "var(--color-accent)", fontWeight: 600, textDecoration: "none" }}>ask us here →</Link>
           </p>
         </div>
       </section>
@@ -1001,9 +985,6 @@ export default function KenyaPage() {
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
               <a href="#rooms" style={{ display: "inline-block", padding: "12px 32px", background: "#C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 700, letterSpacing: "0.04em", textDecoration: "none", transition: "background 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.background = "#b08d78")} onMouseLeave={(e) => (e.currentTarget.style.background = "#C39E88")}>
                 reserve my spot →
-              </a>
-              <a href={CALENDAR_URL} target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 32px", border: "1px solid #E8D5BC", color: "#F1F0E5", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none" }}>
-                book a call first
               </a>
             </div>
           </FadeIn>
