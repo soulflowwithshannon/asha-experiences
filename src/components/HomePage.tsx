@@ -286,7 +286,7 @@ const hosts = [
   {
     name: "Ashley",
     photo: "/images/3.png",
-    bio: "reiki healer, sound bath DJ and life coach. she came to this work after a hard chapter that left her disconnected from herself. reiki was where she started finding her way back, and she's been holding that space for women since. [TODO: Ashley to confirm this wording]",
+    bio: "reiki healer, sound bath DJ and life coach. she came to this work after a hard chapter that left her disconnected from herself. reiki was where she started finding her way back, and she's been holding that space for women since.",
   },
   {
     name: "Shannon",
