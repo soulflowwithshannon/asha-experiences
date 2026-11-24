@@ -6,16 +6,6 @@ export type Quote = { text: string; name: string; emphasis?: string };
 
 export const quotes: Quote[] = [
   {
-    text: "I'm so grateful for the community that was created from the group and it helped me not feel so alone. thank you for creating a space where I felt safe enough to let go of the thoughts and chains that were holding me back.",
-    emphasis: "it helped me not feel so alone",
-    name: "M'Lyn",
-  },
-  {
-    text: "I felt like I would do the work alone, and when I went out into the real world it would all fly out the window. but being in community with all these other women has helped me integrate this into my daily life.",
-    emphasis: "helped me integrate this into my daily life",
-    name: "Alani",
-  },
-  {
     text: "in just 6 days I learned the importance of having community who can share openly and vulnerably — and I learned to see the light I see in others in myself too.",
     emphasis: "I learned to see the light I see in others in myself too",
     name: "Jess",
@@ -37,8 +27,9 @@ export const quotes: Quote[] = [
   },
 ];
 
-// the three shown on retreat pages, in display order
-export const retreatQuotes: Quote[] = ["Jess", "M'Lyn", "Alani"].map(
+// shown on retreat pages, in display order (two quotes removed Nov 2026 at
+// the owners' request; add new retreat quotes here as they come in)
+export const retreatQuotes: Quote[] = ["Jess"].map(
   (name) => quotes.find((q) => q.name === name)!
 );
 
@@ -92,11 +83,11 @@ export default function Testimonials({
 }) {
   return (
     <FadeIn>
-      <div style={{ maxWidth, margin }}>
+      <div style={{ maxWidth: Math.min(maxWidth, items.length * 380), margin }}>
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
+            gridTemplateColumns: `repeat(${Math.min(items.length, 3)}, 1fr)`,
             gap: 16,
             alignItems: "stretch",
           }}

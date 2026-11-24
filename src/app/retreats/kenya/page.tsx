@@ -8,7 +8,6 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { useEffect, useRef, useState, ReactNode } from "react";
 import FadeIn from "@/components/FadeIn";
 import CallHerHome from "@/components/CallHerHome";
-import Testimonials, { retreatQuotes } from "@/components/Testimonials";
 import VideoPair from "@/components/VideoPair";
 import { CALENDAR_URL } from "@/components/MeetUs";
 import FaqJsonLd from "@/components/FaqJsonLd";
@@ -799,45 +798,72 @@ export default function KenyaPage() {
       </section>
 
       {/* SECTION 6 — TESTIMONIALS */}
-      <section style={{ background: "var(--color-bg-page)", padding: "80px 32px" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 48 }}>
-            women who came<span className="testimonial-break"> </span>back different
-          </h2>
-          <Testimonials items={retreatQuotes} />
-
+      {/* dark band so it reads as its own moment, apart from the rooms below */}
+      <section style={{ position: "relative", background: "#2D2521", padding: "110px 32px 120px", overflow: "hidden" }}>
+        {/* oversized quote mark as texture */}
+        <span aria-hidden="true" style={{ position: "absolute", top: -60, left: "50%", transform: "translateX(-50%)", fontFamily: "var(--font-cormorant)", fontSize: 420, lineHeight: 1, color: "rgba(195,158,136,0.08)", pointerEvents: "none", userSelect: "none" }}>&ldquo;</span>
+        <div style={{ position: "relative", maxWidth: 1100, margin: "0 auto" }}>
+          <FadeIn>
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#C5AA9B", textAlign: "center", marginBottom: 18 }}>in their words</p>
+            <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(30px,4.5vw,48px)", color: "#F1F0E5", textAlign: "center", fontWeight: 700, marginBottom: 40 }}>
+              women who came<span className="testimonial-break"> </span>back different
+            </h2>
+          </FadeIn>
+          {/* one featured line, set big */}
+          <FadeIn delay={0.1}>
+            <figure style={{ maxWidth: 760, margin: "0 auto 64px", textAlign: "center" }}>
+              <blockquote style={{ margin: 0, fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(26px,3.6vw,40px)", lineHeight: 1.3, color: "#E8D5BC", textWrap: "balance" }}>
+                &ldquo;I learned to see the light I see in others in myself too.&rdquo;
+              </blockquote>
+              <figcaption style={{ marginTop: 18, display: "flex", alignItems: "center", justifyContent: "center", gap: 12, fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase", color: "#C5AA9B" }}>
+                <span style={{ width: 32, height: "0.5px", background: "#C5AA9B" }} />Jess<span style={{ width: 32, height: "0.5px", background: "#C5AA9B" }} />
+              </figcaption>
+            </figure>
+          </FadeIn>
           <FadeIn delay={0.1}>
             <TestimonialVideo />
           </FadeIn>
-
-
         </div>
       </section>
 
       {/* SECTION 9 — THE ROOMS */}
-      <section id="rooms" style={{ background: "#FFFCF5", padding: "80px 32px" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+      {/* full-bleed opener: the cottage verandah at dawn */}
+      <div id="rooms" style={{ position: "relative", height: "min(78vh, 680px)", minHeight: 420, overflow: "hidden", background: "#2D2521" }}>
+        <ParallaxImage src="/images/ol_pejeta_safari_cottages_mbili_view.jpg" alt="two women in robes with morning coffee on the cottage verandah, looking out over the conservancy" height="100%" objectPosition="center 50%" sizes="100vw" />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(45,37,33,0.15) 30%, rgba(45,37,33,0.75))" }} />
+        <div style={{ position: "absolute", left: 0, right: 0, bottom: 56, textAlign: "center", padding: "0 24px" }}>
           <FadeIn>
-            <div style={{ borderRadius: 8, overflow: "hidden", aspectRatio: "3/4", maxWidth: 420, margin: "0 auto 48px", position: "relative" }}>
-              <Image src="/images/kenya-women-tent.JPG" alt="Shannon Tomascak and Ashley Scully at safari tent" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="700px" />
-            </div>
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#E8D5BC", marginBottom: 14 }}>where you&apos;ll wake up</p>
+            <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(36px,6vw,68px)", color: "#F1F0E5", fontWeight: 700, lineHeight: 1.05, textShadow: "0 2px 24px rgba(0,0,0,0.35)" }}>
+              your home in the wild
+            </h2>
           </FadeIn>
-          <SplitHeadline
-            text="your home in the wild"
-            as="h2"
-            style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 48 }}
-          />
+        </div>
+      </div>
 
-          <FadeIn delay={0.2}>
-            <div style={{ maxWidth: 620, margin: "0 auto 48px", textAlign: "center", display: "flex", flexDirection: "column", gap: 16 }}>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.8 }}>
-                <em>while solo occupancy is not available due to limited capacity, every cottage is beautifully designed and thoughtfully appointed.</em>
-              </p>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.8 }}>
-                <strong>book with a friend</strong> or be paired with a like-minded woman in your group.
-              </p>
-            </div>
-          </FadeIn>
+      <section style={{ background: "#FFFCF5", padding: "80px 32px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          {/* intro: copy beside the photo of the two of us at the tents */}
+          <div className="rooms-intro" style={{ display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 56, alignItems: "center", maxWidth: 980, margin: "0 auto 72px" }}>
+            <FadeIn>
+              <div>
+                <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(24px,3vw,32px)", lineHeight: 1.3, color: "var(--color-text-headline)", marginBottom: 20 }}>
+                  canvas walls, a wraparound verandah, and the plains waking up outside your door.
+                </p>
+                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.8, marginBottom: 14 }}>
+                  <em>while solo occupancy is not available due to limited capacity, every cottage is beautifully designed and thoughtfully appointed.</em>
+                </p>
+                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.8 }}>
+                  <strong>book with a friend</strong> or be paired with a like-minded woman in your group.
+                </p>
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.15}>
+              <div style={{ position: "relative", aspectRatio: "4/5", borderRadius: 8, overflow: "hidden", transform: "rotate(1.5deg)", boxShadow: "0 18px 40px rgba(74,63,53,0.18)", border: "8px solid #fff" }}>
+                <Image src="/images/kenya-women-tent.JPG" alt="Shannon Tomascak and Ashley Scully at their safari tent" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="(max-width: 860px) 90vw, 420px" />
+              </div>
+            </FadeIn>
+          </div>
 
           <div style={{ maxWidth: 1000, margin: "0 auto" }}>
             {/* The cottage — single option, laid out horizontally */}
@@ -918,7 +944,7 @@ export default function KenyaPage() {
             <BookingSteps />
           </div>
         </div>
-        <style>{`@media(max-width:860px){.cottage-card{grid-template-columns:1fr!important;gap:28px!important;padding:28px!important}} @media(max-width:640px){.mobile-break{display:block}}`}</style>
+        <style>{`@media(max-width:860px){.rooms-intro{grid-template-columns:1fr!important;gap:36px!important}}@media(max-width:860px){.cottage-card{grid-template-columns:1fr!important;gap:28px!important;padding:28px!important}} @media(max-width:640px){.mobile-break{display:block}}`}</style>
       </section>
 
       {/* MEET US + VIDEOS + CALL (replaces guides, "before you book" and the videos section) */}
