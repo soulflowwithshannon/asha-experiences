@@ -310,6 +310,30 @@ const faqs: { question: string; answer: ReactNode }[] = [
     answer: <p>not at all. most women come solo — and many say the sisterhood they found was the most unexpected gift. this space is designed to make you feel safe, welcome, and deeply connected from day one.</p>,
   },
   {
+    question: "is it safe for a woman traveling on her own?",
+    answer: <p>[TODO: honest answer about Ol Pejeta and Nairobi]. from the moment group transport leaves Nairobi, you&apos;re with us and the conservancy&apos;s guides the whole week. [TODO: who meets her, and what happens if something goes wrong]</p>,
+  },
+  {
+    question: "what if my flight is late, or I've never been to Nairobi?",
+    answer: <p>[TODO: recommended hotel, whether anyone meets her at the airport, what happens if she misses the morning departure]</p>,
+  },
+  {
+    question: "I'll be sharing a room. how does that work?",
+    answer: <p>two women to a bedroom, four to a cottage, each bedroom with its own bathroom. come with a friend, or we&apos;ll pair you with someone [TODO: how pairing works].</p>,
+  },
+  {
+    question: "how fit do I need to be?",
+    answer: <p>[TODO]</p>,
+  },
+  {
+    question: "what happens when I get home?",
+    answer: <p>this is the part most retreats skip. [TODO: what the post-retreat community actually is: how often, how long, what happens in it]</p>,
+  },
+  {
+    question: "why does Kenya cost more than Morocco?",
+    answer: <p>[TODO: daily game drives, conservancy fees, the lodge, private transport, in one or two plain sentences]</p>,
+  },
+  {
     question: "what do I need for traveling to Kenya?",
     answer: (
       <div>
