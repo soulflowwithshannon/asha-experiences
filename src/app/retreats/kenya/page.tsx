@@ -403,7 +403,7 @@ function MeetSection() {
         ]}
       />
 
-      <StillDeciding retreat="Kenya" background="transparent" padding="56px 0 0" />
+      <StillDeciding retreat="Kenya" weekHref="#week" storiesHref="#stories" background="transparent" padding="56px 0 0" />
       <style>{`@media(max-width:700px){.kenya-guides{grid-template-columns:1fr!important;gap:24px!important;max-width:420px;margin-left:auto;margin-right:auto}}`}</style>
     </section>
   );
@@ -756,7 +756,7 @@ export default function KenyaPage() {
       </section>
 
       {/* SECTION 6 — TESTIMONIALS (shared with the home page) */}
-      <InTheirWords heading={<>women who came<span className="testimonial-break"> </span>back different</>} compact />
+      <InTheirWords heading={<>women who came<span className="testimonial-break"> </span>back different</>} compact id="stories" />
 
       {/* SECTION 9 — THE ROOMS */}
       {/* full-bleed opener: the cottage verandah at dawn */}

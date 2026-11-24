@@ -33,16 +33,19 @@ export default function InTheirWords({
   heading,
   eyebrow = "in their words",
   compact = false,
+  id,
 }: {
   heading: ReactNode;
   /** small caps line above the heading; pass "" to hide it */
   eyebrow?: string;
   /** smaller heading and quote on desktop (home page); phone sizes unchanged */
   compact?: boolean;
+  /** anchor so other sections can link here */
+  id?: string;
 }) {
   return (
     /* dark band so it reads as its own moment */
-    <section style={{ position: "relative", background: "#2D2521", padding: "110px 32px 120px", overflow: "hidden" }}>
+    <section id={id} style={{ position: "relative", background: "#2D2521", padding: "110px 32px 120px", overflow: "hidden", scrollMarginTop: 72 }}>
       {/* oversized quote mark as texture */}
       <span aria-hidden="true" style={{ position: "absolute", top: -60, left: "50%", transform: "translateX(-50%)", fontFamily: "var(--font-cormorant)", fontSize: 420, lineHeight: 1, color: "rgba(195,158,136,0.08)", pointerEvents: "none", userSelect: "none" }}>&ldquo;</span>
       <div style={{ position: "relative", maxWidth: 1100, margin: "0 auto" }}>

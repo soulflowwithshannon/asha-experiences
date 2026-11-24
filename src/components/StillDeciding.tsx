@@ -9,6 +9,8 @@ import FadeIn from "@/components/FadeIn";
 export default function StillDeciding({
   retreat,
   weekLine = "read the day-by-day above",
+  weekHref,
+  storiesHref,
   background = "var(--color-bg-page)",
   padding = "56px 32px",
 }: {
@@ -16,6 +18,9 @@ export default function StillDeciding({
   retreat: string;
   /** Morocco has a single day's timetable, not a day-by-day. */
   weekLine?: string;
+  /** in-page anchors: when set, the week line and the testimonials line link there */
+  weekHref?: string;
+  storiesHref?: string;
   background?: string;
   padding?: string;
 }) {
@@ -41,16 +46,21 @@ export default function StillDeciding({
             fontSize: "clamp(26px,3.4vw,32px)",
             color: "var(--color-text-headline)",
             lineHeight: 1.2,
-            marginBottom: 20,
+            marginBottom: 2,
           }}>
             still deciding?
           </h2>
+          {/* sits right under the heading, then a gap before the advice */}
+          <p style={{ ...body, marginBottom: 20 }}>
+            that&apos;s fair, it&apos;s a big trip.
+          </p>
         </FadeIn>
         <FadeIn delay={0.1}>
           {/* short paragraphs, links kept on one line so they never split */}
           <p style={{ ...body, marginBottom: 16 }}>
-            that&apos;s fair, it&apos;s a big trip.<br />
-            here&apos;s what usually helps: {weekLine}, read what the women who came said, and check the questions below.
+            here&apos;s what usually helps:{" "}
+            {weekHref ? <a href={weekHref} style={link}>{weekLine}</a> : weekLine},{" "}
+            {storiesHref ? <a href={storiesHref} style={link}>hear what the women who came said</a> : "read what the women who came said"}, and check the questions below.
           </p>
           <p style={{ ...body, marginBottom: 16 }}>
             if you&apos;d like to hear it from someone who&apos;s been,<br className="sd-break" />{" "}
@@ -59,7 +69,7 @@ export default function StillDeciding({
             </Link>.
           </p>
           <p style={body}>
-            if there&apos;s one specific thing we haven&apos;t answered,<br />
+            if there&apos;s one thing we haven&apos;t answered,<br />
             <Link href={`/contact?retreat=${r}#send`} style={link}>
               ask us here
             </Link>{" "}
