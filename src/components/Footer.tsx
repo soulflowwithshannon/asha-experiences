@@ -84,6 +84,18 @@ export default function Footer() {
       >
         © 2026 ASHA Experiences LLC
       </p>
+      <p
+        style={{
+          fontFamily: "var(--font-cormorant)",
+          fontStyle: "italic",
+          fontSize: 15,
+          color: "var(--color-text-body)",
+          textAlign: "center",
+          marginTop: 6,
+        }}
+      >
+        ASHA means hope in Sanskrit.
+      </p>
 
       <style>{`
         /* Stacked on a phone the column is centred, but the logo is a block

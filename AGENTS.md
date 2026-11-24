@@ -88,6 +88,12 @@ testimonials video is served from Cloudflare R2.
 - `MeetUs` — old "before you book" call section; no longer on Morocco (Nov 2026),
   still used on the past Mexico page. Exports `CALENDAR_URL`.
 - `StillDeciding` — "still deciding?" note on Kenya and Morocco, links to /contact.
+- `InTheirWords` — dark testimonial band (Jess quote + testimonial video). Kenya and home.
+- `FadeIn` + `SafeReveal` — wrap a page in `<SafeReveal>` and every FadeIn inside renders
+  visible by default, fading only blocks that start below the fold. Home uses it.
+- `src/lib/kenya.ts` — `SPOTS_LEFT` (Kenya hero + home card) and the payment-plan
+  cutoff. Change the spot count there, once.
+- Home page: `src/app/page.tsx` holds metadata; the page is `src/components/HomePage.tsx`.
 - `Nav` — link colour depends on `darkHero` (homepage + retreat pages have photo heroes
   and need light text; every other page needs dark).
 
