@@ -17,6 +17,7 @@ import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/Animated
 const daysData = [
   {
     day: "01",
+    description: "[TODO: what happens on day 1]",
     title: "arrive & exhale",
     blurb: "the plane lands, the noise falls away, and something in your shoulders finally drops.",
     items: [
@@ -27,6 +28,7 @@ const daysData = [
   },
   {
     day: "02",
+    description: "[TODO: what happens on day 2]",
     title: "roots",
     blurb: "before you can open up, you have to land somewhere. this is where you land.",
     items: [
@@ -37,6 +39,7 @@ const daysData = [
   },
   {
     day: "03",
+    description: "[TODO: what happens on day 3]",
     title: "open plains",
     blurb: "nothing to perform out here. just space, and what rises to fill it.",
     items: [
@@ -47,6 +50,7 @@ const daysData = [
   },
   {
     day: "04",
+    description: "[TODO: what happens on day 4]",
     title: "into the wild",
     blurb: "the day the retreat is named for. this is the deep end.",
     items: [
@@ -57,6 +61,7 @@ const daysData = [
   },
   {
     day: "05",
+    description: "[TODO: what happens on day 5]",
     title: "still water",
     blurb: "after the deep end, you float. integration, not another lesson.",
     items: [
@@ -67,6 +72,7 @@ const daysData = [
   },
   {
     day: "06",
+    description: "[TODO: what happens on day 6]",
     title: "the fire",
     blurb: "the week starts to close, and everyone can feel it.",
     items: [
@@ -77,6 +83,7 @@ const daysData = [
   },
   {
     day: "07",
+    description: "[TODO: what happens on day 7]",
     title: "carry it home",
     blurb: "not an ending. just the part where you take it with you.",
     items: [
@@ -97,6 +104,7 @@ function DaysGrid() {
           <div style={{ flexShrink: 0, width: 180, border: "1px solid var(--color-border)", borderRadius: 8, padding: "28px 24px", textAlign: "center", cursor: "default", transition: "background 0.2s ease", background: hovered === i ? "#EDE4D0" : "var(--color-bg-surface)" }}>
             <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.1em", color: "var(--color-accent)", textTransform: "uppercase", marginBottom: 8 }}>DAY {d.day}</p>
             <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 20, color: "var(--color-text-headline)" }}>{d.title}</p>
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12.5, lineHeight: 1.55, color: "var(--color-text-body)", marginTop: 10 }}>{d.description}</p>
           </div>
           <AnimatePresence>
             {hovered === i && (
@@ -122,6 +130,45 @@ function DaysGrid() {
       ))}
       </div>
     </div>
+  );
+}
+
+// every time and activity is a placeholder until Shannon fills them in
+const typicalDay = [
+  { time: "[TODO time]", what: "[TODO e.g. sunrise game drive]" },
+  { time: "[TODO time]", what: "[TODO e.g. breakfast]" },
+  { time: "[TODO time]", what: "[TODO e.g. yoga or movement]" },
+  { time: "[TODO time]", what: "[TODO e.g. workshop or circle]" },
+  { time: "[TODO time]", what: "[TODO e.g. lunch]" },
+  { time: "[TODO time]", what: "[TODO e.g. sunset game drive]" },
+  { time: "[TODO time]", what: "[TODO e.g. evening: dinner and fire]" },
+];
+
+function TypicalDay() {
+  return (
+    <section style={{ background: "var(--color-bg-page)", padding: "0 32px 88px" }}>
+      <div style={{ maxWidth: 560, margin: "0 auto" }}>
+        <FadeIn>
+          <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(24px,3.4vw,32px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 32 }}>
+            a typical day
+          </h3>
+        </FadeIn>
+        <FadeIn delay={0.1}>
+          <ul style={{ listStyle: "none", padding: 0, margin: 0, borderTop: "0.5px solid var(--color-border)" }}>
+            {typicalDay.map((row, i) => (
+              <li key={i} className="typical-row" style={{ display: "grid", gridTemplateColumns: "130px 1fr", gap: 16, padding: "14px 0", borderBottom: "0.5px solid var(--color-border)", fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.6, color: "var(--color-text-body)" }}>
+                <span style={{ color: "var(--color-accent)", fontWeight: 600 }}>{row.time}</span>
+                <span>{row.what}</span>
+              </li>
+            ))}
+          </ul>
+          <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 20, color: "var(--color-text-headline)", textAlign: "center", marginTop: 28 }}>
+            afternoons are mostly yours. [TODO: confirm]
+          </p>
+        </FadeIn>
+      </div>
+      <style>{`@media(max-width:520px){.typical-row{grid-template-columns:1fr!important;gap:2px!important}}`}</style>
+    </section>
   );
 }
 
@@ -170,12 +217,12 @@ function KenyaHero() {
         </p>
         <div className="hero-rise" style={{ animationDuration: "1s", animationDelay: "0.3s", marginTop: 60 }}>
           <a
-            href="#invitation"
+            href="#week"
             style={{ display: "inline-block", padding: "14px 36px", background: "rgba(195,158,136,0.85)", border: "1px solid #C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", fontWeight: 500, transition: "background 0.3s ease" }}
             onMouseEnter={(e) => (e.currentTarget.style.background = "#C39E88")}
             onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(195,158,136,0.85)")}
           >
-            journey with us ↓
+            see the week ↓
           </a>
         </div>
       </div>
@@ -669,19 +716,15 @@ export default function KenyaPage() {
         <style>{`@media(max-width:768px){.stay-grid{grid-template-columns:1fr!important}.stay-video{margin:0 auto;width:100%}.stay-copy{margin:0 auto;width:100%;padding:24px 0;text-align:center}.stay-copy p,.stay-copy h2,.stay-copy div,.stay-copy span{text-align:center}.stay-copy h2{font-size:26px!important;white-space:nowrap}}`}</style>
       </section>
 
-      {/* SECTION 4 — ARC OF THE WEEK */}
-      <section style={{ background: "var(--color-bg-page)", padding: "80px 32px 80px" }}>
+      {/* SECTION 4 — ARC OF THE WEEK (hero "see the week" scrolls here) */}
+      <section id="week" style={{ background: "var(--color-bg-page)", padding: "80px 32px 80px", scrollMarginTop: 72 }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <FadeIn>
             <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 12 }}>
               the arc of the week
             </h2>
           </FadeIn>
-          <FadeIn delay={0.1}>
-            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, fontStyle: "italic", color: "var(--color-text-muted)", textAlign: "center", marginBottom: 48 }}>
-              full itinerary shared once you&apos;re booked
-            </p>
-          </FadeIn>
+          <div style={{ height: 36 }} />
           <DaysGrid />
           <FadeIn delay={0.15}>
             <div style={{ maxWidth: 560, margin: "80px auto 0", textAlign: "center", fontFamily: "var(--font-dm-sans)", fontSize: 16, color: "var(--color-text-body)", lineHeight: 1.9, display: "flex", flexDirection: "column", gap: 20 }}>
@@ -706,6 +749,9 @@ export default function KenyaPage() {
           </FadeIn>
         </div>
       </section>
+
+      {/* SECTION 4a — A TYPICAL DAY */}
+      <TypicalDay />
 
       {/* SECTION 4b — PHOTO GALLERY STRIP */}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", height: 560 }}>

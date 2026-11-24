@@ -169,12 +169,12 @@ function MoroccoHero() {
         </p>
         <div className="hero-rise" style={{ animationDuration: "1s", animationDelay: "0.3s" }}>
           <a
-            href="#invitation"
+            href="#week"
             style={{ display: "inline-block", padding: "14px 40px", background: "rgba(195,158,136,0.85)", border: "1px solid #C39E88", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 14, letterSpacing: "0.06em", textDecoration: "none", fontWeight: 600, transition: "background 0.3s ease" }}
             onMouseEnter={(e) => (e.currentTarget.style.background = "#C39E88")}
             onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(195,158,136,0.85)")}
           >
-            journey with us ↓
+            see the week ↓
           </a>
         </div>
       </div>
@@ -522,8 +522,8 @@ export default function MoroccoPage() {
         <style>{`@media(max-width:768px){.stay-grid{grid-template-columns:1fr!important}}`}</style>
       </section>
 
-      {/* SECTION 4 — A DAY ON SACRED SANDS */}
-      <section style={{ background: "var(--color-bg-page)", padding: "80px 32px" }}>
+      {/* SECTION 4 — A DAY ON SACRED SANDS (hero "see the week" scrolls here) */}
+      <section id="week" style={{ background: "var(--color-bg-page)", padding: "80px 32px", scrollMarginTop: 72 }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <FadeIn>
             <div style={{ width: "100%", position: "relative", borderRadius: 10, overflow: "hidden" }}>
