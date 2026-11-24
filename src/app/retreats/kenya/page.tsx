@@ -832,10 +832,10 @@ export default function KenyaPage() {
                 <div style={{ display: "flex", flexDirection: "column", paddingTop: 12 }}>
                   <h3 style={{ fontFamily: "var(--font-heading)", fontSize: 34, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 10, lineHeight: 1.1 }}>the cottage</h3>
                   <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-accent)", marginBottom: 18 }}>
-                    two bedrooms · two women per room · four per cottage
+                    two bedrooms · two women per room · your own bed
                   </p>
                   <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
-                    you&apos;ll share a bedroom with one other woman, and the cottage with three. each bedroom has its own ensuite bathroom, and the living area, dining room and verandah run the full length of the building.
+                    you&apos;ll share a bedroom with one other woman, <strong>each of you in your own bed</strong>. four of you share the cottage: each bedroom has its own ensuite bathroom, and the living area, dining room and verandah run the full length of the building.
                   </p>
                   <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginTop: -12, marginBottom: 24 }}>
                     come with a friend, or we&apos;ll pair you with a like-minded woman based on the form you fill out when you book. before the retreat we hold a zoom call so everyone can meet.
