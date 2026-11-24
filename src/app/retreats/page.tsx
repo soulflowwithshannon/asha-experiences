@@ -2,8 +2,8 @@
 // social, so it has to work as a fast, thumb-friendly list on a phone.
 //
 // Keep `retreats` in date order and current: when a retreat ends, drop its
-// card (Morocco ends Dec 5 2026). Casa Amor links to a call until its page
-// launches; swap `href` to "/retreats/spain" on launch day.
+// card (Morocco ends Dec 5 2026). Casa Amor links to its waitlist until its
+// page launches; swap `href` to "/retreats/spain" on launch day.
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -81,9 +81,8 @@ const retreats: Retreat[] = [
     dates: "June 2027",
     line: "five nights between the countryside of Vejer and the beaches of the Costa de la Luz.",
     status: "coming June 2027",
-    href: CALENDAR_URL,
-    external: true,
-    cta: "get first dibs",
+    href: "/retreats/spain-waitlist",
+    cta: "join the Spain list",
     image: "/images/Vejer de la Frontera.jpeg",
     alt: "the white town of Vejer de la Frontera above the countryside and the sea",
     position: "center 60%",

@@ -312,7 +312,7 @@ export default function ContactPage() {
             }}>
               <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(255,255,255,0.65)", marginBottom: 6 }}>follow along</p>
               <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 26, fontWeight: 300, color: "#fff", marginBottom: 4, lineHeight: 1.1 }}>ASHA Experiences</p>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "rgba(255,255,255,0.7)", letterSpacing: "0.04em", marginBottom: 12 }}>Mexico · Morocco · Kenya</p>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "rgba(255,255,255,0.7)", letterSpacing: "0.04em", marginBottom: 12 }}>Kenya · Morocco</p>
               <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.55)", border: "0.5px solid rgba(255,255,255,0.35)", padding: "4px 10px" }}>
                 @asha_experiences →
               </span>

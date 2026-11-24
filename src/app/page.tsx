@@ -173,7 +173,7 @@ export default function HomePage() {
               <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, color: "var(--color-text-body)", lineHeight: 1.8, maxWidth: 580, margin: "0 auto 48px" }}>
                 <em>born from a deep belief that women hold the answers within themselves</em> — <strong>ASHA creates the space for that wisdom to rise.</strong>
                 <br /><br />
-                from the spice markets of <strong>Morocco</strong> to the ancient cenotes of <strong>Mexico</strong> and the golden savannas of <strong>Kenya</strong>, every retreat is designed to spark something real inside you.
+                from the spice markets of <strong>Morocco</strong> to the golden savannas of <strong>Kenya</strong>, every retreat is designed to spark something real inside you.
               </p>
             </StaggerChild>
           </StaggerBlock>

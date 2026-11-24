@@ -33,7 +33,7 @@ const headingFont = DM_Serif_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "ASHA Experiences — Transformational Retreats for Women in Kenya & Morocco",
+    default: "ASHA Experiences — Small-Group Retreats for Women in Kenya & Morocco",
     template: "%s | ASHA Experiences",
   },
   description: "You've been holding it together for so long. ASHA Experiences creates transformational international retreats for women — yoga, sound healing, ceremony, and sisterhood in Kenya and Morocco.",
