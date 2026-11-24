@@ -1,6 +1,6 @@
 "use client";
 import ListIcon from "@/components/ListIcon";
-import { IdentificationCard, Syringe, ShieldCheck, Airplane, Shower, Drop, Sparkle, Jar, PlugCharging, WifiMedium, Binoculars } from "@phosphor-icons/react";
+import { Shower, Drop, Sparkle, Jar, PlugCharging, WifiMedium, Binoculars } from "@phosphor-icons/react";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -293,153 +293,66 @@ function ParallaxImage({ src, alt, height, objectPosition = "center", sizes = "1
   );
 }
 
-const b = (text: string) => <strong style={{ fontWeight: 600 }}>{text}</strong>;
-
+// Six questions, in this order (Nov 2026). Group fit, rooms, fitness, cost and
+// the after-care now live in the page sections themselves.
 const faqs: { question: string; answer: ReactNode }[] = [
-  {
-    question: "I've never done a retreat before — is that a problem?",
-    answer: <p>most women who show up at our retreats haven&apos;t either. you don&apos;t need retreat experience. you need enough curiosity to say yes before you feel ready.</p>,
-  },
-  {
-    question: "I'm in the middle of something really hard right now — a breakup, a loss, a big change. is this the right time, or should I wait until I'm more \"together\"?",
-    answer: <p>this is usually exactly the right time. most women don&apos;t come to us after they&apos;ve healed — they come while they&apos;re still in it. you don&apos;t need to arrive with it figured out. that&apos;s not the prerequisite. showing up is.</p>,
-  },
-  {
-    question: "I don't really \"do\" vulnerability. do I have to share personal stuff?",
-    answer: <p>no. some women arrive ready to go deep on day one. others need the first day or two just to watch and feel safe before they open up, if they open up at all. both are welcome. nothing here is mandatory.</p>,
-  },
-  {
-    question: "I never take time for myself. how do I even justify this?",
-    answer: <p>we hear this from almost every woman who books. the ones who feel like they can&apos;t afford to take a week for themselves are usually the ones who need it most. this isn&apos;t selfish — it&apos;s the thing that lets you keep showing up for everyone else without running yourself empty.</p>,
-  },
-  {
-    question: "what's the vibe of the group?",
-    answer: (
-      <div>
-        <p style={{ marginBottom: 12 }}>intimate. we cap it at 10 women.</p>
-        <p style={{ marginBottom: 12 }}>you&apos;ll find a mix — late 20s to 50s, all coming from different places in life. some are mid-heartbreak, some are pivoting careers, some are deep in motherhood, some just need a few days that are entirely their own. there&apos;s always the same thing underneath it all — a readiness to actually show up for themselves.</p>
-        <p>by day two, you&apos;d never guess they were strangers.</p>
-      </div>
-    ),
-  },
-  {
-    question: "do I have to come with a friend or know someone?",
-    answer: <p>not at all. most women come solo — and many say the sisterhood they found was the most unexpected gift. this space is designed to make you feel safe, welcome, and deeply connected from day one.</p>,
-  },
   {
     question: "is it safe for a woman traveling on her own?",
     answer: (
       <div>
-        <p style={{ marginBottom: 12 }}>Nairobi is a big city, so treat it like one: stay at a hotel we recommend, use cars the hotel arranges, and keep valuables out of sight.</p>
+        <p style={{ marginBottom: 12 }}>Nairobi is a big city, so treat it like one: stay at the hotel we recommend, use cars the hotel arranges, and keep valuables out of sight.</p>
         <p style={{ marginBottom: 12 }}>Ol Pejeta is a different world: 90,000 acres of conservancy, and whenever you&apos;re out on the land you&apos;re with expert guides. from the moment group transport leaves Nairobi, you&apos;re with us and the conservancy&apos;s guides the whole week.</p>
-        <p>we meet you in Nairobi, and Ashley and Shannon are with you all week. if anything goes wrong, Ol Pejeta runs its own security and emergency response teams around the clock, and Nanyuki, the nearest town, has private hospital care within an hour of Ol Pejeta Safari Cottages. we strongly recommend travel insurance that covers medical evacuation.</p>
+        <p>if anything goes wrong, Ol Pejeta runs its own security and emergency response teams around the clock, and Nanyuki, the nearest town, has private hospital care within an hour of Ol Pejeta Safari Cottages. we recommend travel insurance that includes medical evacuation.</p>
       </div>
     ),
   },
   {
-    question: "what if my flight is late, or I've never been to Nairobi?",
+    question: "how do I get there, and what if my flight is late?",
     answer: (
       <div>
-        <p style={{ marginBottom: 12 }}>land in Nairobi at least a day early. group transport to Ol Pejeta leaves the morning of November 28th, and an extra night gives a late flight room to be late.</p>
-        <p>we&apos;ll recommend a hotel in Nairobi where we&apos;ll all stay together the night before. and if your flight is late and you miss the morning departure, another safe, secure shuttle will be waiting to bring you to Ol Pejeta.</p>
+        <p style={{ marginBottom: 12 }}>fly into Jomo Kenyatta International Airport (NBO) in Nairobi, and land at least a day early. we&apos;ll recommend a hotel where we all stay together the night before, and group transport to Ol Pejeta leaves the morning of November 28th.</p>
+        <p style={{ marginBottom: 12 }}>if your flight is late and you miss the morning departure, another safe, secure shuttle will bring you to Ol Pejeta [TODO: included, or extra cost?].</p>
+        <p>group transport back to Nairobi leaves December 4th. want to come early or stay on? tell us and we&apos;ll help you plan it.</p>
       </div>
     ),
   },
   {
-    question: "I'll be sharing a room. how does that work?",
-    answer: <p>two women to a bedroom, four to a cottage, each bedroom with its own bathroom. come with a friend, or meet someone before you go: we hold a Zoom call before the retreat so everyone can meet. otherwise, we&apos;ll pair you with a like-minded woman, based on the form you fill out when you book. solo rooms aren&apos;t available on this one.</p>,
-  },
-  {
-    question: "how fit do I need to be?",
-    answer: <p>you don&apos;t need to be especially fit. most of the week happens in safari vehicles, on the verandah and in circle, and the movement is yoga and gentle practice. Ol Pejeta sits at high elevation, so go easy on the first day.</p>,
-  },
-  {
-    question: "what happens when I get home?",
-    answer: <p>this is the part most retreats skip. we&apos;re building a community to keep you in touch with each other. every retreat has its own group chat, we schedule a follow-up Zoom call once everyone&apos;s home, and most women stay in touch on their own.</p>,
-  },
-  {
-    question: "why does Kenya cost more than Morocco?",
-    answer: <p>because it&apos;s a safari as well as a retreat. the price covers sunrise and sunset game drives every day with expert guides, conservancy fees that go back into Ol Pejeta&apos;s conservation work, a week at Ol Pejeta Safari Cottages, and private transport to and from Nairobi.</p>,
-  },
-  {
-    question: "what do I need for traveling to Kenya?",
+    question: "what do I need before I travel?",
     answer: (
       <div>
-        <p style={{ marginBottom: 24 }}>here&apos;s a quick overview — we&apos;ll send you a full pre-travel guide once you&apos;re booked.</p>
-
-        <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-          {/* Visa */}
-          <div>
-            <p style={{ fontWeight: 600, marginBottom: 8, display: "flex", alignItems: "center", gap: 8 }}><IdentificationCard aria-hidden="true" size={18} weight="light" color="var(--color-accent)" />Visa</p>
-            <ul style={{ listStyle: "disc", paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
-              <li>most travelers need a Kenyan evisa, applied for online — simple process, around $50. we&apos;ll walk you through it step by step.</li>
-            </ul>
-          </div>
-
-          {/* Vaccines & Mosquitoes */}
-          <div>
-            <p style={{ fontWeight: 600, marginBottom: 8, display: "flex", alignItems: "center", gap: 8 }}><Syringe aria-hidden="true" size={18} weight="light" color="var(--color-accent)" />Vaccines & Mosquitoes</p>
-            <ul style={{ listStyle: "disc", paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
-              <li>if you&apos;ve traveled through certain countries in the last 6 months (even with a layover), a yellow fever vaccination card may be required.</li>
-              <li>check with your healthcare provider or airline if you&apos;re unsure.</li>
-              <li>no additional vaccines are required for entry into Kenya.</li>
-              <li>the retreat is located at high elevation with cool, dry air — mosquitoes are not a concern and malaria is not a risk in this region.</li>
-              <li>as always, consult your healthcare provider for personal recommendations.</li>
-            </ul>
-          </div>
-
-          {/* Travel Insurance */}
-          <div>
-            <p style={{ fontWeight: 600, marginBottom: 8, display: "flex", alignItems: "center", gap: 8 }}><ShieldCheck aria-hidden="true" size={18} weight="light" color="var(--color-accent)" />Travel Insurance</p>
-            <ul style={{ listStyle: "disc", paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
-              <li>not required but highly recommended.</li>
-              <li>we suggest World Nomads or SafetyWing — both cover medical emergencies and trip interruptions.</li>
-              <li>cost is typically $50–100 for the duration of the trip.</li>
-            </ul>
-          </div>
-
-          {/* Passport */}
-          <div>
-            <p style={{ fontWeight: 600, marginBottom: 8, display: "flex", alignItems: "center", gap: 8 }}><Airplane aria-hidden="true" size={18} weight="light" color="var(--color-accent)" />Passport</p>
-            <ul style={{ listStyle: "disc", paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
-              <li>ensure your passport is valid for at least 6 months beyond your travel dates.</li>
-            </ul>
-          </div>
-        </div>
+        <ul style={{ listStyle: "disc", paddingLeft: 20, margin: "0 0 12px", display: "flex", flexDirection: "column", gap: 6 }}>
+          <li>a passport valid for at least 6 months beyond your travel dates.</li>
+          <li>a Kenyan evisa, applied for online (around $50). we&apos;ll walk you through it.</li>
+          <li>a yellow fever card only if you&apos;ve recently been through certain countries, even on a layover. check with your doctor or airline.</li>
+          <li>travel insurance: not required, but we strongly recommend it (World Nomads or SafetyWing, typically $50–100).</li>
+        </ul>
+        <p>the retreat is at high elevation with cool, dry air, so mosquitoes aren&apos;t a concern and malaria isn&apos;t a risk there. you&apos;ll get a full pre-travel guide once you&apos;re booked.</p>
       </div>
     ),
   },
   {
-    question: "how do I get to the retreat?",
+    question: "how do payments and cancellations work?",
     answer: (
       <div>
-        <p style={{ marginBottom: 16 }}>fly into Jomo Kenyatta International Airport (NBO) in Nairobi, Kenya.</p>
-        <p style={{ marginBottom: 8 }}><strong style={{ fontWeight: 600 }}>Arrive:</strong> group transport to Ol Pejeta Conservancy departs the morning of November 28th — we recommend arriving in Nairobi at least one day before.</p>
-        <p style={{ marginBottom: 12 }}><strong style={{ fontWeight: 600 }}>Depart:</strong> group transport back to Nairobi is provided on December 4th.</p>
-        <p>want to arrive a few days early to explore Nairobi or ease into the time difference, or stay on and extend your trip? just reach out and we&apos;ll plan it with you.</p>
+        <p style={{ marginBottom: 12 }}>pay in full, or hold your spot with a $1,000 deposit and pay the remaining $5,900 over 11 monthly payments: ten of $536 and a final one of $540. the balance is due 30 days before the retreat (October 29, 2027), so the 11-month plan is for women who book by December 31, 2026. book later and we&apos;ll split it evenly over the months that are left.</p>
+        <p style={{ marginBottom: 12 }}><strong>all payments are non-refundable</strong>, including the deposit. if your plans change, you can transfer your spot to another woman, or to a future ASHA retreat, up to 4 months before the retreat starts [TODO: time limit for using a transfer on a future retreat, e.g. within 12 months]. just email us.</p>
+        <p>we strongly recommend travel insurance to protect your trip.</p>
       </div>
     ),
   },
   {
-    question: "do you offer payment plans?",
-    answer: (
-      <div>
-        <p style={{ marginBottom: 12 }}>yes. hold your spot with a $1,000 deposit, then pay the remaining $5,900 over 11 monthly payments: ten payments of $536 and a final payment of $540. the full balance is due 30 days before the retreat (October 29, 2027), so the 11-month plan is for women who book by December 31, 2026. book later and we&apos;ll split the balance evenly over the months that are left.</p>
-        <p>on the payment page, choose the deposit option and we&apos;ll set up your plan from there.</p>
-      </div>
-    ),
+    question: "I'm in the middle of something hard right now. is this the right time?",
+    answer: <p>usually, yes. most women don&apos;t come to us after they&apos;ve healed. they come while they&apos;re still in it. you don&apos;t need to arrive with anything figured out.</p>,
   },
   {
-    question: "what's the cancellation policy?",
+    question: "I've never done a retreat, and I don't really \"do\" vulnerability.",
     answer: (
       <div>
-        <p style={{ marginBottom: 12 }}><strong>all payments are non-refundable</strong> — including the $1,000 deposit and any balance paid. this covers accommodation, facilitators, and logistics we commit to well in advance on your behalf.</p>
-        <p style={{ marginBottom: 12 }}>if your plans change, you can transfer your spot to another woman, or to a future ASHA retreat, up to 4 months before the retreat starts. just email us.</p>
-        <p>we strongly recommend travel insurance to protect your investment.</p>
+        <p style={{ marginBottom: 12 }}>most women who come haven&apos;t done one either. nothing here is mandatory: some women go deep on day one, others watch for a day or two first, and both are welcome.</p>
+        <p>you don&apos;t need to be especially fit, either. most of the week happens in safari vehicles, on the verandah and in circle, and the movement is yoga and gentle practice. Ol Pejeta is at high elevation, so go easy on the first day.</p>
       </div>
     ),
   },
-
 ];
 
 /* ---------- back half, consolidated (Nov 2026) ----------
@@ -471,13 +384,14 @@ function TestimonialVideo() {
 
 const bookingSteps = [
   { title: "reserve your spot", body: "pay in full, or hold your spot with a $1,000 deposit." },
-  { title: "you hear from us", body: "Ashley and Shannon reach out personally, ask about dietary needs and send your pre-travel guide." },
+  { title: "you hear from us", body: "Ashley and Shannon reach out personally, ask about dietary needs, send your pre-travel guide, and invite you to the zoom where you'll meet the group." },
   { title: "we meet you in Nairobi", body: "group transport to Ol Pejeta is included, and we're with you all week." },
+  { title: "after you're home", body: "your retreat gets its own group chat, and we hold a follow-up zoom once everyone's back." },
 ];
 
 function BookingSteps() {
   return (
-    <ol className="kenya-steps" style={{ listStyle: "none", padding: 0, margin: "48px auto 0", maxWidth: 1000, display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+    <ol className="kenya-steps" style={{ listStyle: "none", padding: 0, margin: "48px auto 0", maxWidth: 1100, display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }}>
       {bookingSteps.map((st, i) => (
         <li key={st.title} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
           <span style={{ flexShrink: 0, width: 30, height: 30, borderRadius: "50%", border: "1px solid var(--color-accent)", color: "var(--color-accent)", fontFamily: "var(--font-cormorant)", fontSize: 18, display: "flex", alignItems: "center", justifyContent: "center" }}>{i + 1}</span>
@@ -487,7 +401,7 @@ function BookingSteps() {
           </span>
         </li>
       ))}
-      <style>{`@media(max-width:760px){.kenya-steps{grid-template-columns:1fr!important;max-width:440px!important}}`}</style>
+      <style>{`@media(max-width:980px){.kenya-steps{grid-template-columns:1fr 1fr!important;max-width:640px!important}}@media(max-width:760px){.kenya-steps{grid-template-columns:1fr!important;max-width:440px!important}}`}</style>
     </ol>
   );
 }
@@ -806,7 +720,8 @@ export default function KenyaPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64 }} className="included-grid">
             <FadeIn>
               <div>
-                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-accent)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 24, fontWeight: 700 }}>included</p>
+                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-accent)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 12, fontWeight: 700 }}>included</p>
+                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13.5, fontStyle: "italic", color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 20 }}>it&apos;s a safari as well as a retreat: game drives every day, conservancy fees that go back into Ol Pejeta&apos;s conservation work, and private transport from Nairobi are all covered.</p>
                 <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
                   {([
                     <><strong>7 days / 6 nights</strong> at <strong>Ol Pejeta Safari Cottages</strong>, inside <em>Ol Pejeta Conservancy</em></>,
@@ -955,6 +870,9 @@ export default function KenyaPage() {
                   <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
                     you&apos;ll share a bedroom with one other woman, and the cottage with three. each bedroom has its own ensuite bathroom, and the living area, dining room and verandah run the full length of the building.
                   </p>
+                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginTop: -12, marginBottom: 24 }}>
+                    come with a friend, or we&apos;ll pair you with a like-minded woman based on the form you fill out when you book. before the retreat we hold a zoom call so everyone can meet.
+                  </p>
                   <div style={{ marginBottom: 28 }}>
                     <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>all cottages include</p>
                     <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
@@ -976,7 +894,8 @@ export default function KenyaPage() {
                       <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 40, color: "var(--color-accent)", fontWeight: 400 }}>$6,900</p>
                       <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)" }}>per person · shared room</p>
                     </div>
-                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", marginTop: -12, marginBottom: 20 }}>or $1,000 today + 11 monthly payments of about $536</p>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", marginTop: -12, marginBottom: 8 }}>late 20s to 50s · most women come solo · ten women, no more</p>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", marginTop: 0, marginBottom: 20 }}>or $1,000 today + 11 monthly payments of about $536</p>
                     <div style={{ display: "flex", flexDirection: "column", gap: 10 }} className="cottage-buttons">
                       {/* STRIPE LINK: cottage - pay in full */}
                       <a href="https://buy.stripe.com/3cIaEY03mfc9d5o4mW0sU02" target="_blank" rel="noopener noreferrer" style={{ display: "block", width: "100%", boxSizing: "border-box", padding: "14px 20px", background: "var(--color-accent)", border: "1px solid var(--color-accent)", color: "#FFFCF5", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "opacity 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")} onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}>
