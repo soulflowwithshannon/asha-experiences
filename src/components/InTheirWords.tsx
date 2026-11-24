@@ -32,10 +32,13 @@ function TestimonialVideo() {
 export default function InTheirWords({
   heading,
   eyebrow = "in their words",
+  compact = false,
 }: {
   heading: ReactNode;
   /** small caps line above the heading; pass "" to hide it */
   eyebrow?: string;
+  /** smaller heading and quote on desktop (home page); phone sizes unchanged */
+  compact?: boolean;
 }) {
   return (
     /* dark band so it reads as its own moment */
@@ -47,14 +50,14 @@ export default function InTheirWords({
           {eyebrow && (
             <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#C5AA9B", textAlign: "center", marginBottom: 18 }}>{eyebrow}</p>
           )}
-          <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(30px,4.5vw,48px)", color: "#F1F0E5", textAlign: "center", fontWeight: 700, marginBottom: 40 }}>
+          <h2 style={{ fontFamily: "var(--font-heading)", fontSize: compact ? "clamp(30px,3.2vw,38px)" : "clamp(30px,4.5vw,48px)", color: "#F1F0E5", textAlign: "center", fontWeight: 700, marginBottom: 40 }}>
             {heading}
           </h2>
         </FadeIn>
         {/* one featured line, set big */}
         <FadeIn delay={0.1}>
           <figure style={{ maxWidth: 760, margin: "0 auto 64px", textAlign: "center" }}>
-            <blockquote style={{ margin: 0, fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(26px,3.6vw,40px)", lineHeight: 1.3, color: "#E8D5BC", textWrap: "balance" }}>
+            <blockquote style={{ margin: 0, fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: compact ? "clamp(26px,2.6vw,32px)" : "clamp(26px,3.6vw,40px)", lineHeight: 1.3, color: "#E8D5BC", textWrap: "balance" }}>
               &ldquo;I learned to see the light I see in others in myself too.&rdquo;
             </blockquote>
             <figcaption style={{ marginTop: 18, display: "flex", alignItems: "center", justifyContent: "center", gap: 12, fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase", color: "#C5AA9B" }}>

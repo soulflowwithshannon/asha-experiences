@@ -11,7 +11,6 @@ import { useSyncExternalStore } from "react";
 import FadeIn, { SafeReveal } from "@/components/FadeIn";
 import VideoPair from "@/components/VideoPair";
 import RetreatGallery from "@/components/RetreatGallery";
-import Divider from "@/components/Divider";
 import InTheirWords from "@/components/InTheirWords";
 import { SPOTS_LEFT, PAYMENT_PLAN_CLOSES } from "@/lib/kenya";
 
@@ -243,7 +242,7 @@ const pillars = [
 
 function Pillars() {
   return (
-    <section style={{ background: "var(--color-bg-surface)", padding: "80px 32px" }}>
+    <section style={{ background: "var(--color-bg-surface)", padding: "80px 32px 56px" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <FadeIn>
           <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 600, color: "var(--color-accent)", letterSpacing: "0.08em", textTransform: "uppercase", textAlign: "center", marginBottom: 16 }}>what every retreat holds</p>
@@ -297,7 +296,7 @@ const hosts = [
 
 function TwoOfUs() {
   return (
-    <section style={{ background: "var(--color-bg-page)", padding: "88px 32px" }}>
+    <section style={{ background: "var(--color-bg-page)", padding: "48px 32px 56px" }}>
       <div style={{ maxWidth: 1080, margin: "0 auto" }}>
         <FadeIn>
           <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 48 }}>
@@ -420,7 +419,7 @@ export default function HomePage() {
         {/* 3 — Kenya */}
         <KenyaCard />
         {/* 4 — in their words (same band as /retreats/kenya) */}
-        <InTheirWords heading="in their words" eyebrow="" />
+        <InTheirWords heading="in their words" eyebrow="" compact />
         {/* 5 — what every retreat holds */}
         <Pillars />
         {/* 6 — the two of us */}
@@ -430,7 +429,7 @@ export default function HomePage() {
           headline="a moment from retreat"
           orientation="vertical"
           background="var(--color-bg-surface)"
-          padding="80px 32px"
+          padding="48px 32px 56px"
           clips={[
             { file: "Ashley moment from retreat.MOV", label: "ashley" },
             { file: "Shannon moment from retreat.MOV", label: "shannon", posterTime: 3.6 },
@@ -438,7 +437,6 @@ export default function HomePage() {
         />
         {/* 7 — photos */}
         <RetreatGallery />
-        <Divider background="var(--color-bg-page)" />
         {/* 8 — what's next */}
         <WhatsNext />
         {/* 9 — closing */}

@@ -49,7 +49,7 @@ export default function RetreatGallery() {
   const visible = expanded ? shots : shots.slice(0, COLLAPSED);
 
   return (
-    <section style={{ background: "var(--color-bg-page)", padding: "88px 32px 48px" }}>
+    <section style={{ background: "var(--color-bg-page)", padding: "48px 32px 48px" }}>
       <div style={{ maxWidth: 1240, margin: "0 auto" }}>
         <FadeIn>
           <h2
