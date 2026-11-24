@@ -132,7 +132,7 @@ function Hero() {
             textWrap: "balance",
           }}
         >
-          small-group retreats for women in Kenya and Morocco, hosted start to finish by Ashley and Shannon.
+          small-group retreats for women around the world, hosted start to finish by Ashley and Shannon.
         </p>
 
         <div className="hero-rise home-hero-btns" style={{ animationDuration: "1s", animationDelay: "0.3s", display: "flex", gap: 14, justifyContent: "center", alignItems: "center" }}>
