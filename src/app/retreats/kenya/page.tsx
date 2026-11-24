@@ -396,9 +396,8 @@ const faqs: { question: string; answer: ReactNode }[] = [
     question: "do you offer payment plans?",
     answer: (
       <div>
-        <p style={{ marginBottom: 12 }}>yes. we want this to feel accessible and spacious.</p>
-        <p style={{ marginBottom: 12 }}>you can secure your spot with a $1,000 deposit today. this officially reserves your place and gives you access to a flexible payment plan, with remaining payments spread out over the coming months.</p>
-        <p>on the payment page, simply choose the deposit option instead of paying in full, and we&apos;ll work with you from there.</p>
+        <p style={{ marginBottom: 12 }}>yes. hold your spot with a $1,000 deposit, then pay the remaining $5,900 over 11 monthly payments: ten payments of $536 and a final payment of $540. the full balance is due 30 days before the retreat (October 29, 2027), so the 11-month plan is for women who book by December 31, 2026. book later and we&apos;ll split the balance evenly over the months that are left.</p>
+        <p>on the payment page, choose the deposit option and we&apos;ll set up your plan from there.</p>
       </div>
     ),
   },
@@ -980,6 +979,7 @@ export default function KenyaPage() {
                       <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 40, color: "var(--color-accent)", fontWeight: 400 }}>$6,900</p>
                       <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)" }}>per person · shared room</p>
                     </div>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", marginTop: -12, marginBottom: 20 }}>or $1,000 today + 11 monthly payments of about $536</p>
                     <div style={{ display: "flex", flexDirection: "column", gap: 10 }} className="cottage-buttons">
                       {/* STRIPE LINK: cottage - pay in full */}
                       <a href="https://buy.stripe.com/3cIaEY03mfc9d5o4mW0sU02" target="_blank" rel="noopener noreferrer" style={{ display: "block", width: "100%", boxSizing: "border-box", padding: "14px 20px", background: "var(--color-accent)", border: "1px solid var(--color-accent)", color: "#FFFCF5", fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: "0.04em", textDecoration: "none", textAlign: "center", transition: "opacity 0.3s ease" }} onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")} onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}>
