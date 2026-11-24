@@ -29,9 +29,9 @@ export default function FaqJsonLd({ faqs }: { faqs: { question: string; answer: 
   const data = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    // answers still holding a [TODO ...] placeholder stay out of the structured
-    // data, so search engines never quote a half-written answer
-    mainEntity: faqs.filter((f) => !toText(f.answer).includes("[TODO")).map((f) => ({
+    // answers still holding a [TODO ...] or [CHECK ...] marker stay out of the
+    // structured data, so search engines never quote a half-written answer
+    mainEntity: faqs.filter((f) => !/\[(TODO|CHECK)/.test(toText(f.answer))).map((f) => ({
       "@type": "Question",
       name: f.question,
       acceptedAnswer: { "@type": "Answer", text: clean(toText(f.answer)) },

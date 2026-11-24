@@ -17,7 +17,7 @@ import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/Animated
 const daysData = [
   {
     day: "01",
-    description: "[TODO: what happens on day 1]",
+    description: "private transport in from Nairobi, then you settle in and meet the women you'll spend the week with. welcome dinner under the stars, and our first circle.",
     title: "arrive & exhale",
     blurb: "the plane lands, the noise falls away, and something in your shoulders finally drops.",
     items: [
@@ -28,7 +28,7 @@ const daysData = [
   },
   {
     day: "02",
-    description: "[TODO: what happens on day 2]",
+    description: "yoga and journaling overlooking the plains, then a grounding workshop on why you're really here. the day ends with a sunset safari drive.",
     title: "roots",
     blurb: "before you can open up, you have to land somewhere. this is where you land.",
     items: [
@@ -39,7 +39,7 @@ const daysData = [
   },
   {
     day: "03",
-    description: "[TODO: what happens on day 3]",
+    description: "a full day out in Ol Pejeta with the wildlife, including the Northern White Rhino Sanctuary. guided journaling as the light changes.",
     title: "open plains",
     blurb: "nothing to perform out here. just space, and what rises to fill it.",
     items: [
@@ -50,7 +50,7 @@ const daysData = [
   },
   {
     day: "04",
-    description: "[TODO: what happens on day 4]",
+    description: "the deep end: a ceremony and guided women's circle, a sunset safari drive, then a fire and whatever needs to be said around it.",
     title: "into the wild",
     blurb: "the day the retreat is named for. this is the deep end.",
     items: [
@@ -61,7 +61,7 @@ const daysData = [
   },
   {
     day: "05",
-    description: "[TODO: what happens on day 5]",
+    description: "a slower morning with gentle movement, and a visit to Spinners and Weavers. rest is built into the day on purpose.",
     title: "still water",
     blurb: "after the deep end, you float. integration, not another lesson.",
     items: [
@@ -72,7 +72,7 @@ const daysData = [
   },
   {
     day: "06",
-    description: "[TODO: what happens on day 6]",
+    description: "a picnic in the wild, a traditional Kenyan cooking class with your hosts, then the closing ceremony and circle.",
     title: "the fire",
     blurb: "the week starts to close, and everyone can feel it.",
     items: [
@@ -83,7 +83,7 @@ const daysData = [
   },
   {
     day: "07",
-    description: "[TODO: what happens on day 7]",
+    description: "a sunrise farewell, then private transport back to Nairobi.",
     title: "carry it home",
     blurb: "not an ending. just the part where you take it with you.",
     items: [
@@ -101,7 +101,7 @@ function DaysGrid() {
       <div style={{ display: "flex", gap: 16, paddingBottom: 8 }}>
       {daysData.map((d, i) => (
         <div key={d.day} style={{ position: "relative" }} onMouseEnter={() => setHovered(i)} onMouseLeave={() => setHovered(null)}>
-          <div style={{ flexShrink: 0, width: 180, border: "1px solid var(--color-border)", borderRadius: 8, padding: "28px 24px", textAlign: "center", cursor: "default", transition: "background 0.2s ease", background: hovered === i ? "#EDE4D0" : "var(--color-bg-surface)" }}>
+          <div style={{ flexShrink: 0, width: 180, height: "100%", boxSizing: "border-box", border: "1px solid var(--color-border)", borderRadius: 8, padding: "28px 24px", textAlign: "center", cursor: "default", transition: "background 0.2s ease", background: hovered === i ? "#EDE4D0" : "var(--color-bg-surface)" }}>
             <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.1em", color: "var(--color-accent)", textTransform: "uppercase", marginBottom: 8 }}>DAY {d.day}</p>
             <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 20, color: "var(--color-text-headline)" }}>{d.title}</p>
             <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12.5, lineHeight: 1.55, color: "var(--color-text-body)", marginTop: 10 }}>{d.description}</p>
@@ -133,15 +133,16 @@ function DaysGrid() {
   );
 }
 
-// every time and activity is a placeholder until Shannon fills them in
+// activities come from the itinerary and included list; times are loose on
+// purpose until the real schedule is confirmed
 const typicalDay = [
-  { time: "[TODO time]", what: "[TODO e.g. sunrise game drive]" },
-  { time: "[TODO time]", what: "[TODO e.g. breakfast]" },
-  { time: "[TODO time]", what: "[TODO e.g. yoga or movement]" },
-  { time: "[TODO time]", what: "[TODO e.g. workshop or circle]" },
-  { time: "[TODO time]", what: "[TODO e.g. lunch]" },
-  { time: "[TODO time]", what: "[TODO e.g. sunset game drive]" },
-  { time: "[TODO time]", what: "[TODO e.g. evening: dinner and fire]" },
+  { time: "sunrise", what: "game drive with your guides" },
+  { time: "after the drive", what: "breakfast" },
+  { time: "mid-morning", what: "yoga, meditation and journaling overlooking the plains" },
+  { time: "late morning", what: "a workshop, ceremony or women's circle" },
+  { time: "midday", what: "lunch" },
+  { time: "late afternoon", what: "sunset game drive" },
+  { time: "evening", what: "a long dinner, and the fireside" },
 ];
 
 function TypicalDay() {
@@ -163,7 +164,7 @@ function TypicalDay() {
             ))}
           </ul>
           <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 20, color: "var(--color-text-headline)", textAlign: "center", marginTop: 28 }}>
-            afternoons are mostly yours. [TODO: confirm]
+            afternoons are mostly yours. [CHECK: confirm]
           </p>
         </FadeIn>
       </div>
@@ -311,19 +312,30 @@ const faqs: { question: string; answer: ReactNode }[] = [
   },
   {
     question: "is it safe for a woman traveling on her own?",
-    answer: <p>[TODO: honest answer about Ol Pejeta and Nairobi]. from the moment group transport leaves Nairobi, you&apos;re with us and the conservancy&apos;s guides the whole week. [TODO: who meets her, and what happens if something goes wrong]</p>,
+    answer: (
+      <div>
+        <p style={{ marginBottom: 12 }}>Nairobi is a big city, so treat it like one: stay at a hotel we recommend, use cars the hotel arranges, and keep valuables out of sight. [CHECK: is this the Nairobi advice you want to give?]</p>
+        <p style={{ marginBottom: 12 }}>Ol Pejeta is a different world: 90,000 acres of conservancy, and whenever you&apos;re out on the land you&apos;re with expert guides. from the moment group transport leaves Nairobi, you&apos;re with us and the conservancy&apos;s guides the whole week.</p>
+        <p>we meet you in Nairobi, and Ashley and Shannon are with you all week. [CHECK: what happens if something goes wrong: who she calls, nearest medical care]</p>
+      </div>
+    ),
   },
   {
     question: "what if my flight is late, or I've never been to Nairobi?",
-    answer: <p>[TODO: recommended hotel, whether anyone meets her at the airport, what happens if she misses the morning departure]</p>,
+    answer: (
+      <div>
+        <p style={{ marginBottom: 12 }}>land in Nairobi at least a day early. group transport to Ol Pejeta leaves the morning of November 28th, and an extra night gives a late flight room to be late.</p>
+        <p>we&apos;ll share our favorite Nairobi hotels once you&apos;re booked. [CHECK: name one here?] [CHECK: does anyone meet her at the airport?] [CHECK: what happens if she misses the morning departure?]</p>
+      </div>
+    ),
   },
   {
     question: "I'll be sharing a room. how does that work?",
-    answer: <p>two women to a bedroom, four to a cottage, each bedroom with its own bathroom. come with a friend, or we&apos;ll pair you with someone [TODO: how pairing works].</p>,
+    answer: <p>two women to a bedroom, four to a cottage, each bedroom with its own bathroom. come with a friend, or we&apos;ll pair you with a like-minded woman in the group. once you book, Ashley and Shannon reach out personally, and [CHECK: how you match roommates]. solo rooms aren&apos;t available on this one.</p>,
   },
   {
     question: "how fit do I need to be?",
-    answer: <p>[TODO]</p>,
+    answer: <p>[CHECK] you don&apos;t need to be especially fit. most of the week happens in safari vehicles, on the verandah and in circle, and the movement is yoga and gentle practice. Ol Pejeta sits at high elevation, so go easy on the first day. [CHECK: any walks, and how long?]</p>,
   },
   {
     question: "what happens when I get home?",
@@ -331,7 +343,7 @@ const faqs: { question: string; answer: ReactNode }[] = [
   },
   {
     question: "why does Kenya cost more than Morocco?",
-    answer: <p>[TODO: daily game drives, conservancy fees, the lodge, private transport, in one or two plain sentences]</p>,
+    answer: <p>because it&apos;s a safari as well as a retreat. the price covers sunrise and sunset game drives every day with expert guides, conservancy fees that go back into Ol Pejeta&apos;s conservation work, a week at Ol Pejeta Safari Cottages, and private transport to and from Nairobi.</p>,
   },
   {
     question: "what do I need for traveling to Kenya?",
