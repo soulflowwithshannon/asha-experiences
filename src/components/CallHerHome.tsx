@@ -41,7 +41,7 @@ export default function CallHerHome({
         <FadeIn>
           <h2
             style={{
-              fontFamily: "var(--font-fraunces)",
+              fontFamily: "var(--font-heading)",
               fontSize: "clamp(28px,4vw,40px)",
               fontWeight: 700,
               color: "var(--color-text-headline)",
@@ -112,7 +112,7 @@ export default function CallHerHome({
 
                   <h3
                     style={{
-                      fontFamily: "var(--font-fraunces)",
+                      fontFamily: "var(--font-heading)",
                       fontSize: "clamp(21px,2.6vw,27px)",
                       fontWeight: 700,
                       color: "var(--color-text-headline)",

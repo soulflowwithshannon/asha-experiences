@@ -13,7 +13,7 @@ export default function FindYourRetreatPage() {
           <FadeIn delay={0.05}>
             <h1
               style={{
-                fontFamily: "var(--font-fraunces)",
+                fontFamily: "var(--font-heading)",
                 fontWeight: 700,
                 fontSize: "clamp(30px,6.5vw,52px)",
                 lineHeight: 1.05,

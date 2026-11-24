@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Sans, Fraunces } from "next/font/google";
+import { Cormorant_Garamond, DM_Sans, DM_Serif_Display } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Nav from "@/components/Nav";
@@ -22,10 +22,13 @@ const dmSans = DM_Sans({
   weight: ["300", "400", "500"],
 });
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+// Headings. DM Serif Display ships in one weight only (400); globals.css
+// turns off fake bolding wherever this font is used.
+const headingFont = DM_Serif_Display({
+  variable: "--font-heading",
   subsets: ["latin"],
-  weight: ["700"],
+  weight: "400",
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -155,7 +158,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${fraunces.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${headingFont.variable}`}>
       <body className="min-h-full flex flex-col">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
         <PostHogProvider>

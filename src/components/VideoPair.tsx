@@ -138,7 +138,7 @@ export default function VideoPair({
         <FadeIn>
           <p
             style={{
-              fontFamily: "var(--font-fraunces)",
+              fontFamily: "var(--font-heading)",
               fontSize: "clamp(26px,4vw,36px)",
               fontWeight: 700,
               color: "var(--color-text-headline)",

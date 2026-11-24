@@ -81,7 +81,7 @@ export default function DestinationRequest() {
             <FadeIn>
               <div style={{ textAlign: "center", marginBottom: 30 }}>
                 <p className="eyebrow-accent" style={{ marginBottom: 14 }}>help us choose</p>
-                <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(24px,3.4vw,30px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 12 }}>
+                <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(24px,3.4vw,30px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 12 }}>
                   where should we go next?
                 </h2>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.85, color: "var(--color-text-body)", maxWidth: 460, margin: "0 auto" }}>

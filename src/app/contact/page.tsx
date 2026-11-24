@@ -69,7 +69,7 @@ export default function ContactPage() {
               <p className="eyebrow-accent" style={{ marginBottom: 20 }}>get in touch</p>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <h1 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(24px,3vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 24 }}>
+              <h1 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(24px,3vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 24 }}>
                 let&apos;s talk
               </h1>
             </FadeIn>
@@ -110,7 +110,7 @@ export default function ContactPage() {
           {/* Col 3 — form */}
           <FadeIn delay={0.2}>
             <div>
-              <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(20px,2vw,26px)", color: "var(--color-accent)", fontWeight: 700, marginBottom: 28 }}>
+              <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(20px,2vw,26px)", color: "var(--color-accent)", fontWeight: 700, marginBottom: 28 }}>
                 send us a message
               </h2>
 

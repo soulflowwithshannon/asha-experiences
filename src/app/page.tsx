@@ -225,7 +225,7 @@ export default function HomePage() {
           <FadeIn delay={0.1}>
             <h2
               style={{
-                fontFamily: "var(--font-fraunces)",
+                fontFamily: "var(--font-heading)",
                 fontSize: "clamp(28px, 4vw, 40px)",
                 color: "var(--color-text-headline)",
                 textAlign: "center",
@@ -306,7 +306,7 @@ export default function HomePage() {
                 <SplitHeadline
                   text="Into the Wild"
                   as="h2"
-                  style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 12 }}
+                  style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 12 }}
                 />
               </StaggerChild>
               <StaggerChild>
@@ -349,7 +349,7 @@ export default function HomePage() {
         </div>
         <div style={{ position: "relative", zIndex: 1 }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 40, textWrap: "balance" }}>
+            <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 40, textWrap: "balance" }}>
               your next chapter starts here
             </h2>
           </FadeIn>

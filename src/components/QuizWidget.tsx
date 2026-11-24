@@ -211,7 +211,7 @@ export default function QuizWidget() {
               borderRadius: 6, padding: "28px 26px",
             }}>
               <h2 style={{
-                fontFamily: "var(--font-fraunces)", fontWeight: 700,
+                fontFamily: "var(--font-heading)", fontWeight: 700,
                 fontSize: "clamp(21px,3.6vw,25px)", lineHeight: 1.3,
                 color: "var(--color-text-headline)", marginBottom: 18,
               }}>
@@ -245,7 +245,7 @@ export default function QuizWidget() {
         ) : phase === "quiz" ? (
           <motion.div key={step} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.45, ease }}>
             <h2 style={{
-              fontFamily: "var(--font-fraunces)", fontWeight: 700,
+              fontFamily: "var(--font-heading)", fontWeight: 700,
               fontSize: "clamp(22px,4vw,27px)", lineHeight: 1.25,
               color: "var(--color-text-headline)", marginBottom: 24,
             }}>
@@ -292,7 +292,7 @@ export default function QuizWidget() {
               your result
             </p>
             <h2 style={{
-              fontFamily: "var(--font-fraunces)", fontWeight: 700,
+              fontFamily: "var(--font-heading)", fontWeight: 700,
               fontSize: "clamp(30px,6vw,44px)", color: "var(--color-text-headline)",
               marginBottom: 10, lineHeight: 1.1,
             }}>
@@ -317,7 +317,7 @@ export default function QuizWidget() {
                   <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 10, letterSpacing: ".16em", textTransform: "uppercase", color: "var(--color-accent)", marginBottom: 8 }}>
                     your retreat · {r.status}
                   </p>
-                  <p style={{ fontFamily: "var(--font-fraunces)", fontWeight: 700, fontSize: 22, color: "var(--color-text-headline)", marginBottom: 6 }}>
+                  <p style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: 22, color: "var(--color-text-headline)", marginBottom: 6 }}>
                     {r.retreat}
                   </p>
                   <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", marginBottom: 16 }}>{r.place}</p>

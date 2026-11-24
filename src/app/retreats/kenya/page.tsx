@@ -155,7 +155,7 @@ function KenyaHero() {
         </p>
         <h1
           className="hero-rise"
-          style={{ animationDuration: "1s", animationDelay: "0.1s", fontFamily: "var(--font-fraunces)", fontSize: "clamp(52px,8vw,80px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 16 }}
+          style={{ animationDuration: "1s", animationDelay: "0.1s", fontFamily: "var(--font-heading)", fontSize: "clamp(52px,8vw,80px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 16 }}
         >
           Into the Wild
         </h1>
@@ -581,7 +581,7 @@ export default function KenyaPage() {
             <div>
               <FadeIn><p className="eyebrow-accent" style={{ marginBottom: 16, fontWeight: 700 }}>OL PEJETA CONSERVANCY</p></FadeIn>
               <FadeIn delay={0.1}>
-                <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 24 }}>
+                <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 24 }}>
                   wild outside. held inside.
                 </h2>
               </FadeIn>
@@ -620,7 +620,7 @@ export default function KenyaPage() {
       <section style={{ background: "var(--color-bg-page)", padding: "80px 32px 80px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 12 }}>
+            <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 12 }}>
               the arc of the week
             </h2>
           </FadeIn>
@@ -682,7 +682,7 @@ export default function KenyaPage() {
           <SplitHeadline
             text="what's taken care of"
             as="h2"
-            style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 64 }}
+            style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 64 }}
           />
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64 }} className="included-grid">
             <FadeIn>
@@ -731,7 +731,7 @@ export default function KenyaPage() {
       {/* SECTION 6 — TESTIMONIALS */}
       <section style={{ background: "var(--color-bg-page)", padding: "80px 32px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 48 }}>
+          <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 48 }}>
             women who came<span className="testimonial-break"> </span>back different
           </h2>
           <Testimonials items={retreatQuotes} />
@@ -776,7 +776,7 @@ export default function KenyaPage() {
           <SplitHeadline
             text="your home in the wild"
             as="h2"
-            style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 48 }}
+            style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 48 }}
           />
 
           <FadeIn delay={0.2}>
@@ -823,7 +823,7 @@ export default function KenyaPage() {
 
                 {/* Right — details */}
                 <div style={{ display: "flex", flexDirection: "column", paddingTop: 12 }}>
-                  <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 34, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 10, lineHeight: 1.1 }}>the cottage</h3>
+                  <h3 style={{ fontFamily: "var(--font-heading)", fontSize: 34, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 10, lineHeight: 1.1 }}>the cottage</h3>
                   <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-accent)", marginBottom: 18 }}>
                     two bedrooms · two women per room · four per cottage
                   </p>
@@ -879,7 +879,7 @@ export default function KenyaPage() {
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
           <FadeIn>
             <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)", letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center", marginBottom: 16 }}>everything you need to know</p>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 56 }}>
+            <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 56 }}>
               Questions
             </h2>
           </FadeIn>
@@ -924,7 +924,7 @@ export default function KenyaPage() {
         </div>
         <div style={{ position: "relative", zIndex: 1 }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(20px,3vw,32px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 40, whiteSpace: "nowrap" }}>
+            <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(20px,3vw,32px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 40, whiteSpace: "nowrap" }}>
               something is calling you <em>here</em>
             </h2>
           </FadeIn>

@@ -151,7 +151,7 @@ function MoroccoHero() {
         </p>
         <h1
           className="hero-rise"
-          style={{ animationDuration: "1s", animationDelay: "0.1s", fontFamily: "var(--font-fraunces)", fontSize: "clamp(52px,9vw,96px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 12, lineHeight: 1 }}
+          style={{ animationDuration: "1s", animationDelay: "0.1s", fontFamily: "var(--font-heading)", fontSize: "clamp(52px,9vw,96px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 12, lineHeight: 1 }}
         >
           Sacred Sands
         </h1>
@@ -492,7 +492,7 @@ export default function MoroccoPage() {
               </div>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 24 }}>
+              <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 24 }}>
                 about the location
               </h2>
             </FadeIn>
@@ -512,7 +512,7 @@ export default function MoroccoPage() {
           </div>
           <div>
             <FadeIn>
-              <p style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(18px,2vw,24px)", color: "var(--color-text-headline)", fontWeight: 700, textAlign: "center", marginBottom: 20 }}>our retreat center: Atlas Kasbah</p>
+              <p style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(18px,2vw,24px)", color: "var(--color-text-headline)", fontWeight: 700, textAlign: "center", marginBottom: 20 }}>our retreat center: Atlas Kasbah</p>
             </FadeIn>
             <div style={{ position: "relative", borderRadius: 8, overflow: "hidden", aspectRatio: "4/5" }}>
               <Image src="/images/atlas kasbah.png" alt="Atlas Kasbah" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="640px" />
@@ -539,7 +539,7 @@ export default function MoroccoPage() {
           <SplitHeadline
             text="what's taken care of"
             as="h2"
-            style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 64 }}
+            style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 64 }}
           />
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64 }} className="included-grid">
             <FadeIn>
@@ -587,7 +587,7 @@ export default function MoroccoPage() {
       {/* SECTION 6 — TESTIMONIALS */}
       <section style={{ background: "var(--color-bg-page)", padding: "80px 32px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 48 }}>
+          <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 48 }}>
             women who came<span className="testimonial-break"> </span>back different
           </h2>
           <style>{`@media(max-width:640px){.testimonial-break{display:block}}`}</style>
@@ -627,7 +627,7 @@ export default function MoroccoPage() {
           <SplitHeadline
             text="your home in the desert"
             as="h2"
-            style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 8, whiteSpace: "nowrap" }}
+            style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 8, whiteSpace: "nowrap" }}
           />
           <FadeIn delay={0.1}>
             <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", textAlign: "center", maxWidth: 520, margin: "0 auto 64px", lineHeight: 1.7 }}>
@@ -646,7 +646,7 @@ export default function MoroccoPage() {
                     sold out
                   </div>
                 </div>
-                <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 24, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 8 }}>The Jamila</h3>
+                <h3 style={{ fontFamily: "var(--font-heading)", fontSize: 24, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 8 }}>The Jamila</h3>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>private tower room · sold out</p>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
                   the most private option. your own tower room at Atlas Kasbah — a space that is entirely yours.
@@ -666,7 +666,7 @@ export default function MoroccoPage() {
                 <div style={{ borderRadius: 6, overflow: "hidden", marginBottom: 24, aspectRatio: "809/770", position: "relative" }}>
                   <Image src="/images/13.png" alt="The Amani" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="400px" />
                 </div>
-                <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 24, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 8 }}>The Amani</h3>
+                <h3 style={{ fontFamily: "var(--font-heading)", fontSize: 24, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 8 }}>The Amani</h3>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>private room</p>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
                   a beautiful private room in the main kasbah — privacy with the warmth of being close to the group.
@@ -690,7 +690,7 @@ export default function MoroccoPage() {
                 <div style={{ borderRadius: 6, overflow: "hidden", marginBottom: 24, aspectRatio: "809/770", position: "relative" }}>
                   <Image src="/images/12.png" alt="The Salima" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="400px" />
                 </div>
-                <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 24, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 8 }}>The Salima</h3>
+                <h3 style={{ fontFamily: "var(--font-heading)", fontSize: 24, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 8 }}>The Salima</h3>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>shared 2-bedroom</p>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
                   the most connected option — a shared 2-bedroom suite. book with a friend or be paired with a like-minded woman in the group.
@@ -721,7 +721,7 @@ export default function MoroccoPage() {
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
           <FadeIn>
             <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)", letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center", marginBottom: 16 }}>everything you need to know</p>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 56 }}>
+            <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 56 }}>
               Questions
             </h2>
           </FadeIn>
@@ -764,7 +764,7 @@ export default function MoroccoPage() {
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,4vw,40px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 40 }}>
+            <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(26px,4vw,40px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 40 }}>
               <em>consider this the moment you choose YOU</em>
             </h2>
           </FadeIn>

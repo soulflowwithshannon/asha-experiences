@@ -227,7 +227,7 @@ export default function CustomRetreatPage() {
           <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "#C39E88", marginBottom: 18 }}>
             custom retreats
           </p>
-          <h1 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(30px,5vw,50px)", color: "#F1F0E5", fontWeight: 700, lineHeight: 1.15, marginBottom: 20 }}>
+          <h1 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(30px,5vw,50px)", color: "#F1F0E5", fontWeight: 700, lineHeight: 1.15, marginBottom: 20 }}>
             your vision. our expertise.<br />an experience entirely your own.
           </h1>
           <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, lineHeight: 1.5, color: "#E8D5BC", maxWidth: 560, margin: "0 auto 32px", textWrap: "balance" }}>
@@ -257,7 +257,7 @@ export default function CustomRetreatPage() {
       <section style={{ background: "var(--color-bg-page)", padding: "56px 32px 92px" }}>
         <div style={{ maxWidth: 1080, margin: "0 auto" }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(24px,3.2vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, lineHeight: 1.2, textAlign: "center", marginBottom: 44 }}>
+            <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(24px,3.2vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, lineHeight: 1.2, textAlign: "center", marginBottom: 44 }}>
               who we build for
             </h2>
           </FadeIn>
@@ -308,7 +308,7 @@ export default function CustomRetreatPage() {
           <FadeIn>
             <h2
               style={{
-                fontFamily: "var(--font-fraunces)",
+                fontFamily: "var(--font-heading)",
                 fontSize: "clamp(24px,3.2vw,32px)",
                 color: "#F1F0E5",
                 fontWeight: 700,
@@ -437,7 +437,7 @@ export default function CustomRetreatPage() {
           <FadeIn>
             <div style={{ textAlign: "center", marginBottom: 44 }}>
               <p className="eyebrow-accent" style={{ marginBottom: 14 }}>who leads it</p>
-              <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(24px,3.2vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, lineHeight: 1.2, marginBottom: 14, textWrap: "balance" }}>
+              <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(24px,3.2vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, lineHeight: 1.2, marginBottom: 14, textWrap: "balance" }}>
                 with you the whole way
               </h2>
               <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15.5, lineHeight: 1.6, color: "var(--color-text-body)", maxWidth: 520, margin: "0 auto", textWrap: "balance" }}>
@@ -479,7 +479,7 @@ export default function CustomRetreatPage() {
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <FadeIn>
             <p className="eyebrow-accent" style={{ marginBottom: 14, textAlign: "center" }}>how it works</p>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(24px,3.2vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, textAlign: "center", marginBottom: 12, textWrap: "balance" }}>
+            <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(24px,3.2vw,32px)", color: "var(--color-text-headline)", fontWeight: 700, textAlign: "center", marginBottom: 12, textWrap: "balance" }}>
               from vision to experience
             </h2>
             <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15.5, lineHeight: 1.6, color: "var(--color-text-body)", textAlign: "center", marginBottom: 44 }}>
@@ -510,7 +510,7 @@ export default function CustomRetreatPage() {
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>
-                    <h3 style={{ fontFamily: "var(--font-fraunces)", fontWeight: 700, fontSize: 19, color: "var(--color-text-headline)", lineHeight: 1.3, marginBottom: 6 }}>
+                    <h3 style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: 19, color: "var(--color-text-headline)", lineHeight: 1.3, marginBottom: 6 }}>
                       {step.title}
                     </h3>
                     <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.65, color: "var(--color-text-body)", margin: 0 }}>

@@ -36,7 +36,7 @@ export default function GuidesCompact({ darkQuote = false }: { darkQuote?: boole
         <FadeIn>
           <h2
             style={{
-              fontFamily: "var(--font-fraunces)",
+              fontFamily: "var(--font-heading)",
               fontSize: "clamp(26px, 4vw, 32px)",
               color: "var(--color-text-headline)",
               textAlign: "center",

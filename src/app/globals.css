@@ -213,3 +213,10 @@ h1, h2, h3, h4, h5, h6 {
 @media (prefers-reduced-motion: reduce) {
   .hero-rise, .hero-rise-sm { animation: none; }
 }
+
+/* Heading font (DM Serif Display) has a single weight. Headings still carry
+   fontWeight 600/700 from the Fraunces days; stop the browser faking a bold
+   version of it, which looks smeared. Matches every inline style using it. */
+[style*="--font-heading"] {
+  font-synthesis-weight: none;
+}

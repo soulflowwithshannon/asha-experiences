@@ -54,7 +54,7 @@ export default function RetreatGallery() {
         <FadeIn>
           <h2
             style={{
-              fontFamily: "var(--font-fraunces)",
+              fontFamily: "var(--font-heading)",
               fontSize: "clamp(26px,3.6vw,34px)",
               fontWeight: 700,
               color: "var(--color-text-headline)",

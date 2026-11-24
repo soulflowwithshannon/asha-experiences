@@ -136,7 +136,7 @@ function MexicoHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.1, ease: "easeInOut" }}
-          style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(36px,8vw,80px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 16 }}
+          style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(36px,8vw,80px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 16 }}
         >
           Becoming HER
         </motion.h1>
@@ -379,7 +379,7 @@ export default function MexicoPage() {
       <section style={{ background: "#2D2521", padding: "100px 32px" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 40, textAlign: "center" }}>
+            <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 40, textAlign: "center" }}>
               How do we<span className="mexico-support-break"> </span>support that?
             </h2>
             <style>{`@media(max-width:640px){.mexico-support-break{display:block}}`}</style>
@@ -413,7 +413,7 @@ export default function MexicoPage() {
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.08}>
                 <div style={{ borderTop: "1px solid rgba(255,255,255,0.15)", paddingTop: 32 }}>
-                  <p style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(18px,2.5vw,22px)", color: "#F1F0E5", fontWeight: 600, marginBottom: 12 }}>
+                  <p style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(18px,2.5vw,22px)", color: "#F1F0E5", fontWeight: 600, marginBottom: 12 }}>
                     {item.title}
                   </p>
                   <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "#BAAB92", lineHeight: 1.8 }}>
@@ -426,7 +426,7 @@ export default function MexicoPage() {
 
           <FadeIn delay={0.4}>
             <div style={{ marginTop: 72, textAlign: "center" }}>
-              <p style={{ fontFamily: "var(--font-fraunces)", fontStyle: "italic", fontSize: "clamp(20px,3vw,28px)", color: "#F1F0E5", marginBottom: 32 }}>
+              <p style={{ fontFamily: "var(--font-heading)", fontStyle: "italic", fontSize: "clamp(20px,3vw,28px)", color: "#F1F0E5", marginBottom: 32 }}>
                 And through it all, sisterhood.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
@@ -457,7 +457,7 @@ export default function MexicoPage() {
           <div style={{ maxWidth: 512 }}>
             <FadeIn><p className="eyebrow-accent" style={{ marginBottom: 16, fontWeight: 700 }}>LUNITA JUNGLE RETREAT</p></FadeIn>
             <FadeIn delay={0.1}>
-              <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 24 }}>
+              <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 24 }}>
                 held by the jungle.<br />held by each other.
               </h2>
             </FadeIn>
@@ -499,7 +499,7 @@ export default function MexicoPage() {
           <SplitHeadline
             text="what's taken care of"
             as="h2"
-            style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 64 }}
+            style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 64 }}
           />
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "start" }} className="included-grid">
             <FadeIn>
@@ -546,7 +546,7 @@ export default function MexicoPage() {
       {/* SECTION — TESTIMONIALS */}
       <section style={{ background: "var(--color-bg-page)", padding: "80px 32px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 48 }}>
+          <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 48 }}>
             women who came<span className="testimonial-break"> </span>back different
           </h2>
           <style>{`@media(max-width:640px){.testimonial-break{display:block}}`}</style>
@@ -584,7 +584,7 @@ export default function MexicoPage() {
       <section id="rooms" style={{ background: "#F5F1E6", padding: "80px 32px" }}>
         <div style={{ maxWidth: 1000, margin: "0 auto" }}>
           <FadeIn>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,48px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 8 }}>
+            <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,48px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 8 }}>
               your home in the jungle
             </h2>
           </FadeIn>
@@ -605,7 +605,7 @@ export default function MexicoPage() {
               textAlign: "center",
             }}>
               <p style={{
-                fontFamily: "var(--font-fraunces)",
+                fontFamily: "var(--font-heading)",
                 fontWeight: 700,
                 fontSize: "clamp(20px,2.8vw,26px)",
                 lineHeight: 1.25,
@@ -638,7 +638,7 @@ export default function MexicoPage() {
                     sold out
                   </div>
                 </div>
-                <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 28, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 12 }}>Casa Colectiva</h3>
+                <h3 style={{ fontFamily: "var(--font-heading)", fontSize: 28, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 12 }}>Casa Colectiva</h3>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
                   a casita shared with one other woman — the most connected way to experience the retreat. built-in sisterhood from the moment you arrive.
                 </p>
@@ -658,7 +658,7 @@ export default function MexicoPage() {
                 <div style={{ borderRadius: 6, overflow: "hidden", marginBottom: 24 }}>
                   <Image src="/images/casa lienzo.png" alt="Casa Lienzo" width={900} height={0} style={{ width: "100%", height: "auto", display: "block" }} sizes="600px" />
                 </div>
-                <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 28, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 12 }}>Casa Lienzo</h3>
+                <h3 style={{ fontFamily: "var(--font-heading)", fontSize: 28, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 12 }}>Casa Lienzo</h3>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
                   a casita for one — the more private option at Lunita. your own space to rest, integrate, and come back to yourself.
                 </p>
@@ -688,7 +688,7 @@ export default function MexicoPage() {
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <FadeIn>
             <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)", letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center", marginBottom: 16 }}>everything you need to know</p>
-            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 56 }}>
+            <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 56 }}>
               Questions
             </h2>
           </FadeIn>

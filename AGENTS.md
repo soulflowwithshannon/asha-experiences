@@ -37,7 +37,7 @@ Buttons on cream: filled `--color-accent` with `#FFFCF5` text.
 
 ## Fonts
 
-- `--font-fraunces` weight 700 — headings, anything that needs weight
+- `--font-heading` — DM Serif Display (single weight, 400; faux-bold disabled in `globals.css`) — headings, anything that needs weight. Was Fraunces until Nov 2026.
 - `--font-cormorant` weights 300–600, italic available — display, quotes, the ASHA wordmark
 - `--font-dm-sans` — all body copy, labels, buttons
 

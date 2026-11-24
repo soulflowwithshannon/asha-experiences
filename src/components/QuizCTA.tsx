@@ -39,7 +39,7 @@ export default function QuizCTA({
       </p>
       <p
         style={{
-          fontFamily: "var(--font-fraunces)",
+          fontFamily: "var(--font-heading)",
           fontWeight: 700,
           fontSize: band ? "clamp(22px,3.4vw,28px)" : "clamp(19px,2.6vw,23px)",
           lineHeight: 1.25,

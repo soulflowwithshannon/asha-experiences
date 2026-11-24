@@ -103,7 +103,7 @@ function Guide({ guide, flip }: { guide: (typeof guides)[0]; flip: boolean }) {
         <FadeIn>
           <h3
             style={{
-              fontFamily: "var(--font-fraunces)",
+              fontFamily: "var(--font-heading)",
               fontSize: "clamp(44px,6vw,76px)",
               lineHeight: 0.95,
               color: "var(--color-text-headline)",
@@ -207,7 +207,7 @@ export default function AboutPage() {
         <div style={{ position: "relative", zIndex: 1, textAlign: "center", padding: "0 24px", maxWidth: 700, margin: "0 auto" }}>
           <h1
             className="hero-rise"
-            style={{ animationDuration: "1s", animationDelay: "0s", fontFamily: "var(--font-fraunces)", fontSize: "clamp(28px,5vw,48px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 16, lineHeight: 1.15 }}
+            style={{ animationDuration: "1s", animationDelay: "0s", fontFamily: "var(--font-heading)", fontSize: "clamp(28px,5vw,48px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 16, lineHeight: 1.15 }}
           >
             we became the women<br />we once needed.
           </h1>
@@ -381,7 +381,7 @@ export default function AboutPage() {
       <section style={{ background: "var(--color-bg-page)" }}>
         <div className="two-of-us-head" style={{ maxWidth: 1240, margin: "0 auto", padding: "72px 48px 56px", textAlign: "center" }}>
           <FadeIn>
-            <p style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(21px,3vw,32px)", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-accent)" }}>
+            <p style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(21px,3vw,32px)", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-accent)" }}>
               the two of us
             </p>
           </FadeIn>
@@ -406,7 +406,7 @@ export default function AboutPage() {
                 <div>
                   <p
                     style={{
-                      fontFamily: "var(--font-fraunces)",
+                      fontFamily: "var(--font-heading)",
                       fontSize: "clamp(20px,2.2vw,25px)",
                       lineHeight: 1.25,
                       color: "var(--color-text-headline)",
@@ -435,7 +435,7 @@ export default function AboutPage() {
           <SplitHeadline
             text="you were made for more than just surviving"
             as="h2"
-            style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px,4vw,38px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 22, textWrap: "balance", maxWidth: 560, marginLeft: "auto", marginRight: "auto" }}
+            style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(26px,4vw,38px)", color: "#F1F0E5", fontWeight: 700, marginBottom: 22, textWrap: "balance", maxWidth: 560, marginLeft: "auto", marginRight: "auto" }}
           />
           <FadeIn delay={0.3}>
             <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.45, color: "#E8D5BC", marginBottom: 36 }}>

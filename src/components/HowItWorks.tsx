@@ -41,7 +41,7 @@ export default function HowItWorks({
           </div>
           <h2
             style={{
-              fontFamily: "var(--font-fraunces)",
+              fontFamily: "var(--font-heading)",
               fontSize: "clamp(28px,4vw,38px)",
               color: "var(--color-text-headline)",
               fontWeight: 700,
@@ -86,7 +86,7 @@ export default function HowItWorks({
                 <div style={{ paddingTop: 6, paddingBottom: last ? 0 : 36 }}>
                   <h3
                     style={{
-                      fontFamily: "var(--font-fraunces)",
+                      fontFamily: "var(--font-heading)",
                       fontSize: "clamp(19px,2.4vw,23px)",
                       color: "var(--color-text-headline)",
                       fontWeight: 700,
