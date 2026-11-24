@@ -4,7 +4,7 @@ import { Shower, Drop, Sparkle, Jar, PlugCharging, WifiMedium, Binoculars } from
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState, ReactNode } from "react";
 import FadeIn from "@/components/FadeIn";
 import CallHerHome from "@/components/CallHerHome";
@@ -17,121 +17,54 @@ import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/Animated
 
 import { SPOTS_LEFT } from "@/lib/kenya";
 
-const daysData = [
-  {
-    day: "01",
-    description: "private transport in from Nairobi, then you settle in and meet the women you'll spend the week with. welcome dinner under the stars, and our first circle.",
-    title: "arrive & exhale",
-    blurb: "the plane lands, the noise falls away, and something in your shoulders finally drops.",
-    items: [
-      "private transport in from Nairobi",
-      "settle into camp, meet the women you'll spend the week with",
-      "welcome dinner under the stars, first circle",
-    ],
-  },
-  {
-    day: "02",
-    description: "yoga and journaling overlooking the plains, then a grounding workshop on why you're really here. the day ends with a sunset safari drive.",
-    title: "roots",
-    blurb: "before you can open up, you have to land somewhere. this is where you land.",
-    items: [
-      "yoga and journaling overlooking the plains",
-      "grounding workshop — why you're really here",
-      "sunset safari drive",
-    ],
-  },
-  {
-    day: "03",
-    description: "a full day out in Ol Pejeta with the wildlife, including the Northern White Rhino Sanctuary. guided journaling as the light changes.",
-    title: "open plains",
-    blurb: "nothing to perform out here. just space, and what rises to fill it.",
-    items: [
-      "full day in Ol Pejeta, wildlife encounters",
-      "visit to the Northern White Rhino Sanctuary",
-      "guided journaling as the light changes",
-    ],
-  },
-  {
-    day: "04",
-    description: "the deep end: a ceremony and guided women's circle, a sunset safari drive, then a fire and whatever needs to be said around it.",
-    title: "into the wild",
-    blurb: "the day the retreat is named for. this is the deep end.",
-    items: [
-      "powerful ceremony and guided women's circle",
-      "sunset safari drive",
-      "a fire, and whatever needs to be said around it",
-    ],
-  },
-  {
-    day: "05",
-    description: "a slower morning with gentle movement, and a visit to Spinners and Weavers. rest is built into the day on purpose.",
-    title: "still water",
-    blurb: "after the deep end, you float. integration, not another lesson.",
-    items: [
-      "slower morning, gentle movement",
-      "visit to Spinners and Weavers",
-      "rest built into the day on purpose",
-    ],
-  },
-  {
-    day: "06",
-    description: "a picnic in the wild, a traditional Kenyan cooking class with your hosts, then the closing ceremony and circle.",
-    title: "the fire",
-    blurb: "the week starts to close, and everyone can feel it.",
-    items: [
-      "picnic in the wild",
-      "traditional Kenyan cooking class with your hosts",
-      "closing ceremony and circle",
-    ],
-  },
-  {
-    day: "07",
-    description: "a sunrise farewell, then private transport back to Nairobi.",
-    title: "carry it home",
-    blurb: "not an ending. just the part where you take it with you.",
-    items: [
-      "sunrise farewell",
-      "private transport back to Nairobi",
-      "the version of you that arrives home is not the one who left",
-    ],
-  },
+// one hairline style for both week sections: the clay accent at low opacity
+const HAIRLINE = "0.5px solid color-mix(in srgb, var(--color-accent) 35%, transparent)";
+
+const weekDays = [
+  { day: "01", title: "arrive & exhale" },
+  { day: "02", title: "roots" },
+  { day: "03", title: "open plains" },
+  { day: "04", title: "into the wild" },
+  { day: "05", title: "still water" },
+  { day: "06", title: "the fire" },
+  { day: "07", title: "carry it home" },
 ];
 
-function DaysGrid() {
-  const [hovered, setHovered] = useState<number | null>(null);
+/** Static list: a row of 7 on desktop, a vertical list on narrower screens.
+    Hairlines sit only between days (none before the first or after the last). */
+function WeekList() {
   return (
-    <div style={{ overflowX: "auto", scrollbarWidth: "none", paddingBottom: 220, marginBottom: -220 }}>
-      <div style={{ display: "flex", gap: 16, paddingBottom: 8 }}>
-      {daysData.map((d, i) => (
-        <div key={d.day} style={{ position: "relative" }} onMouseEnter={() => setHovered(i)} onMouseLeave={() => setHovered(null)}>
-          <div style={{ flexShrink: 0, width: 180, height: "100%", boxSizing: "border-box", border: "1px solid var(--color-border)", borderRadius: 8, padding: "28px 24px", textAlign: "center", cursor: "default", transition: "background 0.2s ease", background: hovered === i ? "#EDE4D0" : "var(--color-bg-surface)" }}>
-            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.1em", color: "var(--color-accent)", textTransform: "uppercase", marginBottom: 8 }}>DAY {d.day}</p>
-            <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 20, color: "var(--color-text-headline)" }}>{d.title}</p>
-            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12.5, lineHeight: 1.55, color: "var(--color-text-body)", marginTop: 10 }}>{d.description}</p>
-          </div>
-          <AnimatePresence>
-            {hovered === i && (
-              <motion.div
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 8 }}
-                transition={{ duration: 0.25, ease: "easeOut" }}
-                style={{ position: "absolute", left: "50%", transform: "translateX(-50%)", top: "calc(100% + 12px)", width: 280, background: "#2B241D", color: "#EFE6D3", borderRadius: 8, padding: 20, zIndex: 20, boxShadow: "0 8px 32px rgba(0,0,0,0.25)" }}
-              >
-                <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 15, marginBottom: 12, lineHeight: 1.6 }}>{d.blurb}</p>
-                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
-                  {d.items.map((item, idx) => (
-                    <li key={idx} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "#B3A488", display: "flex", gap: 8 }}>
-                      <span>—</span><span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      ))}
-      </div>
+    <>
+      <ol className="week-list" style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gridTemplateColumns: "repeat(7, minmax(0, 1fr))" }}>
+        {weekDays.map((d) => (
+          <li key={d.day} className="week-day" style={{ padding: "8px 14px", textAlign: "center" }}>
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.1em", color: "var(--color-accent)", textTransform: "uppercase", marginBottom: 8 }}>DAY {d.day}<span className="week-dot" aria-hidden="true"> ·</span></p>
+            <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 20, lineHeight: 1.2, color: "var(--color-text-headline)" }}>{d.title}</p>
+          </li>
+        ))}
+      </ol>
+      <style>{`
+        .week-day + .week-day { border-left: ${HAIRLINE}; }
+        .week-dot { display: none; }
+        @media (max-width: 900px) {
+          .week-list { grid-template-columns: 1fr !important; max-width: 360px; margin: 0 auto !important; }
+          .week-day { display: flex; align-items: baseline; justify-content: center; gap: 12px; padding: 14px 0 !important; }
+          .week-day p { margin-bottom: 0 !important; }
+          .week-dot { display: inline; }
+          .week-day + .week-day { border-left: none; border-top: ${HAIRLINE}; }
+        }
+      `}</style>
+    </>
+  );
+}
+
+/** the ✦ ornament the page already uses between sections */
+function Ornament({ margin = "64px auto" }: { margin?: string }) {
+  return (
+    <div aria-hidden="true" style={{ display: "flex", alignItems: "center", gap: 12, maxWidth: 520, margin }}>
+      <div style={{ flex: 1, height: "0.5px", background: "#D4C8AA" }} />
+      <span style={{ color: "#A67C52", fontSize: 14 }}>✦</span>
+      <div style={{ flex: 1, height: "0.5px", background: "#D4C8AA" }} />
     </div>
   );
 }
@@ -152,15 +85,16 @@ function TypicalDay() {
   return (
     <section style={{ background: "var(--color-bg-page)", padding: "0 32px 88px" }}>
       <div style={{ maxWidth: 560, margin: "0 auto" }}>
+        <Ornament margin="0 auto 64px" />
         <FadeIn>
           <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(24px,3.4vw,32px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 32 }}>
             a typical day
           </h3>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, borderTop: "0.5px solid var(--color-border)" }}>
-            {typicalDay.map((row, i) => (
-              <li key={i} className="typical-row" style={{ display: "grid", gridTemplateColumns: "130px 1fr", gap: 16, padding: "14px 0", borderBottom: "0.5px solid var(--color-border)", fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.6, color: "var(--color-text-body)" }}>
+          <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+            {typicalDay.map((row) => (
+              <li key={row.time} className="typical-row" style={{ display: "grid", gridTemplateColumns: "130px 1fr", gap: 16, alignItems: "baseline", padding: "14px 0", fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.6, color: "var(--color-text-body)" }}>
                 <span style={{ color: "var(--color-accent)", fontWeight: 600 }}>{row.time}</span>
                 <span>{row.what}</span>
               </li>
@@ -171,7 +105,7 @@ function TypicalDay() {
           </p>
         </FadeIn>
       </div>
-      <style>{`@media(max-width:520px){.typical-row{grid-template-columns:1fr!important;gap:2px!important}}`}</style>
+      <style>{`.typical-row + .typical-row{border-top:${HAIRLINE}}@media(max-width:520px){.typical-row{grid-template-columns:104px 1fr!important;gap:12px!important;font-size:14px!important}}`}</style>
     </section>
   );
 }
@@ -703,7 +637,7 @@ export default function KenyaPage() {
       </section>
 
       {/* SECTION 4 — ARC OF THE WEEK (hero "see the week" scrolls here) */}
-      <section id="week" style={{ background: "var(--color-bg-page)", padding: "80px 32px 80px", scrollMarginTop: 72 }}>
+      <section id="week" style={{ background: "var(--color-bg-page)", padding: "80px 32px 64px", scrollMarginTop: 72 }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <FadeIn>
             <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 12 }}>
@@ -711,9 +645,15 @@ export default function KenyaPage() {
             </h2>
           </FadeIn>
           <div style={{ height: 36 }} />
-          <DaysGrid />
+          <FadeIn>
+            <WeekList />
+            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, fontStyle: "italic", color: "var(--color-text-body)", textAlign: "center", marginTop: 28 }}>
+              the shape of the week, from landing softly to the closing fire. the exact flow is built around the group.
+            </p>
+          </FadeIn>
+          <Ornament />
           <FadeIn delay={0.15}>
-            <div style={{ maxWidth: 560, margin: "80px auto 0", textAlign: "center", fontFamily: "var(--font-dm-sans)", fontSize: 16, color: "var(--color-text-body)", lineHeight: 1.9, display: "flex", flexDirection: "column", gap: 20 }}>
+            <div style={{ maxWidth: 560, margin: "0 auto", textAlign: "center", fontFamily: "var(--font-dm-sans)", fontSize: 16, color: "var(--color-text-body)", lineHeight: 1.9, display: "flex", flexDirection: "column", gap: 20 }}>
               <p>
                 <strong>Into the Wild gives you back what the noise took.</strong>
               </p>
