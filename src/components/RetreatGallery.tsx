@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 import FadeIn from "@/components/FadeIn";
 
 /**
@@ -16,7 +15,7 @@ import FadeIn from "@/components/FadeIn";
  * state tile into full rows. New photos are interleaved rather than appended,
  * so the two shoots read as one body of work.
  */
-const shots = [
+export const galleryShots = [
   { src: "/images/group hug.jpg", alt: "Women laughing in a group hug on retreat" },
   { src: "/images/ReturnToLove bracelets.jpg", alt: "Bracelets made on retreat", wide: true },
   { src: "/images/Shannon stretch.jpg", alt: "Morning movement on retreat" },
@@ -42,75 +41,26 @@ const shots = [
 ];
 
 
-const COLLAPSED = 10;
-
-export default function RetreatGallery() {
-  const [expanded, setExpanded] = useState(false);
-  const visible = expanded ? shots : shots.slice(0, COLLAPSED);
-
+/** The full mosaic of every photo. Opened from "see all 21 photos" in the
+    home page's moments section (RetreatMoments). */
+export function GalleryMosaic() {
   return (
-    <section style={{ background: "var(--color-bg-page)", padding: "48px 32px 48px" }}>
-      <div style={{ maxWidth: 1240, margin: "0 auto" }}>
-        <FadeIn>
-          <h2
-            style={{
-              fontFamily: "var(--font-heading)",
-              fontSize: "clamp(26px,3.6vw,34px)",
-              fontWeight: 700,
-              color: "var(--color-text-headline)",
-              textAlign: "center",
-              marginBottom: 48,
-              textWrap: "balance",
-            }}
-          >
-            from our retreats
-          </h2>
-        </FadeIn>
-
-        <div className="gallery-grid">
-          {visible.map((shot, i) => (
-            <FadeIn
-              key={shot.src}
-              // the revealed tiles stagger among themselves, so opening the
-              // gallery does not re-run the first ten entrances
-              delay={(i < COLLAPSED ? i % 4 : (i - COLLAPSED) % 4) * 0.06}
-              className={shot.wide ? "g-wide" : "g-sq"}
-            >
-              <div className="gallery-tile">
-                <Image
-                  src={shot.src}
-                  alt={shot.alt}
-                  fill
-                  sizes="(max-width: 700px) 50vw, (max-width: 1000px) 33vw, 25vw"
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-            </FadeIn>
-          ))}
-        </div>
-
-        <div style={{ textAlign: "center", marginTop: 36 }}>
-          <button
-            onClick={() => setExpanded((v) => !v)}
-            aria-expanded={expanded}
-            style={{
-              fontFamily: "var(--font-dm-sans)",
-              fontSize: 13,
-              letterSpacing: "0.06em",
-              color: "var(--color-accent)",
-              background: "none",
-              border: "0.5px solid var(--color-bg-card)",
-              borderRadius: 999,
-              padding: "13px 28px",
-              minHeight: 44,
-              cursor: "pointer",
-            }}
-          >
-            {expanded ? "show fewer" : `see all ${shots.length} photos →`}
-          </button>
-        </div>
+    <>
+      <div className="gallery-grid">
+        {galleryShots.map((shot, i) => (
+          <FadeIn key={shot.src} delay={(i % 4) * 0.06} className={shot.wide ? "g-wide" : "g-sq"}>
+            <div className="gallery-tile">
+              <Image
+                src={shot.src}
+                alt={shot.alt}
+                fill
+                sizes="(max-width: 700px) 50vw, (max-width: 1000px) 33vw, 25vw"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+          </FadeIn>
+        ))}
       </div>
-
       <style>{`
         .gallery-grid {
           display: grid;
@@ -126,7 +76,7 @@ export default function RetreatGallery() {
           width: 100%;
           aspect-ratio: 1 / 1;
           overflow: hidden;
-          border-radius: 2px;
+          border-radius: 6px;
           background: var(--color-bg-card);
         }
         .gallery-grid > .g-wide .gallery-tile { aspect-ratio: 2 / 1; }
@@ -140,6 +90,6 @@ export default function RetreatGallery() {
           .gallery-grid > .g-wide .gallery-tile { aspect-ratio: 1 / 1; }
         }
       `}</style>
-    </section>
+    </>
   );
 }

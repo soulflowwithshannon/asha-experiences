@@ -2,15 +2,14 @@
 
 // The home page (/). Rendered by src/app/page.tsx, which holds the metadata.
 // Order (Nov 2026): hero → proof strip → Kenya card → in their words →
-// pillars → the two of us → a moment from retreat → photos → what's next →
-// closing.
+// from our retreats (clips + photos) → pillars → the two of us → what's
+// next → closing.
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useSyncExternalStore } from "react";
 import FadeIn, { SafeReveal } from "@/components/FadeIn";
-import VideoPair from "@/components/VideoPair";
-import RetreatGallery from "@/components/RetreatGallery";
+import RetreatMoments from "@/components/RetreatMoments";
 import InTheirWords from "@/components/InTheirWords";
 import { SPOTS_LEFT, PAYMENT_PLAN_CLOSES } from "@/lib/kenya";
 
@@ -53,6 +52,9 @@ function Hero() {
         /* The hero video is 16:9; matching its ratio shows the whole frame.
            Phones are too narrow for that, so they get a tall box instead. */
         aspectRatio: "16 / 9",
+        /* explicit width: otherwise the min-height plus the 16:9 ratio makes
+           the browser widen the hero past the screen on ~770–925px windows */
+        width: "100%",
         minHeight: 520,
         display: "flex",
         alignItems: "center",
@@ -420,23 +422,12 @@ export default function HomePage() {
         <KenyaCard />
         {/* 4 — in their words (same band as /retreats/kenya) */}
         <InTheirWords heading="in their words" eyebrow="" compact />
+        {/* from our retreats: both clips + four photos in one section */}
+        <RetreatMoments />
         {/* 5 — what every retreat holds */}
         <Pillars />
         {/* 6 — the two of us */}
         <TwoOfUs />
-        {/* a moment from retreat: different clips from the hero video, so kept */}
-        <VideoPair
-          headline="a moment from retreat"
-          orientation="vertical"
-          background="var(--color-bg-surface)"
-          padding="48px 32px 56px"
-          clips={[
-            { file: "Ashley moment from retreat.MOV", label: "ashley" },
-            { file: "Shannon moment from retreat.MOV", label: "shannon", posterTime: 3.6 },
-          ]}
-        />
-        {/* 7 — photos */}
-        <RetreatGallery />
         {/* 8 — what's next */}
         <WhatsNext />
         {/* 9 — closing */}

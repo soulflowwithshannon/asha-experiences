@@ -94,6 +94,9 @@ testimonials video is served from Cloudflare R2.
 - `src/lib/kenya.ts` — `SPOTS_LEFT` (Kenya hero + home card) and the payment-plan
   cutoff. Change the spot count there, once.
 - Home page: `src/app/page.tsx` holds metadata; the page is `src/components/HomePage.tsx`.
+- `RetreatMoments` — home "from our retreats": Ashley's and Shannon's clips as muted
+  looping previews (tap for sound, one at a time) around four gallery photos.
+  `RetreatGallery.tsx` now only exports `galleryShots` and the full `GalleryMosaic`.
 - `Nav` — link colour depends on `darkHero` (homepage + retreat pages have photo heroes
   and need light text; every other page needs dark).
 
