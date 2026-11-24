@@ -221,7 +221,8 @@ export default function ContactPage() {
                     textAlign: "center",
                     marginTop: 4,
                   }}>
-                    this goes straight to our inbox. no helpdesk, no ticket number — Ashley or Shannon will write back.
+                    this goes straight to our inbox. no helpdesk, no ticket number.<br />
+                    Ashley or Shannon will write back.
                   </p>
                 </form>
               )}

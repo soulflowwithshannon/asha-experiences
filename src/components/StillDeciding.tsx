@@ -19,7 +19,7 @@ export default function StillDeciding({
   background?: string;
   padding?: string;
 }) {
-  const link: React.CSSProperties = { color: "var(--color-accent)", fontWeight: 600, textDecoration: "underline", textDecorationThickness: "0.5px", textUnderlineOffset: 3 };
+  const link: React.CSSProperties = { color: "var(--color-accent)", fontWeight: 600, textDecoration: "underline", textDecorationThickness: "0.5px", textUnderlineOffset: 3, whiteSpace: "nowrap" };
   const r = encodeURIComponent(retreat);
   const body: React.CSSProperties = {
     fontFamily: "var(--font-dm-sans)",
@@ -28,6 +28,7 @@ export default function StillDeciding({
     lineHeight: 1.8,
     maxWidth: 520,
     margin: "0 auto",
+    textWrap: "pretty",
   };
   return (
     <section style={{ background, padding }}>
@@ -46,19 +47,25 @@ export default function StillDeciding({
           </h2>
         </FadeIn>
         <FadeIn delay={0.1}>
+          {/* short paragraphs, links kept on one line so they never split */}
           <p style={{ ...body, marginBottom: 16 }}>
-            that&apos;s fair, it&apos;s a big trip. here&apos;s what usually helps: {weekLine}, read what the women who came said, and check the questions below. if you&apos;d like to hear it from someone who&apos;s been,{" "}
+            that&apos;s fair, it&apos;s a big trip.<br />
+            here&apos;s what usually helps: {weekLine}, read what the women who came said, and check the questions below.
+          </p>
+          <p style={{ ...body, marginBottom: 16 }}>
+            if you&apos;d like to hear it from someone who&apos;s been,<br className="sd-break" />{" "}
             <Link href={`/contact?about=past-guest&retreat=${r}#send`} style={link}>
               we&apos;ll connect you with a past guest
             </Link>.
           </p>
           <p style={body}>
-            if there&apos;s one specific thing we haven&apos;t answered,{" "}
+            if there&apos;s one specific thing we haven&apos;t answered,<br />
             <Link href={`/contact?retreat=${r}#send`} style={link}>
               ask us here
             </Link>{" "}
-            and one of us will write back within a day.
+            and one of us will write back <span style={{ whiteSpace: "nowrap" }}>within a day.</span>
           </p>
+          <style>{`.sd-break{display:none}@media(max-width:600px){.sd-break{display:inline}}`}</style>
         </FadeIn>
       </div>
     </section>
