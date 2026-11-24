@@ -311,7 +311,7 @@ const faqs: { question: string; answer: ReactNode }[] = [
     answer: (
       <div>
         <p style={{ marginBottom: 12 }}>fly into Jomo Kenyatta International Airport (NBO) in Nairobi, and land at least a day early. we&apos;ll recommend a hotel where we all stay together the night before, and group transport to Ol Pejeta leaves the morning of November 28th.</p>
-        <p style={{ marginBottom: 12 }}>if your flight is late and you miss the morning departure, another safe, secure shuttle will bring you to Ol Pejeta [TODO: included, or extra cost?].</p>
+        <p style={{ marginBottom: 12 }}>if your flight is late and you miss the morning departure, another safe, secure shuttle will bring you to Ol Pejeta, at no extra cost.</p>
         <p>group transport back to Nairobi leaves December 4th. want to come early or stay on? tell us and we&apos;ll help you plan it.</p>
       </div>
     ),
@@ -335,7 +335,7 @@ const faqs: { question: string; answer: ReactNode }[] = [
     answer: (
       <div>
         <p style={{ marginBottom: 12 }}>pay in full, or hold your spot with a $1,000 deposit and pay the remaining $5,900 over 11 monthly payments: ten of $536 and a final one of $540. the balance is due 30 days before the retreat (October 29, 2027), so the 11-month plan is for women who book by December 31, 2026. book later and we&apos;ll split it evenly over the months that are left.</p>
-        <p style={{ marginBottom: 12 }}><strong>all payments are non-refundable</strong>, including the deposit. if your plans change, you can transfer your spot to another woman, or to a future ASHA retreat, up to 4 months before the retreat starts [TODO: time limit for using a transfer on a future retreat, e.g. within 12 months]. just email us.</p>
+        <p style={{ marginBottom: 12 }}><strong>all payments are non-refundable</strong>, including the deposit. if your plans change, you can transfer your spot to another woman, or to a future ASHA retreat within 12 months, up to 4 months before the retreat starts. just email us.</p>
         <p>we strongly recommend travel insurance to protect your trip.</p>
       </div>
     ),
