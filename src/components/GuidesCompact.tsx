@@ -8,7 +8,7 @@ const guides: { name: string; role: string; handle: string; bio: ReactNode[]; ph
     role: "healing & energetics",
     handle: "@ashleyscully_",
     bio: [
-      <><strong>Ashley</strong> is a dj, sound healer, reiki practitioner, and spiritual life coach.</>,
+      <><strong>Ashley</strong> is a sound healer, reiki practitioner, and spiritual life coach.</>,
       <>she works in frequency and energy — <em>sound baths, reiki, intuitive guidance</em> — helping the body do what it&apos;s been holding off on: <strong>exhale.</strong></>,
       "her sessions hold both stillness and joy at once, giving women room to feel what they've been outrunning, and land somewhere steadier.",
     ],

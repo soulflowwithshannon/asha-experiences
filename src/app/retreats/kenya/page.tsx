@@ -360,7 +360,7 @@ function BookingSteps() {
 }
 
 const guideIntros = [
-  { name: "Ashley", photo: "/images/Ashley (new).JPG", role: "sound healer, reiki practitioner & dj", line: "she helps your body do what it's been holding off on: exhale." },
+  { name: "Ashley", photo: "/images/Ashley (new).JPG", role: "sound healer & reiki practitioner", line: "she helps your body do what it's been holding off on: exhale." },
   { name: "Shannon", photo: "/images/Shannon (new).JPG", role: "somatic guide & circle facilitator", line: "she holds space for women to come back to themselves, with softness, strength and soul." },
 ];
 
@@ -861,7 +861,7 @@ export default function KenyaPage() {
                       <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 40, color: "var(--color-accent)", fontWeight: 400 }}>$6,900</p>
                       <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)" }}>per person · shared room</p>
                     </div>
-                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", marginTop: -12, marginBottom: 8 }}>late 20s to 50s · most women come solo · ten women, no more</p>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", marginTop: -12, marginBottom: 8 }}>all ages · most women come solo · ten women</p>
                     <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", marginTop: 0, marginBottom: 20 }}>or $1,000 today + 11 monthly payments of about $536</p>
                     <div style={{ display: "flex", flexDirection: "column", gap: 10 }} className="cottage-buttons">
                       {/* STRIPE LINK: cottage - pay in full */}
