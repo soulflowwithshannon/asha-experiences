@@ -6,8 +6,6 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import FadeIn from "@/components/FadeIn";
 import VideoPair from "@/components/VideoPair";
-import DestinationRequest from "@/components/DestinationRequest";
-import QuietNote from "@/components/QuietNote";
 import RetreatGallery from "@/components/RetreatGallery";
 import Divider from "@/components/Divider";
 import { SplitHeadline, StaggerBlock, StaggerChild } from "@/components/AnimatedText";
@@ -231,9 +229,6 @@ export default function HomePage() {
         <style>{`@media(max-width:640px){.values-row{flex-direction:column!important;align-items:center!important}.values-row>*{width:100%!important;max-width:320px}}`}</style>
       </section>
 
-      {/* SECTION 2b — A QUIET NOTE */}
-      <QuietNote />
-
       {/* SECTION 3 — PILLARS */}
       <section style={{ background: "var(--color-bg-surface)", padding: "80px 32px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
@@ -349,9 +344,6 @@ export default function HomePage() {
         </div>
         <style>{`@media(max-width:768px){.split-grid{grid-template-columns:1fr!important}}`}</style>
       </section>
-
-      {/* SECTION 4b — WHERE SHOULD WE GO NEXT */}
-      <DestinationRequest />
 
       {/* SECTION 8 — CLOSING CTA */}
       <section style={{ position: "relative", padding: "180px 32px", background: "#2D2521", textAlign: "center", overflow: "hidden" }}>

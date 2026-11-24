@@ -85,8 +85,9 @@ testimonials video is served from Cloudflare R2.
 - `Testimonials` — quote cards; the quotes array lives at the top of the file.
 - `QuizCTA` — three variants: `band` (journal index), `inline` (via token), `end`
   (closes every post). Copy defaults live in the component.
-- `MeetUs` — "before you book" section on retreat pages; takes `headline`, `body`,
-  `spaceAbove`.
+- `MeetUs` — old "before you book" call section; no longer on Morocco (Nov 2026),
+  still used on the past Mexico page. Exports `CALENDAR_URL`.
+- `StillDeciding` — "still deciding?" note on Kenya and Morocco, links to /contact.
 - `Nav` — link colour depends on `darkHero` (homepage + retreat pages have photo heroes
   and need light text; every other page needs dark).
 
@@ -108,8 +109,9 @@ Env vars `RESEND_API_KEY` and `RESEND_AUDIENCE_ID` — the latter must be set in
 not just `.env.local`. Resend v6 has deprecated Audiences in favour of Segments; the
 legacy `audienceId` path still works.
 
-The quiz captures name + email **before** the questions (`stage: "start"`) so an
-abandoned quiz is still a captured lead, then sends the result on completion.
+The quiz has no email gate: she answers first, then the result screen offers to send
+her the result (name + email, `stage: "result"`), which adds her to the audience and
+emails her and us. The route's `stage: "start"` branch is no longer called by the site.
 
 ## SEO
 

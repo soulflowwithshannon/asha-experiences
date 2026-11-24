@@ -333,7 +333,7 @@ const faqs: { question: string; answer: ReactNode }[] = [
     answer: (
       <div>
         <p style={{ marginBottom: 12 }}><strong>all payments are non-refundable</strong> — including any balance paid. this covers accommodation, facilitators, and logistics we commit to well in advance on your behalf.</p>
-        <p style={{ marginBottom: 12 }}>if your plans change, reach out as soon as you can. at our discretion, we may be able to transfer your payment to another woman if you find someone to take your place.</p>
+        <p style={{ marginBottom: 12 }}>if your plans change, you can transfer your spot to another woman, or to a future ASHA retreat, [TODO: up to X days before the retreat / any conditions]. just email us.</p>
         <p>we strongly recommend travel insurance to protect your investment.</p>
       </div>
     ),
@@ -366,12 +366,12 @@ export default function MoroccoPage() {
             </StaggerChild>
             <StaggerChild>
               <p style={{ marginBottom: 28 }}>
-                <em>👉 Be &ldquo;easy&rdquo;.<br />
-                👉 Be &ldquo;low maintenance&rdquo;.<br />
-                👉 Be beautiful, but not &ldquo;vain&rdquo;.<br />
-                👉 Be confident, but not intimidating.<br />
-                👉 Be soft, but not needy.<br />
-                👉 Be strong, but never need anything.</em>
+                <em>Be &ldquo;easy&rdquo;.<br />
+                Be &ldquo;low maintenance&rdquo;.<br />
+                Be beautiful, but not &ldquo;vain&rdquo;.<br />
+                Be confident, but not intimidating.<br />
+                Be soft, but not needy.<br />
+                Be strong, but never need anything.</em>
               </p>
             </StaggerChild>
             <StaggerChild>
@@ -407,7 +407,7 @@ export default function MoroccoPage() {
             </StaggerChild>
             <StaggerChild>
               <p style={{ marginBottom: 28 }}>
-                so you can remember this: <strong>your worth was never up for debate. ❤️‍🔥</strong><br /><br />
+                so you can remember this: <strong>your worth was never up for debate.</strong><br /><br />
                 not with your body.<br />
                 not with your age.<br />
                 not with your life.
@@ -548,16 +548,14 @@ export default function MoroccoPage() {
                 <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
                   {([
                     <><strong>7 days / 6 nights</strong> in a castle retreat center</>,
-                    <><strong>Transfer</strong> to/from Marrakech (RAK) airport</>,
+                    <><strong>transfer</strong> to/from Marrakech (RAK) airport</>,
                     <>3 nourishing <strong>chef-prepared meals</strong> daily</>,
-                    <><strong>Daily movement therapy</strong></>,
-                    <><strong>Sound healing journeys</strong></>,
-                    <><strong>Traditional Moroccan cultural experiences</strong></>,
-                    <><strong>Desert and nature adventures</strong></>,
-                    <><strong>Professional goddess photoshoot</strong></>,
-                    <><strong>Sister circles &amp; connections</strong></>,
-                    <><strong>A return to your sacred divinity</strong></>,
-                    <><em>..and so much more!</em></>,
+                    <><strong>daily movement therapy</strong></>,
+                    <><strong>sound healing journeys</strong></>,
+                    <><strong>traditional Moroccan cultural experiences</strong></>,
+                    <><strong>desert and nature adventures</strong></>,
+                    <><strong>professional goddess photoshoot</strong></>,
+                    <><strong>sister circles &amp; connections</strong></>,
                   ] as ReactNode[]).map((item, i) => (
                     <li key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.7 , display: "flex", gap: 12}}><ListIcon kind="included" /><span>{item}</span></li>
                   ))}

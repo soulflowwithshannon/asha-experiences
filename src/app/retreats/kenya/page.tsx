@@ -406,7 +406,7 @@ const faqs: { question: string; answer: ReactNode }[] = [
     answer: (
       <div>
         <p style={{ marginBottom: 12 }}><strong>all payments are non-refundable</strong> — including the $1,000 deposit and any balance paid. this covers accommodation, facilitators, and logistics we commit to well in advance on your behalf.</p>
-        <p style={{ marginBottom: 12 }}>if your plans change, reach out as soon as you can. at our discretion, we may be able to transfer your payment to another woman if you find someone to take your place.</p>
+        <p style={{ marginBottom: 12 }}>if your plans change, you can transfer your spot to another woman, or to a future ASHA retreat, [TODO: up to X days before the retreat / any conditions]. just email us.</p>
         <p>we strongly recommend travel insurance to protect your investment.</p>
       </div>
     ),
@@ -812,12 +812,12 @@ export default function KenyaPage() {
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-accent)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 24, fontWeight: 700 }}>included</p>
                 <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
                   {([
-                    <><strong>7 days / 6 nights</strong> of luxury retreat in <em>Ol Pejeta Conservancy</em></>,
+                    <><strong>7 days / 6 nights</strong> at <strong>Ol Pejeta Safari Cottages</strong>, inside <em>Ol Pejeta Conservancy</em></>,
                     <>private ground transport <strong>to/from Nairobi</strong></>,
                     <>all <strong>fresh, locally sourced</strong> chef-prepared meals and beverages</>,
                     <><strong>daily sunrise and sunset safari drives</strong> with expert guides</>,
                     <>yoga, meditation, and journaling <em>overlooking the safari plains</em></>,
-                    <><strong>powerful workshops, ceremonies, and guided women&apos;s circles</strong></>,
+                    <><strong>workshops, ceremonies, and guided women&apos;s circles</strong></>,
                     <>visit to the <strong>Northern White Rhino Sanctuary</strong></>,
                     <>visit to <strong>Spinners and Weavers</strong></>,
                     <><strong>traditional Kenyan cooking class</strong> with our hosts</>,

@@ -88,12 +88,12 @@ const RESULTS: Record<
 const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function QuizWidget() {
-  const [phase, setPhase] = useState<"gate" | "quiz" | "result">("gate");
+  const [phase, setPhase] = useState<"intro" | "quiz" | "result">("intro");
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Archetype[]>([]);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [gateState, setGateState] = useState<"idle" | "sending">("idle");
+  const [sendState, setSendState] = useState<"idle" | "sending" | "sent">("idle");
   const [err, setErr] = useState("");
 
   const result: Archetype = (() => {
@@ -107,30 +107,30 @@ export default function QuizWidget() {
 
   const r = RESULTS[result];
 
-  /* Gate: capture her before the questions. Adds her to the audience immediately,
-     so an abandoned quiz is still a captured lead. */
-  async function startQuiz(e: React.FormEvent) {
+  /* No gate: she sees her result first. Name + email are optional and asked
+     for on the result screen, to send the result so she can keep it. The
+     "result" stage adds her to the audience and emails her and us. */
+  async function sendResult(e: React.FormEvent) {
     e.preventDefault();
     if (!name.trim()) { setErr("please add your first name"); return; }
     if (!email.trim()) { setErr("please add your email"); return; }
-    setGateState("sending"); setErr("");
+    setSendState("sending"); setErr("");
     try {
       const res = await fetch("/api/quiz-submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, stage: "start" }),
+        body: JSON.stringify({ name, email, archetype: result, stage: "result" }),
       });
       if (!res.ok) {
         const d = await res.json().catch(() => ({}));
         setErr(d.error || "something went wrong — please try again");
-        setGateState("idle");
+        setSendState("idle");
         return;
       }
-      setPhase("quiz");
-      setGateState("idle");
+      setSendState("sent");
     } catch {
       setErr("something went wrong — try again, or email us at connect@ashaexperiences.com");
-      setGateState("idle");
+      setSendState("idle");
     }
   }
 
@@ -139,17 +139,8 @@ export default function QuizWidget() {
     setAnswers(next);
     if (next.length === QUESTIONS.length) {
       setPhase("result");
-      // send her the result — she's already captured, so a failure here is not fatal
-      const tally: Record<string, number> = {};
-      next.forEach((a) => (tally[a] = (tally[a] || 0) + 1));
-      const arch = Object.keys(tally).sort(
-        (a, b) => tally[b] - tally[a] || next.indexOf(a as Archetype) - next.indexOf(b as Archetype)
-      )[0];
-      fetch("/api/quiz-submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, archetype: arch, stage: "result" }),
-      }).catch(() => {});
+      setSendState("idle");
+      setErr("");
     } else {
       setStep(step + 1);
     }
@@ -203,9 +194,9 @@ export default function QuizWidget() {
       )}
 
       <AnimatePresence mode="wait">
-        {phase === "gate" ? (
-          <motion.div key="gate" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.45, ease }}>
-            <form onSubmit={startQuiz} style={{
+        {phase === "intro" ? (
+          <motion.div key="intro" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.45, ease }}>
+            <div style={{
               background: "var(--color-bg-surface)",
               border: "0.5px solid var(--color-bg-card)",
               borderRadius: 6, padding: "28px 26px",
@@ -217,30 +208,18 @@ export default function QuizWidget() {
               }}>
                 five questions.
               </h2>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.7, color: "var(--color-text-body)", marginBottom: 12 }}>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.7, color: "var(--color-text-body)", marginBottom: 22 }}>
                 don&apos;t overthink this. just choose whichever response pulls at you most, even if you relate to more than one.
               </p>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.7, color: "var(--color-text-body)", marginBottom: 22 }}>
-                we&apos;ll send your result so you can keep it.
-              </p>
-              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                <input style={input} type="text" required placeholder="first name" value={name} onChange={(e) => setName(e.target.value)} aria-label="first name" />
-                <input style={input} type="email" required placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} aria-label="email" />
-                {err && <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-accent)" }}>{err}</p>}
-                <button type="submit" disabled={gateState === "sending"} style={{
-                  padding: "14px 28px", background: "var(--color-accent)",
-                  border: "1px solid var(--color-accent)", color: "#FFFCF5",
-                  fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: ".04em",
-                  cursor: gateState === "sending" ? "not-allowed" : "pointer",
-                  opacity: gateState === "sending" ? 0.6 : 1, borderRadius: 0,
-                }}>
-                  {gateState === "sending" ? "one moment..." : "begin →"}
-                </button>
-                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-body)", textAlign: "center" }}>
-                  no spam. leave any time.
-                </p>
-              </div>
-            </form>
+              <button type="button" onClick={() => setPhase("quiz")} style={{
+                width: "100%", padding: "14px 28px", background: "var(--color-accent)",
+                border: "1px solid var(--color-accent)", color: "#FFFCF5",
+                fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: ".04em",
+                cursor: "pointer", borderRadius: 0,
+              }}>
+                begin →
+              </button>
+            </div>
           </motion.div>
         ) : phase === "quiz" ? (
           <motion.div key={step} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.45, ease }}>
@@ -329,13 +308,38 @@ export default function QuizWidget() {
             </Link>
 
             <div style={{ borderTop: "0.5px solid var(--color-border)", paddingTop: 24 }}>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.7, color: "var(--color-text-body)" }}>
-                we&apos;ve sent this to <strong style={{ color: "var(--color-text-headline)", fontWeight: 500 }}>{email}</strong> — along with a little more about what the week actually looks like.
-              </p>
+              {sendState === "sent" ? (
+                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.7, color: "var(--color-text-body)" }}>
+                  we&apos;ve sent this to <strong style={{ color: "var(--color-text-headline)", fontWeight: 500 }}>{email}</strong> — along with a little more about what the week actually looks like.
+                </p>
+              ) : (
+                <form onSubmit={sendResult}>
+                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, lineHeight: 1.7, color: "var(--color-text-body)", marginBottom: 14 }}>
+                    we&apos;ll send your result so you can keep it.
+                  </p>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                    <input style={input} type="text" required placeholder="first name" value={name} onChange={(e) => setName(e.target.value)} aria-label="first name" />
+                    <input style={input} type="email" required placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} aria-label="email" />
+                    {err && <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-accent)" }}>{err}</p>}
+                    <button type="submit" disabled={sendState === "sending"} style={{
+                      padding: "14px 28px", background: "var(--color-accent)",
+                      border: "1px solid var(--color-accent)", color: "#FFFCF5",
+                      fontFamily: "var(--font-dm-sans)", fontSize: 13, letterSpacing: ".04em",
+                      cursor: sendState === "sending" ? "not-allowed" : "pointer",
+                      opacity: sendState === "sending" ? 0.6 : 1, borderRadius: 0,
+                    }}>
+                      {sendState === "sending" ? "one moment..." : "send my result →"}
+                    </button>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-body)", textAlign: "center" }}>
+                      no spam. leave any time.
+                    </p>
+                  </div>
+                </form>
+              )}
             </div>
 
             <button
-              onClick={() => { setAnswers([]); setStep(0); setPhase("quiz"); }}
+              onClick={() => { setAnswers([]); setStep(0); setSendState("idle"); setErr(""); setPhase("quiz"); }}
               style={{
                 marginTop: 24, background: "none", border: "none", cursor: "pointer",
                 fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-text-body)", padding: 0,
