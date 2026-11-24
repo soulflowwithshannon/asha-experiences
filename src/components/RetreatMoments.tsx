@@ -1,8 +1,8 @@
 "use client";
 
-// Home page: "from our retreats". Ashley's and Shannon's clips as silent,
-// looping previews either side of four photos; tapping a clip restarts it
-// with sound and controls. Only one clip plays with sound at a time.
+// Home page: "from our retreats". Ashley's and Shannon's clips either side of
+// four photos. Each shows a still frame until tapped; tapping plays it from
+// the start with sound and controls, and pauses the other.
 // "see all 21 photos" opens the full mosaic underneath.
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
@@ -13,8 +13,9 @@ import { galleryShots, GalleryMosaic } from "@/components/RetreatGallery";
 const R2_BASE = "https://pub-2741403aca194491b445876d4a738ef8.r2.dev/videos/";
 
 const clips = [
-  { id: "ashley", file: "Ashley moment from retreat.MOV", caption: "ashley · dancing together on the last night" },
-  { id: "shannon", file: "Shannon moment from retreat.MOV", caption: "shannon · a mayan fire ceremony and cacao circle" },
+  // posters are still frames from each clip (Ashley at 1.5s, Shannon at 2s)
+  { id: "ashley", file: "Ashley moment from retreat.MOV", poster: "/images/moment-poster-ashley.jpg", caption: "ashley · dancing together on the last night" },
+  { id: "shannon", file: "Shannon moment from retreat.MOV", poster: "/images/moment-poster-shannon.jpg", caption: "shannon · a mayan fire ceremony and cacao circle" },
 ];
 
 // [TODO: Shannon to pick final 4] — the first four photos of the gallery for now
@@ -34,46 +35,21 @@ function MomentVideo({
   className?: string;
 }) {
   const ref = useRef<HTMLVideoElement>(null);
-  const [src, setSrc] = useState<string | undefined>(undefined);
 
-  // lazy: only attach the file once the tile is near the screen
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const load = () => setSrc(R2_BASE + encodeURIComponent(clip.file));
-    if (!("IntersectionObserver" in window)) {
-      load();
-      return;
-    }
-    const io = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((e) => e.isIntersecting)) {
-          load();
-          io.disconnect();
-        }
-      },
-      { rootMargin: "300px 0px" },
-    );
-    io.observe(el);
-    return () => io.disconnect();
-  }, [clip.file]);
-
-  // back to a silent looping preview whenever this clip isn't the one with sound
+  // when another clip starts (or this one ends), stop and rewind; the poster
+  // image covers the tile again
   useEffect(() => {
     const v = ref.current;
-    if (!v || !src || active) return;
-    v.muted = true;
-    v.loop = true;
-    v.play().catch(() => {});
-  }, [active, src]);
+    if (!v || active) return;
+    v.pause();
+    if (v.readyState > 0) v.currentTime = 0;
+  }, [active]);
 
   // sound has to start inside the tap itself (iOS refuses it later)
   const playWithSound = () => {
     const v = ref.current;
     if (v) {
-      if (!src) setSrc(R2_BASE + encodeURIComponent(clip.file));
       v.muted = false;
-      v.loop = false;
       v.currentTime = 0;
       v.play().catch(() => {});
     }
@@ -83,13 +59,11 @@ function MomentVideo({
   return (
     <figure className={className} style={{ margin: 0, display: "flex", flexDirection: "column" }}>
       <div className="moment-tile" style={{ position: "relative", flex: 1, borderRadius: 6, overflow: "hidden", background: "var(--color-bg-card)" }}>
+        {/* preload="none": nothing downloads until she taps */}
         <video
           ref={ref}
-          src={src}
-          muted
-          loop
+          src={R2_BASE + encodeURIComponent(clip.file)}
           playsInline
-          autoPlay
           preload="none"
           controls={active}
           onEnded={onDeactivate}
@@ -101,10 +75,14 @@ function MomentVideo({
             type="button"
             onClick={playWithSound}
             aria-label={`play ${clip.id}'s story with sound`}
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none", padding: 0, background: "linear-gradient(to top, rgba(45,37,33,0.55), rgba(45,37,33,0) 45%)", cursor: "pointer", display: "flex", alignItems: "flex-end", justifyContent: "flex-start" }}
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none", padding: 0, background: "none", cursor: "pointer" }}
           >
-            <span style={{ margin: 12, padding: "6px 12px", borderRadius: 999, background: "rgba(255,252,245,0.92)", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 12, fontWeight: 600, letterSpacing: "0.02em", whiteSpace: "nowrap" }}>
-              ▶ hear the story
+            {/* still frame from the clip, so the tile never moves until tapped */}
+            <Image src={clip.poster} alt="" fill loading="lazy" sizes="(max-width: 1000px) 50vw, 320px" style={{ objectFit: "cover" }} />
+            <span style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(45,37,33,0.18)" }}>
+              <span style={{ padding: "8px 16px", borderRadius: 999, background: "rgba(255,252,245,0.92)", color: "#2D2521", fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 600, letterSpacing: "0.02em", whiteSpace: "nowrap" }}>
+                ▶ hear the story
+              </span>
             </span>
           </button>
         )}

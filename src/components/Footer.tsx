@@ -75,26 +75,26 @@ export default function Footer() {
 
       <p
         style={{
-          fontFamily: "var(--font-dm-sans)",
-          fontSize: 12,
-          color: "var(--color-text-muted)",
-          textAlign: "center",
-          marginTop: 32,
-        }}
-      >
-        © 2026 ASHA Experiences LLC
-      </p>
-      <p
-        style={{
           fontFamily: "var(--font-cormorant)",
           fontStyle: "italic",
           fontSize: 15,
           color: "var(--color-text-body)",
           textAlign: "center",
-          marginTop: 6,
+          marginTop: 32,
         }}
       >
         ASHA means hope in Sanskrit.
+      </p>
+      <p
+        style={{
+          fontFamily: "var(--font-dm-sans)",
+          fontSize: 12,
+          color: "var(--color-text-muted)",
+          textAlign: "center",
+          marginTop: 6,
+        }}
+      >
+        © 2026 ASHA Experiences LLC
       </p>
 
       <style>{`
