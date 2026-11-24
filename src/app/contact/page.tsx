@@ -90,9 +90,10 @@ export default function ContactPage() {
               </h1>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.9, marginBottom: 32 }}>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.6, marginBottom: 12 }}>
                 questions about a retreat, want to know if this is the right time for you, or just need to hear a real person on the other end —
-                <br /><br />
+              </p>
+              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, color: "var(--color-text-body)", lineHeight: 1.6, marginBottom: 32 }}>
                 we&apos;re here for all of it.
               </p>
             </FadeIn>

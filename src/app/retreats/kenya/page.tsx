@@ -834,12 +834,19 @@ export default function KenyaPage() {
                   <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-accent)", marginBottom: 18 }}>
                     two bedrooms · two women per room · your own bed
                   </p>
-                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
-                    you&apos;ll share a bedroom with one other woman, <strong>each of you in your own bed</strong>. four of you share the cottage: each bedroom has its own ensuite bathroom, and the living area, dining room and verandah run the full length of the building.
-                  </p>
-                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginTop: -12, marginBottom: 24 }}>
-                    come with a friend, or we&apos;ll pair you with a like-minded woman based on the form you fill out when you book. before the retreat we hold a zoom call so everyone can meet.
-                  </p>
+                  {/* three short points instead of two paragraphs */}
+                  <ul style={{ listStyle: "none", padding: 0, margin: "0 0 28px", display: "flex", flexDirection: "column", gap: 10 }}>
+                    {[
+                      <><strong>your room:</strong> shared with one other woman, <em>each of you in your own bed</em></>,
+                      <><strong>your cottage:</strong> four women, with a living area, dining room and verandah along its full length</>,
+                      <><strong>your roommate:</strong> come with a friend, or we&apos;ll pair you from your booking form. <em>we all meet on zoom before the retreat.</em></>,
+                    ].map((line, i) => (
+                      <li key={i} style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.6, display: "flex", gap: 10 }}>
+                        <span aria-hidden="true" style={{ color: "var(--color-accent)", flexShrink: 0 }}>✦</span>
+                        <span>{line}</span>
+                      </li>
+                    ))}
+                  </ul>
                   <div style={{ marginBottom: 28 }}>
                     <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>all cottages include</p>
                     <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
