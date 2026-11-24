@@ -297,14 +297,29 @@ function ParallaxImage({ src, alt, height, objectPosition = "center", sizes = "1
 
 // Six questions, in this order (Nov 2026). Group fit, rooms, fitness, cost and
 // the after-care now live in the page sections themselves.
+// shared styles for the FAQ answers: short lists instead of long paragraphs
+const faqList: React.CSSProperties = { listStyle: "disc", paddingLeft: 20, margin: "0 0 14px", display: "flex", flexDirection: "column", gap: 6 };
+const faqLead: React.CSSProperties = { marginBottom: 8 };
+const faqPara: React.CSSProperties = { marginBottom: 14 };
+
 const faqs: { question: string; answer: ReactNode }[] = [
   {
     question: "is it safe for a woman traveling on her own?",
     answer: (
       <div>
-        <p style={{ marginBottom: 12 }}>Nairobi is a big city, so treat it like one: stay at the hotel we recommend, use cars the hotel arranges, and keep valuables out of sight.</p>
-        <p style={{ marginBottom: 12 }}>Ol Pejeta is a different world: 90,000 acres of conservancy, and whenever you&apos;re out on the land you&apos;re with expert guides. from the moment group transport leaves Nairobi, you&apos;re with us and the conservancy&apos;s guides the whole week.</p>
-        <p>if anything goes wrong, Ol Pejeta runs its own security and emergency response teams around the clock, and Nanyuki, the nearest town, has private hospital care within an hour of Ol Pejeta Safari Cottages. we recommend travel insurance that includes medical evacuation.</p>
+        <p style={faqLead}><strong>Nairobi</strong> is a big city, so treat it like one:</p>
+        <ul style={faqList}>
+          <li>stay at the hotel we recommend</li>
+          <li>use cars the hotel arranges</li>
+          <li>keep valuables out of sight</li>
+        </ul>
+        <p style={faqPara}><strong>Ol Pejeta</strong> is a different world: 90,000 acres of conservancy, and whenever you&apos;re out on the land you&apos;re with expert guides. <em>from the moment group transport leaves Nairobi, you&apos;re with us and the conservancy&apos;s guides the whole week.</em></p>
+        <p style={faqLead}><strong>if anything goes wrong:</strong></p>
+        <ul style={{ ...faqList, marginBottom: 0 }}>
+          <li>Ol Pejeta runs its own security and emergency response teams around the clock</li>
+          <li>Nanyuki, the nearest town, has private hospital care within an hour of Ol Pejeta Safari Cottages</li>
+          <li>we recommend travel insurance that includes <strong>medical evacuation</strong></li>
+        </ul>
       </div>
     ),
   },
@@ -312,9 +327,14 @@ const faqs: { question: string; answer: ReactNode }[] = [
     question: "how do I get there, and what if my flight is late?",
     answer: (
       <div>
-        <p style={{ marginBottom: 12 }}>fly into Jomo Kenyatta International Airport (NBO) in Nairobi, and land at least a day early. we&apos;ll recommend a hotel where we all stay together the night before, and group transport to Ol Pejeta leaves the morning of November 28th.</p>
-        <p style={{ marginBottom: 12 }}>if your flight is late and you miss the morning departure, another safe, secure shuttle will bring you to Ol Pejeta, at no extra cost.</p>
-        <p>group transport back to Nairobi leaves December 4th. want to come early or stay on? tell us and we&apos;ll help you plan it.</p>
+        <ul style={faqList}>
+          <li><strong>fly into:</strong> Jomo Kenyatta International Airport (NBO) in Nairobi, and land at least a day early</li>
+          <li><strong>the night before:</strong> we&apos;ll recommend a hotel where we all stay together</li>
+          <li><strong>November 28th:</strong> group transport to Ol Pejeta leaves in the morning</li>
+          <li><strong>December 4th:</strong> group transport back to Nairobi</li>
+        </ul>
+        <p style={faqPara}><strong>flight late?</strong> if you miss the morning departure, another safe, secure shuttle will bring you to Ol Pejeta, <strong>at no extra cost</strong>.</p>
+        <p><em>want to come early or stay on? tell us and we&apos;ll help you plan it.</em></p>
       </div>
     ),
   },
@@ -322,13 +342,14 @@ const faqs: { question: string; answer: ReactNode }[] = [
     question: "what do I need before I travel?",
     answer: (
       <div>
-        <ul style={{ listStyle: "disc", paddingLeft: 20, margin: "0 0 12px", display: "flex", flexDirection: "column", gap: 6 }}>
-          <li>a passport valid for at least 6 months beyond your travel dates.</li>
-          <li>a Kenyan evisa, applied for online (around $50). we&apos;ll walk you through it.</li>
-          <li>a yellow fever card only if you&apos;ve recently been through certain countries, even on a layover. check with your doctor or airline.</li>
-          <li>travel insurance: not required, but we strongly recommend it (World Nomads or SafetyWing, typically $50–100).</li>
+        <ul style={faqList}>
+          <li><strong>passport</strong>: valid for at least 6 months beyond your travel dates.</li>
+          <li><strong>Kenyan evisa</strong>: applied for online (around $50). we&apos;ll walk you through it.</li>
+          <li><strong>yellow fever card</strong>: only if you&apos;ve recently been through certain countries, even on a layover. check with your doctor or airline.</li>
+          <li><strong>travel insurance</strong>: not required, but we strongly recommend it (World Nomads or SafetyWing, typically $50–100).</li>
         </ul>
-        <p>the retreat is at high elevation with cool, dry air, so mosquitoes aren&apos;t a concern and malaria isn&apos;t a risk there. you&apos;ll get a full pre-travel guide once you&apos;re booked.</p>
+        <p style={faqPara}>the retreat is at high elevation with cool, dry air, so <strong>mosquitoes aren&apos;t a concern and malaria isn&apos;t a risk there.</strong></p>
+        <p><em>you&apos;ll get a full pre-travel guide once you&apos;re booked.</em></p>
       </div>
     ),
   },
@@ -336,22 +357,43 @@ const faqs: { question: string; answer: ReactNode }[] = [
     question: "how do payments and cancellations work?",
     answer: (
       <div>
-        <p style={{ marginBottom: 12 }}>pay in full, or hold your spot with a $1,000 deposit and pay the remaining $5,900 over 11 monthly payments: ten of $536 and a final one of $540. the balance is due 30 days before the retreat (October 29, 2027), so the 11-month plan is for women who book by December 31, 2026. book later and we&apos;ll split it evenly over the months that are left.</p>
-        <p style={{ marginBottom: 12 }}><strong>all payments are non-refundable</strong>, including the deposit. if your plans change, you can transfer your spot to another woman, or to a future ASHA retreat within 12 months, up to 4 months before the retreat starts. just email us.</p>
-        <p>we strongly recommend travel insurance to protect your trip.</p>
+        <p style={faqLead}><strong>two ways to pay:</strong></p>
+        <ul style={faqList}>
+          <li>pay in full, or</li>
+          <li>hold your spot with a <strong>$1,000 deposit</strong>, then pay the remaining $5,900 over <strong>11 monthly payments</strong>: ten of $536 and a final one of $540</li>
+        </ul>
+        <p style={faqPara}>the balance is due <strong>30 days before the retreat (October 29, 2027)</strong>, so the 11-month plan is for women who book by December 31, 2026. book later and we&apos;ll split it evenly over the months that are left.</p>
+        <p style={faqPara}><strong>all payments are non-refundable</strong>, including the deposit.</p>
+        <p style={faqLead}><strong>if your plans change</strong>, you can transfer your spot:</p>
+        <ul style={faqList}>
+          <li>to another woman, or</li>
+          <li>to a future ASHA retreat within 12 months</li>
+        </ul>
+        <p style={faqPara}>up to <strong>4 months before the retreat starts</strong>. just email us.</p>
+        <p><em>we strongly recommend travel insurance to protect your trip.</em></p>
       </div>
     ),
   },
   {
     question: "I'm in the middle of something hard right now. is this the right time?",
-    answer: <p>usually, yes. most women don&apos;t come to us after they&apos;ve healed. they come while they&apos;re still in it. you don&apos;t need to arrive with anything figured out.</p>,
+    answer: (
+      <div>
+        <p style={faqPara}><strong>usually, yes.</strong> most women don&apos;t come to us after they&apos;ve healed. they come while they&apos;re still in it.</p>
+        <p><em>you don&apos;t need to arrive with anything figured out.</em></p>
+      </div>
+    ),
   },
   {
     question: "I've never done a retreat, and I don't really \"do\" vulnerability.",
     answer: (
       <div>
-        <p style={{ marginBottom: 12 }}>most women who come haven&apos;t done one either. nothing here is mandatory: some women go deep on day one, others watch for a day or two first, and both are welcome.</p>
-        <p>you don&apos;t need to be especially fit, either. most of the week happens in safari vehicles, on the verandah and in circle, and the movement is yoga and gentle practice. Ol Pejeta is at high elevation, so go easy on the first day.</p>
+        <p style={faqPara}>most women who come haven&apos;t done one either. <strong>nothing here is mandatory:</strong> some women go deep on day one, others watch for a day or two first, <em>and both are welcome.</em></p>
+        <p style={faqLead}><strong>you don&apos;t need to be especially fit, either.</strong></p>
+        <ul style={{ ...faqList, marginBottom: 0 }}>
+          <li>most of the week happens in safari vehicles, on the verandah and in circle</li>
+          <li>the movement is yoga and gentle practice</li>
+          <li>Ol Pejeta is at high elevation, so go easy on the first day</li>
+        </ul>
       </div>
     ),
   },
