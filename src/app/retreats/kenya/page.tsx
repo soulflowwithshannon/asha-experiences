@@ -218,7 +218,7 @@ function KenyaHero() {
         </p>
         <p
           className="hero-rise"
-          style={{ animationDuration: "1s", animationDelay: "0.25s", fontFamily: "var(--font-dm-sans)", fontSize: 14, letterSpacing: "0.04em", color: "#FFFFFF", marginTop: 28 }}
+          style={{ animationDuration: "1s", animationDelay: "0.25s", fontFamily: "var(--font-dm-sans)", fontSize: 14, letterSpacing: "0.04em", color: "#E8D5BC", marginTop: 28 }}
         >
           $6,900 · shared cottage{SPOTS_LEFT ? ` · ${SPOTS_LEFT} of 10 spots left` : ""}
         </p>
