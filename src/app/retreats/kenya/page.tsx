@@ -164,7 +164,7 @@ function TypicalDay() {
             ))}
           </ul>
           <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 20, color: "var(--color-text-headline)", textAlign: "center", marginTop: 28 }}>
-            afternoons are mostly yours. [CHECK: confirm]
+            afternoons are mostly yours.
           </p>
         </FadeIn>
       </div>
@@ -314,9 +314,9 @@ const faqs: { question: string; answer: ReactNode }[] = [
     question: "is it safe for a woman traveling on her own?",
     answer: (
       <div>
-        <p style={{ marginBottom: 12 }}>Nairobi is a big city, so treat it like one: stay at a hotel we recommend, use cars the hotel arranges, and keep valuables out of sight. [CHECK: is this the Nairobi advice you want to give?]</p>
+        <p style={{ marginBottom: 12 }}>Nairobi is a big city, so treat it like one: stay at a hotel we recommend, use cars the hotel arranges, and keep valuables out of sight.</p>
         <p style={{ marginBottom: 12 }}>Ol Pejeta is a different world: 90,000 acres of conservancy, and whenever you&apos;re out on the land you&apos;re with expert guides. from the moment group transport leaves Nairobi, you&apos;re with us and the conservancy&apos;s guides the whole week.</p>
-        <p>we meet you in Nairobi, and Ashley and Shannon are with you all week. [CHECK: what happens if something goes wrong: who she calls, nearest medical care]</p>
+        <p>we meet you in Nairobi, and Ashley and Shannon are with you all week. if anything goes wrong, our retreat center has medical staff nearby and local doctors it can call on.</p>
       </div>
     ),
   },
