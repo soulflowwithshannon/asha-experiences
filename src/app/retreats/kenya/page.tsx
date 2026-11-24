@@ -204,19 +204,21 @@ function KenyaHero() {
         </h1>
         <p
           className="hero-rise-sm"
-          style={{ animationDuration: "0.8s", animationDelay: "0.15s", fontFamily: "var(--font-cormorant)", fontSize: "clamp(22px,3vw,34px)", color: "#F1F0E5", fontWeight: 700, fontStyle: "italic", marginBottom: 28, marginTop: -6 }}
+          style={{ animationDuration: "0.8s", animationDelay: "0.15s", fontFamily: "var(--font-cormorant)", fontSize: "clamp(22px,3vw,34px)", color: "#E8D5BC", fontWeight: 700, fontStyle: "italic", marginBottom: 28, marginTop: -6 }}
         >
           Ol Pejeta Conservancy, Kenya · <span style={{ whiteSpace: "nowrap" }}>Nov 28 – Dec 4, 2027</span>
         </p>
         <p
           className="hero-rise"
-          style={{ animationDuration: "1s", animationDelay: "0.2s", fontFamily: "var(--font-dm-sans)", fontSize: "clamp(15px,2.2vw,22px)", color: "#E8D5BC", maxWidth: 760, margin: "48px auto 0", lineHeight: 1.7, fontWeight: 700, textShadow: "0 2px 12px rgba(0,0,0,0.5)", textAlign: "center" }}
+          style={{ animationDuration: "1s", animationDelay: "0.2s", fontFamily: "var(--font-dm-sans)", fontSize: "clamp(15px,2.2vw,22px)", color: "#F1F0E5", maxWidth: 900, margin: "48px auto 0", lineHeight: 1.6, fontWeight: 700, textAlign: "center", textWrap: "balance" }}
         >
-          ten women. seven days on 90,000 acres at the foot of Mount Kenya. sunrise game drives, yoga with the plains in view, circles under the open sky, and the two of us with you from Nairobi to the last morning.
+          <span style={{ display: "block", textWrap: "balance", marginBottom: 14 }}>ten women. seven days on 90,000 acres at the foot of Mount Kenya.</span>
+          <span style={{ display: "block", textWrap: "balance", marginBottom: 14 }}>sunrise game drives, yoga with the plains in view, circles under the open sky,</span>
+          <span style={{ display: "block", textWrap: "balance" }}>and the two of us with you from Nairobi to the last morning.</span>
         </p>
         <p
           className="hero-rise"
-          style={{ animationDuration: "1s", animationDelay: "0.25s", fontFamily: "var(--font-dm-sans)", fontSize: 14, letterSpacing: "0.04em", color: "#E8D5BC", marginTop: 24, textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}
+          style={{ animationDuration: "1s", animationDelay: "0.25s", fontFamily: "var(--font-dm-sans)", fontSize: 14, letterSpacing: "0.04em", color: "#FFFFFF", marginTop: 28 }}
         >
           $6,900 · shared cottage{SPOTS_LEFT ? ` · ${SPOTS_LEFT} of 10 spots left` : ""}
         </p>
