@@ -22,7 +22,7 @@ const daysData = [
     title: "arrive & exhale",
     blurb: "the desert receives you. you don't have to do anything yet.",
     items: [
-      "private airport transfer to Atlas Kasbah",
+      "private airport transfer to the retreat center",
       "settle in, meet the women you'll share the week with",
       "welcome ceremony and opening circle",
     ],
@@ -136,7 +136,7 @@ function MoroccoHero() {
     <section ref={ref} style={{ position: "relative", minHeight: "100svh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
       <Image
         src="/images/morocco-hero-v2.png"
-        alt="Sacred Sands — Atlas Kasbah, Morocco"
+        alt="Sacred Sands, a women's retreat in Morocco"
         fill
         style={{ objectFit: "cover", objectPosition: "center" }}
         priority
@@ -512,10 +512,10 @@ export default function MoroccoPage() {
           </div>
           <div>
             <FadeIn>
-              <p style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(18px,2vw,24px)", color: "var(--color-text-headline)", fontWeight: 700, textAlign: "center", marginBottom: 20 }}>our retreat center: Atlas Kasbah</p>
+              <p style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(18px,2vw,24px)", color: "var(--color-text-headline)", fontWeight: 700, textAlign: "center", marginBottom: 20 }}>our home for the week: a castle retreat center outside Agadir</p>
             </FadeIn>
             <div style={{ position: "relative", borderRadius: 8, overflow: "hidden", aspectRatio: "4/5" }}>
-              <Image src="/images/atlas kasbah.png" alt="Atlas Kasbah" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="640px" />
+              <Image src="/images/morocco-retreat-center.png" alt="our castle retreat center in the hills" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="640px" />
             </div>
           </div>
         </div>
@@ -649,7 +649,7 @@ export default function MoroccoPage() {
                 <h3 style={{ fontFamily: "var(--font-heading)", fontSize: 24, color: "var(--color-text-headline)", fontWeight: 700, marginBottom: 8 }}>The Jamila</h3>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)", letterSpacing: "0.07em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>private tower room · sold out</p>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, color: "var(--color-text-body)", lineHeight: 1.7, marginBottom: 24 }}>
-                  the most private option. your own tower room at Atlas Kasbah — a space that is entirely yours.
+                  the most private option. your own tower room at the kasbah — a space that is entirely yours.
                 </p>
                 <div style={{ marginTop: "auto" }}>
                   <p style={{ fontFamily: "var(--font-cormorant)", fontSize: 32, color: "var(--color-accent)", fontWeight: 400, marginBottom: 4 }}>$4,000</p>
