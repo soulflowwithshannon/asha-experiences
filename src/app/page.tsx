@@ -82,19 +82,37 @@ function ParallaxHero() {
             animationDuration: "1s",
             fontFamily: "var(--font-cormorant)",
             fontStyle: "italic",
-            fontSize: "clamp(28px,4.4vw,46px)",
+            fontSize: "clamp(34px,6vw,64px)",
             color: "#F1F0E5",
             fontWeight: 400,
             width: "90%",
-            maxWidth: 640,
+            maxWidth: 1100,
             whiteSpace: "normal",
             wordWrap: "break-word",
-            margin: "0 auto 40px",
-            lineHeight: 1.25,
+            margin: "0 auto 18px",
+            lineHeight: 1.1,
           }}
         >
-          international retreats for women choosing joy, freedom, and connection
+          {/* two lines, and neither phrase ever breaks in the middle */}
+          <span style={{ whiteSpace: "nowrap" }}>far from home.</span><br />
+          <span style={{ whiteSpace: "nowrap" }}>closer to yourself.</span>
         </h1>
+        {/* keeps the searchable phrase on the page, under the tagline */}
+        <p
+          className="hero-rise"
+          style={{
+            animationDuration: "1s",
+            animationDelay: "0.15s",
+            fontFamily: "var(--font-dm-sans)",
+            fontSize: 12,
+            letterSpacing: "0.24em",
+            textTransform: "uppercase",
+            color: "#E8D5BC",
+            margin: "0 auto 40px",
+          }}
+        >
+          international retreats for women
+        </p>
 
         <div
           className="hero-rise" style={{ animationDuration: "1s", animationDelay: "0.3s" }}
