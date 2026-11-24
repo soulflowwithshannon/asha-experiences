@@ -925,8 +925,14 @@ export default function KenyaPage() {
       <MeetSection />
 
       {/* SECTION 8 — FAQ */}
-      <section style={{ background: "#F5F1E6", padding: "80px 32px 80px" }}>
+      <section style={{ background: "#F5F1E6", padding: "0 32px 80px" }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
+          {/* hairline divider: separates the meet-us call from the questions (same background) */}
+          <div aria-hidden="true" style={{ display: "flex", alignItems: "center", gap: 12, maxWidth: 520, margin: "0 auto 72px" }}>
+            <div style={{ flex: 1, height: "0.5px", background: "#D4C8AA" }} />
+            <span style={{ color: "#A67C52", fontSize: 14 }}>✦</span>
+            <div style={{ flex: 1, height: "0.5px", background: "#D4C8AA" }} />
+          </div>
           <FadeIn>
             <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-accent)", letterSpacing: "0.12em", textTransform: "uppercase", textAlign: "center", marginBottom: 16 }}>everything you need to know</p>
             <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(28px,4vw,40px)", color: "var(--color-text-headline)", textAlign: "center", fontWeight: 700, marginBottom: 56 }}>
