@@ -846,7 +846,7 @@ export default function KenyaPage() {
                 <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
                   {([
                     <><strong>flights</strong> to/from Nairobi, Kenya</>,
-                    <>hotel stay in Nairobi before the retreat <em>(recommended — we&apos;ll share our favorites)</em></>,
+                    <>hotel stay in Nairobi the night before <em>(we&apos;ll recommend one, and we all stay there together)</em></>,
                     <><strong>travel insurance</strong> <em>(recommended)</em></>,
                     <>souvenirs</>,
                     <><strong>Kenya visa</strong> <em>(around $50 USD)</em></>,
