@@ -260,7 +260,7 @@ function SignUp({ s }: { s: ClosedRetreatProps["signUp"] }) {
   }
 
   return (
-    <section id="list" className="ss-pad" style={{ background: "var(--color-bg-surface)", padding: "96px 32px", scrollMarginTop: 72 }}>
+    <section id="list" className="ss-pad ss-signup" style={{ background: "var(--color-bg-surface)", padding: "96px 32px", scrollMarginTop: 72 }}>
       <div className="ss-split" style={{ maxWidth: 1080, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 72, alignItems: "center" }}>
         <FadeIn>
           <div>
@@ -378,14 +378,16 @@ export default function ClosedRetreat({ header, week, signUp, closing, compact }
           .ss-br{display:block}
         }
         .ss-compact .ss-header-copy{padding-bottom:40px!important}
-        .ss-compact .ss-week{padding-top:64px!important}
-        .ss-compact .ss-next{padding-top:64px!important}
+        .ss-compact .ss-week{padding-top:64px!important;padding-bottom:64px!important}
+        .ss-compact .ss-signup{padding-top:64px!important;padding-bottom:64px!important}
+        .ss-compact .ss-next{padding-top:48px!important}
         .ss-compact .ss-week-body{font-size:15px!important;line-height:1.65!important}
         @media(max-width:860px){
           .ss-compact .ss-tagline{font-size:20px!important;margin-bottom:28px!important}
           .ss-compact .ss-header-copy{padding-bottom:24px!important;gap:28px!important}
-          .ss-compact .ss-week{padding-top:48px!important}
-          .ss-compact .ss-next{padding-top:48px!important}
+          .ss-compact .ss-week{padding-top:48px!important;padding-bottom:48px!important}
+          .ss-compact .ss-signup{padding-top:48px!important;padding-bottom:48px!important}
+          .ss-compact .ss-next{padding-top:40px!important}
         }
       `}</style>
     </main>

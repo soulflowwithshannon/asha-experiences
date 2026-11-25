@@ -13,7 +13,7 @@ export default function MoroccoPage() {
         tagline: "this one's full. the next one could be yours.",
         footnote: "for women to come home to the part of them that's always been whole.",
         photo: { src: "/images/Milky Way Over Ait Benhaddou Village, Morocco.jpeg", alt: "the Milky Way over Ait Benhaddou, Morocco" },
-        pinned: { src: "/images/Morocco circle.jpeg", alt: "women sitting in circle at Sacred Sands", caption: "circle, day four" },
+        pinned: { src: "/images/Morocco circle.jpeg", alt: "women sitting in circle at Sacred Sands", caption: "ceremony with the girls" },
       }}
       week={{
         eyebrow: "what the week holds · Agadir, Morocco",
