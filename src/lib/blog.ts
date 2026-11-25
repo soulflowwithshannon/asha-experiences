@@ -97,6 +97,8 @@ const allPosts: Post[] = [
 <li><strong>The woman who almost didn't come.</strong> She talked herself out of it twice. She came anyway, and can't imagine who she'd be right now if she hadn't.</li>
 </ul>
 
+<p><em>Not sure which one sounds like you? <a href="/find-your-retreat">Take our five-question quiz</a> and we'll help you find what you need right now.</em></p>
+
 <h2>What they all have in common</h2>
 <ul>
 <li>They're done waiting for the right time</li>
@@ -541,6 +543,8 @@ This one takes courage. What are the distractions actually covering? What would 
 <p><strong>4. Who am I outside of what I do for others?</strong><br />
 Sit with this one. <em>"I don't know"</em> is a completely valid answer. Write it down anyway. That's where it starts.</p>
 
+<p><em>If the prompts feel too big to start with, <a href="/find-your-retreat">our five-question quiz</a> is a gentler way in. It'll show you which archetype you're living in right now and what she needs.</em></p>
+
 <h2>This isn't about fixing yourself</h2>
 
 <p>It's about stopping long enough to remember that there's a self worth coming back to.</p>
@@ -612,6 +616,8 @@ This is the hardest one. Joy has a way of being immediately followed by guilt â€
 
 <p><strong>Start collecting them. They're already there.</strong></p>
 
+<p><em>Curious what's been keeping you from landing in the moment? <a href="/find-your-retreat">Take our five-question quiz</a> to find your archetype and what she needs most right now.</em></p>
+
 <hr />
 
 <p>Ready to experience what full presence actually feels like â€” in one of the most extraordinary places on earth? We'd love to have you with us on <a href="/retreats">one of our retreats</a>.</p>
@@ -644,6 +650,8 @@ This is the hardest one. Joy has a way of being immediately followed by guilt â€
 <p>We're not taught to sit in it. We're taught to fix it, solve it, move forward. So when the answer isn't clear, we either force a decision before we're ready â€” or we stay frozen, waiting for clarity that never comes because we're too busy drowning out <em>the quiet voice that actually has the answers.</em></p>
 
 <p>Journaling isn't about forcing clarity. It's about creating enough stillness that you can finally hear yourself think.</p>
+
+<p><em>Want a starting point before you pick up the pen? <a href="/find-your-retreat">Our five-question quiz</a> will show you where you are right now and what might help you move.</em></p>
 
 <h2>The practice</h2>
 
@@ -937,6 +945,8 @@ __TESTIMONIAL_VIDEO__
 <p><strong><em>"Is it weird to go alone?"</em></strong></p>
 
 <p>Honestly â€” no. Most people are in the same position. And there's something about arriving without history, without the version of yourself that your existing relationships know, that makes the whole experience more open. You get to just be a woman in a room with other women. It turns out that's enough.</p>
+
+<p><em>Still wondering if a retreat is right for you? <a href="/find-your-retreat">Our five-question quiz</a> is a good place to start. It'll help you find what you need right now.</em></p>
 
 <hr />
 

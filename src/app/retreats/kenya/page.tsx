@@ -506,7 +506,7 @@ export default function KenyaPage() {
             practices: "yoga with the plains in view · somatic practice · daily movement",
           },
           {
-            img: "/images/Luxury safari vehicles built for comfort_.jpeg",
+            img: "/images/Tanzania.jpeg",
             title: "let the land be your mirror",
             body: (
               <>
@@ -557,7 +557,7 @@ export default function KenyaPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr 1fr", gridTemplateRows: "280px 280px", gap: 8 }} className="mosaic-grid">
             {/* Top left */}
             <div style={{ position: "relative", overflow: "hidden", borderRadius: 4 }}>
-              <Image src="/images/safari 1.jpeg" alt="Safari" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="30vw" />
+              <Image src="/images/Luxury safari vehicles built for comfort_.jpeg" alt="Safari vehicle on the plains" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="30vw" />
             </div>
             {/* Large middle — spans 2 rows */}
             <div style={{ position: "relative", gridRow: "span 2", overflow: "hidden", borderRadius: 4 }}>

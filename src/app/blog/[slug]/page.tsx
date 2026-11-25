@@ -234,7 +234,6 @@ export default async function BlogPost({
       })}
 
       {/* Closing CTA */}
-      <QuizCTA />
       <EmailSignup variant="end" source={`post:${post.slug}`} />
 
       {/* Back link */}

@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { posts } from "@/lib/blog";
-import QuizCTA from "@/components/QuizCTA";
 import EmailSignup from "@/components/EmailSignup";
 
 function formatDate(dateStr: string) {
@@ -273,8 +272,6 @@ export default function BlogIndex() {
           </article>
         </Link>
       </section>
-
-      <QuizCTA variant="band" />
 
       {/* ── Divider with label ── */}
       <div style={{ maxWidth: 1200, margin: "48px auto 0", padding: "0 48px" }}>
