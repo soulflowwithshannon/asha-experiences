@@ -198,7 +198,6 @@ const allPosts: Post[] = [
 <ul>
 <li>Small groups, so you're known by name, not lost in a crowd</li>
 <li>Skilled facilitation in yoga, sound healing, somatic practices, and ceremony</li>
-<li>Accommodation, meals, experiences, and ground transfers included [PLACEHOLDER: confirm this holds for Casa Amor]</li>
 <li>A clear arc, from arrival to integration, designed with intention</li>
 </ul>
 
@@ -218,7 +217,6 @@ const allPosts: Post[] = [
     readTime: "6 min read",
     theme: "before you go",
     destination: true,
-    draft: true,
     image: "/images/kenya-safari-jeep.JPG",
     body: `
 <p>Most packing lists for a safari in Kenya are written for people who'll spend the whole trip in a vehicle behind a long lens. This one is for a safari that's also a retreat: sunrise game drives, yes, but also yoga looking out over the plains, women's circles, long dinners, and a lot of time sitting still.</p>
@@ -241,7 +239,7 @@ const allPosts: Post[] = [
 <li>a scarf or buff, for the cold and for the dust</li>
 <li>a hat with a brim and good sunglasses. you're close to the equator, and the sun is stronger than it feels</li>
 <li>neutral colors, like khaki, olive, sand and soft browns. they hide the dust and blend in around wildlife</li>
-<li>binoculars, if you have them [PLACEHOLDER: confirm whether binoculars are provided in the vehicles]</li>
+<li>binoculars. bring your own pair, even a small one. you'll use them more than you think</li>
 </ul>
 
 <p><strong>For the retreat side</strong></p>
@@ -250,7 +248,7 @@ const allPosts: Post[] = [
 <li>something warm and soft for evening circles around the fire</li>
 <li>a journal, and a pen you actually like writing with</li>
 <li>an outfit or two for dinners that makes you feel good. nothing fancy</li>
-<li>[PLACEHOLDER: are yoga mats provided, or should she bring a travel mat?]</li>
+<li>a light travel yoga mat</li>
 </ul>
 
 <p><strong>For your body</strong></p>
@@ -259,8 +257,9 @@ const allPosts: Post[] = [
 <li>a good moisturizer. the dry air is real</li>
 <li>any medication you take, in your carry-on, with a few extra days' worth</li>
 <li>closed, comfortable shoes for walking, plus sandals for around the cottages</li>
-<li>a reusable water bottle</li>
 </ul>
+
+<p>You don't need to pack shampoo, conditioner or drinking water. The cottages provide them, along with water bottles to refill.</p>
 
 <p><strong>The practical things</strong></p>
 <ul>
@@ -279,95 +278,95 @@ const allPosts: Post[] = [
 <ul>
 <li>the full safari costume. you don't need to look like a documentary host</li>
 <li>heavy hiking boots. most of the week happens in safari vehicles, on the verandah and in circle</li>
-<li>a hair dryer [PLACEHOLDER: confirm what the cottages provide]</li>
+<li>a hair dryer. the cottages run on solar power, so it's one less thing to carry</li>
 <li>the version of you who needs a plan for every outfit</li>
 </ul>
 
 <h2>A note on bags</h2>
-<p>A lot of Kenya safaris use small bush planes with strict luggage limits. Ours doesn't: group transport from Nairobi to Ol Pejeta is by road. [PLACEHOLDER: any bag size or number limits for the group transport]</p>
+<p>A lot of Kenya safaris use small bush planes, with strict weight limits and soft bags only. Ours doesn't: we travel together from Nairobi to Ol Pejeta by road, about four to five hours. Still, pack light enough that you can lift your own bag, and leave a little room for what you bring home.</p>
 
 <p>Once you're booked, you'll get a full pre-travel guide from us, so you won't be working this out alone.</p>
 
 <h2>The real packing list</h2>
 <p>Beyond the layers and the sunscreen, the most useful thing you can bring is room. Room in your days that you don't rush to fill, and room in yourself for something to shift.</p>
 
-<p>Still deciding? These might help: <a href="/blog/is-kenya-safe-for-women-travelers">is Kenya safe for women travelers?</a>, <a href="/blog/a-day-on-safari-at-ol-pejeta">a day on safari at Ol Pejeta</a>, and <a href="/blog/going-on-a-womens-retreat-alone-heres-what-happened">going on a women's retreat alone</a>.</p>
+<p>Still deciding? These might help: <a href="/blog/a-day-on-safari-at-ol-pejeta">a day on safari at Ol Pejeta</a> and <a href="/blog/going-on-a-womens-retreat-alone-heres-what-happened">going on a women's retreat alone</a>.</p>
 ${kenyaCta}
     `.trim(),
   },
   {
-    // target search: "is Kenya safe for women travelers". Modeled on the retired Mexico safety post.
+    // target search: "is Kenya safe for women travelers". Rebuilt from Shannon's draft (Nov 2026).
+    // Time-sensitive: re-check the advisory section before publishing and every few months after.
     slug: "is-kenya-safe-for-women-travelers",
     title: "Is Kenya safe for women travelers? (honest answer)",
     metaTitle: "Is Kenya safe for women travelers?",
-    description: "Is Kenya safe for women travelers? An honest answer: where to take care, what changes on a guided safari retreat, and practical tips before you go.",
-    summary: "Nairobi, the conservancy, and everything in between. An honest look at safety for women in Kenya, and what changes when you're not on your own.",
+    description: "Is Kenya safe for women travelers? An honest answer: what the official advice says, where the real risks are, and how we plan our safari retreat around them.",
+    summary: "What the official advice says right now, where the real risks are, and how we've built our Kenya safari retreat around them.",
     date: "2026-11-25",
-    readTime: "5 min read",
+    readTime: "6 min read",
     theme: "before you go",
     destination: true,
     draft: true,
     image: "/images/kenya-women-tent.JPG",
     body: `
-<p>It's usually the first thing women ask us about Kenya, sometimes before they've asked about the animals. And it's a fair question.</p>
+<p>Is Kenya safe for women travelers? Yes, with the right planning, but it deserves an honest answer rather than a pep talk. It's the question we hear most from women thinking about Into the Wild, our Kenya retreat, and it's a fair one.</p>
 
-<p>Is Kenya safe for women travelers? Like anywhere, the honest answer depends on <strong>where you're going, how you're getting around, and who you're with.</strong></p>
+<p>[PLACEHOLDER: Shannon or Ashley, your line here. "The first time I went to Kenya, I was nervous about ___, and what I found was ___."]</p>
 
-<h2>The honest answer</h2>
-<p>Women travel to Kenya every year, on their own and in groups. It's also a big country with real considerations. Some areas, particularly near certain borders, carry official travel warnings, and the cities come with the usual big-city risks.</p>
+<p>Here's what we tell every woman who asks: what the official advice says right now, where the real risks are, and how we've built this retreat around them.</p>
 
-<p>Before any trip, check your own government's current travel advice for Kenya. In the US that's the State Department, and in the UK it's the FCDO. It's updated far more often than any blog post, this one included.</p>
+<h2>What the official advice says right now</h2>
+<p>As of November 2026, the US State Department rates Kenya <strong>Level 3, "Reconsider Travel."</strong> It was raised from Level 2 in October 2026 because of health risks, at a time when Kenya had confirmed cases of Ebola.</p>
 
-<h2>Nairobi and Ol Pejeta are two different worlds</h2>
-<p><strong>Nairobi</strong> is a big, busy capital, so treat it like one:</p>
+<p>The advisory also lists crime, kidnapping, terrorism, unrest and road safety. Most of those risks are concentrated in specific places:</p>
 <ul>
-<li>stay somewhere reputable. on our retreat, we all stay at the same hotel the night before</li>
-<li>use cars your hotel arranges, rather than one you flag down</li>
-<li>keep your phone and valuables out of sight</li>
-<li>don't walk around after dark in areas you don't know</li>
+<li><strong>Do-not-travel areas:</strong> the northeastern border counties, the far north coast above Malindi, and parts of the northwest near Ethiopia and in West Pokot and Turkana. None are on our route.</li>
+<li><strong>Nairobi:</strong> petty crime is common, and protests can turn violent, mostly in Nairobi and western Kenya.</li>
+<li><strong>Women specifically:</strong> the State Department notes that sexual assault is often unreported, and that incidents have happened in bars, on beaches and at some lodges. It advises solo travelers to take extra care.</li>
+</ul>
+<p>[PLACEHOLDER: check this section against the current advisory on travel.state.gov just before publishing. We couldn't load the official page to confirm the do-not-travel areas or the note on women.]</p>
+
+<p>We're sharing this because you deserve the full picture. Advisory levels change. We watch them closely, and we'll tell every woman who books exactly where things stand before we travel. Read the current advisory yourself on <a href="https://travel.state.gov/en/international-travel/travel-advisories/kenya.html" target="_blank" rel="noopener noreferrer">travel.state.gov</a>.</p>
+
+<h2>Why safari at Ol Pejeta feels different</h2>
+<p>Most of our time in Kenya is spent inside Ol Pejeta Conservancy, a protected wildlife area of about 90,000 acres in Laikipia, far from crowds and city streets.</p>
+
+<p>We stay at Ol Pejeta Safari Cottages, a small, family-run property with only a handful of cottages. Each cottage is exclusive-use, so you share it only with the women on your retreat and a dedicated team: a private chef, a server, a professional safari guide and a private vehicle. No strangers at the next table, no shared game drives.</p>
+
+<p>Whenever you're out in the conservancy, you're with a trained guide who knows the land and the animals.</p>
+
+<h2>How we travel together</h2>
+<p>You're never navigating Kenya on your own. Into the Wild is a small group of women, led by Shannon and Ashley the whole way.</p>
+<ul>
+<li><strong>Group transport from Nairobi.</strong> We travel together from Nairobi to Ol Pejeta, so you never have to arrange a ride or find your way.</li>
+<li><strong>Small group, always together.</strong> Off-site outings happen as a group, with a guide.</li>
+<li><strong>Licensed, insured partners.</strong> The State Department recommends checking that lodges and operators carry insurance and a Kenya Tourism Regulatory Authority license. We check this for our partners.</li>
+<li><strong>We keep watching.</strong> We follow the travel advisory and CDC guidance in the lead-up, and stay in touch with our partners on the ground.</li>
+</ul>
+<p>[PLACEHOLDER: Shannon, confirm every bullet above is true for this retreat, and add specifics, e.g. airport pickup, who meets women on arrival, the emergency plan.]</p>
+
+<h2>Practical tips for women traveling to Kenya</h2>
+<ul>
+<li><strong>Get travel insurance with medical evacuation.</strong> Medical care outside the big cities is limited, and hospitals usually want payment up front.</li>
+<li><strong>Check the CDC before you go.</strong> Look at the current health notices for Kenya, and talk to your doctor about vaccines and malaria tablets.</li>
+<li><strong>Enroll in STEP.</strong> The State Department's free Smart Traveler program sends you alerts and helps the embassy reach you.</li>
+<li><strong>Keep valuables low-key.</strong> Leave flashy jewelry at home, and be careful at ATMs and at night in Nairobi.</li>
+<li><strong>Dress for the bush.</strong> Neutral colors like khaki and beige, layers for cool mornings and evenings, and closed-toe shoes for walks. Here's <a href="/blog/what-to-pack-for-a-safari-in-kenya">everything else to pack</a>.</li>
+<li><strong>Share your plans.</strong> Give someone at home our itinerary and set a time to check in.</li>
+<li><strong>Buckle up.</strong> Roads in the conservancy are rough. Wear your seatbelt on game drives and transfers.</li>
 </ul>
 
-<p><strong>Ol Pejeta</strong> is a 90,000-acre conservancy near Mount Kenya, and it feels nothing like the city. Whenever you're out on the land, you're with expert guides, and the conservancy runs its own security and emergency response teams around the clock.</p>
+<h2>So, is Kenya safe for women?</h2>
+<p>No place is risk-free, and right now Kenya carries a higher official warning than usual. What makes the difference is how you travel: with a small group, trusted guides and a team that tracks every update for you.</p>
 
-<h2>What changes on a guided safari retreat</h2>
+<p>If you've felt Kenya calling but the fear has kept you from saying yes, we'd love to talk it through. <a href="/contact">Ask us anything</a>, or read <a href="/blog/a-day-on-safari-at-ol-pejeta">what a day on safari at Ol Pejeta is really like</a>.</p>
+
+<h2>Sources</h2>
 <ul>
-<li>you're <strong>not navigating alone</strong>. group transport takes you from Nairobi to the conservancy and back</li>
-<li>you're never finding your way somewhere unfamiliar at night</li>
-<li>your accommodation, meals and game drives are arranged by people who know the area</li>
-<li>you're with a small group of women, and with hosts who are there all week</li>
+<li><a href="https://travel.state.gov/en/international-travel/travel-advisories/kenya.html" target="_blank" rel="noopener noreferrer">US State Department: Kenya travel advisory</a></li>
+<li><a href="https://www.cnbcafrica.com/2026/us-says-travelers-should-reconsider-kenya-trips-on-health-risks-amid-ebola-spread" target="_blank" rel="noopener noreferrer">Reuters via CNBC Africa: US says travelers should reconsider Kenya trips (October 2026)</a></li>
+<li><a href="https://nation.africa/kenya/health/us-raises-kenya-travel-advisory-over-ebola-as-nairobi-assures-visitors-5642618" target="_blank" rel="noopener noreferrer">Nation: US raises Kenya travel advisory over Ebola</a></li>
 </ul>
-
-<p><em>That's the freedom of it. You get to be somewhere extraordinary without having to hold all of it yourself.</em></p>
-
-<h2>If something goes wrong</h2>
-<p>Nobody likes thinking about it, but knowing the plan is what lets you relax.</p>
-<ul>
-<li>Nanyuki, the nearest town to Ol Pejeta, has private hospital care within about an hour</li>
-<li>get travel insurance that includes <strong>medical evacuation</strong>. it's worth having for any safari</li>
-<li>keep copies of your passport, visa and insurance separate from the originals, and on your phone</li>
-</ul>
-
-<h2>The health questions</h2>
-<ul>
-<li>see a travel doctor or clinic well before you go, about vaccinations and whether you need malaria prevention</li>
-<li>you may need a yellow fever certificate if you've recently been through certain countries, even on a layover. check with your doctor or airline</li>
-<li>Ol Pejeta is at high elevation, so go easy on your first day while your body adjusts</li>
-</ul>
-
-<h2>Practical safety tips for women traveling in Kenya</h2>
-<ul>
-<li>land in Nairobi at least a day early, so a delayed flight doesn't become a scramble</li>
-<li>share your itinerary with someone at home</li>
-<li>carry a little cash and lock the rest away</li>
-<li><em>trust your gut. it's usually right</em></li>
-</ul>
-
-<h2>If you're nervous, that's okay</h2>
-<p>[PLACEHOLDER: one true line from Ashley or Shannon about your own time in Kenya, or how you felt before your first trip there]</p>
-
-<p><strong>Being a little scared isn't a sign you shouldn't go. Sometimes it's a sign it matters.</strong></p>
-
-<p>If you have questions about the area, the cottages or the journey, <a href="/contact">reach out</a>. We're happy to talk it through before you book. And if you're working out how to bring it up at home, read <a href="/blog/how-to-talk-to-your-partner-about-a-solo-womens-retreat">how to talk to your partner about a solo retreat</a>. For the practical side, there's <a href="/blog/what-to-pack-for-a-safari-in-kenya">what to pack for a safari in Kenya</a> and <a href="/blog/a-day-on-safari-at-ol-pejeta">a day on safari at Ol Pejeta</a>.</p>
 ${kenyaCta}
     `.trim(),
   },
@@ -382,7 +381,6 @@ ${kenyaCta}
     readTime: "6 min read",
     theme: "the experience",
     destination: true,
-    draft: true,
     image: "/images/rhino conservation.jpg",
     body: `
 <p>If you've only seen a safari on a screen, you probably picture the animals. You don't picture the cold at dawn, or the hush in the vehicle when an elephant steps onto the track, or what it's like to sit in a circle with women you met three days ago while the light goes gold over the plains.</p>
@@ -395,7 +393,7 @@ ${kenyaCta}
 <h2>A day on safari at Ol Pejeta</h2>
 <p>No two days are the same, and nothing runs to the minute. But most days have a shape.</p>
 
-<p><strong>Before sunrise.</strong> [PLACEHOLDER: rough wake-up time for sunrise drives] Coffee or tea, every layer you brought, and out into the vehicles as the sky starts to change. Early morning is when a lot of animals are on the move, and the light is at its softest.</p>
+<p><strong>Before sunrise.</strong> Up around 5:30. Ol Pejeta sits almost on the equator, so the sun comes up at about the same time all year. Coffee or tea, every layer you brought, and out into the vehicles as the sky starts to change. Early morning is when a lot of animals are on the move, and the light is at its softest.</p>
 
 <p><strong>Morning.</strong> Back for breakfast. Then yoga, meditation or journaling looking out over the plains, and some days a workshop.</p>
 
@@ -417,8 +415,6 @@ ${kenyaCta}
 
 <p>Ol Pejeta is home to the last two northern white rhinos in the world, Najin and Fatu. Both are female, so the subspecies can't recover on its own, and scientists are working on ways to bring it back.</p>
 
-<p>[PLACEHOLDER: if you've seen them, one honest sentence about what it felt like]</p>
-
 <p>It's part of why we chose Ol Pejeta. The conservancy fees from our week go back into its conservation work.</p>
 
 <h2>What first-timers don't expect</h2>
@@ -428,13 +424,13 @@ ${kenyaCta}
 <li><strong>You won't see everything on every drive.</strong> Some drives are full of animals. Some are mostly sky. Both are worth it.</li>
 <li><strong>The altitude.</strong> You might feel more tired than usual on the first day. Go easy.</li>
 <li><strong>How much you'll feel.</strong> Being that close to something wild has a way of cracking things open. Don't be surprised if you cry at an elephant.</li>
-<li><strong>Being offline.</strong> [PLACEHOLDER: what wifi and phone signal are like at the cottages]</li>
+<li><strong>Being mostly offline.</strong> The cottages have basic wifi: enough to text home, not enough to scroll. If you need more, get a local Safaricom SIM or eSIM.</li>
 </ul>
 
 <h2>The rest of the week</h2>
 <p>Alongside the drives, there's a visit to Spinners and Weavers, a picnic out in the wild, a traditional Kenyan cooking class with our hosts, and long dinners that run late. And on the last morning, one more sunrise before the drive back to Nairobi.</p>
 
-<p>What happens after you get home matters too. We wrote about that in <a href="/blog/what-happens-after-a-retreat-integration">the integration no one talks about</a>. And if safety is on your mind, read <a href="/blog/is-kenya-safe-for-women-travelers">is Kenya safe for women travelers?</a></p>
+<p>What happens after you get home matters too. We wrote about that in <a href="/blog/what-happens-after-a-retreat-integration">the integration no one talks about</a>. And here's <a href="/blog/what-to-pack-for-a-safari-in-kenya">what to pack for a safari in Kenya</a>.</p>
 ${kenyaCta}
     `.trim(),
   },

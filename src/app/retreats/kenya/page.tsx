@@ -506,7 +506,7 @@ export default function KenyaPage() {
             practices: "yoga with the plains in view · somatic practice · daily movement",
           },
           {
-            img: "/images/Tanzania.jpeg",
+            img: "/images/Luxury safari vehicles built for comfort_.jpeg",
             title: "let the land be your mirror",
             body: (
               <>
