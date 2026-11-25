@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Women's Retreat Morocco 2026 — 7 Days in the Desert",
-  description: "Come home to yourself in the Moroccan desert. A 7-day women's retreat near Agadir — yoga, sound healing, ceremony, and deep sisterhood. Nov 29–Dec 5, 2026.",
+  title: "Women's Retreat Morocco: Sacred Sands",
+  description: "Sacred Sands, our 7-day women's retreat near Agadir, Morocco, is full for 2026. Join the list to hear first when we return to Morocco, or see Casa Amor in Spain and Into the Wild in Kenya.",
   keywords: [
     "women's retreat Morocco",
     "Morocco retreat 2026",
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Women's Retreat Morocco 2026 — Sacred Sands | ASHA Experiences",
-    description: "A 7-day women's retreat near Agadir, Morocco. Nov 29–Dec 5, 2026. Yoga, sound healing, desert adventures, and deep sisterhood. Limited spots.",
+    description: "Sacred Sands 2026 is full. Join the list to hear first when we return to Morocco.",
     url: "https://ashaexperiences.com/retreats/morocco",
     images: [{ url: "/images/morocco-hero-v2.png", width: 1920, height: 1080, alt: "Sacred Sands — Women's Retreat Morocco 2026" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Women's Retreat Morocco 2026 | ASHA Experiences",
-    description: "A 7-day women's retreat near Agadir, Morocco. Yoga, sound healing, desert adventures, and deep sisterhood. Nov 29–Dec 5, 2026.",
+    description: "Sacred Sands 2026 is full. Join the list to hear first when we return to Morocco.",
     images: ["/images/morocco-hero-v2.png"],
   },
 };
@@ -81,7 +81,7 @@ const jsonLd = {
     "@type": "Offer",
     "price": "3200",
     "priceCurrency": "USD",
-    "availability": "https://schema.org/LimitedAvailability",
+    "availability": "https://schema.org/SoldOut",
     "url": "https://ashaexperiences.com/retreats/morocco"
   }
 };
