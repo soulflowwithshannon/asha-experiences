@@ -40,6 +40,7 @@ export default function MoroccoPage() {
         defaultPicked: ["morocco"],
       }}
       closing="the desert will still be there. so will we."
+      compact
     />
   );
 }
