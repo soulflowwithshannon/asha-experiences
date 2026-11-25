@@ -21,6 +21,7 @@ const THEMES = ["the inner work", "before you go", "the experience"] as const;
 
 // Not a theme: a tag on top of one (post.destination), so a post keeps its theme label.
 const DESTINATIONS = "destinations";
+const hasDestinations = posts.some((p) => p.destination);
 
 export default function BlogIndex() {
   const [active, setActive] = useState<string | null>(null);
@@ -129,9 +130,12 @@ export default function BlogIndex() {
               {t}
             </button>
           ))}
-          <button onClick={() => setActive(DESTINATIONS)} style={chip(DESTINATIONS, active === DESTINATIONS)}>
-            {DESTINATIONS}
-          </button>
+          {/* only once a destination post is published (drafts don't count) */}
+          {hasDestinations && (
+            <button onClick={() => setActive(DESTINATIONS)} style={chip(DESTINATIONS, active === DESTINATIONS)}>
+              {DESTINATIONS}
+            </button>
+          )}
         </div>
       </div>
 
@@ -163,10 +167,10 @@ export default function BlogIndex() {
                         {post.readTime}
                       </span>
                     </div>
-                    <h3 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(20px, 1.8vw, 24px)", fontWeight: 700, color: "var(--color-text-headline)", lineHeight: 1.2 }}>
+                    <h3 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(20px, 1.8vw, 24px)", fontWeight: 700, color: "var(--color-text-headline)", lineHeight: 1.1 }}>
                       {post.title}
                     </h3>
-                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13.5, color: "var(--color-text-body)", lineHeight: 1.65, flex: 1 }}>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13.5, color: "var(--color-text-body)", lineHeight: 1.5, flex: 1 }}>
                       {post.summary ?? post.description}
                     </p>
                     <div style={{ paddingTop: 14, borderTop: "0.5px solid var(--color-border)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -237,7 +241,7 @@ export default function BlogIndex() {
                   fontSize: "clamp(28px, 3vw, 44px)",
                   fontWeight: 700,
                   color: "var(--color-text-headline)",
-                  lineHeight: 1.1,
+                  lineHeight: 1.05,
                   marginBottom: 20,
                 }}>
                   {hero.title}
@@ -246,7 +250,7 @@ export default function BlogIndex() {
                   fontFamily: "var(--font-dm-sans)",
                   fontSize: 14,
                   color: "var(--color-text-body)",
-                  lineHeight: 1.8,
+                  lineHeight: 1.55,
                 }}>
                   {hero.description}
                 </p>
@@ -324,12 +328,12 @@ export default function BlogIndex() {
                   fontSize: "clamp(24px, 2.8vw, 38px)",
                   fontWeight: 700,
                   color: "var(--color-text-headline)",
-                  lineHeight: 1.15,
+                  lineHeight: 1.08,
                   marginBottom: 16,
                 }}>
                   {second.title}
                 </h2>
-                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", lineHeight: 1.75 }}>
+                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "var(--color-text-body)", lineHeight: 1.55 }}>
                   {second.description}
                 </p>
               </div>
@@ -406,11 +410,11 @@ export default function BlogIndex() {
                     fontSize: "clamp(20px, 1.8vw, 24px)",
                     fontWeight: 700,
                     color: "var(--color-text-headline)",
-                    lineHeight: 1.2,
+                    lineHeight: 1.1,
                   }}>
                     {post.title}
                   </h3>
-                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13.5, color: "var(--color-text-body)", lineHeight: 1.65, flex: 1 }}>
+                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13.5, color: "var(--color-text-body)", lineHeight: 1.5, flex: 1 }}>
                     {post.summary ?? post.description}
                   </p>
                   <div style={{
