@@ -55,13 +55,14 @@ export async function POST(request: NextRequest) {
       }
 
       // tell us straight away, so an abandoned quiz is still a lead we know about
-      await resend.emails.send({
+      const { error: startError } = await resend.emails.send({
         from: "ASHA Experiences <connect@ashaexperiences.com>",
         to: ["connect@ashaexperiences.com"],
         replyTo: email,
         subject: `quiz started — ${name || email}`,
         text: `${name || "(no name)"} <${email}> just started the quiz.\n\nyou'll get a second email with her result if she finishes.`,
       });
+      if (startError) console.error("quiz-submit: 'started' email failed", startError.name, startError.message);
 
       return NextResponse.json({ success: true });
     }
@@ -83,7 +84,8 @@ export async function POST(request: NextRequest) {
     }
 
     // 2. Send her the result
-    await resend.emails.send({
+    // (Resend returns errors rather than throwing, so each send is checked and logged)
+    const { error: resultError } = await resend.emails.send({
       from: "ASHA Experiences <connect@ashaexperiences.com>",
       to: [email],
       replyTo: "connect@ashaexperiences.com",
@@ -112,14 +114,17 @@ if you have questions, just reply to this email. it comes straight to us — Ash
       `,
     });
 
+    if (resultError) console.error("quiz-submit: result email to her failed", resultError.name, resultError.message);
+
     // 3. Tell us a lead came in
-    await resend.emails.send({
+    const { error: notifyError } = await resend.emails.send({
       from: "ASHA Experiences <connect@ashaexperiences.com>",
       to: ["connect@ashaexperiences.com"],
       replyTo: email,
       subject: `quiz completed — ${r.title} — ${name || email}`,
       text: `name: ${name || "(not given)"}\nemail: ${email}\nresult: ${r.title}\nmatched retreat: ${r.retreat}\n\nshe has been sent her result and added to the audience.`,
     });
+    if (notifyError) console.error("quiz-submit: notification email failed", notifyError.name, notifyError.message);
 
     return NextResponse.json({ success: true });
   } catch (e) {

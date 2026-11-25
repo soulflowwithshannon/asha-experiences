@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
     const body = String(message).slice(0, 4000);
     const from = String(page || "").slice(0, 200);
 
-    await resend.emails.send({
+    const { error: sendError } = await resend.emails.send({
       from: "ASHA Experiences <connect@ashaexperiences.com>",
       to: ["connect@ashaexperiences.com"],
       replyTo: email,
@@ -37,6 +37,13 @@ export async function POST(request: NextRequest) {
         </div>
       `,
     });
+
+    // Resend returns errors rather than throwing: without this check a failed
+    // send looks like success and the message is lost
+    if (sendError) {
+      console.error("chat-message: email send failed", sendError.name, sendError.message);
+      return NextResponse.json({ error: "That didn't send. Try again, or email us directly." }, { status: 500 });
+    }
 
     return NextResponse.json({ success: true });
   } catch {

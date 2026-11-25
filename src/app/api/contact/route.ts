@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 });
     }
 
-    await resend.emails.send({
+    const { error: sendError } = await resend.emails.send({
       from: "ASHA Experiences <connect@ashaexperiences.com>",
       to: ["connect@ashaexperiences.com"],
       replyTo: email,
@@ -33,6 +33,13 @@ export async function POST(request: NextRequest) {
         </div>
       `,
     });
+
+    // Resend returns errors rather than throwing: without this check a failed
+    // send looks like success and the message is lost
+    if (sendError) {
+      console.error("contact: email send failed", sendError.name, sendError.message);
+      return NextResponse.json({ error: "Failed to send message. Please try again." }, { status: 500 });
+    }
 
     return NextResponse.json({ success: true });
   } catch {

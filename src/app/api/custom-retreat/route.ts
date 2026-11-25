@@ -31,13 +31,14 @@ export async function POST(request: NextRequest) {
         }
       }
 
-      await resend.emails.send({
+      const { error: startError } = await resend.emails.send({
         from: "ASHA Experiences <connect@ashaexperiences.com>",
         to: ["connect@ashaexperiences.com"],
         replyTo: email,
         subject: `custom retreat — started — ${name || email}`,
         text: `${name || "someone"} started a custom retreat enquiry.\nemail: ${email}`,
       });
+      if (startError) console.error("custom-retreat: 'started' email failed", startError.name, startError.message);
 
       return NextResponse.json({ success: true });
     }
@@ -60,7 +61,7 @@ export async function POST(request: NextRequest) {
 
     const subjectBits = [headcount && `${headcount} women`, where, name].filter(Boolean).join(" — ");
 
-    await resend.emails.send({
+    const { error: sendError } = await resend.emails.send({
       from: "ASHA Experiences <connect@ashaexperiences.com>",
       to: ["connect@ashaexperiences.com"],
       replyTo: email,
@@ -81,6 +82,13 @@ export async function POST(request: NextRequest) {
         </div>
       `,
     });
+
+    // Resend returns errors rather than throwing: without this check a failed
+    // send looks like success and the message is lost
+    if (sendError) {
+      console.error("custom-retreat: email send failed", sendError.name, sendError.message);
+      return NextResponse.json({ error: "That didn't send. Try again, or email us directly." }, { status: 500 });
+    }
 
     return NextResponse.json({ success: true });
   } catch {
