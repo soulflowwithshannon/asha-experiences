@@ -64,6 +64,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.75,
     },
+    {
+      url: "https://ashaexperiences.com/terms",
+      lastModified: new Date("2026-11-25"),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
     ...blogPosts,
   ];
 }

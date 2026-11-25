@@ -95,6 +95,10 @@ export default function Footer() {
         }}
       >
         © 2026 ASHA Experiences LLC
+        <span aria-hidden="true" style={{ margin: "0 8px" }}>·</span>
+        <Link href="/terms" style={{ color: "inherit", textDecoration: "none" }}>
+          terms &amp; conditions
+        </Link>
       </p>
 
       <style>{`
