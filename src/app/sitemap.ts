@@ -70,6 +70,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
+    {
+      url: "https://ashaexperiences.com/privacy",
+      lastModified: new Date("2026-11-25"),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
     ...blogPosts,
   ];
 }

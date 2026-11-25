@@ -99,6 +99,10 @@ export default function Footer() {
         <Link href="/terms" style={{ color: "inherit", textDecoration: "none" }}>
           terms &amp; conditions
         </Link>
+        <span aria-hidden="true" style={{ margin: "0 8px" }}>·</span>
+        <Link href="/privacy" style={{ color: "inherit", textDecoration: "none" }}>
+          privacy policy
+        </Link>
       </p>
 
       <style>{`
