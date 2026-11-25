@@ -519,7 +519,7 @@ export default function KenyaPage() {
             practices: "sunrise game drives · lion trackers · golden hour · open plains",
           },
           {
-            img: "/images/ReturnToLove circle.jpg",
+            img: "/images/Becoming Her candles.JPG",
             title: "go underneath the surface",
             body: (
               <>
@@ -561,7 +561,7 @@ export default function KenyaPage() {
             </div>
             {/* Large middle — spans 2 rows */}
             <div style={{ position: "relative", gridRow: "span 2", overflow: "hidden", borderRadius: 4 }}>
-              <Image src="/images/rhino.png" alt="Rhino" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="40vw" />
+              <Image src="/images/elephant 3.jpeg" alt="Elephant" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="40vw" />
             </div>
             {/* Top right */}
             <div style={{ position: "relative", overflow: "hidden", borderRadius: 4 }}>
@@ -573,7 +573,7 @@ export default function KenyaPage() {
             </div>
             {/* Bottom right */}
             <div style={{ position: "relative", overflow: "hidden", borderRadius: 4 }}>
-              <Image src="/images/elephant 3.jpeg" alt="Elephant" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="30vw" />
+              <Image src="/images/rhino.png" alt="Rhino" fill style={{ objectFit: "cover", objectPosition: "center" }} sizes="30vw" />
             </div>
           </div>
           <style>{`@media(max-width:768px){.mosaic-grid{grid-template-columns:1fr 1fr!important;grid-template-rows:200px 200px 200px!important}.mosaic-grid>div:first-child{grid-row:span 1!important}}`}</style>
@@ -583,8 +583,10 @@ export default function KenyaPage() {
 
       {/* SECTION 3 — WHERE WE'RE STAYING */}
       <section style={{ background: "var(--color-bg-surface)", padding: "80px 48px" }} className="stay-section">
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center", maxWidth: 1280, margin: "0 auto" }} className="stay-grid">
-          <div className="stay-video" style={{ position: "relative", borderRadius: 8, overflow: "hidden", aspectRatio: "4/5" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 56, alignItems: "stretch", maxWidth: 1180, margin: "0 auto" }} className="stay-grid">
+          {/* Desktop: the video matches the height of the text beside it (no photo
+              under the text any more). Phone: back to a 4/5 box above the text. */}
+          <div className="stay-video" style={{ position: "relative", borderRadius: 8, overflow: "hidden", minHeight: 420 }}>
             <video
               autoPlay
               muted
@@ -595,7 +597,7 @@ export default function KenyaPage() {
               <source src="/videos/Ol Pejeta Sizzle Reel.mp4" type="video/mp4" />
             </video>
           </div>
-          <div className="stay-copy" style={{ maxWidth: 512, display: "flex", flexDirection: "column", gap: 32 }}>
+          <div className="stay-copy" style={{ maxWidth: 512, display: "flex", flexDirection: "column", justifyContent: "center", gap: 32 }}>
             <div>
               <FadeIn><p className="eyebrow-accent" style={{ marginBottom: 16, fontWeight: 700 }}>OL PEJETA CONSERVANCY</p></FadeIn>
               <FadeIn delay={0.1}>
@@ -622,16 +624,10 @@ export default function KenyaPage() {
                 </div>
               </FadeIn>
             </div>
-            {/* Photo below text */}
-            <FadeIn delay={0.3}>
-              <div style={{ position: "relative", borderRadius: 8, overflow: "hidden", aspectRatio: "16/9" }} className="ol-pejeta-photo">
-                <Image src="/images/kenya-elephant-plains.jpeg" alt="Elephants on the Ol Pejeta plains" fill style={{ objectFit: "cover", objectPosition: "50% 80%" }} sizes="(max-width: 768px) 90vw, 512px" />
-              </div>
-            </FadeIn>
-            <style>{`@media(max-width:768px){.stay-section{padding:60px 16px!important}.stay-copy{width:100%!important;max-width:100%!important}.ol-pejeta-photo{aspect-ratio:4/3!important;width:100%;margin:0 auto}}`}</style>
+            <style>{`@media(max-width:768px){.stay-section{padding:60px 16px!important}.stay-copy{width:100%!important;max-width:100%!important}}`}</style>
           </div>
         </div>
-        <style>{`@media(max-width:768px){.stay-grid{grid-template-columns:1fr!important}.stay-video{margin:0 auto;width:100%}.stay-copy{margin:0 auto;width:100%;padding:24px 0;text-align:center}.stay-copy p,.stay-copy h2,.stay-copy div,.stay-copy span{text-align:center}.stay-copy h2{font-size:26px!important;white-space:nowrap}}`}</style>
+        <style>{`@media(max-width:768px){.stay-grid{grid-template-columns:1fr!important}.stay-video{margin:0 auto;width:100%;aspect-ratio:4/5;min-height:0!important}.stay-copy{margin:0 auto;width:100%;padding:24px 0;text-align:center}.stay-copy p,.stay-copy h2,.stay-copy div,.stay-copy span{text-align:center}.stay-copy h2{font-size:26px!important;white-space:nowrap}}`}</style>
       </section>
 
       {/* SECTION 4 — ARC OF THE WEEK (hero "see the week" scrolls here) */}
