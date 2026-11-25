@@ -66,9 +66,14 @@ const sections: { id: string; title: string; body: ReactNode }[] = [
     title: "5. Transfers",
     body: (
       <>
-        <p>If you can no longer attend, you may transfer your payment to another ASHA retreat. Contact us at {mail} before your retreat&apos;s final payment date to request a transfer.</p>
-        <p>Transfers depend on availability. If the new retreat costs more, you&apos;ll pay the difference. If it costs less, the difference is not refunded.</p>
-        <p>You may also transfer your spot to another woman, with our approval. She will need to agree to these terms and complete our intake and waiver.</p>
+        {/* Matches the Kenya page FAQ ("if your plans change"). Keep the two in sync. */}
+        <p>If your plans change, you can transfer your spot:</p>
+        <ul style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, lineHeight: 1.75, color: "var(--color-text-body)", paddingLeft: 20, margin: "0 0 14px" }}>
+          <li>to another woman, or</li>
+          <li>to a future ASHA retreat within 12 months</li>
+        </ul>
+        <p>up to 4 months before the retreat starts. Just email us at {mail}.</p>
+        <p>Transfers to a future retreat depend on availability. If the new retreat costs more, you&apos;ll pay the difference. If it costs less, the difference is not refunded.</p>
       </>
     ),
   },
