@@ -50,7 +50,7 @@ const sections: { id: string; title: string; body: ReactNode }[] = [
           <>the journal signup and retreat waitlists: your first name and email</>,
           <>custom retreat enquiries: your name, email, phone number, where you&apos;re based, and the details you share about your group, dates, budget and plans</>,
         ])}
-        <p><strong>When you book.</strong> Payments are handled by Stripe. We see your name, email, billing details and payment status, but we never see or store your full card number. Before you travel, we also ask you to complete an intake form and a liability waiver. These can include health information you choose to share with us, such as injuries, allergies, pregnancy or dietary needs, so we can keep you safe. [PLACEHOLDER: which tool the intake form and waiver are collected in, e.g. Google Forms, Jotform, DocuSign]</p>
+        <p><strong>When you book.</strong> Payments are handled by Stripe. We see your name, email, billing details and payment status, but we never see or store your full card number. Before you travel, we also ask you to complete an intake form and a liability waiver. These can include health information you choose to share with us, such as injuries, allergies, pregnancy or dietary needs, so we can keep you safe.</p>
         <p><strong>Automatically, when you visit.</strong> Like most websites, we collect information about how the site is used: pages visited, how you arrived, your browser and device type, and your approximate location based on your IP address. See <a href="#cookies">Cookies and analytics</a> below.</p>
       </>
     ),
@@ -91,7 +91,7 @@ const sections: { id: string; title: string; body: ReactNode }[] = [
     title: "5. Cookies and analytics",
     body: (
       <>
-        <p>Our website uses cookies and similar technologies from Google Analytics and PostHog to count visits and see which pages are useful. Vercel Speed Insights measures how fast pages load and doesn&apos;t use cookies. [PLACEHOLDER: confirm whether session recording is turned on in PostHog. If it is, say so here.]</p>
+        <p>Our website uses cookies and similar technologies from Google Analytics and PostHog to count visits and see which pages are useful. Vercel Speed Insights measures how fast pages load and doesn&apos;t use cookies. PostHog may also record how pages are used, such as clicks and scrolling, so we can see where the site is confusing. It doesn&apos;t capture what you type into forms.</p>
         <p>You can block or delete cookies in your browser settings, and you can opt out of Google Analytics with Google&apos;s <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">opt-out browser add-on</a>. The site still works if you do.</p>
       </>
     ),
@@ -104,7 +104,15 @@ const sections: { id: string; title: string; body: ReactNode }[] = [
   {
     id: "retention",
     title: "7. How long we keep it",
-    body: <p>We keep your information only as long as we need it for the reasons above. [PLACEHOLDER: how long you keep enquiries, booking records and intake/waiver forms, e.g. &ldquo;booking and payment records for 7 years for tax purposes; intake forms for 12 months after your retreat&rdquo;]</p>,
+    body: (
+      <>
+        <p>We keep your information only as long as we need it for the reasons above:</p>
+        {ul([
+          <>booking and payment records: 7 years, for tax purposes</>,
+          <>intake forms: only until your retreat is complete</>,
+        ])}
+      </>
+    ),
   },
   {
     id: "security",
