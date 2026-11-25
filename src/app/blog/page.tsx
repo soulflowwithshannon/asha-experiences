@@ -5,9 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { posts } from "@/lib/blog";
 import QuizCTA from "@/components/QuizCTA";
+import EmailSignup from "@/components/EmailSignup";
 
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString("en-US", {
+    timeZone: "UTC", // dates are plain YYYY-MM-DD; without this they show a day early in US time
     month: "long",
     year: "numeric",
   });
@@ -17,9 +19,15 @@ const [hero, second, ...grid] = posts;
 
 const THEMES = ["the inner work", "before you go", "the experience"] as const;
 
+// Not a theme: a tag on top of one (post.destination), so a post keeps its theme label.
+const DESTINATIONS = "destinations";
+
 export default function BlogIndex() {
   const [active, setActive] = useState<string | null>(null);
-  const filtered = active ? posts.filter((p) => p.theme === active) : [];
+  const filtered =
+    active === DESTINATIONS ? posts.filter((p) => p.destination)
+    : active ? posts.filter((p) => p.theme === active)
+    : [];
 
   const chip = (label: string, on: boolean): React.CSSProperties => ({
     padding: "9px 18px",
@@ -55,7 +63,11 @@ export default function BlogIndex() {
             <div style={{ flex: 1, height: "0.5px", background: "var(--color-border)" }} />
           </div>
 
-          <h1 style={{
+          {/* The one H1 on the page: "words for women" plus the tagline, looking
+              exactly as before. The keyword line sits directly under it. */}
+          <h1 style={{ textAlign: "center" }}>
+          <span style={{
+            display: "block",
             fontFamily: "var(--font-cormorant)",
             fontSize: "clamp(52px, 9vw, 120px)",
             fontWeight: 300,
@@ -64,8 +76,9 @@ export default function BlogIndex() {
             textAlign: "center",
           }}>
             words for women
-          </h1>
-          <p style={{
+          </span>
+          <span style={{
+            display: "block",
             fontFamily: "var(--font-cormorant)",
             fontSize: "clamp(26px, 4.5vw, 60px)",
             fontWeight: 300,
@@ -85,7 +98,8 @@ export default function BlogIndex() {
             }}>
               on the way back to themselves
             </span>
-          </p>
+          </span>
+          </h1>
 
           <p style={{
             fontFamily: "var(--font-dm-sans)",
@@ -98,7 +112,8 @@ export default function BlogIndex() {
             maxWidth: 520,
             margin: "28px auto 0",
           }}>
-            Honest writing about retreats, healing, and what it actually feels like to choose yourself.
+            {/* H1 subhead, option 1 of 3 (see summary) */}
+            a women&apos;s retreat journal: healing, solo travel, and finding your way back to yourself
           </p>
         </div>
       </section>
@@ -114,6 +129,9 @@ export default function BlogIndex() {
               {t}
             </button>
           ))}
+          <button onClick={() => setActive(DESTINATIONS)} style={chip(DESTINATIONS, active === DESTINATIONS)}>
+            {DESTINATIONS}
+          </button>
         </div>
       </div>
 
@@ -145,9 +163,12 @@ export default function BlogIndex() {
                         {post.readTime}
                       </span>
                     </div>
-                    <h3 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(20px, 1.8vw, 24px)", fontWeight: 700, color: "var(--color-text-headline)", lineHeight: 1.2, flex: 1 }}>
+                    <h3 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(20px, 1.8vw, 24px)", fontWeight: 700, color: "var(--color-text-headline)", lineHeight: 1.2 }}>
                       {post.title}
                     </h3>
+                    <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13.5, color: "var(--color-text-body)", lineHeight: 1.65, flex: 1 }}>
+                      {post.summary ?? post.description}
+                    </p>
                     <div style={{ paddingTop: 14, borderTop: "0.5px solid var(--color-border)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                       <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "var(--color-text-muted)" }}>
                         {formatDate(post.date)}
@@ -326,6 +347,8 @@ export default function BlogIndex() {
         </Link>
       </section>
 
+      <EmailSignup variant="band" source="journal-index" />
+
       {/* ── Grid — 3 columns with images ── */}
       <section style={{ maxWidth: 1200, margin: "48px auto 120px", padding: "0 48px" }}>
         <div style={{
@@ -384,10 +407,12 @@ export default function BlogIndex() {
                     fontWeight: 700,
                     color: "var(--color-text-headline)",
                     lineHeight: 1.2,
-                    flex: 1,
                   }}>
                     {post.title}
                   </h3>
+                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13.5, color: "var(--color-text-body)", lineHeight: 1.65, flex: 1 }}>
+                    {post.summary ?? post.description}
+                  </p>
                   <div style={{
                     paddingTop: 14,
                     borderTop: "0.5px solid var(--color-border)",

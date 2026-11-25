@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getPost, getAllSlugs } from "@/lib/blog";
 import QuizCTA from "@/components/QuizCTA";
+import EmailSignup from "@/components/EmailSignup";
 
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -16,25 +17,31 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) return {};
+  const title = post.metaTitle ?? post.title;
+  // og/twitter titles aren't templated, so add the suffix the <title> tag gets
+  const socialTitle = `${title} | ASHA Experiences`;
   return {
-    title: post.title,
+    title,
     description: post.description,
     alternates: {
       canonical: `/blog/${post.slug}`,
     },
+    // drafts can be previewed at their URL but stay out of search
+    ...(post.draft ? { robots: { index: false, follow: false } } : {}),
     openGraph: {
-      title: post.title,
+      title: socialTitle,
       description: post.description,
       url: `https://ashaexperiences.com/blog/${post.slug}`,
       type: "article",
       publishedTime: post.date,
+      ...(post.updated ? { modifiedTime: post.updated } : {}),
       images: post.image
         ? [{ url: post.image, width: 1200, height: 630, alt: post.title }]
         : undefined,
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title: socialTitle,
       description: post.description,
       images: post.image ? [post.image] : undefined,
     },
@@ -43,6 +50,7 @@ export async function generateMetadata({
 
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString("en-US", {
+    timeZone: "UTC", // dates are plain YYYY-MM-DD; without this they show a day early in US time
     month: "long",
     day: "numeric",
     year: "numeric",
@@ -66,7 +74,7 @@ export default async function BlogPost({
         headline: post.title,
         description: post.description,
         datePublished: post.date,
-        dateModified: post.date,
+        dateModified: post.updated ?? post.date,
         url: `https://ashaexperiences.com/blog/${post.slug}`,
         mainEntityOfPage: `https://ashaexperiences.com/blog/${post.slug}`,
         articleSection: post.theme,
@@ -148,7 +156,7 @@ export default async function BlogPost({
               color: "var(--color-text-muted)",
             }}
           >
-            {formatDate(post.date)}
+            {post.updated ? `updated ${formatDate(post.updated)}` : formatDate(post.date)}
           </span>
         </div>
 
@@ -227,6 +235,7 @@ export default async function BlogPost({
 
       {/* Closing CTA */}
       <QuizCTA />
+      <EmailSignup variant="end" source={`post:${post.slug}`} />
 
       {/* Back link */}
       <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 32px 64px" }}>

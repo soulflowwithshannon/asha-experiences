@@ -1,19 +1,65 @@
+import { SPOTS_LEFT } from "@/lib/kenya";
+
 export type Post = {
   slug: string;
   title: string;
+  /** Overrides `title` in the <title> tag and og:title. Keep under ~40 characters: the "| ASHA Experiences" suffix is added after it. */
+  metaTitle?: string;
+  /** Meta description, and the italic block under the post title. */
   description: string;
+  /** One or two sentences under the title on journal cards. Under 160 characters. */
+  summary?: string;
   date: string;
+  /** Set when a post is refreshed: shown as "updated …" and used as dateModified. */
+  updated?: string;
   readTime: string;
   theme: string;
+  /** Also appears under the "destinations" filter chip on /blog. */
+  destination?: boolean;
+  /**
+   * Drafts render at their URL (noindex) so they can be previewed, but are
+   * left out of the journal index and the sitemap. Delete the flag to publish.
+   */
+  draft?: boolean;
   image?: string;
   body: string;
 };
 
-export const posts: Post[] = [
+/* ---------- retreat CTAs ----------
+   The dated, priced part of each destination post lives here, not in the
+   post bodies, so the posts stay evergreen. Update these after the retreat
+   (or when the price or payment plan changes) and every post follows. */
+
+// Same link as MeetUs.tsx (a client module, so it can't be imported here).
+const CALENDAR_URL = "https://calendar.app.google/Yt1VUQGEuhhEipt59";
+
+const kenyaCta = `
+<hr />
+
+<h2>Into the Wild: Kenya, 2027</h2>
+<p>Our next safari retreat is <strong>Into the Wild</strong>, at Ol Pejeta Conservancy from <strong>November 28 to December 4, 2027</strong>. Seven days, no more than ten women, and both of us, Ashley and Shannon, on the ground with you all week.</p>
+<ul>
+<li><strong>$6,900</strong> for a shared cottage${SPOTS_LEFT ? `, with <strong>${SPOTS_LEFT} of 10 spots left</strong>` : ""}</li>
+<li>hold your spot with a <strong>$1,000 deposit</strong>. book by December 31, 2026 and the rest is 11 monthly payments of $537. after that, we split it evenly over the months that are left</li>
+<li>all payments are non-refundable</li>
+</ul>
+<p><a href="/retreats/kenya">See the week and reserve your spot</a>, or <a href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">book a call with us</a> first if you'd rather talk it through.</p>
+`;
+
+const spainCta = `
+<hr />
+
+<h2>Casa Amor: Andalusia, June 2027</h2>
+<p>Casa Amor is planned for <strong>June 15 to 20, 2027</strong>. It isn't open for booking yet, so the best way to get a spot is to be on the list. <a href="/retreats/spain-waitlist">Join the waitlist</a> and you'll hear first when it opens.</p>
+<p>Want to talk it through first? <a href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">Book a call with us</a>.</p>
+`;
+
+const allPosts: Post[] = [
   {
     slug: "10-signs-youre-ready-for-a-womens-retreat",
     title: "10 signs you're ready for a women's retreat",
     description: "You've been putting everyone else first for so long you can't remember what you actually want. Sound familiar? Here are 10 signs it might be time.",
+    summary: "Always the one holding it all together? Ten honest signs it might be time for a women's retreat, and who actually comes.",
     date: "2026-08-18",
     readTime: "6 min read",
     theme: "the inner work",
@@ -70,10 +116,14 @@ export const posts: Post[] = [
     `.trim(),
   },
   {
-    slug: "womens-retreats-2026-ultimate-guide",
+    // was womens-retreats-2026-ultimate-guide (301 in next.config.ts)
+    slug: "womens-retreats-2027-ultimate-guide",
     title: "Women's retreats 2027: the ultimate guide to finding the right one",
-    description: "There are hundreds of women's retreats out there. Here's how to cut through the noise — what to look for, what to avoid, and how to find the one that's actually right for you.",
+    metaTitle: "Women's retreats 2027: the ultimate guide",
+    description: "Looking for a women's retreat in 2027? How to cut through the noise: what to look for, what to avoid, and how to find the one that's right for you.",
+    summary: "How to choose a women's retreat in 2027: what to look for, what to be wary of, and the questions to ask before you book.",
     date: "2026-11-24",
+    updated: "2026-11-25",
     readTime: "7 min read",
     theme: "before you go",
     image: "/images/women laying down.jpeg",
@@ -136,13 +186,20 @@ export const posts: Post[] = [
 
 <p><strong>Adventure retreats</strong> — combine meaningful experience (safari, hiking, cultural immersion) with inner work. The setting becomes part of the medicine.</p>
 
-<h2>What makes ASHA different</h2>
-<p>We run small, intentional retreats for women in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a>. Every retreat includes:</p>
+<h2>ASHA women's retreats in 2027</h2>
+<p>We run small, intentional retreats for women. Here's what's coming up:</p>
 <ul>
-<li>Groups of 10–14 women maximum</li>
+<li><strong><a href="/retreats/spain-waitlist">Casa Amor, Spain</a></strong>: five nights in Andalusia, between the countryside of Vejer de la Frontera and the beaches of the Costa de la Luz. Planned for June 15 to 20, 2027. The waitlist is open now.</li>
+<li><strong><a href="/retreats/kenya">Into the Wild, Kenya</a></strong>: seven days on safari at Ol Pejeta Conservancy, November 28 to December 4, 2027. No more than ten women. Booking now.</li>
+<li><strong><a href="/retreats/morocco">Sacred Sands, Morocco</a></strong>: dates for the next one aren't set yet. Leave your name on the page and we'll tell you first.</li>
+<li><strong><a href="/retreats/custom">A custom retreat</a></strong>: designed around you and your group.</li>
+</ul>
+<p>Every ASHA retreat has:</p>
+<ul>
+<li>Small groups, so you're known by name, not lost in a crowd</li>
 <li>Skilled facilitation in yoga, sound healing, somatic practices, and ceremony</li>
-<li>All accommodation, meals, experiences, and transfers included</li>
-<li>A clear arc — from arrival to integration — designed with intention</li>
+<li>Accommodation, meals, experiences, and ground transfers included [PLACEHOLDER: confirm this holds for Casa Amor]</li>
+<li>A clear arc, from arrival to integration, designed with intention</li>
 </ul>
 
 <hr />
@@ -151,9 +208,294 @@ export const posts: Post[] = [
     `.trim(),
   },
   {
+    // target search: "what to pack for a safari in Kenya"
+    slug: "what-to-pack-for-a-safari-in-kenya",
+    title: "What to pack for a safari in Kenya (when it's also a retreat)",
+    metaTitle: "What to pack for a safari in Kenya",
+    description: "What to pack for a safari in Kenya when it's also a retreat: layers for cold sunrise drives, what to leave at home, and the small things women forget.",
+    summary: "Layers for cold sunrise drives, the one thing Kenya won't let you bring in, and everything you can happily leave at home.",
+    date: "2026-11-25",
+    readTime: "6 min read",
+    theme: "before you go",
+    destination: true,
+    draft: true,
+    image: "/images/kenya-safari-jeep.JPG",
+    body: `
+<p>Most packing lists for a safari in Kenya are written for people who'll spend the whole trip in a vehicle behind a long lens. This one is for a safari that's also a retreat: sunrise game drives, yes, but also yoga looking out over the plains, women's circles, long dinners, and a lot of time sitting still.</p>
+
+<p>Here's what to pack for a safari in Kenya, and what you can leave behind.</p>
+
+<h2>First, the weather surprises everyone</h2>
+<p>People picture Africa and pack for heat. But Ol Pejeta sits high up, near the base of Mount Kenya, and the air is cool and dry. Midday can be warm in the sun. Early mornings and evenings can be properly cold, especially in an open vehicle at sunrise.</p>
+
+<p>Late November and early December can also bring the tail end of Kenya's short rains, so plan for a shower or two.</p>
+
+<p><strong>So the answer is layers. Always layers.</strong></p>
+
+<h2>What to pack for a safari in Kenya: the list</h2>
+
+<p><strong>For game drives</strong></p>
+<ul>
+<li>a warm fleece or a light down jacket for sunrise and sunset drives</li>
+<li>a light rain jacket that packs small</li>
+<li>a scarf or buff, for the cold and for the dust</li>
+<li>a hat with a brim and good sunglasses. you're close to the equator, and the sun is stronger than it feels</li>
+<li>neutral colors, like khaki, olive, sand and soft browns. they hide the dust and blend in around wildlife</li>
+<li>binoculars, if you have them [PLACEHOLDER: confirm whether binoculars are provided in the vehicles]</li>
+</ul>
+
+<p><strong>For the retreat side</strong></p>
+<ul>
+<li>comfortable clothes you can move in for yoga and gentle practice</li>
+<li>something warm and soft for evening circles around the fire</li>
+<li>a journal, and a pen you actually like writing with</li>
+<li>an outfit or two for dinners that makes you feel good. nothing fancy</li>
+<li>[PLACEHOLDER: are yoga mats provided, or should she bring a travel mat?]</li>
+</ul>
+
+<p><strong>For your body</strong></p>
+<ul>
+<li>high SPF sunscreen, and lip balm with SPF</li>
+<li>a good moisturizer. the dry air is real</li>
+<li>any medication you take, in your carry-on, with a few extra days' worth</li>
+<li>closed, comfortable shoes for walking, plus sandals for around the cottages</li>
+<li>a reusable water bottle</li>
+</ul>
+
+<p><strong>The practical things</strong></p>
+<ul>
+<li>your passport, valid for at least six months beyond your travel dates</li>
+<li>your approved Kenyan eVisa, printed and saved on your phone</li>
+<li>a plug adapter. Kenya uses the three-pin, UK-style plug (Type G)</li>
+<li>a power bank and your charger</li>
+<li>some cash for gratuities for staff and guides. we suggest $100–$200 in total, and it goes a long way</li>
+<li>a copy of your travel insurance details</li>
+</ul>
+
+<h2>The one thing not to pack</h2>
+<p>Plastic bags. Kenya banned single-use plastic bags in 2017, and that includes the ones so many of us use for shoes and toiletries. Pack with fabric pouches or packing cubes instead.</p>
+
+<h2>What you can leave at home</h2>
+<ul>
+<li>the full safari costume. you don't need to look like a documentary host</li>
+<li>heavy hiking boots. most of the week happens in safari vehicles, on the verandah and in circle</li>
+<li>a hair dryer [PLACEHOLDER: confirm what the cottages provide]</li>
+<li>the version of you who needs a plan for every outfit</li>
+</ul>
+
+<h2>A note on bags</h2>
+<p>A lot of Kenya safaris use small bush planes with strict luggage limits. Ours doesn't: group transport from Nairobi to Ol Pejeta is by road. [PLACEHOLDER: any bag size or number limits for the group transport]</p>
+
+<p>Once you're booked, you'll get a full pre-travel guide from us, so you won't be working this out alone.</p>
+
+<h2>The real packing list</h2>
+<p>Beyond the layers and the sunscreen, the most useful thing you can bring is room. Room in your days that you don't rush to fill, and room in yourself for something to shift.</p>
+
+<p>Still deciding? These might help: <a href="/blog/is-kenya-safe-for-women-travelers">is Kenya safe for women travelers?</a>, <a href="/blog/a-day-on-safari-at-ol-pejeta">a day on safari at Ol Pejeta</a>, and <a href="/blog/going-on-a-womens-retreat-alone-heres-what-happened">going on a women's retreat alone</a>.</p>
+${kenyaCta}
+    `.trim(),
+  },
+  {
+    // target search: "is Kenya safe for women travelers". Modeled on the retired Mexico safety post.
+    slug: "is-kenya-safe-for-women-travelers",
+    title: "Is Kenya safe for women travelers? (honest answer)",
+    metaTitle: "Is Kenya safe for women travelers?",
+    description: "Is Kenya safe for women travelers? An honest answer: where to take care, what changes on a guided safari retreat, and practical tips before you go.",
+    summary: "Nairobi, the conservancy, and everything in between. An honest look at safety for women in Kenya, and what changes when you're not on your own.",
+    date: "2026-11-25",
+    readTime: "5 min read",
+    theme: "before you go",
+    destination: true,
+    draft: true,
+    image: "/images/kenya-women-tent.JPG",
+    body: `
+<p>It's usually the first thing women ask us about Kenya, sometimes before they've asked about the animals. And it's a fair question.</p>
+
+<p>Is Kenya safe for women travelers? Like anywhere, the honest answer depends on <strong>where you're going, how you're getting around, and who you're with.</strong></p>
+
+<h2>The honest answer</h2>
+<p>Women travel to Kenya every year, on their own and in groups. It's also a big country with real considerations. Some areas, particularly near certain borders, carry official travel warnings, and the cities come with the usual big-city risks.</p>
+
+<p>Before any trip, check your own government's current travel advice for Kenya. In the US that's the State Department, and in the UK it's the FCDO. It's updated far more often than any blog post, this one included.</p>
+
+<h2>Nairobi and Ol Pejeta are two different worlds</h2>
+<p><strong>Nairobi</strong> is a big, busy capital, so treat it like one:</p>
+<ul>
+<li>stay somewhere reputable. on our retreat, we all stay at the same hotel the night before</li>
+<li>use cars your hotel arranges, rather than one you flag down</li>
+<li>keep your phone and valuables out of sight</li>
+<li>don't walk around after dark in areas you don't know</li>
+</ul>
+
+<p><strong>Ol Pejeta</strong> is a 90,000-acre conservancy near Mount Kenya, and it feels nothing like the city. Whenever you're out on the land, you're with expert guides, and the conservancy runs its own security and emergency response teams around the clock.</p>
+
+<h2>What changes on a guided safari retreat</h2>
+<ul>
+<li>you're <strong>not navigating alone</strong>. group transport takes you from Nairobi to the conservancy and back</li>
+<li>you're never finding your way somewhere unfamiliar at night</li>
+<li>your accommodation, meals and game drives are arranged by people who know the area</li>
+<li>you're with a small group of women, and with hosts who are there all week</li>
+</ul>
+
+<p><em>That's the freedom of it. You get to be somewhere extraordinary without having to hold all of it yourself.</em></p>
+
+<h2>If something goes wrong</h2>
+<p>Nobody likes thinking about it, but knowing the plan is what lets you relax.</p>
+<ul>
+<li>Nanyuki, the nearest town to Ol Pejeta, has private hospital care within about an hour</li>
+<li>get travel insurance that includes <strong>medical evacuation</strong>. it's worth having for any safari</li>
+<li>keep copies of your passport, visa and insurance separate from the originals, and on your phone</li>
+</ul>
+
+<h2>The health questions</h2>
+<ul>
+<li>see a travel doctor or clinic well before you go, about vaccinations and whether you need malaria prevention</li>
+<li>you may need a yellow fever certificate if you've recently been through certain countries, even on a layover. check with your doctor or airline</li>
+<li>Ol Pejeta is at high elevation, so go easy on your first day while your body adjusts</li>
+</ul>
+
+<h2>Practical safety tips for women traveling in Kenya</h2>
+<ul>
+<li>land in Nairobi at least a day early, so a delayed flight doesn't become a scramble</li>
+<li>share your itinerary with someone at home</li>
+<li>carry a little cash and lock the rest away</li>
+<li><em>trust your gut. it's usually right</em></li>
+</ul>
+
+<h2>If you're nervous, that's okay</h2>
+<p>[PLACEHOLDER: one true line from Ashley or Shannon about your own time in Kenya, or how you felt before your first trip there]</p>
+
+<p><strong>Being a little scared isn't a sign you shouldn't go. Sometimes it's a sign it matters.</strong></p>
+
+<p>If you have questions about the area, the cottages or the journey, <a href="/contact">reach out</a>. We're happy to talk it through before you book. And if you're working out how to bring it up at home, read <a href="/blog/how-to-talk-to-your-partner-about-a-solo-womens-retreat">how to talk to your partner about a solo retreat</a>. For the practical side, there's <a href="/blog/what-to-pack-for-a-safari-in-kenya">what to pack for a safari in Kenya</a> and <a href="/blog/a-day-on-safari-at-ol-pejeta">a day on safari at Ol Pejeta</a>.</p>
+${kenyaCta}
+    `.trim(),
+  },
+  {
+    // target search: "safari at Ol Pejeta"
+    slug: "a-day-on-safari-at-ol-pejeta",
+    title: "A day on safari at Ol Pejeta: sunrise game drives, circles, and the last northern white rhinos",
+    metaTitle: "A day on safari at Ol Pejeta Conservancy",
+    description: "What a safari at Ol Pejeta is really like: sunrise game drives, circles on the plains, the last northern white rhinos, and what surprises first-timers.",
+    summary: "Cold sunrise drives, circles on the plains, and two rhinos who are the last of their kind. What a day at Ol Pejeta actually feels like.",
+    date: "2026-11-25",
+    readTime: "6 min read",
+    theme: "the experience",
+    destination: true,
+    draft: true,
+    image: "/images/rhino conservation.jpg",
+    body: `
+<p>If you've only seen a safari on a screen, you probably picture the animals. You don't picture the cold at dawn, or the hush in the vehicle when an elephant steps onto the track, or what it's like to sit in a circle with women you met three days ago while the light goes gold over the plains.</p>
+
+<p>This is what a safari at Ol Pejeta is actually like, when it's also a retreat.</p>
+
+<h2>Where you are</h2>
+<p>Ol Pejeta Conservancy is 90,000 acres of open plains and acacia woodland near the base of Mount Kenya. It's the largest black rhino sanctuary in East Africa, and the Big Five live here. We stay inside the conservancy at Ol Pejeta Safari Cottages, so the wildlife isn't a drive away. It's right outside.</p>
+
+<h2>A day on safari at Ol Pejeta</h2>
+<p>No two days are the same, and nothing runs to the minute. But most days have a shape.</p>
+
+<p><strong>Before sunrise.</strong> [PLACEHOLDER: rough wake-up time for sunrise drives] Coffee or tea, every layer you brought, and out into the vehicles as the sky starts to change. Early morning is when a lot of animals are on the move, and the light is at its softest.</p>
+
+<p><strong>Morning.</strong> Back for breakfast. Then yoga, meditation or journaling looking out over the plains, and some days a workshop.</p>
+
+<p><strong>Midday.</strong> The slow part. Lunch, rest, a nap, a book on the verandah. We protect this time on purpose.</p>
+
+<p><strong>Late afternoon.</strong> A sunset drive, as the heat goes out of the day.</p>
+
+<p><strong>Evening.</strong> Dinner together, and on some nights a women's circle or a ceremony around the fire.</p>
+
+<h2>The circles</h2>
+<p>The game drives are what bring most women to Kenya. The circles are often what they take home.</p>
+
+<p>A circle is simple: a small group of women, sitting together, taking turns to speak and to listen. Nobody has to share. You can listen the whole time if that's what you need. Some women go deep on the first night, others watch for a day or two first, and both are welcome.</p>
+
+<p>If you want to know more about how a retreat week unfolds, read <a href="/blog/what-actually-happens-at-a-womens-retreat-day-by-day">what actually happens at a women's retreat</a>.</p>
+
+<h2>The last northern white rhinos</h2>
+<p>One day of the week is a full day out in the conservancy, including a visit to the Northern White Rhino Sanctuary.</p>
+
+<p>Ol Pejeta is home to the last two northern white rhinos in the world, Najin and Fatu. Both are female, so the subspecies can't recover on its own, and scientists are working on ways to bring it back.</p>
+
+<p>[PLACEHOLDER: if you've seen them, one honest sentence about what it felt like]</p>
+
+<p>It's part of why we chose Ol Pejeta. The conservancy fees from our week go back into its conservation work.</p>
+
+<h2>What first-timers don't expect</h2>
+<ul>
+<li><strong>The cold.</strong> High elevation means sunrise drives are chilly. Bring the fleece (here's <a href="/blog/what-to-pack-for-a-safari-in-kenya">what else to pack</a>).</li>
+<li><strong>How quiet it is.</strong> Engine off, nobody talking, just the plains. It can be the part you remember most.</li>
+<li><strong>You won't see everything on every drive.</strong> Some drives are full of animals. Some are mostly sky. Both are worth it.</li>
+<li><strong>The altitude.</strong> You might feel more tired than usual on the first day. Go easy.</li>
+<li><strong>How much you'll feel.</strong> Being that close to something wild has a way of cracking things open. Don't be surprised if you cry at an elephant.</li>
+<li><strong>Being offline.</strong> [PLACEHOLDER: what wifi and phone signal are like at the cottages]</li>
+</ul>
+
+<h2>The rest of the week</h2>
+<p>Alongside the drives, there's a visit to Spinners and Weavers, a picnic out in the wild, a traditional Kenyan cooking class with our hosts, and long dinners that run late. And on the last morning, one more sunrise before the drive back to Nairobi.</p>
+
+<p>What happens after you get home matters too. We wrote about that in <a href="/blog/what-happens-after-a-retreat-integration">the integration no one talks about</a>. And if safety is on your mind, read <a href="/blog/is-kenya-safe-for-women-travelers">is Kenya safe for women travelers?</a></p>
+${kenyaCta}
+    `.trim(),
+  },
+  {
+    // target search: "women's retreats in Spain" (+ 2027)
+    slug: "womens-retreats-in-spain-2027",
+    title: "Women's retreats in Spain 2027: what we're planning",
+    metaTitle: "Women's retreats in Spain 2027",
+    description: "Looking at women's retreats in Spain for 2027? Here's what we're planning for Casa Amor in Andalusia, what the week will feel like, and how to hear first.",
+    summary: "A white hilltop town, the beaches of the Costa de la Luz, and slow June evenings. A first look at Casa Amor, our 2027 retreat in Spain.",
+    date: "2026-11-25",
+    readTime: "4 min read",
+    theme: "the experience",
+    destination: true,
+    draft: true,
+    image: "/images/Vejer de la Frontera.jpeg",
+    body: `
+<p>If you've been looking at women's retreats in Spain for 2027, here's a first look at what we're planning: <strong>Casa Amor</strong>, five nights in Andalusia in June 2027.</p>
+
+<p>It isn't open for booking yet. This is us thinking out loud, so you know what's coming.</p>
+
+<h2>Why Andalusia</h2>
+<p>[PLACEHOLDER: in your own words, why you chose Spain, and this corner of it, for Casa Amor]</p>
+
+<p>Casa Amor sits between the countryside around Vejer de la Frontera, a small white town on a hill in the province of Cádiz, and the beaches of the Costa de la Luz on the Atlantic coast. It's a slower, quieter Spain than most people picture.</p>
+
+<p>Spain is also one of the easiest places in Europe to travel on your own, and Vejer is small and walkable.</p>
+
+<h2>What a women's retreat in Spain could feel like</h2>
+<p>Here's what we're planning for the week. Some of it may change as we finalize the details.</p>
+<ul>
+<li>slow mornings, and a real siesta. June in Andalusia is warm, so afternoons slow right down</li>
+<li>a saltwater pool to float in</li>
+<li>candlelit dinners in the garden</li>
+<li>beach picnics on the Costa de la Luz</li>
+<li>a sunset horseback ride along the beach</li>
+<li>a flamenco class, and a live show in Vejer</li>
+<li>sound baths, circles, and time to actually rest</li>
+</ul>
+<p>[PLACEHOLDER: check this list against the final Casa Amor itinerary before publishing]</p>
+
+<h2>Who it's for</h2>
+<p>The same women who come on every ASHA retreat: women who've spent years putting everyone else first and are ready to come back to themselves.</p>
+
+<p>You don't need to know anyone. Most women who come on retreat with us arrive on their own (here's <a href="/blog/going-on-a-womens-retreat-alone-heres-what-happened">what that's really like</a>). We're keeping the group small. [PLACEHOLDER: group size, e.g. "no more than 10 women"]</p>
+
+<h2>What we don't know yet</h2>
+<ul>
+<li><strong>price and rooms:</strong> [PLACEHOLDER: price and room options, once set]</li>
+<li><strong>getting there:</strong> [PLACEHOLDER: which airport we'll collect everyone from]</li>
+</ul>
+
+<p>If you're weighing up the cost of a retreat in general, <a href="/blog/how-to-afford-a-womens-retreat">how to afford a women's retreat</a> might help. And if you're comparing options, our <a href="/blog/womens-retreats-2027-ultimate-guide">2027 guide to women's retreats</a> covers what to look for in any of them.</p>
+${spainCta}
+    `.trim(),
+  },
+  {
     slug: "who-am-i-outside-of-my-roles",
     title: "Who am I outside of all the roles I carry?",
     description: "A journaling practice for women who've lost themselves in busyness and distraction. 4 prompts to help you reconnect with who you actually are.",
+    summary: "Four journaling prompts for when you've spent so long in your roles that you've lost track of who you are underneath them.",
     date: "2026-09-02",
     readTime: "5 min read",
     theme: "the inner work",
@@ -222,6 +564,7 @@ Sit with this one. <em>"I don't know"</em> is a completely valid answer. Write i
     slug: "how-to-create-joy-you-dont-have-to-earn",
     title: "How to create joy you don't have to earn",
     description: "Joy isn't waiting on the other side of your goals. A practice for women who've been rationing happiness — and are ready to start living in the present moment.",
+    summary: "A short practice for women who keep putting happiness off until later. Joy you don't have to earn, starting right where you are.",
     date: "2026-09-02",
     readTime: "4 min read",
     theme: "the inner work",
@@ -282,6 +625,7 @@ This is the hardest one. Joy has a way of being immediately followed by guilt �
     slug: "journaling-practice-for-women-at-a-crossroads",
     title: "A journaling practice for women at a crossroads",
     description: "Feeling stuck, or like something needs to change but you don't know what? A journaling practice for women standing between chapters and ready to find their footing.",
+    summary: "Stuck between chapters and not sure what comes next? A journaling practice for finding your footing when nothing feels clear yet.",
     date: "2026-09-02",
     readTime: "4 min read",
     theme: "the inner work",
@@ -341,6 +685,7 @@ Who are you waiting for? And what if that permission was yours to give yourself 
     slug: "how-to-talk-to-your-partner-about-a-solo-womens-retreat",
     title: "How to talk to your partner about going on a solo women's retreat",
     description: "The retreat calls to you. Your partner isn't sure. Here's how to have the conversation — and why this decision matters more than it might seem.",
+    summary: "Want to go on a solo retreat but bracing for the conversation at home? How to talk to your partner honestly, and what if they say no.",
     date: "2026-08-19",
     readTime: "5 min read",
     theme: "before you go",
@@ -395,6 +740,7 @@ Who are you waiting for? And what if that permission was yours to give yourself 
     slug: "what-actually-happens-at-a-womens-retreat-day-by-day",
     title: "What actually happens at a women's retreat? (a day-by-day breakdown)",
     description: "Not the brochure version. A real, honest look at what each day of a women's retreat actually feels like — from the first morning to the last goodbye.",
+    summary: "Not the brochure version. What each day of a women's retreat actually looks and feels like, from the nervous first morning to goodbye.",
     date: "2026-08-19",
     readTime: "8 min read",
     theme: "the experience",
@@ -506,6 +852,7 @@ Who are you waiting for? And what if that permission was yours to give yourself 
     slug: "how-to-afford-a-womens-retreat",
     title: "How to afford a women's retreat (and why it's worth the investment)",
     description: "The price tag can feel like the reason not to go. Here's a different way to look at it — and practical ways women actually make it happen.",
+    summary: "The price can feel like the reason not to go. How to think about what a retreat costs, and the practical ways women make it work.",
     date: "2026-08-10",
     readTime: "6 min read",
     theme: "before you go",
@@ -562,7 +909,8 @@ Who are you waiting for? And what if that permission was yours to give yourself 
   {
     slug: "going-on-a-womens-retreat-alone-heres-what-happened",
     title: "Going on a women's retreat alone — here's what happened",
-    description: "",
+    description: "Most women who come on retreat don't know a single person going. What it's really like to arrive alone, in their own words.",
+    summary: "Most women who come on retreat don't know a single person going. What it's really like to arrive alone, in their own words.",
     date: "2026-08-19",
     readTime: "4 min read",
     theme: "the experience",
@@ -603,6 +951,7 @@ __TESTIMONIAL_VIDEO__
     slug: "what-is-sound-healing",
     title: "What is sound healing — and does it actually work?",
     description: "Sound healing shows up at almost every women's retreat. Here's what it actually is, what the science says, and what most people feel during a session.",
+    summary: "What sound healing actually is, what the science says, and what most people feel during their first session.",
     date: "2026-07-28",
     readTime: "5 min read",
     theme: "the inner work",
@@ -665,6 +1014,7 @@ __TESTIMONIAL_VIDEO__
     slug: "what-happens-after-a-retreat-integration",
     title: "What happens after a retreat — the integration no one talks about",
     description: "The retreat ends. You fly home. And then something unexpected happens. Here's what integration actually looks like, and how to make it last.",
+    summary: "The retreat ends, you fly home, and something unexpected happens. What integration really looks like, and how to make the shift last.",
     date: "2026-08-15",
     readTime: "5 min read",
     theme: "the experience",
@@ -721,10 +1071,14 @@ __TESTIMONIAL_VIDEO__
   },
 ];
 
+/** Published posts only: the journal index and the sitemap read this. */
+export const posts: Post[] = allPosts.filter((p) => !p.draft);
+
+/** Drafts included, so a draft can be previewed at its URL. */
 export function getPost(slug: string): Post | undefined {
-  return posts.find((p) => p.slug === slug);
+  return allPosts.find((p) => p.slug === slug);
 }
 
 export function getAllSlugs(): string[] {
-  return posts.map((p) => p.slug);
+  return allPosts.map((p) => p.slug);
 }

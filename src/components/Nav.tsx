@@ -5,7 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
+// The "retreats" label opens this menu (a button, so no href of its own);
+// the first item is the real link to the /retreats hub.
 const retreats = [
+  { href: "/retreats", label: "See All Retreats" },
   { href: "/retreats/mexico", label: "Becoming HER — Mexico 2026" },
   { href: "/retreats/morocco", label: "Sacred Sands — Morocco 2026" },
   { href: "/retreats/kenya", label: "Into the Wild — Kenya 2027" },

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "Journal — Women's Retreats, Healing & Intentional Travel",
+    // "and", not "&": a bare & is output as &amp; in the tag
+    default: "Journal: Women's Retreats, Healing and Intentional Travel",
     template: "%s | ASHA Experiences",
   },
   description: "Honest writing about women's retreats, healing practices, solo travel, and what it means to choose yourself. From the team behind ASHA Experiences.",
@@ -21,15 +22,16 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/blog",
   },
+  // og/twitter titles match the <title> tag exactly (they aren't templated)
   openGraph: {
-    title: "Journal | ASHA Experiences",
+    title: "Journal: Women's Retreats, Healing and Intentional Travel | ASHA Experiences",
     description: "Writing about retreats, healing, and what it actually feels like to choose yourself.",
     url: "https://ashaexperiences.com/blog",
     images: [{ url: "/images/Return to Love group sunset.jpg", width: 1200, height: 800, alt: "ASHA Experiences journal — writing for women on the way back to themselves" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Journal | ASHA Experiences",
+    title: "Journal: Women's Retreats, Healing and Intentional Travel | ASHA Experiences",
     description: "Writing about retreats, healing, and what it actually feels like to choose yourself.",
     images: ["/images/Return to Love group sunset.jpg"],
   },

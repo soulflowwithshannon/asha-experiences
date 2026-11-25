@@ -31,6 +31,12 @@ const nextConfig: NextConfig = {
         destination: "/blog",
         permanent: true,
       },
+      /** Guide refreshed for 2027 (Nov 2026): the slug changed with the year. */
+      {
+        source: "/blog/womens-retreats-2026-ultimate-guide",
+        destination: "/blog/womens-retreats-2027-ultimate-guide",
+        permanent: true,
+      },
       /** Merged into stronger posts (Nov 2026), so they point at the post that absorbed them. */
       {
         source: "/blog/what-to-expect-at-your-first-womens-retreat",
