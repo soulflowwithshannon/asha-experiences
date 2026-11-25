@@ -110,7 +110,7 @@ const allPosts: Post[] = [
 
 <p>If more than a few of these landed — you already know.</p>
 
-<p>We run small, intimate women's retreats in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a>. Each one is designed to give you the time, the space, and the container to come back to yourself.</p>
+<p>We run small, intimate <a href="/retreats">women's retreats</a>. Each one is designed to give you the time, the space, and the container to come back to yourself.</p>
 
 <p>You don't have to have it all figured out before you go. You just have to say yes.</p>
     `.trim(),
@@ -557,7 +557,7 @@ Sit with this one. <em>"I don't know"</em> is a completely valid answer. Write i
 
 <hr />
 
-<p>Ready for more than a journaling practice? We'd love to have you with us in <a href="/retreats/morocco">Morocco</a> or <a href="/retreats/kenya">Kenya</a>.</p>
+<p>Ready for more than a journaling practice? We'd love to have you with us on <a href="/retreats">one of our retreats</a>.</p>
     `.trim(),
   },
   {
@@ -618,7 +618,7 @@ This is the hardest one. Joy has a way of being immediately followed by guilt �
 
 <hr />
 
-<p>Ready to experience what full presence actually feels like — in one of the most extraordinary places on earth? We'd love to have you with us in <a href="/retreats/morocco">Morocco</a> or <a href="/retreats/kenya">Kenya</a>.</p>
+<p>Ready to experience what full presence actually feels like — in one of the most extraordinary places on earth? We'd love to have you with us on <a href="/retreats">one of our retreats</a>.</p>
     `.trim(),
   },
   {
@@ -678,7 +678,7 @@ Who are you waiting for? And what if that permission was yours to give yourself 
 
 <hr />
 
-<p>Ready for more than a journaling practice? We'd love to have you with us in <a href="/retreats/morocco">Morocco</a> or <a href="/retreats/kenya">Kenya</a>.</p>
+<p>Ready for more than a journaling practice? We'd love to have you with us on <a href="/retreats">one of our retreats</a>.</p>
     `.trim(),
   },
   {
@@ -733,7 +733,7 @@ Who are you waiting for? And what if that permission was yours to give yourself 
 
 <hr />
 
-<p>Whatever the conversation looks like — we're here if you have questions. Our retreats in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a> are small, intentional, and designed for exactly the woman who almost didn't let herself come. <a href="/contact">Reach out</a> if you want to talk it through.</p>
+<p>Whatever the conversation looks like — we're here if you have questions. <a href="/retreats">Our retreats</a> are small, intentional, and designed for exactly the woman who almost didn't let herself come. <a href="/contact">Reach out</a> if you want to talk it through.</p>
     `.trim(),
   },
   {
@@ -843,7 +843,7 @@ Who are you waiting for? And what if that permission was yours to give yourself 
 
 <hr />
 
-<p>Our retreats in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a> are each designed with this arc in mind — enough structure to feel held, enough space to actually land. If you want to know more about what a specific retreat looks like day by day, <a href="/contact">reach out</a>.</p>
+<p><a href="/retreats">Our retreats</a> are each designed with this arc in mind — enough structure to feel held, enough space to actually land. If you want to know more about what a specific retreat looks like day by day, <a href="/contact">reach out</a>.</p>
     `.trim(),
   },
   {
@@ -903,7 +903,7 @@ Who are you waiting for? And what if that permission was yours to give yourself 
 
 <hr />
 
-<p>Our retreats in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a> are priced to include as much as possible — no surprise costs when you arrive. If you have questions about what's included, <a href="/contact">we're happy to walk you through it</a>.</p>
+<p><a href="/retreats">Our retreats</a> are priced to include as much as possible — no surprise costs when you arrive. If you have questions about what's included, <a href="/contact">we're happy to walk you through it</a>.</p>
     `.trim(),
   },
   {
@@ -944,7 +944,7 @@ __TESTIMONIAL_VIDEO__
 
 <hr />
 
-<p>Our retreats in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a> are small and intentional — never more than 14 women. If you're thinking about coming alone, <a href="/contact">reach out</a>. We'll tell you exactly what to expect.</p>
+<p><a href="/retreats">Our retreats</a> are small and intentional. If you're thinking about coming alone, <a href="/contact">reach out</a>. We'll tell you exactly what to expect.</p>
     `.trim(),
   },
   {
@@ -1066,7 +1066,7 @@ __TESTIMONIAL_VIDEO__
 
 <hr />
 
-<p>We think about integration as part of the retreat design itself — not an afterthought. Explore our upcoming retreats in <a href="/retreats/morocco">Morocco</a> and <a href="/retreats/kenya">Kenya</a>.</p>
+<p>We think about integration as part of the retreat design itself — not an afterthought. <a href="/retreats">Explore our upcoming retreats</a>.</p>
     `.trim(),
   },
 ];
