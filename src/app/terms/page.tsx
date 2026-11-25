@@ -47,7 +47,7 @@ const sections: { id: string; title: string; body: ReactNode }[] = [
     body: (
       <>
         <p>Prices are listed in US dollars. Payments are processed securely by Stripe.</p>
-        <p>If you choose a payment plan, you agree to the schedule shown at checkout. All payments must be completed by the final payment date listed for your retreat. If a payment is missed and not made up within 7 days of our reminder, we may release your spot, and payments already made follow the refund policy below.</p>
+        <p>If you choose a payment plan, you agree to make your monthly payments, or to pay the full remaining balance, no later than 30 days before your retreat&apos;s start date. If a payment is missed and not made up within 7 days of our reminder, we may release your spot, and payments already made follow the refund policy below.</p>
       </>
     ),
   },
