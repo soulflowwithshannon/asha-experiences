@@ -49,6 +49,11 @@ export type ClosedRetreatProps = {
     defaultPicked: string[];
   };
   closing: string;
+  /**
+   * Tighter spacing and type (Mexico, Nov 2026): smaller tagline on phones,
+   * less space under the header and above the week, smaller week copy.
+   */
+  compact?: boolean;
 };
 
 const NEXT = [
@@ -125,7 +130,7 @@ function Header({ h }: { h: ClosedRetreatProps["header"] }) {
           <p className="hero-rise-sm" style={{ fontFamily: "var(--font-cormorant)", fontSize: 22, color: "#E8B88A", marginBottom: 28 }}>
             {h.placeAndDates}
           </p>
-          <p className="hero-rise" style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(24px,2.4vw,28px)", lineHeight: 1.4, color: "#E8D5BC", marginBottom: 36 }}>
+          <p className="hero-rise ss-tagline" style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: "clamp(24px,2.4vw,28px)", lineHeight: 1.4, color: "#E8D5BC", marginBottom: 36 }}>
             {h.tagline}
           </p>
           <div className="hero-rise" style={{ display: "flex", gap: 24, alignItems: "center", flexWrap: "wrap" }}>
@@ -161,7 +166,7 @@ function Header({ h }: { h: ClosedRetreatProps["header"] }) {
 
 function TheWeek({ w }: { w: ClosedRetreatProps["week"] }) {
   return (
-    <section className="ss-pad" style={{ background: "var(--color-bg-page)", padding: "96px 48px" }}>
+    <section className="ss-pad ss-week" style={{ background: "var(--color-bg-page)", padding: "96px 48px" }}>
       <div style={{ maxWidth: 1180, margin: "0 auto" }}>
         <FadeIn>
           <div className="ss-row" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 32, marginBottom: 40 }}>
@@ -170,7 +175,7 @@ function TheWeek({ w }: { w: ClosedRetreatProps["week"] }) {
               <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(32px,4vw,44px)", color: "var(--color-text-headline)", fontWeight: 400, marginBottom: 16 }}>
                 {w.heading}
               </h2>
-              <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, lineHeight: 1.8, color: "var(--color-text-body)" }}>{w.body}</p>
+              <p className="ss-week-body" style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, lineHeight: 1.8, color: "var(--color-text-body)" }}>{w.body}</p>
             </div>
             <p style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic", fontSize: 22, color: "var(--color-text-headline)", maxWidth: 300 }}>
               {w.quote}
@@ -346,9 +351,9 @@ function WhatsNext() {
   );
 }
 
-export default function ClosedRetreat({ header, week, signUp, closing }: ClosedRetreatProps) {
+export default function ClosedRetreat({ header, week, signUp, closing, compact }: ClosedRetreatProps) {
   return (
-    <main>
+    <main className={compact ? "ss-compact" : undefined}>
       <Header h={header} />
       <TheWeek w={week} />
       <SignUp s={signUp} />
@@ -369,6 +374,14 @@ export default function ClosedRetreat({ header, week, signUp, closing }: ClosedR
           .ss-three{grid-template-columns:1fr!important}
           .ss-row{flex-direction:column!important;align-items:flex-start!important}
           .ss-pad{padding-left:20px!important;padding-right:20px!important}
+        }
+        .ss-compact .ss-header-copy{padding-bottom:40px!important}
+        .ss-compact .ss-week{padding-top:64px!important}
+        .ss-compact .ss-week-body{font-size:15px!important;line-height:1.65!important}
+        @media(max-width:860px){
+          .ss-compact .ss-tagline{font-size:20px!important;margin-bottom:28px!important}
+          .ss-compact .ss-header-copy{padding-bottom:24px!important;gap:28px!important}
+          .ss-compact .ss-week{padding-top:48px!important}
         }
       `}</style>
     </main>

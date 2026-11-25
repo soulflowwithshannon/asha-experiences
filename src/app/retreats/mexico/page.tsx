@@ -8,7 +8,7 @@ export default function MexicoPage() {
     <ClosedRetreat
       header={{
         chip: "2026 circle · closed",
-        title: "Becoming HER",
+        title: "Becoming HER Retreat",
         placeAndDates: "Riviera Maya, Mexico · Oct 27 – 31, 2026",
         tagline: "this one has passed. the next one could be yours.",
         footnote: "for the woman ready to bury an old version of herself. not with shame. with reverence.",
@@ -48,6 +48,7 @@ export default function MexicoPage() {
         defaultPicked: ["mexico"],
       }}
       closing="where endings become beginnings."
+      compact
     />
   );
 }
