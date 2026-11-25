@@ -4,8 +4,8 @@ export const metadata: Metadata = {
   // Hidden while the retreat is no longer open: off the nav and out of
   // search, but the URL stays live so existing links still resolve.
   robots: { index: false, follow: true },
-  title: "Women's Retreat Mexico 2026 — 5 Days in the Jungle",
-  description: "5 days in the jungle. Yoga, sound healing, cenotes, ceremony, and women who get it. A transformational women's retreat in the Riviera Maya, Mexico — Oct 27–31, 2026. Limited spots.",
+  title: "Women's Retreat Mexico: Becoming HER",
+  description: "Becoming HER, our 5-day women's retreat in the jungle of the Riviera Maya, Mexico, ran Oct 27–31, 2026. Join the list to hear first when we return to Mexico, or see Casa Amor in Spain and Into the Wild in Kenya.",
   keywords: [
     // destination + year
     "women's retreat Mexico 2026",
@@ -15,13 +15,10 @@ export const metadata: Metadata = {
     "Riviera Maya retreat 2026",
     "Tulum women's retreat 2026",
     "Playa del Carmen women's retreat",
-    "Puerto Morelos retreat women",
     "Quintana Roo retreat women",
     "Mexico retreat for women 2026",
     "Mexico wellness retreat 2026",
     "Mexico spiritual retreat 2026",
-    "Lunita Jungle Retreat",
-    "Lunita retreat Mexico",
     "ASHA Experiences Mexico",
 
     // retreat style
@@ -144,14 +141,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Women's Jungle Retreat Mexico 2026 — Becoming HER | ASHA Experiences",
-    description: "A 5-day women's retreat in the jungle of the Riviera Maya, Mexico. Oct 27–31, 2026. Yoga, sound healing, cenotes, ceremony, and sisterhood. Limited spots.",
+    description: "Becoming HER 2026 has closed. Join the list to hear first when we return to Mexico.",
     url: "https://ashaexperiences.com/retreats/mexico",
     images: [{ url: "/images/Mexico hero.jpeg", width: 1200, height: 800, alt: "Becoming HER — Women's Jungle Retreat Mexico 2026" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Women's Jungle Retreat Mexico 2026 | ASHA Experiences",
-    description: "A 5-day women's retreat in the jungle of the Riviera Maya. Yoga, sound healing, cenotes, ceremony, and sisterhood. Oct 27–31, 2026.",
+    description: "Becoming HER 2026 has closed. Join the list to hear first when we return to Mexico.",
     images: ["/images/Mexico hero.jpeg"],
   },
 };
@@ -167,7 +164,7 @@ const jsonLd = {
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "location": {
     "@type": "Place",
-    "name": "Lunita Jungle Retreat",
+    "name": "Riviera Maya, Mexico",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Riviera Maya",
@@ -185,7 +182,7 @@ const jsonLd = {
     "@type": "Offer",
     "price": "3500",
     "priceCurrency": "USD",
-    "availability": "https://schema.org/LimitedAvailability",
+    "availability": "https://schema.org/SoldOut",
     "url": "https://ashaexperiences.com/retreats/mexico"
   }
 };
